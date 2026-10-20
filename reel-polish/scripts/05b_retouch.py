@@ -32,6 +32,10 @@ Bloco em polish.json:
   "retouch": {"enabled": true, "nose_tip_reduce": 0.15, "hairline": 0.6, "beard": 0.6, "skin_texture": 0.5,
               "hairline_shape": false, "beard_shape": false, "hairline_lower_max": 0.08, "hairline_recession": 0.04,
               "protect_bottom_from": 0.60, "landmark_smooth_frames": 7}
+  Chaves extras: "nose_alar_boost" (0–0.5, reforça só o estreitamento das asas nasais), "hairline_band" (fração de
+  fw junto à pele da testa onde o adensamento do cabelo age; padrão 0.07), "hairline_chroma_gate" (bool, opcional).
+  Preset nomeado: "retouch": {"preset": "gabriel"} carrega presets/gabriel.json; chaves do bloco sobrescrevem.
+  O rastreamento do vídeo inteiro/trecho fica em cache em <workdir>/track_cache/ (desligue com --no-cache).
 
 Uso:
   python scripts/05b_retouch.py work/<n>/polish/polish.json                      # beauty.mkv -> retouch.mkv
@@ -42,6 +46,7 @@ Uso:
   Sobrescritas: --nose 0.25 --hairline 0.8 --beard 0.8 --skin 0.5
 """
 import argparse
+import json
 import math
 import os
 import shutil
@@ -156,6 +161,48 @@ class Segmenter:
             self.seg.close()
         except Exception:
             pass
+
+
+# ---------------------------------------------------------------- cache do rastreamento
+TRACK_CACHE_VERSION = 1
+
+
+def track_cache_key(video, start, dur, n_frames, smooth_frames):
+    """Chave do cache: arquivo de entrada (caminho absoluto, tamanho, mtime) + parâmetros que mudam o rastreamento."""
+    import hashlib
+    st = Path(video).stat()
+    raw = json.dumps([TRACK_CACHE_VERSION, str(Path(video).resolve()), st.st_size, st.st_mtime_ns,
+                      start, dur, int(n_frames), int(smooth_frames), DET_WIDTH, MASK_SCALE, pc.FPS])
+    return hashlib.sha1(raw.encode()).hexdigest()[:16]
+
+
+def track_cached(video, start, dur, n_frames, smooth_frames, cache_dir, progress=True):
+    """track() com cache .npz em cache_dir (ex.: <workdir>/track_cache/). Falha de leitura/escrita = recalcula."""
+    if cache_dir is None:
+        return track(video, start, dur, n_frames, smooth_frames, progress)
+    key = track_cache_key(video, start, dur, n_frames, smooth_frames)
+    f = Path(cache_dir) / f"track_{key}.npz"
+    if f.exists():
+        try:
+            z = np.load(f)
+            T = {k: z[k] for k in ("pts", "ok", "conf", "hair", "skin", "hair_center_v")}
+            T["detected_frac"] = float(z["detected_frac"])
+            pc.log(f"  rastreamento reaproveitado do cache: {f.name}")
+            return T
+        except Exception as e:  # cache corrompido/incompatível: ignora
+            pc.log(f"  aviso: cache ilegível ({e}) — recalculando")
+    T = track(video, start, dur, n_frames, smooth_frames, progress)
+    if T is not None:
+        try:
+            Path(cache_dir).mkdir(parents=True, exist_ok=True)
+            tmp = f.with_suffix(".tmp.npz")
+            np.savez_compressed(tmp, detected_frac=np.float32(T["detected_frac"]),
+                                **{k: T[k] for k in ("pts", "ok", "conf", "hair", "skin", "hair_center_v")})
+            tmp.replace(f)
+            pc.log(f"  rastreamento salvo no cache: {f}")
+        except Exception as e:
+            pc.log(f"  aviso: não consegui salvar o cache ({e})")
+    return T
 
 
 # ---------------------------------------------------------------- passo 1: rastrear
@@ -623,6 +670,17 @@ def retouch_frame(frame, L, hair_lo, skin_lo, R, protect_y=None, debug=None, ext
                 if debug is not None:
                     debug.update(hair_w_geo=geo, hair_target=(v_t, v_hc, v_tc))
             sparse = np.clip((Y3 - y_hair_ref - 10) / 50.0, 0, 1)            # couro cabeludo/pele aparecendo
+            # hairline_band: só a faixa frontal junto à pele da testa/têmporas (entradas), nunca o topo/brilho do
+            # cabelo — sem isso, o reflexo dos fios era tratado como couro cabeludo e ganhava uma trama quadriculada.
+            skin_bin = (Sm > 0.5).astype(np.uint8) * (V > v_brow_top - 0.45 * fw).astype(np.uint8)
+            dist_sk = cv2.distanceTransform((1 - skin_bin).astype(np.uint8), cv2.DIST_L2, 5)
+            band = smoothstep((float(R.get("hairline_band", 0.07) or 0.07) * fw - dist_sk) / (0.03 * fw))
+            sparse = sparse * band
+            if R.get("hairline_chroma_gate", False):
+                # opcional: só onde o "claro" tem croma de pele (couro cabeludo), não reflexo acinzentado dos fios
+                sel_c = core > 0.5
+                cr_core = float(np.median(Cr[sel_c])) if sel_c.sum() > 50 else 128.0
+                sparse = sparse * np.clip((gblur(Cr, 3.0) - cr_core - 2.0) / 6.0, 0, 1)
             dens_var = np.clip(0.75 + 0.25 * Td, 0.4, 1.0)                    # irregularidade lenta (não uniforme)
             w = zone * sparse * (0.25 + 0.75 * grad) * dens_var
             w = np.clip(gblur(w, 0.008 * fw), 0, 1)
@@ -678,7 +736,9 @@ def retouch_frame(frame, L, hair_lo, skin_lo, R, protect_y=None, debug=None, ext
             v = -dx * st + dy * ct
             r2 = (u / a_ax) ** 2 + (v / b_ax) ** 2
             wgt = np.where(r2 < 1, (1 - r2) ** 2, 0).astype(np.float32)
-            su = 1 + nose_s * wgt
+            # nose_alar_boost: reforça só o estreitamento lateral (asas), sem aumentar o puxão vertical (bigode)
+            alar = float(R.get("nose_alar_boost", 0.0) or 0.0)
+            su = 1 + nose_s * wgt * (1 + alar)
             sv = 1 + 0.6 * nose_s * wgt
             u2, v2 = u * su, v * sv
             mx = (cxn + u2 * ct - v2 * st - sx0).astype(np.float32)
@@ -790,6 +850,7 @@ def main():
     ap.add_argument("--shape", choices=["on", "off"], help="sobrescreve hairline_shape/beard_shape")
     ap.add_argument("--crf", type=int, default=12)
     ap.add_argument("--force", action="store_true", help="roda mesmo com retouch.enabled=false")
+    ap.add_argument("--no-cache", action="store_true", help="não lê nem grava o cache do rastreamento")
     args = ap.parse_args()
 
     cfg_path = Path(args.polish).resolve()
@@ -873,7 +934,8 @@ def main():
     out.parent.mkdir(parents=True, exist_ok=True)
     pc.log(f"rastreando rosto + segmentação em {inp.name} ({n_frames} quadros) ...")
     t0 = time.time()
-    T = track(inp, start if args.clip else None, dur if args.clip else None, n_frames, smooth_n)
+    cache_dir = None if args.no_cache else workdir / "track_cache"
+    T = track_cached(inp, start if args.clip else None, dur if args.clip else None, n_frames, smooth_n, cache_dir)
     if T is None:
         pc.log("aviso: nenhum rosto — copiando sem retoque")
         shutil.copyfile(inp, out)

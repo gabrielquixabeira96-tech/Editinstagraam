@@ -525,10 +525,34 @@ def _merge(base, user):
     return out
 
 
+def resolve_retouch_preset(block) -> dict:
+    """Bloco retouch com preset nomeado: {"preset": "gabriel", ...} carrega presets/gabriel.json (ou um caminho .json);
+    as chaves explícitas do bloco sobrescrevem as do preset."""
+    block = dict(block or {})
+    name = block.pop("preset", None)
+    if not name:
+        return block
+    p = Path(str(name))
+    if p.suffix.lower() != ".json":
+        p = SKILL_ROOT / "presets" / f"{name}.json"
+    elif not p.is_absolute():
+        p = SKILL_ROOT / p
+    if not p.exists():
+        die(f"preset de retoque não encontrado: {p}")
+    base = load_json(p)
+    base = dict(base.get("retouch", base))
+    base = {k: v for k, v in base.items() if not k.startswith("_")}
+    base.update(block)
+    log(f"preset de retoque: {p.stem}" + (f" (sobrescritas: {', '.join(block)})" if block else ""))
+    return base
+
+
 def load_polish(path) -> dict:
     p = load_json(path)
     if not p.get("source"):
         die(f"{path}: falta o campo 'source' (vídeo de entrada)")
+    if isinstance(p.get("retouch"), dict) and p["retouch"].get("preset"):
+        p["retouch"] = resolve_retouch_preset(p["retouch"])
     cfg = _merge(DEFAULT_POLISH, p)
     if cfg["mode"] not in ("raw", "final"):
         die("mode deve ser 'raw' ou 'final'")

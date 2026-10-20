@@ -108,7 +108,7 @@ bruto (qualquer proporção) ──reel-polish──▶ polished.mp4 (1080×1920
 7. **Áudio:** `denoise_db` 18 para carro/rua/ar-condicionado (SNR < 20 dB), 12 padrão, 6 para ambiente silencioso;
    `deesser` 0,5 se a sibilância medida for alta. Não normalize aqui.
 8. **Retoque avançado (`retouch`, MediaPipe):** quando o vídeo mostra o **Gabriel** (dono da conta), aplique SEMPRE o
-   preset de aparência dele (seção "Preset de aparência — Gabriel", abaixo). Para outras pessoas, só quando pedirem
+   preset de aparência dele (`"retouch": {"preset": "gabriel"}` — seção "Preset de aparência — Gabriel", abaixo). Para outras pessoas, só quando pedirem
    explicitamente mudanças no próprio rosto — entradas na linha do cabelo, textura da pele, ponta do nariz. Liga com
    `"retouch": {"enabled": true, ...}`. Valores de partida: `nose_tip_reduce` 0,15 (0,20–0,25 = visível e ainda
    natural; nunca > 0,3), `hairline` 0,6–0,85 (só escurece o couro cabeludo entre fios existentes, com mechas, gradiente
@@ -128,18 +128,32 @@ bruto (qualquer proporção) ──reel-polish──▶ polished.mp4 (1080×1920
 
 ## Preset de aparência — Gabriel (aprovado pelo usuário)
 
-Sempre que o vídeo mostra o Gabriel (dono da conta), inclua no `polish.json` exatamente este bloco
-(não há preset nomeado no código: copie o bloco inteiro):
+Sempre que o vídeo mostra o Gabriel (dono da conta), use o preset nomeado `presets/gabriel.json` (aprovado em
+2026-10-20, versão "v3"). No `polish.json` basta:
 
 ```json
-"retouch": {"enabled": true, "nose_tip_reduce": 0.22, "hairline": 0.85, "beard": 0.0, "skin_texture": 0.6,
-            "hairline_shape": false, "beard_shape": false, "hairline_lower_max": 0.08, "hairline_recession": 0.04,
+"retouch": {"preset": "gabriel"}
+```
+
+Chaves escritas no bloco sobrescrevem as do preset (ex.: `{"preset": "gabriel", "protect_bottom_from": 0.70}`).
+Conteúdo do preset (equivale a copiar o bloco inteiro):
+
+```json
+"retouch": {"enabled": true, "nose_tip_reduce": 0.26, "nose_alar_boost": 0.25, "hairline": 1.0,
+            "hairline_band": 0.12, "skin_texture": 0.75, "beard": 0.0, "beard_shape": false,
+            "hairline_shape": false, "hairline_lower_max": 0.08, "hairline_recession": 0.04,
             "protect_bottom_from": 0.6, "landmark_smooth_frames": 7}
 ```
 
-- `protect_bottom_from: 0.6` protege a faixa de legenda; num bruto sem legenda pode ficar (o rosto está acima de 60%
-  da altura no 9:16) ou ir para `null` se o rosto descer muito no quadro.
+- `protect_bottom_from: 0.6` é o padrão (protege a faixa de legenda). Quando o rosto fica baixo no quadro (ex.: vídeo
+  gravado no carro, nariz/boca em ~0,56–0,65 da altura), 0,6 cortaria o warp do nariz: **meça antes o topo da
+  legenda** (amostre 1 quadro/s e ache a linha mais alta do texto) e use ~0,70 (≈40 px acima do topo da legenda,
+  que nesses vídeos fica em ~0,72). Num bruto sem legenda pode ficar 0,6 ou ir para `null`.
+- Nariz: 0,30 / `nose_alar_boost` 0,35 foi testado e considerado "perceptível" pelo usuário; 0,26 / 0,25 é o nível
+  aprovado. Teto absoluto de `nose_tip_reduce`: 0,30.
 - Ajustes finos só a pedido dele; nunca mude `beard`, `beard_shape` nem `hairline_shape`.
+- O rastreamento do vídeo inteiro fica em cache (`<workdir>/track_cache/`): re-renderizar com outro valor de retoque
+  sobre o mesmo arquivo pula os ~10 min de rastreamento.
 
 ## Lições aprendidas (não repetir os erros)
 
@@ -154,6 +168,14 @@ Sempre que o vídeo mostra o Gabriel (dono da conta), inclua no `polish.json` ex
 4. **Cor/pele alaranjada:** no look `natural`, o `vibrance` herdado (0,12) pode alaranjar a pele e anular a correção
    de WB. Com pele já quente (R/B alto), use `saturation` 1.0, `vibrance` −0.1, `white_balance.strength` 1.0, e meça o
    R/B da pele antes e depois.
+5. **Trama quadriculada no cabelo (código antigo, corrigido):** sem `hairline_band`, o adensamento tratava o
+   reflexo/brilho do topo do cabelo como "couro cabeludo" e pintava ali uma trama de mechas cruzadas, com cara clara de
+   edição. Agora o efeito só age numa faixa junto à pele da testa/têmporas (`hairline_band`, padrão 0,07; preset 0,12).
+   Sempre amplie o cabelo nas prévias (não só o rosto inteiro) antes de renderizar.
+6. **`hairline_shape` tem efeito limitado:** testado (recessão 0,07 e 0,03) sobre o preset — só produz um leve
+   escurecimento difuso no alto das têmporas, sem criar fios nem fechar de verdade as entradas. Não compensa; fechar
+   entradas exigiria síntese de fios (não implementada). Com `hairline_shape: false`, `hairline_lower_max` e
+   `hairline_recession` não têm efeito.
 
 ## Formato do `polish.json`
 

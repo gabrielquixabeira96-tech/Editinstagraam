@@ -1,0 +1,16 @@
+{
+  "_comment": "Preset de aparência do Gabriel (aprovado em 2026-10-20). Uso no polish.json: \"retouch\": {\"preset\": \"gabriel\"} — chaves explícitas no bloco sobrescrevem estas (ex.: \"protect_bottom_from\": 0.70 quando o rosto fica baixo no quadro).",
+  "enabled": true,
+  "nose_tip_reduce": 0.26,
+  "nose_alar_boost": 0.25,
+  "hairline": 1.0,
+  "hairline_band": 0.12,
+  "skin_texture": 0.75,
+  "beard": 0.0,
+  "beard_shape": false,
+  "hairline_shape": false,
+  "hairline_lower_max": 0.08,
+  "hairline_recession": 0.04,
+  "protect_bottom_from": 0.6,
+  "landmark_smooth_frames": 7
+}
