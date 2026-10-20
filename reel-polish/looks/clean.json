@@ -1,0 +1,13 @@
+{
+  "name": "clean",
+  "inherits": "natural",
+  "_comentario": "Clínico/claro (consultório, fundo branco): contraste baixo, sem vinheta, sombras abertas, cor neutra e nítida.",
+  "contrast": 0.06,
+  "lift_shadows": 0.0,
+  "highlight_rolloff": 0.04,
+  "saturation": 1.04,
+  "vibrance": 0.06,
+  "temperature_bias": -50,
+  "vignette": 0.0,
+  "sharpen": 0.7
+}

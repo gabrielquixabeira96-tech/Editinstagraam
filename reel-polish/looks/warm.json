@@ -1,0 +1,11 @@
+{
+  "name": "warm",
+  "inherits": "natural",
+  "_comentario": "Quente e acolhedor (fim de tarde): +350 K sobre o balanço decidido, meios-tons levemente dourados, pele saturada com cuidado.",
+  "temperature_bias": 350,
+  "midtones_rgb": [0.025, 0.01, -0.02],
+  "highlights_rgb": [0.02, 0.01, -0.01],
+  "saturation": 1.10,
+  "vibrance": 0.14,
+  "vignette": 0.40
+}

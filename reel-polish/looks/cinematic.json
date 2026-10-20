@@ -1,0 +1,16 @@
+{
+  "name": "cinematic",
+  "inherits": "natural",
+  "_comentario": "Teal-orange sutil: sombras levemente frias (azul/ciano), altas luzes levemente quentes; preto fosco leve; contraste um pouco maior; vinheta mais presente.",
+  "contrast": 0.18,
+  "lift_shadows": 0.025,
+  "highlight_rolloff": 0.05,
+  "saturation": 1.05,
+  "vibrance": 0.10,
+  "shadows_rgb": [-0.04, 0.0, 0.06],
+  "midtones_rgb": [0.0, 0.0, 0.0],
+  "highlights_rgb": [0.05, 0.015, -0.04],
+  "temperature_bias": 100,
+  "vignette": 0.55,
+  "sharpen": 0.55
+}

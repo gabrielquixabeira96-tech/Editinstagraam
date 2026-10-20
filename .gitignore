@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+work/
+**/work/
+.DS_Store
+
+# Modelos grandes do MediaPipe: baixados automaticamente por 05b_retouch.py na 1ª execução
+reel-polish/models/face_landmarker.task
+reel-polish/models/selfie_multiclass_256x256.tflite
