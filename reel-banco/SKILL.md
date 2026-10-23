@@ -47,6 +47,8 @@ recurso, vira opção de script.
 - O conector **não transfere binários grandes** e **não altera compartilhamento**. Vídeos são baixados por
   `scripts/drive_fetch.py` via link público — por isso a pasta **01_entrada precisa estar como "Qualquer pessoa
   com o link – Leitor"** (ação única do Gabriel; se `drive_fetch` sair com código 3, peça isso a ele).
+  A pasta **02_processado também precisa estar assim** (já está desde 2026-10-23): depois do passo 7 os vídeos
+  moram nela e o rebaixamento (`02_fetch --item`, `10_clip`) depende do link.
 - Documentos pequenos (PDF, HTML, Google Docs exportado): baixe pelo conector (`download_file_content` /
   `read_file_content`) para um caminho local e ingira com `--local`.
 - Artefatos claude.ai: leia com a ferramenta Artifact (`action: "read"`), salve o HTML localmente e ingira com `--local`.
