@@ -1,0 +1,429 @@
+{
+  "item_id": "20261023_img-3502",
+  "validado_em": "2026-10-23T16:18:44+00:00",
+  "segments": [
+    {
+      "id": "20261023_img-3502#s01",
+      "t0": 2.66,
+      "t1": 54.08,
+      "tema": "por que estudar o GIST mesmo sendo raro: morbidade evitável — fácil de tratar no início e potencialmente fatal se passar",
+      "tags": [
+        "gist",
+        "tumor-estromal-gastrointestinal",
+        "doenca-rara",
+        "diagnostico-precoce",
+        "oncologia-cirurgica"
+      ],
+      "tese": "doença rara que é curável no início e fatal se ignorada vale mais estudo do que a frequência sugere",
+      "citacao": "é uma patologia que você consegue resolver, tratar facilmente o estado inicial e é potencialmente fatal,",
+      "gancho_potencial": 3,
+      "publicos": [
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Abertura natural ('Não sei se vocês já ouviram falar do GIST'). 'Pergão, atropelando aqui já as coisas' (~34 s) — autocorreção, cortar. Simplificação aceitável: GIST localizado ressecado tem bom prognóstico, mas o risco depende de tamanho, índice mitótico e sítio (Miettinen/Fletcher).",
+      "t0_original": 2.7,
+      "t1_original": 55.0,
+      "dur": 51.42,
+      "citacao_t0": 43.8,
+      "citacao_t1": 53.22,
+      "citacao_palavras": [
+        54,
+        69
+      ],
+      "item_id": "20261023_img-3502"
+    },
+    {
+      "id": "20261023_img-3502#s02",
+      "t0": 55.74,
+      "t1": 101.72,
+      "tema": "diagnóstico precoce de uma doença tratável muda o número necessário para salvar uma vida",
+      "tags": [
+        "nnt",
+        "medicina-preventiva",
+        "diagnostico-precoce",
+        "gist",
+        "epidemiologia",
+        "rastreamento"
+      ],
+      "tese": "em doença curável no início, cada diagnóstico precoce rende muito benefício, ao contrário de doenças que matam mesmo descobertas cedo",
+      "citacao": "o número mínimo necessário para você conseguir salvar uma vida ele acaba aumentando muito",
+      "gancho_potencial": 2,
+      "publicos": [
+        "concursos-vestibular",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "IMPRECISÃO: o raciocínio está invertido. Se o diagnóstico precoce traz grande benefício, o NNT (número necessário tratar/diagnosticar para salvar uma vida) DIMINUI, não aumenta. O que aumenta numa doença rara é o número necessário RASTREAR (NNS). Corrigir em tela ou não usar. 'aquele número... é de gênio total' = mal transcrito (provavelmente 'NNT').",
+      "t0_original": 55.7,
+      "t1_original": 101.5,
+      "dur": 45.98,
+      "citacao_t0": 83.35,
+      "citacao_t1": 89.17,
+      "citacao_palavras": [
+        107,
+        120
+      ],
+      "item_id": "20261023_img-3502"
+    },
+    {
+      "id": "20261023_img-3502#s03",
+      "t0": 152.78,
+      "t1": 208.44,
+      "tema": "você só pergunta o que conhece: a história familiar que passa batido quando não se conhece a síndrome",
+      "tags": [
+        "gist",
+        "historia-familiar",
+        "sindrome-de-carney",
+        "anamnese",
+        "doenca-rara",
+        "raciocinio-clinico"
+      ],
+      "tese": "sem conhecer a doença e suas associações você nem pensa em perguntar, e a pista da história familiar se perde",
+      "citacao": "você não conhece a doença, mesmo que é fundo mesmo, você nem sabe da existência dela,",
+      "gancho_potencial": 3,
+      "publicos": [
+        "residente",
+        "candidato-residencia",
+        "plantonista"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "IMPRECISÃO: 'síndrome de Carney = tumores pancreáticos e GIST' está errado. Tríade de Carney = GIST gástrico + paraganglioma + condroma pulmonar; síndrome de Carney-Stratakis = GIST + paraganglioma (mutação SDH). A associação de GIST com tumor neuroendócrino duodenal/pancreático é da neurofibromatose tipo 1. Ele mesmo diz 'não é assunto pra agora'. Usar só a parte do princípio ('você nem sabe da existência dela').",
+      "t0_original": 152.8,
+      "t1_original": 212.0,
+      "dur": 55.66,
+      "citacao_t0": 161.62,
+      "citacao_t1": 165.44,
+      "citacao_palavras": [
+        160,
+        175
+      ],
+      "item_id": "20261023_img-3502"
+    },
+    {
+      "id": "20261023_img-3502#s04",
+      "t0": 212.78,
+      "t1": 260.52,
+      "tema": "conhecer doenças raras serve para ligar o alerta e levantar a hipótese no paciente que um dia vai aparecer",
+      "tags": [
+        "doenca-rara",
+        "diagnostico-diferencial",
+        "raciocinio-clinico",
+        "gist",
+        "estudo-continuo"
+      ],
+      "tese": "mesmo raras, é provável que você atenda alguém com essas doenças ao longo da carreira, e reconhecer a associação muda o caso",
+      "citacao": "por mais que você não atende todos os dias um paciente com um GIST,",
+      "gancho_potencial": 3,
+      "publicos": [
+        "residente",
+        "candidato-residencia",
+        "plantonista"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Fim com transcrição ruim ('talvez ter a pressa web desse paciente' ≈ 'salvar a vida desse paciente').",
+      "t0_original": 212.8,
+      "t1_original": 262.0,
+      "dur": 47.74,
+      "citacao_t0": 234.62,
+      "citacao_t1": 239.25,
+      "citacao_palavras": [
+        296,
+        309
+      ],
+      "item_id": "20261023_img-3502"
+    },
+    {
+      "id": "20261023_img-3502#s05",
+      "t0": 265.54,
+      "t1": 331.7,
+      "tema": "se todo dia aprendo algo que eu teria deixado passar, então já deixei passar muita coisa: o medo honesto do que não se sabe",
+      "tags": [
+        "humildade",
+        "estudo-continuo",
+        "erro-medico",
+        "medo",
+        "consultorio",
+        "basico-bem-feito"
+      ],
+      "tese": "cada conhecimento novo revela quantos casos já podem ter passado sem diagnóstico; a resposta é se preparar e fazer o básico bem feito",
+      "citacao": "então isso significa que eu já deixei passar muita coisa porque ainda existe muita coisa que eu não sei",
+      "gancho_potencial": 5,
+      "publicos": [
+        "residente",
+        "plantonista",
+        "candidato-residencia",
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "Entimema forte e vulnerável (premissa implícita: todo médico também deixa passar). Melhor gancho do vídeo. Pequenos tropeços ('isso me deixa ter com medo', 'se eu não tivesse ter deixado passar'). Fecha bem em 'saber o básico bem feito' (~334 s).",
+      "t0_original": 265.5,
+      "t1_original": 334.5,
+      "dur": 66.16,
+      "citacao_t0": 288.76,
+      "citacao_t1": 295.17,
+      "citacao_palavras": [
+        418,
+        436
+      ],
+      "item_id": "20261023_img-3502"
+    },
+    {
+      "id": "20261023_img-3502#s06",
+      "t0": 380.5,
+      "t1": 428.06,
+      "tema": "estudar sempre não é só mantra: cada assunto novo pode ser o que muda o desfecho do próximo paciente",
+      "tags": [
+        "estudo-continuo",
+        "atualizacao",
+        "diretrizes",
+        "desfecho",
+        "motivacao",
+        "educacao-medica"
+      ],
+      "tese": "as diretrizes mudam rápido e cada hora de estudo carrega a chance de mudar o desfecho de alguém",
+      "citacao": "tem uma chance de um potencial de te trazer algum conhecimento que vai mudar o desfecho do paciente",
+      "gancho_potencial": 3,
+      "publicos": [
+        "residente",
+        "plantonista",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Começa no meio de raciocínio (o início, 5:36–6:20, ficou sem transcrição). Termina com autocrítica ('nossa, concordância é isso errado', ~436 s) — cortar ou usar como respiro.",
+      "t0_original": 380.5,
+      "t1_original": 436.5,
+      "dur": 47.56,
+      "citacao_t0": 412.4,
+      "citacao_t1": 419.37,
+      "citacao_palavras": [
+        595,
+        612
+      ],
+      "item_id": "20261023_img-3502"
+    },
+    {
+      "id": "20261023_img-3502#s07",
+      "t0": 519.26,
+      "t1": 597.92,
+      "tema": "o prazer de fazer um diagnóstico raro que outro no seu lugar não faria — e o 'pra que serve' da fisiopatologia na faculdade",
+      "tags": [
+        "motivacao",
+        "diagnostico-raro",
+        "faculdade-de-medicina",
+        "fisiopatologia",
+        "estudo-prazeroso",
+        "educacao-medica"
+      ],
+      "tese": "quando o conhecimento vira prática, o estudo passa a ser prazeroso e o diagnóstico raro paga toda a faculdade",
+      "citacao": "faz valer a pena toda a faculdade, toda coisa. Quando você consegue fazer um diagnóstico raro,",
+      "gancho_potencial": 4,
+      "publicos": [
+        "residente",
+        "candidato-residencia",
+        "concursos-vestibular",
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "'qual é o outro pessoal ali no seu lugar não teria feito' pode soar arrogante — avaliar. Começo truncado (7:17–8:39 sem transcrição).",
+      "t0_original": 519.3,
+      "t1_original": 599.0,
+      "dur": 78.66,
+      "citacao_t0": 552.21,
+      "citacao_t1": 559.09,
+      "citacao_palavras": [
+        679,
+        694
+      ],
+      "item_id": "20261023_img-3502"
+    },
+    {
+      "id": "20261023_img-3502#s08",
+      "t0": 599.48,
+      "t1": 698.97,
+      "tema": "dá para ser médico médio a bom decorando protocolo: protocolos existem para que você não precise ser muito inteligente",
+      "tags": [
+        "protocolo",
+        "fisiopatologia",
+        "raciocinio-clinico",
+        "educacao-medica",
+        "medicina-baseada-em-evidencia",
+        "quebra-de-crenca"
+      ],
+      "tese": "o protocolo garante o médio; integrar a fisiopatologia à prática é o que leva além dele",
+      "citacao": "existe muita gente muito inteligente que para pra pensar no protocolo justamente pra evitar que você precise ser muito inteligente",
+      "gancho_potencial": 5,
+      "publicos": [
+        "residente",
+        "candidato-residencia",
+        "plantonista",
+        "concursos-vestibular"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "Antítese/quebra de crença forte. ATENÇÃO: a fala entre ~10:17 e 11:33 não foi transcrita (descartada pelo filtro de no_speech) — o meio do raciocínio está no áudio mas não no texto; ouvir antes de cortar. Frase pode soar depreciativa a protocolos; o ponto dele é que protocolo é feito por gente brilhante para proteger o paciente.",
+      "t0_original": 599.5,
+      "t1_original": 700.5,
+      "dur": 99.49,
+      "citacao_t0": 623.52,
+      "citacao_t1": 632.18,
+      "citacao_palavras": [
+        801,
+        820
+      ],
+      "item_id": "20261023_img-3502"
+    },
+    {
+      "id": "20261023_img-3502#s09",
+      "t0": 706.86,
+      "t1": 784.87,
+      "tema": "associar economiza espaço no cérebro: 11 dígitos soltos você esquece, o seu telefone você lembra",
+      "tags": [
+        "memoria",
+        "associacao",
+        "chunking",
+        "metodo-de-estudo",
+        "neurociencia-do-aprendizado",
+        "analogia"
+      ],
+      "tese": "informação ligada a algo que você já conhece ocupa menos memória e é lembrada com facilidade",
+      "citacao": "se eu falar uma sequência qualquer de 11 dígitos, é muito difícil você lembrar.",
+      "gancho_potencial": 3,
+      "publicos": [
+        "concursos-vestibular",
+        "candidato-residencia",
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Conecta com 3525#s08 (blocos/chunking) e 3530#s06 (RAM/HD). Ele mesmo diz 'talvez não tenha sido o melhor exemplo' (~788 s). Lacuna de transcrição em 11:58–12:35.",
+      "t0_original": 706.9,
+      "t1_original": 788.0,
+      "dur": 78.01,
+      "citacao_t0": 764.61,
+      "citacao_t1": 774.93,
+      "citacao_palavras": [
+        881,
+        894
+      ],
+      "item_id": "20261023_img-3502"
+    },
+    {
+      "id": "20261023_img-3502#s10",
+      "t0": 788.59,
+      "t1": 872.21,
+      "tema": "o teste das letras embaralhadas: impossível decorar o código, fácil lembrar quando vira a palavra 'desconhecido'",
+      "tags": [
+        "memoria",
+        "associacao",
+        "significado",
+        "metodo-de-estudo",
+        "anagrama",
+        "chunking"
+      ],
+      "tese": "o que tem significado é lembrado sem esforço; o mesmo conteúdo sem significado é praticamente impossível de guardar",
+      "citacao": "se eu falar pra você repetir desconhecido, você consegue, porque aí você já associou isso a um significado.",
+      "gancho_potencial": 4,
+      "publicos": [
+        "concursos-vestibular",
+        "candidato-residencia",
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Exemplo demonstrável na edição: mostrar as letras embaralhadas na tela e depois a palavra — ótimo para Reel interativo. A sequência soletrada na transcrição está imperfeita; ele cita 'a primeira palavra que apareceu aqui no vídeo do carro' (referência a outro vídeo).",
+      "t0_original": 788.6,
+      "t1_original": 874.0,
+      "dur": 83.62,
+      "citacao_t0": 867.21,
+      "citacao_t1": 872.21,
+      "citacao_palavras": [
+        1013,
+        1030
+      ],
+      "item_id": "20261023_img-3502"
+    },
+    {
+      "id": "20261023_img-3502#s11",
+      "t0": 874.0,
+      "t1": 1010.09,
+      "tema": "a genética de PAF e Lynch parece impossível de decorar até você ver no paciente: o caso clínico fixa o conhecimento",
+      "tags": [
+        "polipose-adenomatosa-familiar",
+        "sindrome-de-lynch",
+        "instabilidade-de-microssatelites",
+        "genetica",
+        "memoria",
+        "caso-clinico"
+      ],
+      "tese": "ver o painel genético de um paciente real transforma um dado decoreba em memória duradoura",
+      "citacao": "isso já não é uma coisa que é difícil para mim lembrar, porque eu vi isso,",
+      "gancho_potencial": 3,
+      "publicos": [
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "IMPRECISÕES (não podem ir ao ar sem correção): (1) Lynch — ele diz 'MSH1 e MLH2'; os genes são MLH1, MSH2, MSH6 e PMS2 (mais tarde ele fala certo 'MLH1 e MSH2'). (2) PAF — a mutação germinativa é do gene APC; ele diz que o painel do paciente com PAF mostrou 'mutação do TP53' (TP53 germinativo = Li-Fraumeni). Ou o paciente tinha APC, ou não era PAF clássica — conferir antes de contar o caso. Trecho de 135 s: usar em partes. Cuidado com sigilo: não citar dados identificáveis do paciente.",
+      "t0_original": 874.0,
+      "t1_original": 1008.7,
+      "dur": 136.09,
+      "citacao_t0": 957.43,
+      "citacao_t1": 962.26,
+      "citacao_palavras": [
+        1155,
+        1170
+      ],
+      "item_id": "20261023_img-3502"
+    }
+  ]
+}

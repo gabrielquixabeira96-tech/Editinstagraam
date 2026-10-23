@@ -1,0 +1,32 @@
+{
+  "id": "20261023_img-3502",
+  "nome": "IMG_3502",
+  "tipo": "video",
+  "origem": {
+    "drive_id": "1yLKAllOmoV4w-AO4vzYsyJXdLnGd03xI",
+    "nome_original": "IMG_3502.MOV",
+    "modifiedTime": "2026-10-23T10:10:51.423Z"
+  },
+  "arquivo": "source.mov",
+  "tamanho": 6636205600,
+  "sha256": "c52727e7fcb18cee9a1fb6ce418a2aea5c46d09c0fe84b260828f49faf720a7c",
+  "duracao": 1051.941667,
+  "largura": 3840,
+  "altura": 2160,
+  "fps": 29.998,
+  "rotacao": 0,
+  "tem_audio": true,
+  "vcodec": "hevc",
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "indexado",
+  "criado_em": "2026-10-23T15:22:26+00:00",
+  "atualizado_em": "2026-10-23T16:18:44+00:00",
+  "n_cenas": 36,
+  "n_keyframes": 36,
+  "contact_sheets": [
+    "contact_sheet.jpg"
+  ],
+  "n_segmentos": 11,
+  "indexado_em": "2026-10-23T16:18:44+00:00"
+}

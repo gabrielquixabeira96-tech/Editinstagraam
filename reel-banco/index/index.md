@@ -1,6 +1,6 @@
 # Banco de material para Reels — catálogo
 
-Gerado em 2026-10-23T15:46:05+00:00 · 10 item(ns) · 84 segmento(s) · 1 pendente(s) de segmentação
+Gerado em 2026-10-23T16:18:44+00:00 · 11 item(ns) · 95 segmento(s)
 
 Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: FP fala-principal, BR broll, CR corte-rapido, CC citacao-card · públicos: PL plantonista, RE residente, CA candidato-residencia, CV concursos-vestibular, GE geral
 
@@ -26,6 +26,22 @@ Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: 
 | 20261023_img-3440#s09 | 06:48.18–07:13.33 (25 s) | tórax instável no trauma contuso: fratura de arcos costais com instabilidade causando depressão respiratória | trauma-toracico, torax-instavel, fratura-de-costela, via-aerea, indicacao-de-intubacao | 1 | 3/4 | CA | FP |
 | 20261023_img-3440#s10 | 07:15.67–08:14.74 (59 s) | no tórax instável a primeira medida é analgesia, não intubação: a dispneia inicial é pela dor | trauma-toracico, torax-instavel, analgesia, fratura-de-costela, dor, atls | 4 | 3/4 | PL CA RE | FP CC |
 | 20261023_img-3440#s11 | 08:15.10–09:19.82 (65 s) | dessaturação abaixo de 90–92% no tórax instável indica intubação porque vem da contusão pulmonar | trauma-toracico, torax-instavel, contusao-pulmonar, dessaturacao, indicacao-de-intubacao, atls | 4 | 3/4 | PL CA RE | FP CC |
+
+## 20261023_img-3502 — IMG_3502 (video · 17:31.94 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261023_img-3502#s01 | 00:02.66–00:54.08 (51 s) | por que estudar o GIST mesmo sendo raro: morbidade evitável — fácil de tratar no início e potencialmente fatal se passar | gist, tumor-estromal-gastrointestinal, doenca-rara, diagnostico-precoce, oncologia-cirurgica | 3 | 4/4 | RE CA | FP |
+| 20261023_img-3502#s02 | 00:55.74–01:41.72 (46 s) | diagnóstico precoce de uma doença tratável muda o número necessário para salvar uma vida | nnt, medicina-preventiva, diagnostico-precoce, gist, epidemiologia, rastreamento | 2 | 4/4 | CV CA | FP |
+| 20261023_img-3502#s03 | 02:32.78–03:28.44 (56 s) | você só pergunta o que conhece: a história familiar que passa batido quando não se conhece a síndrome | gist, historia-familiar, sindrome-de-carney, anamnese, doenca-rara, raciocinio-clinico | 3 | 4/4 | RE CA PL | FP |
+| 20261023_img-3502#s04 | 03:32.78–04:20.52 (48 s) | conhecer doenças raras serve para ligar o alerta e levantar a hipótese no paciente que um dia vai aparecer | doenca-rara, diagnostico-diferencial, raciocinio-clinico, gist, estudo-continuo | 3 | 4/4 | RE CA PL | FP |
+| 20261023_img-3502#s05 | 04:25.54–05:31.70 (66 s) | se todo dia aprendo algo que eu teria deixado passar, então já deixei passar muita coisa: o medo honesto do que não se sabe | humildade, estudo-continuo, erro-medico, medo, consultorio, basico-bem-feito | 5 | 4/4 | RE PL CA GE | FP CR CC |
+| 20261023_img-3502#s06 | 06:20.50–07:08.06 (48 s) | estudar sempre não é só mantra: cada assunto novo pode ser o que muda o desfecho do próximo paciente | estudo-continuo, atualizacao, diretrizes, desfecho, motivacao, educacao-medica | 3 | 4/4 | RE PL CA | FP CC |
+| 20261023_img-3502#s07 | 08:39.26–09:57.92 (79 s) | o prazer de fazer um diagnóstico raro que outro no seu lugar não faria — e o 'pra que serve' da fisiopatologia na faculdade | motivacao, diagnostico-raro, faculdade-de-medicina, fisiopatologia, estudo-prazeroso, educacao-medica | 4 | 4/4 | RE CA CV GE | FP CC |
+| 20261023_img-3502#s08 | 09:59.48–11:38.97 (99 s) | dá para ser médico médio a bom decorando protocolo: protocolos existem para que você não precise ser muito inteligente | protocolo, fisiopatologia, raciocinio-clinico, educacao-medica, medicina-baseada-em-evidencia, quebra-de-crenca | 5 | 4/4 | RE CA PL CV | FP CR CC |
+| 20261023_img-3502#s09 | 11:46.86–13:04.87 (78 s) | associar economiza espaço no cérebro: 11 dígitos soltos você esquece, o seu telefone você lembra | memoria, associacao, chunking, metodo-de-estudo, neurociencia-do-aprendizado, analogia | 3 | 4/4 | CV CA GE | FP |
+| 20261023_img-3502#s10 | 13:08.59–14:32.21 (84 s) | o teste das letras embaralhadas: impossível decorar o código, fácil lembrar quando vira a palavra 'desconhecido' | memoria, associacao, significado, metodo-de-estudo, anagrama, chunking | 4 | 4/4 | CV CA GE | FP CC |
+| 20261023_img-3502#s11 | 14:34.00–16:50.09 (136 s) | a genética de PAF e Lynch parece impossível de decorar até você ver no paciente: o caso clínico fixa o conhecimento | polipose-adenomatosa-familiar, sindrome-de-lynch, instabilidade-de-microssatelites, genetica, memoria, caso-clinico | 3 | 4/4 | RE CA | FP |
 
 ## 20261023_img-3525 — IMG_3525 (video · 12:13.08 · licença propria)
 
@@ -137,8 +153,4 @@ Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: 
 | 20261023_img-3808#s02 | 00:36.62–01:31.61 (55 s) | bot de comentários programado para responder com base em literatura do PubMed e didática de medicina e cirurgia | bastidores, inteligencia-artificial, claude, pubmed, medicina-baseada-em-evidencia, estudo, bot-de-comentarios | 2 | 3/3 | RE CA GE | FP CC |
 | 20261023_img-3808#s03 | 01:37.12–02:01.72 (25 s) | bastidor técnico: por que o bot exige seguir o perfil (Meta bloqueia uso livre; site anterior exigia chave de API de cada usuário) | bastidores, automacao, meta, instagram, api, chave-api | 1 | 3/3 | GE | FP |
 | 20261023_img-3808#s04 | 01:59.42–02:06.72 (7 s) | chamada para ação: para o bot responder o comentário é preciso seguir o perfil | cta, seguidores, bot-de-comentarios, instagram, automacao | 2 | 3/3 | GE | CR |
-
-## Pendentes (sem segments.json no índice)
-
-- 20261023_img-3502 — IMG_3502 (video, status baixado)
 
