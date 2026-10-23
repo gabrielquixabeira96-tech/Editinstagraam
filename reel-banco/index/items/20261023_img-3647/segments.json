@@ -1,0 +1,577 @@
+{
+  "item_id": "20261023_img-3647",
+  "validado_em": "2026-10-23T15:46:05+00:00",
+  "segments": [
+    {
+      "id": "20261023_img-3647#s01",
+      "t0": 1.22,
+      "t1": 53.44,
+      "tema": "por que gravar a aula sem preparo: o jeito mais fácil de aprender é tentar ensinar, e o desconforto obriga o cérebro a aprender",
+      "tags": [
+        "metodo-de-estudo",
+        "efeito-protege",
+        "aprender-ensinando",
+        "recuperacao-ativa",
+        "bastidores",
+        "falar-para-camera"
+      ],
+      "tese": "explicar sem consultar força a recuperação ativa e esse desconforto é o que fixa o conteúdo",
+      "citacao": "o jeito mais fácil de aprender alguma coisa e tentar me ensinar.",
+      "gancho_potencial": 4,
+      "publicos": [
+        "candidato-residencia",
+        "concursos-vestibular",
+        "residente",
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Conecta com os vídeos de método de estudo (3528/3530/3525: dificuldade desejável, erro de predição). Confissão honesta 'eu odeio falar para a câmera' (40–53 s) humaniza. Na fala ele diz 'tentar me ensinar' (= tentar ensinar); trecho 'acar' / 'aprender na mar' ininteligível (~23 s e ~37 s). Olha para o lado na maior parte.",
+      "t0_original": 1.2,
+      "t1_original": 56.0,
+      "dur": 52.22,
+      "citacao_t0": 10.92,
+      "citacao_t1": 13.5,
+      "citacao_palavras": [
+        24,
+        35
+      ],
+      "item_id": "20261023_img-3647"
+    },
+    {
+      "id": "20261023_img-3647#s02",
+      "t0": 75.34,
+      "t1": 149.14,
+      "tema": "o que torna o linfoma diferente dos outros tumores: a célula que prolifera é o linfócito B, uma célula de defesa que circula",
+      "tags": [
+        "linfoma",
+        "linfocito-b",
+        "neoplasia",
+        "oncologia",
+        "hematologia",
+        "fisiopatologia"
+      ],
+      "tese": "todo câncer é proliferação desregulada, mas no linfoma a célula é de defesa e não de um órgão fixo",
+      "citacao": "em vez de ser uma célula comum de algum órgão, é uma célula de defesa",
+      "gancho_potencial": 2,
+      "publicos": [
+        "concursos-vestibular",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Pausa de 21 s em 1:36–1:58 — cortar. 'geralmente o linfócito B' correto para MALT (o linfoma MALT é de células B da zona marginal).",
+      "t0_original": 75.3,
+      "t1_original": 149.0,
+      "dur": 73.8,
+      "citacao_t0": 138.92,
+      "citacao_t1": 143.52,
+      "citacao_palavras": [
+        221,
+        235
+      ],
+      "item_id": "20261023_img-3647"
+    },
+    {
+      "id": "20261023_img-3647#s03",
+      "t0": 240.51,
+      "t1": 332.34,
+      "tema": "como a H. pylori cria o linfoma MALT: infecção crônica atrai linfócitos B para a mucosa gástrica, que se multiplicam até uma sofrer mutação",
+      "tags": [
+        "linfoma-malt",
+        "h-pylori",
+        "estomago",
+        "infeccao-cronica",
+        "carcinogenese",
+        "linfocito-b"
+      ],
+      "tese": "o estímulo crônico da H. pylori mantém os linfócitos B se replicando na mucosa até que um erro genético os transforme em linfoma",
+      "citacao": "a infecção crônica mais comum, característico do tecido gástrico é a infecção por H.pylori,",
+      "gancho_potencial": 3,
+      "publicos": [
+        "candidato-residencia",
+        "concursos-vestibular",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Fisiopatologia correta em linhas gerais (o estômago normal não tem tecido linfoide; o MALT é ADQUIRIDO pela gastrite crônica por H. pylori). '50, 60% da população colonizada' é aceitável (≈ 43–50% no mundo; mais alto no Brasil). Citação contém 'H.pylori' (palavra corrigida sem espaço). Ritmo lento, pausas de 1–2,7 s.",
+      "t0_original": 240.5,
+      "t1_original": 332.0,
+      "dur": 91.83,
+      "citacao_t0": 281.22,
+      "citacao_t1": 288.1,
+      "citacao_palavras": [
+        404,
+        417
+      ],
+      "item_id": "20261023_img-3647"
+    },
+    {
+      "id": "20261023_img-3647#s04",
+      "t0": 335.84,
+      "t1": 408.16,
+      "tema": "diferente de outros cânceres, o linfoma MALT inicial ainda depende do estímulo da infecção para se replicar",
+      "tags": [
+        "linfoma-malt",
+        "h-pylori",
+        "dependencia-antigenica",
+        "erradicacao",
+        "linfocito-b"
+      ],
+      "tese": "no início o clone de linfoma MALT ainda precisa do estímulo antigênico da H. pylori, por isso pode regredir com a erradicação",
+      "citacao": "ela é replicada para conter uma infecção.",
+      "gancho_potencial": 2,
+      "publicos": [
+        "candidato-residencia",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Raciocínio certo e importante (base de por que erradicar H. pylori cura 60–80% dos MALT localizados), mas a fala se perde: ele hesita no receptor ('CD20, CD20 não, não CD20 não') e em 6:54–8:36 não há fala. Só serve com muitos cortes; melhor regravar.",
+      "t0_original": 335.8,
+      "t1_original": 410.0,
+      "dur": 72.32,
+      "citacao_t0": 382.12,
+      "citacao_t1": 384.82,
+      "citacao_palavras": [
+        521,
+        527
+      ],
+      "item_id": "20261023_img-3647"
+    },
+    {
+      "id": "20261023_img-3647#s05",
+      "t0": 562.89,
+      "t1": 637.0,
+      "tema": "a analogia da antena: quando o defeito está na via que manda a célula se replicar, erradicar a H. pylori deixa de funcionar",
+      "tags": [
+        "linfoma-malt",
+        "h-pylori",
+        "t-11-18",
+        "falha-de-erradicacao",
+        "analogia",
+        "nf-kb"
+      ],
+      "tese": "se a via de sinalização fica ligada sozinha, o tumor fica independente da infecção e não regride com a erradicação",
+      "citacao": "É como se esse receptor fosse uma antena que recebe o sinal,",
+      "gancho_potencial": 4,
+      "publicos": [
+        "candidato-residencia",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "IMPRECISÃO: não é 'mutação do receptor' (ele não lembra o nome e promete corrigir). O marcador clássico é a translocação t(11;18)(q21;q21), fusão API2-MALT1 (BIRC3-MALT1), que ativa NF-κB de forma constitutiva, tornando o tumor independente do antígeno — prediz falha da erradicação. Também predizem falha: invasão além da submucosa e acometimento linfonodal. A analogia da antena continua válida se dita como 'um defeito que deixa o sinal ligado o tempo todo'. 'Então você precisa de quimioterapia' — ver s06.",
+      "t0_original": 562.9,
+      "t1_original": 637.5,
+      "dur": 74.11,
+      "citacao_t0": 602.07,
+      "citacao_t1": 607.6,
+      "citacao_palavras": [
+        695,
+        706
+      ],
+      "item_id": "20261023_img-3647"
+    },
+    {
+      "id": "20261023_img-3647#s06",
+      "t0": 637.54,
+      "t1": 725.1,
+      "tema": "por que a cirurgia tem papel limitado no linfoma MALT e qual o tratamento quando a erradicação falha",
+      "tags": [
+        "linfoma-malt",
+        "tratamento",
+        "gastrectomia",
+        "radioterapia",
+        "rituximabe",
+        "quimioterapia"
+      ],
+      "tese": "gastrectomia é agressiva e desnecessária porque a doença é de células de defesa espalhadas; o tratamento é não cirúrgico",
+      "citacao": "a ressecção cirúrgica ela é muito, muito limitada,",
+      "gancho_potencial": 3,
+      "publicos": [
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "IMPRECISÃO de conduta: ele diz que 'o melhor tratamento nesse cenário é a quimioterapia'. O correto: (1) MALT gástrico localizado H. pylori-positivo → erradicação; (2) localizado sem resposta, H. pylori-negativo ou com t(11;18) → RADIOTERAPIA (ISRT ~24–30 Gy) é a escolha; (3) doença disseminada/sintomática → rituximabe (anti-CD20) isolado ou com quimioterapia. A cirurgia saiu do tratamento padrão — essa parte está certa. Pausas de 6 s e 13 s (11:07–11:33) — cortar.",
+      "t0_original": 637.5,
+      "t1_original": 725.0,
+      "dur": 87.56,
+      "citacao_t0": 639.28,
+      "citacao_t1": 644.86,
+      "citacao_palavras": [
+        773,
+        780
+      ],
+      "item_id": "20261023_img-3647"
+    },
+    {
+      "id": "20261023_img-3647#s07",
+      "t0": 821.06,
+      "t1": 870.11,
+      "tema": "linfoma MALT na endoscopia não tem aspecto característico: só a biópsia múltipla faz o diagnóstico",
+      "tags": [
+        "linfoma-malt",
+        "endoscopia",
+        "biopsia",
+        "diagnostico",
+        "ulcera-gastrica"
+      ],
+      "tese": "a lesão pode ser úlcera, erosão ou quase nada, então diante da suspeita fazem-se múltiplas biópsias",
+      "citacao": "nenhuma característica que seja específica dele.",
+      "gancho_potencial": 3,
+      "publicos": [
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 2,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "broll"
+      ],
+      "notas": "Conteúdo correto. Nesse trecho a câmera está apontada para o monitor (imagens endoscópicas filmadas de lado, reflexo) — sem rosto. Fala truncada no fim ('Eu sou aviólogos...' ininteligível).",
+      "t0_original": 821.0,
+      "t1_original": 870.0,
+      "dur": 49.05,
+      "citacao_t0": 827.39,
+      "citacao_t1": 830.37,
+      "citacao_palavras": [
+        949,
+        954
+      ],
+      "item_id": "20261023_img-3647"
+    },
+    {
+      "id": "20261023_img-3647#s08",
+      "t0": 909.27,
+      "t1": 1020.5,
+      "tema": "anatomia básica da pelve comentada na tela: sacro, ílios, sínfise púbica, forame obturado e as artérias ilíacas",
+      "tags": [
+        "trauma-pelvico",
+        "anatomia-pelvica",
+        "anel-pelvico",
+        "sinfise-pubica",
+        "arteria-iliaca",
+        "atlas"
+      ],
+      "tese": "o anel pélvico é formado pelo sacro e pelos dois ossos do quadril unidos na sínfise, e a ilíaca interna irriga a pelve",
+      "citacao": "parece uma bacia aqui, esse é anel pélvico que é formado pelo sacro.",
+      "gancho_potencial": 1,
+      "publicos": [
+        "concursos-vestibular",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "broll"
+      ],
+      "notas": "Ele de perfil apontando o atlas no monitor (k034–k035). Boa como B-roll de 'aula com atlas', fraca como fala (descritiva, hesitante). Nota: diz 'junção dos dois ílios' na sínfise — a sínfise une os dois PÚBIS. Comentário inicial 'aula que eu gosto porque é muito mais visual' (15:17–15:32).",
+      "t0_original": 909.0,
+      "t1_original": 1020.0,
+      "dur": 111.23,
+      "citacao_t0": 944.63,
+      "citacao_t1": 949.25,
+      "citacao_palavras": [
+        1114,
+        1126
+      ],
+      "item_id": "20261023_img-3647"
+    },
+    {
+      "id": "20261023_img-3647#s09",
+      "t0": 1081.17,
+      "t1": 1129.26,
+      "tema": "batida de frente contra anteparo fixo rompe a sínfise púbica e abre a pelve como um livro",
+      "tags": [
+        "trauma-pelvico",
+        "livro-aberto",
+        "apc",
+        "colisao-frontal",
+        "mecanismo-de-trauma",
+        "young-burgess"
+      ],
+      "tese": "o impacto anteroposterior da colisão frontal abre a sínfise e produz a fratura em livro aberto",
+      "citacao": "ela consegue romper a sínfise púbica e abrir como se fosse um livro.",
+      "gancho_potencial": 3,
+      "publicos": [
+        "candidato-residencia",
+        "plantonista",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Exemplo do animal ('dependendo do peso do animal você pode considerar anteparo fixo') é curioso. Ele chama de 'fratura de Young-Burgess' o que é a APC (Young-Burgess é a classificação inteira). Sem fala em 19:00–19:33.",
+      "t0_original": 1081.0,
+      "t1_original": 1131.0,
+      "dur": 48.09,
+      "citacao_t0": 1126.02,
+      "citacao_t1": 1129.26,
+      "citacao_palavras": [
+        1370,
+        1382
+      ],
+      "item_id": "20261023_img-3647"
+    },
+    {
+      "id": "20261023_img-3647#s10",
+      "t0": 1173.94,
+      "t1": 1248.9,
+      "tema": "o paradoxo da compressão lateral: a pelve comprimida sangra menos e mesmo assim é a fratura mais associada à mortalidade",
+      "tags": [
+        "trauma-pelvico",
+        "compressao-lateral",
+        "lc",
+        "mortalidade",
+        "paradoxo",
+        "pegadinha-de-prova"
+      ],
+      "tese": "a fratura que menos sangra é a que mais aparece associada a morte, porque a causa da morte está fora da pelve",
+      "citacao": "o contraponto aqui é a curiosidade que esse é o tipo de fratura mais associada à mortalidade",
+      "gancho_potencial": 5,
+      "publicos": [
+        "candidato-residencia",
+        "residente",
+        "plantonista"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "IMPRECISÕES: (1) 'não consegue sangrar no máximo 3 litros... a reposição volêmica já é suficiente' — 3 L é choque classe IV (perda > 40%); ATLS manda hemostasia + hemocomponentes e cristaloide restrito, nunca 'reposição volêmica resolve'. (2) 'LC é a mais associada à mortalidade' não é consenso: na série de Dalal/Burgess a mortalidade cresce com o grau de APC (morte por choque/sepse/SDRA) e na LC as mortes vêm principalmente do TCE associado. Formular como 'na LC, quando o paciente morre, quase sempre é pela cabeça'. Mesmo paradoxo de 3760#s08 e 3643#s12.",
+      "t0_original": 1173.9,
+      "t1_original": 1249.0,
+      "dur": 74.96,
+      "citacao_t0": 1214.82,
+      "citacao_t1": 1222.68,
+      "citacao_palavras": [
+        1452,
+        1468
+      ],
+      "item_id": "20261023_img-3647"
+    },
+    {
+      "id": "20261023_img-3647#s11",
+      "t0": 1249.53,
+      "t1": 1309.4,
+      "tema": "motorista contra pedestre: o carro tem para-choque, airbag e cinto; o atropelado leva o impacto na pelve e na cabeça, e morre de TCE",
+      "tags": [
+        "trauma-pelvico",
+        "compressao-lateral",
+        "atropelamento",
+        "tce",
+        "airbag",
+        "cinto-de-seguranca"
+      ],
+      "tese": "na compressão lateral do atropelado a morte é pelo TCE, não pela hemorragia pélvica",
+      "citacao": "ele é associado ao TCE, não à hemorragia pélvica.",
+      "gancho_potencial": 4,
+      "publicos": [
+        "candidato-residencia",
+        "plantonista",
+        "residente",
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Fecha o paradoxo do s10 com a explicação correta. Simplificação: 'LC quase sempre é atropelamento' — LC também é o mecanismo mais comum em colisão lateral (T-bone) e quedas. Melhor versão visual que a do 3643 (que é noturna e escura).",
+      "t0_original": 1249.5,
+      "t1_original": 1308.8,
+      "dur": 59.87,
+      "citacao_t0": 1306.07,
+      "citacao_t1": 1309.94,
+      "citacao_palavras": [
+        1631,
+        1639
+      ],
+      "item_id": "20261023_img-3647"
+    },
+    {
+      "id": "20261023_img-3647#s12",
+      "t0": 1366.44,
+      "t1": 1442.24,
+      "tema": "a primeira medida no livro aberto é ainda no pré-hospitalar: binder no nível dos trocânteres maiores",
+      "tags": [
+        "trauma-pelvico",
+        "cinta-pelvica",
+        "binder",
+        "trocanter-maior",
+        "pre-hospitalar",
+        "livro-aberto"
+      ],
+      "tese": "estabilizar a pelve com o binder posicionado nos trocânteres é a medida que garante a sobrevida inicial",
+      "citacao": "No primeiro atendimento, você tem que fazer a estabilização da pelve com o binder,",
+      "gancho_potencial": 3,
+      "publicos": [
+        "plantonista",
+        "candidato-residencia",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "broll"
+      ],
+      "notas": "Mostra reconstrução 3D com binder no monitor (k049). Pausa de 25 s (23:05–23:32) — cortar. Exagero: 'é o que garante a sobrevida' — binder é medida temporária recomendada (ATLS/PHTLS), sem benefício de mortalidade comprovado isoladamente; dizer 'é a primeira medida e ganha tempo'. Abertura embolada ('proteína de livro aberto... inversão boa vida').",
+      "t0_original": 1366.0,
+      "t1_original": 1442.0,
+      "dur": 75.8,
+      "citacao_t0": 1374.18,
+      "citacao_t1": 1383.8,
+      "citacao_palavras": [
+        1682,
+        1695
+      ],
+      "item_id": "20261023_img-3647"
+    },
+    {
+      "id": "20261023_img-3647#s13",
+      "t0": 1499.02,
+      "t1": 1522.27,
+      "tema": "uma cinta simples e barata salva a maioria dos traumas pélvicos e mesmo assim quase ninguém passa no pré-hospitalar no Brasil",
+      "tags": [
+        "trauma-pelvico",
+        "cinta-pelvica",
+        "binder",
+        "pre-hospitalar",
+        "brasil",
+        "sistema-de-saude"
+      ],
+      "tese": "a medida que mais salva no trauma pélvico é barata e simples, e ainda assim é rara no pré-hospitalar brasileiro",
+      "citacao": "salva a maior parte dos pacientes com trauma pélvico, simplesmente passar essa cinta pélvica,",
+      "gancho_potencial": 4,
+      "publicos": [
+        "plantonista",
+        "geral",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "Antítese boa (simples e barato × ninguém usa). Mesmo exagero de 'salva a maior parte' (formular 'é a primeira medida e a mais simples'). Crítica ao pré-hospitalar pode soar acusatória; '25:18 esse explodiu aqui' ininteligível. Precedido por pausa de 55 s (24:00–24:59).",
+      "t0_original": 1499.0,
+      "t1_original": 1522.5,
+      "dur": 23.25,
+      "citacao_t0": 1499.02,
+      "citacao_t1": 1506.44,
+      "citacao_palavras": [
+        1775,
+        1788
+      ],
+      "item_id": "20261023_img-3647"
+    },
+    {
+      "id": "20261023_img-3647#s14",
+      "t0": 1533.48,
+      "t1": 1614.84,
+      "tema": "binder não resolveu: packing pré-peritoneal para o sangramento venoso e, se falhar, angioembolização para os 10–15% arteriais",
+      "tags": [
+        "trauma-pelvico",
+        "tamponamento-pre-peritoneal",
+        "packing",
+        "angioembolizacao",
+        "sangramento-arterial",
+        "controle-de-danos"
+      ],
+      "tese": "a sequência é binder, depois packing pré-peritoneal (venoso) e, se persistir, angioembolização (arterial)",
+      "citacao": "fez estabilização, não funcionou, fez o packing e não funcionou, aí você parte para a angioembolização,",
+      "gancho_potencial": 3,
+      "publicos": [
+        "candidato-residencia",
+        "residente",
+        "plantonista"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Números corretos (≈85% venoso, 10–15% arterial). Diz 'sangramento de origem pré-peritoneal' querendo dizer retroperitoneal/venoso do plexo pré-sacral. Packing: incisão suprapúbica extraperitoneal, compressas e relook em 24–48 h — ele resume bem ('abre, coloca, fecha, depois volta'). Mesma ressalva do 3643#s07: a ordem packing→angio depende do recurso local. Imagem de packing no monitor (k051–k052).",
+      "t0_original": 1533.4,
+      "t1_original": 1615.0,
+      "dur": 81.36,
+      "citacao_t0": 1591.73,
+      "citacao_t1": 1599.43,
+      "citacao_palavras": [
+        1959,
+        1974
+      ],
+      "item_id": "20261023_img-3647"
+    },
+    {
+      "id": "20261023_img-3647#s15",
+      "t0": 1662.56,
+      "t1": 1745.82,
+      "tema": "[NÃO USAR] como é feita a angioembolização pélvica — trecho com erro de técnica",
+      "tags": [
+        "trauma-pelvico",
+        "angioembolizacao",
+        "erro-factual",
+        "nao-usar",
+        "reboa"
+      ],
+      "tese": "(errada na fala) ele afirma que a angioembolização é feita com o paciente aberto por laparotomia",
+      "citacao": "Eu achava que entrava pela arteria femoral ali pela propunção mesmo e fazer angioembolização, mas não.",
+      "gancho_potencial": 0,
+      "publicos": [
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "ERRO FACTUAL GRAVE — NÃO PUBLICAR: a angioembolização pélvica é ENDOVASCULAR PERCUTÂNEA, por punção da artéria femoral comum (Seldinger), cateterização seletiva da ilíaca interna e embolização (gelfoam/molas) — exatamente o que ele 'achava' e depois descartou. Não se abre o paciente para isso. A imagem do monitor que o confundiu mostra um balão endovascular (REBOA, também por punção femoral) e/ou cirurgia aberta. Mantido no índice só para impedir reaproveitamento.",
+      "t0_original": 1662.9,
+      "t1_original": 1745.5,
+      "dur": 83.26,
+      "citacao_t0": 1674.3,
+      "citacao_t1": 1681.38,
+      "citacao_palavras": [
+        2057,
+        2072
+      ],
+      "item_id": "20261023_img-3647"
+    }
+  ]
+}

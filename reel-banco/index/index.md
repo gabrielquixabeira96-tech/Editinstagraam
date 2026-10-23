@@ -1,6 +1,6 @@
 # Banco de material para Reels — catálogo
 
-Gerado em 2026-10-23T15:24:17+00:00 · 9 item(ns) · 69 segmento(s) · 2 pendente(s) de segmentação
+Gerado em 2026-10-23T15:46:05+00:00 · 10 item(ns) · 84 segmento(s) · 1 pendente(s) de segmentação
 
 Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: FP fala-principal, BR broll, CR corte-rapido, CC citacao-card · públicos: PL plantonista, RE residente, CA candidato-residencia, CV concursos-vestibular, GE geral
 
@@ -89,6 +89,26 @@ Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: 
 | 20261023_img-3643#s13 | 14:23.68–15:31.66 (68 s) | atropelado contra motorista: quem bate o carro tem para-choque, airbag e cinto; o pedestre não tem nenhuma proteção | trauma-pelvico, atropelamento, compressao-lateral, mecanismo-de-trauma, cinto-de-seguranca, airbag | 3 | 1/3 | CA PL GE | FP |
 | 20261023_img-3643#s14 | 15:33.68–15:55.06 (21 s) | na compressão lateral a morte geralmente não é pela pelve, é pelo traumatismo cranioencefálico associado | trauma-pelvico, compressao-lateral, tce, atropelamento, mortalidade, pegadinha-de-prova | 4 | 1/3 | CA RE PL | FP CC |
 
+## 20261023_img-3647 — IMG_3647 (video · 29:09.12 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261023_img-3647#s01 | 00:01.22–00:53.44 (52 s) | por que gravar a aula sem preparo: o jeito mais fácil de aprender é tentar ensinar, e o desconforto obriga o cérebro a aprender | metodo-de-estudo, efeito-protege, aprender-ensinando, recuperacao-ativa, bastidores, falar-para-camera | 4 | 3/3 | CA CV RE GE | FP CC |
+| 20261023_img-3647#s02 | 01:15.34–02:29.14 (74 s) | o que torna o linfoma diferente dos outros tumores: a célula que prolifera é o linfócito B, uma célula de defesa que circula | linfoma, linfocito-b, neoplasia, oncologia, hematologia, fisiopatologia | 2 | 3/3 | CV CA | FP |
+| 20261023_img-3647#s03 | 04:00.51–05:32.34 (92 s) | como a H. pylori cria o linfoma MALT: infecção crônica atrai linfócitos B para a mucosa gástrica, que se multiplicam até uma sofrer mutação | linfoma-malt, h-pylori, estomago, infeccao-cronica, carcinogenese, linfocito-b | 3 | 3/3 | CA CV RE | FP |
+| 20261023_img-3647#s04 | 05:35.84–06:48.16 (72 s) | diferente de outros cânceres, o linfoma MALT inicial ainda depende do estímulo da infecção para se replicar | linfoma-malt, h-pylori, dependencia-antigenica, erradicacao, linfocito-b | 2 | 3/3 | CA RE | FP |
+| 20261023_img-3647#s05 | 09:22.89–10:37.00 (74 s) | a analogia da antena: quando o defeito está na via que manda a célula se replicar, erradicar a H. pylori deixa de funcionar | linfoma-malt, h-pylori, t-11-18, falha-de-erradicacao, analogia, nf-kb | 4 | 3/3 | CA RE | FP CC |
+| 20261023_img-3647#s06 | 10:37.54–12:05.10 (88 s) | por que a cirurgia tem papel limitado no linfoma MALT e qual o tratamento quando a erradicação falha | linfoma-malt, tratamento, gastrectomia, radioterapia, rituximabe, quimioterapia | 3 | 3/3 | RE CA | FP |
+| 20261023_img-3647#s07 | 13:41.06–14:30.11 (49 s) | linfoma MALT na endoscopia não tem aspecto característico: só a biópsia múltipla faz o diagnóstico | linfoma-malt, endoscopia, biopsia, diagnostico, ulcera-gastrica | 3 | 2/3 | RE CA | FP BR |
+| 20261023_img-3647#s08 | 15:09.27–17:00.50 (111 s) | anatomia básica da pelve comentada na tela: sacro, ílios, sínfise púbica, forame obturado e as artérias ilíacas | trauma-pelvico, anatomia-pelvica, anel-pelvico, sinfise-pubica, arteria-iliaca, atlas | 1 | 3/3 | CV CA | FP BR |
+| 20261023_img-3647#s09 | 18:01.17–18:49.26 (48 s) | batida de frente contra anteparo fixo rompe a sínfise púbica e abre a pelve como um livro | trauma-pelvico, livro-aberto, apc, colisao-frontal, mecanismo-de-trauma, young-burgess | 3 | 3/3 | CA PL RE | FP |
+| 20261023_img-3647#s10 | 19:33.94–20:48.90 (75 s) | o paradoxo da compressão lateral: a pelve comprimida sangra menos e mesmo assim é a fratura mais associada à mortalidade | trauma-pelvico, compressao-lateral, lc, mortalidade, paradoxo, pegadinha-de-prova | 5 | 3/3 | CA RE PL | FP CR CC |
+| 20261023_img-3647#s11 | 20:49.53–21:49.40 (60 s) | motorista contra pedestre: o carro tem para-choque, airbag e cinto; o atropelado leva o impacto na pelve e na cabeça, e morre de TCE | trauma-pelvico, compressao-lateral, atropelamento, tce, airbag, cinto-de-seguranca | 4 | 3/3 | CA PL RE GE | FP CC |
+| 20261023_img-3647#s12 | 22:46.44–24:02.24 (76 s) | a primeira medida no livro aberto é ainda no pré-hospitalar: binder no nível dos trocânteres maiores | trauma-pelvico, cinta-pelvica, binder, trocanter-maior, pre-hospitalar, livro-aberto | 3 | 3/3 | PL CA RE | FP BR |
+| 20261023_img-3647#s13 | 24:59.02–25:22.27 (23 s) | uma cinta simples e barata salva a maioria dos traumas pélvicos e mesmo assim quase ninguém passa no pré-hospitalar no Brasil | trauma-pelvico, cinta-pelvica, binder, pre-hospitalar, brasil, sistema-de-saude | 4 | 3/3 | PL GE RE | FP CR CC |
+| 20261023_img-3647#s14 | 25:33.48–26:54.84 (81 s) | binder não resolveu: packing pré-peritoneal para o sangramento venoso e, se falhar, angioembolização para os 10–15% arteriais | trauma-pelvico, tamponamento-pre-peritoneal, packing, angioembolizacao, sangramento-arterial, controle-de-danos | 3 | 3/3 | CA RE PL | FP |
+| 20261023_img-3647#s15 | 27:42.56–29:05.82 (83 s) | [NÃO USAR] como é feita a angioembolização pélvica — trecho com erro de técnica | trauma-pelvico, angioembolizacao, erro-factual, nao-usar, reboa | 0 | 3/3 | RE | FP |
+
 ## 20261023_img-3760 — IMG_3760 (video · 13:13.99 · licença propria)
 
 | segmento | onde | tema | tags | G | V/A | públicos | usos |
@@ -121,5 +141,4 @@ Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: 
 ## Pendentes (sem segments.json no índice)
 
 - 20261023_img-3502 — IMG_3502 (video, status baixado)
-- 20261023_img-3647 — IMG_3647 (video, status baixado)
 
