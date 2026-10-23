@@ -22,7 +22,7 @@ cd ~/reel-polish-src/reel-banco && python3 scripts/00_check_env.py
 
 - Pasta da skill: `~/reel-polish-src/reel-banco/` (rode tudo de dentro dela). O clone precisa ser **completo**
   (sem `--depth 1`) quando for fazer `git push` do índice; se o clone raso já existe, `git fetch --unshallow`.
-- Se o clone falhar por acesso, peça ao Gabriel para anexar o repositório à sessão.
+- Se o clone ou o push falhar por acesso, use primeiro `mcp__claude-code-remote__add_repo` (owner `gabrielquixabeira96-tech`, repo `editinstagraam`, access `push`); só se isso falhar, peça ao Gabriel para anexar o repositório à sessão.
 - `config.json` → `drive`: ids das pastas `root`, `entrada` (01_entrada), `processado` (02_processado),
   `clipes` (03_clipes), `indice` (04_indice).
 - Contorno já embutido: faster-whisper 1.2.1 + PyAV 19 quebram com caminho de arquivo; `03_transcribe.py`
@@ -62,7 +62,7 @@ recurso, vira opção de script.
    - **vídeo:** `python3 scripts/run_ingest.py --file-id <id> --name "<name>" --size <size> --modified "<modifiedTime>"`
      (baixa → transcreve o arquivo INTEIRO → cenas → keyframes → `segment_input.md`). Vídeo longo em CPU:
      transcrição ~0,3–1× o tempo real com `small` — avise o Gabriel do tempo e rode em segundo plano. A
-     transcrição é feita em janelas de 10 min (memória limitada, < 2,5 GB por hora de áudio).
+     transcrição é feita em janelas de 10 min (memória limitada por janela, ~1,5–2,5 GB independentemente da duração do vídeo).
      Vídeo que já está no disco: `--local <arquivo> --drive-id <id>` (sem `--drive-id` ele não poderá ser
      rebaixado numa sessão nova).
      Se já existir `transcript.json` do mesmo arquivo (reel-editor/reel-director), passe `--import-transcript <caminho>`.
