@@ -11,7 +11,20 @@ Saídas:
   (cópia de transcript.json vai para index/items/<id>/ no --finish do run_ingest)
 
 REGRA: NUNCA retranscreve se transcript.json já existe (no work/ ou no index/). Para corrigir um termo,
-edite só o campo "word" — nunca os tempos.
+edite só o campo "word" — nunca os tempos. Exceção autorizada: transcrição DEFEITUOSA (bug do script, fala
+perdida) -> `--replace`, que guarda o transcript antigo como work/banco/<id>/transcript.vN.json (+ .txt),
+transcreve de novo e reaplica as correções manuais de "word" (palavras com start/end idênticos ao ms e texto
+diferente do whisper; desligue com --no-carry-edits).
+
+Descarte de "não-fala" (conservador — na dúvida, a palavra fica):
+  * segmento com no_speech_prob ≥ --no-speech (0,6) SÓ perde as palavras se a energia do trecho estiver no nível
+    de silêncio/ruído de fundo: p90 do RMS (quadros de 10 ms) do segmento < piso do arquivo (p10 de todos os
+    quadros) + --silence-margin dB (6), ou < --abs-silence dBFS (-70). Com energia de fala, fica (whisper
+    marca no_speech alto em fala real com eco, música de fundo, voz baixa ou longe do microfone);
+  * palavras que repetem LITERALMENTE o prompt de vocabulário (≥ 3 termos seguidos, na ordem do prompt) saem
+    sempre (vazamento do initial_prompt).
+  transcript.json → "descartes": {regra, piso_db, limiar_db, total, por_motivo, mantidas_no_speech_alto,
+  regra_antiga_descartaria, detalhe[]} — quantas palavras saíram e por quê.
 
 Contorno obrigatório: faster-whisper 1.2.1 + PyAV 19 quebram com caminho de arquivo; o áudio é decodificado
 com ffmpeg para numpy float32 mono 16 kHz e o ARRAY é passado a model.transcribe(...).
@@ -19,11 +32,13 @@ com ffmpeg para numpy float32 mono 16 kHz e o ARRAY é passado a model.transcrib
 Memória: o arquivo é transcrito em janelas de --window s (padrão 10 min) lidas do ffmpeg uma a uma (-ss/-t),
 com --overlap s (1,5) de sobreposição; tempos deslocados para a timeline do arquivo, cada palavra fica com a
 janela que contém o seu meio (sem duplicar na emenda) e o refino RMS é feito por janela. Pico medido ≈ uma
-janela (< 2,5 GB para 1 h de áudio). VAD ligado por padrão; palavras de segmentos com no_speech_prob ≥ 0,6
-são descartadas; o prompt inicial é só uma lista de vocabulário (frases vazavam como fala).
+janela (< 2,5 GB para 1 h de áudio). VAD ligado por padrão; o prompt inicial é só uma lista de vocabulário
+(frases vazavam como fala). Antes das janelas, um passe só de áudio (-vn, sem decodificar vídeo) mede o RMS
+de 10 ms do arquivo inteiro (~400 KB por hora) para o piso de ruído.
 
 Uso:
   python scripts/03_transcribe.py <item_id> [--model small] [--lang pt]
+  python scripts/03_transcribe.py <item_id> --replace      (transcrição defeituosa: backup + retranscrição)
   python scripts/03_transcribe.py <item_id> --import-transcript work/<video>/transcript.json
        (reaproveita uma transcrição já feita pela reel-editor/reel-director do MESMO arquivo — não retranscreve)
   REEL_WHISPER_MODEL=medium python scripts/03_transcribe.py <item_id>
@@ -124,15 +139,101 @@ def refine_boundaries(words, audio, sr=16000, hop_s=0.01, min_dur=0.06):
     return words
 
 
-def transcribe_windows(model, src, dur, args):
+HOP_S = 0.01  # quadros de 10 ms para o RMS de descarte
+
+
+def file_energy_db(src, sr=16000, hop_s=HOP_S, chunk_s=60.0):
+    """RMS em dB de quadros de 10 ms do arquivo INTEIRO, num único ffmpeg só de áudio (-vn: nunca decodifica
+    vídeo, nem em 4K) lido em blocos de 60 s — memória ~400 KB por hora de áudio."""
+    import subprocess
+    import numpy as np
+    hop = int(hop_s * sr)
+    cmd = [bc.ffmpeg_bin(), "-nostdin", "-v", "error", "-i", str(src), "-vn", "-f", "s16le", "-ac", "1",
+           "-ar", str(sr), "-"]
+    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+    out, rest = [], np.zeros(0, np.float32)
+    nbytes = int(chunk_s * sr) * 2
+    while True:
+        buf = p.stdout.read(nbytes)
+        if not buf:
+            break
+        x = np.concatenate([rest, np.frombuffer(buf[:len(buf) // 2 * 2], np.int16).astype(np.float32) / 32768.0])
+        n = len(x) // hop
+        if n:
+            fr = x[:n * hop].reshape(n, hop)
+            out.append(20 * np.log10(np.sqrt(np.mean(fr ** 2, axis=1) + 1e-12)))
+        rest = x[n * hop:]
+    p.wait()
+    return np.concatenate(out) if out else np.zeros(0, np.float32)
+
+
+def span_p90_db(frame_db, t0, t1, hop_s=HOP_S):
+    import numpy as np
+    a, b = max(0, int(t0 / hop_s)), min(len(frame_db), int(math.ceil(t1 / hop_s)))
+    if b - a < 1:
+        return None
+    return float(np.percentile(frame_db[a:b], 90))
+
+
+def prompt_terms(prompt):
+    """[(token_normalizado, índice_do_termo)] na ordem do prompt de vocabulário."""
+    seq = []
+    for k, term in enumerate(t for t in (prompt or "").split(",") if t.strip()):
+        for tok in term.split():
+            n = bc.norm_word(tok)
+            if n:
+                seq.append((n, k))
+    return seq
+
+
+def prompt_leak_mask(norm_words, pseq, min_terms=3):
+    """True nas palavras que fazem parte de uma repetição LITERAL de ≥ min_terms termos seguidos do prompt."""
+    mask = [False] * len(norm_words)
+    if not pseq:
+        return mask
+    ptoks = [t for t, _ in pseq]
+    i = 0
+    while i < len(norm_words):
+        best = 0
+        for p in (j for j, t in enumerate(ptoks) if t == norm_words[i]):
+            k = 0
+            while i + k < len(norm_words) and p + k < len(ptoks) and norm_words[i + k] == ptoks[p + k]:
+                k += 1
+            if len({pseq[p + m][1] for m in range(k)}) >= min_terms:
+                best = max(best, k)
+        if best:
+            for m in range(best):
+                mask[i + m] = True
+            i += best
+        else:
+            i += 1
+    return mask
+
+
+def transcribe_windows(model, src, dur, args, frame_db=None):
     """Transcreve em janelas de --window s lidas do ffmpeg uma a uma (-ss/-t), com --overlap s de sobreposição
     de cada lado. Memória limitada a uma janela (o faster-whisper calcula o espectrograma da entrada inteira:
     o arquivo todo de uma vez custa ~3 GB/hora). Cada janela "possui" o intervalo [k·W, (k+1)·W): palavras e
     segmentos são atribuídos pela metade do intervalo -> a emenda não duplica nem perde palavras. O refino de
-    limites por energia é feito com o áudio da própria janela."""
+    limites por energia é feito com o áudio da própria janela.
+
+    Descarte (ver docstring do módulo): no_speech alto só descarta se o trecho for silêncio/ruído de fundo pela
+    energia (piso do arquivo + margem); repetição literal do prompt sai sempre. Devolve (words, segments, desc)."""
+    import numpy as np
+    if frame_db is None:
+        frame_db = file_energy_db(src)
+    floor = float(np.percentile(frame_db, 10)) if len(frame_db) else -120.0
+    thr = max(floor + float(args.silence_margin), float(args.abs_silence))
+    pseq = prompt_terms(args.prompt)
     W, O = float(args.window), float(args.overlap)
     nwin = max(1, math.ceil(dur / W))
-    words, segments, dropped = [], [], 0
+    words, segments = [], []
+    desc = {"regra": (f"no_speech_prob >= {args.no_speech} E p90 RMS do segmento < max(piso + "
+                      f"{args.silence_margin} dB, {args.abs_silence} dBFS); ou repeticao literal do prompt "
+                      f"(>= 3 termos)"),
+            "no_speech_limiar": args.no_speech, "piso_db": round(floor, 1), "limiar_db": round(thr, 1),
+            "total": 0, "por_motivo": {"silencio": 0, "prompt": 0}, "mantidas_no_speech_alto": 0,
+            "regra_antiga_descartaria": 0, "detalhe": []}
     for k in range(nwin):
         own0, own1 = k * W, min(dur, (k + 1) * W)
         if k == nwin - 1:
@@ -149,21 +250,41 @@ def transcribe_windows(model, src, dur, args):
         wwords = []
         for s in segs:
             mid = a + (s.start + s.end) / 2
-            seg_ok = s.no_speech_prob < args.no_speech
-            for w in (s.words or []):
-                if w.end <= w.start:
+            sw = [w for w in (s.words or []) if w.end > w.start and own0 <= a + (w.start + w.end) / 2 < own1]
+            high_ns = s.no_speech_prob >= args.no_speech
+            p90 = span_p90_db(frame_db, a + s.start, a + s.end) if high_ns else None
+            silent = high_ns and (p90 is None or p90 < thr)
+            leak = prompt_leak_mask([bc.norm_word(w.word) for w in sw], pseq)
+            n_sil = n_leak = n_kept_ns = 0
+            for w, lk in zip(sw, leak):
+                if high_ns:
+                    desc["regra_antiga_descartaria"] += 1
+                if silent:
+                    n_sil += 1
                     continue
-                wm = a + (w.start + w.end) / 2
-                if not (own0 <= wm < own1):
+                if lk:
+                    n_leak += 1
                     continue
-                if not seg_ok:
-                    dropped += 1
-                    continue
+                if high_ns:
+                    n_kept_ns += 1
                 wwords.append({"word": w.word.strip(), "start": round(w.start, 3), "end": round(w.end, 3),
                                "prob": round(w.probability, 3)})
-            if own0 <= mid < own1 and seg_ok:
-                segments.append({"start": round(a + s.start, 3), "end": round(a + s.end, 3), "text": s.text.strip(),
-                                 "avg_logprob": round(s.avg_logprob, 3), "no_speech_prob": round(s.no_speech_prob, 3)})
+            desc["por_motivo"]["silencio"] += n_sil
+            desc["por_motivo"]["prompt"] += n_leak
+            desc["mantidas_no_speech_alto"] += n_kept_ns
+            if n_sil or n_leak:
+                desc["detalhe"].append({"start": round(a + s.start, 2), "end": round(a + s.end, 2),
+                                        "motivo": "silencio" if n_sil else "prompt", "palavras": n_sil + n_leak,
+                                        "no_speech_prob": round(s.no_speech_prob, 3),
+                                        "p90_db": None if p90 is None else round(p90, 1),
+                                        "texto": s.text.strip()[:160]})
+            if own0 <= mid < own1 and not silent and not (sw and all(leak)):
+                seg = {"start": round(a + s.start, 3), "end": round(a + s.end, 3), "text": s.text.strip(),
+                       "avg_logprob": round(s.avg_logprob, 3), "no_speech_prob": round(s.no_speech_prob, 3)}
+                if high_ns:
+                    seg["p90_db"] = round(p90, 1)
+                    seg["no_speech_mantido"] = True
+                segments.append(seg)
         wwords.sort(key=lambda w: w["start"])
         if not args.no_refine:
             refine_boundaries(wwords, audio)  # tempos ainda relativos à janela
@@ -181,7 +302,22 @@ def transcribe_windows(model, src, dur, args):
                f"({time.time() - tw:.0f} s)")
     words.sort(key=lambda w: w["start"])
     segments.sort(key=lambda s: s["start"])
-    return words, segments, dropped
+    desc["total"] = desc["por_motivo"]["silencio"] + desc["por_motivo"]["prompt"]
+    return words, segments, desc
+
+
+def carry_word_edits(new_words, old_words):
+    """Reaplica correções manuais do campo "word": mesma palavra (start/end idênticos ao ms) com texto diferente.
+    O whisper é determinístico para o mesmo áudio/modelo/parâmetros, então texto diferente no MESMO tempo é
+    edição humana. Devolve a lista [(i, antes, depois)]."""
+    old = {(round(w["start"], 3), round(w["end"], 3)): w["word"] for w in old_words}
+    out = []
+    for i, w in enumerate(new_words):
+        ow = old.get((round(w["start"], 3), round(w["end"], 3)))
+        if ow is not None and ow != w["word"]:
+            out.append((i, w["word"], ow))
+            w["word"] = ow
+    return out
 
 
 def validate_transcript(tr):
@@ -207,12 +343,23 @@ def main():
     ap.add_argument("--no-vad", action="store_true", help="desliga o vad_filter (ligado por padrão: evita "
                                                            "alucinação em silêncio/música)")
     ap.add_argument("--no-speech", type=float, default=0.6,
-                    help="descarta palavras de segmentos com no_speech_prob ≥ este valor (padrão 0,6)")
+                    help="segmentos com no_speech_prob ≥ este valor (padrão 0,6) são CANDIDATOS a descarte: só saem "
+                         "se a energia também for de silêncio (ver --silence-margin)")
+    ap.add_argument("--silence-margin", type=float, default=6.0,
+                    help="dB acima do piso de ruído do arquivo (p10 dos quadros de 10 ms) abaixo dos quais o p90 do "
+                         "segmento conta como silêncio (padrão 6; menor = mais conservador)")
+    ap.add_argument("--abs-silence", type=float, default=-70.0,
+                    help="p90 abaixo deste dBFS é silêncio em qualquer arquivo (padrão -70)")
     ap.add_argument("--window", type=float, default=600.0, help="janela de transcrição em s (padrão 600 = 10 min)")
     ap.add_argument("--overlap", type=float, default=1.5, help="sobreposição entre janelas em s (padrão 1,5)")
     ap.add_argument("--no-refine", action="store_true")
     ap.add_argument("--import-transcript", help="copia um transcript.json existente (do MESMO arquivo) em vez de transcrever")
     ap.add_argument("--force", action="store_true", help="sobrescreve transcript.json existente (só se a MÍDIA mudou)")
+    ap.add_argument("--replace", action="store_true",
+                    help="transcrição DEFEITUOSA (bug, fala perdida): guarda a atual em transcript.vN.json(+.txt) no "
+                         "work/, retranscreve e reaplica as correções de 'word' (ver --no-carry-edits)")
+    ap.add_argument("--no-carry-edits", action="store_true",
+                    help="com --replace: NÃO reaplica as correções manuais de 'word' do transcript antigo")
     args = ap.parse_args()
 
     bc.set_log_item(args.item_id)
@@ -223,6 +370,27 @@ def main():
     out = d / "transcript.json"
     txt = d / "transcript.txt"
     idx_copy = bc.index_item_dir(args.item_id) / "transcript.json"
+    backup, old_tr = None, None
+    if args.replace:
+        if args.import_transcript:
+            bc.die("--replace não combina com --import-transcript")
+        if not bc.find_source(args.item_id):
+            bc.die(f"--replace: mídia de {args.item_id} ausente em {d} (rode 02_fetch.py --item {args.item_id}); "
+                   "nada foi alterado")
+        cur = out if out.exists() else (idx_copy if idx_copy.exists() else None)
+        if cur:
+            d.mkdir(parents=True, exist_ok=True)
+            n = 1
+            while (d / f"transcript.v{n}.json").exists():
+                n += 1
+            backup = d / f"transcript.v{n}.json"
+            old_tr = bc.load_json(cur)
+            shutil.copy2(cur, backup)
+            if txt.exists():
+                shutil.copy2(txt, d / f"transcript.v{n}.txt")
+            bc.log(f"{args.item_id}: --replace — transcript atual ({len(old_tr.get('words', []))} palavras) "
+                   f"guardado em {backup.name}; retranscrevendo")
+        args.force = True
     if not out.exists() and idx_copy.exists() and not args.force:
         d.mkdir(parents=True, exist_ok=True)
         shutil.copy2(idx_copy, out)
@@ -269,13 +437,22 @@ def main():
     bc.log(f"transcrevendo o arquivo INTEIRO ({bc.fmt_t(dur)}) em {nwin} janela(s) de {args.window:.0f} s "
            f"(sobreposição {args.overlap} s; CPU 'small': ~0,3–1x o tempo real) ...")
     t_start = time.time()
-    words, segments, dropped = transcribe_windows(model, src, dur, args)
+    words, segments, desc = transcribe_windows(model, src, dur, args)
     tr = {"source": str(src), "language": args.lang, "model": args.model, "duration": dur,
           "generated_by": "reel-banco/03_transcribe.py", "refined_boundaries": not args.no_refine,
-          "words": words, "segments": segments}
+          "descartes": desc, "words": words, "segments": segments}
     t0 = t_start
-    if dropped:
-        bc.log(f"  {dropped} palavra(s) descartada(s) de segmentos com no_speech_prob ≥ {args.no_speech}")
+    bc.log(f"  descarte: {desc['total']} palavra(s) (silêncio {desc['por_motivo']['silencio']}, prompt "
+           f"{desc['por_motivo']['prompt']}); {desc['mantidas_no_speech_alto']} mantida(s) com no_speech alto e "
+           f"energia de fala (a regra antiga descartaria {desc['regra_antiga_descartaria']}); piso "
+           f"{desc['piso_db']} dB, limiar {desc['limiar_db']} dB")
+    if old_tr is not None:
+        edits = [] if args.no_carry_edits else carry_word_edits(words, old_tr.get("words", []))
+        tr["substitui"] = {"backup": backup.name, "palavras_antes": len(old_tr.get("words", [])),
+                           "palavras_depois": len(words), "em": bc.now_iso(),
+                           "edicoes_reaplicadas": [{"i": i, "whisper": a_, "word": b_} for i, a_, b_ in edits]}
+        bc.log(f"  --replace: {len(old_tr.get('words', []))} -> {len(words)} palavras; {len(edits)} correção(ões) "
+               f"de 'word' reaplicada(s)" + ("" if args.no_carry_edits else " (start/end idênticos)"))
     bc.save_json(out, tr, compact=True)
     write_txt(tr, txt)
     low = sum(1 for w in words if w["prob"] < 0.5)

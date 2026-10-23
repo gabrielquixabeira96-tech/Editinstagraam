@@ -187,7 +187,37 @@ continuam no índice; só a mídia precisa voltar.
 ## Regras
 
 - **Nunca retranscrever.** `03_transcribe.py` recusa se já existe transcript (no work/ ou no index/). Para
-  corrigir um termo, edite só o campo `word`.
+  corrigir um termo, edite só o campo `word`. Única exceção: transcrição **defeituosa** (ver abaixo).
+
+### Descarte de "não-fala" e correção de transcrição defeituosa (`--replace`)
+
+- **Regra de descarte (conservadora: na dúvida, a palavra fica).** Um segmento do whisper com
+  `no_speech_prob ≥ 0,6` é só *candidato*: as palavras dele saem apenas se a energia do trecho for de silêncio
+  ou ruído de fundo, ou seja, se o p90 do RMS (quadros de 10 ms) do segmento ficar abaixo de
+  `piso do arquivo (p10 de todos os quadros) + 6 dB` ou de `-70 dBFS` (`--silence-margin`, `--abs-silence`).
+  Se houver energia de fala, a palavra fica: o whisper marca `no_speech` alto em fala real com eco, voz baixa,
+  microfone longe ou música de fundo. Até 2026-10-23 o script descartava só pelo `no_speech_prob`, e com isso
+  perdia até 26% da fala (IMG_3502, IMG_3647, IMG_3440, IMG_3530). Além disso, sai **sempre** a repetição
+  literal do prompt de vocabulário (≥ 3 termos seguidos, na ordem do prompt), que é vazamento do
+  `initial_prompt`. O piso é medido num passe só de áudio (`-vn`), sem decodificar vídeo, nem em 4K.
+- `transcript.json → descartes` registra `total`, `por_motivo` (`silencio`, `prompt`), `mantidas_no_speech_alto`,
+  `regra_antiga_descartaria`, `piso_db`/`limiar_db` e `detalhe[]` (trecho, texto, p90, no_speech) de cada
+  segmento descartado. Leia isso quando suspeitar de lacuna na transcrição; os segmentos mantidos apesar do
+  no_speech alto ficam com `no_speech_mantido: true`.
+- **Transcrição defeituosa** (bug do script, lacunas com fala, modelo errado): rebaixe a mídia
+  (`02_fetch.py --item <id>`) e rode `python3 scripts/03_transcribe.py <id> --replace`. O modo seguro:
+  1. guarda o transcript atual (do work/ ou, se faltar, do index/) em `work/banco/<id>/transcript.vN.json`
+     (e `.txt`), sem nunca sobrescrever um backup;
+  2. retranscreve o arquivo inteiro com a regra atual;
+  3. reaplica as correções manuais de `word`: palavra com `start`/`end` idênticos ao ms e texto diferente do
+     whisper é correção humana, porque o whisper é determinístico para o mesmo áudio e parâmetros
+     (`--no-carry-edits` desliga). O registro fica em `transcript.json → substitui` (backup, palavras antes e
+     depois, `edicoes_reaplicadas`);
+  4. confira os termos técnicos no texto **recuperado** (ele nunca foi revisado), rode
+     `06b_validate_segments.py <id>` com o `segments.json` existente (a timeline é a mesma; ajuste só a citação
+     que deixar de bater), leia o texto novo atrás de temas ainda não cobertos e feche com
+     `run_ingest.py --finish <id>`. Apague o `source.*` depois, se o disco estiver curto.
+  `--force` continua reservado para mídia trocada (não guarda backup nem reaplica correções).
 - **Nunca subir mídia pesada no git** (só JSON, thumbs 320 px e contact sheets). Mídia mora no Drive e em `work/`.
 - **Figuras de terceiros** só com `licenca` registrada; avise o Gabriel e exiba o crédito (`fonte`) na tela.
   `desconhecida` = não usar antes de confirmar com ele.
@@ -209,7 +239,7 @@ continuam no índice; só a mídia precisa voltar.
 ## Scripts (todos com `--help`)
 
 `00_check_env` · `01_scan --manifest` · `02_fetch --file-id/--local/--item` · `03_transcribe <id>
-[--import-transcript]` · `04_scenes <id>` · `05_keyframes <id>` · `06_segment_input <id>` ·
+[--import-transcript] [--replace [--no-carry-edits]] [--silence-margin 6] [--abs-silence -70]` · `04_scenes <id>` · `05_keyframes <id>` · `06_segment_input <id>` ·
 `06b_validate_segments <id>` · `07_doc_ingest --local --licenca` · `08_index` · `09_search "q"` ·
 `10_clip "<seg>" [--broll --broll-index]` · `run_ingest` · `drive_fetch <file_id> <destino> [--expect-size N] [--probe-bytes N]`
 (provisório, pode ser substituído; só segue redirecionamentos para https em google.com/*.google.com/*.googleusercontent.com; códigos: 3 = não compartilhado, 4 = HTML inesperado/host não permitido/5xx, 5 = tamanho divergente).

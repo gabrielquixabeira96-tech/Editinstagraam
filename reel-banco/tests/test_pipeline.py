@@ -98,6 +98,123 @@ HTML = """<!doctype html><html><head><meta charset="utf-8"><title>Atlas teste</t
 </body></html>"""
 
 
+# ---------------------------------------------------------------------------------------------------------------
+# Filtro de "não-fala" do 03_transcribe: no_speech_prob alto só descarta se a ENERGIA for de silêncio/ruído.
+# O whisper é substituído por um módulo falso (faster_whisper/ no PYTHONPATH) que devolve segmentos fixos —
+# o mesmo que o whisper real faz em fala com eco/voz baixa (no_speech alto) e em silêncio (alucinação).
+# ---------------------------------------------------------------------------------------------------------------
+FAKE_FW = '''
+import json, os
+class _O:
+    def __init__(self, **k): self.__dict__.update(k)
+class WhisperModel:
+    def __init__(self, *a, **k): pass
+    def transcribe(self, audio, **kw):
+        spec = json.load(open(os.environ["FAKE_WHISPER_SPEC"]))
+        segs = []
+        for s in spec:
+            ws = [_O(word=" " + w, start=s["start"] + i * s["step"], end=s["start"] + i * s["step"] + s["step"] * 0.8,
+                     probability=0.9) for i, w in enumerate(s["text"].split())]
+            segs.append(_O(start=s["start"], end=s["start"] + len(ws) * s["step"], text=s["text"], avg_logprob=-0.3,
+                           no_speech_prob=s["ns"], words=ws))
+        return iter(segs), _O(language="pt")
+'''
+
+# trechos (s): fala sintética (tom com harmônicos modulado em sílabas) 2–10 e 22–26; silêncio puro 11–21
+FAKE_SPEC = [
+    {"start": 2.2, "step": 0.5, "ns": 0.85, "text": "isso aqui é fala de verdade com eco que o whisper acha que não é fala"},
+    {"start": 12.0, "step": 0.6, "ns": 0.92, "text": "obrigado por assistir e até a próxima"},
+    {"start": 22.2, "step": 0.45, "ns": 0.05, "text": "cricotireoidostomia, intubação, via aérea, plantão,"},
+]
+
+
+def speechlike(t, a=0.25):
+    import numpy as np
+    car = sum(np.sin(2 * np.pi * f * t) / k for k, f in enumerate((140, 280, 420, 700), 1))
+    env = np.abs(np.sin(2 * np.pi * 2.5 * t)) ** 0.7  # ~5 "sílabas" por segundo
+    return a * env * car / 2.1
+
+
+def write_wav(path, x, sr=16000):
+    import wave
+    import numpy as np
+    with wave.open(str(path), "wb") as w:
+        w.setnchannels(1)
+        w.setsampwidth(2)
+        w.setframerate(sr)
+        w.writeframes((np.clip(x, -1, 1) * 32767).astype(np.int16).tobytes())
+
+
+def test_no_speech_filter(tmp: Path, env):
+    import importlib.util
+    import numpy as np
+    sr = 16000
+    t = np.arange(int(28 * sr)) / sr
+    x = np.zeros_like(t)
+    for a0, a1 in ((2.0, 10.0), (22.0, 26.0)):
+        m = (t >= a0) & (t < a1)
+        x[m] = speechlike(t[m])
+    wav = tmp / "fala_e_silencio.wav"
+    write_wav(wav, x, sr)
+    fake = tmp / "fakefw" / "faster_whisper"
+    fake.mkdir(parents=True)
+    (fake / "__init__.py").write_text(FAKE_FW)
+    spec = tmp / "fake_spec.json"
+    spec.write_text(json.dumps(FAKE_SPEC, ensure_ascii=False))
+    e2 = dict(env, PYTHONPATH=str(tmp / "fakefw"), FAKE_WHISPER_SPEC=str(spec))
+    r = sh(PY, S / "02_fetch.py", "--local", wav, "--drive-id", "FAKEWAV", "--modified", "2025-10-23T00:00:00Z",
+           env=e2, capture=True)
+    iid = next(l.split("=", 1)[1] for l in r.stdout.splitlines() if l.startswith("ITEM_ID="))
+    wdir = tmp / "work" / iid
+    sh(PY, S / "03_transcribe.py", iid, env=e2)
+    tr = json.loads((wdir / "transcript.json").read_text())
+    got = " ".join(w["word"] for w in tr["words"])
+    print("palavras mantidas:", got)
+    dsc = tr["descartes"]
+    print("descartes:", {k: v for k, v in dsc.items() if k != "detalhe"})
+    assert got == FAKE_SPEC[0]["text"], "a fala (no_speech alto, mas com energia) tem de ser mantida inteira"
+    assert "obrigado" not in got and "cricotireoidostomia" not in got
+    assert dsc["por_motivo"] == {"silencio": 7, "prompt": 5} and dsc["total"] == 12, dsc
+    assert dsc["mantidas_no_speech_alto"] == 16 and dsc["regra_antiga_descartaria"] == 23, dsc
+    assert {d["motivo"] for d in dsc["detalhe"]} == {"silencio", "prompt"}
+    assert any(s.get("no_speech_mantido") for s in tr["segments"])
+
+    # sem --replace, nunca retranscreve; com --replace: backup + correções de 'word' reaplicadas
+    tr["words"][3]["word"] = "FALA"  # "correção manual"
+    (wdir / "transcript.json").write_text(json.dumps(tr, ensure_ascii=False, separators=(",", ":")))
+    r = sh(PY, S / "03_transcribe.py", iid, env=e2, capture=True)
+    assert "não vou transcrever de novo" in r.stdout, r.stdout
+    sh(PY, S / "03_transcribe.py", iid, "--replace", env=e2)
+    tr2 = json.loads((wdir / "transcript.json").read_text())
+    assert (wdir / "transcript.v1.json").exists() and (wdir / "transcript.v1.txt").exists()
+    assert tr2["words"][3]["word"] == "FALA" and len(tr2["words"]) == 16, tr2["words"][:5]
+    assert tr2["substitui"]["backup"] == "transcript.v1.json" and len(tr2["substitui"]["edicoes_reaplicadas"]) == 1
+    sh(PY, S / "03_transcribe.py", iid, "--replace", "--no-carry-edits", env=e2)
+    tr3 = json.loads((wdir / "transcript.json").read_text())
+    assert (wdir / "transcript.v2.json").exists() and tr3["words"][3]["word"] == "fala"
+
+    # piso RELATIVO: arquivo com ruído de fundo constante (-50 dBFS) — alucinação no ruído sai, fala fica
+    spec_m = importlib.util.spec_from_file_location("transcribe03", S / "03_transcribe.py")
+    m = importlib.util.module_from_spec(spec_m)
+    spec_m.loader.exec_module(m)
+    rng = np.random.default_rng(7)
+    xn = x + rng.normal(0, 10 ** (-50 / 20), len(x))
+    wav2 = tmp / "fala_e_ruido.wav"
+    write_wav(wav2, xn, sr)
+    sys.path.insert(0, str(tmp / "fakefw"))
+    os.environ["FAKE_WHISPER_SPEC"] = str(spec)
+    from faster_whisper import WhisperModel as Fake
+    args = argparse.Namespace(window=600.0, overlap=1.5, lang="pt", beam_size=5, no_vad=False, prompt=m.DEFAULT_PROMPT,
+                              no_speech=0.6, silence_margin=6.0, abs_silence=-70.0, no_refine=True)
+    words, segs, dsc2 = m.transcribe_windows(Fake(), wav2, 28.0, args)
+    print("ruído de fundo:", {k: v for k, v in dsc2.items() if k != "detalhe"})
+    assert -60 < dsc2["piso_db"] < -45, dsc2["piso_db"]
+    assert " ".join(w["word"] for w in words) == FAKE_SPEC[0]["text"]
+    assert dsc2["por_motivo"] == {"silencio": 7, "prompt": 5}
+    assert m.prompt_leak_mask(["a", "cirurgia", "e", "anatomia"], m.prompt_terms(m.DEFAULT_PROMPT)) == [False] * 4
+    print("filtro de não-fala OK")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--keep", action="store_true")
@@ -303,6 +420,8 @@ def main():
         sh(PY, S / "08_index.py", env=env)
         full = json.loads((tmp / "index" / "index.json").read_text())
         assert full["n_itens"] == 2 and full["n_segmentos"] == 3 and hid in full["pendentes"]
+
+        test_no_speech_filter(tmp, env)
         print("\nTESTE OK")
     finally:
         if a.keep:
