@@ -1,0 +1,482 @@
+{
+  "item_id": "20261023_img-3530",
+  "validado_em": "2026-10-23T11:08:24+00:00",
+  "segments": [
+    {
+      "id": "20261023_img-3530#s01",
+      "t0": 10.25,
+      "t1": 85.55,
+      "tema": "sobrecarga de informação: redes neurais disponíveis ao mesmo tempo são finitas e, divididas entre muita coisa, a fixação cai",
+      "tags": [
+        "memoria-de-trabalho",
+        "sobrecarga-cognitiva",
+        "metodo-de-estudo",
+        "redes-neurais",
+        "aprendizagem",
+        "foco"
+      ],
+      "tese": "quando você tenta captar muita informação ao mesmo tempo, os recursos neurais se dividem e a capacidade de fixar e aprender despenca",
+      "citacao": "a sua capacidade de fixação e de aprendizado, ela reduz muito,",
+      "gancho_potencial": 2,
+      "publicos": [
+        "candidato-residencia",
+        "concursos-vestibular",
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Continuação direta do IMG_3528 (mesmo carro e camisa branca; abre com 'Agora eu estacionei aqui, eu acho que eu consegui falar melhor'). Vídeo HORIZONTAL 1920x1080, câmera baixa atrás do volante, rosto ~16% da largura no centro; recorte 9:16 viável no rosto com o aro do volante cruzando o quadro. Luz de dia boa. Trechos ininteligíveis ('se você era o Vepreva, se pode limizar'). Linguagem de divulgação, sem rigor ('nossa mente funciona exatamente igual aos computadores').",
+      "t0_original": 10.2,
+      "t1_original": 86.3,
+      "dur": 75.3,
+      "citacao_t0": 57.61,
+      "citacao_t1": 64.53,
+      "citacao_palavras": [
+        88,
+        98
+      ],
+      "item_id": "20261023_img-3530"
+    },
+    {
+      "id": "20261023_img-3530#s02",
+      "t0": 113.41,
+      "t1": 132.1,
+      "tema": "você não era burro: estava sobrecarregando a capacidade de processamento",
+      "tags": [
+        "sobrecarga-cognitiva",
+        "metodo-de-estudo",
+        "autoestima",
+        "memoria-de-trabalho",
+        "prova"
+      ],
+      "tese": "a sensação de ser burro ao não lembrar vem de ter tentado processar informação demais ao mesmo tempo",
+      "citacao": "talvez fosse porque você estava rodando uma quantidade de informações sobrecarregando o seu",
+      "gancho_potencial": 3,
+      "publicos": [
+        "candidato-residencia",
+        "concursos-vestibular",
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "corte-rapido"
+      ],
+      "notas": "Fecha o raciocínio do IMG_3528#s04 ('eu sou imbecil'): os dois juntos dão um Reel. Precedido de 27 s sem fala (86–113 s). 'veicamento' = provavelmente 'sentimento'.",
+      "t0_original": 113.4,
+      "t1_original": 134.5,
+      "dur": 18.69,
+      "citacao_t0": 121.63,
+      "citacao_t1": 127.03,
+      "citacao_palavras": [
+        157,
+        169
+      ],
+      "item_id": "20261023_img-3530"
+    },
+    {
+      "id": "20261023_img-3530#s03",
+      "t0": 135.14,
+      "t1": 186.32,
+      "tema": "por que quem tem TDAH parece 'no mundo da lua': o pensamento acelerado ocupa a cabeça o tempo todo",
+      "tags": [
+        "tdah",
+        "pensamento-acelerado",
+        "atencao",
+        "neurodivergencia",
+        "memoria-de-trabalho"
+      ],
+      "tese": "a pessoa com TDAH parece desatenta porque já está rodando muita informação internamente",
+      "citacao": "é por isso que o TDAH, muitas vezes, parece alguém muito burro que, na verdade, é alguém muito inteligente.",
+      "gancho_potencial": 4,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Gancho forte por antítese, MAS a afirmação é generalização sem respaldo (TDAH não implica inteligência maior) — para um perfil médico, usar só como relato pessoal/opinião, com ressalva, ou reformular. Fala fluida.",
+      "t0_original": 135.1,
+      "t1_original": 187.0,
+      "dur": 51.18,
+      "citacao_t0": 135.98,
+      "citacao_t1": 145.34,
+      "citacao_palavras": [
+        178,
+        196
+      ],
+      "item_id": "20261023_img-3530"
+    },
+    {
+      "id": "20261023_img-3530#s04",
+      "t0": 187.06,
+      "t1": 250.72,
+      "tema": "TDAH: quando parece parado, está com quase toda a capacidade dirigida a um raciocínio interno e sobra pouco para a instrução de fora",
+      "tags": [
+        "tdah",
+        "atencao",
+        "memoria-de-trabalho",
+        "instrucao",
+        "neurodivergencia"
+      ],
+      "tese": "a instrução externa erra porque a capacidade disponível para ela é mínima naquele momento",
+      "citacao": "Ele já direcionou para alguma atividade que está acontecendo só dentro da cabeça dele",
+      "gancho_potencial": 2,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Explicação longa e repetitiva; termos ininteligíveis ('começa a engenhar o subcargo'). Mesmo enquadramento.",
+      "t0_original": 187.1,
+      "t1_original": 252.0,
+      "dur": 63.66,
+      "citacao_t0": 224.72,
+      "citacao_t1": 229.8,
+      "citacao_palavras": [
+        354,
+        367
+      ],
+      "item_id": "20261023_img-3530"
+    },
+    {
+      "id": "20261023_img-3530#s05",
+      "t0": 276.78,
+      "t1": 335.52,
+      "tema": "analogia do computador: baixar um jogo pesado com pouca memória RAM trava tudo",
+      "tags": [
+        "analogia",
+        "memoria-ram",
+        "memoria-de-trabalho",
+        "sobrecarga-cognitiva",
+        "metodo-de-estudo"
+      ],
+      "tese": "como o computador baixando um jogo pesado, o cérebro ocupado com uma grande carga não responde a outra tarefa",
+      "citacao": "começar a baixar um jogo muito pesado, sei lá, começar a baixar Red Dead Redemption",
+      "gancho_potencial": 2,
+      "publicos": [
+        "geral",
+        "concursos-vestibular"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Analogia confusa na execução (pausas longas, frases incompletas: 'no gráfico mais STOP enquanto', 'o'). Serve de base para roteiro regravado, não como fala final.",
+      "t0_original": 276.8,
+      "t1_original": 335.0,
+      "dur": 58.74,
+      "citacao_t0": 289.13,
+      "citacao_t1": 295.4,
+      "citacao_palavras": [
+        457,
+        471
+      ],
+      "item_id": "20261023_img-3530"
+    },
+    {
+      "id": "20261023_img-3530#s06",
+      "t0": 334.81,
+      "t1": 406.54,
+      "tema": "memória RAM é a memória de trabalho e o HD é a memória de longo prazo",
+      "tags": [
+        "analogia",
+        "memoria-ram",
+        "memoria-de-trabalho",
+        "memoria-de-longo-prazo",
+        "hipocampo",
+        "neurociencia-do-aprendizado"
+      ],
+      "tese": "a pequena memória RAM (8 GB) contra o grande armazenamento (1 TB) espelha a memória de trabalho limitada contra a de longo prazo enorme",
+      "citacao": "8 seria a memória RAM, que seria a memória de trabalho,",
+      "gancho_potencial": 3,
+      "publicos": [
+        "concursos-vestibular",
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Analogia didática boa (RAM x HD). Ressalva técnica: ele diz que a memória de trabalho 'é executada pelo hipocampo' — a memória de trabalho depende sobretudo do córtex pré-frontal; o hipocampo atua na consolidação para longo prazo. Corrigir no roteiro/legenda.",
+      "t0_original": 334.8,
+      "t1_original": 406.5,
+      "dur": 71.73,
+      "citacao_t0": 401.37,
+      "citacao_t1": 405.2,
+      "citacao_palavras": [
+        665,
+        675
+      ],
+      "item_id": "20261023_img-3530"
+    },
+    {
+      "id": "20261023_img-3530#s07",
+      "t0": 428.13,
+      "t1": 510.9,
+      "tema": "não dá para aprender tudo ao mesmo tempo: o processamento simultâneo tem limite de poucas informações",
+      "tags": [
+        "memoria-de-trabalho",
+        "capacidade-limitada",
+        "neurociencia-do-aprendizado",
+        "metodo-de-estudo",
+        "hipocampo"
+      ],
+      "tese": "tudo o que você sabe foi armazenado aos poucos porque a capacidade de processar informações simultâneas é pequena",
+      "citacao": "seria impossível de ser aprendido no mesmo segundo,",
+      "gancho_potencial": 3,
+      "publicos": [
+        "concursos-vestibular",
+        "candidato-residencia",
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Ressalvas técnicas: 'são de 8 informações diferentes simultaneamente' — a literatura clássica fala em 7±2 (Miller, 1956) e estimativas atuais em ~4 itens (Cowan, 2001); 'processamento simultâneo feito pelo hipocampo' e 'córtex medular' estão incorretos. Precedido de 21 s sem fala.",
+      "t0_original": 428.1,
+      "t1_original": 513.0,
+      "dur": 82.77,
+      "citacao_t0": 462.17,
+      "citacao_t1": 464.42,
+      "citacao_palavras": [
+        724,
+        731
+      ],
+      "item_id": "20261023_img-3530"
+    },
+    {
+      "id": "20261023_img-3530#s08",
+      "t0": 513.05,
+      "t1": 604.48,
+      "tema": "metáfora dos 8 'neurônios': quem tem TDAH ocupa quase todos e sobra um para ouvir você",
+      "tags": [
+        "tdah",
+        "memoria-de-trabalho",
+        "atencao",
+        "neurotipico",
+        "analogia"
+      ],
+      "tese": "um neurotípico com menos capacidade, mas disponível, parece mais inteligente do que alguém com TDAH ocupado por dentro",
+      "citacao": "parece que tem a impressão que ele é muito mais inteligente do que a pessoa com o TDAH",
+      "gancho_potencial": 3,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Ele próprio avisa que 'oito neurônios' é simplificação. Comparação TDAH x neurotípico em termos de inteligência é opinião, não evidência — cuidado ao publicar.",
+      "t0_original": 513.0,
+      "t1_original": 604.6,
+      "dur": 91.43,
+      "citacao_t0": 597.93,
+      "citacao_t1": 605.13,
+      "citacao_palavras": [
+        969,
+        986
+      ],
+      "item_id": "20261023_img-3530"
+    },
+    {
+      "id": "20261023_img-3530#s09",
+      "t0": 604.6,
+      "t1": 655.45,
+      "tema": "quem tem TDAH não pensa demais por escolha: não consegue parar de pensar",
+      "tags": [
+        "tdah",
+        "pensamento-acelerado",
+        "hiperatividade-mental",
+        "neurodivergencia"
+      ],
+      "tese": "o pensamento incessante no TDAH não é escolha, é uma necessidade biológica",
+      "citacao": "ele pensa porque ele não consegue parar de pensar, é uma necessidade biológica do cérebro dele.",
+      "gancho_potencial": 4,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "Frase de impacto que funciona escrita. Termina em 'capacidade que costuma ser maior de processamento simultâneo' — afirmação sem respaldo; cortar antes dela.",
+      "t0_original": 604.6,
+      "t1_original": 656.0,
+      "dur": 50.85,
+      "citacao_t0": 638.95,
+      "citacao_t1": 643.57,
+      "citacao_palavras": [
+        1050,
+        1065
+      ],
+      "item_id": "20261023_img-3530"
+    },
+    {
+      "id": "20261023_img-3530#s10",
+      "t0": 656.97,
+      "t1": 735.63,
+      "tema": "analogia da fábrica: 8 máquinas ligadas 24 h contra 3 máquinas que só funcionam sob demanda",
+      "tags": [
+        "tdah",
+        "analogia",
+        "produtividade",
+        "memoria-de-longo-prazo",
+        "neurodivergencia"
+      ],
+      "tese": "a mente com TDAH seria uma fábrica sempre ligada, que acumula muito mais produção ao longo do tempo",
+      "citacao": "essas máquinas só funcionam sob demanda.",
+      "gancho_potencial": 2,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Citação curta (6 palavras). Execução confusa ('ter três empresas, três máquinas'). Conclusão 'armazenamento total de uma pessoa com TDAH é absolutamente maior do restante da população' é afirmação sem evidência — não usar como fato.",
+      "t0_original": 657.0,
+      "t1_original": 737.0,
+      "dur": 78.66,
+      "citacao_t0": 683.51,
+      "citacao_t1": 689.03,
+      "citacao_palavras": [
+        1123,
+        1128
+      ],
+      "item_id": "20261023_img-3530"
+    },
+    {
+      "id": "20261023_img-3530#s11",
+      "t0": 737.71,
+      "t1": 832.72,
+      "tema": "o problema do TDAH: a necessidade de estímulo constante puxa para o estímulo mais fácil — rolar feed e dopamina instantânea",
+      "tags": [
+        "tdah",
+        "dopamina",
+        "vicio-em-tela",
+        "redes-sociais",
+        "procrastinacao",
+        "foco"
+      ],
+      "tese": "sem direcionar o estímulo, a energia mental do TDAH é desperdiçada em conteúdo inútil de dopamina rápida",
+      "citacao": "vai desperdiçar toda essa sua energia trabalhando rodando para fazer coisas inúteis rolando feed no instagram",
+      "gancho_potencial": 4,
+      "publicos": [
+        "geral",
+        "concursos-vestibular",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Tema de alto alcance (dopamina/feed) e relato com cara de experiência própria. Bebe de uma lata em ~15:56–16:26 (fora do trecho). 'estilo mais fácil' provavelmente é 'estímulo mais fácil'.",
+      "t0_original": 737.7,
+      "t1_original": 835.0,
+      "dur": 95.01,
+      "citacao_t0": 801.78,
+      "citacao_t1": 811.22,
+      "citacao_palavras": [
+        1315,
+        1330
+      ],
+      "item_id": "20261023_img-3530"
+    },
+    {
+      "id": "20261023_img-3530#s12",
+      "t0": 866.75,
+      "t1": 983.02,
+      "tema": "melhor 3 máquinas produzindo o que importa do que 8 máquinas produzindo lixo: o que fazer com a energia do TDAH",
+      "tags": [
+        "tdah",
+        "produtividade",
+        "foco",
+        "analogia",
+        "disciplina",
+        "metodo-de-estudo"
+      ],
+      "tese": "capacidade grande sem controle rende menos do que capacidade pequena bem direcionada",
+      "citacao": "é melhor você ter uma indústria com três máquinas que trabalham sob demanda",
+      "gancho_potencial": 4,
+      "publicos": [
+        "geral",
+        "concursos-vestibular"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Conclusão da analogia com antítese clara. Usa palavrão ('produzir merda', duas vezes) — cortar ou bipar conforme o tom do perfil. Pausas e repetições ('disponibilizar' várias vezes) entre 900–930 s.",
+      "t0_original": 866.8,
+      "t1_original": 983.0,
+      "dur": 116.27,
+      "citacao_t0": 949.32,
+      "citacao_t1": 955.71,
+      "citacao_palavras": [
+        1505,
+        1517
+      ],
+      "item_id": "20261023_img-3530"
+    },
+    {
+      "id": "20261023_img-3530#s13",
+      "t0": 1000.74,
+      "t1": 1057.91,
+      "tema": "ressalva honesta: as analogias partem de premissas reais, mas precisam ser conferidas em pesquisa",
+      "tags": [
+        "bastidores",
+        "honestidade-intelectual",
+        "tdah",
+        "analogia",
+        "divulgacao-cientifica"
+      ],
+      "tese": "a explicação é uma construção a partir de pressupostos reais, mas nem toda analogia se sustenta sem conferir a literatura",
+      "citacao": "eu não tenho certeza se toda analogia é válida, eu tenho que fazer uma pesquisa",
+      "gancho_potencial": 1,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Fechamento. Reforça que o vídeo inteiro é raciocínio exploratório, não conteúdo validado. Útil para bastidor/transparência.",
+      "t0_original": 1000.7,
+      "t1_original": 1059.0,
+      "dur": 57.17,
+      "citacao_t0": 1001.58,
+      "citacao_t1": 1009.01,
+      "citacao_palavras": [
+        1574,
+        1588
+      ],
+      "item_id": "20261023_img-3530"
+    }
+  ]
+}

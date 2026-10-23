@@ -1,0 +1,25 @@
+{
+  "id": "20261023_img-3760",
+  "nome": "IMG_3760",
+  "tipo": "video",
+  "origem": {
+    "drive_id": "1OYZEPFSKmOl7engG5pFbJ_C1i68N7GRA",
+    "nome_original": "IMG_3760.MOV",
+    "modifiedTime": "2026-10-23T10:31:26.738Z"
+  },
+  "arquivo": "source.mov",
+  "tamanho": 1705451271,
+  "sha256": "2eab83ed4aa0d463e59db65843aba9b26ea01111467aa42fdb7eafb0c4fdc76f",
+  "duracao": 793.99,
+  "largura": 1080,
+  "altura": 1920,
+  "fps": 24.379,
+  "rotacao": -90,
+  "tem_audio": true,
+  "vcodec": "hevc",
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "baixado",
+  "criado_em": "2026-10-23T11:07:59+00:00",
+  "atualizado_em": "2026-10-23T11:07:59+00:00"
+}

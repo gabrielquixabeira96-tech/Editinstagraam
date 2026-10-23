@@ -1,6 +1,6 @@
 # Banco de material para Reels — catálogo
 
-Gerado em 2026-10-23T10:55:50+00:00 · 4 item(ns) · 18 segmento(s) · 2 pendente(s) de segmentação
+Gerado em 2026-10-23T11:08:24+00:00 · 6 item(ns) · 35 segmento(s) · 2 pendente(s) de segmentação
 
 Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: FP fala-principal, BR broll, CR corte-rapido, CC citacao-card · públicos: PL plantonista, RE residente, CA candidato-residencia, CV concursos-vestibular, GE geral
 
@@ -27,6 +27,33 @@ Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: 
 | 20261023_img-3440#s10 | 07:15.67–08:14.74 (59 s) | no tórax instável a primeira medida é analgesia, não intubação: a dispneia inicial é pela dor | trauma-toracico, torax-instavel, analgesia, fratura-de-costela, dor, atls | 4 | 3/4 | PL CA RE | FP CC |
 | 20261023_img-3440#s11 | 08:15.10–09:19.82 (65 s) | dessaturação abaixo de 90–92% no tórax instável indica intubação porque vem da contusão pulmonar | trauma-toracico, torax-instavel, contusao-pulmonar, dessaturacao, indicacao-de-intubacao, atls | 4 | 3/4 | PL CA RE | FP CC |
 
+## 20261023_img-3528 — IMG_3528 (video · 03:33.41 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261023_img-3528#s01 | 00:03.59–01:10.52 (67 s) | o cérebro aprende resolvendo problemas: quanto mais esforço na busca da resposta, mais fácil a fixação | metodo-de-estudo, aprendizagem-ativa, dificuldade-desejavel, memoria, neurociencia-do-aprendizado, estudo-por-questoes | 3 | 2/4 | CA CV RE | FP |
+| 20261023_img-3528#s02 | 01:13.54–01:46.36 (33 s) | o paradoxo do estudo ativo: a fixação acontece de forma passiva quando o esforço vai para a tentativa de resolver | metodo-de-estudo, aprendizagem-ativa, paradoxo, memoria, estudo-por-questoes, fixacao | 4 | 2/4 | CA CV RE | FP CC CR |
+| 20261023_img-3528#s03 | 01:50.40–02:48.29 (58 s) | por que você lê, entende e não guarda: informação sem problema associado vira só mais uma coisa para decorar | metodo-de-estudo, leitura-passiva, memoria, recuperacao, prova, aprendizagem-ativa | 3 | 2/4 | CA CV | FP |
+| 20261023_img-3528#s04 | 02:51.31–03:32.66 (41 s) | a sensação de errar a questão e, ao abrir o caderno depois da prova, tudo fazer sentido | prova, erro, memoria, recuperacao, metodo-de-estudo, residencia-medica | 4 | 2/4 | CA CV GE | FP CR CC |
+
+## 20261023_img-3530 — IMG_3530 (video · 17:39.62 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261023_img-3530#s01 | 00:10.25–01:25.55 (75 s) | sobrecarga de informação: redes neurais disponíveis ao mesmo tempo são finitas e, divididas entre muita coisa, a fixação cai | memoria-de-trabalho, sobrecarga-cognitiva, metodo-de-estudo, redes-neurais, aprendizagem, foco | 2 | 3/4 | CA CV GE | FP |
+| 20261023_img-3530#s02 | 01:53.41–02:12.10 (19 s) | você não era burro: estava sobrecarregando a capacidade de processamento | sobrecarga-cognitiva, metodo-de-estudo, autoestima, memoria-de-trabalho, prova | 3 | 3/4 | CA CV GE | FP CR |
+| 20261023_img-3530#s03 | 02:15.14–03:06.32 (51 s) | por que quem tem TDAH parece 'no mundo da lua': o pensamento acelerado ocupa a cabeça o tempo todo | tdah, pensamento-acelerado, atencao, neurodivergencia, memoria-de-trabalho | 4 | 3/4 | GE | FP CC |
+| 20261023_img-3530#s04 | 03:07.06–04:10.72 (64 s) | TDAH: quando parece parado, está com quase toda a capacidade dirigida a um raciocínio interno e sobra pouco para a instrução de fora | tdah, atencao, memoria-de-trabalho, instrucao, neurodivergencia | 2 | 3/4 | GE | FP |
+| 20261023_img-3530#s05 | 04:36.78–05:35.52 (59 s) | analogia do computador: baixar um jogo pesado com pouca memória RAM trava tudo | analogia, memoria-ram, memoria-de-trabalho, sobrecarga-cognitiva, metodo-de-estudo | 2 | 3/4 | GE CV | FP |
+| 20261023_img-3530#s06 | 05:34.81–06:46.54 (72 s) | memória RAM é a memória de trabalho e o HD é a memória de longo prazo | analogia, memoria-ram, memoria-de-trabalho, memoria-de-longo-prazo, hipocampo, neurociencia-do-aprendizado | 3 | 3/4 | CV GE | FP CC |
+| 20261023_img-3530#s07 | 07:08.13–08:30.90 (83 s) | não dá para aprender tudo ao mesmo tempo: o processamento simultâneo tem limite de poucas informações | memoria-de-trabalho, capacidade-limitada, neurociencia-do-aprendizado, metodo-de-estudo, hipocampo | 3 | 3/4 | CV CA GE | FP |
+| 20261023_img-3530#s08 | 08:33.05–10:04.48 (91 s) | metáfora dos 8 'neurônios': quem tem TDAH ocupa quase todos e sobra um para ouvir você | tdah, memoria-de-trabalho, atencao, neurotipico, analogia | 3 | 3/4 | GE | FP |
+| 20261023_img-3530#s09 | 10:04.60–10:55.45 (51 s) | quem tem TDAH não pensa demais por escolha: não consegue parar de pensar | tdah, pensamento-acelerado, hiperatividade-mental, neurodivergencia | 4 | 3/4 | GE | FP CR CC |
+| 20261023_img-3530#s10 | 10:56.97–12:15.63 (79 s) | analogia da fábrica: 8 máquinas ligadas 24 h contra 3 máquinas que só funcionam sob demanda | tdah, analogia, produtividade, memoria-de-longo-prazo, neurodivergencia | 2 | 3/4 | GE | FP |
+| 20261023_img-3530#s11 | 12:17.71–13:52.72 (95 s) | o problema do TDAH: a necessidade de estímulo constante puxa para o estímulo mais fácil — rolar feed e dopamina instantânea | tdah, dopamina, vicio-em-tela, redes-sociais, procrastinacao, foco | 4 | 3/4 | GE CV CA | FP CC |
+| 20261023_img-3530#s12 | 14:26.75–16:23.02 (116 s) | melhor 3 máquinas produzindo o que importa do que 8 máquinas produzindo lixo: o que fazer com a energia do TDAH | tdah, produtividade, foco, analogia, disciplina, metodo-de-estudo | 4 | 3/4 | GE CV | FP CC |
+| 20261023_img-3530#s13 | 16:40.74–17:37.91 (57 s) | ressalva honesta: as analogias partem de premissas reais, mas precisam ser conferidas em pesquisa | bastidores, honestidade-intelectual, tdah, analogia, divulgacao-cientifica | 1 | 3/4 | GE | FP |
+
 ## 20261023_img-3807 — IMG_3807 (video · 00:32.03 · licença propria)
 
 | segmento | onde | tema | tags | G | V/A | públicos | usos |
@@ -44,6 +71,6 @@ Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: 
 
 ## Pendentes (sem segments.json no índice)
 
-- 20261023_img-3528 — IMG_3528 (video, status baixado)
-- 20261023_img-3530 — IMG_3530 (video, status baixado)
+- 20261023_img-3525 — IMG_3525 (video, status baixado)
+- 20261023_img-3760 — IMG_3760 (video, status baixado)
 

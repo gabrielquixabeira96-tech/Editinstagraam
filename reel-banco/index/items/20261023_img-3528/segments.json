@@ -1,0 +1,161 @@
+{
+  "item_id": "20261023_img-3528",
+  "validado_em": "2026-10-23T10:57:16+00:00",
+  "segments": [
+    {
+      "id": "20261023_img-3528#s01",
+      "t0": 3.59,
+      "t1": 70.52,
+      "tema": "o cérebro aprende resolvendo problemas: quanto mais esforço na busca da resposta, mais fácil a fixação",
+      "tags": [
+        "metodo-de-estudo",
+        "aprendizagem-ativa",
+        "dificuldade-desejavel",
+        "memoria",
+        "neurociencia-do-aprendizado",
+        "estudo-por-questoes"
+      ],
+      "tese": "o gasto de energia tentando resolver um problema faz com que, ao encontrar a resposta, a fixação aconteça quase de forma passiva",
+      "citacao": "quanto mais dificuldade ele tem de encontrar a solução, mais energia ele vai dispor para aquilo",
+      "gancho_potencial": 3,
+      "publicos": [
+        "candidato-residencia",
+        "concursos-vestibular",
+        "residente"
+      ],
+      "qualidade_visual": 2,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "ATENÇÃO À ORIENTAÇÃO: o arquivo é retrato (1080x1920, rotação -90) mas a imagem aparece DEITADA — precisa girar 90° no sentido horário, o que deixa o quadro horizontal; para 9:16 sobra só um recorte do rosto. Câmera baixa, entre os raios do volante, mão passando na frente em alguns momentos; luz boa. Começa no meio de um raciocínio ('é basicamente isso que eu acabei de falar') — continuação de outro vídeo; cortar os primeiros 3,6 s. Fala fluida, com pausas de 3–5 s.",
+      "t0_original": 3.6,
+      "t1_original": 72.0,
+      "dur": 66.93,
+      "citacao_t0": 35.5,
+      "citacao_t1": 40.08,
+      "citacao_palavras": [
+        67,
+        82
+      ],
+      "item_id": "20261023_img-3528"
+    },
+    {
+      "id": "20261023_img-3528#s02",
+      "t0": 73.54,
+      "t1": 106.36,
+      "tema": "o paradoxo do estudo ativo: a fixação acontece de forma passiva quando o esforço vai para a tentativa de resolver",
+      "tags": [
+        "metodo-de-estudo",
+        "aprendizagem-ativa",
+        "paradoxo",
+        "memoria",
+        "estudo-por-questoes",
+        "fixacao"
+      ],
+      "tese": "estudo ativo transfere o gasto energético para a tentativa de resolução e torna a fixação natural",
+      "citacao": "a difusão da informação vai acontecer de maneira passiva quando você faz um estudo ativo.",
+      "gancho_potencial": 4,
+      "publicos": [
+        "candidato-residencia",
+        "concursos-vestibular",
+        "residente"
+      ],
+      "qualidade_visual": 2,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card",
+        "corte-rapido"
+      ],
+      "notas": "Melhor gancho do vídeo — antítese 'passiva quando você faz estudo ativo'. 'difusão' provavelmente é 'fixação' dita rápido; conferir no áudio antes de usar no card. A frase seguinte ('Porque você, mas na verdade, é que você transpondo o gasto energético da parte') sai truncada. Mesma imagem deitada (girar 90° horário).",
+      "t0_original": 73.5,
+      "t1_original": 106.0,
+      "dur": 32.82,
+      "citacao_t0": 76.21,
+      "citacao_t1": 81.5,
+      "citacao_palavras": [
+        134,
+        148
+      ],
+      "item_id": "20261023_img-3528"
+    },
+    {
+      "id": "20261023_img-3528#s03",
+      "t0": 110.4,
+      "t1": 168.29,
+      "tema": "por que você lê, entende e não guarda: informação sem problema associado vira só mais uma coisa para decorar",
+      "tags": [
+        "metodo-de-estudo",
+        "leitura-passiva",
+        "memoria",
+        "recuperacao",
+        "prova",
+        "aprendizagem-ativa"
+      ],
+      "tese": "ler uma explicação sem precisar dela não marca a informação como relevante, e ela some na hora da prova",
+      "citacao": "parece que não faz sentido, é só mais uma informação que você vai ter que decorar",
+      "gancho_potencial": 3,
+      "publicos": [
+        "candidato-residencia",
+        "concursos-vestibular"
+      ],
+      "qualidade_visual": 2,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Trecho de identificação com o estudante; frases longas e um pouco circulares. Imagem deitada (girar 90° horário); mão no volante entra no quadro.",
+      "t0_original": 110.4,
+      "t1_original": 171.0,
+      "dur": 57.89,
+      "citacao_t0": 155.31,
+      "citacao_t1": 159.03,
+      "citacao_palavras": [
+        241,
+        256
+      ],
+      "item_id": "20261023_img-3528"
+    },
+    {
+      "id": "20261023_img-3528#s04",
+      "t0": 171.31,
+      "t1": 212.66,
+      "tema": "a sensação de errar a questão e, ao abrir o caderno depois da prova, tudo fazer sentido",
+      "tags": [
+        "prova",
+        "erro",
+        "memoria",
+        "recuperacao",
+        "metodo-de-estudo",
+        "residencia-medica"
+      ],
+      "tese": "a falha de recuperação na prova é a experiência que todo estudante reconhece — e mostra que ler não é o mesmo que fixar",
+      "citacao": "nossa mas eu sou imbecil estava aqui na minha cara o tempo todo",
+      "gancho_potencial": 4,
+      "publicos": [
+        "candidato-residencia",
+        "concursos-vestibular",
+        "geral"
+      ],
+      "qualidade_visual": 2,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "Muito identificável (cena universal de prova). Termina cortado no meio da frase ('eu li esse texto como que eu não') — o vídeo acaba aí. Expressivo, boa entonação. Imagem deitada (girar 90° horário), câmera baixa.",
+      "t0_original": 171.3,
+      "t1_original": 213.4,
+      "dur": 41.35,
+      "citacao_t0": 206.84,
+      "citacao_t1": 210.68,
+      "citacao_palavras": [
+        344,
+        356
+      ],
+      "item_id": "20261023_img-3528"
+    }
+  ]
+}
