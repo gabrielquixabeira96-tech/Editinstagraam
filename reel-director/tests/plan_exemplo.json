@@ -1,0 +1,137 @@
+{
+  "_comentario": "Plano de exemplo para o vídeo sintético da reel-editor. Tempos na timeline ORIGINAL. Demonstra: gancho animado, punch-in, 3 transições (zoom_through, whip, dissolve), B-roll, contador Remotion, chroma key, legenda palavra a palavra, lower third e disclaimer. Cena IA NÃO usada (sem custo).",
+  "source": "/mnt/skills/user/reel-editor/tests/sample_input/sample_01_vertical.mp4",
+  "workdir": "/home/claude/reel-director-skill/tests/out/work_demo",
+  "style": "director",
+  "approved": true,
+  "padding_ms": 80,
+  "keep": [
+    {
+      "start": 6.2,
+      "end": 16.9
+    }
+  ],
+  "emphasis": [
+    {
+      "t": 12.98,
+      "word": "30"
+    }
+  ],
+  "zoom": [
+    {
+      "t": 7.0,
+      "scale": 1.12,
+      "focus_y": 0.42
+    }
+  ],
+  "shots": [
+    {
+      "t": 9.2,
+      "dur": 1.5,
+      "kind": "broll",
+      "file": "tests/assets/broll_centro_cirurgico.mp4",
+      "in": "zoom_through",
+      "why": "cena ilustrativa ao citar o cuidado"
+    },
+    {
+      "t": 10.7,
+      "dur": 0.6,
+      "kind": "aroll",
+      "in": "dissolve",
+      "why": "volta calma ao apresentador"
+    },
+    {
+      "t": 11.3,
+      "dur": 1.1,
+      "kind": "broll",
+      "file": "tests/assets/broll_centro_cirurgico.mp4",
+      "in": "whip",
+      "why": "virada rápida de ritmo"
+    },
+    {
+      "t": 15.1,
+      "dur": 1.4,
+      "kind": "chroma",
+      "file": "tests/assets/green_demo.mp4",
+      "pos": [
+        320,
+        540
+      ],
+      "w": 460,
+      "why": "demonstra chroma key local (fundo verde)"
+    }
+  ],
+  "graphics": [
+    {
+      "t": 6.2,
+      "dur": 2.0,
+      "comp": "HookTitle",
+      "props": {
+        "lines": [
+          [
+            "PROTETOR",
+            "SOLAR"
+          ],
+          [
+            "*2",
+            "REGRAS*"
+          ]
+        ]
+      },
+      "why": "R1/R5 promessa em <=2s"
+    },
+    {
+      "t": 8.4,
+      "dur": 2.6,
+      "comp": "LowerThird",
+      "props": {},
+      "why": "identificação CFM"
+    },
+    {
+      "t": 12.9,
+      "dur": 2.0,
+      "comp": "Counter",
+      "props": {
+        "to": 30,
+        "suffix": "min",
+        "label": "antes de sair",
+        "ring": 0.8
+      },
+      "why": "reforça o número falado"
+    },
+    {
+      "t": 15.0,
+      "dur": 1.7,
+      "comp": "Label",
+      "props": {
+        "text": "Conteúdo educativo. Não substitui avaliação médica.",
+        "y": 1040,
+        "size": 26
+      },
+      "why": "R35 fecho educativo"
+    }
+  ],
+  "narration": {
+    "mode": "original"
+  },
+  "polish": {
+    "enabled": false
+  },
+  "ai_policy": {
+    "allow": false,
+    "confirmed_by_user": false
+  },
+  "post": {
+    "caption": "Protetor solar não é só passar e sair. Duas regras mudam o resultado: aplique cerca de 30 minutos antes de se expor e reaplique a cada duas horas. A maioria das falhas de proteção vem de reaplicar pouco, não da marca do produto.",
+    "cta": "Manda este Reel para quem nunca reaplica o protetor.",
+    "hashtags": [
+      "dermatologia",
+      "fotoprotecao",
+      "saudedapele"
+    ]
+  },
+  "cover": {
+    "t": 3.4,
+    "title": "Protetor solar: 2 regras"
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "name": "director",
+  "_comentario": "Fonte única de parâmetros do reel-director. Coordenadas em px de 1080x1920. Regras R# = research/alcance-2026.md.",
+  "identity": {
+    "font": "Poppins Bold (templates/remotion/public/Poppins-Bold.ttf; legenda via reel-editor styles/default.json)",
+    "text": "#FFFFFF",
+    "accent": "#39E58C",
+    "warn": "#FFB547",
+    "box": "rgba(8,12,18,.82)",
+    "box_radius": 28,
+    "proibido": [
+      "emoji",
+      "neon",
+      "gradiente chamativo",
+      "wipe",
+      "giro/spin",
+      "page curl",
+      "ilustração infantil",
+      "anatomia gerada por IA"
+    ]
+  },
+  "safe": {
+    "center": {
+      "x0": 65,
+      "x1": 1015,
+      "y0": 470,
+      "y1": 1450
+    },
+    "reserved": [
+      {
+        "name": "topo (usuário/áudio)",
+        "x0": 0,
+        "x1": 1080,
+        "y0": 0,
+        "y1": 270
+      },
+      {
+        "name": "base (legenda do post)",
+        "x0": 0,
+        "x1": 1080,
+        "y0": 1250,
+        "y1": 1920
+      },
+      {
+        "name": "coluna de ações",
+        "x0": 850,
+        "x1": 1080,
+        "y0": 1150,
+        "y1": 1920
+      },
+      {
+        "name": "borda esquerda",
+        "x0": 0,
+        "x1": 65,
+        "y0": 0,
+        "y1": 1920
+      },
+      {
+        "name": "borda direita",
+        "x0": 1015,
+        "x1": 1080,
+        "y0": 0,
+        "y1": 1920
+      }
+    ],
+    "caption_band": {
+      "y0": 1140,
+      "y1": 1245,
+      "_": "legenda palavra a palavra (reel-editor position_y 0.62 → y≈1190); nada de gráfico nessa faixa enquanto houver fala"
+    }
+  },
+  "slots": {
+    "hook": {
+      "y": 560
+    },
+    "card": {
+      "y": 480
+    },
+    "chart": {
+      "y": 500
+    },
+    "figure": {
+      "y": 470
+    },
+    "lower_third": {
+      "y": 990
+    },
+    "label_top": {
+      "y": 345
+    },
+    "progress": {
+      "y": 280
+    },
+    "bigtext": {
+      "y": 700
+    }
+  },
+  "reach": {
+    "hook_max_s": 2.0,
+    "hook_text_max_words": 6,
+    "visual_event_max_gap_s": 4.0,
+    "static_shot_max_s": 4.0,
+    "target_duration_s": [
+      15,
+      45
+    ],
+    "max_duration_s": 60,
+    "broll_clip_s": [
+      1.2,
+      5.0
+    ],
+    "card_hold_s": [
+      1.0,
+      3.0
+    ],
+    "sfx_min_gap_s": 2.0,
+    "ai_label_text": "Recriação ilustrativa (IA)",
+    "disclaimer_text": "Conteúdo educativo. Não substitui avaliação médica.",
+    "lower_third": {
+      "name": "Dr. Gabriel Quixabeira",
+      "sub": "CRM-MT 14.954"
+    },
+    "cta_send_regex": "(manda|envia|compartilha|marca|mande|envie)"
+  },
+  "transitions": {
+    "cut": {
+      "dur": 0.0,
+      "sfx": null,
+      "quando": "PADRÃO. Toda troca dentro do mesmo assunto; jump cut de fala."
+    },
+    "match": {
+      "dur": 0.067,
+      "sfx": null,
+      "quando": "Forma/posição igual nos dois planos (mão→instrumento, círculo→pupila). 2 quadros de fusão escondem o salto."
+    },
+    "dissolve": {
+      "dur": 0.35,
+      "sfx": null,
+      "quando": "Passagem de tempo/tom; entrada de figura de artigo; fecho. Máx. 2 por Reel."
+    },
+    "luma": {
+      "dur": 0.5,
+      "sfx": null,
+      "quando": "Entrar/sair de cena IA ou B-roll com muita luz (centro cirúrgico): as altas luzes revelam primeiro."
+    },
+    "whip": {
+      "dur": 0.24,
+      "sfx": "whoosh",
+      "quando": "Virada de bloco ('mas…', 'agora o erro'). Curto, horizontal, com blur. Máx. 1 por Reel."
+    },
+    "zoom_through": {
+      "dur": 0.4,
+      "sfx": "whoosh",
+      "quando": "Mergulho: do rosto para o detalhe (dado, figura, mecanismo). Máx. 1 por Reel."
+    },
+    "J": {
+      "lead": 0.25,
+      "quando": "Junção de jump cut: a fala do próximo trecho começa 0,25 s antes da imagem (suaviza o pulo)."
+    },
+    "L": {
+      "lead": 0.25,
+      "quando": "Junção de jump cut: a imagem do próximo trecho entra 0,25 s antes da fala termina (reação/continuidade)."
+    }
+  },
+  "punch_in": {
+    "scale": 1.15,
+    "focus_y": 0.4,
+    "sfx": "pop",
+    "quando": "Palavra-chave ou virada no A-roll; no máx. 1 a cada ~8 s; nunca 2 seguidos."
+  },
+  "audio": {
+    "music_db": -18,
+    "duck_db": -10,
+    "sfx_db": -8,
+    "target_lufs": -14,
+    "target_tp": -1,
+    "sfx_library": {
+      "whoosh": "assets/audio/whoosh_runway.mp3",
+      "pop": "/mnt/skills/user/reel-editor/audio/sfx/pop.wav",
+      "ding": "/mnt/skills/user/reel-editor/audio/sfx/ding.wav",
+      "whoosh_soft": "/mnt/skills/user/reel-editor/audio/sfx/whoosh.wav"
+    },
+    "music_default": "assets/audio/music_bed_runway.mp3"
+  },
+  "chroma": {
+    "similarity": 0.14,
+    "blend": 0.06,
+    "erode_px": 2,
+    "feather_px": 3,
+    "light_wrap": 0.35,
+    "color_match": 0.5,
+    "bg_blur": 6,
+    "bg_parallax_px": 60,
+    "bg_scale": 1.12
+  },
+  "render": {
+    "crf_intermediate": 12,
+    "crf_final": 18,
+    "preset_intermediate": "veryfast",
+    "remotion_concurrency": 2
+  }
+}
