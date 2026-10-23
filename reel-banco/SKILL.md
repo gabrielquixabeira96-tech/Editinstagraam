@@ -80,6 +80,10 @@ recurso, vira opção de script.
   `read_file_content`) para um caminho local e ingira com `--local`.
 - Artefatos claude.ai: leia com a ferramenta Artifact (`action: "read"`), salve o HTML localmente e ingira com `--local`.
 - Listagem e movimentação são pelo conector (`search_files` com `parentId`, `update_file`), nunca por script.
+- **Cota por arquivo:** muitos downloads do mesmo vídeo no dia fazem o link devolver "Quota exceeded" (`drive_fetch`
+  código 4) por horas. Teste com `drive_fetch.py <id> - --probe-bytes 65536` e espere; não copie o arquivo no Drive
+  (ocupa o armazenamento do Gabriel). **Pendência aberta:** retranscrição do `20261023_img-3502` (cota estourada em
+  23/10) — comando exato em `README.md → Pendências`.
 
 ## Modo 1 — INGERIR (quando ele joga material na pasta ou pede "processa o banco")
 
