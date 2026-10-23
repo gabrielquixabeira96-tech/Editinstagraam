@@ -1,0 +1,67 @@
+{
+  "item_id": "20261023_img-1689",
+  "validado_em": "2026-10-23T10:47:46+00:00",
+  "segments": [
+    {
+      "id": "20261023_img-1689#s01",
+      "t0": 0.0,
+      "t1": 7.5,
+      "tema": "POV no simulador de realidade virtual FlexVR: mãos nos controles de pinça laparoscópica/robótica e a tarefa na tela",
+      "tags": [
+        "simulador",
+        "realidade-virtual",
+        "flexvr",
+        "treinamento-cirurgico",
+        "laparoscopia",
+        "robotica",
+        "habilidades-cirurgicas"
+      ],
+      "tese": "treino de habilidade cirúrgica em simulador virtual antes do paciente real",
+      "citacao": "",
+      "gancho_potencial": 2,
+      "publicos": [
+        "residente",
+        "candidato-residencia",
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 1,
+      "usos": [
+        "broll"
+      ],
+      "notas": "sem fala, só som ambiente baixo. Plano em primeira pessoa (celular no peito): tela do FlexVR com pinças virtuais sobre bloco de tarefa (transferência), teclado e a mão direita girando o controle; pedaleira visível embaixo. Boa luz, leve tremor de câmera na mão. A tela é pequena no quadro (precisa de zoom/crop para ler a tarefa). Serve de B-roll para treino/simulação/rotina de residência.",
+      "dur": 7.5,
+      "item_id": "20261023_img-1689"
+    },
+    {
+      "id": "20261023_img-1689#s02",
+      "t0": 7.5,
+      "t1": 14.27,
+      "tema": "simulador FlexVR: mão no controle e pedaleira, câmera se afasta mostrando o aparelho inteiro",
+      "tags": [
+        "simulador",
+        "realidade-virtual",
+        "flexvr",
+        "treinamento-cirurgico",
+        "pedaleira",
+        "robotica"
+      ],
+      "tese": "estrutura do simulador (console, controles manuais, pedais) vista de perto",
+      "citacao": "",
+      "gancho_potencial": 1,
+      "publicos": [
+        "residente",
+        "candidato-residencia",
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 1,
+      "usos": [
+        "broll"
+      ],
+      "notas": "sem fala. Mão esquerda com relógio no controle, pedaleira, e nos últimos ~2 s a câmera recua e enquadra o console completo com um banner ao fundo (logomarca parcialmente visível — conferir antes de usar). Mais movimento de câmera que s01.",
+      "dur": 6.77,
+      "item_id": "20261023_img-1689"
+    }
+  ]
+}

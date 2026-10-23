@@ -1,0 +1,30 @@
+{
+  "item_id": "20261023_img-1689",
+  "duracao": 14.271678,
+  "params": {
+    "threshold": 10.0,
+    "min_scene": 1.0,
+    "max_scene": 30.0,
+    "fps": 2.0
+  },
+  "gerado_em": "2026-10-23T10:45:36+00:00",
+  "scenes": [
+    {
+      "n": 1,
+      "t0": 0.0,
+      "t1": 14.272,
+      "dur": 14.272,
+      "corte": "inicio",
+      "rosto": 0.1,
+      "rosto_tam": 0.37,
+      "nitidez": 493.7,
+      "luma": 142.7,
+      "estourado": 0.0,
+      "escuro": 0.022,
+      "audio_db": -37.5,
+      "silencio": 0.0,
+      "sug_visual": 4.0,
+      "sug_audio": 1.5
+    }
+  ]
+}

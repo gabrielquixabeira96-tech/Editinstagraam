@@ -1,0 +1,25 @@
+{
+  "id": "20261023_img-3530",
+  "nome": "IMG_3530",
+  "tipo": "video",
+  "origem": {
+    "drive_id": "1qHju_wESrf4nyDPeia4AEigwel3O1BjU",
+    "nome_original": "IMG_3530.MOV",
+    "modifiedTime": "2026-10-23T10:04:29.956Z"
+  },
+  "arquivo": "source.mov",
+  "tamanho": 1336627585,
+  "sha256": "5d91a466dddbfb6a4873efb74e4d74ebc984ca3785acff08b9331306e96e1ae3",
+  "duracao": 1059.6217,
+  "largura": 1920,
+  "altura": 1080,
+  "fps": 29.998,
+  "rotacao": -180,
+  "tem_audio": true,
+  "vcodec": "hevc",
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "baixado",
+  "criado_em": "2026-10-23T10:54:30+00:00",
+  "atualizado_em": "2026-10-23T10:54:30+00:00"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "20261023_img-3528",
+  "nome": "IMG_3528",
+  "tipo": "video",
+  "origem": {
+    "drive_id": "1nYw3Vti7O68swBlTrSNyCwHksMwgaHsm",
+    "nome_original": "IMG_3528.mov",
+    "modifiedTime": "2026-10-23T10:03:50.371Z"
+  },
+  "arquivo": "source.mov",
+  "tamanho": 270520765,
+  "sha256": "6ede561e3f83cf551258c1372f50eccd4a236c10c0e9c93a6c96cae8f9085227",
+  "duracao": 213.406667,
+  "largura": 1080,
+  "altura": 1920,
+  "fps": 29.986,
+  "rotacao": -90,
+  "tem_audio": true,
+  "vcodec": "hevc",
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "baixado",
+  "criado_em": "2026-10-23T10:54:08+00:00",
+  "atualizado_em": "2026-10-23T10:54:08+00:00"
+}

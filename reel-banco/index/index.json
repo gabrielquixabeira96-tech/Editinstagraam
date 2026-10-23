@@ -1,8 +1,561 @@
 {
-  "gerado_em": "2026-10-23T10:36:20+00:00",
-  "n_itens": 2,
-  "n_segmentos": 5,
+  "gerado_em": "2026-10-23T10:55:50+00:00",
+  "n_itens": 4,
+  "n_segmentos": 18,
   "itens": [
+    {
+      "id": "20261023_img-1689",
+      "nome": "IMG_1689",
+      "tipo": "video",
+      "subtipo": null,
+      "duracao": 14.271678,
+      "largura": 1080,
+      "altura": 1920,
+      "licenca": "propria",
+      "fonte": null,
+      "status": "indexado",
+      "paginas": null,
+      "secoes": null,
+      "n_figuras": null,
+      "contact_sheets": [
+        "contact_sheet.jpg"
+      ],
+      "origem": {
+        "drive_id": "1VBvCuw3hIbfnSUeYSp8ZTEgVfpzES8Aa",
+        "nome_original": "IMG_1689.MOV"
+      },
+      "segmentos": [
+        {
+          "id": "20261023_img-1689#s01",
+          "t0": 0.0,
+          "t1": 7.5,
+          "tema": "POV no simulador de realidade virtual FlexVR: mãos nos controles de pinça laparoscópica/robótica e a tarefa na tela",
+          "tags": [
+            "simulador",
+            "realidade-virtual",
+            "flexvr",
+            "treinamento-cirurgico",
+            "laparoscopia",
+            "robotica",
+            "habilidades-cirurgicas"
+          ],
+          "tese": "treino de habilidade cirúrgica em simulador virtual antes do paciente real",
+          "citacao": "",
+          "gancho_potencial": 2,
+          "publicos": [
+            "residente",
+            "candidato-residencia",
+            "geral"
+          ],
+          "qualidade_visual": 4,
+          "qualidade_audio": 1,
+          "usos": [
+            "broll"
+          ],
+          "notas": "sem fala, só som ambiente baixo. Plano em primeira pessoa (celular no peito): tela do FlexVR com pinças virtuais sobre bloco de tarefa (transferência), teclado e a mão direita girando o controle; pedaleira visível embaixo. Boa luz, leve tremor de câmera na mão. A tela é pequena no quadro (precisa de zoom/crop para ler a tarefa). Serve de B-roll para treino/simulação/rotina de residência.",
+          "dur": 7.5,
+          "item_id": "20261023_img-1689",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-1689#s02",
+          "t0": 7.5,
+          "t1": 14.27,
+          "tema": "simulador FlexVR: mão no controle e pedaleira, câmera se afasta mostrando o aparelho inteiro",
+          "tags": [
+            "simulador",
+            "realidade-virtual",
+            "flexvr",
+            "treinamento-cirurgico",
+            "pedaleira",
+            "robotica"
+          ],
+          "tese": "estrutura do simulador (console, controles manuais, pedais) vista de perto",
+          "citacao": "",
+          "gancho_potencial": 1,
+          "publicos": [
+            "residente",
+            "candidato-residencia",
+            "geral"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 1,
+          "usos": [
+            "broll"
+          ],
+          "notas": "sem fala. Mão esquerda com relógio no controle, pedaleira, e nos últimos ~2 s a câmera recua e enquadra o console completo com um banner ao fundo (logomarca parcialmente visível — conferir antes de usar). Mais movimento de câmera que s01.",
+          "dur": 6.77,
+          "item_id": "20261023_img-1689",
+          "tipo": "video",
+          "licenca": "propria"
+        }
+      ]
+    },
+    {
+      "id": "20261023_img-3440",
+      "nome": "IMG_3440",
+      "tipo": "video",
+      "subtipo": null,
+      "duracao": 610.2967,
+      "largura": 1920,
+      "altura": 1080,
+      "licenca": "propria",
+      "fonte": null,
+      "status": "indexado",
+      "paginas": null,
+      "secoes": null,
+      "n_figuras": null,
+      "contact_sheets": [
+        "contact_sheet.jpg"
+      ],
+      "origem": {
+        "drive_id": "1L9sew5l1p6rDPMUNlw-M8G0vXoShenpE",
+        "nome_original": "IMG_3440.MOV"
+      },
+      "segmentos": [
+        {
+          "id": "20261023_img-3440#s01",
+          "t0": 6.9,
+          "t1": 34.6,
+          "tema": "via aérea definitiva no trauma: a escolha padrão é a intubação orotraqueal",
+          "tags": [
+            "via-aerea",
+            "trauma",
+            "atls",
+            "intubacao",
+            "iot",
+            "via-aerea-definitiva"
+          ],
+          "tese": "no trauma, quando o paciente precisa de via aérea definitiva, a primeira escolha na grande maioria dos cenários é a intubação orotraqueal",
+          "citacao": "o paciente precisa de uma via aérea definitiva seria a intubação orotraquial",
+          "gancho_potencial": 1,
+          "publicos": [
+            "candidato-residencia",
+            "concursos-vestibular"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "Abertura da revisão gravada no carro ('vamos começando a falar sobre via aérea no trauma'). Vídeo HORIZONTAL 1920x1080: rosto pequeno (~15% da largura) no centro, volante cortando a parte de cima do quadro; para 9:16 dá para recortar no rosto, mas o arco do volante passa sobre a cabeça. Luz boa e uniforme. Fala de memória, com pausas de 1–2 s e olhar para cima/lado. Só contexto.",
+          "t0_original": 6.9,
+          "t1_original": 34.5,
+          "dur": 27.7,
+          "citacao_t0": 18.52,
+          "citacao_t1": 24.16,
+          "citacao_palavras": [
+            29,
+            40
+          ],
+          "item_id": "20261023_img-3440",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3440#s02",
+          "t0": 71.35,
+          "t1": 92.73,
+          "tema": "quando a intubação é contraindicada ou falha, a segunda opção é a cricotireoidostomia cirúrgica",
+          "tags": [
+            "via-aerea",
+            "trauma",
+            "cricotireoidostomia",
+            "via-aerea-cirurgica",
+            "falha-de-intubacao",
+            "atls"
+          ],
+          "tese": "contraindicação ou impossibilidade de intubar após tentativas leva à cricotireoidostomia cirúrgica",
+          "citacao": "Então a segunda opção seria a cricotireoidostomia cirúrgica.",
+          "gancho_potencial": 2,
+          "publicos": [
+            "plantonista",
+            "candidato-residencia"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "Antes deste trecho há 10 s de pausa (61–71 s) — começa já no 'exista ou uma contraindicação'. Frases quebradas ('vezes vira difícil e não consegue pesar de tentativas'). Mesmo enquadramento horizontal no carro.",
+          "t0_original": 71.3,
+          "t1_original": 93.6,
+          "dur": 21.38,
+          "citacao_t0": 90.01,
+          "citacao_t1": 92.73,
+          "citacao_palavras": [
+            101,
+            108
+          ],
+          "item_id": "20261023_img-3440",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3440#s03",
+          "t0": 96.61,
+          "t1": 129.53,
+          "tema": "por que não se faz cricotireoidostomia cirúrgica em menores de 12 anos: cartilagem imatura e estenose cicatricial",
+          "tags": [
+            "via-aerea",
+            "cricotireoidostomia",
+            "pediatria",
+            "estenose-subglotica",
+            "trauma-pediatrico",
+            "atls"
+          ],
+          "tese": "abaixo de 12 anos a crico cirúrgica é contraindicada porque a cartilagem ainda imatura cicatriza com muita estenose",
+          "citacao": "foram pacientes com idade superior a 12 anos, porque em pacientes com idade inferior a 12 anos",
+          "gancho_potencial": 4,
+          "publicos": [
+            "candidato-residencia",
+            "plantonista",
+            "residente"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Ponto clássico de prova (número de corte 12 anos + mecanismo). Ressalva técnica: ele diz 'estenose de glótico' — o termo correto é estenose SUBGLÓTICA; corrigir na legenda/card. Raciocínio completo e encadeado, boa explicação de mecanismo. Pausa de 2,5 s no meio.",
+          "t0_original": 96.6,
+          "t1_original": 129.5,
+          "dur": 32.92,
+          "citacao_t0": 96.61,
+          "citacao_t1": 101.81,
+          "citacao_palavras": [
+            110,
+            126
+          ],
+          "item_id": "20261023_img-3440",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3440#s04",
+          "t0": 130.33,
+          "t1": 154.15,
+          "tema": "na criança a via aérea cirúrgica de emergência é a crico por punção com ventilação a jato",
+          "tags": [
+            "via-aerea",
+            "cricotireoidostomia-por-puncao",
+            "ventilacao-a-jato",
+            "pediatria",
+            "atls",
+            "emergencia"
+          ],
+          "tese": "como o orifício da punção é muito pequeno, a crico por punção precisa de insuflação a jato para oferecer oxigênio suficiente",
+          "citacao": "o orifício feito pela crico por punção é muito pequeno,",
+          "gancho_potencial": 3,
+          "publicos": [
+            "candidato-residencia",
+            "plantonista"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "A transcrição registrou 'G .H .R.' onde ele fala da insuflação a jato — na legenda escrever 'ventilação/insuflação a jato'. Explicação correta e direta.",
+          "t0_original": 130.3,
+          "t1_original": 155.0,
+          "dur": 23.82,
+          "citacao_t0": 144.29,
+          "citacao_t1": 147.99,
+          "citacao_palavras": [
+            202,
+            211
+          ],
+          "item_id": "20261023_img-3440",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3440#s05",
+          "t0": 156.35,
+          "t1": 190.82,
+          "tema": "crico por punção é ponte temporária: dura pouco e o paciente segue para traqueostomia no centro cirúrgico",
+          "tags": [
+            "via-aerea",
+            "cricotireoidostomia-por-puncao",
+            "traqueostomia",
+            "pediatria",
+            "tempo-limite",
+            "atls"
+          ],
+          "tese": "a crico por punção não se mantém por muito tempo; o paciente precisa ir logo ao centro cirúrgico para traqueostomia",
+          "citacao": "ela é um procedimento que é feito na emergência e não pode se manter por muito tempo,",
+          "gancho_potencial": 3,
+          "publicos": [
+            "candidato-residencia",
+            "plantonista"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "Ressalva técnica: ele diz '30 minutos a uma hora no máximo' — o ATLS fala em ~30–45 min (retenção de CO2); conferir antes de usar como fala principal ou cortar a frase do tempo. 'tráque inocente' = traqueostomia (erro de transcrição). Termina com frase confusa ('não tem como não pegar tanto a parte de cartilagem').",
+          "t0_original": 156.3,
+          "t1_original": 191.5,
+          "dur": 34.47,
+          "citacao_t0": 159.91,
+          "citacao_t1": 165.58,
+          "citacao_palavras": [
+            230,
+            246
+          ],
+          "item_id": "20261023_img-3440",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3440#s06",
+          "t0": 247.38,
+          "t1": 288.22,
+          "tema": "rebaixamento do nível de consciência tira a proteção da via aérea e predispõe a broncoaspiração maciça",
+          "tags": [
+            "via-aerea",
+            "rebaixamento-de-consciencia",
+            "broncoaspiracao",
+            "protecao-de-via-aerea",
+            "trauma",
+            "indicacao-de-intubacao"
+          ],
+          "tese": "sem proteção de via aérea o trauma evolui para broncoaspiração, que acima de certo limiar se torna irreversível",
+          "citacao": "um cenário catastrófico quando você tem uma broncoaspiração em massa.",
+          "gancho_potencial": 3,
+          "publicos": [
+            "plantonista",
+            "candidato-residencia",
+            "concursos-vestibular"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Começa depois de ~30 s sem fala (216–247 s) — o raciocínio 'de modo geral... que é o primeiro' fica sem antecedente; iniciar em 'O paciente quando ele tem rebaixamento' (~251 s). Bom encadeamento fisiopatológico.",
+          "t0_original": 247.4,
+          "t1_original": 288.0,
+          "dur": 40.84,
+          "citacao_t0": 270.2,
+          "citacao_t1": 272.87,
+          "citacao_palavras": [
+            369,
+            378
+          ],
+          "item_id": "20261023_img-3440",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3440#s07",
+          "t0": 289.82,
+          "t1": 311.58,
+          "tema": "Glasgow menor ou igual a 8 é indicação de intubação mesmo com saturação de 100%",
+          "tags": [
+            "via-aerea",
+            "glasgow",
+            "glasgow-8",
+            "indicacao-de-intubacao",
+            "protecao-de-via-aerea",
+            "trauma"
+          ],
+          "tese": "Glasgow ≤ 8 por si só indica via aérea definitiva, independentemente da saturação",
+          "citacao": "abaixo de Glasgow, igual ou menor a oito, ele não consegue mais proteger VIAE.",
+          "gancho_potencial": 4,
+          "publicos": [
+            "plantonista",
+            "candidato-residencia",
+            "concursos-vestibular",
+            "geral"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "corte-rapido",
+            "citacao-card"
+          ],
+          "notas": "Melhor antítese do vídeo: 'saturando 100% e mesmo assim intuba'. A frase do 100% ('isso por si só já é uma indicação mesmo com a 100 % saturando o 100 %') sai embolada — no Reel vale reforçar com card escrito. Curto e utilizável como corte.",
+          "t0_original": 289.8,
+          "t1_original": 311.5,
+          "dur": 21.76,
+          "citacao_t0": 300.52,
+          "citacao_t1": 306.82,
+          "citacao_palavras": [
+            427,
+            440
+          ],
+          "item_id": "20261023_img-3440",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3440#s08",
+          "t0": 311.36,
+          "t1": 377.88,
+          "tema": "lesão inalatória no queimado: incêndio em ambiente fechado, vibrissas queimadas e escarro carbonáceo indicam intubação",
+          "tags": [
+            "via-aerea",
+            "queimados",
+            "lesao-inalatoria",
+            "escarro-carbonaceo",
+            "indicacao-de-intubacao",
+            "trauma"
+          ],
+          "tese": "qualquer sinal de inalação de fumaça quente (ambiente fechado, vibrissas chamuscadas, escarro carbonáceo) é indicação de via aérea definitiva",
+          "citacao": "qualquer sinal de que ele tenha inalado fumaça próxima, por exemplo, como vibrissas, escarro carbonáceo,",
+          "gancho_potencial": 3,
+          "publicos": [
+            "plantonista",
+            "candidato-residencia",
+            "concursos-vestibular"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "'multidado' no início (~312 s) é ininteligível. Explicação boa do escarro carbonáceo. Termina com frase interrompida ('quando ele escarro já sai') seguida de 30 s de silêncio. Bom para B-roll de foto clínica de queimadura de face/vibrissas (de artigo, com licença).",
+          "t0_original": 311.4,
+          "t1_original": 378.0,
+          "dur": 66.52,
+          "citacao_t0": 342.18,
+          "citacao_t1": 353.33,
+          "citacao_palavras": [
+            524,
+            538
+          ],
+          "item_id": "20261023_img-3440",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3440#s09",
+          "t0": 408.18,
+          "t1": 433.33,
+          "tema": "tórax instável no trauma contuso: fratura de arcos costais com instabilidade causando depressão respiratória",
+          "tags": [
+            "trauma-toracico",
+            "torax-instavel",
+            "fratura-de-costela",
+            "via-aerea",
+            "indicacao-de-intubacao"
+          ],
+          "tese": "outra situação de intubação no trauma contuso é o tórax instável que evolui com depressão respiratória",
+          "citacao": "teve o fratura de arco -costais e você começa com uma instabilidade",
+          "gancho_potencial": 1,
+          "publicos": [
+            "candidato-residencia"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "Introdução hesitante do tema ('históricos', 'o arco -costais'). Só contexto para s10/s11.",
+          "t0_original": 408.2,
+          "t1_original": 433.0,
+          "dur": 25.15,
+          "citacao_t0": 422.71,
+          "citacao_t1": 426.63,
+          "citacao_palavras": [
+            596,
+            607
+          ],
+          "item_id": "20261023_img-3440",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3440#s10",
+          "t0": 435.67,
+          "t1": 494.74,
+          "tema": "no tórax instável a primeira medida é analgesia, não intubação: a dispneia inicial é pela dor",
+          "tags": [
+            "trauma-toracico",
+            "torax-instavel",
+            "analgesia",
+            "fratura-de-costela",
+            "dor",
+            "atls"
+          ],
+          "tese": "a insuficiência respiratória inicial do tórax instável vem da dor da fratura, por isso a primeira conduta é analgesia",
+          "citacao": "No tórax instável, a primeira medida que vai ser feita é a analgesia,",
+          "gancho_potencial": 4,
+          "publicos": [
+            "plantonista",
+            "candidato-residencia",
+            "residente"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Quebra de crença útil (o reflexo é intubar; a conduta inicial é analgesia). Tem 'deixa o seu organismo raciocínio' (frase sem sentido, ~447–455 s) e pausa de 4,6 s — cortar. A explicação da mecânica respiratória é embolada ('mecanismo mecânico', 'puxa o torques').",
+          "t0_original": 435.7,
+          "t1_original": 494.5,
+          "dur": 59.07,
+          "citacao_t0": 457.82,
+          "citacao_t1": 465.74,
+          "citacao_palavras": [
+            641,
+            653
+          ],
+          "item_id": "20261023_img-3440",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3440#s11",
+          "t0": 495.1,
+          "t1": 559.82,
+          "tema": "dessaturação abaixo de 90–92% no tórax instável indica intubação porque vem da contusão pulmonar",
+          "tags": [
+            "trauma-toracico",
+            "torax-instavel",
+            "contusao-pulmonar",
+            "dessaturacao",
+            "indicacao-de-intubacao",
+            "atls"
+          ],
+          "tese": "a hipoxemia no tórax instável vem do edema da contusão pulmonar subjacente, e por isso exige intubação",
+          "citacao": "Então, essa desaturação, ela vai vir pelo edema da contusão pulmonar.",
+          "gancho_potencial": 4,
+          "publicos": [
+            "plantonista",
+            "candidato-residencia",
+            "residente"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Bom par com s10 (dor → analgesia; hipoxemia → contusão → intubação). Ressalva técnica: ele define tórax instável como 'mais de dois arcos costais seguidos em mais de dois lugares' — a definição é DOIS ou mais arcos adjacentes fraturados em dois ou mais pontos; corrigir na legenda. Termina interrompido ('você já tem é a formação') seguido de 27 s de silêncio.",
+          "t0_original": 495.1,
+          "t1_original": 560.0,
+          "dur": 64.72,
+          "citacao_t0": 529.54,
+          "citacao_t1": 535.36,
+          "citacao_palavras": [
+            770,
+            780
+          ],
+          "item_id": "20261023_img-3440",
+          "tipo": "video",
+          "licenca": "propria"
+        }
+      ]
+    },
     {
       "id": "20261023_img-3807",
       "nome": "IMG_3807",
@@ -239,5 +792,8 @@
       ]
     }
   ],
-  "pendentes": []
+  "pendentes": [
+    "20261023_img-3528",
+    "20261023_img-3530"
+  ]
 }
