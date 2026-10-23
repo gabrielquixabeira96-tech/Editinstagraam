@@ -1,6 +1,6 @@
 {
   "item_id": "20261023_img-3647",
-  "validado_em": "2026-10-23T15:46:05+00:00",
+  "validado_em": "2026-10-23T17:49:25+00:00",
   "segments": [
     {
       "id": "20261023_img-3647#s01",
@@ -74,8 +74,43 @@
       "citacao_t0": 138.92,
       "citacao_t1": 143.52,
       "citacao_palavras": [
-        221,
-        235
+        315,
+        329
+      ],
+      "item_id": "20261023_img-3647"
+    },
+    {
+      "id": "20261023_img-3647#s16",
+      "t0": 219.36,
+      "t1": 238.98,
+      "tema": "por que se fala tanto de H. pylori no linfoma MALT: o estômago não tem linfócito B nativo",
+      "tags": [
+        "linfoma-malt",
+        "h-pylori",
+        "estomago",
+        "linfocito-b",
+        "oncologia"
+      ],
+      "tese": "sem infecção o estômago não tem tecido linfoide; é a H. pylori que leva os linfócitos B para a mucosa",
+      "citacao": "o estômago não tem células B que ficam realmente nativas da mucosa",
+      "gancho_potencial": 4,
+      "publicos": [
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "recuperado na retranscrição de 2026-10-23 (antes perdido pelo filtro no_speech). Abre bem o s03. Corrigidos 'Hp -Lore'→'H. pylori' e 'Enclamauti'→'linfoma-MALT'. Correto: a mucosa gástrica normal não tem MALT organizado; ele é adquirido na gastrite crônica por H. pylori.",
+      "dur": 19.62,
+      "citacao_t0": 229.84,
+      "citacao_t1": 238.98,
+      "citacao_palavras": [
+        455,
+        466
       ],
       "item_id": "20261023_img-3647"
     },
@@ -112,8 +147,8 @@
       "citacao_t0": 281.22,
       "citacao_t1": 288.1,
       "citacao_palavras": [
-        404,
-        417
+        526,
+        539
       ],
       "item_id": "20261023_img-3647"
     },
@@ -148,8 +183,47 @@
       "citacao_t0": 382.12,
       "citacao_t1": 384.82,
       "citacao_palavras": [
-        521,
-        527
+        687,
+        693
+      ],
+      "item_id": "20261023_img-3647"
+    },
+    {
+      "id": "20261023_img-3647#s17",
+      "t0": 522.32,
+      "t1": 556.76,
+      "tema": "o único câncer que se trata com antibiótico: linfoma MALT gástrico e erradicação da H. pylori",
+      "tags": [
+        "linfoma-malt",
+        "h-pylori",
+        "erradicacao",
+        "antibiotico",
+        "oncologia",
+        "curiosidade"
+      ],
+      "tese": "como a célula do MALT inicial depende do estímulo da infecção, tirar a H. pylori trata o câncer",
+      "citacao": "esse é o único câncer que dá para você tratar com antibiótico",
+      "gancho_potencial": 5,
+      "publicos": [
+        "residente",
+        "candidato-residencia",
+        "concursos-vestibular",
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "recuperado na retranscrição de 2026-10-23 (antes perdido pelo filtro no_speech). Gancho de quebra de crença muito forte. Fim confuso ('tem que ter tratar câncer por tipo com antibiótico'): corte antes de 545,4 s para Reel. IMPRECISÃO: não é o ÚNICO. É o exemplo clássico, mas linfomas MALT de anexos oculares respondem à doxiciclina (Chlamydia psittaci), a doença imunoproliferativa do intestino delgado (IPSID) a antibióticos (Campylobacter jejuni), há relatos no MALT cutâneo (Borrelia) e o linfoma da zona marginal esplênico associado ao HCV responde a antiviral. Além disso, a erradicação cura ~60–80% do MALT gástrico localizado H. pylori+, e a t(11;18) prediz resistência (ver s05). Dizer 'o exemplo mais clássico de câncer tratado com antibiótico'.",
+      "dur": 34.44,
+      "citacao_t0": 541.28,
+      "citacao_t1": 545.4,
+      "citacao_palavras": [
+        791,
+        802
       ],
       "item_id": "20261023_img-3647"
     },
@@ -186,8 +260,8 @@
       "citacao_t0": 602.07,
       "citacao_t1": 607.6,
       "citacao_palavras": [
-        695,
-        706
+        919,
+        930
       ],
       "item_id": "20261023_img-3647"
     },
@@ -223,8 +297,8 @@
       "citacao_t0": 639.28,
       "citacao_t1": 644.86,
       "citacao_palavras": [
-        773,
-        780
+        997,
+        1004
       ],
       "item_id": "20261023_img-3647"
     },
@@ -260,8 +334,8 @@
       "citacao_t0": 827.39,
       "citacao_t1": 830.37,
       "citacao_palavras": [
-        949,
-        954
+        1173,
+        1178
       ],
       "item_id": "20261023_img-3647"
     },
@@ -298,8 +372,8 @@
       "citacao_t0": 944.63,
       "citacao_t1": 949.25,
       "citacao_palavras": [
-        1114,
-        1126
+        1338,
+        1350
       ],
       "item_id": "20261023_img-3647"
     },
@@ -336,8 +410,43 @@
       "citacao_t0": 1126.02,
       "citacao_t1": 1129.26,
       "citacao_palavras": [
-        1370,
-        1382
+        1594,
+        1606
+      ],
+      "item_id": "20261023_img-3647"
+    },
+    {
+      "id": "20261023_img-3647#s18",
+      "t0": 1162.07,
+      "t1": 1173.22,
+      "tema": "paradoxo da compressão lateral: do ponto de vista de sangramento é a melhor fratura de pelve",
+      "tags": [
+        "trauma-pelvico",
+        "compressao-lateral",
+        "young-burgess",
+        "hemorragia",
+        "atls"
+      ],
+      "tese": "a compressão lateral fecha a pelve e por isso sangra menos que o livro aberto",
+      "citacao": "do ponto de vista de sangramento, do ponto de vista pélvico, é o melhor",
+      "gancho_potencial": 4,
+      "publicos": [
+        "plantonista",
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "corte-rapido"
+      ],
+      "notas": "recuperado na retranscrição de 2026-10-23 (antes perdido pelo filtro no_speech). Setup do paradoxo do s10 (que começa logo depois, em 'porque o sangramento é menor'). Corrigido 'coalizão'→'colisão'. IMPRECISÃO leve: a CL tende a reduzir o volume pélvico e sangrar menos que APC/cisalhamento vertical, mas CL grave (LC-II/III, lesão posterior) também pode dar hemorragia maciça; não tratar como fratura 'que não sangra'.",
+      "dur": 11.15,
+      "citacao_t0": 1168.9,
+      "citacao_t1": 1173.22,
+      "citacao_palavras": [
+        1646,
+        1659
       ],
       "item_id": "20261023_img-3647"
     },
@@ -376,8 +485,8 @@
       "citacao_t0": 1214.82,
       "citacao_t1": 1222.68,
       "citacao_palavras": [
-        1452,
-        1468
+        1729,
+        1745
       ],
       "item_id": "20261023_img-3647"
     },
@@ -416,8 +525,42 @@
       "citacao_t0": 1306.07,
       "citacao_t1": 1309.94,
       "citacao_palavras": [
-        1631,
-        1639
+        1908,
+        1916
+      ],
+      "item_id": "20261023_img-3647"
+    },
+    {
+      "id": "20261023_img-3647#s19",
+      "t0": 1314.18,
+      "t1": 1364.1,
+      "tema": "cisalhamento vertical: queda de altura em pé, uma hemipelve sobe e a outra fica",
+      "tags": [
+        "trauma-pelvico",
+        "cisalhamento-vertical",
+        "queda-de-altura",
+        "young-burgess",
+        "mecanismo-de-trauma"
+      ],
+      "tese": "o mecanismo (livro aberto, compressão lateral, cisalhamento vertical) orienta a suspeita e o tratamento inicial",
+      "citacao": "porque é a queda de altura quando o paciente cai em pé",
+      "gancho_potencial": 2,
+      "publicos": [
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 2,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "recuperado na retranscrição de 2026-10-23 (antes perdido pelo filtro no_speech). Fala truncada e com trechos ininteligíveis ('Jacare prova', 'fiz um pouco de dieta aqui'); serve mais como referência do que como fala de Reel. Correto: cisalhamento vertical = deslocamento vertical da hemipelve, típico de queda de altura em pé; é a mais instável e sangra muito.",
+      "dur": 49.92,
+      "citacao_t0": 1326.92,
+      "citacao_t1": 1328.94,
+      "citacao_palavras": [
+        1938,
+        1949
       ],
       "item_id": "20261023_img-3647"
     },
@@ -455,8 +598,82 @@
       "citacao_t0": 1374.18,
       "citacao_t1": 1383.8,
       "citacao_palavras": [
-        1682,
-        1695
+        2020,
+        2033
+      ],
+      "item_id": "20261023_img-3647"
+    },
+    {
+      "id": "20261023_img-3647#s20",
+      "t0": 1388.28,
+      "t1": 1409.74,
+      "tema": "lençol pélvico vai no nível dos trocânteres, não da crista ilíaca",
+      "tags": [
+        "trauma-pelvico",
+        "lencol-pelvico",
+        "binder",
+        "trocanter",
+        "pre-hospitalar",
+        "atls"
+      ],
+      "tese": "o erro intuitivo é amarrar o lençol na crista ilíaca; o certo é centrar nos trocânteres maiores",
+      "citacao": "intuitivamente a gente pensa que o lençol tem que ser amarrado ao nível da crista-ilíaca",
+      "gancho_potencial": 5,
+      "publicos": [
+        "plantonista",
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "recuperado na retranscrição de 2026-10-23 (antes perdido pelo filtro no_speech). Antítese clássica ('a gente pensa X, mas não'). Corrigidos 'trocantor'→'trocânter' e 'cristelica'→'crista-ilíaca'. Correto pelo ATLS 10ª ed.: binder/lençol centrado nos trocânteres maiores. 'isso aí não existe praticamente' refere-se à falta de binder comercial no Brasil.",
+      "dur": 21.46,
+      "citacao_t0": 1398.01,
+      "citacao_t1": 1403.18,
+      "citacao_palavras": [
+        2069,
+        2083
+      ],
+      "item_id": "20261023_img-3647"
+    },
+    {
+      "id": "20261023_img-3647#s21",
+      "t0": 1446.21,
+      "t1": 1494.8,
+      "tema": "por que a cinta pélvica para o sangramento: no trauma de pelve o sangue é venoso em 80–85% e para com compressão",
+      "tags": [
+        "trauma-pelvico",
+        "hemorragia-venosa",
+        "binder",
+        "compressao",
+        "choque-hemorragico"
+      ],
+      "tese": "o livro aberto aumenta o volume da pelve; como o sangramento é quase sempre venoso, fechar e comprimir resolve sem sutura nem ligadura",
+      "citacao": "o que faz parar quase sempre é compressão, não necessita de sutura, ligadura",
+      "gancho_potencial": 4,
+      "publicos": [
+        "plantonista",
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "recuperado na retranscrição de 2026-10-23 (antes perdido pelo filtro no_speech). Ponte entre s12 e s13. Corrigidos 'restavascular'→'extravascular', 'estrutura, legalização'→'sutura, ligadura'. Número correto em ordem de grandeza: ~85–90% do sangramento pélvico é venoso (plexo pré-sacral/perivesical) e de osso esponjoso, ~10–15% arterial. IMPRECISÃO leve: omite a fonte óssea; o efeito de 'reduzir o volume' é discutido (com o retroperitônio roto o tamponamento é limitado) — o benefício do binder é sobretudo aproximar os fragmentos e estabilizar o coágulo.",
+      "dur": 48.59,
+      "citacao_t0": 1485.62,
+      "citacao_t1": 1494.8,
+      "citacao_palavras": [
+        2251,
+        2263
       ],
       "item_id": "20261023_img-3647"
     },
@@ -495,8 +712,8 @@
       "citacao_t0": 1499.02,
       "citacao_t1": 1506.44,
       "citacao_palavras": [
-        1775,
-        1788
+        2273,
+        2286
       ],
       "item_id": "20261023_img-3647"
     },
@@ -533,8 +750,41 @@
       "citacao_t0": 1591.73,
       "citacao_t1": 1599.43,
       "citacao_palavras": [
-        1959,
-        1974
+        2457,
+        2472
+      ],
+      "item_id": "20261023_img-3647"
+    },
+    {
+      "id": "20261023_img-3647#s22",
+      "t0": 1616.21,
+      "t1": 1661.19,
+      "tema": "por que o sangramento arterial da pelve não para com compressão e vai para angioembolização",
+      "tags": [
+        "trauma-pelvico",
+        "sangramento-arterial",
+        "angioembolizacao",
+        "controle-vascular"
+      ],
+      "tese": "a artéria tem parede mais resistente e não colaba como a veia; o controle cirúrgico na pelve é difícil, por isso a angioembolização",
+      "citacao": "existe a necessidade de fazer o controle vascular, só que é muito difícil de conseguir",
+      "gancho_potencial": 2,
+      "publicos": [
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 2,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "recuperado na retranscrição de 2026-10-23 (antes perdido pelo filtro no_speech). Fala hesitante. Corrigidos 'existente'→'resistente', 'vez'→'veia', 'martel'→'artéria', 'construir'→'conseguir'. Logo depois vem o s15 (NÃO USAR, erro de técnica). Conceito correto: sangramento arterial pélvico persistente (blush na TC, instabilidade após binder/packing) → angioembolização.",
+      "dur": 44.98,
+      "citacao_t0": 1647.0,
+      "citacao_t1": 1651.73,
+      "citacao_palavras": [
+        2558,
+        2572
       ],
       "item_id": "20261023_img-3647"
     },
@@ -568,8 +818,8 @@
       "citacao_t0": 1674.3,
       "citacao_t1": 1681.38,
       "citacao_palavras": [
-        2057,
-        2072
+        2608,
+        2623
       ],
       "item_id": "20261023_img-3647"
     }

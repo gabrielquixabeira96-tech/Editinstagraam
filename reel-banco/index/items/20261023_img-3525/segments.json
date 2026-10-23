@@ -1,6 +1,6 @@
 {
   "item_id": "20261023_img-3525",
-  "validado_em": "2026-10-23T11:16:11+00:00",
+  "validado_em": "2026-10-23T17:42:12+00:00",
   "segments": [
     {
       "id": "20261023_img-3525#s01",
@@ -150,6 +150,40 @@
       "item_id": "20261023_img-3525"
     },
     {
+      "id": "20261023_img-3525#s12",
+      "t0": 244.36,
+      "t1": 263.61,
+      "tema": "sua voz gravada não é mais feia: para os outros ela pode até soar mais bonita",
+      "tags": [
+        "voz",
+        "percepcao",
+        "neurociencia",
+        "autoimagem",
+        "comunicacao"
+      ],
+      "tese": "o estranhamento é só seu; quem convive com você já se acostumou com a voz real e pode achá-la até mais bonita",
+      "citacao": "Talvez ela seja tão bonita quanto às vezes até mais bonita para as outras pessoas",
+      "gancho_potencial": 3,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "recuperado na retranscrição de 2026-10-23 (antes perdido pelo filtro no_speech); fecha o s04 e abre o s05. Opinião, sem afirmação técnica a corrigir.",
+      "dur": 19.25,
+      "citacao_t0": 252.91,
+      "citacao_t1": 258.3,
+      "citacao_palavras": [
+        418,
+        432
+      ],
+      "item_id": "20261023_img-3525"
+    },
+    {
       "id": "20261023_img-3525#s05",
       "t0": 269.45,
       "t1": 309.65,
@@ -181,8 +215,8 @@
       "citacao_t0": 270.97,
       "citacao_t1": 278.87,
       "citacao_palavras": [
-        404,
-        420
+        461,
+        477
       ],
       "item_id": "20261023_img-3525"
     },
@@ -216,8 +250,8 @@
       "citacao_t0": 326.27,
       "citacao_t1": 331.91,
       "citacao_palavras": [
-        495,
-        508
+        552,
+        565
       ],
       "item_id": "20261023_img-3525"
     },
@@ -255,8 +289,8 @@
       "citacao_t0": 411.75,
       "citacao_t1": 422.46,
       "citacao_palavras": [
-        624,
-        640
+        681,
+        697
       ],
       "item_id": "20261023_img-3525"
     },
@@ -292,8 +326,8 @@
       "citacao_t0": 491.81,
       "citacao_t1": 498.04,
       "citacao_palavras": [
-        730,
-        745
+        787,
+        802
       ],
       "item_id": "20261023_img-3525"
     },
@@ -328,8 +362,8 @@
       "citacao_t0": 610.72,
       "citacao_t1": 615.75,
       "citacao_palavras": [
-        912,
-        924
+        969,
+        981
       ],
       "item_id": "20261023_img-3525"
     },
@@ -362,8 +396,8 @@
       "citacao_t0": 684.32,
       "citacao_t1": 686.56,
       "citacao_palavras": [
-        1006,
-        1013
+        1063,
+        1070
       ],
       "item_id": "20261023_img-3525"
     },
@@ -397,8 +431,8 @@
       "citacao_t0": 704.18,
       "citacao_t1": 711.34,
       "citacao_palavras": [
-        1040,
-        1056
+        1097,
+        1113
       ],
       "item_id": "20261023_img-3525"
     }

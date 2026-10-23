@@ -1,6 +1,6 @@
 {
   "item_id": "20261023_img-3643",
-  "validado_em": "2026-10-23T15:24:16+00:00",
+  "validado_em": "2026-10-23T17:49:36+00:00",
   "segments": [
     {
       "id": "20261023_img-3643#s01",
@@ -225,8 +225,8 @@
       "citacao_t0": 531.62,
       "citacao_t1": 537.68,
       "citacao_palavras": [
-        812,
-        825
+        870,
+        883
       ],
       "item_id": "20261023_img-3643"
     },
@@ -264,8 +264,8 @@
       "citacao_t0": 602.92,
       "citacao_t1": 612.06,
       "citacao_palavras": [
-        925,
-        937
+        983,
+        995
       ],
       "item_id": "20261023_img-3643"
     },
@@ -302,8 +302,8 @@
       "citacao_t0": 656.19,
       "citacao_t1": 662.55,
       "citacao_palavras": [
-        1025,
-        1035
+        1083,
+        1093
       ],
       "item_id": "20261023_img-3643"
     },
@@ -339,8 +339,8 @@
       "citacao_t0": 684.07,
       "citacao_t1": 689.51,
       "citacao_palavras": [
-        1074,
-        1089
+        1132,
+        1147
       ],
       "item_id": "20261023_img-3643"
     },
@@ -379,8 +379,8 @@
       "citacao_t0": 747.61,
       "citacao_t1": 751.05,
       "citacao_palavras": [
-        1190,
-        1200
+        1248,
+        1258
       ],
       "item_id": "20261023_img-3643"
     },
@@ -416,8 +416,8 @@
       "citacao_t0": 820.35,
       "citacao_t1": 823.31,
       "citacao_palavras": [
-        1296,
-        1309
+        1354,
+        1367
       ],
       "item_id": "20261023_img-3643"
     },
@@ -456,8 +456,8 @@
       "citacao_t0": 849.13,
       "citacao_t1": 850.83,
       "citacao_palavras": [
-        1343,
-        1349
+        1401,
+        1407
       ],
       "item_id": "20261023_img-3643"
     },
@@ -494,8 +494,8 @@
       "citacao_t0": 899.31,
       "citacao_t1": 903.82,
       "citacao_palavras": [
-        1426,
-        1434
+        1484,
+        1492
       ],
       "item_id": "20261023_img-3643"
     },
@@ -533,8 +533,8 @@
       "citacao_t0": 940.14,
       "citacao_t1": 946.66,
       "citacao_palavras": [
-        1511,
-        1522
+        1569,
+        1580
       ],
       "item_id": "20261023_img-3643"
     }
