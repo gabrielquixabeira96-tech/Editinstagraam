@@ -1,0 +1,360 @@
+{
+  "item_id": "20261023_img-3760",
+  "validado_em": "2026-10-23T11:26:34+00:00",
+  "segments": [
+    {
+      "id": "20261023_img-3760#s01",
+      "t0": 4.51,
+      "t1": 54.52,
+      "tema": "para que serve a classificação de Young-Burgess no trauma pélvico: mecanismo prevê vaso lesado e tratamento",
+      "tags": [
+        "trauma-pelvico",
+        "young-burgess",
+        "fratura-de-pelve",
+        "classificacao",
+        "atls",
+        "mecanismo-de-trauma"
+      ],
+      "tese": "entender o mecanismo da fratura pélvica pela Young-Burgess orienta qual vaso provavelmente sangra e o tratamento dirigido",
+      "citacao": "dependendo do mecanismo de trauma e da gravidade, intensidade da injúria,",
+      "gancho_potencial": 2,
+      "publicos": [
+        "candidato-residencia",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Vídeo RETRATO (9:16 nativo) gravado DIRIGINDO à noite: rosto grande (~36% da largura), luz mista e variável (semáforo vermelho, postes), olha para a rua com frequência, braço passa na frente em alguns trechos, câmera com tremor. Áudio limpo com ronco leve de motor. Abertura de aula, sem frase de impacto.",
+      "t0_original": 4.5,
+      "t1_original": 54.5,
+      "dur": 50.01,
+      "citacao_t0": 29.04,
+      "citacao_t1": 37.62,
+      "citacao_palavras": [
+        42,
+        52
+      ],
+      "item_id": "20261023_img-3760"
+    },
+    {
+      "id": "20261023_img-3760#s02",
+      "t0": 56.55,
+      "t1": 172.6,
+      "tema": "APC I, II e III: a fratura em livro aberto e o afastamento da sínfise púbica",
+      "tags": [
+        "trauma-pelvico",
+        "young-burgess",
+        "apc",
+        "livro-aberto",
+        "sinfise-pubica",
+        "ligamento-sacroiliaco"
+      ],
+      "tese": "a compressão anteroposterior se gradua pelo afastamento da sínfise e pela lesão dos ligamentos sacroilíacos",
+      "citacao": "a APC, que é a Compressão Antero o Posterior, que é a famosa fratura em livro aberto.",
+      "gancho_potencial": 2,
+      "publicos": [
+        "candidato-residencia",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Ele mesmo declara incerteza ('se eu não me engano', 'vaga memória'). Ressalvas técnicas: APC II = sínfise > 2,5 cm com ruptura dos ligamentos sacroilíacos ANTERIORES; APC III = ruptura completa (anteriores e posteriores); o critério '> 4 cm' que ele cita não é o da classificação. '216mm' é erro de transcrição de '2,5 cm'. Duas pausas longas (113–127 s e 127–142 s). Gesto 'anel fechado' com as mãos aos ~90 s. Não usar como fala principal sem regravação/correção.",
+      "t0_original": 56.5,
+      "t1_original": 176.0,
+      "dur": 116.05,
+      "citacao_t0": 68.0,
+      "citacao_t1": 76.1,
+      "citacao_palavras": [
+        99,
+        115
+      ],
+      "item_id": "20261023_img-3760"
+    },
+    {
+      "id": "20261023_img-3760#s03",
+      "t0": 176.44,
+      "t1": 260.51,
+      "tema": "a pelve fechada é um compartimento que tampona: sangramento venoso pélvico tende a ser autolimitado",
+      "tags": [
+        "trauma-pelvico",
+        "hemorragia-pelvica",
+        "tamponamento",
+        "sangramento-venoso",
+        "fisiopatologia",
+        "choque-hemorragico"
+      ],
+      "tese": "com o anel pélvico íntegro, o volume é limitado e o próprio hematoma tampona o sangramento, sobretudo venoso",
+      "citacao": "E ele se resolve, porque ele não tem espaço ali para crescer.",
+      "gancho_potencial": 3,
+      "publicos": [
+        "candidato-residencia",
+        "plantonista",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Boa base fisiopatológica. Ressalva: o '3 litros' e o 'mesmo com sangramento arterial tende a se resolver sozinho' são simplificações — sangramento arterial pélvico frequentemente exige angioembolização; deixar claro no roteiro que o autotamponamento vale principalmente para o venoso.",
+      "t0_original": 176.4,
+      "t1_original": 262.0,
+      "dur": 84.07,
+      "citacao_t0": 257.23,
+      "citacao_t1": 260.51,
+      "citacao_palavras": [
+        441,
+        452
+      ],
+      "item_id": "20261023_img-3760"
+    },
+    {
+      "id": "20261023_img-3760#s04",
+      "t0": 263.35,
+      "t1": 298.55,
+      "tema": "por que o livro aberto mata: abrir a pelve aumenta o volume que acomoda sangue e acaba o tamponamento",
+      "tags": [
+        "trauma-pelvico",
+        "livro-aberto",
+        "volume-pelvico",
+        "choque-hemorragico",
+        "tamponamento",
+        "apc"
+      ],
+      "tese": "o afastamento da sínfise aumenta o volume pélvico (de ~3 para 5–6 L) e a pelve perde a capacidade de tamponar",
+      "citacao": "Então, o que era 3 litros vai para 5, 6 litros",
+      "gancho_potencial": 4,
+      "publicos": [
+        "candidato-residencia",
+        "plantonista",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "Número surpreendente e mecanismo claro — base ideal para animação do anel pélvico abrindo. Os volumes são aproximados (divulgação); citar como 'pode dobrar'. Curto (~40 s).",
+      "t0_original": 263.4,
+      "t1_original": 303.0,
+      "dur": 35.2,
+      "citacao_t0": 283.53,
+      "citacao_t1": 287.01,
+      "citacao_palavras": [
+        487,
+        497
+      ],
+      "item_id": "20261023_img-3760"
+    },
+    {
+      "id": "20261023_img-3760#s05",
+      "t0": 303.54,
+      "t1": 399.62,
+      "tema": "primeira medida específica no trauma pélvico: cinta pélvica (binder) ou lençol ao nível dos trocânteres maiores",
+      "tags": [
+        "trauma-pelvico",
+        "cinta-pelvica",
+        "binder",
+        "lencol-pelvico",
+        "trocanter-maior",
+        "atendimento-pre-hospitalar",
+        "phtls"
+      ],
+      "tese": "como o problema é o volume, a conduta inicial é fechar a pelve com binder ou lençol na altura dos trocânteres maiores",
+      "citacao": "a primeira medida específica para o trauma pélvico é a cinta,",
+      "gancho_potencial": 3,
+      "publicos": [
+        "plantonista",
+        "candidato-residencia",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Conduta correta. Comentário opinativo sobre 'gambiarra' com lençol no Brasil (370–380 s) — pode soar crítico; avaliar. Frase do ATLS/PHTLS embolada (~330–341 s).",
+      "t0_original": 303.5,
+      "t1_original": 400.0,
+      "dur": 96.08,
+      "citacao_t0": 344.0,
+      "citacao_t1": 347.68,
+      "citacao_palavras": [
+        597,
+        607
+      ],
+      "item_id": "20261023_img-3760"
+    },
+    {
+      "id": "20261023_img-3760#s06",
+      "t0": 405.84,
+      "t1": 499.35,
+      "tema": "o erro intuitivo: colocar o lençol pélvico na crista ilíaca não fecha a pelve",
+      "tags": [
+        "trauma-pelvico",
+        "cinta-pelvica",
+        "crista-iliaca",
+        "erro-comum",
+        "lencol-pelvico",
+        "cisalhamento-vertical"
+      ],
+      "tese": "o instinto é amarrar na crista ilíaca, mas ali a compressão não fecha o anel e pode piorar a lesão",
+      "citacao": "Só que isso é completamente contraindicado e isso mata o paciente.",
+      "gancho_potencial": 5,
+      "publicos": [
+        "plantonista",
+        "candidato-residencia",
+        "residente",
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "Melhor antítese do banco para plantonista ('o intuitivo é X, só que...'). Ressalva técnica: 'isso mata o paciente' e 'pode causar fratura por cisalhamento vertical' são exageros — o que a literatura mostra é que o binder na crista ilíaca é ineficaz para reduzir a sínfise (e pode alargar a diástase); formular como 'não fecha a pelve e o paciente continua sangrando'. Palavrão ('na merda', 2x) e ironia ('E parabéns') em 477–497 s — cortar ou manter conforme o tom.",
+      "t0_original": 405.8,
+      "t1_original": 502.0,
+      "dur": 93.51,
+      "citacao_t0": 433.96,
+      "citacao_t1": 438.56,
+      "citacao_palavras": [
+        778,
+        788
+      ],
+      "item_id": "20261023_img-3760"
+    },
+    {
+      "id": "20261023_img-3760#s07",
+      "t0": 502.33,
+      "t1": 590.71,
+      "tema": "onde fica o trocânter maior na prática: mais baixo do que parece, mais ou menos onde acaba o zíper da calça",
+      "tags": [
+        "trauma-pelvico",
+        "cinta-pelvica",
+        "trocanter-maior",
+        "dica-pratica",
+        "lencol-pelvico",
+        "anatomia-de-superficie"
+      ],
+      "tese": "o nível correto do binder parece baixo demais; a referência prática é o fim do zíper da calça",
+      "citacao": "mais ou menos ali onde acaba o zíper da calça,",
+      "gancho_potencial": 4,
+      "publicos": [
+        "plantonista",
+        "candidato-residencia",
+        "residente",
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Dica prática memorável; pede B-roll real (foto/vídeo de binder bem posicionado de artigo ou manual, com licença). Ele ressalva que a referência do zíper é constatação própria olhando as imagens dos livros. Há ~36 s sem fala (545–581 s) no meio — cortar.",
+      "t0_original": 502.3,
+      "t1_original": 592.0,
+      "dur": 88.38,
+      "citacao_t0": 538.38,
+      "citacao_t1": 541.12,
+      "citacao_palavras": [
+        985,
+        994
+      ],
+      "item_id": "20261023_img-3760"
+    },
+    {
+      "id": "20261023_img-3760#s08",
+      "t0": 595.44,
+      "t1": 664.32,
+      "tema": "o paradoxo da compressão lateral (LC): sangra menos e é a que mais mata",
+      "tags": [
+        "trauma-pelvico",
+        "young-burgess",
+        "compressao-lateral",
+        "mortalidade",
+        "pegadinha-de-prova",
+        "lc"
+      ],
+      "tese": "a fratura por compressão lateral tem a menor taxa de hemorragia pélvica, mas é a mais associada à mortalidade",
+      "citacao": "Paradoxalmente, isso é muito cobrado em prova, ele é o mais associado à mortalidade.",
+      "gancho_potencial": 5,
+      "publicos": [
+        "candidato-residencia",
+        "residente",
+        "plantonista"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "Paradoxo pronto para gancho de prova. Luz vermelha de semáforo em parte do trecho. Frase 'mecânico de trauma' e repetições — cortar no edit.",
+      "t0_original": 595.4,
+      "t1_original": 666.0,
+      "dur": 68.88,
+      "citacao_t0": 641.06,
+      "citacao_t1": 648.0,
+      "citacao_palavras": [
+        1130,
+        1143
+      ],
+      "item_id": "20261023_img-3760"
+    },
+    {
+      "id": "20261023_img-3760#s09",
+      "t0": 666.27,
+      "t1": 788.13,
+      "tema": "por que a LC mata mais: atropelamento de idoso sem proteção e morte por traumatismo craniano associado, não pela pelve",
+      "tags": [
+        "trauma-pelvico",
+        "compressao-lateral",
+        "atropelamento",
+        "idoso",
+        "tce",
+        "pegadinha-de-prova",
+        "mortalidade"
+      ],
+      "tese": "a mortalidade da compressão lateral vem das lesões associadas (sobretudo TCE) do pedestre atropelado, e não do sangramento pélvico",
+      "citacao": "geralmente, compressor lateral é mais tranquilo na pelve, mas mata mais,",
+      "gancho_potencial": 5,
+      "publicos": [
+        "candidato-residencia",
+        "residente",
+        "plantonista"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card",
+        "corte-rapido"
+      ],
+      "notas": "Fecha o paradoxo com explicação e confissão de erro em prova ('errei mas eu dou o braço torcer que foi uma questão boa', ~671 s) — ótimo para candidato. Trecho ininteligível em ~678–689 s ('se traumatismo o pessoal faz cruza paciência da faixa'). 'crânico e falico' = cranioencefálico. Dirigindo, olha muito para a rua; final com rosto parcialmente fora do quadro (~12:30–13:00).",
+      "t0_original": 666.3,
+      "t1_original": 788.0,
+      "dur": 121.86,
+      "citacao_t0": 778.87,
+      "citacao_t1": 784.31,
+      "citacao_palavras": [
+        1383,
+        1393
+      ],
+      "item_id": "20261023_img-3760"
+    }
+  ]
+}

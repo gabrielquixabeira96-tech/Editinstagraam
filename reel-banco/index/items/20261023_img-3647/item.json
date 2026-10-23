@@ -1,0 +1,25 @@
+{
+  "id": "20261023_img-3647",
+  "nome": "IMG_3647",
+  "tipo": "video",
+  "origem": {
+    "drive_id": "1oIK-EJ5KTj_374WWyNb0WOqpDcSMEBY6",
+    "nome_original": "IMG_3647.MOV",
+    "modifiedTime": "2026-10-23T10:02:34.932Z"
+  },
+  "arquivo": "source.mov",
+  "tamanho": 3018676702,
+  "sha256": "333b30844977196864bf70fe9dffe63b1bab0d1cf443c191ec27d5b12f991a1f",
+  "duracao": 1749.125,
+  "largura": 1066,
+  "altura": 1896,
+  "fps": 29.987,
+  "rotacao": 0,
+  "tem_audio": true,
+  "vcodec": "hevc",
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "baixado",
+  "criado_em": "2026-10-23T11:26:34+00:00",
+  "atualizado_em": "2026-10-23T11:26:34+00:00"
+}

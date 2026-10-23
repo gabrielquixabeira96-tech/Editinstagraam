@@ -1,6 +1,6 @@
 # Banco de material para Reels — catálogo
 
-Gerado em 2026-10-23T11:08:24+00:00 · 6 item(ns) · 35 segmento(s) · 2 pendente(s) de segmentação
+Gerado em 2026-10-23T11:26:34+00:00 · 8 item(ns) · 55 segmento(s) · 1 pendente(s) de segmentação
 
 Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: FP fala-principal, BR broll, CR corte-rapido, CC citacao-card · públicos: PL plantonista, RE residente, CA candidato-residencia, CV concursos-vestibular, GE geral
 
@@ -26,6 +26,22 @@ Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: 
 | 20261023_img-3440#s09 | 06:48.18–07:13.33 (25 s) | tórax instável no trauma contuso: fratura de arcos costais com instabilidade causando depressão respiratória | trauma-toracico, torax-instavel, fratura-de-costela, via-aerea, indicacao-de-intubacao | 1 | 3/4 | CA | FP |
 | 20261023_img-3440#s10 | 07:15.67–08:14.74 (59 s) | no tórax instável a primeira medida é analgesia, não intubação: a dispneia inicial é pela dor | trauma-toracico, torax-instavel, analgesia, fratura-de-costela, dor, atls | 4 | 3/4 | PL CA RE | FP CC |
 | 20261023_img-3440#s11 | 08:15.10–09:19.82 (65 s) | dessaturação abaixo de 90–92% no tórax instável indica intubação porque vem da contusão pulmonar | trauma-toracico, torax-instavel, contusao-pulmonar, dessaturacao, indicacao-de-intubacao, atls | 4 | 3/4 | PL CA RE | FP CC |
+
+## 20261023_img-3525 — IMG_3525 (video · 12:13.08 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261023_img-3525#s01 | 00:01.54–01:00.08 (59 s) | bastidor: gravando vídeos aleatórios para treinar um clone de voz e um avatar de IA | bastidores, inteligencia-artificial, clone-de-voz, avatar, claude, criacao-de-conteudo | 2 | 3/4 | GE | FP |
+| 20261023_img-3525#s02 | 01:15.51–02:16.41 (61 s) | por que você estranha a própria voz gravada: parte do som chega por vibração do osso, não pelo ouvido | voz, conducao-ossea, audicao, fisiologia, curiosidade, osso-temporal | 4 | 3/4 | GE CV | FP |
+| 20261023_img-3525#s03 | 02:22.56–03:00.31 (38 s) | só você ouve a sua voz do jeito que acha que ela é; o resto do mundo ouve a voz do vídeo | voz, conducao-ossea, percepcao, curiosidade, fisiologia | 5 | 3/4 | GE CV | FP CR CC |
+| 20261023_img-3525#s04 | 03:00.13–04:00.34 (60 s) | a agonia de ouvir a própria voz vem da dissonância entre o que o cérebro espera e o estímulo real | voz, percepcao, dissonancia, cerebro-preditivo, curiosidade | 4 | 3/4 | GE | FP CC |
+| 20261023_img-3525#s05 | 04:29.45–05:09.65 (40 s) | o que você vê e sente é uma projeção do cérebro; o estímulo externo só faz microcorreções | cerebro-preditivo, percepcao, neurociencia, codificacao-preditiva, curiosidade | 4 | 3/4 | GE CV | FP CC |
+| 20261023_img-3525#s06 | 05:11.51–06:37.76 (86 s) | exemplo do retrovisor e da voz: o cérebro projeta a imagem/som antes e o estímulo real só calibra | cerebro-preditivo, percepcao, exemplo, neurociencia, voz | 3 | 3/4 | GE | FP |
+| 20261023_img-3525#s07 | 06:40.85–07:28.94 (48 s) | quanto maior a surpresa (erro entre previsão e realidade), mais a amígdala ativa e mais forte fica a memória | memoria, amigdala, hipocampo, erro-de-predicao, surpresa, metodo-de-estudo | 4 | 3/4 | CV CA GE | FP CC |
+| 20261023_img-3525#s08 | 07:31.46–08:46.03 (75 s) | o cérebro economiza energia guardando o que se repete em blocos: por isso você não repara no caminho de casa | memoria, habito, economia-de-energia, chunking, atencao, cerebro-preditivo | 3 | 3/4 | GE CV | FP |
+| 20261023_img-3525#s09 | 08:59.50–11:17.12 (138 s) | a árvore caída no caminho: o cérebro processa rápido o que já conhece e devagar e intenso o que é diferente | memoria, chunking, atencao, ameaca, sobrevivencia, cerebro-preditivo | 3 | 3/4 | GE | FP |
+| 20261023_img-3525#s10 | 11:24.32–11:36.44 (12 s) | erro de gravação: irritação com o celular caindo no meio do vídeo | bastidores, erro-de-gravacao, humor, blooper | 1 | 2/4 | GE | CR |
+| 20261023_img-3525#s11 | 11:38.50–11:58.50 (20 s) | informação diferente ou perigosa é guardada com mais intensidade: mecanismo de sobrevivência | memoria, sobrevivencia, ameaca, amigdala, emocao-e-memoria | 3 | 2/4 | GE CV | FP CC |
 
 ## 20261023_img-3528 — IMG_3528 (video · 03:33.41 · licença propria)
 
@@ -54,6 +70,20 @@ Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: 
 | 20261023_img-3530#s12 | 14:26.75–16:23.02 (116 s) | melhor 3 máquinas produzindo o que importa do que 8 máquinas produzindo lixo: o que fazer com a energia do TDAH | tdah, produtividade, foco, analogia, disciplina, metodo-de-estudo | 4 | 3/4 | GE CV | FP CC |
 | 20261023_img-3530#s13 | 16:40.74–17:37.91 (57 s) | ressalva honesta: as analogias partem de premissas reais, mas precisam ser conferidas em pesquisa | bastidores, honestidade-intelectual, tdah, analogia, divulgacao-cientifica | 1 | 3/4 | GE | FP |
 
+## 20261023_img-3760 — IMG_3760 (video · 13:13.99 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261023_img-3760#s01 | 00:04.51–00:54.52 (50 s) | para que serve a classificação de Young-Burgess no trauma pélvico: mecanismo prevê vaso lesado e tratamento | trauma-pelvico, young-burgess, fratura-de-pelve, classificacao, atls, mecanismo-de-trauma | 2 | 3/4 | CA RE | FP |
+| 20261023_img-3760#s02 | 00:56.55–02:52.60 (116 s) | APC I, II e III: a fratura em livro aberto e o afastamento da sínfise púbica | trauma-pelvico, young-burgess, apc, livro-aberto, sinfise-pubica, ligamento-sacroiliaco | 2 | 3/4 | CA RE | FP |
+| 20261023_img-3760#s03 | 02:56.44–04:20.51 (84 s) | a pelve fechada é um compartimento que tampona: sangramento venoso pélvico tende a ser autolimitado | trauma-pelvico, hemorragia-pelvica, tamponamento, sangramento-venoso, fisiopatologia, choque-hemorragico | 3 | 3/4 | CA PL RE | FP |
+| 20261023_img-3760#s04 | 04:23.35–04:58.55 (35 s) | por que o livro aberto mata: abrir a pelve aumenta o volume que acomoda sangue e acaba o tamponamento | trauma-pelvico, livro-aberto, volume-pelvico, choque-hemorragico, tamponamento, apc | 4 | 3/4 | CA PL RE | FP CR CC |
+| 20261023_img-3760#s05 | 05:03.54–06:39.62 (96 s) | primeira medida específica no trauma pélvico: cinta pélvica (binder) ou lençol ao nível dos trocânteres maiores | trauma-pelvico, cinta-pelvica, binder, lencol-pelvico, trocanter-maior, atendimento-pre-hospitalar, phtls | 3 | 3/4 | PL CA RE | FP CC |
+| 20261023_img-3760#s06 | 06:45.84–08:19.35 (94 s) | o erro intuitivo: colocar o lençol pélvico na crista ilíaca não fecha a pelve | trauma-pelvico, cinta-pelvica, crista-iliaca, erro-comum, lencol-pelvico, cisalhamento-vertical | 5 | 3/4 | PL CA RE GE | FP CR CC |
+| 20261023_img-3760#s07 | 08:22.33–09:50.71 (88 s) | onde fica o trocânter maior na prática: mais baixo do que parece, mais ou menos onde acaba o zíper da calça | trauma-pelvico, cinta-pelvica, trocanter-maior, dica-pratica, lencol-pelvico, anatomia-de-superficie | 4 | 3/4 | PL CA RE GE | FP CC |
+| 20261023_img-3760#s08 | 09:55.44–11:04.32 (69 s) | o paradoxo da compressão lateral (LC): sangra menos e é a que mais mata | trauma-pelvico, young-burgess, compressao-lateral, mortalidade, pegadinha-de-prova, lc | 5 | 3/4 | CA RE PL | FP CR CC |
+| 20261023_img-3760#s09 | 11:06.27–13:08.13 (122 s) | por que a LC mata mais: atropelamento de idoso sem proteção e morte por traumatismo craniano associado, não pela pelve | trauma-pelvico, compressao-lateral, atropelamento, idoso, tce, pegadinha-de-prova, mortalidade | 5 | 3/4 | CA RE PL | FP CC CR |
+
 ## 20261023_img-3807 — IMG_3807 (video · 00:32.03 · licença propria)
 
 | segmento | onde | tema | tags | G | V/A | públicos | usos |
@@ -71,6 +101,5 @@ Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: 
 
 ## Pendentes (sem segments.json no índice)
 
-- 20261023_img-3525 — IMG_3525 (video, status baixado)
-- 20261023_img-3760 — IMG_3760 (video, status baixado)
+- 20261023_img-3643 — IMG_3643 (video, status baixado)
 

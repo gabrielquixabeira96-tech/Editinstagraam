@@ -1,0 +1,406 @@
+{
+  "item_id": "20261023_img-3525",
+  "validado_em": "2026-10-23T11:16:11+00:00",
+  "segments": [
+    {
+      "id": "20261023_img-3525#s01",
+      "t0": 1.54,
+      "t1": 60.08,
+      "tema": "bastidor: gravando vídeos aleatórios para treinar um clone de voz e um avatar de IA",
+      "tags": [
+        "bastidores",
+        "inteligencia-artificial",
+        "clone-de-voz",
+        "avatar",
+        "claude",
+        "criacao-de-conteudo"
+      ],
+      "tese": "treinar desde já um clone de voz/avatar para não depender de gravar todos os vídeos no futuro",
+      "citacao": "um avatar que, a partir dos dados que eu fornecer pra ele, vai produzir vídeos extremamente fidedignos",
+      "gancho_potencial": 2,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Vídeo HORIZONTAL 1920x1080 no carro estacionado (garagem), câmera baixa atrás do volante, rosto pequeno no centro; recorte 9:16 viável. Áudio limpo. Logo depois (~60–71 s) há palavrão ('porra') e ele come algo — fora do trecho. Cuidado: 'Claude' aqui foi corrigido da transcrição ('Cloud'); o clone de voz real é no Fastcloner.",
+      "t0_original": 1.5,
+      "t1_original": 60.0,
+      "dur": 58.54,
+      "citacao_t0": 18.9,
+      "citacao_t1": 26.73,
+      "citacao_palavras": [
+        33,
+        49
+      ],
+      "item_id": "20261023_img-3525"
+    },
+    {
+      "id": "20261023_img-3525#s02",
+      "t0": 75.51,
+      "t1": 136.41,
+      "tema": "por que você estranha a própria voz gravada: parte do som chega por vibração do osso, não pelo ouvido",
+      "tags": [
+        "voz",
+        "conducao-ossea",
+        "audicao",
+        "fisiologia",
+        "curiosidade",
+        "osso-temporal"
+      ],
+      "tese": "a voz que você ouve de dentro inclui a vibração das pregas vocais conduzida pelo osso temporal, que ninguém mais percebe",
+      "citacao": "todo mundo tem agonia de ver a voz, ela é muito diferente do que a gente está acostumado a ouvir,",
+      "gancho_potencial": 4,
+      "publicos": [
+        "geral",
+        "concursos-vestibular"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Fisiologia correta no essencial (condução óssea pelo crânio/osso temporal), mas ele hesita ('eu acho que osso temporal, se não me engano') e diz 'condutor auditivo' (= meato/conduto auditivo). Comentário autodepreciativo sobre voz anasalada e nariz grande no início (75–94 s) — bom para identificação, opcional. Pausa de 12 s em 113–125 s.",
+      "t0_original": 75.5,
+      "t1_original": 137.0,
+      "dur": 60.9,
+      "citacao_t0": 92.45,
+      "citacao_t1": 100.19,
+      "citacao_palavras": [
+        163,
+        182
+      ],
+      "item_id": "20261023_img-3525"
+    },
+    {
+      "id": "20261023_img-3525#s03",
+      "t0": 142.56,
+      "t1": 180.31,
+      "tema": "só você ouve a sua voz do jeito que acha que ela é; o resto do mundo ouve a voz do vídeo",
+      "tags": [
+        "voz",
+        "conducao-ossea",
+        "percepcao",
+        "curiosidade",
+        "fisiologia"
+      ],
+      "tese": "a versão gravada da sua voz é a que todo mundo conhece; a sua percepção interna é exclusiva",
+      "citacao": "Você é única pessoa que ouve a sua voz do jeito que você acha que ela é.",
+      "gancho_potencial": 5,
+      "publicos": [
+        "geral",
+        "concursos-vestibular"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "Melhor gancho do vídeo — quebra de crença universal e curta. 'Todo o restante da população mundial ou sua voz' = 'ouve sua voz' (erro de transcrição). Funciona como abertura de Reel de curiosidade médica para público geral.",
+      "t0_original": 142.6,
+      "t1_original": 180.3,
+      "dur": 37.75,
+      "citacao_t0": 166.05,
+      "citacao_t1": 170.65,
+      "citacao_palavras": [
+        266,
+        282
+      ],
+      "item_id": "20261023_img-3525"
+    },
+    {
+      "id": "20261023_img-3525#s04",
+      "t0": 180.13,
+      "t1": 240.34,
+      "tema": "a agonia de ouvir a própria voz vem da dissonância entre o que o cérebro espera e o estímulo real",
+      "tags": [
+        "voz",
+        "percepcao",
+        "dissonancia",
+        "cerebro-preditivo",
+        "curiosidade"
+      ],
+      "tese": "sua voz não é feia; o desconforto é o erro entre a expectativa fixada pelo cérebro e o som real",
+      "citacao": "essa agonia extrema não é porque sua voz seja realmente muito feia,",
+      "gancho_potencial": 4,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Fechamento reconfortante do s03 — os dois juntos (~95 s) dão um Reel de curiosidade. Pausas de 4–10 s entre frases; seguido de ~30 s sem fala (240–269 s).",
+      "t0_original": 180.3,
+      "t1_original": 240.0,
+      "dur": 60.21,
+      "citacao_t0": 186.29,
+      "citacao_t1": 194.85,
+      "citacao_palavras": [
+        316,
+        327
+      ],
+      "item_id": "20261023_img-3525"
+    },
+    {
+      "id": "20261023_img-3525#s05",
+      "t0": 269.45,
+      "t1": 309.65,
+      "tema": "o que você vê e sente é uma projeção do cérebro; o estímulo externo só faz microcorreções",
+      "tags": [
+        "cerebro-preditivo",
+        "percepcao",
+        "neurociencia",
+        "codificacao-preditiva",
+        "curiosidade"
+      ],
+      "tese": "a percepção é uma previsão construída pelo cérebro e corrigida pelos sentidos, não uma leitura passiva do mundo",
+      "citacao": "tudo que a gente vê ou sente, na verdade não é a resposta a um estímulo externo.",
+      "gancho_potencial": 4,
+      "publicos": [
+        "geral",
+        "concursos-vestibular"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Ideia alinhada à teoria de processamento/codificação preditiva (vale card com referência). Pausa de 18 s em 285–303 s e tropeço ('Detalhado, essa expressão, extremamente profundada').",
+      "t0_original": 269.4,
+      "t1_original": 311.0,
+      "dur": 40.2,
+      "citacao_t0": 270.97,
+      "citacao_t1": 278.87,
+      "citacao_palavras": [
+        404,
+        420
+      ],
+      "item_id": "20261023_img-3525"
+    },
+    {
+      "id": "20261023_img-3525#s06",
+      "t0": 311.51,
+      "t1": 397.76,
+      "tema": "exemplo do retrovisor e da voz: o cérebro projeta a imagem/som antes e o estímulo real só calibra",
+      "tags": [
+        "cerebro-preditivo",
+        "percepcao",
+        "exemplo",
+        "neurociencia",
+        "voz"
+      ],
+      "tese": "ao decidir olhar para o retrovisor, o cérebro já cria a imagem esperada; o estímulo real apenas ajusta",
+      "citacao": "ele já começa a formular a imagem que ele espera que eu vá ver",
+      "gancho_potencial": 3,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Exemplo concreto bom para animação/B-roll (olhar para o retrovisor). Esquece a palavra no meio ('calibrar essa palavra Eu estava esquecendo. Calibrar') — cortável. Pausa de 11 s em 342–354 s.",
+      "t0_original": 311.5,
+      "t1_original": 400.0,
+      "dur": 86.25,
+      "citacao_t0": 326.27,
+      "citacao_t1": 331.91,
+      "citacao_palavras": [
+        495,
+        508
+      ],
+      "item_id": "20261023_img-3525"
+    },
+    {
+      "id": "20261023_img-3525#s07",
+      "t0": 400.85,
+      "t1": 448.94,
+      "tema": "quanto maior a surpresa (erro entre previsão e realidade), mais a amígdala ativa e mais forte fica a memória",
+      "tags": [
+        "memoria",
+        "amigdala",
+        "hipocampo",
+        "erro-de-predicao",
+        "surpresa",
+        "metodo-de-estudo"
+      ],
+      "tese": "a diferença entre a projeção e o estímulo real intensifica a emoção e faz a informação ser guardada com destaque",
+      "citacao": "quanto maior a diferença entre a projeção e o estímulo real o mais intenso é o sentimento,",
+      "gancho_potencial": 4,
+      "publicos": [
+        "concursos-vestibular",
+        "candidato-residencia",
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Liga neurociência a estudo (errar/ser surpreendido fixa mais) — conecta com IMG_3528. Formulação simplificada ('amígdala faz uma projeção mais intensa no hipocampo'), aceitável como divulgação.",
+      "t0_original": 400.9,
+      "t1_original": 451.0,
+      "dur": 48.09,
+      "citacao_t0": 411.75,
+      "citacao_t1": 422.46,
+      "citacao_palavras": [
+        624,
+        640
+      ],
+      "item_id": "20261023_img-3525"
+    },
+    {
+      "id": "20261023_img-3525#s08",
+      "t0": 451.46,
+      "t1": 526.03,
+      "tema": "o cérebro economiza energia guardando o que se repete em blocos: por isso você não repara no caminho de casa",
+      "tags": [
+        "memoria",
+        "habito",
+        "economia-de-energia",
+        "chunking",
+        "atencao",
+        "cerebro-preditivo"
+      ],
+      "tese": "estímulos repetidos passam a ser armazenados e resgatados em bloco, sem atenção aos detalhes",
+      "citacao": "todo aquele caminho ele é armazenado em bloco, você não repara nos detalhes de cada construção,",
+      "gancho_potencial": 3,
+      "publicos": [
+        "geral",
+        "concursos-vestibular"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Exemplo bem identificável. Termina com ele se reorganizando ('deixa eu organizar um pouquinho melhor o raciocínio') — cortar.",
+      "t0_original": 451.5,
+      "t1_original": 529.0,
+      "dur": 74.57,
+      "citacao_t0": 491.81,
+      "citacao_t1": 498.04,
+      "citacao_palavras": [
+        730,
+        745
+      ],
+      "item_id": "20261023_img-3525"
+    },
+    {
+      "id": "20261023_img-3525#s09",
+      "t0": 539.5,
+      "t1": 677.12,
+      "tema": "a árvore caída no caminho: o cérebro processa rápido o que já conhece e devagar e intenso o que é diferente",
+      "tags": [
+        "memoria",
+        "chunking",
+        "atencao",
+        "ameaca",
+        "sobrevivencia",
+        "cerebro-preditivo"
+      ],
+      "tese": "tudo que foge da projeção é processado com lentidão e intensidade porque pode representar ameaça",
+      "citacao": "processa muito rapidamente tudo aquilo que é igual, o que ele já conhecia,",
+      "gancho_potencial": 3,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Longo (2 min) e com muitas pausas; usar só a parte da árvore (~588–650 s). A partir de ~10:15 (615 s) ele mexe na câmera/volante e o quadro fica instável; de ~10:28 em diante o celular cai e o quadro perde o rosto por alguns segundos — conferir antes de usar a imagem (dá para cobrir com B-roll).",
+      "t0_original": 539.5,
+      "t1_original": 680.0,
+      "dur": 137.62,
+      "citacao_t0": 610.72,
+      "citacao_t1": 615.75,
+      "citacao_palavras": [
+        912,
+        924
+      ],
+      "item_id": "20261023_img-3525"
+    },
+    {
+      "id": "20261023_img-3525#s10",
+      "t0": 684.32,
+      "t1": 696.44,
+      "tema": "erro de gravação: irritação com o celular caindo no meio do vídeo",
+      "tags": [
+        "bastidores",
+        "erro-de-gravacao",
+        "humor",
+        "blooper"
+      ],
+      "tese": "bastidor bem-humorado de gravação no carro",
+      "citacao": "Eu quero terminar agora essa merda desse vídeo.",
+      "gancho_potencial": 1,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 2,
+      "qualidade_audio": 4,
+      "usos": [
+        "corte-rapido"
+      ],
+      "notas": "Blooper com palavrão; já dirigindo, câmera instável. Só para vídeo de bastidores/erros de gravação.",
+      "t0_original": 684.3,
+      "t1_original": 696.5,
+      "dur": 12.12,
+      "citacao_t0": 684.32,
+      "citacao_t1": 686.56,
+      "citacao_palavras": [
+        1006,
+        1013
+      ],
+      "item_id": "20261023_img-3525"
+    },
+    {
+      "id": "20261023_img-3525#s11",
+      "t0": 698.5,
+      "t1": 718.5,
+      "tema": "informação diferente ou perigosa é guardada com mais intensidade: mecanismo de sobrevivência",
+      "tags": [
+        "memoria",
+        "sobrevivencia",
+        "ameaca",
+        "amigdala",
+        "emocao-e-memoria"
+      ],
+      "tese": "o cérebro grava com mais força o que é novo e potencialmente perigoso porque isso protege a sobrevivência",
+      "citacao": "a informação potencialmente perigosa, ela é armazenada com uma intensidade muito larga, isso é mecanismo de sobrevivência.",
+      "gancho_potencial": 3,
+      "publicos": [
+        "geral",
+        "concursos-vestibular"
+      ],
+      "qualidade_visual": 2,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Dirigindo, câmera baixa e torta, rosto parcialmente fora do quadro — usar com B-roll por cima. O vídeo termina em 'onde vem a parte prática?' sem a conclusão prática (provavelmente continua em outro vídeo).",
+      "dur": 20.0,
+      "citacao_t0": 704.18,
+      "citacao_t1": 711.34,
+      "citacao_palavras": [
+        1040,
+        1056
+      ],
+      "item_id": "20261023_img-3525"
+    }
+  ]
+}

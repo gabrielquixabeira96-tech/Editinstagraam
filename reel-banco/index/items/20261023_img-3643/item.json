@@ -1,0 +1,25 @@
+{
+  "id": "20261023_img-3643",
+  "nome": "IMG_3643",
+  "tipo": "video",
+  "origem": {
+    "drive_id": "1Ss8wMdJJm_iXjUWPupLe8lfyZFoKnru8",
+    "nome_original": "IMG_3643.MOV",
+    "modifiedTime": "2026-10-23T10:03:39.553Z"
+  },
+  "arquivo": "source.mov",
+  "tamanho": 2056497085,
+  "sha256": "8166bc3822ce4689d079c4dda8822254d0f3bb82aaab5ef92ce15c6bf3209eae",
+  "duracao": 956.725,
+  "largura": 1920,
+  "altura": 1080,
+  "fps": 24.173,
+  "rotacao": -180,
+  "tem_audio": true,
+  "vcodec": "hevc",
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "baixado",
+  "criado_em": "2026-10-23T11:16:21+00:00",
+  "atualizado_em": "2026-10-23T11:16:21+00:00"
+}
