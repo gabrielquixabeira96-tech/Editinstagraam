@@ -6,10 +6,14 @@ skills de edição possam ser acrescentadas no futuro.
 | Pasta | O que faz |
 |---|---|
 | [`reel-polish/`](reel-polish/) | Acabamento profissional de vídeo falado de celular: reenquadramento 9:16 seguindo o rosto, estabilização, correção de cor com proteção da pele, looks, retoque de pele, retoque de aparência (pele, ponta do nariz, entradas do cabelo) e polimento da voz — sem alterar a timeline. Gera um `polished.mp4` 1080×1920 que alimenta a skill `reel-editor`. |
+| [`reel-banco/`](reel-banco/) | Banco de material pesquisável para Reels: ingere vídeos longos, PDFs e artefatos HTML da pasta `01_entrada` do Drive (transcrição no formato da reel-editor, cenas, miniaturas, segmentos com tema/tese/citação/gancho/público) e busca por BM25; recorta trechos como clipes/B-roll para a reel-director. Só o índice leve (`reel-banco/index/`) vai para o git; a mídia fica no Drive. |
 
 Este repositório é a **fonte da verdade** da skill. O `SKILL.md` salvo na conta do Claude é idêntico a
 [`reel-polish/SKILL.md`](reel-polish/SKILL.md) e, no "Passo 0", clona/atualiza este repositório em
 `~/reel-polish-src` e usa `~/reel-polish-src/reel-polish/` como pasta da skill.
+
+A `reel-banco` usa o mesmo clone (`~/reel-polish-src/reel-banco/`); instruções em
+[`reel-banco/SKILL.md`](reel-banco/SKILL.md) e [`reel-banco/README.md`](reel-banco/README.md).
 
 ## Instalação
 

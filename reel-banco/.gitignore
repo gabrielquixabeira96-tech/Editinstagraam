@@ -1,0 +1,15 @@
+# mídia pesada e cache de trabalho NUNCA entram no git (ficam em work/ e no Drive)
+work/
+*.part
+__pycache__/
+
+# index/: lista POSITIVA — só dados leves são versionados
+index/**
+!index/**/
+!index/**/*.json
+!index/*.md
+!index/items/*/thumbs/*.jpg
+!index/items/*/contact_sheet*.jpg
+!index/items/.gitkeep
+# legado (nunca versionar pickle)
+index/**/*.pkl

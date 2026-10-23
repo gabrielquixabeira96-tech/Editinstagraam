@@ -1,0 +1,8 @@
+numpy>=1.26
+opencv-python-headless>=4.8   # YuNet (rosto) e medidas de nitidez/exposição
+Pillow>=10                     # miniaturas e contact sheets
+requests>=2.31                 # drive_fetch.py
+rank_bm25>=0.2.2               # busca BM25
+pymupdf>=1.24                  # PDFs (07_doc_ingest.py)
+faster-whisper>=1.0            # transcrição (03_transcribe.py); modelo 'small' baixa ~480 MB na 1ª vez
+playwright>=1.40               # HTML -> capturas por seção (07_doc_ingest.py); requer Chromium (playwright install chromium)
