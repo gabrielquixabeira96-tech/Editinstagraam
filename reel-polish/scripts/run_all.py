@@ -80,7 +80,7 @@ def main():
     an_sig = pc.file_sig(P["analysis"])
     lut = cfg.get("lut") or look.get("lut")
     sig = {}
-    sig["reframe"] = pc.sha({"src": src_sig, "an": an_sig, "framing": cfg["framing"], "fit": cfg["fit"],
+    sig["reframe"] = pc.sha({"src": src_sig, "an": an_sig, "framing": cfg["framing"], "framing_params": cfg.get("framing_params"), "fit": cfg["fit"],
                              "static": cfg["static"], "code": [code["reframe"], common_sig]})
     sig["stabilize"] = pc.sha({"prev": sig["reframe"], "stab": cfg["stabilize"], "code": code["stabilize"]})
     sig["grade"] = pc.sha({"prev": sig["stabilize"] if raw else src_sig, "an": an_sig, "mode": cfg["mode"],

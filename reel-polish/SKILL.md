@@ -264,3 +264,12 @@ apagados depois da entrega.
   substituir os quadros no retouch.mkv. Pele/cabelo inalterados; barba nunca.
 - Voz: `"audio": {"preset": "voz_gabriel"}` (presets/voz_gabriel.json): corpo +2 dB/150 Hz, caixa −1,5 dB/450 Hz,
   presença +1,2 dB/3,2 kHz, ar +1 dB/10 kHz, de-esser, compressão 2:1. Sem pitch/formant shift.
+
+## Ajuste fino do enquadramento (2026-10-23)
+- `"framing_params": {"face_ratio": 0.34, "eye_y": 0.48}` no polish.json sobrescreve, só neste vídeo, o enquadramento
+  escolhido (`face_ratio` = largura do rosto / largura do quadro; `eye_y` = altura dos olhos a partir do topo). Uso típico:
+  baixar os olhos (0,46–0,50) para abrir espaço acima da cabeça para títulos/caixas do estilo `classico` da reel-director,
+  e reduzir `face_ratio` quando a ampliação do recorte passar de ~2× (rosto pequeno na origem). Entra na assinatura do
+  reframe (cache refeito quando muda). Testado no Reel "Lençol pélvico" (IMG_3647: medium padrão → ampliação 2,07× e
+  cabelo encostando no título; com 0,34/0,48 → 1,75× e cabeça abaixo de y≈430).
+

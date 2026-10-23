@@ -59,7 +59,10 @@ def plan(cfg, analysis, info, n_frames, framing, fit, static):
     """Calcula, por quadro, o retângulo de recorte na origem (x, y, w, h) e o modo de ajuste."""
     W, H = info["width"], info["height"]
     tr = analysis.get("track") or {}
-    fr = pc.FRAMINGS[framing]
+    fr = dict(pc.FRAMINGS[framing])
+    # ajuste fino opcional (polish.json "framing_params": {"face_ratio": 0.34, "eye_y": 0.48}) — ex.: baixar a linha
+    # dos olhos para abrir espaço acima da cabeça para títulos (estilo classico: título nunca sobre o rosto)
+    fr.update({k: float(v) for k, v in (cfg.get("framing_params") or {}).items() if k in ("face_ratio", "eye_y")})
     maxw = min(W, H * 9 / 16)
     t_frames = np.arange(n_frames) / pc.FPS
     if fit == "contain" or not tr.get("cx"):
