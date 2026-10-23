@@ -1,6 +1,6 @@
 {
   "item_id": "20261023_img-3440",
-  "validado_em": "2026-10-23T10:55:50+00:00",
+  "validado_em": "2026-10-23T17:40:49+00:00",
   "segments": [
     {
       "id": "20261023_img-3440#s01",
@@ -190,6 +190,42 @@
       "item_id": "20261023_img-3440"
     },
     {
+      "id": "20261023_img-3440#s12",
+      "t0": 240.51,
+      "t1": 251.21,
+      "tema": "indicação de via aérea definitiva não é só insuficiência respiratória",
+      "tags": [
+        "via-aerea-definitiva",
+        "indicacao-de-intubacao",
+        "trauma",
+        "atls",
+        "protecao-de-via-aerea"
+      ],
+      "tese": "a via aérea definitiva também se indica para proteger a via aérea, não só quando o paciente já não respira",
+      "citacao": "Indicação de VA definitiva, ela não é necessariamente só a insuficiência respiratória",
+      "gancho_potencial": 4,
+      "publicos": [
+        "plantonista",
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "recuperado na retranscrição de 2026-10-23 (antes perdido pelo filtro no_speech). Quebra de crença curta; abre bem o s06/s07 (rebaixamento, Glasgow ≤ 8). Factualmente correto (ATLS: proteção de via aérea, falha de ventilação/oxigenação e deterioração prevista).",
+      "dur": 10.7,
+      "citacao_t0": 240.51,
+      "citacao_t1": 247.38,
+      "citacao_palavras": [
+        355,
+        366
+      ],
+      "item_id": "20261023_img-3440"
+    },
+    {
       "id": "20261023_img-3440#s06",
       "t0": 247.38,
       "t1": 288.22,
@@ -223,8 +259,8 @@
       "citacao_t0": 270.2,
       "citacao_t1": 272.87,
       "citacao_palavras": [
-        369,
-        378
+        418,
+        427
       ],
       "item_id": "20261023_img-3440"
     },
@@ -264,8 +300,8 @@
       "citacao_t0": 300.52,
       "citacao_t1": 306.82,
       "citacao_palavras": [
-        427,
-        440
+        476,
+        489
       ],
       "item_id": "20261023_img-3440"
     },
@@ -295,15 +331,53 @@
       "usos": [
         "fala-principal"
       ],
-      "notas": "'multidado' no início (~312 s) é ininteligível. Explicação boa do escarro carbonáceo. Termina com frase interrompida ('quando ele escarro já sai') seguida de 30 s de silêncio. Bom para B-roll de foto clínica de queimadura de face/vibrissas (de artigo, com licença).",
+      "notas": "'multidado' no início (~312 s) é ininteligível. Explicação boa do escarro carbonáceo. Termina em 'quando ele escarro já sai'; a continuação (por que intubar mesmo saturando) foi recuperada na retranscrição e está no s13. Bom para B-roll de foto clínica de queimadura de face/vibrissas (de artigo, com licença). IMPRECISÃO: escarro carbonáceo e vibrissas chamuscadas isolados são sinais de possível lesão inalatória, não indicação automática de intubação; o ATLS 10ª ed. indica via aérea definitiva precoce diante de sinais de obstrução (rouquidão, estridor), queimadura facial profunda ou intraoral, edema, dificuldade de deglutição, rebaixamento, insuficiência respiratória, queimadura extensa (>40–50% SCQ) ou transferência longa; nos demais, vigilância rigorosa e avaliação precoce.",
       "t0_original": 311.4,
       "t1_original": 378.0,
       "dur": 66.52,
       "citacao_t0": 342.18,
       "citacao_t1": 353.33,
       "citacao_palavras": [
-        524,
-        538
+        573,
+        587
+      ],
+      "item_id": "20261023_img-3440"
+    },
+    {
+      "id": "20261023_img-3440#s13",
+      "t0": 383.14,
+      "t1": 405.92,
+      "tema": "lesão inalatória: intubar mesmo saturando bem, antes de o edema fechar a via aérea",
+      "tags": [
+        "queimados",
+        "lesao-inalatoria",
+        "edema-de-via-aerea",
+        "indicacao-de-intubacao",
+        "trauma",
+        "via-aerea"
+      ],
+      "tese": "na lesão inalatória o edema progride e depois não dá mais para intubar, então protege-se a via aérea cedo mesmo com saturação normal",
+      "citacao": "mesmo que esteja saturando bem em ar ambiente, é uma indicação de intubação",
+      "gancho_potencial": 5,
+      "publicos": [
+        "plantonista",
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "recuperado na retranscrição (antes perdido). Antítese forte (saturando bem → intubar). Corrigidos 'hiere'→'via-aérea' e 'área ambiente'→'ar ambiente'. IMPRECISÃO: a fala generaliza ('tem lesão de via aérea → intubar'). Pelo ATLS 10ª ed., suspeita de lesão inalatória (escarro carbonáceo, vibrissas, incêndio em local fechado) pede avaliação e vigilância; a intubação precoce é indicada quando há sinais de obstrução ou risco alto (rouquidão, estridor, queimadura facial profunda/intraoral, edema progressivo, dificuldade de deglutição, queimadura >40–50% SCQ, rebaixamento, transferência longa). Para Reel, enquadrar como 'sinais de lesão de via aérea alta + edema esperado'.",
+      "dur": 22.78,
+      "citacao_t0": 392.26,
+      "citacao_t1": 398.04,
+      "citacao_palavras": [
+        665,
+        677
       ],
       "item_id": "20261023_img-3440"
     },
@@ -337,8 +411,8 @@
       "citacao_t0": 422.71,
       "citacao_t1": 426.63,
       "citacao_palavras": [
-        596,
-        607
+        723,
+        734
       ],
       "item_id": "20261023_img-3440"
     },
@@ -376,8 +450,8 @@
       "citacao_t0": 457.82,
       "citacao_t1": 465.74,
       "citacao_palavras": [
-        641,
-        653
+        768,
+        780
       ],
       "item_id": "20261023_img-3440"
     },
@@ -415,8 +489,42 @@
       "citacao_t0": 529.54,
       "citacao_t1": 535.36,
       "citacao_palavras": [
-        770,
-        780
+        897,
+        907
+      ],
+      "item_id": "20261023_img-3440"
+    },
+    {
+      "id": "20261023_img-3440#s14",
+      "t0": 557.88,
+      "t1": 589.57,
+      "tema": "contusão pulmonar no tórax instável: quando analgesia não basta e entra ventilação com pressão positiva",
+      "tags": [
+        "torax-instavel",
+        "contusao-pulmonar",
+        "ventilacao-pressao-positiva",
+        "indicacao-de-intubacao",
+        "trauma-toracico"
+      ],
+      "tese": "a dessaturação do tórax instável vem do edema da contusão; analgesia não reabre o alvéolo cheio de líquido, então é preciso pressão positiva",
+      "citacao": "o único jeito de você conseguir fazer essa troca gasosa é com ventilação e com pressão positiva",
+      "gancho_potencial": 3,
+      "publicos": [
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "recuperado na retranscrição (antes perdido); fecha o raciocínio do s10/s11. Corrigidos 'alveolo'→'alvéolo' e 'viária'→'via-aérea'. IMPRECISÃO: 'o único jeito... é ventilação com pressão positiva / precisa de via aérea definitiva' é absoluto demais. O ATLS 10ª ed. trata contusão/tórax instável com oxigênio umidificado, analgesia adequada (inclusive bloqueio/peridural), fisioterapia e reposição volêmica criteriosa; intubação e ventilação mecânica ficam para hipoxemia significativa ou insuficiência respiratória, e ventilação não invasiva pode ser tentada em pacientes selecionados (EAST 2012).",
+      "dur": 31.69,
+      "citacao_t0": 580.09,
+      "citacao_t1": 585.97,
+      "citacao_palavras": [
+        1018,
+        1034
       ],
       "item_id": "20261023_img-3440"
     }

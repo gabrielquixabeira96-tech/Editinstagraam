@@ -1,6 +1,6 @@
 # Banco de material para Reels — catálogo
 
-Gerado em 2026-10-23T16:18:44+00:00 · 11 item(ns) · 95 segmento(s)
+Gerado em 2026-10-23T17:40:49+00:00 · 11 item(ns) · 98 segmento(s)
 
 Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: FP fala-principal, BR broll, CR corte-rapido, CC citacao-card · públicos: PL plantonista, RE residente, CA candidato-residencia, CV concursos-vestibular, GE geral
 
@@ -20,12 +20,15 @@ Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: 
 | 20261023_img-3440#s03 | 01:36.61–02:09.53 (33 s) | por que não se faz cricotireoidostomia cirúrgica em menores de 12 anos: cartilagem imatura e estenose cicatricial | via-aerea, cricotireoidostomia, pediatria, estenose-subglotica, trauma-pediatrico, atls | 4 | 3/4 | CA PL RE | FP CC |
 | 20261023_img-3440#s04 | 02:10.33–02:34.15 (24 s) | na criança a via aérea cirúrgica de emergência é a crico por punção com ventilação a jato | via-aerea, cricotireoidostomia-por-puncao, ventilacao-a-jato, pediatria, atls, emergencia | 3 | 3/4 | CA PL | FP |
 | 20261023_img-3440#s05 | 02:36.35–03:10.82 (34 s) | crico por punção é ponte temporária: dura pouco e o paciente segue para traqueostomia no centro cirúrgico | via-aerea, cricotireoidostomia-por-puncao, traqueostomia, pediatria, tempo-limite, atls | 3 | 3/4 | CA PL | FP |
+| 20261023_img-3440#s12 | 04:00.51–04:11.21 (11 s) | indicação de via aérea definitiva não é só insuficiência respiratória | via-aerea-definitiva, indicacao-de-intubacao, trauma, atls, protecao-de-via-aerea | 4 | 3/3 | PL RE CA | CR CC |
 | 20261023_img-3440#s06 | 04:07.38–04:48.22 (41 s) | rebaixamento do nível de consciência tira a proteção da via aérea e predispõe a broncoaspiração maciça | via-aerea, rebaixamento-de-consciencia, broncoaspiracao, protecao-de-via-aerea, trauma, indicacao-de-intubacao | 3 | 3/4 | PL CA CV | FP CC |
 | 20261023_img-3440#s07 | 04:49.82–05:11.58 (22 s) | Glasgow menor ou igual a 8 é indicação de intubação mesmo com saturação de 100% | via-aerea, glasgow, glasgow-8, indicacao-de-intubacao, protecao-de-via-aerea, trauma | 4 | 3/4 | PL CA CV GE | FP CR CC |
 | 20261023_img-3440#s08 | 05:11.36–06:17.88 (67 s) | lesão inalatória no queimado: incêndio em ambiente fechado, vibrissas queimadas e escarro carbonáceo indicam intubação | via-aerea, queimados, lesao-inalatoria, escarro-carbonaceo, indicacao-de-intubacao, trauma | 3 | 3/4 | PL CA CV | FP |
+| 20261023_img-3440#s13 | 06:23.14–06:45.92 (23 s) | lesão inalatória: intubar mesmo saturando bem, antes de o edema fechar a via aérea | queimados, lesao-inalatoria, edema-de-via-aerea, indicacao-de-intubacao, trauma, via-aerea | 5 | 3/3 | PL RE CA | FP CR CC |
 | 20261023_img-3440#s09 | 06:48.18–07:13.33 (25 s) | tórax instável no trauma contuso: fratura de arcos costais com instabilidade causando depressão respiratória | trauma-toracico, torax-instavel, fratura-de-costela, via-aerea, indicacao-de-intubacao | 1 | 3/4 | CA | FP |
 | 20261023_img-3440#s10 | 07:15.67–08:14.74 (59 s) | no tórax instável a primeira medida é analgesia, não intubação: a dispneia inicial é pela dor | trauma-toracico, torax-instavel, analgesia, fratura-de-costela, dor, atls | 4 | 3/4 | PL CA RE | FP CC |
 | 20261023_img-3440#s11 | 08:15.10–09:19.82 (65 s) | dessaturação abaixo de 90–92% no tórax instável indica intubação porque vem da contusão pulmonar | trauma-toracico, torax-instavel, contusao-pulmonar, dessaturacao, indicacao-de-intubacao, atls | 4 | 3/4 | PL CA RE | FP CC |
+| 20261023_img-3440#s14 | 09:17.88–09:49.57 (32 s) | contusão pulmonar no tórax instável: quando analgesia não basta e entra ventilação com pressão positiva | torax-instavel, contusao-pulmonar, ventilacao-pressao-positiva, indicacao-de-intubacao, trauma-toracico | 3 | 3/3 | RE CA | FP |
 
 ## 20261023_img-3502 — IMG_3502 (video · 17:31.94 · licença propria)
 
