@@ -5,6 +5,8 @@
 Baixa um arquivo do Google Drive compartilhado por link ("qualquer pessoa com o link").
 
 Uso: drive_fetch.py <file_id> <destino> [--expect-size BYTES]
+     drive_fetch.py <file_id> - --probe-bytes 65536   (teste leve do link: lê só os primeiros bytes,
+                                                      não grava nada; usado pelo preflight.py da raiz)
 
 - Trata o aviso de "arquivo grande / sem verificacao de virus" (formulario download-form
   em drive.usercontent.google.com) extraindo action + campos ocultos (id, export, confirm, uuid).
@@ -95,7 +97,7 @@ def get(s, url, params=None):
     print(f"ERRO: mais de {MAX_REDIRECTS} redirecionamentos", file=sys.stderr); sys.exit(4)
 
 
-def fetch(file_id, dest, expect_size=None, chunk=1 << 20):
+def fetch(file_id, dest, expect_size=None, chunk=1 << 20, probe_bytes=None):
     s = requests.Session(); s.headers.update(UA)
     r = get(s, UC, params={"export": "download", "id": file_id, "confirm": "t"})
     for _ in range(3):  # ate 3 paginas de aviso encadeadas
@@ -123,6 +125,21 @@ def fetch(file_id, dest, expect_size=None, chunk=1 << 20):
         print(f"ERRO {r.status_code}: resposta inesperada do Drive", file=sys.stderr); sys.exit(4)
 
     total = int(r.headers.get("Content-Length") or 0) or None
+    if probe_bytes:  # teste leve: aborta depois dos primeiros bytes, nada vai para o disco
+        t0, got = time.time(), 0
+        try:
+            for b in r.iter_content(min(chunk, probe_bytes)):
+                got += len(b)
+                if got >= probe_bytes:
+                    break
+        except requests.RequestException as e:
+            print(f"ERRO de rede durante o teste: {e}", file=sys.stderr); sys.exit(4)
+        finally:
+            r.close()
+        if got == 0:
+            print("ERRO: o Drive não devolveu bytes do arquivo", file=sys.stderr); sys.exit(4)
+        print(f"PROBE OK {file_id} bytes_lidos={got} content_length={total or '?'} tempo={time.time()-t0:.2f}s")
+        return got, None
     part = dest + ".part"
     os.makedirs(os.path.dirname(os.path.abspath(dest)) or ".", exist_ok=True)
     h, got, t0, last = hashlib.sha256(), 0, time.time(), 0.0
@@ -153,8 +170,10 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("file_id"); ap.add_argument("dest")
     ap.add_argument("--expect-size", type=int)
+    ap.add_argument("--probe-bytes", type=int, metavar="N",
+                    help="só testa o link: lê N bytes e sai (0 = compartilhado); destino ignorado (use -)")
     a = ap.parse_args()
-    fetch(a.file_id, a.dest, a.expect_size)
+    fetch(a.file_id, a.dest, a.expect_size, probe_bytes=a.probe_bytes)
 
 
 if __name__ == "__main__":

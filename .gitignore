@@ -10,3 +10,9 @@ reel-polish/models/selfie_multiclass_256x256.tflite
 
 # Cache do rastreamento de landmarks (05b_retouch.py)
 **/track_cache/
+
+# Remotion (reel-director): dependências instaladas por `npm ci` e navegador local escrito por preflight.py --fix
+node_modules/
+**/templates/remotion/browser-executable.txt
+**/templates/remotion/render.mjs.bak
+reel-director/tests/out/

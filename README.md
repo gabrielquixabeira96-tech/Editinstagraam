@@ -15,6 +15,13 @@ Este repositório é a **fonte da verdade** da skill. O `SKILL.md` salvo na cont
 A `reel-banco` usa o mesmo clone (`~/reel-polish-src/reel-banco/`); instruções em
 [`reel-banco/SKILL.md`](reel-banco/SKILL.md) e [`reel-banco/README.md`](reel-banco/README.md).
 
+## Checagem prévia (antes de qualquer Reel)
+
+`python3 preflight.py --fix` (raiz do repositório, só biblioteca padrão, 1–2 min) confere de uma vez tudo o que
+costumava travar no meio do trabalho — links do Drive, scripts e `node_modules` da reel-director, Chromium local,
+chave Fastcloner, reel-polish/reel-editor, modelos, ffmpeg, whisper, disco e CPUs —, corrige o que é local e
+imprime a tabela de estimativa de tempo (`--estimar <bruto_s> <reel_s>`). Ver "Passo 0.5" nos `SKILL.md`.
+
 ## Instalação
 
 ```bash

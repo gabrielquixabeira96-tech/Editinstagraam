@@ -22,6 +22,46 @@ Regras de alcance com fonte: `research/alcance-2026.md`. Parâmetros: `styles/di
 7. **Custo em degraus:** (1) local grátis; (2) SFX/música Runway (1 a 4 créditos) com aviso; (3) `generate_video` (~11 créditos/s a 480p), `remove_video_background` (1 crédito/s) e `edit_video`/`expand_video` (28 créditos/s) **só com confirmação explícita** do Gabriel, depois de mostrar o saldo (`show_plans_and_credits`). Uma chamada por cena, sem retry. ElevenLabs não gera vídeo nesta conta.
 8. **Não duplicar as irmãs:** transcrição em `reel-editor/scripts/01_transcribe.py` (Whisper só para os tempos; o texto vem do roteiro), cortes/timemap em `02_apply_edl.py`, legenda em `03_subtitles.py`, mix em `05_audio.py`, reel em tela de aula em `reel-aula-artefato`. Nunca editar `/mnt/skills/user/*`.
 
+## Passo 0.5 — checagem prévia (obrigatória)
+
+Antes de qualquer edição (mesmo para "só refazer o render"), rode a checagem única das skills de Reels, que fica na
+raiz do repositório `gabrielquixabeira96-tech/editinstagraam`:
+
+```bash
+python3 /home/claude/Editinstagraam/preflight.py --fix     # ou <clone em uso>/preflight.py, ex.: ~/reel-polish-src/preflight.py
+python3 /home/claude/Editinstagraam/preflight.py --estimar <duração_do_bruto_s> <duração_do_reel_s> [--graficos N] [--sem-polish] [--sem-banco]
+```
+
+- 1–2 min. Tabela **OK / AVISO / FALHA** com a ação de cada falha: Drive (01_entrada/02_processado por link),
+  scripts desta skill na instalação em uso (padrão `/home/claude/reel-director-skill`; outra com `--director`),
+  Remotion, Chromium, `FASTCLONER_API_KEY`, reel-polish/reel-editor/narracao-voz-gabriel, modelos, ffmpeg, Python,
+  whisper `small`, disco, RAM e CPUs.
+- `--fix` corrige o que é seguro e local e nunca sobrescreve arquivo existente: symlinks `/home/claude/reel-director`,
+  `/home/claude/reel-director-skill` e `~/reel-polish-src`; cópia, a partir do clone, dos arquivos que faltam (caso
+  "só o SKILL.md veio na sessão"); `npm ci` no Remotion; navegador local; pip; modelos; whisper. Clona o repositório
+  quando `--root` aponta para uma pasta vazia.
+- **FALHA restante: resolva antes de começar.** O bloco "AVISAR O GABRIEL AGORA" lista o que depende dele (pasta do
+  Drive sem link, chave Fastcloner para narração clonada, skill reel-editor ausente): avise na hora, com a ação exata,
+  e continue o que não depende dele.
+- **Prazo:** só com base na tabela de estimativa do preflight (medidas reais em 2 vCPU: polish completo ≈ 30 min por
+  ~55 s, dos quais o retoque 05b ≈ 13 min; pré-corte de 55 s de HEVC 1080p ≈ 7 min; graphics→final com 11 gráficos
+  ≈ 10 min; transcrição ≈ 0,45 × duração) mais a margem indicada. Nunca prometer prazo de cabeça.
+
+### Remotion: instalar e usar o Chromium local
+- O zip/clone **não traz `node_modules`** (fica fora do git). Sem ele o graphics quebra com
+  `ERR_MODULE_NOT_FOUND @remotion/bundler`. Instale uma vez por sessão:
+  ```bash
+  cd templates/remotion && npm install      # ou npm ci (usa o package-lock.json; Remotion 4.0.537)
+  ```
+- A rede bloqueia o download do Chrome que o Remotion tenta baixar sozinho. Use o Chromium que já existe em
+  `/opt/pw-browsers` (**nunca rode `playwright install`**). O `render.mjs` procura, nesta ordem:
+  1. variável `REMOTION_BROWSER_EXECUTABLE` (o `04_graphics.py` herda o ambiente):
+     `export REMOTION_BROWSER_EXECUTABLE=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell`
+  2. arquivo `templates/remotion/browser-executable.txt` com esse caminho (o `preflight.py --fix` escreve; fora do git);
+  3. nada -> o Remotion tenta baixar o Chrome e falha.
+  O render imprime `browser: <caminho>` quando acha o navegador local. A fonte `public/Poppins-Bold.ttf` precisa
+  estar na instalação (o preflight confere).
+
 ## Fluxo (um comando, cache por etapa)
 ```bash
 python3 scripts/run_all.py plan.json                 # ingest→transcribe→direct, imprime o plano e PARA
@@ -43,6 +83,33 @@ Etapas e artefatos em `work/<nome>/` (o runner chama exatamente isto; use avulso
 10. **render** `reel-editor/06_render.py` → `final.mp4` (H.264 High, 30 fps, BT.709).
 11. **qa** `07_qa.py plan.json` → `qa_report.json` (reprova: gancho renderizado > 2 s; plano estático > 4 s; gráfico fora de x 65–1015, no topo, ou sobre a faixa da legenda com legenda ativa; loudness fora de −14 ± 1 / TP > −1; cena IA sem rótulo; duração > 60 s sem `justify_long`). Nada é entregue reprovado.
 12. **post** `08_post.py plan.json` → `capa_4x5.jpg` (1080×1350) + `post.txt` (sério, SEM emoji, CTA de **envio**, fecho educativo, assinatura CRM).
+
+## Execução longa sem supervisão
+
+Render, polish, pré-corte e ingestão no banco levam de minutos a mais de uma hora. O Gabriel costuma sair e voltar
+bem depois: **nenhuma etapa pode ficar parada esperando ele voltar**, e a entrega tem de estar pronta quando ele
+voltar, não "quase".
+
+1. **Lançar em segundo plano com log.** Toda etapa longa roda com `run_in_background` (o Bash reinvoca o orquestrador
+   quando o processo termina) ou `nohup ... > work/<nome>/logs/<etapa>.log 2>&1 &`, guardando o PID. Um passo pesado
+   por vez em 2 vCPU (polish e render em paralelo dobram os dois tempos).
+2. **Agendar checagens a cada 8–10 min enquanto houver processo rodando.** Logo após lançar, agende a próxima
+   checagem com `send_later` (`delay_minutes` 8–10; mensagem com PID, caminho do log, etapa atual e a próxima). Em
+   cada checagem:
+   - `ps -p <PID> -o pid,etime,stat,args` e `tail -n 40 <log>`; progresso pelos artefatos (quadros PNG gerados,
+     tamanho do mp4 parcial, `done.json` dos gráficos) e `df -h` (cota fixa);
+   - **morreu ou deu erro:** ler o erro, corrigir (opção de script, `preflight.py --fix`, `--from <etapa>`),
+     relançar e agendar a próxima checagem — sem esperar ninguém;
+   - **travou** (log e artefatos parados por 2 checagens seguidas): matar, investigar e relançar da etapa;
+   - **terminou:** emendar a próxima etapa na hora (QA, capa, post, envio, relatório) e só parar de agendar quando
+     não houver mais nada rodando.
+3. **Bloqueio que depende do Gabriel** (pasta do Drive sem link, chave Fastcloner, créditos Runway com confirmação,
+   skill ausente, aprovação do plano quando ele não liberou seguir sozinho): avisar **na hora**, numa mensagem curta
+   com a ação exata (ex.: "Drive -> 02_processado -> Compartilhar -> Qualquer pessoa com o link -> Leitor"), e
+   continuar tudo o que não depende disso (polish do trecho, gráficos, legenda, capa). Nunca descobrir um bloqueio
+   desses no fim: o Passo 0.5 existe para isso.
+4. O prazo informado é o da tabela do preflight. Se uma checagem mostrar que vai estourar, avisar o novo prazo com
+   o motivo, sem parar o trabalho.
 
 ## plan.json (gramática de edição)
 ```json

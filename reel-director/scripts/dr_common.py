@@ -20,6 +20,7 @@ SKILL = Path(__file__).resolve().parent.parent
 EDITOR = Path(os.environ.get("REEL_EDITOR_DIR", "/mnt/skills/user/reel-editor"))
 NARRA_SKILL = Path(os.environ.get("NARRACAO_SKILL_DIR", "/mnt/skills/user/narracao-voz-gabriel"))
 POLISH_CANDIDATES = [os.environ.get("REEL_POLISH_DIR", ""),
+                     str(SKILL.parent / "reel-polish"),  # reel-director rodando de dentro do clone do repositório
                      "/home/claude/gabrielquixabeira96-tech/editinstagraam/reel-polish",
                      str(Path.home() / "reel-polish-src" / "reel-polish")]
 POLISH_REPO = "https://github.com/gabrielquixabeira96-tech/editinstagraam"

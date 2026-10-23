@@ -219,6 +219,8 @@ def pass_overlays(plan, W_, segs, st, base_mkv, total_f):
             if not (0 <= k < m["nframes"]):
                 continue
             png = Path(m["dir"]) / f"frame-{k:02d}.png"
+            if not png.exists():  # Remotion usa 3 dígitos quando o gráfico tem >= 100 quadros
+                png = Path(m["dir"]) / f"frame-{k:03d}.png"
             if not png.exists():
                 png = Path(m["dir"]) / f"frame-{k}.png"
             res = vfx.read_png_rgba(png)

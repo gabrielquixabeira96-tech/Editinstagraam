@@ -28,6 +28,33 @@ cd ~/reel-polish-src/reel-banco && python3 scripts/00_check_env.py
 - Contorno já embutido: faster-whisper 1.2.1 + PyAV 19 quebram com caminho de arquivo; `03_transcribe.py`
   decodifica com ffmpeg e passa array numpy. Não "conserte" isso.
 
+## Passo 0.5 — checagem prévia (obrigatória)
+
+Antes de baixar, transcrever, ingerir ou editar qualquer coisa, rode a checagem única das skills de Reels
+(1–2 min; está na raiz do mesmo repositório):
+
+```bash
+python3 /home/claude/Editinstagraam/preflight.py --fix     # ou <clone em uso>/preflight.py, ex.: ~/reel-polish-src/preflight.py
+python3 /home/claude/Editinstagraam/preflight.py --estimar <duração_do_bruto_s> <duração_do_reel_s>   # prazo do caso
+```
+
+- Ela imprime uma tabela **OK / AVISO / FALHA** com a ação de cada falha. Confere: links do Drive (01_entrada e
+  02_processado; lê só 64 KB de um arquivo de cada pasta com `drive_fetch.py <id> - --probe-bytes 65536`; código 3 =
+  pasta sem link), scripts da reel-director, `node_modules` do Remotion, Chromium local, `FASTCLONER_API_KEY`,
+  `~/reel-polish-src`, reel-editor, modelos YuNet/MediaPipe/RNNoise, ffmpeg (libass, vid.stab, arnndn), módulos
+  Python, faster-whisper `small` em cache, disco livre (cota fixa), RAM e CPUs.
+- `--fix` corrige só o que é seguro e local, sem sobrescrever nada: cria os symlinks esperados (`~/reel-polish-src`
+  -> clone, `/home/claude/reel-director(-skill)`), copia do clone os arquivos que faltam, roda `npm ci` em
+  `templates/remotion`, aponta o Chromium de `/opt/pw-browsers`, instala módulos com pip, baixa modelos e o whisper.
+  Clona o repositório se `--root` estiver vazio. **Nunca rode `playwright install`.**
+- **FALHA restante: resolva antes de começar.** O que depende do Gabriel sai no bloco "AVISAR O GABRIEL AGORA"
+  (pasta do Drive sem link, chave Fastcloner, skill reel-editor ausente): avise já, na primeira resposta, com a ação
+  exata, e siga com o resto em paralelo — nada de descobrir isso no meio da ingestão.
+- **Prazo:** informe ao Gabriel só com base na tabela de estimativa que o preflight imprime (medida em 2 vCPU,
+  escalada pelas CPUs da sessão) mais a margem indicada — nunca um número de cabeça. Referência: ingestão de vídeo de
+  10 min ≈ 6–8 min; transcrição ≈ 0,45 × duração; download 28–100 MB/s.
+- Ingestão longa: siga também a seção "Execução longa sem supervisão" da reel-director (checagens a cada 8–10 min).
+
 **Princípio:** os SCRIPTS extraem, medem e indexam; **você (Claude) LÊ e DECIDE** — escreve `segments.json`
 a partir de `segment_input.md`/`doc_input.md`. Nunca improvise ffmpeg/whisper avulso para um item: se faltar
 recurso, vira opção de script.
@@ -184,6 +211,6 @@ continuam no índice; só a mídia precisa voltar.
 `00_check_env` · `01_scan --manifest` · `02_fetch --file-id/--local/--item` · `03_transcribe <id>
 [--import-transcript]` · `04_scenes <id>` · `05_keyframes <id>` · `06_segment_input <id>` ·
 `06b_validate_segments <id>` · `07_doc_ingest --local --licenca` · `08_index` · `09_search "q"` ·
-`10_clip "<seg>" [--broll --broll-index]` · `run_ingest` · `drive_fetch <file_id> <destino> [--expect-size N]`
+`10_clip "<seg>" [--broll --broll-index]` · `run_ingest` · `drive_fetch <file_id> <destino> [--expect-size N] [--probe-bytes N]`
 (provisório, pode ser substituído; só segue redirecionamentos para https em google.com/*.google.com/*.googleusercontent.com; códigos: 3 = não compartilhado, 4 = HTML inesperado/host não permitido/5xx, 5 = tamanho divergente).
 Testes: `python3 tests/test_pipeline.py` (material sintético, sem rede) e `python3 tests/test_memory.py` (1 h de áudio, RSS ≤ 2,5 GB).
