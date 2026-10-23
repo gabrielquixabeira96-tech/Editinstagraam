@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-10-23T11:26:34+00:00",
-  "n_itens": 8,
-  "n_segmentos": 55,
+  "gerado_em": "2026-10-23T15:24:17+00:00",
+  "n_itens": 9,
+  "n_segmentos": 69,
   "itens": [
     {
       "id": "20261023_img-1689",
@@ -1716,6 +1716,594 @@
       ]
     },
     {
+      "id": "20261023_img-3643",
+      "nome": "IMG_3643",
+      "tipo": "video",
+      "subtipo": null,
+      "duracao": 956.725,
+      "largura": 1920,
+      "altura": 1080,
+      "licenca": "propria",
+      "fonte": null,
+      "status": "indexado",
+      "paginas": null,
+      "secoes": null,
+      "n_figuras": null,
+      "contact_sheets": [
+        "contact_sheet.jpg"
+      ],
+      "origem": {
+        "drive_id": "1Ss8wMdJJm_iXjUWPupLe8lfyZFoKnru8",
+        "nome_original": "IMG_3643.MOV"
+      },
+      "segmentos": [
+        {
+          "id": "20261023_img-3643#s01",
+          "t0": 67.21,
+          "t1": 156.82,
+          "tema": "trauma pélvico junta cirurgia geral e ortopedia; no Brasil quem faz o trauma é o cirurgião geral, e ele acha que isso deveria mudar",
+          "tags": [
+            "trauma-pelvico",
+            "cirurgiao-de-trauma",
+            "cirurgia-geral",
+            "ortopedia",
+            "sala-vermelha",
+            "sistema-de-saude"
+          ],
+          "tese": "o cirurgião de trauma dedicado salva muitas vidas jovens, mas na maioria dos hospitais brasileiros a função recai sobre o cirurgião geral",
+          "citacao": "Na grande maioria dos hospitais, pelo Brasil, quem faz esse trabalho é o cirurgião Geral mesmo.",
+          "gancho_potencial": 3,
+          "publicos": [
+            "residente",
+            "candidato-residencia",
+            "geral"
+          ],
+          "qualidade_visual": 2,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Opinião ('algo que eu acho inclusive errado, deveria mudar') — bom para Reel de posicionamento sobre a especialidade de cirurgia do trauma. Abertura com 'deixa eu ver o tema' (cortar). Vídeo horizontal, rosto pequeno atrás do volante.",
+          "t0_original": 67.2,
+          "t1_original": 157.0,
+          "dur": 89.61,
+          "citacao_t0": 132.36,
+          "citacao_t1": 138.62,
+          "citacao_palavras": [
+            192,
+            207
+          ],
+          "item_id": "20261023_img-3643",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3643#s02",
+          "t0": 159.38,
+          "t1": 197.56,
+          "tema": "por que as mortes por trauma são as de maior impacto econômico: sequelas graves, reabilitação longa e próteses caras",
+          "tags": [
+            "trauma",
+            "epidemiologia",
+            "impacto-economico",
+            "atls",
+            "sequelas",
+            "anos-de-vida-perdidos"
+          ],
+          "tese": "o trauma atinge gente jovem e, quando não mata, deixa sequelas que custam tratamento pelo resto da vida",
+          "citacao": "as mortes por acidentes são as mortes que causam mais impacto econômico.",
+          "gancho_potencial": 3,
+          "publicos": [
+            "candidato-residencia",
+            "concursos-vestibular",
+            "geral"
+          ],
+          "qualidade_visual": 2,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Imprecisões: 'próteses que chegam custar milhões' é exagero (próteses de membro de alto custo ficam na casa das dezenas a poucas centenas de milhares de reais); o ATLS fala de anos de vida produtiva perdidos e de o trauma ser a principal causa de morte em jovens (1–44 anos), não que 'sempre calcula' o impacto. 'psicoterapia durante a vida inteira' é generalização. Formular como 'trauma é a doença que mais rouba anos de vida produtiva'.",
+          "t0_original": 159.4,
+          "t1_original": 197.6,
+          "dur": 38.18,
+          "citacao_t0": 175.58,
+          "citacao_t1": 178.44,
+          "citacao_palavras": [
+            271,
+            282
+          ],
+          "item_id": "20261023_img-3643",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3643#s03",
+          "t0": 255.98,
+          "t1": 300.56,
+          "tema": "o jovem morto ou incapacitado pelo trauma passa direto de contribuinte a dependente: o prejuízo para o Estado e a previdência",
+          "tags": [
+            "trauma",
+            "impacto-economico",
+            "previdencia",
+            "jovens",
+            "saude-publica",
+            "politica-de-saude"
+          ],
+          "tese": "a morte ou incapacidade precoce inverte a conta da previdência: quem deveria bancar os idosos passa a depender do sistema",
+          "citacao": "ele passa direto na casa dos 20, 30 anos e já pula direto para essa população",
+          "gancho_potencial": 3,
+          "publicos": [
+            "geral",
+            "concursos-vestibular"
+          ],
+          "qualidade_visual": 2,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "Análise 'fria' declarada por ele logo depois (303–323 s). Bom para Reel de saúde pública/argumento a favor de investir em trauma. Raciocínio correto em linhas gerais (anos de vida produtiva perdidos).",
+          "t0_original": 256.0,
+          "t1_original": 302.6,
+          "dur": 44.58,
+          "citacao_t0": 284.42,
+          "citacao_t1": 291.3,
+          "citacao_palavras": [
+            439,
+            454
+          ],
+          "item_id": "20261023_img-3643",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3643#s04",
+          "t0": 303.15,
+          "t1": 375.04,
+          "tema": "investir em atendimento ao trauma é estratégico, mas governantes pensam no ciclo de 4 anos da reeleição",
+          "tags": [
+            "politica-de-saude",
+            "trauma",
+            "investimento-em-saude",
+            "gestao-publica",
+            "opiniao"
+          ],
+          "tese": "o retorno do investimento em trauma é de longo prazo e por isso não entra na lógica eleitoral",
+          "citacao": "esse investimento em saúde pra essa área, é um investimento estratégico,",
+          "gancho_potencial": 2,
+          "publicos": [
+            "geral"
+          ],
+          "qualidade_visual": 2,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "Conteúdo opinativo/político ('nossos governantes não costumam pensar a longo prazo'); pausa de 6 s em 5:34–5:42 e reformulação da frase. Avaliar se combina com o perfil técnico.",
+          "t0_original": 303.1,
+          "t1_original": 375.0,
+          "dur": 71.89,
+          "citacao_t0": 346.62,
+          "citacao_t1": 350.56,
+          "citacao_palavras": [
+            528,
+            538
+          ],
+          "item_id": "20261023_img-3643",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3643#s05",
+          "t0": 418.13,
+          "t1": 466.0,
+          "tema": "a pelve fechada comporta pouco sangue; a fratura em livro aberto descola os ligamentos do anel pélvico",
+          "tags": [
+            "trauma-pelvico",
+            "livro-aberto",
+            "apc",
+            "volume-pelvico",
+            "anel-pelvico",
+            "ligamentos-sacroiliacos"
+          ],
+          "tese": "enquanto o anel está fechado o volume é limitado; quando os ligamentos se rompem a pelve se abre como um livro",
+          "citacao": "como ela é fechada, o volume que ela comporta de sangue é pequeno, cerca de 3 litros,",
+          "gancho_potencial": 3,
+          "publicos": [
+            "candidato-residencia",
+            "plantonista",
+            "residente"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "broll"
+          ],
+          "notas": "Gesto com as duas mãos imitando os ilíacos abrindo em ~7:41 (k016) — útil como B-roll curto ao lado de animação do anel. Depois de 466 s há ~28 s sem fala (ele fazendo o gesto). Ressalva: '3 litros' é aproximação; fontes citam que a pelve pode acomodar até ~4 L e que o livro aberto aumenta o volume potencial — dizer 'alguns litros'.",
+          "t0_original": 418.1,
+          "t1_original": 466.0,
+          "dur": 47.87,
+          "citacao_t0": 432.87,
+          "citacao_t1": 438.43,
+          "citacao_palavras": [
+            673,
+            689
+          ],
+          "item_id": "20261023_img-3643",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3643#s06",
+          "t0": 494.41,
+          "t1": 541.14,
+          "tema": "a cinta pélvica é a primeira medida: limita o volume do compartimento e o sangramento para por compressão",
+          "tags": [
+            "trauma-pelvico",
+            "cinta-pelvica",
+            "binder",
+            "tamponamento",
+            "hemorragia-pelvica",
+            "atls"
+          ],
+          "tese": "fechar o anel com a cinta devolve o efeito de tamponamento e estabiliza o paciente",
+          "citacao": "você limita bastante o sangramento ali e ele tende a parar por compressão mesmo.",
+          "gancho_potencial": 3,
+          "publicos": [
+            "plantonista",
+            "candidato-residencia",
+            "residente"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Conduta correta (binder no nível dos trocânteres maiores — ele não detalha aqui; o 3760#s05–s07 detalha). Fala um pouco embolada no início ('Falei, a pelve é como a disse').",
+          "t0_original": 494.4,
+          "t1_original": 543.0,
+          "dur": 46.73,
+          "citacao_t0": 531.62,
+          "citacao_t1": 537.68,
+          "citacao_palavras": [
+            812,
+            825
+          ],
+          "item_id": "20261023_img-3643",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3643#s07",
+          "t0": 543.83,
+          "t1": 617.2,
+          "tema": "se a cinta não estabiliza: centro cirúrgico e tamponamento pré-peritoneal, porque a maior parte do sangramento pélvico é venoso",
+          "tags": [
+            "trauma-pelvico",
+            "tamponamento-pre-peritoneal",
+            "sangramento-venoso",
+            "plexo-venoso",
+            "instabilidade-hemodinamica",
+            "retroperitonio"
+          ],
+          "tese": "cerca de 85% do sangramento pélvico é venoso e por isso responde ao tamponamento pré-peritoneal",
+          "citacao": "são de origem venosa, é mais provável que você consiga resolver esse tipo",
+          "gancho_potencial": 4,
+          "publicos": [
+            "candidato-residencia",
+            "residente",
+            "plantonista"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Número correto (≈85% venoso/ósseo, ≈10–15% arterial). Trecho com transcrição ruim em 9:36–9:50 ('reto peitorio', 'não no prefeito' = retroperitônio) e pausa de 5,6 s — cortar. Ressalva de conduta: ATLS/WSES colocam tamponamento pré-peritoneal, angioembolização e fixação externa como opções após o binder conforme o recurso local (sala híbrida/REBOA em alguns centros); a ordem 'tamponamento antes da angio' é a de centros sem angio imediata, não regra universal.",
+          "t0_original": 543.8,
+          "t1_original": 617.0,
+          "dur": 73.37,
+          "citacao_t0": 602.92,
+          "citacao_t1": 612.06,
+          "citacao_palavras": [
+            925,
+            937
+          ],
+          "item_id": "20261023_img-3643",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3643#s08",
+          "t0": 617.2,
+          "t1": 662.19,
+          "tema": "por que não se abre a pelve com laparotomia xifopúbica no trauma pélvico: a compressa deixa de tamponar",
+          "tags": [
+            "trauma-pelvico",
+            "tamponamento-pre-peritoneal",
+            "laparotomia",
+            "hematoma-pelvico",
+            "tecnica-cirurgica",
+            "pegadinha-de-prova"
+          ],
+          "tese": "abrir o espaço retroperitoneal transforma um compartimento pequeno que tampona num espaço gigante onde a compressa não comprime nada",
+          "citacao": "agora você criou um espaço gigante, então é importante lembrar disso",
+          "gancho_potencial": 4,
+          "publicos": [
+            "residente",
+            "candidato-residencia"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "IMPRECISÃO a corrigir antes de ir ao ar: ele diz que o tamponamento é feito por 'laparotomia supraumbilical'. O correto: o tamponamento pré-peritoneal é feito por incisão mediana SUPRAPÚBICA curta (~6–8 cm), extraperitoneal, SEM abrir o peritônio; a laparotomia supraumbilical é a recomendação quando também é preciso explorar a cavidade abdominal, justamente para não descomprimir o hematoma pélvico. O princípio (não violar o espaço que tampona) está certo.",
+          "t0_original": 618.0,
+          "t1_original": 662.0,
+          "dur": 44.99,
+          "citacao_t0": 656.19,
+          "citacao_t1": 662.55,
+          "citacao_palavras": [
+            1025,
+            1035
+          ],
+          "item_id": "20261023_img-3643",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3643#s09",
+          "t0": 663.75,
+          "t1": 717.74,
+          "tema": "falhou a cinta e falhou o tamponamento: provável sangramento arterial e a saída é a arteriografia com embolização",
+          "tags": [
+            "trauma-pelvico",
+            "arteriografia",
+            "angioembolizacao",
+            "sangramento-arterial",
+            "instabilidade-hemodinamica",
+            "algoritmo"
+          ],
+          "tese": "se o tamponamento não resolve, o sangramento provavelmente é arterial e de acesso cirúrgico difícil, então a via é endovascular",
+          "citacao": "se não funcionar o tamponamento pré-peritoneal não é porque provavelmente é um sangramento de origem arterial",
+          "gancho_potencial": 3,
+          "publicos": [
+            "candidato-residencia",
+            "residente"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "Ele se corrige ('a segunda opção... na verdade nossa terceira opção') — cortar a hesitação. Falta dizer 'embolização' (arteriografia diagnóstica + angioembolização terapêutica).",
+          "t0_original": 663.7,
+          "t1_original": 717.6,
+          "dur": 53.99,
+          "citacao_t0": 684.07,
+          "citacao_t1": 689.51,
+          "citacao_palavras": [
+            1074,
+            1089
+          ],
+          "item_id": "20261023_img-3643",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3643#s10",
+          "t0": 710.3,
+          "t1": 757.63,
+          "tema": "você não espera o paciente estabilizar para parar o sangramento: é parar o sangramento que estabiliza",
+          "tags": [
+            "trauma-pelvico",
+            "arteriografia",
+            "angioembolizacao",
+            "controle-de-danos",
+            "instabilidade-hemodinamica",
+            "quebra-de-crenca"
+          ],
+          "tese": "a regra 'arteriografia só no estável' não vale para o sangramento pélvico arterial refratário, porque só a hemostasia trará a estabilidade",
+          "citacao": "você não vai ficar esperando a estabilidade para parar o sangramento,",
+          "gancho_potencial": 5,
+          "publicos": [
+            "plantonista",
+            "residente",
+            "candidato-residencia"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "corte-rapido",
+            "citacao-card"
+          ],
+          "notas": "Antítese forte (inversão causa/efeito) — melhor gancho do vídeo. Nuance: a 'premissa' que ele quebra é mais a da TOMOGRAFIA (só no estável); a angioembolização é justamente indicada no instável com sangramento pélvico arterial, idealmente em sala híbrida, com equipe acompanhando. Escuro em 12:24–12:54 (c26).",
+          "t0_original": 710.3,
+          "t1_original": 760.8,
+          "dur": 47.33,
+          "citacao_t0": 747.61,
+          "citacao_t1": 751.05,
+          "citacao_palavras": [
+            1190,
+            1200
+          ],
+          "item_id": "20261023_img-3643",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3643#s11",
+          "t0": 763.26,
+          "t1": 832.5,
+          "tema": "classificação de Young-Burgess pelo mecanismo: APC I, II e III pelo afastamento da sínfise púbica",
+          "tags": [
+            "trauma-pelvico",
+            "young-burgess",
+            "apc",
+            "livro-aberto",
+            "sinfise-pubica",
+            "classificacao"
+          ],
+          "tese": "a classificação de Young-Burgess agrupa as fraturas pelo mecanismo para orientar tratamento e prognóstico",
+          "citacao": "Ou seja, você tem um livro aberto, mas ele não está tão aberto assim",
+          "gancho_potencial": 2,
+          "publicos": [
+            "candidato-residencia",
+            "residente"
+          ],
+          "qualidade_visual": 2,
+          "qualidade_audio": 3,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "IMPRECISÃO: os limites corretos são APC I = diástase da sínfise < 2,5 cm (ligamentos posteriores íntegros); APC II = > 2,5 cm com ruptura dos sacroilíacos ANTERIORES (posteriores íntegros); APC III = ruptura completa da articulação sacroilíaca (anteriores e posteriores). Não existe o corte '2 cm / 4 cm' que ele usa. Não usar sem correção em tela. Pausas de 4–5 s; câmera mexida em 13:23–13:40 (ajuste do celular).",
+          "t0_original": 762.9,
+          "t1_original": 837.0,
+          "dur": 69.24,
+          "citacao_t0": 820.35,
+          "citacao_t1": 823.31,
+          "citacao_palavras": [
+            1296,
+            1309
+          ],
+          "item_id": "20261023_img-3643",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3643#s12",
+          "t0": 840.92,
+          "t1": 867.82,
+          "tema": "o paradoxo da compressão lateral: é a que menos sangra e está associada à maior mortalidade",
+          "tags": [
+            "trauma-pelvico",
+            "young-burgess",
+            "compressao-lateral",
+            "lc",
+            "mortalidade",
+            "pegadinha-de-prova"
+          ],
+          "tese": "o tipo de fratura pélvica que menos sangra é o que aparece associado a mais mortes",
+          "citacao": "compressão lateral é o que menos sangue",
+          "gancho_potencial": 5,
+          "publicos": [
+            "candidato-residencia",
+            "residente",
+            "plantonista"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 3,
+          "usos": [
+            "fala-principal",
+            "corte-rapido",
+            "citacao-card"
+          ],
+          "notas": "IMPRECISÃO a formular com cuidado: na série clássica de Dalal/Burgess (1989–90) a mortalidade cresce com o grau de APC e as mortes da APC vêm de choque/sepse/SDRA; na LC as mortes se devem sobretudo ao TCE (e lesões torácicas/abdominais altas) associado, não à pelve. Dizer 'na LC, quando o paciente morre, quase sempre é pela cabeça, não pela pelve' em vez de 'LC tem a maior mortalidade'. Mesmo paradoxo do 3760#s08 (versão mais nítida). Fala com repetições ('pelo pelo').",
+          "t0_original": 840.9,
+          "t1_original": 867.3,
+          "dur": 26.9,
+          "citacao_t0": 849.13,
+          "citacao_t1": 850.83,
+          "citacao_palavras": [
+            1343,
+            1349
+          ],
+          "item_id": "20261023_img-3643",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3643#s13",
+          "t0": 863.68,
+          "t1": 931.66,
+          "tema": "atropelado contra motorista: quem bate o carro tem para-choque, airbag e cinto; o pedestre não tem nenhuma proteção",
+          "tags": [
+            "trauma-pelvico",
+            "atropelamento",
+            "compressao-lateral",
+            "mecanismo-de-trauma",
+            "cinto-de-seguranca",
+            "airbag"
+          ],
+          "tese": "o mecanismo de compressão lateral é típico do atropelamento, em que a vítima absorve a energia sem nenhum dispositivo de proteção",
+          "citacao": "no atropelamento você não tem nenhum mecanismo de defesa,",
+          "gancho_potencial": 3,
+          "publicos": [
+            "candidato-residencia",
+            "plantonista",
+            "geral"
+          ],
+          "qualidade_visual": 1,
+          "qualidade_audio": 3,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "Imagem muito escura a partir de 14:44 (luz vermelha, sug_vis 1,5) — usar como áudio sob B-roll. Simplificação: LC também vem de colisão lateral (T-bone) e quedas; APC de colisão frontal/motocicleta. Frases emboladas ('veí com o automotor quanto é para o fixo').",
+          "t0_original": 863.7,
+          "t1_original": 931.4,
+          "dur": 67.98,
+          "citacao_t0": 899.31,
+          "citacao_t1": 903.82,
+          "citacao_palavras": [
+            1426,
+            1434
+          ],
+          "item_id": "20261023_img-3643",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3643#s14",
+          "t0": 933.68,
+          "t1": 955.06,
+          "tema": "na compressão lateral a morte geralmente não é pela pelve, é pelo traumatismo cranioencefálico associado",
+          "tags": [
+            "trauma-pelvico",
+            "compressao-lateral",
+            "tce",
+            "atropelamento",
+            "mortalidade",
+            "pegadinha-de-prova"
+          ],
+          "tese": "o atropelado com fratura em LC morre pelo TCE que acompanha o mecanismo, não pelo sangramento pélvico",
+          "citacao": "não se dá pelo traumatismo pélvico, geralmente pelo traumatismo crânio encefálico associado",
+          "gancho_potencial": 4,
+          "publicos": [
+            "candidato-residencia",
+            "residente",
+            "plantonista"
+          ],
+          "qualidade_visual": 1,
+          "qualidade_audio": 3,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Fecha o paradoxo do s12 (este é o ponto correto e bem documentado). Imagem muito escura — usar o áudio sobre B-roll/animação ou preferir o 3760#s09.",
+          "t0_original": 932.7,
+          "t1_original": 956.7,
+          "dur": 21.38,
+          "citacao_t0": 940.14,
+          "citacao_t1": 946.66,
+          "citacao_palavras": [
+            1511,
+            1522
+          ],
+          "item_id": "20261023_img-3643",
+          "tipo": "video",
+          "licenca": "propria"
+        }
+      ]
+    },
+    {
       "id": "20261023_img-3760",
       "nome": "IMG_3760",
       "tipo": "video",
@@ -2348,6 +2936,7 @@
     }
   ],
   "pendentes": [
-    "20261023_img-3643"
+    "20261023_img-3502",
+    "20261023_img-3647"
   ]
 }

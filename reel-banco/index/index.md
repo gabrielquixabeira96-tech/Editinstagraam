@@ -1,6 +1,6 @@
 # Banco de material para Reels — catálogo
 
-Gerado em 2026-10-23T11:26:34+00:00 · 8 item(ns) · 55 segmento(s) · 1 pendente(s) de segmentação
+Gerado em 2026-10-23T15:24:17+00:00 · 9 item(ns) · 69 segmento(s) · 2 pendente(s) de segmentação
 
 Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: FP fala-principal, BR broll, CR corte-rapido, CC citacao-card · públicos: PL plantonista, RE residente, CA candidato-residencia, CV concursos-vestibular, GE geral
 
@@ -70,6 +70,25 @@ Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: 
 | 20261023_img-3530#s12 | 14:26.75–16:23.02 (116 s) | melhor 3 máquinas produzindo o que importa do que 8 máquinas produzindo lixo: o que fazer com a energia do TDAH | tdah, produtividade, foco, analogia, disciplina, metodo-de-estudo | 4 | 3/4 | GE CV | FP CC |
 | 20261023_img-3530#s13 | 16:40.74–17:37.91 (57 s) | ressalva honesta: as analogias partem de premissas reais, mas precisam ser conferidas em pesquisa | bastidores, honestidade-intelectual, tdah, analogia, divulgacao-cientifica | 1 | 3/4 | GE | FP |
 
+## 20261023_img-3643 — IMG_3643 (video · 15:56.73 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261023_img-3643#s01 | 01:07.21–02:36.82 (90 s) | trauma pélvico junta cirurgia geral e ortopedia; no Brasil quem faz o trauma é o cirurgião geral, e ele acha que isso deveria mudar | trauma-pelvico, cirurgiao-de-trauma, cirurgia-geral, ortopedia, sala-vermelha, sistema-de-saude | 3 | 2/4 | RE CA GE | FP CC |
+| 20261023_img-3643#s02 | 02:39.38–03:17.56 (38 s) | por que as mortes por trauma são as de maior impacto econômico: sequelas graves, reabilitação longa e próteses caras | trauma, epidemiologia, impacto-economico, atls, sequelas, anos-de-vida-perdidos | 3 | 2/4 | CA CV GE | FP CC |
+| 20261023_img-3643#s03 | 04:15.98–05:00.56 (45 s) | o jovem morto ou incapacitado pelo trauma passa direto de contribuinte a dependente: o prejuízo para o Estado e a previdência | trauma, impacto-economico, previdencia, jovens, saude-publica, politica-de-saude | 3 | 2/4 | GE CV | FP |
+| 20261023_img-3643#s04 | 05:03.15–06:15.04 (72 s) | investir em atendimento ao trauma é estratégico, mas governantes pensam no ciclo de 4 anos da reeleição | politica-de-saude, trauma, investimento-em-saude, gestao-publica, opiniao | 2 | 2/4 | GE | FP |
+| 20261023_img-3643#s05 | 06:58.13–07:46.00 (48 s) | a pelve fechada comporta pouco sangue; a fratura em livro aberto descola os ligamentos do anel pélvico | trauma-pelvico, livro-aberto, apc, volume-pelvico, anel-pelvico, ligamentos-sacroiliacos | 3 | 3/4 | CA PL RE | FP BR |
+| 20261023_img-3643#s06 | 08:14.41–09:01.14 (47 s) | a cinta pélvica é a primeira medida: limita o volume do compartimento e o sangramento para por compressão | trauma-pelvico, cinta-pelvica, binder, tamponamento, hemorragia-pelvica, atls | 3 | 3/4 | PL CA RE | FP CC |
+| 20261023_img-3643#s07 | 09:03.83–10:17.20 (73 s) | se a cinta não estabiliza: centro cirúrgico e tamponamento pré-peritoneal, porque a maior parte do sangramento pélvico é venoso | trauma-pelvico, tamponamento-pre-peritoneal, sangramento-venoso, plexo-venoso, instabilidade-hemodinamica, retroperitonio | 4 | 3/4 | CA RE PL | FP CC |
+| 20261023_img-3643#s08 | 10:17.20–11:02.19 (45 s) | por que não se abre a pelve com laparotomia xifopúbica no trauma pélvico: a compressa deixa de tamponar | trauma-pelvico, tamponamento-pre-peritoneal, laparotomia, hematoma-pelvico, tecnica-cirurgica, pegadinha-de-prova | 4 | 3/4 | RE CA | FP CC |
+| 20261023_img-3643#s09 | 11:03.75–11:57.74 (54 s) | falhou a cinta e falhou o tamponamento: provável sangramento arterial e a saída é a arteriografia com embolização | trauma-pelvico, arteriografia, angioembolizacao, sangramento-arterial, instabilidade-hemodinamica, algoritmo | 3 | 3/4 | CA RE | FP |
+| 20261023_img-3643#s10 | 11:50.30–12:37.63 (47 s) | você não espera o paciente estabilizar para parar o sangramento: é parar o sangramento que estabiliza | trauma-pelvico, arteriografia, angioembolizacao, controle-de-danos, instabilidade-hemodinamica, quebra-de-crenca | 5 | 3/4 | PL RE CA | FP CR CC |
+| 20261023_img-3643#s11 | 12:43.26–13:52.50 (69 s) | classificação de Young-Burgess pelo mecanismo: APC I, II e III pelo afastamento da sínfise púbica | trauma-pelvico, young-burgess, apc, livro-aberto, sinfise-pubica, classificacao | 2 | 2/3 | CA RE | FP |
+| 20261023_img-3643#s12 | 14:00.92–14:27.82 (27 s) | o paradoxo da compressão lateral: é a que menos sangra e está associada à maior mortalidade | trauma-pelvico, young-burgess, compressao-lateral, lc, mortalidade, pegadinha-de-prova | 5 | 3/3 | CA RE PL | FP CR CC |
+| 20261023_img-3643#s13 | 14:23.68–15:31.66 (68 s) | atropelado contra motorista: quem bate o carro tem para-choque, airbag e cinto; o pedestre não tem nenhuma proteção | trauma-pelvico, atropelamento, compressao-lateral, mecanismo-de-trauma, cinto-de-seguranca, airbag | 3 | 1/3 | CA PL GE | FP |
+| 20261023_img-3643#s14 | 15:33.68–15:55.06 (21 s) | na compressão lateral a morte geralmente não é pela pelve, é pelo traumatismo cranioencefálico associado | trauma-pelvico, compressao-lateral, tce, atropelamento, mortalidade, pegadinha-de-prova | 4 | 1/3 | CA RE PL | FP CC |
+
 ## 20261023_img-3760 — IMG_3760 (video · 13:13.99 · licença propria)
 
 | segmento | onde | tema | tags | G | V/A | públicos | usos |
@@ -101,5 +120,6 @@ Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: 
 
 ## Pendentes (sem segments.json no índice)
 
-- 20261023_img-3643 — IMG_3643 (video, status baixado)
+- 20261023_img-3502 — IMG_3502 (video, status baixado)
+- 20261023_img-3647 — IMG_3647 (video, status baixado)
 

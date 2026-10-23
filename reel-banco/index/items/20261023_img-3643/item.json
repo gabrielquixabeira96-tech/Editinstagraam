@@ -19,7 +19,14 @@
   "vcodec": "hevc",
   "acodec": "aac",
   "licenca": "propria",
-  "status": "baixado",
+  "status": "indexado",
   "criado_em": "2026-10-23T11:16:21+00:00",
-  "atualizado_em": "2026-10-23T11:16:21+00:00"
+  "atualizado_em": "2026-10-23T15:24:16+00:00",
+  "n_cenas": 36,
+  "n_keyframes": 36,
+  "contact_sheets": [
+    "contact_sheet.jpg"
+  ],
+  "n_segmentos": 14,
+  "indexado_em": "2026-10-23T15:24:16+00:00"
 }
