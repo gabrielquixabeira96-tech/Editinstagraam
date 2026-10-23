@@ -1,0 +1,25 @@
+{
+  "_comment": "Preset de voz do Gabriel (2026-10-23, Reel 'voz gravada', IMG_3525 no carro): voz um pouco mais encorpada e presente, de forma discreta, SEM pitch/formant shift. Uso no polish.json: \"audio\": {\"preset\": \"voz_gabriel\"}. O loudness final (-14 LUFS, TP <= -1 dBTP) continua com a reel-editor/reel-director.",
+  "audio": {
+    "enabled": true,
+    "highpass_hz": 80,
+    "denoise": "auto",
+    "deesser": 0.35,
+    "body_db": 2.0,
+    "body_hz": 150,
+    "mud_db": -1.5,
+    "mud_hz": 450,
+    "mud_q": 1.2,
+    "presence_db": 1.2,
+    "presence_hz": 3200,
+    "air_db": 1.0,
+    "air_hz": 10000,
+    "comp_ratio": 2.0,
+    "comp_threshold_db": -20,
+    "comp_attack_ms": 15,
+    "comp_release_ms": 160,
+    "room_mix": 0.0,
+    "limiter_db": -1.5,
+    "_notas": "body: low-shelf +2 dB em 150 Hz (corpo/calor; high-pass 80 Hz evita embolar). mud: -1,5 dB em 450 Hz (ressonância de 'caixa' do carro: banda de 500 Hz ~4 dB acima das vizinhas no espectro médio). presence: +1,2 dB em 3,2 kHz. air: +1 dB shelf 10 kHz (sibilância baixa: -28 dB). comp 2:1 a -20 dB (~3 dB de redução na fala a -14 dBFS). room_mix 0: ambiência testada não acrescenta nada no carro."
+  }
+}

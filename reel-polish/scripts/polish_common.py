@@ -547,12 +547,35 @@ def resolve_retouch_preset(block) -> dict:
     return base
 
 
+def resolve_audio_preset(block) -> dict:
+    """Bloco audio com preset nomeado: {"preset": "voz_gabriel", ...} carrega presets/voz_gabriel.json (seção "audio"
+    ou o arquivo inteiro); as chaves explícitas do bloco sobrescrevem as do preset."""
+    block = dict(block or {})
+    name = block.pop("preset", None)
+    if not name:
+        return block
+    p = Path(str(name))
+    if p.suffix.lower() != ".json":
+        p = SKILL_ROOT / "presets" / f"{name}.json"
+    elif not p.is_absolute():
+        p = SKILL_ROOT / p
+    if not p.exists():
+        die(f"preset de áudio não encontrado: {p}")
+    base = load_json(p)
+    base = {k: v for k, v in dict(base.get("audio", base)).items() if not k.startswith("_")}
+    base.update(block)
+    log(f"preset de voz: {p.stem}" + (f" (sobrescritas: {', '.join(block)})" if block else ""))
+    return base
+
+
 def load_polish(path) -> dict:
     p = load_json(path)
     if not p.get("source"):
         die(f"{path}: falta o campo 'source' (vídeo de entrada)")
     if isinstance(p.get("retouch"), dict) and p["retouch"].get("preset"):
         p["retouch"] = resolve_retouch_preset(p["retouch"])
+    if isinstance(p.get("audio"), dict) and p["audio"].get("preset"):
+        p["audio"] = resolve_audio_preset(p["audio"])  # antes do merge: os defaults não sobrescrevem o preset
     cfg = _merge(DEFAULT_POLISH, p)
     if cfg["mode"] not in ("raw", "final"):
         die("mode deve ser 'raw' ou 'final'")

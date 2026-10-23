@@ -32,6 +32,9 @@ Bloco em polish.json:
   "retouch": {"enabled": true, "nose_tip_reduce": 0.15, "hairline": 0.6, "beard": 0.6, "skin_texture": 0.5,
               "hairline_shape": false, "beard_shape": false, "hairline_lower_max": 0.08, "hairline_recession": 0.04,
               "protect_bottom_from": 0.60, "landmark_smooth_frames": 7}
+  Nariz × yaw (perfil): "nose_yaw_full" (18°, força total até aqui), "nose_yaw_zero" (32°, zero daqui em diante),
+  "nose_lookahead_s" (0,35), "nose_release_s" (0,15), "nose_ease_s" (0,25), "nose_jitter_max" (0,035),
+  "nose_off_ranges" ([[t0,t1],...] s, zera à força). Só o warp do nariz é atenuado; pele/cabelo seguem iguais.
   Chaves extras: "nose_alar_boost" (0–0.5, reforça só o estreitamento das asas nasais), "hairline_band" (fração de
   fw junto à pele da testa onde o adensamento do cabelo age; padrão 0.07), "hairline_chroma_gate" (bool, opcional).
   Preset nomeado: "retouch": {"preset": "gabriel"} carrega presets/gabriel.json; chaves do bloco sobrescrevem.
@@ -275,6 +278,61 @@ def track(video, start, dur, n_frames, smooth_frames=7, progress=True):
          "detected_frac": float(okarr.mean())}
     T["hair_center_v"] = hair_center_series(T, smooth_frames)
     return T
+
+
+YAW_PAIRS = ((33, 263), (133, 362), (61, 291), (234, 454), (172, 397), (127, 356))  # pares simétricos E/D
+
+
+def yaw_series(P):
+    """Yaw aproximado por quadro (graus, sinal = lado) a partir dos landmarks 2D: para cada par simétrico (cantos dos
+    olhos, boca, contorno, mandíbula) mede a assimetria em torno da ponte do nariz (168, pouco saliente),
+    asym = (d_esq - d_dir)/(d_esq + d_dir) ~ sen(yaw), e usa a mediana (robusta a um par mal localizado).
+    A ponta do nariz NÃO entra: ela é saliente e oscila muito com o próprio nariz/boca."""
+    mid = P[:, IDX_BRIDGE, 0]
+    A = []
+    for a, b in YAW_PAIRS:
+        dl, dr = np.abs(mid - P[:, a, 0]), np.abs(P[:, b, 0] - mid)
+        A.append((dl - dr) / np.maximum(dl + dr, 1e-3))
+    return np.degrees(np.arcsin(np.clip(np.median(np.stack(A, 1), 1), -1.0, 1.0)))
+
+
+def nose_gain_series(T, R, fps=None):
+    """Envoltória 0..1 do warp do NARIZ por quadro (pele/cabelo não mudam). Com yaw alto os landmarks perdem precisão
+    e o warp elíptico deforma o nariz de perfil, então:
+      * rampa suave: ganho 1 até |yaw| = nose_yaw_full (18°), 0 a partir de nose_yaw_zero (32°) — graus ESTIMADOS por
+    yaw_series (escala aproximada; calibrado no IMG_3525: rosto "de frente" para a câmera baixa fica em ±15°,
+    a virada que deformava o nariz passa de 35°);
+      * instabilidade: a ponta do nariz "pulando" (velocidade relativa à largura do rosto acima de nose_jitter_max)
+        também derruba o ganho; quadro sem confiança = 0;
+      * antecipação: mínimo numa janela que olha nose_lookahead_s à frente (a falha começa ANTES da virada) e
+        nose_release_s para trás; depois média móvel de nose_ease_s para não "piscar";
+      * nose_off_ranges: [[t0, t1], ...] em segundos do vídeo de entrada zera o nariz à força (último recurso)."""
+    fps = fps or pc.FPS
+    P = T["pts"]
+    n = P.shape[0]
+    full = float(R.get("nose_yaw_full", 18.0))
+    zero = max(full + 1.0, float(R.get("nose_yaw_zero", 32.0)))
+    yaw = yaw_series(P)
+    x = np.clip((np.abs(yaw) - full) / (zero - full), 0.0, 1.0)
+    g = 1.0 - x * x * (3 - 2 * x)
+    fw = np.linalg.norm(P[:, IDX_FACE_R] - P[:, IDX_FACE_L], axis=1)
+    rel = (P[:, IDX_TIP] - P[:, IDX_BRIDGE]) / np.maximum(fw, 1.0)[:, None]  # ponta relativa à ponte (sem translação)
+    jit = np.zeros(n, np.float32)
+    if n > 1:
+        jit[1:] = np.linalg.norm(np.diff(rel, axis=0), axis=1)
+    jmax = float(R.get("nose_jitter_max", 0.035))
+    g = g * np.clip(1.0 - (jit - jmax) / jmax, 0.0, 1.0)
+    g = np.where(np.asarray(T.get("conf", np.ones(n, bool)), bool), g, 0.0)
+    ahead = int(round(float(R.get("nose_lookahead_s", 0.35)) * fps))
+    back = int(round(float(R.get("nose_release_s", 0.15)) * fps))
+    gm = np.array([g[max(0, i - back):min(n, i + ahead + 1)].min() for i in range(n)], np.float32)
+    k = max(1, int(round(float(R.get("nose_ease_s", 0.25)) * fps)))
+    if k > 1:
+        pad = np.pad(gm, (k, k), mode="edge")
+        gm = np.convolve(pad, np.ones(k) / k, mode="same")[k:-k]
+    for t0, t1 in R.get("nose_off_ranges") or []:
+        gm[max(0, int(t0 * fps)):max(0, int(np.ceil(t1 * fps)))] = 0.0
+    return np.clip(gm, 0.0, 1.0).astype(np.float32), yaw.astype(np.float32)
 
 
 def hair_center_series(T, smooth_frames=7):
@@ -903,7 +961,9 @@ def main():
                 continue
             hl, sl = masks_at(T, i)
             ex = {"hair_center_v": float(T["hair_center_v"][i]), "frame_index": int(round(t * pc.FPS))}
-            res = apply_protect(retouch_frame(fr, T["pts"][i], hl, sl, R, protect_y, extra=ex), fr, protect_y)
+            ng, _ = nose_gain_series(T, R)
+            Ri = {**R, "nose_tip_reduce": float(R.get("nose_tip_reduce") or 0) * float(ng[i])}
+            res = apply_protect(retouch_frame(fr, T["pts"][i], hl, sl, Ri, protect_y, extra=ex), fr, protect_y)
             tag = f"t{t:06.2f}s"
             cv2.imwrite(str(out_dir / f"{tag}_full.png"), np.hstack([label(fr, "ANTES"), label(res, "DEPOIS")]))
             bx0, by0, bx1, by1 = face_crop_box(T["pts"][i], W, H, protect_y)
@@ -949,6 +1009,13 @@ def main():
     writer = pc.FrameWriter(video_only, reader.w, reader.h, crf=args.crf)
     t0 = time.time()
     i, n = 0, T["pts"].shape[0]
+    nose0 = float(R.get("nose_tip_reduce") or 0)
+    ngain, yaw = nose_gain_series(T, R)
+    if args.clip and R.get("nose_off_ranges"):  # nose_off_ranges vale em tempo do vídeo inteiro
+        ngain, _ = nose_gain_series(T, {**R, "nose_off_ranges": [[a - start, b - start] for a, b in R["nose_off_ranges"]]})
+    pc.log(f"  nariz × yaw: rampa {R.get('nose_yaw_full', 18.0)}°→{R.get('nose_yaw_zero', 32.0)}°, "
+           f"antecipa {R.get('nose_lookahead_s', 0.35)} s; ganho < 0,99 em {100 * float((ngain < 0.99).mean()):.0f}% "
+           f"dos quadros, 0 em {100 * float((ngain < 0.01).mean()):.0f}%")
     for fr in reader:
         if args.clip and i >= n_frames:
             break
@@ -956,7 +1023,8 @@ def main():
         if T["conf"][j]:
             hl, sl = masks_at(T, j)
             ex = {"hair_center_v": float(T["hair_center_v"][j]), "frame_index": int(round(start * pc.FPS)) + i}
-            res = apply_protect(retouch_frame(fr, T["pts"][j], hl, sl, R, protect_y, extra=ex), fr, protect_y)
+            Rj = R if nose0 <= 0 or ngain[j] >= 0.999 else {**R, "nose_tip_reduce": nose0 * float(ngain[j])}
+            res = apply_protect(retouch_frame(fr, T["pts"][j], hl, sl, Rj, protect_y, extra=ex), fr, protect_y)
         else:
             res = fr
         writer.write(res)
@@ -976,6 +1044,8 @@ def main():
                 "-movflags", "+faststart", "-t", f"{dur:.6f}", out]
         pc.run(cmd)
         video_only.unlink(missing_ok=True)
+    np.savetxt(workdir / "nose_gain.csv", np.stack([np.arange(len(ngain)) / pc.FPS, yaw, ngain], 1),
+               fmt="%.3f", delimiter=",", header="t_s,yaw_deg,nose_gain", comments="")
     pc.save_json(workdir / "retouch.json", {"applied": True, "frames": i, "detected_frac": T["detected_frac"],
                                              "params": R, "input": str(inp), "output": str(out),
                                              "clip": args.clip, "seconds": round(time.time() - t0, 1)})

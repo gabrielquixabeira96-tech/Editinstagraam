@@ -180,3 +180,10 @@ punch-in, **3 transições** (zoom_through, dissolve, whip), B-roll com Ken Burn
 às transições. **QA aprovado.** Pranchas: `tests/out/contato_demo.png` e `tests/out/capa_demo.jpg`.
 `tests/test_vfx.py` cobre as transições e o chroma isoladamente. (O sample é sintético: o gancho aparece sobre o
 timecode queimado do próprio arquivo de teste — isso não ocorre com um bruto real.)
+
+## Estilo "classico" (2026-10-23)
+`"style": "classico"` no plan.json (styles/classico.json, herda de director): títulos em serifa Cormorant Garamond em caixa
+alta espaçada, branco × preto/grafite, caixas QUADRADAS translúcidas sem verde, filetes de 1–2 px, animação só de fade +
+leve deslocamento; legenda palavra a palavra em Inter Medium pequena (styles/legenda_classica.json, destaque só por
+opacidade). O 04_graphics injeta `props.look` e os componentes `*Classico` do Remotion assumem; sem `look`, nada muda.
+`ArticleFigure` aceita `w`/`h` (caixa centralizada): use w ≤ 850 para a sombra caber em x 65–1015.

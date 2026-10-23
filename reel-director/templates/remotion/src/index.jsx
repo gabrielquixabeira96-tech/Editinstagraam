@@ -38,7 +38,7 @@ const Box = ({children, style}) => (
 
 // ---------- 1. HookTitle: kinetic typography (palavra a palavra, blur→nítido, sobe 40 px) ----------
 // props: lines: [["CÂNCER","DE"],["PELE","*NÃO*"]] (palavra entre * = acento), y (topo do bloco), stagger (q)
-const HookTitle = ({lines = [['TÍTULO']], y = 560, stagger = 3, fontSize = 112, durationInFrames}) => {
+const HookTitleDir = ({lines = [['TÍTULO']], y = 560, stagger = 3, fontSize = 112, durationInFrames}) => {
   useFont();
   const f = useCurrentFrame();
   let k = 0;
@@ -219,7 +219,7 @@ const ProgressBar = ({chapters = [], durationInFrames}) => {
 };
 
 // ---------- 7. LowerThird: barra 6 px + deslize 24 px (nome + CRM) ----------
-const LowerThird = ({name = 'Dr. Gabriel Quixabeira', sub = 'CRM-MT 14.954', y = 1120, durationInFrames}) => {
+const LowerThirdDir = ({name = 'Dr. Gabriel Quixabeira', sub = 'CRM-MT 14.954', y = 1120, durationInFrames}) => {
   useFont();
   const f = useCurrentFrame();
   const p = enter(f, 0, 11);
@@ -239,16 +239,16 @@ const LowerThird = ({name = 'Dr. Gabriel Quixabeira', sub = 'CRM-MT 14.954', y =
 
 // ---------- 8. ArticleFigure: figura real de artigo, Ken Burns + marca-texto animado + crédito ----------
 // props: image (arquivo em public/), highlight:{x,y,w,h} fração da imagem, caption, credit, y
-const ArticleFigure = ({image, highlight = null, caption = '', credit = '', y = 480, opaque = false, durationInFrames}) => {
+const ArticleFigureDir = ({image, highlight = null, caption = '', credit = '', y = 480, opaque = false, w = 950, h = 640, durationInFrames}) => {
   useFont();
   const f = useCurrentFrame();
   const inP = enter(f, 0, 10);
   const kb = interpolate(f, [0, durationInFrames], [1.0, 1.08], {easing: inOut});
   const hp = interpolate(f, [14, 30], [0, 1], {easing: inOut, extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
-  const W = 950, H = 640;
+  const W = w, H = h;  // w/h opcionais: caixa menor e centralizada para a sombra caber na área segura (x 65–1015)
   return (
     <AbsoluteFill style={{fontFamily: FONT, color: 'white', background: opaque ? '#0B0F14' : 'transparent', opacity: fadeOut(f, durationInFrames)}}>
-      <div style={{position: 'absolute', top: y, left: 65, width: W, opacity: inP, transform: `translateY(${(1 - inP) * 24}px)`}}>
+      <div style={{position: 'absolute', top: y, left: Math.round((1080 - W) / 2), width: W, opacity: inP, transform: `translateY(${(1 - inP) * 24}px)`}}>
         <div style={{width: W, height: H, overflow: 'hidden', borderRadius: 24, background: '#fff', boxShadow: '0 24px 60px rgba(0,0,0,.45)', position: 'relative'}}>
           <div style={{position: 'absolute', inset: 0, transform: `scale(${kb})`, transformOrigin: highlight ? `${(highlight.x + highlight.w / 2) * 100}% ${(highlight.y + highlight.h / 2) * 100}%` : '50% 50%'}}>
             {image && <Img src={staticFile(image)} style={{width: '100%', height: '100%', objectFit: 'cover'}} />}
@@ -266,7 +266,7 @@ const ArticleFigure = ({image, highlight = null, caption = '', credit = '', y = 
 };
 
 // ---------- 9. BigText: texto gigante (para "texto atrás da pessoa"; o ffmpeg recoloca a pessoa por cima) ----------
-const BigText = ({text = 'PROTEJA', y = 640, fontSize = 230, color = 'white', durationInFrames}) => {
+const BigTextDir = ({text = 'PROTEJA', y = 640, fontSize = 230, color = 'white', durationInFrames}) => {
   useFont();
   const f = useCurrentFrame();
   const p = enter(f, 0, 14);
@@ -279,7 +279,7 @@ const BigText = ({text = 'PROTEJA', y = 640, fontSize = 230, color = 'white', du
 };
 
 // ---------- 10. Label: rótulo pequeno (IA, disclaimer, CTA de envio) ----------
-const Label = ({text = 'Recriação ilustrativa (IA)', y = 1180, align = 'left', size = 28, warn = false, durationInFrames}) => {
+const LabelDir = ({text = 'Recriação ilustrativa (IA)', y = 1180, align = 'left', size = 28, warn = false, durationInFrames}) => {
   useFont();
   const f = useCurrentFrame();
   const p = enter(f, 0, 9);
@@ -292,6 +292,143 @@ const Label = ({text = 'Recriação ilustrativa (IA)', y = 1180, align = 'left',
     </AbsoluteFill>
   );
 };
+
+// ======================================================================================================
+// Estilo "classico" (props.look === 'classico'; ativado por styles/classico.json → 04_graphics injeta look):
+// conteúdo moderno, estética clássica. Serifa Cormorant Garamond em caixa alta espaçada, branco × preto/grafite,
+// caixas QUADRADAS translúcidas, filetes de 1–2 px, sem verde, sem blur/escala elástica: só fade + leve deslocamento.
+// ======================================================================================================
+const SERIF = 'CormorantDir';
+let serifHandle = null;
+const useSerif = () => {
+  const [h] = React.useState(() => (serifHandle === null ? delayRender('serif') : null));
+  React.useEffect(() => {
+    if (h === null) return;
+    const faces = [
+      new FontFace(SERIF, `url(${staticFile('CormorantGaramond-SemiBold.ttf')})`, {weight: '600'}),
+      new FontFace(SERIF, `url(${staticFile('CormorantGaramond-Medium.ttf')})`, {weight: '500'}),
+    ];
+    Promise.all(faces.map((ff) => ff.load())).then((ls) => { ls.forEach((ff) => document.fonts.add(ff)); serifHandle = true; continueRender(h); })
+      .catch(() => continueRender(h));
+  }, [h]);
+};
+const C_BOX = 'rgba(10,10,10,.78)';
+const C_SOFT = 'rgba(255,255,255,.80)';
+const C_SHADOW = '0 2px 14px rgba(0,0,0,.65), 0 1px 2px rgba(0,0,0,.6)';
+const soft = (f, start, d = 12) => interpolate(f, [start, start + d], [0, 1], {easing: inOut, extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+const Rule = ({w, opacity = 1, style}) => <div style={{height: 1.5, width: w, background: 'rgba(255,255,255,.9)', opacity, ...style}} />;
+
+const HookTitleClassico = ({lines = [['TÍTULO']], y = 560, stagger = 3, fontSize = 92, durationInFrames}) => {
+  useSerif();
+  const f = useCurrentFrame();
+  let k = 0;
+  return (
+    <AbsoluteFill style={{fontFamily: SERIF, color: 'white'}}>
+      <div style={{position: 'absolute', top: y, left: 65, width: 950, display: 'flex', flexDirection: 'column',
+        alignItems: 'center', gap: 4, opacity: fadeOut(f, durationInFrames, 10)}}>
+        {lines.map((ln, li) => (
+          <div key={li} style={{display: 'flex', gap: Math.round(fontSize * 0.34), justifyContent: 'center', flexWrap: 'wrap'}}>
+            {ln.map((w, wi) => {
+              const i = k++;
+              const p = soft(f, i * stagger, 12);
+              const acc = w.startsWith('*');
+              const txt = acc ? w.replaceAll('*', '') : w;
+              return (
+                <span key={wi} style={{fontSize, fontWeight: 600, lineHeight: 1.1, letterSpacing: '0.09em', textTransform: 'uppercase',
+                  color: acc ? '#FFFFFF' : C_SOFT, opacity: p, transform: `translateY(${(1 - p) * 14}px)`, textShadow: C_SHADOW,
+                  borderBottom: acc ? `1.5px solid rgba(255,255,255,${0.9 * soft(f, k * stagger + 6, 12)})` : 'none', paddingBottom: acc ? 2 : 0}}>{txt}</span>
+              );
+            })}
+          </div>
+        ))}
+        <Rule w={interpolate(f, [k * stagger, k * stagger + 16], [0, 140], {easing: inOut, extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}
+          style={{marginTop: 16, boxShadow: '0 1px 6px rgba(0,0,0,.5)'}} />
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+const BigTextClassico = ({text = 'PROJEÇÃO', y = 640, fontSize = 150, durationInFrames}) => {
+  useSerif();
+  const f = useCurrentFrame();
+  const p = soft(f, 0, 16);
+  return (
+    <AbsoluteFill style={{fontFamily: SERIF, opacity: fadeOut(f, durationInFrames, 10)}}>
+      <div style={{position: 'absolute', top: y, width: 1080, textAlign: 'center', fontSize, fontWeight: 600, lineHeight: 1,
+        letterSpacing: '0.12em', textTransform: 'uppercase', color: 'white', opacity: p, textShadow: C_SHADOW,
+        transform: `translateY(${(1 - p) * 18}px)`}}>{text}</div>
+    </AbsoluteFill>
+  );
+};
+
+const LowerThirdClassico = ({name = 'Dr. Gabriel Quixabeira', sub = 'CRM-MT 14.954', y = 1120, durationInFrames}) => {
+  useSerif();
+  const f = useCurrentFrame();
+  const p = soft(f, 0, 12);
+  const r = soft(f, 4, 16);
+  return (
+    <AbsoluteFill style={{fontFamily: SERIF, color: 'white', opacity: fadeOut(f, durationInFrames, 10)}}>
+      <div style={{position: 'absolute', top: y, left: 65, opacity: p, transform: `translateY(${(1 - p) * 10}px)`}}>
+        <div style={{background: C_BOX, padding: '16px 26px 14px'}}>
+          <div style={{fontSize: 38, fontWeight: 600, letterSpacing: '0.06em'}}>{name}</div>
+          <Rule w={260 * r} opacity={0.7} style={{margin: '8px 0 8px'}} />
+          <div style={{fontSize: 24, fontWeight: 500, letterSpacing: '0.22em', textTransform: 'uppercase', color: C_SOFT}}>{sub}</div>
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+const ArticleFigureClassico = ({image, highlight = null, caption = '', credit = '', y = 480, w = 950, h = 640, durationInFrames}) => {
+  useSerif();
+  const f = useCurrentFrame();
+  const inP = soft(f, 0, 12);
+  const kb = interpolate(f, [0, durationInFrames], [1.0, 1.06], {easing: inOut});
+  const hp = interpolate(f, [14, 30], [0, 1], {easing: inOut, extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  return (
+    <AbsoluteFill style={{fontFamily: SERIF, color: 'white', opacity: fadeOut(f, durationInFrames, 10)}}>
+      <div style={{position: 'absolute', top: y, left: Math.round((1080 - w) / 2), width: w, opacity: inP, transform: `translateY(${(1 - inP) * 12}px)`}}>
+        <div style={{width: w, height: h, overflow: 'hidden', background: '#fff', position: 'relative',
+          outline: '1.5px solid rgba(255,255,255,.9)', outlineOffset: 6, boxShadow: '0 8px 26px rgba(0,0,0,.40)'}}>
+          <div style={{position: 'absolute', inset: 0, transform: `scale(${kb})`, transformOrigin: highlight ? `${(highlight.x + highlight.w / 2) * 100}% ${(highlight.y + highlight.h / 2) * 100}%` : '50% 50%'}}>
+            {image && <Img src={staticFile(image)} style={{width: '100%', height: '100%', objectFit: 'cover'}} />}
+            {highlight && (
+              <div style={{position: 'absolute', left: `${highlight.x * 100}%`, top: `${highlight.y * 100}%`, height: `${highlight.h * 100}%`,
+                width: `${highlight.w * 100}%`, border: '2px solid rgba(20,20,20,.9)', opacity: hp}} />
+            )}
+          </div>
+        </div>
+        {caption && (
+          <div style={{marginTop: 22, background: C_BOX, padding: '14px 24px', fontSize: 38, fontWeight: 600, letterSpacing: '0.02em',
+            lineHeight: 1.18, opacity: soft(f, 10, 12)}}>{caption}</div>
+        )}
+        {credit && <div style={{marginTop: 8, display: 'inline-block', background: 'rgba(10,10,10,.62)', padding: '5px 12px', fontSize: 23, fontWeight: 600,
+          letterSpacing: '0.04em', color: '#E6E6E6', opacity: soft(f, 14, 12)}}>{credit}</div>}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+const LabelClassico = ({text = 'Recriação ilustrativa (IA)', y = 1180, align = 'left', size = 28, durationInFrames}) => {
+  useSerif();
+  const f = useCurrentFrame();
+  const p = soft(f, 0, 10);
+  return (
+    <AbsoluteFill style={{fontFamily: SERIF, color: 'white', opacity: fadeOut(f, durationInFrames, 10)}}>
+      <div style={{position: 'absolute', top: y, left: 65, width: 950, display: 'flex', justifyContent: align === 'center' ? 'center' : 'flex-start'}}>
+        <div style={{background: C_BOX, padding: '10px 20px', fontSize: size + 2, fontWeight: 600, letterSpacing: '0.03em', opacity: p,
+          transform: `translateY(${(1 - p) * 8}px)`}}>{text}</div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+const byLook = (Dir, Cls) => (props) => (props.look === 'classico' ? <Cls {...props} /> : <Dir {...props} />);
+const HookTitle = byLook(HookTitleDir, HookTitleClassico);
+const LowerThird = byLook(LowerThirdDir, LowerThirdClassico);
+const ArticleFigure = byLook(ArticleFigureDir, ArticleFigureClassico);
+const BigText = byLook(BigTextDir, BigTextClassico);
+const Label = byLook(LabelDir, LabelClassico);
 
 const COMPS = {HookTitle, Counter, BarChart, LineChart, Callout, ProgressBar, LowerThird, ArticleFigure, BigText, Label};
 const calc = ({props}) => ({durationInFrames: Math.max(1, Math.round(props.durationInFrames || 60))});

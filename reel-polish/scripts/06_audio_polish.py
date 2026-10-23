@@ -2,12 +2,15 @@
 """06 — Polimento da voz (ffmpeg), preservando a sincronia exata:
 
   high-pass (80 Hz) -> redução de ruído (arnndn com modelo rnnoise embutido; afftdn se não houver)
-  -> de-esser -> EQ de voz (corte leve da "lama" em 250 Hz, presença +2 dB em 4 kHz, ar +1,5 dB
+  -> de-esser -> [corpo: low-shelf body_db/body_hz] -> EQ de voz (corte leve da "lama" em 250 Hz, presença +2 dB em 4 kHz, ar +1,5 dB
   em 10 kHz) -> compressor suave (2,5:1) -> limitador (-1,5 dBTP).
 
 NÃO normaliza loudness (o reel-editor leva a -14 LUFS); deixa headroom. Duração igual à do vídeo
 (apad + corte exato). Qualquer latência de filtro é medida por correlação cruzada com o original e
 compensada, para o offset ficar em 0.
+
+Preset de voz: "audio": {"preset": "voz_gabriel"} carrega presets/voz_gabriel.json (chaves do bloco sobrescrevem).
+Sem pitch/formant shift: só EQ, de-esser, compressão e (opcional) room_mix.
 
 Entrada: `source` do polish.json. Saída: audio_polished.wav (48 kHz, estéreo, 24 bits).
 
@@ -46,23 +49,34 @@ def build_chain(a, analysis, filters):
     de = pc.clamp(float(a.get("deesser", 0.35)), 0, 1)
     if de > 0:
         f.append(f"deesser=i={de:.2f}:m=0.5:f=0.5:s=o")
-    mud = float(a.get("mud_db", -2.0))
+    body = float(a.get("body_db", 0.0))            # corpo/calor: low-shelf (o high-pass acima segura < 80 Hz)
+    body_hz = float(a.get("body_hz", 150))
+    if abs(body) > 0.05:
+        f.append(f"lowshelf=f={body_hz:.0f}:g={body:.1f}:w=0.7")
+    mud = float(a.get("mud_db", -2.0))             # "lama"/"caixa" (carro: ~300–500 Hz)
+    mud_hz = float(a.get("mud_hz", 250))
     if abs(mud) > 0.05:
-        f.append(f"equalizer=f=250:t=q:w=1.2:g={mud:.1f}")
+        f.append(f"equalizer=f={mud_hz:.0f}:t=q:w={float(a.get('mud_q', 1.2)):.2f}:g={mud:.1f}")
     pres = float(a.get("presence_db", 2.0))
+    pres_hz = float(a.get("presence_hz", 4000))
     if abs(pres) > 0.05:
-        f.append(f"equalizer=f=4000:t=q:w=1.0:g={pres:.1f}")
+        f.append(f"equalizer=f={pres_hz:.0f}:t=q:w=1.0:g={pres:.1f}")
     air = float(a.get("air_db", 1.5))
     if abs(air) > 0.05:
-        f.append(f"treble=g={air:.1f}:f=10000:w=0.5")
+        f.append(f"treble=g={air:.1f}:f={float(a.get('air_hz', 10000)):.0f}:w=0.5")
     ratio = float(a.get("comp_ratio", 2.5))
     thr = float(a.get("comp_threshold_db", -20))
     if ratio > 1.01:
-        f.append(f"acompressor=threshold={thr:.0f}dB:ratio={ratio:.2f}:attack=12:release=150:knee=4:makeup=1")
+        f.append(f"acompressor=threshold={thr:.0f}dB:ratio={ratio:.2f}:attack={float(a.get('comp_attack_ms', 12)):.0f}"
+                 f":release={float(a.get('comp_release_ms', 150)):.0f}:knee=4:makeup=1")
+    room = float(a.get("room_mix", 0.0))           # ambiência curtíssima (0 = nada)
+    if room > 0:
+        f.append(f"aecho=1.0:{room:.2f}:{float(a.get('room_ms', 18)):.0f}:0.25")
     lim = float(a.get("limiter_db", -1.5))
     f.append(f"alimiter=limit={lim:.1f}dB:attack=5:release=50:level=false")
-    return ",".join(f), {"denoise": used, "deesser": de, "mud_db": mud, "presence_db": pres, "air_db": air,
-                        "comp": {"ratio": ratio, "threshold_db": thr}, "limiter_db": lim}
+    return ",".join(f), {"denoise": used, "deesser": de, "body_db": body, "body_hz": body_hz, "mud_db": mud,
+                        "mud_hz": mud_hz, "presence_db": pres, "presence_hz": pres_hz, "air_db": air,
+                        "comp": {"ratio": ratio, "threshold_db": thr}, "room_mix": room, "limiter_db": lim}
 
 
 def measure_lag(src, out, sr=16000):
@@ -117,7 +131,7 @@ def main():
     info = pc.probe(src)
     dur = info["duration"] or 0.0
     analysis = pc.load_json(P["analysis"]) if P["analysis"].exists() else {}
-    a = cfg.get("audio") or {}
+    a = pc.resolve_audio_preset(cfg.get("audio") or {})
     if not info["has_audio"]:
         pc.log("origem sem áudio — gerando silêncio da mesma duração")
         pc.run(["ffmpeg", "-y", "-f", "lavfi", "-t", f"{dur:.6f}", "-i", f"anullsrc=r={pc.AUDIO_SR}:cl=stereo",

@@ -70,6 +70,8 @@ def main():
         comp = g["comp"]
         props = dict(g.get("props", {}))
         props["durationInFrames"] = nfr
+        if st.get("look") and "look" not in props:   # estilo visual (ex.: "classico") → componentes *Classico
+            props["look"] = st["look"]
         # y padrão por tipo, se o Claude não informou
         slots = st["slots"]
         default_y = {"HookTitle": slots["hook"]["y"], "Counter": slots["card"]["y"],

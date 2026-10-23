@@ -1,0 +1,14 @@
+{
+  "inherits": "director",
+  "name": "classico",
+  "_comentario": "Estilo 'classico' (2026-10-23, pedido do Gabriel): conteúdo e tecnologia modernos, estética clássica. Títulos em serifa Cormorant Garamond (caixa alta espaçada), branco × preto/grafite, caixas QUADRADAS translúcidas sem borda colorida, filetes finos de 1–2 px, animações só de fade + leve deslocamento. Ativa os componentes *Classico do Remotion via props.look (injetado pelo 04_graphics) e a legenda styles/legenda_classica.json (via 02_direct). Use com \"style\": \"classico\" no plan.json.",
+  "look": "classico",
+  "subtitle_style": "legenda_classica.json",
+  "identity": {
+    "font": "Cormorant Garamond SemiBold (títulos; templates/remotion/public) + Inter Medium (legenda; assets/fonts/legenda)",
+    "text": "#FFFFFF",
+    "accent": "#FFFFFF",
+    "box": "rgba(10,10,10,.78)",
+    "box_radius": 0
+  }
+}

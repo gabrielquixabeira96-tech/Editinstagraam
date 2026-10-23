@@ -256,3 +256,11 @@ apagados depois da entrega.
 - Retoque avançado: ~0,25 s/quadro + rastreamento (~0,2 s/quadro) em CPU — 40 s de vídeo ≈ 10 min. O preenchimento de
   cabelo é "escurecer + clonar textura" (não cria fios novos): bom em falhas pequenas e entradas rasas, limitado em
   calvície real. O nariz é um warp local: em perfil forte o efeito diminui sozinho (campo elíptico centrado no bulbo).
+
+## Nariz × yaw e preset de voz (2026-10-23)
+- 05b atenua só o warp do NARIZ quando a cabeça vira (yaw estimado pelos landmarks): força total até `nose_yaw_full`
+  (18°), zero a partir de `nose_yaw_zero` (32°), antecipando `nose_lookahead_s` (0,35 s); `nose_off_ranges` zera à força.
+  Grava `nose_gain.csv` no workdir. Para corrigir só um trecho: `05b_retouch.py polish.json --clip INI DUR --out x.mkv` e
+  substituir os quadros no retouch.mkv. Pele/cabelo inalterados; barba nunca.
+- Voz: `"audio": {"preset": "voz_gabriel"}` (presets/voz_gabriel.json): corpo +2 dB/150 Hz, caixa −1,5 dB/450 Hz,
+  presença +1,2 dB/3,2 kHz, ar +1 dB/10 kHz, de-esser, compressão 2:1. Sem pitch/formant shift.

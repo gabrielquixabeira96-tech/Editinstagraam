@@ -124,7 +124,7 @@ def main():
     edl = {
         "source": str(src), "keep": keep, "padding_ms": int(plan.get("padding_ms", 80)),
         "emphasis": plan.get("emphasis", []),
-        "style": plan.get("subtitle_style", str(dc.EDITOR / "styles" / "default.json")),
+        "style": plan.get("subtitle_style") or (str(dc.SKILL / "styles" / st["subtitle_style"]) if st.get("subtitle_style") else str(dc.EDITOR / "styles" / "default.json")),
         "fit": "cover",
     }
     dc.save_json(W_ / "edl.json", edl)

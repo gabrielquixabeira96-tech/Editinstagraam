@@ -12,5 +12,12 @@
   "hairline_lower_max": 0.08,
   "hairline_recession": 0.04,
   "protect_bottom_from": 0.6,
-  "landmark_smooth_frames": 7
+  "landmark_smooth_frames": 7,
+  "nose_yaw_full": 18.0,
+  "nose_yaw_zero": 32.0,
+  "nose_lookahead_s": 0.35,
+  "nose_release_s": 0.15,
+  "nose_ease_s": 0.25,
+  "nose_jitter_max": 0.035,
+  "_comment_nose_yaw": "2026-10-23: warp do nariz atenuado com o yaw (rampa 18°→32° estimados, antecipa 0,35 s) — de perfil o warp deformava o nariz (IMG_3525, ~42 s). Pele/cabelo inalterados."
 }
