@@ -1,0 +1,47 @@
+{
+  "item_id": "20261023_img-3807",
+  "duracao": 32.033333,
+  "params": {
+    "threshold": 10.0,
+    "min_scene": 1.0,
+    "max_scene": 30.0,
+    "fps": 2.0
+  },
+  "gerado_em": "2026-10-23T10:33:12+00:00",
+  "scenes": [
+    {
+      "n": 1,
+      "t0": 0.0,
+      "t1": 16.017,
+      "dur": 16.017,
+      "corte": "inicio",
+      "rosto": 1.0,
+      "rosto_tam": 0.35,
+      "nitidez": 352.7,
+      "luma": 127.6,
+      "estourado": 0.0,
+      "escuro": 0.001,
+      "audio_db": -23.8,
+      "silencio": 0.0,
+      "sug_visual": 5.0,
+      "sug_audio": 4.0
+    },
+    {
+      "n": 2,
+      "t0": 16.017,
+      "t1": 32.033,
+      "dur": 16.017,
+      "corte": "bloco",
+      "rosto": 1.0,
+      "rosto_tam": 0.355,
+      "nitidez": 380.6,
+      "luma": 127.2,
+      "estourado": 0.0,
+      "escuro": 0.002,
+      "audio_db": -25.3,
+      "silencio": 0.0,
+      "sug_visual": 5.0,
+      "sug_audio": 4.0
+    }
+  ]
+}

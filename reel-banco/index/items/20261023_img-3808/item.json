@@ -1,0 +1,32 @@
+{
+  "id": "20261023_img-3808",
+  "nome": "IMG_3808",
+  "tipo": "video",
+  "origem": {
+    "drive_id": "1eeL6UibGEt2MJ7Xp4tQEMPwTi4qftvr6",
+    "nome_original": "IMG_3808.MOV",
+    "modifiedTime": "2026-10-23T05:42:55.902Z"
+  },
+  "arquivo": "source.mov",
+  "tamanho": 246020801,
+  "sha256": "9af4d059f83900f1117c82f11cf5c668e63918f26a955b27857c262f63446137",
+  "duracao": 143.456667,
+  "largura": 1080,
+  "altura": 1920,
+  "fps": 59.997,
+  "rotacao": -90,
+  "tem_audio": true,
+  "vcodec": "hevc",
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "indexado",
+  "criado_em": "2026-10-23T10:33:26+00:00",
+  "atualizado_em": "2026-10-23T10:36:20+00:00",
+  "n_cenas": 5,
+  "n_keyframes": 5,
+  "contact_sheets": [
+    "contact_sheet.jpg"
+  ],
+  "n_segmentos": 4,
+  "indexado_em": "2026-10-23T10:36:20+00:00"
+}

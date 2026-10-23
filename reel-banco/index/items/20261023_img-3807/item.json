@@ -1,0 +1,33 @@
+{
+  "id": "20261023_img-3807",
+  "nome": "IMG_3807",
+  "tipo": "video",
+  "origem": {
+    "local": "/tmp/claude-0/-home-claude/49d46feb-23ca-5cff-8f71-9a11a8bc5702/scratchpad/dl/IMG_3807.MOV",
+    "nome_original": "IMG_3807.MOV",
+    "drive_id": "1j72otA5xoJ719UKfItdNGuO7lvmGUYIA",
+    "modifiedTime": "2026-10-23T05:43:10.285Z"
+  },
+  "arquivo": "source.mov",
+  "tamanho": 55072447,
+  "sha256": "4d198b5d0530ce3dbc8af4250ee5969bc5a7b443ccf1c25c51de0cfb118c4dfb",
+  "duracao": 32.033333,
+  "largura": 1080,
+  "altura": 1920,
+  "fps": 59.997,
+  "rotacao": -90,
+  "tem_audio": true,
+  "vcodec": "hevc",
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "indexado",
+  "criado_em": "2026-10-23T10:31:48+00:00",
+  "atualizado_em": "2026-10-23T10:33:41+00:00",
+  "n_cenas": 2,
+  "n_keyframes": 2,
+  "contact_sheets": [
+    "contact_sheet.jpg"
+  ],
+  "n_segmentos": 1,
+  "indexado_em": "2026-10-23T10:33:41+00:00"
+}

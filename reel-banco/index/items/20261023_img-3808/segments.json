@@ -1,0 +1,148 @@
+{
+  "item_id": "20261023_img-3808",
+  "validado_em": "2026-10-23T10:36:20+00:00",
+  "segments": [
+    {
+      "id": "20261023_img-3808#s01",
+      "t0": 1.46,
+      "t1": 33.24,
+      "tema": "o que é o bot: API do Claude ligada ao Instagram responde sozinha qualquer comentário da publicação",
+      "tags": [
+        "bastidores",
+        "automacao",
+        "instagram",
+        "bot-de-comentarios",
+        "inteligencia-artificial",
+        "claude",
+        "api"
+      ],
+      "tese": "com a chave de API do Claude ligada ao Instagram, cada comentário dispara uma resposta automática programada",
+      "citacao": "pra ele criar um bot que responde de forma automatizada, qualquer comentário",
+      "gancho_potencial": 2,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Abre declarando que é um teste ('esse vídeo aqui é um teste') — cortar os primeiros ~3 s se for aproveitado. Selfie no carro com cinto; rosto ocupa ~1/3 do quadro, teto do carro no terço superior (precisa zoom/reenquadre). Olha várias vezes para fora da câmera (para a direita dele). Fala hesitante, pausas de 0,7-1,8 s; serve só como explicação de bastidor de um Reel que lance o bot.",
+      "t0_original": 1.46,
+      "t1_original": 32.9,
+      "dur": 31.78,
+      "citacao_t0": 10.28,
+      "citacao_t1": 14.44,
+      "citacao_palavras": [
+        22,
+        33
+      ],
+      "item_id": "20261023_img-3808"
+    },
+    {
+      "id": "20261023_img-3808#s02",
+      "t0": 36.62,
+      "t1": 91.61,
+      "tema": "bot de comentários programado para responder com base em literatura do PubMed e didática de medicina e cirurgia",
+      "tags": [
+        "bastidores",
+        "inteligencia-artificial",
+        "claude",
+        "pubmed",
+        "medicina-baseada-em-evidencia",
+        "estudo",
+        "bot-de-comentarios"
+      ],
+      "tese": "o bot foi configurado para estudo: responde dúvidas de medicina e cirurgia com base na literatura acessada pelo PubMed, com didática detalhada",
+      "citacao": "eu deixei ele programado para responder com base na literatura",
+      "gancho_potencial": 2,
+      "publicos": [
+        "residente",
+        "candidato-residencia",
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Trecho mais aproveitável do material: explica a proposta (responder dúvidas de medicina/cirurgia com base em literatura via conector do PubMed). Mas é fala de bastidor, sem conteúdo clínico, com hesitações ('eu acho que' repetido 3 vezes) e pausas longas (até 2,1 s) — exige cortes. Olhar para fora da câmera em ~01:11. 'surgia' corrigido para 'cirurgia' e 'cloud' para 'Claude' na transcrição.",
+      "dur": 54.99,
+      "citacao_t0": 42.32,
+      "citacao_t1": 47.76,
+      "citacao_palavras": [
+        77,
+        86
+      ],
+      "item_id": "20261023_img-3808"
+    },
+    {
+      "id": "20261023_img-3808#s03",
+      "t0": 97.12,
+      "t1": 121.72,
+      "tema": "bastidor técnico: por que o bot exige seguir o perfil (Meta bloqueia uso livre; site anterior exigia chave de API de cada usuário)",
+      "tags": [
+        "bastidores",
+        "automacao",
+        "meta",
+        "instagram",
+        "api",
+        "chave-api"
+      ],
+      "tese": "a versão em site exigia que cada pessoa configurasse a própria chave; no Instagram a Meta não permite uso livre, então ficou restrito aos seguidores",
+      "citacao": "cada pessoa que fosse entrar precisava entrar e configurar a chave API",
+      "gancho_potencial": 1,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Raciocínio truncado e repetitivo ('pré configurada eu acho que mas o Meta bloqueia configurar para qualquer pra uso livre'). Mão no cabelo em ~01:40. Valor só informativo/bastidor.",
+      "dur": 24.6,
+      "citacao_t0": 104.42,
+      "citacao_t1": 110.16,
+      "citacao_palavras": [
+        190,
+        201
+      ],
+      "item_id": "20261023_img-3808"
+    },
+    {
+      "id": "20261023_img-3808#s04",
+      "t0": 119.42,
+      "t1": 126.72,
+      "tema": "chamada para ação: para o bot responder o comentário é preciso seguir o perfil",
+      "tags": [
+        "cta",
+        "seguidores",
+        "bot-de-comentarios",
+        "instagram",
+        "automacao"
+      ],
+      "tese": "o bot só responde comentário de quem segue o perfil",
+      "citacao": "para funcionar ele respondeu comentário tem que você tem que estar me seguindo",
+      "gancho_potencial": 2,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "corte-rapido"
+      ],
+      "notas": "Útil como CTA de fechamento num Reel que lance o bot, mas a frase sai embolada ('ele respondeu comentário tem que você tem que') — talvez melhor regravar ou usar só o áudio de 'tem que estar me seguindo' (~02:05.7-02:06.9).",
+      "dur": 7.3,
+      "citacao_t0": 122.9,
+      "citacao_t1": 127.12,
+      "citacao_palavras": [
+        235,
+        247
+      ],
+      "item_id": "20261023_img-3808"
+    }
+  ]
+}

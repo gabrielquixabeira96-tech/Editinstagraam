@@ -1,0 +1,41 @@
+{
+  "item_id": "20261023_img-3807",
+  "validado_em": "2026-10-23T10:33:41+00:00",
+  "segments": [
+    {
+      "id": "20261023_img-3807#s01",
+      "t0": 6.44,
+      "t1": 31.11,
+      "tema": "bastidor: teste de bot que responde comentários do Instagram automaticamente via API do Claude",
+      "tags": [
+        "bastidores",
+        "automacao",
+        "instagram",
+        "bot-de-comentarios",
+        "inteligencia-artificial",
+        "claude",
+        "api"
+      ],
+      "tese": "um bot ligado à API do Claude consegue responder automaticamente os comentários do perfil",
+      "citacao": "e com esse bot de comentários automatizados, ele responde tudo conforme o Claude",
+      "gancho_potencial": 1,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "corte-rapido"
+      ],
+      "notas": "Vídeo de TESTE declarado ('esse vídeo aqui é só, na verdade, um teste'), sem conteúdo médico. Selfie no carro, cinto de segurança, camiseta esportiva; rosto centrado mas ocupa só ~1/3 do quadro, teto do carro ocupa o terço superior (reenquadrar com zoom). Luz natural difusa e uniforme, HDR (HLG) do iPhone. Fala hesitante com pausas longas (2-3 s) e frase truncada ('e que transformam, criam bot'); áudio limpo, ruído de carro leve. Só serve, no máximo, como corte de bastidor sobre automação; não recomendado para Reel médico. Termo 'cloud' corrigido para 'Claude' na transcrição.",
+      "dur": 24.67,
+      "citacao_t0": 24.19,
+      "citacao_t1": 31.11,
+      "citacao_palavras": [
+        39,
+        51
+      ],
+      "item_id": "20261023_img-3807"
+    }
+  ]
+}
