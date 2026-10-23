@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-10-23T17:49:37+00:00",
+  "gerado_em": "2026-10-23T17:58:02+00:00",
   "n_itens": 11,
-  "n_segmentos": 106,
+  "n_segmentos": 107,
   "itens": [
     {
       "id": "20261023_img-1689",
@@ -1903,8 +1903,8 @@
           "citacao_t0": 121.63,
           "citacao_t1": 127.03,
           "citacao_palavras": [
-            157,
-            169
+            199,
+            211
           ],
           "item_id": "20261023_img-3530",
           "tipo": "video",
@@ -1941,8 +1941,8 @@
           "citacao_t0": 135.98,
           "citacao_t1": 145.34,
           "citacao_palavras": [
-            178,
-            196
+            220,
+            238
           ],
           "item_id": "20261023_img-3530",
           "tipo": "video",
@@ -1978,8 +1978,8 @@
           "citacao_t0": 224.72,
           "citacao_t1": 229.8,
           "citacao_palavras": [
-            354,
-            367
+            396,
+            409
           ],
           "item_id": "20261023_img-3530",
           "tipo": "video",
@@ -2016,8 +2016,8 @@
           "citacao_t0": 289.13,
           "citacao_t1": 295.4,
           "citacao_palavras": [
-            457,
-            471
+            499,
+            513
           ],
           "item_id": "20261023_img-3530",
           "tipo": "video",
@@ -2049,15 +2049,15 @@
             "fala-principal",
             "citacao-card"
           ],
-          "notas": "Analogia didática boa (RAM x HD). Ressalva técnica: ele diz que a memória de trabalho 'é executada pelo hipocampo' — a memória de trabalho depende sobretudo do córtex pré-frontal; o hipocampo atua na consolidação para longo prazo. Corrigir no roteiro/legenda.",
+          "notas": "Analogia didática boa (RAM x HD). Ressalva técnica: ele diz que a memória de trabalho 'é executada pelo hipocampo' — a memória de trabalho depende sobretudo do córtex pré-frontal; o hipocampo atua na consolidação para longo prazo. Corrigir no roteiro/legenda. | Retranscrição de 2026-10-23 recuperou a continuação (406,9–430,2 s): 'dá para fazer um paralelo com a mente humana? Falar que ela seria o nosso hipocampo'. IMPRECISÃO: memória de trabalho não é o hipocampo; ela depende sobretudo do córtex pré-frontal dorsolateral e de redes frontoparietais. O hipocampo participa da consolidação da memória declarativa/episódica de longo prazo (o 'HD' da analogia, no máximo a etapa de gravação). Não usar esse trecho sem corrigir; cortar o s06 em 406,5 s, como está.",
           "t0_original": 334.8,
           "t1_original": 406.5,
           "dur": 71.73,
           "citacao_t0": 401.37,
           "citacao_t1": 405.2,
           "citacao_palavras": [
-            665,
-            675
+            707,
+            717
           ],
           "item_id": "20261023_img-3530",
           "tipo": "video",
@@ -2095,8 +2095,8 @@
           "citacao_t0": 462.17,
           "citacao_t1": 464.42,
           "citacao_palavras": [
-            724,
-            731
+            805,
+            812
           ],
           "item_id": "20261023_img-3530",
           "tipo": "video",
@@ -2132,8 +2132,8 @@
           "citacao_t0": 597.93,
           "citacao_t1": 605.13,
           "citacao_palavras": [
-            969,
-            986
+            1050,
+            1067
           ],
           "item_id": "20261023_img-3530",
           "tipo": "video",
@@ -2170,8 +2170,8 @@
           "citacao_t0": 638.95,
           "citacao_t1": 643.57,
           "citacao_palavras": [
-            1050,
-            1065
+            1131,
+            1146
           ],
           "item_id": "20261023_img-3530",
           "tipo": "video",
@@ -2207,8 +2207,8 @@
           "citacao_t0": 683.51,
           "citacao_t1": 689.03,
           "citacao_palavras": [
-            1123,
-            1128
+            1204,
+            1209
           ],
           "item_id": "20261023_img-3530",
           "tipo": "video",
@@ -2248,8 +2248,46 @@
           "citacao_t0": 801.78,
           "citacao_t1": 811.22,
           "citacao_palavras": [
-            1315,
-            1330
+            1396,
+            1411
+          ],
+          "item_id": "20261023_img-3530",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3530#s14",
+          "t0": 835.21,
+          "t1": 866.71,
+          "tema": "TDAH e esgotamento: a energia vai para estímulo inútil e falta para o que importa",
+          "tags": [
+            "tdah",
+            "atencao",
+            "dopamina",
+            "esgotamento",
+            "produtividade",
+            "redes-sociais"
+          ],
+          "tese": "o cérebro que não consegue se regular gasta a energia em estímulo fácil e chega esgotado às tarefas que importam",
+          "citacao": "fica de certa forma esgotado porque você trabalhando sem parar, sem conseguir se regular",
+          "gancho_potencial": 3,
+          "publicos": [
+            "geral",
+            "residente"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 3,
+          "usos": [
+            "fala-principal",
+            "corte-rapido"
+          ],
+          "notas": "recuperado na retranscrição de 2026-10-23 (antes perdido pelo filtro no_speech); ponte entre s11 (feed/dopamina) e s12 (3 máquinas sob demanda). Termina em frase incompleta ('disponibilidade muito'): emendar com o início do s12. IMPRECISÃO leve: 'dopamina instantânea' e 'gastar energia' são metáforas; o TDAH envolve desregulação de circuitos dopaminérgicos e noradrenérgicos fronto-estriatais (função executiva e autorregulação), não consumo maior de energia cerebral. Manter como analogia, como ele mesmo ressalva no s13.",
+          "dur": 31.5,
+          "citacao_t0": 845.4,
+          "citacao_t1": 850.21,
+          "citacao_palavras": [
+            1459,
+            1472
           ],
           "item_id": "20261023_img-3530",
           "tipo": "video",
@@ -2288,8 +2326,8 @@
           "citacao_t0": 949.32,
           "citacao_t1": 955.71,
           "citacao_palavras": [
-            1505,
-            1517
+            1630,
+            1642
           ],
           "item_id": "20261023_img-3530",
           "tipo": "video",
@@ -2325,8 +2363,8 @@
           "citacao_t0": 1001.58,
           "citacao_t1": 1009.01,
           "citacao_palavras": [
-            1574,
-            1588
+            1699,
+            1713
           ],
           "item_id": "20261023_img-3530",
           "tipo": "video",
@@ -4156,8 +4194,8 @@
           "citacao_t0": 641.06,
           "citacao_t1": 648.0,
           "citacao_palavras": [
-            1130,
-            1143
+            1199,
+            1212
           ],
           "item_id": "20261023_img-3760",
           "tipo": "video",
@@ -4199,8 +4237,8 @@
           "citacao_t0": 778.87,
           "citacao_t1": 784.31,
           "citacao_palavras": [
-            1383,
-            1393
+            1452,
+            1462
           ],
           "item_id": "20261023_img-3760",
           "tipo": "video",

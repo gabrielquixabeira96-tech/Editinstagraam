@@ -1,6 +1,6 @@
 # Banco de material para Reels — catálogo
 
-Gerado em 2026-10-23T17:49:37+00:00 · 11 item(ns) · 106 segmento(s)
+Gerado em 2026-10-23T17:58:02+00:00 · 11 item(ns) · 107 segmento(s)
 
 Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: FP fala-principal, BR broll, CR corte-rapido, CC citacao-card · públicos: PL plantonista, RE residente, CA candidato-residencia, CV concursos-vestibular, GE geral
 
@@ -87,6 +87,7 @@ Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: 
 | 20261023_img-3530#s09 | 10:04.60–10:55.45 (51 s) | quem tem TDAH não pensa demais por escolha: não consegue parar de pensar | tdah, pensamento-acelerado, hiperatividade-mental, neurodivergencia | 4 | 3/4 | GE | FP CR CC |
 | 20261023_img-3530#s10 | 10:56.97–12:15.63 (79 s) | analogia da fábrica: 8 máquinas ligadas 24 h contra 3 máquinas que só funcionam sob demanda | tdah, analogia, produtividade, memoria-de-longo-prazo, neurodivergencia | 2 | 3/4 | GE | FP |
 | 20261023_img-3530#s11 | 12:17.71–13:52.72 (95 s) | o problema do TDAH: a necessidade de estímulo constante puxa para o estímulo mais fácil — rolar feed e dopamina instantânea | tdah, dopamina, vicio-em-tela, redes-sociais, procrastinacao, foco | 4 | 3/4 | GE CV CA | FP CC |
+| 20261023_img-3530#s14 | 13:55.21–14:26.71 (32 s) | TDAH e esgotamento: a energia vai para estímulo inútil e falta para o que importa | tdah, atencao, dopamina, esgotamento, produtividade, redes-sociais | 3 | 3/3 | GE RE | FP CR |
 | 20261023_img-3530#s12 | 14:26.75–16:23.02 (116 s) | melhor 3 máquinas produzindo o que importa do que 8 máquinas produzindo lixo: o que fazer com a energia do TDAH | tdah, produtividade, foco, analogia, disciplina, metodo-de-estudo | 4 | 3/4 | GE CV | FP CC |
 | 20261023_img-3530#s13 | 16:40.74–17:37.91 (57 s) | ressalva honesta: as analogias partem de premissas reais, mas precisam ser conferidas em pesquisa | bastidores, honestidade-intelectual, tdah, analogia, divulgacao-cientifica | 1 | 3/4 | GE | FP |
 
