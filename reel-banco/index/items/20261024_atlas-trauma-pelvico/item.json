@@ -1,0 +1,89 @@
+{
+  "id": "20261024_atlas-trauma-pelvico",
+  "nome": "Atlas do Trauma Pélvico",
+  "tipo": "doc",
+  "origem": {
+    "local": "/home/claude/Editinstagraam/reel-banco/work/entrada/Atlas do Trauma Pélvico.html",
+    "nome_original": "Atlas do Trauma Pélvico",
+    "drive_id": "1G_PebupWaHjGTyQikdmDLJlkYab32CiI",
+    "modifiedTime": "2026-10-24T17:50:27.676Z",
+    "drive_nome": "5Nqz7Ny9d38N3m2mtVw98S",
+    "drive_nota": "no Drive (01_entrada) o arquivo 1G_Peb... é só o wrapper claude.ai do artefato (33.680 B, sem o conteúdo da aula); o HTML completo vem do artefato",
+    "artifact_id": "5Nqz7Ny9d38N3m2mtVw98S",
+    "artifact_url": "https://claude.ai/artifact/5Nqz7Ny9d38N3m2mtVw98S"
+  },
+  "arquivo": "source.html",
+  "tamanho": 2013900,
+  "sha256": "45f3f8cf464651d2d8d00da59ead84cb2819b584aed137f012a59c71cc054d56",
+  "licenca": "propria",
+  "criado_em": "2026-10-24T18:31:12+00:00",
+  "titulo_doc": "Atlas do Trauma Pélvico",
+  "subtipo": "html",
+  "secoes": 16,
+  "extracao": {
+    "offline": true,
+    "tema": "light",
+    "blocos": ".key,.divg",
+    "clicar": ".steps button",
+    "modo": "secoes",
+    "requisicoes_bloqueadas": 1,
+    "hosts_bloqueados": [
+      "fonts.googleapis.com"
+    ],
+    "cliques": 32
+  },
+  "contact_sheets": [
+    "contact_sheet.jpg",
+    "contact_sheet_02.jpg",
+    "contact_sheet_03.jpg"
+  ],
+  "n_figuras": 70,
+  "figuras_licenca": {
+    "por_licenca": {
+      "propria": 32,
+      "terceiros (CC BY 4.0)": 30,
+      "terceiros (CC BY-NC 4.0)": 4,
+      "terceiros (CC BY-NC 3.0)": 3,
+      "terceiros (CC BY 2.0)": 1
+    },
+    "imagens_terceiros": 38,
+    "sem_uso_comercial": [
+      "s06_i1",
+      "s06_i2",
+      "s11_i1",
+      "s12_i2",
+      "s10_i3",
+      "s12_i4",
+      "s12_i5"
+    ]
+  },
+  "status": "indexado",
+  "atualizado_em": "2026-10-24T18:37:45+00:00",
+  "autor": "Gabriel Quixabeira",
+  "contexto": "aula-atlas interativa (Artifact) — R+ Cirurgia PUC-SP (Nucvest), prova 01/11/2026",
+  "fontes_adicionais": [
+    {
+      "drive_id": "1_rnCb_tWiRu2v9J_QZ2Rs46T95tGd2qT",
+      "nome": "Atlas do Trauma Pélvico.md",
+      "mimeType": "text/x-markdown",
+      "tamanho": 27656,
+      "sha256": "c4c564e5c8a3e7a6aad162a3f3c5cefa538b27eb5497f1d22ecafc7edbf3f052",
+      "modifiedTime": "2026-10-24T17:48:24.218Z",
+      "papel": "texto estático do mesmo artefato em Markdown (sem pranchas, glossário e instrumentos renderizados por JS); não reprocessado — o HTML principal cobre todo o conteúdo"
+    },
+    {
+      "drive_id": "1GxbFZaOIH9SZghWegR6NIlYVK_rW6ln7",
+      "nome": "Atlas do Trauma Pélvico.md",
+      "mimeType": "text/x-markdown",
+      "tamanho": 27656,
+      "sha256": "c4c564e5c8a3e7a6aad162a3f3c5cefa538b27eb5497f1d22ecafc7edbf3f052",
+      "modifiedTime": "2026-10-24T17:47:47.895Z",
+      "duplicata_de": "1_rnCb_tWiRu2v9J_QZ2Rs46T95tGd2qT",
+      "papel": "duplicata byte a byte (sha256 conferido em 2026-10-24); não reprocessada"
+    }
+  ],
+  "figuras_licenca_nota": "Documento de licença própria (Gabriel Quixabeira), mas as 38 imagens internas são de artigos de acesso aberto: 31 CC BY (30 em 4.0, 1 em 2.0) e 7 CC BY-NC (4.0/3.0: PMC13040096, PMC11289803, PMC2627451). Crédito por figura em figuras.json (campos fonte/licenca_detalhe); capturas de seção com figuras de terceiros trazem contem_terceiros. NC = não usar em conteúdo patrocinado/comercial. Versões CC registradas a partir dos metadados do PMC pelo autor do atlas, não conferidas uma a uma (aviso do próprio rodapé). Imagens cirúrgicas/cadavéricas (s11_i2, s11_i3, s12_i6, s12_i7, s13_i4, s04_i2, s04_i5, s03_i2) podem exigir aviso de conteúdo sensível no Instagram.",
+  "reabastecer": "Artifact read 5Nqz7Ny9d38N3m2mtVw98S -> salvar o HTML em work/entrada/'Atlas do Trauma Pélvico.html' -> python3 scripts/07_doc_ingest.py --local \"work/entrada/Atlas do Trauma Pélvico.html\" --item-id 20261024_atlas-trauma-pelvico --licenca propria (as opções de extração gravadas em 'extracao' são reaproveitadas)",
+  "n_segmentos": 14,
+  "indexado_em": "2026-10-24T18:37:45+00:00"
+}

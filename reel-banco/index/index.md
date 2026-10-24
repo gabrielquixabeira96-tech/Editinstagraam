@@ -1,6 +1,6 @@
 # Banco de material para Reels — catálogo
 
-Gerado em 2026-10-24T15:13:36+00:00 · 11 item(ns) · 111 segmento(s)
+Gerado em 2026-10-24T18:37:46+00:00 · 12 item(ns) · 125 segmento(s)
 
 Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: FP fala-principal, BR broll, CR corte-rapido, CC citacao-card · públicos: PL plantonista, RE residente, CA candidato-residencia, CV concursos-vestibular, GE geral
 
@@ -169,4 +169,23 @@ Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: 
 | 20261023_img-3808#s02 | 00:36.62–01:31.61 (55 s) | bot de comentários programado para responder com base em literatura do PubMed e didática de medicina e cirurgia | bastidores, inteligencia-artificial, claude, pubmed, medicina-baseada-em-evidencia, estudo, bot-de-comentarios | 2 | 3/3 | RE CA GE | FP CC |
 | 20261023_img-3808#s03 | 01:37.12–02:01.72 (25 s) | bastidor técnico: por que o bot exige seguir o perfil (Meta bloqueia uso livre; site anterior exigia chave de API de cada usuário) | bastidores, automacao, meta, instagram, api, chave-api | 1 | 3/3 | GE | FP |
 | 20261023_img-3808#s04 | 01:59.42–02:06.72 (7 s) | chamada para ação: para o bot responder o comentário é preciso seguir o perfil | cta, seguidores, bot-de-comentarios, instagram, automacao | 2 | 3/3 | GE | CR |
+
+## 20261024_atlas-trauma-pelvico — Atlas do Trauma Pélvico (html · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261024_atlas-trauma-pelvico#s01 | seção 2 | vocabulário do trauma pélvico: 22 termos-chave (anel, sínfise, sacroilíaca, corona mortis, binder, FAST, blush, packing, Retzius, REBOA, C-clamp, Young-Burgess, Tile, WSES, Faringer) | trauma-pelvico, fratura-pelvica, glossario, corona-mortis, binder, fast, blush, young-burgess, tile, wses, faringer, reboa | 2 | 3/0 | CA RE | CC BR |
+| 20261024_atlas-trauma-pelvico#s02 | seção 3 | o anel pélvico e os ligamentos: quem decide a estabilidade é o complexo ligamentar posterior | trauma-pelvico, fratura-pelvica, anel-pelvico, ligamentos, sacroiliaca, sacroespinal, sacrotuberal, livro-aberto, apc, estabilidade | 3 | 3/0 | CA RE | CC BR |
+| 20261024_atlas-trauma-pelvico#s03 | seção 4 | de onde sangra a fratura pélvica: 85–90% veia e osso esponjoso, minoria arterial — por isso angio não resolve tudo | trauma-pelvico, fratura-pelvica, sangramento, plexo-venoso, pre-sacral, arteria-iliaca-interna, corona-mortis, angioembolizacao, retzius | 4 | 3/0 | PL CA RE | CC BR |
+| 20261024_atlas-trauma-pelvico#s04 | seção 5 | classificação da fratura pélvica: Young-Burgess (vetor de força), Tile (estabilidade) e WSES (anatomia + hemodinâmica) | trauma-pelvico, fratura-pelvica, classificacao, young-burgess, tile, wses, apc, lc, cisalhamento-vertical, diastase, livro-aberto | 3 | 3/0 | CA RE PL | CC BR |
+| 20261024_atlas-trauma-pelvico#s05 | seção 6 | na sala de trauma: RX AP de pelve e E-FAST no instável, TC com contraste só no estável; o binder pode esconder a lesão na TC | trauma-pelvico, fratura-pelvica, rx-de-pelve, fast, e-fast, tc, blush, diastase, binder, pegadinha | 4 | 3/0 | PL CA RE | CC BR |
+| 20261024_atlas-trauma-pelvico#s06 | seção 7 | binder pélvico: centrado nos trocânteres maiores, nunca nas cristas ilíacas; é ponte e sai em 24–48 h | trauma-pelvico, fratura-pelvica, binder, trocanteres, trocanter-maior, cristas-iliacas, compressao-pelvica, lencol, primeira-conduta, erro-comum | 5 | 4/0 | PL CA RE GE | CC BR |
+| 20261024_atlas-trauma-pelvico#s07 | seção 8 | máquina de decisão do trauma pélvico: estável? FAST positivo? blush? — e as perguntas laterais (meato, períneo, angio disponível) | trauma-pelvico, fratura-pelvica, algoritmo, wses, fast, laparotomia, packing, angioembolizacao, reboa, conduta, instavel | 4 | 3/0 | PL CA RE | CC BR |
+| 20261024_atlas-trauma-pelvico#s08 | seção 9 | packing pré-peritoneal (técnica de Denver): incisão suprapúbica, espaço de Retzius, 3 compressas por lado, sempre com o anel fechado | trauma-pelvico, fratura-pelvica, packing, packing-pre-peritoneal, retzius, tamponamento, denver, controle-de-dano, fixador-externo | 3 | 3/0 | RE CA PL | CC BR |
+| 20261024_atlas-trauma-pelvico#s09 | seção 10 | angioembolização no trauma pélvico: resolve a artéria, não a veia; indicada por blush ou choque que persiste após fechar o anel e fazer packing | trauma-pelvico, fratura-pelvica, angioembolizacao, angiografia, blush, molas, embolizacao, arteria-iliaca-interna, idoso | 4 | 3/0 | PL CA RE | CC BR |
+| 20261024_atlas-trauma-pelvico#s10 | seção 11 | REBOA zona III e estabilização mecânica: balão aórtico como ponte, fixador externo anterior e C-clamp posterior | trauma-pelvico, fratura-pelvica, reboa, zona-iii, fixador-externo, c-clamp, fixacao-definitiva, cisalhamento-vertical, ponte | 3 | 3/0 | RE CA | CC BR |
+| 20261024_atlas-trauma-pelvico#s11 | seção 12 | bexiga e uretra na fratura pélvica: sangue no meato proíbe a sonda até a uretrografia; cistografia separa extra de intraperitoneal | trauma-pelvico, fratura-pelvica, uretra, uretra-posterior, sangue-no-meato, uretrografia-retrograda, cistostomia, bexiga, cistografia, ruptura-vesical, sonda-vesical | 4 | 3/0 | PL CA RE GE | CC BR |
+| 20261024_atlas-trauma-pelvico#s12 | seção 13 | fratura pélvica exposta e lesão retal: toque retal e vaginal obrigatórios; ferida perineal (zona I de Faringer) pede colostomia de derivação | trauma-pelvico, fratura-pelvica, fratura-exposta, lesao-retal, toque-retal, faringer, colostomia, desbridamento, antibiotico | 3 | 3/0 | PL CA RE | CC BR |
+| 20261024_atlas-trauma-pelvico#s13 | seção 14 | forja de questões: uma questão-mãe (motociclista instável, FAST negativo, sangue no meato) e sete pivôs em que um dado muda a conduta | trauma-pelvico, fratura-pelvica, questao, simulado, quiz, binder, fast, sangue-no-meato, distratores, r-mais | 3 | 3/0 | CA RE | CC BR |
+| 20261024_atlas-trauma-pelvico#s14 | seção 15 | tabela-mãe do trauma pélvico: gatilho do enunciado e conduta correspondente (binder, laparotomia, packing, angio, uretrografia, colostomia, C-clamp) | trauma-pelvico, fratura-pelvica, tabela, resumo, conduta, binder, packing, angioembolizacao, uretra, c-clamp, revisao | 2 | 3/0 | CA RE | CC BR |
 

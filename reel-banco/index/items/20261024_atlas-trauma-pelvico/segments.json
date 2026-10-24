@@ -1,0 +1,564 @@
+{
+  "item_id": "20261024_atlas-trauma-pelvico",
+  "validado_em": "2026-10-24T18:37:45+00:00",
+  "segments": [
+    {
+      "id": "20261024_atlas-trauma-pelvico#s01",
+      "t0": null,
+      "t1": null,
+      "ref": {
+        "secao": 2,
+        "secao_id": "s02",
+        "ancora": "c00"
+      },
+      "assunto": "trauma_pelvico",
+      "tema": "vocabulário do trauma pélvico: 22 termos-chave (anel, sínfise, sacroilíaca, corona mortis, binder, FAST, blush, packing, Retzius, REBOA, C-clamp, Young-Burgess, Tile, WSES, Faringer)",
+      "tags": [
+        "trauma-pelvico",
+        "fratura-pelvica",
+        "glossario",
+        "corona-mortis",
+        "binder",
+        "fast",
+        "blush",
+        "young-burgess",
+        "tile",
+        "wses",
+        "faringer",
+        "reboa"
+      ],
+      "tese": "antes da conduta é preciso dominar o vocabulário; um anel não quebra num ponto só",
+      "citacao": "Anel não quebra num ponto só: achou uma fratura, procure a segunda.",
+      "gancho_potencial": 2,
+      "publicos": [
+        "candidato-residencia",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 0,
+      "usos": [
+        "citacao-card",
+        "broll"
+      ],
+      "notas": "Captura da seção (topo, 540 px @2x). Citação vem do texto oculto dos cartões ('Por que importa'). IMPRECISÃO: o cartão 'Fixador externo' diz que ele 'fecha o anel em APC II–III e LC II–III' — em LC o anel já está fechado/encavalado; o fixador ESTABILIZA (o próprio texto da seção 09 diz 'estabilidade temporária'). Não usar o cartão como está.",
+      "item_id": "20261024_atlas-trauma-pelvico"
+    },
+    {
+      "id": "20261024_atlas-trauma-pelvico#s02",
+      "t0": null,
+      "t1": null,
+      "ref": {
+        "secao": 3,
+        "secao_id": "s03",
+        "ancora": "c01"
+      },
+      "assunto": "trauma_pelvico",
+      "tema": "o anel pélvico e os ligamentos: quem decide a estabilidade é o complexo ligamentar posterior",
+      "tags": [
+        "trauma-pelvico",
+        "fratura-pelvica",
+        "anel-pelvico",
+        "ligamentos",
+        "sacroiliaca",
+        "sacroespinal",
+        "sacrotuberal",
+        "livro-aberto",
+        "apc",
+        "estabilidade"
+      ],
+      "tese": "rompeu sacroespinal e sacrotuberal: instabilidade rotacional; rompeu também o sacroilíaco posterior: rotacional e vertical",
+      "citacao": "Um anel não quebra em um ponto só, e quem decide se ele fica estável são os ligamentos posteriores.",
+      "gancho_potencial": 3,
+      "publicos": [
+        "candidato-residencia",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 0,
+      "usos": [
+        "citacao-card",
+        "broll"
+      ],
+      "notas": "Captura da seção (topo, 540 px @2x). A captura mostra figura(s) de artigo CC BY: creditar na tela (ver figuras.json, contem_terceiros). Conteúdo coerente com Tile/Young-Burgess e WSES 2017. Bloco 'Guarde isto' em s03_b1.",
+      "item_id": "20261024_atlas-trauma-pelvico"
+    },
+    {
+      "id": "20261024_atlas-trauma-pelvico#s03",
+      "t0": null,
+      "t1": null,
+      "ref": {
+        "secao": 4,
+        "secao_id": "s04",
+        "ancora": "c02"
+      },
+      "assunto": "trauma_pelvico",
+      "tema": "de onde sangra a fratura pélvica: 85–90% veia e osso esponjoso, minoria arterial — por isso angio não resolve tudo",
+      "tags": [
+        "trauma-pelvico",
+        "fratura-pelvica",
+        "sangramento",
+        "plexo-venoso",
+        "pre-sacral",
+        "arteria-iliaca-interna",
+        "corona-mortis",
+        "angioembolizacao",
+        "retzius"
+      ],
+      "tese": "o sangue do instável é majoritariamente venoso/ósseo e para com volume menor e compressão; artéria é minoria e se trata com angio",
+      "citacao": "cerca de 85–90% do sangue vem de veias e de osso esponjoso; só 10–15% é arterial",
+      "gancho_potencial": 4,
+      "publicos": [
+        "plantonista",
+        "candidato-residencia",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 0,
+      "usos": [
+        "citacao-card",
+        "broll"
+      ],
+      "notas": "Captura da seção (topo, 540 px @2x). A captura mostra figura(s) de artigo CC BY: creditar na tela (ver figuras.json, contem_terceiros). Números: WSES 2017 dá 80–90% venoso e 10–20% arterial; Stahel 2024 >90%/<10% — o próprio atlas registra a divergência (s04_b2); em Reel prefira 'a maior parte é venosa e óssea (80–90%, WSES 2017)'. PONTO A CONFERIR antes de ir ao ar: o texto afirma que a estratégia de mandar todo instável direto para a angiografia 'teve mortalidade acima de 40%' — a cifra e a atribuição causal à estratégia angio-primeiro não foram conferidas na WSES 2017 (que descreve a mortalidade alta do instável em geral); não usar essa frase sem a fonte primária. Corona mortis em ~49% das hemipelves (Sanna 2018) ok.",
+      "item_id": "20261024_atlas-trauma-pelvico"
+    },
+    {
+      "id": "20261024_atlas-trauma-pelvico#s04",
+      "t0": null,
+      "t1": null,
+      "ref": {
+        "secao": 5,
+        "secao_id": "s05",
+        "ancora": "c03"
+      },
+      "assunto": "trauma_pelvico",
+      "tema": "classificação da fratura pélvica: Young-Burgess (vetor de força), Tile (estabilidade) e WSES (anatomia + hemodinâmica)",
+      "tags": [
+        "trauma-pelvico",
+        "fratura-pelvica",
+        "classificacao",
+        "young-burgess",
+        "tile",
+        "wses",
+        "apc",
+        "lc",
+        "cisalhamento-vertical",
+        "diastase",
+        "livro-aberto"
+      ],
+      "tese": "APC II–III e VS são os que mais sangram; diástase > 2,5 cm = APC II no mínimo; qualquer instável é WSES IV",
+      "citacao": "Ou seja, um LC I em paciente chocado já é WSES IV.",
+      "gancho_potencial": 3,
+      "publicos": [
+        "candidato-residencia",
+        "residente",
+        "plantonista"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 0,
+      "usos": [
+        "citacao-card",
+        "broll"
+      ],
+      "notas": "Captura da seção (topo, 540 px @2x). A captura mostra figura(s) de artigo CC BY: creditar na tela (ver figuras.json, contem_terceiros). Classes WSES (I APC I/LC I estável; II APC II–III/LC II–III estável; III VS/CM estável; IV qualquer instável) conferem com WSES 2017. A CONFERIR: régua de volume pélvico (basal ≈1.500 mL; +20% com 5 cm e +40% com 10 cm de diástase, 'Stahel 2024', valores intermediários interpolados pelo autor) — conferir os números em Stahel 2024 antes de usar em card.",
+      "item_id": "20261024_atlas-trauma-pelvico"
+    },
+    {
+      "id": "20261024_atlas-trauma-pelvico#s05",
+      "t0": null,
+      "t1": null,
+      "ref": {
+        "secao": 6,
+        "secao_id": "s06",
+        "ancora": "c04"
+      },
+      "assunto": "trauma_pelvico",
+      "tema": "na sala de trauma: RX AP de pelve e E-FAST no instável, TC com contraste só no estável; o binder pode esconder a lesão na TC",
+      "tags": [
+        "trauma-pelvico",
+        "fratura-pelvica",
+        "rx-de-pelve",
+        "fast",
+        "e-fast",
+        "tc",
+        "blush",
+        "diastase",
+        "binder",
+        "pegadinha"
+      ],
+      "tese": "instável faz RX AP e FAST na sala, nunca TC; estável faz TC e blush leva à angio; TC normal com binder e dor persistente pede RX após soltar o binder",
+      "citacao": "o binder bem colocado pode reduzir a pelve tão bem que a TC sai normal",
+      "gancho_potencial": 4,
+      "publicos": [
+        "plantonista",
+        "candidato-residencia",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 0,
+      "usos": [
+        "citacao-card",
+        "broll"
+      ],
+      "notas": "Captura da seção (topo, 540 px @2x). Figuras da seção: RX e TC de Song 2025 são CC BY-NC (sem uso comercial); RX pós-binder de Jamme 2018 CC BY. A CONFERIR: 'TC multifásica com contraste tem acurácia de cerca de 98% para o blush' e 'hematoma ≥ 500 mL sugere lesão arterial' — números atribuídos à literatura; conferir na WSES 2017 antes de usar como dado em card. Fluxo (instável sem TC) coerente com ATLS 10 e WSES 2017.",
+      "item_id": "20261024_atlas-trauma-pelvico"
+    },
+    {
+      "id": "20261024_atlas-trauma-pelvico#s06",
+      "t0": null,
+      "t1": null,
+      "ref": {
+        "secao": 7,
+        "secao_id": "s07",
+        "ancora": "c05"
+      },
+      "assunto": "trauma_pelvico",
+      "tema": "binder pélvico: centrado nos trocânteres maiores, nunca nas cristas ilíacas; é ponte e sai em 24–48 h",
+      "tags": [
+        "trauma-pelvico",
+        "fratura-pelvica",
+        "binder",
+        "trocanteres",
+        "trocanter-maior",
+        "cristas-iliacas",
+        "compressao-pelvica",
+        "lencol",
+        "primeira-conduta",
+        "erro-comum"
+      ],
+      "tese": "o binder só fecha o anel centrado nos trocânteres maiores; nas cristas ilíacas não fecha e pode abrir a sínfise; é ponte, não tratamento",
+      "citacao": "na altura das cristas ilíacas ele não fecha o anel e pode até aumentar a diástase",
+      "gancho_potencial": 5,
+      "publicos": [
+        "plantonista",
+        "candidato-residencia",
+        "residente",
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 0,
+      "usos": [
+        "citacao-card",
+        "broll"
+      ],
+      "notas": "Captura da seção (topo, 540 px @2x). Gancho forte (antítese: todo mundo põe na crista, o certo é no trocânter). Figura do topograma (Timon 2025, CC BY 4.0) mostra o binder alto — creditar se usar a captura. Pressão >9,3 kPa por 2–3 h lesa a pele: confere com WSES 2017. A CONFERIR/IMPRECISÕES: (1) 'Não se faz mais a manobra de abrir e fechar as asas ilíacas' é mais forte que o ATLS 10, que orienta manipular a pelve no máximo uma vez e com delicadeza (não repetir); (2) gestantes e idosos aparecem junto da 'contraindicação relativa' — trata-se de cautela, não de contraindicação; (3) binder em LC: WSES não contraindica formalmente (o atlas registra a divergência em s07_b2).",
+      "item_id": "20261024_atlas-trauma-pelvico"
+    },
+    {
+      "id": "20261024_atlas-trauma-pelvico#s07",
+      "t0": null,
+      "t1": null,
+      "ref": {
+        "secao": 8,
+        "secao_id": "s08",
+        "ancora": "c06"
+      },
+      "assunto": "trauma_pelvico",
+      "tema": "máquina de decisão do trauma pélvico: estável? FAST positivo? blush? — e as perguntas laterais (meato, períneo, angio disponível)",
+      "tags": [
+        "trauma-pelvico",
+        "fratura-pelvica",
+        "algoritmo",
+        "wses",
+        "fast",
+        "laparotomia",
+        "packing",
+        "angioembolizacao",
+        "reboa",
+        "conduta",
+        "instavel"
+      ],
+      "tese": "instável com FAST positivo vai para laparotomia; instável com FAST negativo: fechar o anel, packing pré-peritoneal e/ou angio, REBOA zona III como ponte; estável com blush: angio",
+      "citacao": "Três perguntas definem a conduta: o paciente está estável? O FAST é positivo? A TC mostra blush?",
+      "gancho_potencial": 4,
+      "publicos": [
+        "plantonista",
+        "candidato-residencia",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 0,
+      "usos": [
+        "citacao-card",
+        "broll"
+      ],
+      "notas": "Captura da seção (topo, 540 px @2x). A captura mostra figura(s) de artigo CC BY: creditar na tela (ver figuras.json, contem_terceiros). Núcleo do tema (85% de chance estimada pelo autor). Algoritmo coerente com WSES 2017 (fluxograma da figura é a Fig. 3 da WSES, CC BY 4.0). Pequena imprecisão no quadro 'Divergência' (s08_b1): diz que ATLS e EAST 2011 'sempre deram peso' à angioembolização — o ATLS 10 apresenta angioembolização e packing pré-peritoneal como opções; 'sempre' exagera.",
+      "item_id": "20261024_atlas-trauma-pelvico"
+    },
+    {
+      "id": "20261024_atlas-trauma-pelvico#s08",
+      "t0": null,
+      "t1": null,
+      "ref": {
+        "secao": 9,
+        "secao_id": "s09",
+        "ancora": "c07"
+      },
+      "assunto": "trauma_pelvico",
+      "tema": "packing pré-peritoneal (técnica de Denver): incisão suprapúbica, espaço de Retzius, 3 compressas por lado, sempre com o anel fechado",
+      "tags": [
+        "trauma-pelvico",
+        "fratura-pelvica",
+        "packing",
+        "packing-pre-peritoneal",
+        "retzius",
+        "tamponamento",
+        "denver",
+        "controle-de-dano",
+        "fixador-externo"
+      ],
+      "tese": "o packing comprime o plexo venoso e o osso sem abrir o peritônio; precisa de contrapressão (anel fechado) e sai em 48–72 h; se segue sangrando, é arterial: angio",
+      "citacao": "Comprime o plexo venoso e o osso sangrante em menos de 20 minutos.",
+      "gancho_potencial": 3,
+      "publicos": [
+        "residente",
+        "candidato-residencia",
+        "plantonista"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 0,
+      "usos": [
+        "citacao-card",
+        "broll"
+      ],
+      "notas": "Captura da seção (topo, 540 px @2x). A captura mostra figura(s) de artigo CC BY: creditar na tela (ver figuras.json, contem_terceiros). Fotos intraoperatórias (Jang 2016, CC BY 4.0) — conteúdo cirúrgico, avaliar aviso de conteúdo sensível. A CONFERIR: '55 min até o packing contra 194 min até a angiografia' é dado de uma série coreana (Jang 2016); citar com a fonte ou não usar. Técnica e retirada em 48–72 h coerentes com WSES 2017.",
+      "item_id": "20261024_atlas-trauma-pelvico"
+    },
+    {
+      "id": "20261024_atlas-trauma-pelvico#s09",
+      "t0": null,
+      "t1": null,
+      "ref": {
+        "secao": 10,
+        "secao_id": "s10",
+        "ancora": "c08"
+      },
+      "assunto": "trauma_pelvico",
+      "tema": "angioembolização no trauma pélvico: resolve a artéria, não a veia; indicada por blush ou choque que persiste após fechar o anel e fazer packing",
+      "tags": [
+        "trauma-pelvico",
+        "fratura-pelvica",
+        "angioembolizacao",
+        "angiografia",
+        "blush",
+        "molas",
+        "embolizacao",
+        "arteria-iliaca-interna",
+        "idoso"
+      ],
+      "tese": "angio é complementar ao packing: blush no estável ou sangramento persistente após packing; idoso sangra mais por artéria; sem sala imediata, não levar o instável para esperar",
+      "citacao": "Resolve a artéria, não resolve a veia.",
+      "gancho_potencial": 4,
+      "publicos": [
+        "plantonista",
+        "candidato-residencia",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 0,
+      "usos": [
+        "citacao-card",
+        "broll"
+      ],
+      "notas": "Captura da seção (topo, 540 px @2x). A captura mostra figura(s) de artigo CC BY: creditar na tela (ver figuras.json, contem_terceiros). Uma das três imagens é CC BY-NC (Cao 2024) e outra CC BY 2.0 (Cherry 2011). PONTO A CONFERIR antes de ir ao ar: o quadro 'Caminho errado' (texto oculto) afirma 'Angio isolada no instável teve mortalidade acima de 40%' — mesma cifra não conferida da seção 02; não usar sem fonte primária.",
+      "item_id": "20261024_atlas-trauma-pelvico"
+    },
+    {
+      "id": "20261024_atlas-trauma-pelvico#s10",
+      "t0": null,
+      "t1": null,
+      "ref": {
+        "secao": 11,
+        "secao_id": "s11",
+        "ancora": "c09"
+      },
+      "assunto": "trauma_pelvico",
+      "tema": "REBOA zona III e estabilização mecânica: balão aórtico como ponte, fixador externo anterior e C-clamp posterior",
+      "tags": [
+        "trauma-pelvico",
+        "fratura-pelvica",
+        "reboa",
+        "zona-iii",
+        "fixador-externo",
+        "c-clamp",
+        "fixacao-definitiva",
+        "cisalhamento-vertical",
+        "ponte"
+      ],
+      "tese": "REBOA para pelve é zona III (entre a última renal e a bifurcação), ponte pelo menor tempo; lesão ílio-femoral faz o balão inflar fora do vaso; fixador externo para lesões rotacionais, C-clamp para VS",
+      "citacao": "com lesão da ilíaca o cateter sai do vaso e o balão infla dentro da pelve",
+      "gancho_potencial": 3,
+      "publicos": [
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 0,
+      "usos": [
+        "citacao-card",
+        "broll"
+      ],
+      "notas": "Captura da seção (topo, 540 px @2x). A captura mostra figura(s) de artigo CC BY: creditar na tela (ver figuras.json, contem_terceiros). Zonas do REBOA, recomendação fraca da WSES (2B), contraindicações do C-clamp (sacro cominutivo/transforaminal, asa ilíaca, LC) e fixação definitiva (até 24 h no estável, após o 4º dia no desarranjado) coerentes com WSES 2017. RX do REBOA é CC BY-NC (Song 2025); foto do balão fora do vaso (Özkurtul 2019, CC BY 4.0) é cirúrgica — aviso de conteúdo sensível.",
+      "item_id": "20261024_atlas-trauma-pelvico"
+    },
+    {
+      "id": "20261024_atlas-trauma-pelvico#s11",
+      "t0": null,
+      "t1": null,
+      "ref": {
+        "secao": 12,
+        "secao_id": "s12",
+        "ancora": "c10"
+      },
+      "assunto": "trauma_pelvico",
+      "tema": "bexiga e uretra na fratura pélvica: sangue no meato proíbe a sonda até a uretrografia; cistografia separa extra de intraperitoneal",
+      "tags": [
+        "trauma-pelvico",
+        "fratura-pelvica",
+        "uretra",
+        "uretra-posterior",
+        "sangue-no-meato",
+        "uretrografia-retrograda",
+        "cistostomia",
+        "bexiga",
+        "cistografia",
+        "ruptura-vesical",
+        "sonda-vesical"
+      ],
+      "tese": "sangue no meato, hematoma perineal ou próstata alta: não sondar, uretrografia retrógrada e cistostomia se precisar; extraperitoneal fica com sonda, intraperitoneal vai para cirurgia",
+      "citacao": "Sangue no meato proíbe a sonda até a uretrografia",
+      "gancho_potencial": 4,
+      "publicos": [
+        "plantonista",
+        "candidato-residencia",
+        "residente",
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 0,
+      "usos": [
+        "citacao-card",
+        "broll"
+      ],
+      "notas": "Captura da seção (topo, 540 px @2x). A captura mostra figura(s) de artigo CC BY: creditar na tela (ver figuras.json, contem_terceiros). Conduta coerente com ATLS 10 (não sondar antes da uretrografia). IMPRECISÃO: 'uretra posterior (prostática e membranosa, cerca de 3 cm)' subestima — prostática ~3–4 cm + membranosa ~1–2 cm. Frequências extra (60–90%) e intraperitoneal (15–25%) variam entre fontes. Quadro 'Divergência' (s12_b2): admissão de uma tentativa gentil de sondagem por urologista (EAU/AUA) — para público de prova manter a versão ATLS. TCs/cistografia de Shin 2007 são CC BY-NC 3.0 (sem uso comercial).",
+      "item_id": "20261024_atlas-trauma-pelvico"
+    },
+    {
+      "id": "20261024_atlas-trauma-pelvico#s12",
+      "t0": null,
+      "t1": null,
+      "ref": {
+        "secao": 13,
+        "secao_id": "s13",
+        "ancora": "c11"
+      },
+      "assunto": "trauma_pelvico",
+      "tema": "fratura pélvica exposta e lesão retal: toque retal e vaginal obrigatórios; ferida perineal (zona I de Faringer) pede colostomia de derivação",
+      "tags": [
+        "trauma-pelvico",
+        "fratura-pelvica",
+        "fratura-exposta",
+        "lesao-retal",
+        "toque-retal",
+        "faringer",
+        "colostomia",
+        "desbridamento",
+        "antibiotico"
+      ],
+      "tese": "sangue no toque, espícula ou laceração transformam fratura fechada em exposta; zona I ou lesão retal = colostomia de derivação + desbridamento + antibiótico IV",
+      "citacao": "sangue no dedo de luva, espícula óssea palpável ou laceração mudam a classificação de fechada para exposta",
+      "gancho_potencial": 3,
+      "publicos": [
+        "plantonista",
+        "candidato-residencia",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 0,
+      "usos": [
+        "citacao-card",
+        "broll"
+      ],
+      "notas": "Captura da seção (topo, 540 px @2x). A captura mostra figura(s) de artigo CC BY: creditar na tela (ver figuras.json, contem_terceiros). Zonas de Faringer conferem com o original. Nota: colostomia de rotina em toda ferida zona I é a regra clássica (Faringer 1994); séries recentes discutem individualizar quando não há lesão retal — para prova, a resposta é colostomia. Fotos clínicas (Hermans 2018, Bhattachan 2021) são gráficas — aviso de conteúdo sensível.",
+      "item_id": "20261024_atlas-trauma-pelvico"
+    },
+    {
+      "id": "20261024_atlas-trauma-pelvico#s13",
+      "t0": null,
+      "t1": null,
+      "ref": {
+        "secao": 14,
+        "secao_id": "s14",
+        "ancora": "c12"
+      },
+      "assunto": "trauma_pelvico",
+      "tema": "forja de questões: uma questão-mãe (motociclista instável, FAST negativo, sangue no meato) e sete pivôs em que um dado muda a conduta",
+      "tags": [
+        "trauma-pelvico",
+        "fratura-pelvica",
+        "questao",
+        "simulado",
+        "quiz",
+        "binder",
+        "fast",
+        "sangue-no-meato",
+        "distratores",
+        "r-mais"
+      ],
+      "tese": "os distratores são condutas certas de outras situações: mudar um dado do enunciado muda a resposta",
+      "citacao": "Os distratores são condutas certas de outras situações.",
+      "gancho_potencial": 3,
+      "publicos": [
+        "candidato-residencia",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 0,
+      "usos": [
+        "citacao-card",
+        "broll"
+      ],
+      "notas": "Captura da seção (topo, 540 px @2x). Bom para Reel de quiz (enunciado + 4 alternativas na captura). Gabarito da questão-mãe: C (binder nos trocânteres + transfusão maciça, sem sondar) — coerente com ATLS 10/WSES 2017.",
+      "item_id": "20261024_atlas-trauma-pelvico"
+    },
+    {
+      "id": "20261024_atlas-trauma-pelvico#s14",
+      "t0": null,
+      "t1": null,
+      "ref": {
+        "secao": 15,
+        "secao_id": "s15",
+        "ancora": "c13"
+      },
+      "assunto": "trauma_pelvico",
+      "tema": "tabela-mãe do trauma pélvico: gatilho do enunciado e conduta correspondente (binder, laparotomia, packing, angio, uretrografia, colostomia, C-clamp)",
+      "tags": [
+        "trauma-pelvico",
+        "fratura-pelvica",
+        "tabela",
+        "resumo",
+        "conduta",
+        "binder",
+        "packing",
+        "angioembolizacao",
+        "uretra",
+        "c-clamp",
+        "revisao"
+      ],
+      "tese": "cada gatilho do enunciado tem uma conduta: instável → binder; FAST+ → laparotomia; FAST− sem resposta → packing + fixação; blush → angio; meato → uretrografia",
+      "citacao": "Retirar e trocar por fixação em até 24–48 h",
+      "gancho_potencial": 2,
+      "publicos": [
+        "candidato-residencia",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 0,
+      "usos": [
+        "citacao-card",
+        "broll"
+      ],
+      "notas": "Captura da seção (topo, 540 px @2x). Cartões coerentes com o restante do atlas e com WSES 2017; mesma ressalva da seção 05 sobre binder em LC ('com cautela'). Bom como B-roll de revisão rápida; texto pequeno em 9:16 — usar recortes.",
+      "item_id": "20261024_atlas-trauma-pelvico"
+    }
+  ]
+}
