@@ -154,20 +154,10 @@ sem `--drive-id` e documentos precisam ser reabastecidos (ver SKILL.md, "Reabast
 - Material de terceiros: só com `licenca` e `fonte` registradas e crédito na tela.
 - **Cota de download do Drive por arquivo:** baixar o mesmo vídeo grande muitas vezes no dia faz o link público
   devolver "Quota exceeded" (`drive_fetch` sai com código 4) por horas. Em 2026-10-23 isso aconteceu com o
-  IMG_3502 (6,6 GB) e não liberou em 2 h de tentativas. Não contorne copiando o arquivo no Drive (ocupa o
-  armazenamento do Gabriel); espere a cota e teste com
+  IMG_3502 (6,6 GB) e não liberou em 2 h de tentativas; liberou na manhã seguinte. Não contorne copiando o
+  arquivo no Drive (ocupa o armazenamento do Gabriel); espere a cota e teste com
   `python3 scripts/drive_fetch.py <drive_id> - --probe-bytes 65536` (código 0 = liberado).
-
-## Pendências
-
-- **20261023_img-3502 — retranscrição pendente** (bug do filtro no_speech, corrigido em 2026-10-23: ~469 palavras
-  perdidas, lacunas em ~1:41–2:32, 5:36–6:20, 7:17–8:39, 10:17–11:33 e 11:58–12:35). A cota de download do Drive
-  desse arquivo estourou em 23/10. Para retomar (a partir de 24/10), de dentro de `reel-banco/`:
-  ```bash
-  python3 scripts/drive_fetch.py 1yLKAllOmoV4w-AO4vzYsyJXdLnGd03xI - --probe-bytes 65536 && \
-  python3 scripts/02_fetch.py --item 20261023_img-3502 && \
-  python3 scripts/03_transcribe.py 20261023_img-3502 --replace && rm -f work/banco/20261023_img-3502/source.*
-  ```
-  Depois: conferir os termos do texto recuperado, ler as lacunas (em especial 10:17–11:33, no meio do s08)
-  e criar segmentos para o que não estiver coberto, rodar `run_ingest.py --finish 20261023_img-3502`, fazer
-  commit/push e apagar esta pendência.
+- **`--replace` e correções manuais:** o whisper pode não sair bit-idêntico entre execuções (no IMG_3502, tempos
+  deslocados ~20 ms): só 9 das 28 correções de `word` casaram por start/end, e 30 das 39 "reaplicadas" eram apenas
+  diferenças entre execuções. Depois de um `--replace`, compare o texto com o `transcript.vN.txt` (texto original
+  do whisper antigo) e o `transcript.vN.json` (com as correções) e reaplique à mão as que faltarem.

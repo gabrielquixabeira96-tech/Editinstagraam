@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-10-23T17:58:02+00:00",
+  "gerado_em": "2026-10-24T15:13:36+00:00",
   "n_itens": 11,
-  "n_segmentos": 107,
+  "n_segmentos": 111,
   "itens": [
     {
       "id": "20261023_img-1689",
@@ -705,7 +705,7 @@
             "oncologia-cirurgica"
           ],
           "tese": "doença rara que é curável no início e fatal se ignorada vale mais estudo do que a frequência sugere",
-          "citacao": "é uma patologia que você consegue resolver, tratar facilmente o estado inicial e é potencialmente fatal,",
+          "citacao": "é uma patologia que você consegue resolver e tratar facilmente o estado inicial e é potencialmente fatal",
           "gancho_potencial": 3,
           "publicos": [
             "residente",
@@ -716,15 +716,15 @@
           "usos": [
             "fala-principal"
           ],
-          "notas": "Abertura natural ('Não sei se vocês já ouviram falar do GIST'). 'Pergão, atropelando aqui já as coisas' (~34 s) — autocorreção, cortar. Simplificação aceitável: GIST localizado ressecado tem bom prognóstico, mas o risco depende de tamanho, índice mitótico e sítio (Miettinen/Fletcher).",
+          "notas": "Abertura natural ('Tá, não sei se vocês já ouviram falar do GIST'). 'perdão, atropelando aqui já as coisas' (~34 s) — autocorreção, cortar. Simplificação aceitável: GIST localizado ressecado tem bom prognóstico, mas o risco depende de tamanho, índice mitótico e sítio (Miettinen/Fletcher).",
           "t0_original": 2.7,
           "t1_original": 55.0,
           "dur": 51.42,
-          "citacao_t0": 43.8,
-          "citacao_t1": 53.22,
+          "citacao_t0": 43.78,
+          "citacao_t1": 53.2,
           "citacao_palavras": [
-            54,
-            69
+            58,
+            74
           ],
           "item_id": "20261023_img-3502",
           "tipo": "video",
@@ -733,7 +733,7 @@
         {
           "id": "20261023_img-3502#s02",
           "t0": 55.74,
-          "t1": 101.72,
+          "t1": 99.01,
           "tema": "diagnóstico precoce de uma doença tratável muda o número necessário para salvar uma vida",
           "tags": [
             "nnt",
@@ -755,15 +755,54 @@
           "usos": [
             "fala-principal"
           ],
-          "notas": "IMPRECISÃO: o raciocínio está invertido. Se o diagnóstico precoce traz grande benefício, o NNT (número necessário tratar/diagnosticar para salvar uma vida) DIMINUI, não aumenta. O que aumenta numa doença rara é o número necessário RASTREAR (NNS). Corrigir em tela ou não usar. 'aquele número... é de gênio total' = mal transcrito (provavelmente 'NNT').",
+          "notas": "IMPRECISÃO: o raciocínio está invertido. Se o diagnóstico precoce traz grande benefício, o NNT (número necessário tratar/diagnosticar para salvar uma vida) DIMINUI, não aumenta. O que aumenta numa doença rara é o número necessário RASTREAR (NNS). Corrigir em tela ou não usar. 'aquele número... é gene total' = mal transcrito (provavelmente 'NNT'). Continua em #s12 (sintomas inespecíficos).",
           "t0_original": 55.7,
           "t1_original": 101.5,
-          "dur": 45.98,
-          "citacao_t0": 83.35,
-          "citacao_t1": 89.17,
+          "dur": 43.27,
+          "citacao_t0": 83.37,
+          "citacao_t1": 89.11,
           "citacao_palavras": [
-            107,
-            120
+            111,
+            124
+          ],
+          "item_id": "20261023_img-3502",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3502#s12",
+          "t0": 100.25,
+          "t1": 152.18,
+          "tema": "GIST não tem cara clínica: sintomas inespecíficos do trato gastrointestinal tornam o diagnóstico clínico difícil — por isso clínico e cirurgião precisam lembrar que ele existe",
+          "tags": [
+            "gist",
+            "tumor-estromal-gastrointestinal",
+            "diagnostico-diferencial",
+            "sintomas-inespecificos",
+            "trato-gastrointestinal",
+            "doenca-rara",
+            "cirurgia-oncologica",
+            "hipotese-diagnostica"
+          ],
+          "tese": "no início o GIST dá sintomas comuns, iguais aos de qualquer doença do trato gastrointestinal; a clínica não fecha o diagnóstico, mas só entra no diferencial de quem sabe que a doença existe",
+          "citacao": "diagnóstico diferencial que clinicamente é muito difícil, mas é importante você saber que existe,",
+          "gancho_potencial": 2,
+          "publicos": [
+            "residente",
+            "candidato-residencia"
+          ],
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "Trecho recuperado na retranscrição (1:41–2:32 tinha sido descartado pelo filtro de no_speech). Correto em essência; complemento para legenda/tela: cerca de 20% dos GIST são achados incidentais (série populacional sueca: ~70% sintomáticos, ~20% incidentais, ~10% em necropsia); quando há sintoma, o mais comum é sangramento digestivo (melena, hematêmese, anemia), depois dor/desconforto abdominal, massa palpável e saciedade precoce. Sítio: estômago ~60%, delgado ~30%. O diagnóstico vem de TC e endoscopia/ecoendoscopia com biópsia e imuno-histoquímica (CD117/KIT, DOG1), não da clínica. Fala com tropeços no meio ('os sinais, então umas clínicas iniciais, não são nada que seja permita o clínico') — usar a partir de 'Os sintomas são muito comuns' (2:10). 'aventar' e 'trato gastro intestinal' corrigidos na transcrição.",
+          "qualidade_visual": 4,
+          "qualidade_audio": 4,
+          "dur": 51.93,
+          "citacao_t0": 146.48,
+          "citacao_t1": 152.18,
+          "citacao_palavras": [
+            219,
+            232
           ],
           "item_id": "20261023_img-3502",
           "tipo": "video",
@@ -771,7 +810,7 @@
         },
         {
           "id": "20261023_img-3502#s03",
-          "t0": 152.78,
+          "t0": 152.5,
           "t1": 208.44,
           "tema": "você só pergunta o que conhece: a história familiar que passa batido quando não se conhece a síndrome",
           "tags": [
@@ -796,14 +835,14 @@
             "fala-principal"
           ],
           "notas": "IMPRECISÃO: 'síndrome de Carney = tumores pancreáticos e GIST' está errado. Tríade de Carney = GIST gástrico + paraganglioma + condroma pulmonar; síndrome de Carney-Stratakis = GIST + paraganglioma (mutação SDH). A associação de GIST com tumor neuroendócrino duodenal/pancreático é da neurofibromatose tipo 1. Ele mesmo diz 'não é assunto pra agora'. Usar só a parte do princípio ('você nem sabe da existência dela').",
-          "t0_original": 152.8,
-          "t1_original": 212.0,
-          "dur": 55.66,
+          "t0_original": 152.78,
+          "t1_original": 208.44,
+          "dur": 55.94,
           "citacao_t0": 161.62,
-          "citacao_t1": 165.44,
+          "citacao_t1": 165.46,
           "citacao_palavras": [
-            160,
-            175
+            242,
+            257
           ],
           "item_id": "20261023_img-3502",
           "tipo": "video",
@@ -811,7 +850,7 @@
         },
         {
           "id": "20261023_img-3502#s04",
-          "t0": 212.78,
+          "t0": 212.76,
           "t1": 260.52,
           "tema": "conhecer doenças raras serve para ligar o alerta e levantar a hipótese no paciente que um dia vai aparecer",
           "tags": [
@@ -822,7 +861,7 @@
             "estudo-continuo"
           ],
           "tese": "mesmo raras, é provável que você atenda alguém com essas doenças ao longo da carreira, e reconhecer a associação muda o caso",
-          "citacao": "por mais que você não atende todos os dias um paciente com um GIST,",
+          "citacao": "por mais que você não atende todos os dias um paciente com GIST,",
           "gancho_potencial": 3,
           "publicos": [
             "residente",
@@ -835,14 +874,14 @@
             "fala-principal"
           ],
           "notas": "Fim com transcrição ruim ('talvez ter a pressa web desse paciente' ≈ 'salvar a vida desse paciente').",
-          "t0_original": 212.8,
-          "t1_original": 262.0,
-          "dur": 47.74,
+          "t0_original": 212.78,
+          "t1_original": 260.52,
+          "dur": 47.76,
           "citacao_t0": 234.62,
           "citacao_t1": 239.25,
           "citacao_palavras": [
-            296,
-            309
+            375,
+            387
           ],
           "item_id": "20261023_img-3502",
           "tipo": "video",
@@ -851,7 +890,7 @@
         {
           "id": "20261023_img-3502#s05",
           "t0": 265.54,
-          "t1": 331.7,
+          "t1": 331.72,
           "tema": "se todo dia aprendo algo que eu teria deixado passar, então já deixei passar muita coisa: o medo honesto do que não se sabe",
           "tags": [
             "humildade",
@@ -877,15 +916,57 @@
             "corte-rapido",
             "citacao-card"
           ],
-          "notas": "Entimema forte e vulnerável (premissa implícita: todo médico também deixa passar). Melhor gancho do vídeo. Pequenos tropeços ('isso me deixa ter com medo', 'se eu não tivesse ter deixado passar'). Fecha bem em 'saber o básico bem feito' (~334 s).",
-          "t0_original": 265.5,
-          "t1_original": 334.5,
-          "dur": 66.16,
+          "notas": "Entimema forte e vulnerável (premissa implícita: todo médico também deixa passar). Melhor gancho do vídeo. Pequenos tropeços ('isso me deixa ter com medo', 'se eu não tivesse ter deixado passar'). Fecha bem em 'saber o básico bem feito' (~332 s); a continuação ('esse tipo de coisa que pode diferenciar pode realmente salvar uma vida') abre o #s13.",
+          "t0_original": 265.54,
+          "t1_original": 331.7,
+          "dur": 66.18,
           "citacao_t0": 288.76,
           "citacao_t1": 295.17,
           "citacao_palavras": [
-            418,
-            436
+            496,
+            514
+          ],
+          "item_id": "20261023_img-3502",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3502#s13",
+          "t0": 334.66,
+          "t1": 392.44,
+          "tema": "fazer só o básico não basta: o básico se aprende rápido e quem para de estudar se desatualiza — o aprendizado de verdade é na educação continuada",
+          "tags": [
+            "educacao-continuada",
+            "atualizacao",
+            "diretrizes",
+            "estudo-continuo",
+            "basico",
+            "desatualizacao",
+            "educacao-medica",
+            "motivacao"
+          ],
+          "tese": "o básico é mecânico e se aprende rápido; como as diretrizes mudam em poucos anos, quem se forma e para de estudar fica para trás — o aprendizado real acontece depois da faculdade",
+          "citacao": "porque já parou para pensar que se você faz só o básico e nunca aprende nada mais",
+          "gancho_potencial": 4,
+          "publicos": [
+            "residente",
+            "plantonista",
+            "candidato-residencia"
+          ],
+          "usos": [
+            "fala-principal",
+            "corte-rapido",
+            "citacao-card"
+          ],
+          "notas": "Trecho recuperado na retranscrição (5:36–6:20 estava vazio). EXAGERO A CORRIGIR: 'alguém que formou [há] 10 anos já nem poderia mais ser médico, porque grande parte das diretrizes mudou' é hipérbole. Versão defensável: boa parte do que se aprende muda em poucos anos — revisões sistemáticas ficam desatualizadas em mediana de 5,5 anos (23% em 2 anos; Shojania et al., Ann Intern Med 2007) e ~40% das práticas-padrão testadas em ensaios do NEJM de 2001–2010 foram revertidas (Prasad et al., Mayo Clin Proc 2013). Em tela: 'em 10 anos, boa parte das diretrizes muda', nunca 'você nem poderia mais ser médico'. Tropeços: 'o básico é ter algum muito mecânico' (= 'é algo muito mecânico'), 'você não precisa, não foi só lá que você aprendeu'. Continua no #s06 ('isso já é um mantra').",
+          "qualidade_visual": 4,
+          "qualidade_audio": 4,
+          "dur": 57.78,
+          "citacao_t0": 343.01,
+          "citacao_t1": 353.18,
+          "citacao_palavras": [
+            597,
+            613
           ],
           "item_id": "20261023_img-3502",
           "tipo": "video",
@@ -893,19 +974,19 @@
         },
         {
           "id": "20261023_img-3502#s06",
-          "t0": 380.5,
+          "t0": 394.0,
           "t1": 428.06,
           "tema": "estudar sempre não é só mantra: cada assunto novo pode ser o que muda o desfecho do próximo paciente",
           "tags": [
             "estudo-continuo",
             "atualizacao",
-            "diretrizes",
+            "mantra",
             "desfecho",
             "motivacao",
             "educacao-medica"
           ],
-          "tese": "as diretrizes mudam rápido e cada hora de estudo carrega a chance de mudar o desfecho de alguém",
-          "citacao": "tem uma chance de um potencial de te trazer algum conhecimento que vai mudar o desfecho do paciente",
+          "tese": "'estudar sempre' virou mantra; a perspectiva dele é que cada assunto novo estudado carrega a chance de mudar o desfecho de um paciente",
+          "citacao": "algum conhecimento que vai mudar o desfecho do paciente nessa hora que você está salvando vida,",
           "gancho_potencial": 3,
           "publicos": [
             "residente",
@@ -918,15 +999,57 @@
             "fala-principal",
             "citacao-card"
           ],
-          "notas": "Começa no meio de raciocínio (o início, 5:36–6:20, ficou sem transcrição). Termina com autocrítica ('nossa, concordância é isso errado', ~436 s) — cortar ou usar como respiro.",
+          "notas": "Começa em 'Então eu acho que isso já é um mantra' (6:34); o contexto anterior (o básico se aprende rápido, quem para de estudar se desatualiza, as diretrizes mudam) está no #s13. 'te trazer' e 'desfecho' corrigidos na transcrição. Termina com autocrítica ('nossa, concordância é isso errado', ~427 s) — cortar ou usar como respiro; o fecho do raciocínio ('nessa hora que você está fazendo alguma coisa diferente que não seria feito por qualquer outra pessoa no seu lugar', 429,7–438,6 s) abre o #s14.",
           "t0_original": 380.5,
           "t1_original": 436.5,
-          "dur": 47.56,
-          "citacao_t0": 412.4,
-          "citacao_t1": 419.37,
+          "dur": 34.06,
+          "citacao_t0": 416.28,
+          "citacao_t1": 422.84,
           "citacao_palavras": [
-            595,
-            612
+            741,
+            756
+          ],
+          "item_id": "20261023_img-3502",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3502#s14",
+          "t0": 429.72,
+          "t1": 517.42,
+          "tema": "o básico não diferencia ninguém: se você não tivesse ido àquele plantão, os pacientes seriam tão bem tratados quanto",
+          "tags": [
+            "plantao",
+            "basico",
+            "diferencial-profissional",
+            "estudo-continuo",
+            "motivacao",
+            "impacto",
+            "mentalidade",
+            "educacao-medica"
+          ],
+          "tese": "o manejo básico todo mundo sabe; é essencial, mas não muda o desfecho em relação a outro colega no seu lugar — o impacto vem do que você sabe além do básico, e pensar assim dá ânimo para estudar",
+          "citacao": "se você não tivesse ido naquele plantão, os pacientes seriam tão bem tratados quanto",
+          "gancho_potencial": 5,
+          "publicos": [
+            "plantonista",
+            "residente",
+            "candidato-residencia"
+          ],
+          "usos": [
+            "fala-principal",
+            "corte-rapido",
+            "citacao-card"
+          ],
+          "notas": "Melhor gancho recuperado na retranscrição (7:17–8:39 estava vazio). Entimema: a premissa implícita é que o básico todo mundo sabe, logo quem só sabe o básico é substituível. Corte curto: de 'Então, por mais que seja o essencial, não diferencia ninguém' (7:34) até 'acho que não dá para se contentar só com básico' (8:12), ~38 s. Cuidado de tom: pode soar como desprezo pelo básico ou pelos colegas — ele mesmo ressalva 'por mais que seja o essencial'; manter essa ressalva no corte. É opinião, sem dado factual a corrigir. Abre com o fecho do #s06 ('nessa hora que você está fazendo alguma coisa diferente que não seria feito por qualquer outra pessoa no seu lugar'); de 8:12 a 8:37 ('a gente nunca vai saber tudo... tenta se induzir para ter essa mentalidade') emenda no #s07. 'ônimo' corrigido para 'ânimo'; 'você fique interessado' = 'você fica'.",
+          "qualidade_visual": 4,
+          "qualidade_audio": 4,
+          "dur": 87.7,
+          "citacao_t0": 461.18,
+          "citacao_t1": 467.28,
+          "citacao_palavras": [
+            833,
+            846
           ],
           "item_id": "20261023_img-3502",
           "tipo": "video",
@@ -934,8 +1057,8 @@
         },
         {
           "id": "20261023_img-3502#s07",
-          "t0": 519.26,
-          "t1": 597.92,
+          "t0": 518.44,
+          "t1": 597.88,
           "tema": "o prazer de fazer um diagnóstico raro que outro no seu lugar não faria — e o 'pra que serve' da fisiopatologia na faculdade",
           "tags": [
             "motivacao",
@@ -946,7 +1069,7 @@
             "educacao-medica"
           ],
           "tese": "quando o conhecimento vira prática, o estudo passa a ser prazeroso e o diagnóstico raro paga toda a faculdade",
-          "citacao": "faz valer a pena toda a faculdade, toda coisa. Quando você consegue fazer um diagnóstico raro,",
+          "citacao": "realmente uma sensação muito boa, quase indescritível, faz valer a pena toda a faculdade,",
           "gancho_potencial": 4,
           "publicos": [
             "residente",
@@ -960,15 +1083,15 @@
             "fala-principal",
             "citacao-card"
           ],
-          "notas": "'qual é o outro pessoal ali no seu lugar não teria feito' pode soar arrogante — avaliar. Começo truncado (7:17–8:39 sem transcrição).",
-          "t0_original": 519.3,
-          "t1_original": 599.0,
-          "dur": 78.66,
-          "citacao_t0": 552.21,
-          "citacao_t1": 559.09,
+          "notas": "'qualquer pessoa ali no seu lugar não teria feito' pode soar arrogante — avaliar. Começa em 'se é uma coisa que você tem êxito e consegue fazer o subconsciente incorporar' (8:38), continuação do #s14 ('tenta se induzir para ter essa mentalidade'); 'o estudo passa para o seu fardo, passa a ser um prazeroso' = 'deixa de ser fardo e passa a ser prazeroso'.",
+          "t0_original": 519.26,
+          "t1_original": 597.92,
+          "dur": 79.44,
+          "citacao_t0": 546.47,
+          "citacao_t1": 553.99,
           "citacao_palavras": [
-            679,
-            694
+            980,
+            993
           ],
           "item_id": "20261023_img-3502",
           "tipo": "video",
@@ -1003,15 +1126,58 @@
             "corte-rapido",
             "citacao-card"
           ],
-          "notas": "Antítese/quebra de crença forte. ATENÇÃO: a fala entre ~10:17 e 11:33 não foi transcrita (descartada pelo filtro de no_speech) — o meio do raciocínio está no áudio mas não no texto; ouvir antes de cortar. Frase pode soar depreciativa a protocolos; o ponto dele é que protocolo é feito por gente brilhante para proteger o paciente.",
+          "notas": "Antítese/quebra de crença forte. O meio do raciocínio (10:34–11:33), antes perdido pelo filtro de no_speech, foi recuperado: 'um protocolo é criado para que qualquer pessoa com capacidade mediana saiba conduzir o caso' → 'não acho mérito nenhum em termos os protocolos de cabeça porque são coisas muito consultáveis' → o ideal é aprender a fisiopatologia e continuar estudando conforme os casos aparecem (recorte próprio no #s15, com a ressalva sobre protocolos de emergência). Frase pode soar depreciativa a protocolos; o ponto dele é que protocolo é feito por gente brilhante para proteger o paciente. Trechos mal transcritos no meio ('liso tempo de consulta', 'que não quer decorar com um adulto', 'essa infunda na fisiopatologia') — ouvir antes de legendar.",
           "t0_original": 599.5,
           "t1_original": 700.5,
           "dur": 99.49,
           "citacao_t0": 623.52,
           "citacao_t1": 632.18,
           "citacao_palavras": [
-            801,
-            820
+            1110,
+            1129
+          ],
+          "item_id": "20261023_img-3502",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261023_img-3502#s15",
+          "t0": 642.54,
+          "t1": 698.97,
+          "tema": "decorar protocolo não tem mérito: protocolo se consulta — o que vale é entender a fisiopatologia e estudar conforme os casos aparecem",
+          "tags": [
+            "protocolo",
+            "diretrizes",
+            "fisiopatologia",
+            "memorizacao",
+            "decorar",
+            "raciocinio-clinico",
+            "estudo-continuo",
+            "educacao-medica"
+          ],
+          "tese": "ninguém consegue ter todos os protocolos na cabeça e nem precisa, porque eles são consultáveis; quem entende a fisiopatologia consulta, entende e integra o protocolo à prática",
+          "citacao": "Eu não acho mérito nenhum em termos os protocolos de cabeça porque são coisas muito consultáveis.",
+          "gancho_potencial": 4,
+          "publicos": [
+            "residente",
+            "candidato-residencia",
+            "plantonista",
+            "concursos-vestibular"
+          ],
+          "usos": [
+            "fala-principal",
+            "corte-rapido",
+            "citacao-card"
+          ],
+          "notas": "Recorte do fim do #s08 (10:42–11:39), recuperado na retranscrição. IMPRECISÃO (generalização): nem todo protocolo é 'consultável' na hora — em emergência (PCR/ACLS, trauma/ATLS, anafilaxia, via aérea difícil) o algoritmo precisa estar de cabeça, porque não há tempo de consultar. Versão defensável: 'protocolo de ambulatório e de enfermaria você consulta; o de emergência você treina até saber de cor — e nos dois o que diferencia é entender a fisiopatologia'. Cuidado de público: para prova de residência/concurso decorar diretriz ainda cai na prova; o ponto dele é a prática clínica. Trechos mal transcritos: 'liso tempo de consulta', 'que não quer decorar com um adulto', 'essa infunda na fisiopatologia' (provável 'ir a fundo') — ouvir antes de legendar. 'constatar' → 'consultar' e 'infactivo' → 'infactível' corrigidos na transcrição.",
+          "qualidade_visual": 4,
+          "qualidade_audio": 4,
+          "dur": 56.43,
+          "citacao_t0": 642.54,
+          "citacao_t1": 646.82,
+          "citacao_palavras": [
+            1150,
+            1165
           ],
           "item_id": "20261023_img-3502",
           "tipo": "video",
@@ -1020,7 +1186,7 @@
         {
           "id": "20261023_img-3502#s09",
           "t0": 706.86,
-          "t1": 784.87,
+          "t1": 785.01,
           "tema": "associar economiza espaço no cérebro: 11 dígitos soltos você esquece, o seu telefone você lembra",
           "tags": [
             "memoria",
@@ -1043,15 +1209,15 @@
           "usos": [
             "fala-principal"
           ],
-          "notas": "Conecta com 3525#s08 (blocos/chunking) e 3530#s06 (RAM/HD). Ele mesmo diz 'talvez não tenha sido o melhor exemplo' (~788 s). Lacuna de transcrição em 11:58–12:35.",
-          "t0_original": 706.9,
-          "t1_original": 788.0,
-          "dur": 78.01,
-          "citacao_t0": 764.61,
+          "notas": "Conecta com 3525#s08 (blocos/chunking) e 3530#s06 (RAM/HD). Ele mesmo diz 'talvez não tenha sido o melhor exemplo' (~788 s). O trecho 11:58–12:35, antes sem transcrição, foi recuperado: informação 'solta' gravada em vias neurais separadas × informações associadas 'guardadas em blocos, em caixas' — 'você economiza espaço no seu cérebro'. IMPRECISÃO (simplificação): a memória de longo prazo não tem um 'espaço' que se esgote nem guarda cada fato num conjunto próprio de neurônios — a representação é distribuída e compartilhada. O que agrupar/associar (chunking) economiza é a memória de trabalho, que segura poucos blocos de cada vez (~4, Cowan 2001; o clássico 7±2 de Miller 1956), e o que melhora é a evocação, porque cada ligação com algo conhecido vira uma pista de recuperação. Em tela: 'agrupar em blocos alivia a memória de trabalho e dá ganchos para lembrar', não 'economiza espaço no cérebro'. 'ele grava uma ilhusa neurônios via os neurais' = mal transcrito ('usa neurônios, vias neurais').",
+          "t0_original": 706.86,
+          "t1_original": 784.87,
+          "dur": 78.15,
+          "citacao_t0": 764.59,
           "citacao_t1": 774.93,
           "citacao_palavras": [
-            881,
-            894
+            1346,
+            1359
           ],
           "item_id": "20261023_img-3502",
           "tipo": "video",
@@ -1059,7 +1225,7 @@
         },
         {
           "id": "20261023_img-3502#s10",
-          "t0": 788.59,
+          "t0": 788.63,
           "t1": 872.21,
           "tema": "o teste das letras embaralhadas: impossível decorar o código, fácil lembrar quando vira a palavra 'desconhecido'",
           "tags": [
@@ -1071,7 +1237,7 @@
             "chunking"
           ],
           "tese": "o que tem significado é lembrado sem esforço; o mesmo conteúdo sem significado é praticamente impossível de guardar",
-          "citacao": "se eu falar pra você repetir desconhecido, você consegue, porque aí você já associou isso a um significado.",
+          "citacao": "se eu falar para você repetir desconhecido, você consegue, porque aí você já associou isso a um significado.",
           "gancho_potencial": 4,
           "publicos": [
             "concursos-vestibular",
@@ -1084,15 +1250,15 @@
             "fala-principal",
             "citacao-card"
           ],
-          "notas": "Exemplo demonstrável na edição: mostrar as letras embaralhadas na tela e depois a palavra — ótimo para Reel interativo. A sequência soletrada na transcrição está imperfeita; ele cita 'a primeira palavra que apareceu aqui no vídeo do carro' (referência a outro vídeo).",
-          "t0_original": 788.6,
-          "t1_original": 874.0,
-          "dur": 83.62,
-          "citacao_t0": 867.21,
+          "notas": "Exemplo demonstrável na edição: mostrar as letras embaralhadas na tela e depois a palavra — ótimo para Reel interativo. IMPRECISÃO menor: ele fala em '11 letras', mas DESCONHECIDO tem 12; e a sequência soletrada (transcrita O-E-S-C-O-H-N-E-D-I-C-O, conferir no áudio) não é anagrama exato da palavra (sobra um O, falta um D). Na tela, usar um anagrama correto das 12 letras e escrever '12 letras'. Ele cita 'a primeira palavra que apareceu aqui no vídeo do carro' (referência a outro vídeo).",
+          "t0_original": 788.59,
+          "t1_original": 872.21,
+          "dur": 83.58,
+          "citacao_t0": 867.84,
           "citacao_t1": 872.21,
           "citacao_palavras": [
-            1013,
-            1030
+            1481,
+            1498
           ],
           "item_id": "20261023_img-3502",
           "tipo": "video",
@@ -1101,7 +1267,7 @@
         {
           "id": "20261023_img-3502#s11",
           "t0": 874.0,
-          "t1": 1010.09,
+          "t1": 1011.04,
           "tema": "a genética de PAF e Lynch parece impossível de decorar até você ver no paciente: o caso clínico fixa o conhecimento",
           "tags": [
             "polipose-adenomatosa-familiar",
@@ -1126,12 +1292,12 @@
           "notas": "IMPRECISÕES (não podem ir ao ar sem correção): (1) Lynch — ele diz 'MSH1 e MLH2'; os genes são MLH1, MSH2, MSH6 e PMS2 (mais tarde ele fala certo 'MLH1 e MSH2'). (2) PAF — a mutação germinativa é do gene APC; ele diz que o painel do paciente com PAF mostrou 'mutação do TP53' (TP53 germinativo = Li-Fraumeni). Ou o paciente tinha APC, ou não era PAF clássica — conferir antes de contar o caso. Trecho de 135 s: usar em partes. Cuidado com sigilo: não citar dados identificáveis do paciente.",
           "t0_original": 874.0,
           "t1_original": 1008.7,
-          "dur": 136.09,
-          "citacao_t0": 957.43,
+          "dur": 137.04,
+          "citacao_t0": 956.84,
           "citacao_t1": 962.26,
           "citacao_palavras": [
-            1155,
-            1170
+            1619,
+            1634
           ],
           "item_id": "20261023_img-3502",
           "tipo": "video",

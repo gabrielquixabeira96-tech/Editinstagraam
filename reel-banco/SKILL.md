@@ -82,8 +82,7 @@ recurso, vira opção de script.
 - Listagem e movimentação são pelo conector (`search_files` com `parentId`, `update_file`), nunca por script.
 - **Cota por arquivo:** muitos downloads do mesmo vídeo no dia fazem o link devolver "Quota exceeded" (`drive_fetch`
   código 4) por horas. Teste com `drive_fetch.py <id> - --probe-bytes 65536` e espere; não copie o arquivo no Drive
-  (ocupa o armazenamento do Gabriel). **Pendência aberta:** retranscrição do `20261023_img-3502` (cota estourada em
-  23/10) — comando exato em `README.md → Pendências`.
+  (ocupa o armazenamento do Gabriel). Costuma liberar no dia seguinte.
 
 ## Modo 1 — INGERIR (quando ele joga material na pasta ou pede "processa o banco")
 
@@ -216,7 +215,9 @@ continuam no índice; só a mídia precisa voltar.
   3. reaplica as correções manuais de `word`: palavra com `start`/`end` idênticos ao ms e texto diferente do
      whisper é correção humana, porque o whisper é determinístico para o mesmo áudio e parâmetros
      (`--no-carry-edits` desliga). O registro fica em `transcript.json → substitui` (backup, palavras antes e
-     depois, `edicoes_reaplicadas`);
+     depois, `edicoes_reaplicadas`). **Confira:** o whisper pode não sair bit-idêntico (IMG_3502: tempos deslocados
+     ~20 ms, só 9 de 28 correções casaram e 30 de 39 "reaplicadas" eram só diferenças entre execuções) — compare com
+     `transcript.vN.txt` (texto cru antigo) e `transcript.vN.json` (corrigido) e reaplique à mão o que faltar;
   4. confira os termos técnicos no texto **recuperado** (ele nunca foi revisado), rode
      `06b_validate_segments.py <id>` com o `segments.json` existente (a timeline é a mesma; ajuste só a citação
      que deixar de bater), leia o texto novo atrás de temas ainda não cobertos e feche com
