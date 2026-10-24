@@ -234,6 +234,8 @@ def test_no_speech_filter(tmp: Path, env):
     sub4 = tr4["substitui"]
     assert sorted(e["i"] for e in sub4["edicoes_reaplicadas"]) == sorted(human), sub4["edicoes_reaplicadas"]
     assert sub4["correcoes_detectadas"] == 4 and sub4["nao_reaplicadas"] == [] and sub4["ja_corretas"] == []
+    assert sub4["contagem"] == {"detectadas": 4, "reaplicadas": 4, "ja_corretas": 0, "nao_reaplicadas": 0}
+    assert tr4["janelas"] == {"window": 600.0, "overlap": 1.5}
     assert not any(e["i"] in (0, 10, 15) for e in sub4["edicoes_reaplicadas"]), "diferença espúria virou correção"
     # a regra antiga (start/end idênticos ao ms) não casaria nenhuma destas correções
     old_keys = {(w["start"], w["end"]) for w in tr3["words"]}
@@ -367,6 +369,7 @@ def test_carry_3502():
     # 3) as 28 correções do v1 são achadas só pelo texto dos segmentos (conferido contra o transcript.v1.txt cru);
     #    as que dependem de fusão ficam listadas para revisão ('D' '&P' -> 'T' 'P' = uma entrada, 2 palavras)
     assert c["fonte"] == "segments" and c["detectadas"] == 28, c["detectadas"]
+    assert c["contagem"] == {"detectadas": 28, "reaplicadas": 23, "ja_corretas": 2, "nao_reaplicadas": 3}, c["contagem"]
     nr = {r["i_antigo"]: r for r in c["nao_reaplicadas"]}
     assert set(nr) == {240, 1149}, c["nao_reaplicadas"]
     assert nr[1149]["motivo"] == "estrutural" and nr[1149]["palavras_antigas"] == 2
@@ -380,6 +383,93 @@ def test_carry_3502():
     print("regressão IMG_3502 OK")
 
 
+def _w(word, start, end, raw=None, **kw):
+    d = {"word": word, "start": start, "end": end, **kw}
+    if raw is not None:
+        d["raw"] = raw
+    return d
+
+
+def _closes(c):
+    ct = c["contagem"]
+    return ct["detectadas"] == ct["reaplicadas"] + ct["ja_corretas"] + ct["nao_reaplicadas"] == c["detectadas"]
+
+
+def test_carry_rules():
+    """Regras finas da reaplicação (unidade, sem subprocesso)."""
+    m = load_t03()
+    # divisão manual: 1 token do whisper ('polipós-dramatós') -> 2 palavras corrigidas, transcript SEM raw.
+    # (a) a execução nova tem 1 palavra só: as duas correções disputam a mesma palavra -> estrutural, nada aplicado
+    old = [_w("a", 1.0, 1.2), _w("polipose", 1.2, 1.6), _w("adenomatosa", 1.6, 2.2), _w("familiar", 2.2, 2.6)]
+    segs = [{"start": 1.0, "end": 2.6, "text": "a polipós-dramatós familiar"}]
+    new = [_w("a", 1.0, 1.2, "a"), _w("polipós-dramatós", 1.22, 2.2, "polipós-dramatós"), _w("familiar", 2.22, 2.6, "familiar")]
+    c = m.carry_word_edits(new, old, segs)
+    assert [w["word"] for w in new] == ["a", "polipós-dramatós", "familiar"], new
+    assert [(r["i_antigo"], r["motivo"], r.get("palavras_antigas")) for r in c["nao_reaplicadas"]] == [(1, "estrutural", 2)], c
+    assert _closes(c) and c["contagem"]["nao_reaplicadas"] == 2, c["contagem"]
+    # (b) bloco repartido é tudo ou nada: só a 1ª metade casaria -> as duas vão para revisão
+    new = [_w("a", 1.0, 1.2, "a"), _w("polipós", 1.22, 1.6, "polipós"), _w("xyzzy", 1.62, 2.2, "xyzzy"),
+           _w("familiar", 2.22, 2.6, "familiar")]
+    c = m.carry_word_edits(new, old, segs)
+    assert [w["word"] for w in new] == ["a", "polipós", "xyzzy", "familiar"] and c["contagem"]["nao_reaplicadas"] == 2, c
+    # (c) mesmo bloco com a execução nova também em 2 palavras (caso real do IMG_3502): aplica as duas
+    new = [_w("a", 1.0, 1.2, "a"), _w("polipós", 1.22, 1.6, "polipós"), _w("dramatose", 1.62, 2.2, "dramatose"),
+           _w("familiar", 2.22, 2.6, "familiar")]
+    c = m.carry_word_edits(new, old, segs)
+    assert [w["word"] for w in new] == ["a", "polipose", "adenomatosa", "familiar"] and not c["nao_reaplicadas"], c
+    # (d) com raw: divisão copiando o mesmo raw nas 2 partes -> estrutural; whisper antigo em 2 palavras corrigidas
+    #     uma a uma e o novo em 1 só -> disputa -> estrutural
+    old_r = [_w("polipose", 1.2, 1.6, "polipós-dramatós"), _w("adenomatosa", 1.6, 2.2, "polipós-dramatós")]
+    new = [_w("polipós-dramatós", 1.22, 2.2, "polipós-dramatós")]
+    c = m.carry_word_edits(new, old_r, [])
+    assert new[0]["word"] == "polipós-dramatós" and c["nao_reaplicadas"][0]["motivo"] == "estrutural", c
+    old_r = [_w("polipose", 1.2, 1.6, "polipós"), _w("adenomatosa", 1.6, 2.2, "-dramatós")]
+    new = [_w("polipós-dramatós", 1.22, 2.2, "polipós-dramatós")]
+    c = m.carry_word_edits(new, old_r, [])
+    assert new[0]["word"] == "polipós-dramatós" and c["contagem"]["nao_reaplicadas"] == 2 and _closes(c), c
+
+    # emenda de janelas (600 s) em transcript sem raw: 'Como' x segmento 'como' é da outra janela -> não é correção;
+    # correção de verdade na emenda ('vai' -> 'foi') e só de caixa longe dela ('gist' -> 'GIST') contam
+    old = [_w("do", 299.6, 299.9), _w("GIST", 300.0, 300.5), _w("pra", 597.0, 597.2), _w("que", 597.2, 597.4),
+           _w("isso", 597.4, 597.7), _w("serve?", 597.7, 598.0), _w("Como", 599.5, 599.8), _w("que", 599.84, 600.08),
+           _w("a", 600.06, 600.3), _w("fisiopatologia", 600.3, 601.0), _w("foi", 601.0, 601.3)]
+    segs = [{"start": 299.5, "end": 300.6, "text": "do gist"},
+            {"start": 597.0, "end": 600.2, "text": "pra que isso serve?"},
+            {"start": 599.4, "end": 601.4, "text": "como que a fisiopatologia vai"}]
+    new = [dict(w, start=w["start"] + 0.02, end=w["end"] + 0.02) for w in old]
+    for w, r in zip(new, ["do", "gist", "pra", "que", "isso", "serve?", "como", "que", "a", "fisiopatologia", "vai"]):
+        w["word"] = w["raw"] = r
+    c = m.carry_word_edits(new, old, segs)
+    assert c["ignoradas_emenda"] == 1 and c["detectadas"] == 2, c
+    assert [new[1]["word"], new[6]["word"], new[10]["word"]] == ["GIST", "como", "foi"], new
+
+    # candidato achado só pelos tempos BRUTOS (início refinado muito depois do bruto)
+    new = [_w("x", 8.0, 8.3, "x"), _w("tumor", 9.0, 9.3, "tumor"), _w("y", 9.4, 9.7, "y")]
+    old = [_w("tumores", 9.6, 9.9, "tumor", raw_start=9.05, raw_end=9.9)]
+    c = m.carry_word_edits(new, old, [])
+    assert new[1]["word"] == "tumores" and len(c["reaplicadas"]) == 1, c
+
+    # palavra de até 2 letras: tolerância de 70 ms ('e' -> 'é' não cai na 'e' vizinha se a original sumiu)
+    old = [_w("é", 5.0, 5.1, "e")]
+    new = [_w("e", 5.12, 5.2, "e")]
+    c = m.carry_word_edits(new, old, [])
+    assert new[0]["word"] == "e" and c["nao_reaplicadas"][0]["motivo"] == "sem_casamento", c
+    new = [_w("e", 5.03, 5.12, "e")]
+    c = m.carry_word_edits(new, old, [])
+    assert new[0]["word"] == "é" and _closes(c), c
+
+    # contagens: sem raw e sem segmentos -> fonte "nenhuma", aviso, nada listado; palavra sem bruto igual na nova
+    # conta em sem_bruto.iguais_na_nova (não em ja_corretas)
+    c = m.carry_word_edits([_w("a", 1.0, 1.2, "a")], [_w("a", 1.0, 1.2), _w("b", 1.2, 1.4)], [])
+    assert c["fonte"] == "nenhuma" and "aviso" in c and not c["nao_reaplicadas"] and c["sem_bruto"]["palavras"] == 2, c
+    old = [_w("isso", 1.0, 1.2, "isso"), _w("te", 1.2, 1.4), _w("trazer", 1.4, 1.8, "fazer")]
+    new = [_w("isso", 1.0, 1.2, "isso"), _w("te", 1.21, 1.4, "te"), _w("fazer", 1.41, 1.8, "fazer")]
+    c = m.carry_word_edits(new, old, [])
+    assert c["sem_bruto"] == {"palavras": 1, "iguais_na_nova": 1, "para_revisar": 0} and not c["ja_corretas"], c
+    assert new[2]["word"] == "trazer" and _closes(c), c
+    print("regras da reaplicação (divisão, emenda, tempos brutos, palavra curta, contagens) OK")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--keep", action="store_true")
@@ -389,6 +479,7 @@ def main():
     if a.rebuild_3502:
         build_3502_fixture()
         return
+    test_carry_rules()
     test_carry_3502()
     tmp = Path(tempfile.mkdtemp(prefix="reel_banco_test_"))
     env = dict(os.environ, REEL_BANCO_WORK=str(tmp / "work"), REEL_BANCO_INDEX=str(tmp / "index"),
@@ -429,6 +520,19 @@ def main():
         sh(PY, S / "03_transcribe.py", iid, "--import-transcript", stub, env=env)
         r = sh(PY, S / "03_transcribe.py", iid, env=env, capture=True)  # não pode retranscrever
         assert "não vou transcrever de novo" in r.stdout, r.stdout
+        # o import grava "raw" a partir dos segmentos; --backfill-raw refaz isso num transcript antigo sem raw
+        imp = json.loads((wdir / "transcript.json").read_text())
+        assert all(w.get("raw") == w["word"] for w in imp["words"]), imp["words"][:3]
+        for w in imp["words"]:
+            del w["raw"]
+        imp["words"][2]["word"] = "CRICO"  # correção humana anterior ao raw
+        (wdir / "transcript.json").write_text(json.dumps(imp, ensure_ascii=False, separators=(",", ":")))
+        sh(PY, S / "03_transcribe.py", iid, "--backfill-raw", env=env)
+        bf = json.loads((wdir / "transcript.json").read_text())
+        assert [w["raw"] for w in bf["words"]] == [w["word"] for w in stub_transcript(tmp / "_s.json", vid)["words"]]
+        assert bf["words"][2]["word"] == "CRICO" and bf["raw_backfill"]["correcoes"] == 1, bf["raw_backfill"]
+        bf["words"][2]["word"] = bf["words"][2]["raw"]
+        (wdir / "transcript.json").write_text(json.dumps(bf, ensure_ascii=False, separators=(",", ":")))
         txt = (wdir / "transcript.txt").read_text()
         assert "── [00:00" in txt and "(?)" in txt
 

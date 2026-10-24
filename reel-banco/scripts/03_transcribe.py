@@ -4,7 +4,8 @@ reel-editor (`scripts/01_transcribe.py`), para que um trecho do banco possa ir d
 
 Saídas:
   work/banco/<item_id>/transcript.json  {"source", "language", "model", "duration", "generated_by",
-                                         "refined_boundaries", "words": [{word,start,end,prob,raw[,raw_start,raw_end]}],
+                                         "refined_boundaries", "janelas": {window, overlap},
+                                         "words": [{word,start,end,prob,raw[,raw_start,raw_end]}],
                                          "segments": [{start,end,text,avg_logprob,no_speech_prob}]}
                                          "raw" = texto que o whisper escreveu (desde 2026-10-24; NUNCA editar)
   work/banco/<item_id>/transcript.txt   leitura humana: frases com [mm:ss–mm:ss] e #índice da palavra,
@@ -18,9 +19,10 @@ work/banco/<id>/transcript.vN.json (+ .txt), transcreve de novo e reaplica as co
 (desligue com --no-carry-edits). Correção manual = "word" diferente do texto bruto do whisper ("raw" da
 palavra; em transcript sem "raw", o texto de "segments", alinhado às palavras). A reaplicação é tolerante,
 porque o whisper NÃO sai bit-idêntico entre execuções (tempos deslocam ~20 ms, pontuação/caixa e algumas
-palavras mudam): cada correção casa com a palavra nova a ≤ 150 ms (início ou fim) cujo texto bruto se parece
-com o bruto antigo (SequenceMatcher ≥ 0,6 sem acento/pontuação/caixa; palavra de ≤ 2 letras só igual). Sem
-casamento -> transcript.json → substitui.nao_reaplicadas, impressa no fim para revisão à mão.
+palavras mudam): cada correção casa com a palavra nova a ≤ 150 ms (início ou fim; ≤ 70 ms se tiver até 2
+letras) cujo texto bruto se parece com o bruto antigo (SequenceMatcher ≥ 0,6 sem acento/pontuação/caixa;
+palavra de ≤ 2 letras só igual). Correção que muda o número de palavras (fusão, divisão) é estrutural e não é
+aplicada. Sem casamento -> transcript.json → substitui.nao_reaplicadas, impressa no fim para revisão à mão.
 
 Descarte de "não-fala" (conservador — na dúvida, a palavra fica):
   * segmento com no_speech_prob ≥ --no-speech (0,6) SÓ perde as palavras se a energia do trecho estiver no nível
@@ -46,7 +48,9 @@ Uso:
   python scripts/03_transcribe.py <item_id> [--model small] [--lang pt]
   python scripts/03_transcribe.py <item_id> --replace      (transcrição defeituosa: backup + retranscrição)
   python scripts/03_transcribe.py <item_id> --import-transcript work/<video>/transcript.json
-       (reaproveita uma transcrição já feita pela reel-editor/reel-director do MESMO arquivo — não retranscreve)
+       (reaproveita uma transcrição já feita pela reel-editor/reel-director do MESMO arquivo — não retranscreve;
+        grava "raw" a partir dos segmentos)
+  python scripts/03_transcribe.py <item_id> --backfill-raw (grava "raw" num transcript antigo, sem retranscrever)
   REEL_WHISPER_MODEL=medium python scripts/03_transcribe.py <item_id>
 """
 import argparse
@@ -316,14 +320,21 @@ def transcribe_windows(model, src, dur, args, frame_db=None):
 
 # --- reaplicação de correções manuais no --replace -------------------------------------------------------------
 CARRY_TOL_S = 0.15     # |Δinício| ou |Δfim| máximo entre a palavra corrigida antiga e a nova
+SHORT_TOL_S = 0.07     # idem para palavra de até 2 letras ('e', 'é', 'de'): vizinha curta igual é comum
 CARRY_MIN_SIM = 0.6    # similaridade mínima entre o texto bruto antigo e o novo (sem acento/pontuação/caixa)
 MAX_UNEVEN_BLOCK = 6   # bloco desigual maior que isso no alinhamento com os segmentos = desalinhado (ignora)
+DEFAULT_WINDOW_S, DEFAULT_OVERLAP_S = 600.0, 1.5   # janelas usadas nos transcripts sem o campo "janelas"
 
 
 def split_punct(s):
     """(pontuação inicial, miolo, pontuação final): '-dramatós,' -> ('-', 'dramatós', ',')."""
     m = re.match(r"^(\W*)(.*?)(\W*)$", s or "", re.S)
     return m.group(1), m.group(2), m.group(3)
+
+
+def norm_case_punct(s):
+    """Sem pontuação e sem caixa, mas COM acento ('pancreatico' ≠ 'pancreático')."""
+    return re.sub(r"[^\w]", "", (s or "").lower())
 
 
 def raw_similarity(a, b):
@@ -337,6 +348,14 @@ def raw_similarity(a, b):
     if min(len(na), len(nb)) <= 2:
         return 0.0
     return difflib.SequenceMatcher(None, na, nb, autojunk=False).ratio()
+
+
+def in_seam(w, window, overlap):
+    """Palavra a até `overlap` s de uma emenda k·window (k ≥ 1) entre janelas de transcrição."""
+    if not window or window <= 0:
+        return False
+    k = round(((w["start"] + w["end"]) / 2) / window)
+    return k >= 1 and w["end"] >= k * window - overlap and w["start"] <= k * window + overlap
 
 
 def _apportion(rtoks, wtoks):
@@ -366,12 +385,13 @@ def _apportion(rtoks, wtoks):
     return [R[cuts[k]:cuts[k + 1]] for k in range(len(wtoks))]
 
 
-def raw_from_segments(words, segments):
+def raw_from_segments(words, segments, split_groups=None):
     """Texto bruto do whisper de cada palavra de um transcript SEM o campo "raw" (anteriores a 2026-10-24): o
     texto dos segmentos nunca é editado (só "word" é), então o alinhamento global das palavras com os tokens dos
     segmentos devolve o que o whisper escreveu — inclusive na emenda das janelas, onde dois segmentos se
     sobrepõem. None = palavra sem correspondente confiável (carry_word_edits a manda para revisão, a não ser que a
-    palavra nova no mesmo lugar já tenha o mesmo texto)."""
+    palavra nova no mesmo lugar já tenha o mesmo texto). Se `split_groups` for uma lista, recebe (índices, bruto
+    inteiro) de cada bloco desigual repartido por caractere (nº de tokens ≠ nº de palavras, textos parecidos)."""
     segs = sorted((s for s in (segments or []) if s.get("text")), key=lambda s: (s["start"], s["end"]))
     rtoks = [t for s in segs for t in s["text"].split()]
     wtoks = [w["word"] for w in words]
@@ -383,26 +403,39 @@ def raw_from_segments(words, segments):
             for k in range(b1 - b0):
                 out[b0 + k] = rtoks[a0 + k]
         elif tag == "replace" and max(a1 - a0, b1 - b0) <= MAX_UNEVEN_BLOCK:
-            for k, r in enumerate(_apportion(rtoks[a0:a1], wtoks[b0:b1])):
+            pieces = _apportion(rtoks[a0:a1], wtoks[b0:b1])
+            for k, r in enumerate(pieces):
                 out[b0 + k] = r
+            if split_groups is not None and b1 - b0 > 1 and len(set(pieces)) > 1:
+                split_groups.append((list(range(b0, b1)), " ".join(rtoks[a0:a1])))
     return out
 
 
-def old_raw_texts(old_words, old_segments):
-    """(textos brutos por palavra, fonte): "raw" da palavra; sem ele, o alinhamento com os segmentos."""
-    seg_raw, raws, fontes = None, [], set()
+def old_raw_texts(old_words, old_segments, seams=None):
+    """Texto bruto do whisper por palavra do transcript antigo: "raw" da palavra; sem ele, o alinhamento com os
+    segmentos. Devolve dict: raws, fonte ("raw" | "segments" | "raw+segments" | "nenhuma"), de_segmentos
+    (índices cujo bruto veio dos segmentos), grupos (blocos repartidos — ver raw_from_segments) e emenda (índices
+    vindos dos segmentos em que word e bruto diferem só em pontuação/caixa perto de uma emenda de janelas: lá o
+    texto do segmento pode ser o da outra janela, então isso não conta como correção)."""
+    window, overlap = seams or (DEFAULT_WINDOW_S, DEFAULT_OVERLAP_S)
+    seg_raw, groups, raws, from_seg, fontes = None, [], [], set(), set()
     for i, w in enumerate(old_words):
         r = w.get("raw")
         if r is not None:
             fontes.add("raw")
         else:
             if seg_raw is None:
-                seg_raw = raw_from_segments(old_words, old_segments)
+                seg_raw = raw_from_segments(old_words, old_segments, groups)
             r = seg_raw[i]
             if r is not None:
                 fontes.add("segments")
+                from_seg.add(i)
         raws.append(r)
-    return raws, "+".join(sorted(fontes)) or None
+    seam = {i for i in from_seg if raws[i] != old_words[i]["word"] and in_seam(old_words[i], window, overlap)
+            and norm_case_punct(raws[i]) == norm_case_punct(old_words[i]["word"])}
+    groups = [(g, whole) for g, whole in groups if any(i in from_seg for i in g)]
+    return {"raws": raws, "fonte": "+".join(sorted(fontes)) or "nenhuma", "de_segmentos": from_seg,
+            "grupos": groups, "emenda": seam}
 
 
 def _time_dist(a, b):
@@ -425,35 +458,56 @@ def transfer_edit(old_raw, old_word, new_raw):
     return old_word
 
 
-def carry_word_edits(new_words, old_words, old_segments=None, tol=CARRY_TOL_S, min_sim=CARRY_MIN_SIM):
+def carry_word_edits(new_words, old_words, old_segments=None, tol=CARRY_TOL_S, min_sim=CARRY_MIN_SIM,
+                     short_tol=SHORT_TOL_S, seams=None):
     """Reaplica, nas palavras novas (recém-saídas do whisper, com "raw"), as correções manuais de "word" do
     transcript antigo. Correção = "word" antigo ≠ texto bruto antigo (ver old_raw_texts); diferenças entre as
     duas execuções do whisper (pontuação, caixa, tempo, palavra trocada) NÃO são correções e não são tocadas.
-    Casamento: palavra nova com |Δinício| ou |Δfim| ≤ tol (tempos refinados ou brutos) e
-    raw_similarity(bruto antigo, bruto novo) ≥ min_sim — ou bruto novo já igual à correção —, a melhor primeiro
-    (maior similaridade, depois menor Δt), cada palavra nova usada uma vez. Palavra antiga sem bruto conhecido
-    (sem "raw" e sem correspondente nos segmentos — em geral uma correção que deslocou palavras, como
-    'trazer fazer' -> 'te trazer') só é dada como resolvida se a nova já tiver o mesmo texto; senão vai para
-    revisão. Altera new_words e devolve {"fonte", "detectadas", "reaplicadas", "ja_corretas", "nao_reaplicadas"}."""
-    raws, fonte = old_raw_texts(old_words, old_segments)
-    edits = [i for i, w in enumerate(old_words) if raws[i] is not None and w["word"] != raws[i]]
-    unknown = [i for i, r in enumerate(raws) if r is None and bc.norm_word(old_words[i]["word"])]
-    # estrutural = a correção mudou o número de palavras (fusão 'não é' -> 'né', divisão, trecho reescrito): bruto
-    # com espaço, ou o mesmo bruto em palavras corrigidas vizinhas. Não dá para refazer isso sozinho.
+
+    Casamento: palavra nova com |Δinício| ou |Δfim| ≤ tol (tempos refinados ou brutos; ≤ short_tol se a palavra
+    tiver até 2 letras) e raw_similarity(bruto antigo, bruto novo) ≥ min_sim — ou bruto novo já igual à
+    correção —, a melhor primeiro (maior similaridade, depois menor Δt), cada palavra nova usada uma vez.
+
+    Estrutural (não aplica; vai para revisão): a correção mudou o número de palavras — bruto com espaço (fusão),
+    o mesmo bruto em palavras corrigidas vizinhas (divisão), duas correções disputando a mesma palavra nova, ou
+    bloco repartido dos segmentos que não casou inteiro (tudo ou nada). Palavra antiga sem bruto conhecido (em
+    geral uma correção que deslocou palavras, como 'trazer fazer' -> 'te trazer') só é dada como resolvida se a
+    nova já tiver o mesmo texto; senão vai para revisão. Sem fonte de bruto (nem "raw" nem segmentos), nada é
+    detectado e "aviso" diz isso.
+
+    Altera new_words e devolve {"fonte", "detectadas", "reaplicadas", "ja_corretas", "nao_reaplicadas",
+    "contagem", "sem_bruto", "ignoradas_emenda"[, "aviso"]}; contagem fecha: detectadas = reaplicadas +
+    ja_corretas + nao_reaplicadas (em palavras; uma entrada de nao_reaplicadas pode cobrir várias)."""
+    info = old_raw_texts(old_words, old_segments, seams)
+    raws = info["raws"]
+    edits = [i for i, w in enumerate(old_words)
+             if raws[i] is not None and w["word"] != raws[i] and i not in info["emenda"]]
     eset = set(edits)
-    merged = {i for i in edits if len(raws[i].split()) > 1
-              or (i - 1 in eset and raws[i - 1] == raws[i]) or (i + 1 in eset and raws[i + 1] == raws[i])}
+    unknown = [i for i, r in enumerate(raws) if r is None and bc.norm_word(old_words[i]["word"])]
+    aviso = None
+    if unknown and (info["fonte"] == "nenhuma" or len(unknown) > max(20, 0.2 * len(old_words))):
+        aviso = (f"{len(unknown)} de {len(old_words)} palavras antigas sem texto bruto conhecido (sem 'raw' e "
+                 f"segmentos {'ausentes' if info['fonte'] == 'nenhuma' else 'desalinhados'}): correções nelas não "
+                 "são detectáveis — compare à mão com o backup")
+        n_unknown_total, unknown = len(unknown), []
+    else:
+        n_unknown_total = len(unknown)
+    structural = {i for i in edits if len(raws[i].split()) > 1
+                  or (i - 1 in eset and raws[i - 1] == raws[i]) or (i + 1 in eset and raws[i + 1] == raws[i])}
     nraw = [w.get("raw", w["word"]) for w in new_words]
     order = sorted(range(len(new_words)), key=lambda j: new_words[j]["start"])
     starts = [new_words[j]["start"] for j in order]
-    maxdur = min(10.0, max((w["end"] - w["start"] for w in new_words), default=0.0))
-    pairs = []
+    maxdur = min(10.0, max((max(w["end"] - w["start"], w.get("raw_end", w["end"]) - w.get("raw_start", w["start"]))
+                            for w in new_words), default=0.0))
+    cands = {}
     for i in edits + unknown:
-        if i in merged:
+        if i in structural:
             continue
         ow = old_words[i]
-        lo = bisect.bisect_left(starts, ow["start"] - tol - maxdur)
-        hi = bisect.bisect_right(starts, ow["end"] + tol)
+        t0 = min(ow["start"], ow.get("raw_start", ow["start"]))
+        t1 = max(ow["end"], ow.get("raw_end", ow["end"]))
+        lo = bisect.bisect_left(starts, t0 - tol - maxdur)
+        hi = bisect.bisect_right(starts, t1 + tol + maxdur)
         for j in order[lo:hi]:
             dt = _time_dist(ow, new_words[j])
             if dt > tol:
@@ -461,40 +515,69 @@ def carry_word_edits(new_words, old_words, old_segments=None, tol=CARRY_TOL_S, m
             sim = raw_similarity(raws[i], nraw[j]) if raws[i] is not None else 0.0
             if sim < 1.0 and bc.norm_word(ow["word"]) and bc.norm_word(ow["word"]) == bc.norm_word(nraw[j]):
                 sim = 1.0  # o whisper novo já escreveu a forma corrigida
-            if sim >= min_sim:
-                pairs.append((-sim, dt, i, j))
-    pairs.sort()
-    used_old, used_new = {}, set()
+            if sim < min_sim:
+                continue
+            short = min(len(bc.norm_word(raws[i] if raws[i] is not None else ow["word"])),
+                        len(bc.norm_word(nraw[j]))) <= 2
+            if short and dt > short_tol:
+                continue
+            cands.setdefault(i, []).append((-sim, dt, j))
+    pairs = sorted((nsim, dt, i, j) for i, cl in cands.items() for nsim, dt, j in cl)
+    assigned, owner = {}, {}
     for nsim, dt, i, j in pairs:
-        if i in used_old or j in used_new:
+        if i in assigned or j in owner:
             continue
-        used_old[i] = (j, -nsim, dt)
-        used_new.add(j)
+        assigned[i] = (j, -nsim, dt)
+        owner[j] = i
+    # duas correções disputando a mesma palavra nova (a perdedora não tem outra): divisão/fusão -> estrutural
+    for i, cl in cands.items():
+        if i in assigned or i not in eset:
+            continue
+        rivals = {owner[j] for _s, _d, j in cl if j in owner and owner[j] in eset}
+        if rivals:
+            structural |= {i} | rivals
+    # bloco repartido dos segmentos: tudo ou nada
+    for g, _whole in info["grupos"]:
+        ge = [i for i in g if i in eset]
+        if ge and any(i in structural or i not in assigned for i in ge):
+            structural |= set(ge)
+    for i in structural:
+        if i in assigned:
+            del owner[assigned.pop(i)[0]]
+
     def trecho(t0, t1):  # palavras novas em volta, para quem for corrigir à mão
         near = [j for j in order[bisect.bisect_left(starts, t0 - 1.0):bisect.bisect_right(starts, t1 + 0.5)]
                 if new_words[j]["end"] > t0 - 0.5]
         return {"i": near, "texto": " ".join(nraw[j] for j in near)}
 
-    out = {"fonte": fonte, "detectadas": len(edits), "reaplicadas": [], "ja_corretas": [], "nao_reaplicadas": []}
+    out = {"fonte": info["fonte"], "detectadas": len(edits), "reaplicadas": [], "ja_corretas": [],
+           "nao_reaplicadas": [], "ignoradas_emenda": len(info["emenda"])}
     nr = out["nao_reaplicadas"]
+    n_unknown_equal = 0
+    last = None  # (índice antigo, motivo) da última entrada, para juntar palavras estruturais vizinhas
     for i in sorted(edits + unknown):
         ow = old_words[i]
-        if i not in used_old:
-            prev = nr[-1] if nr else None
-            if (i in merged and prev and prev["motivo"] == "estrutural" and prev["whisper_antigo"] == raws[i]
-                    and prev["i_antigo"] + prev.get("palavras_antigas", 1) == i):
-                prev["palavras_antigas"] = prev.get("palavras_antigas", 1) + 1  # mesmo trecho: uma entrada só
+        if i not in assigned:
+            motivo = "estrutural" if i in structural else ("sem_bruto" if raws[i] is None else "sem_casamento")
+            if motivo == "estrutural" and last and last == (i - 1, "estrutural"):
+                prev = nr[-1]  # mesmo trecho: uma entrada só
+                prev["palavras_antigas"] = prev.get("palavras_antigas", 1) + 1
                 prev["word"] += " " + ow["word"]
+                if raws[i] != raws[i - 1]:
+                    prev["whisper_antigo"] += " " + raws[i]
                 prev["end"] = ow["end"]
                 prev["trecho_novo"] = trecho(prev["start"], prev["end"])
-                continue
-            nr.append({
-                "i_antigo": i, "start": ow["start"], "end": ow["end"], "whisper_antigo": raws[i], "word": ow["word"],
-                "motivo": "estrutural" if i in merged else ("sem_bruto" if raws[i] is None else "sem_casamento"),
-                "trecho_novo": trecho(ow["start"], ow["end"])})
+            else:
+                nr.append({"i_antigo": i, "start": ow["start"], "end": ow["end"], "whisper_antigo": raws[i],
+                           "word": ow["word"], "motivo": motivo, "trecho_novo": trecho(ow["start"], ow["end"])})
+            last = (i, motivo)
             continue
-        j, sim, dt = used_old[i]
-        final = transfer_edit(raws[i], ow["word"], nraw[j]) if raws[i] is not None else new_words[j]["word"]
+        last = None
+        j, sim, dt = assigned[i]
+        if raws[i] is None:  # sem bruto, mas a palavra nova já tem o mesmo texto: nada a fazer
+            n_unknown_equal += 1
+            continue
+        final = transfer_edit(raws[i], ow["word"], nraw[j])
         rec = {"i": j, "i_antigo": i, "whisper": nraw[j], "word": final, "start": new_words[j]["start"],
                "dt": round(dt, 3), "sim": round(sim, 2)}
         if final == new_words[j]["word"]:
@@ -503,11 +586,46 @@ def carry_word_edits(new_words, old_words, old_segments=None, tol=CARRY_TOL_S, m
             new_words[j]["word"] = final
             out["reaplicadas"].append(rec)
     out["reaplicadas"].sort(key=lambda r: r["i"])
+    n_nr = sum(r.get("palavras_antigas", 1) for r in nr if r["motivo"] != "sem_bruto")
+    out["contagem"] = {"detectadas": len(edits), "reaplicadas": len(out["reaplicadas"]),
+                       "ja_corretas": len(out["ja_corretas"]), "nao_reaplicadas": n_nr}
+    out["sem_bruto"] = {"palavras": n_unknown_total, "iguais_na_nova": n_unknown_equal,
+                        "para_revisar": sum(1 for r in nr if r["motivo"] == "sem_bruto")}
+    if aviso:
+        out["aviso"] = aviso
     return out
 
 
+def backfill_raw(tr):
+    """Grava "raw" nas palavras de um transcript que não o têm (importado ou anterior a 2026-10-24), a partir do
+    texto dos segmentos (ver raw_from_segments), sem mexer em "word". Assim a detecção de correções fica
+    congelada e não depende mais do alinhamento. Regras conservadoras: perto de emenda de janelas, diferença só
+    de pontuação/caixa não é correção (raw = word); bloco repartido com correção recebe o bruto inteiro em cada
+    palavra (num --replace, vira estrutural); sem correspondente nos segmentos, fica sem "raw" (num --replace,
+    vai para revisão). Devolve {"gravadas", "sem_bruto", "correcoes"}."""
+    words = tr.get("words", [])
+    info = old_raw_texts(words, tr.get("segments"), (tr.get("janelas") or {}).get("window") and
+                         (tr["janelas"]["window"], tr["janelas"].get("overlap", DEFAULT_OVERLAP_S)))
+    raws = list(info["raws"])
+    for i in info["emenda"]:
+        raws[i] = words[i]["word"]
+    for g, whole in info["grupos"]:
+        if any(raws[i] is not None and raws[i] != words[i]["word"] for i in g):
+            for i in g:
+                raws[i] = whole
+    n = 0
+    for i, w in enumerate(words):
+        if "raw" not in w and i in info["de_segmentos"] and raws[i] is not None:
+            w["raw"] = raws[i]
+            n += 1
+    return {"gravadas": n, "sem_bruto": sum(1 for w in words if "raw" not in w),
+            "correcoes": sum(1 for w in words if "raw" in w and w["raw"] != w["word"])}
+
+
 def print_not_carried(carry, backup_name):
-    """Lista, no fim do comando, as correções do transcript antigo que não casaram com nenhuma palavra nova."""
+    """Lista, no fim do comando, as correções do transcript antigo que não foram reaplicadas."""
+    if (carry or {}).get("aviso"):
+        bc.warn(carry["aviso"])
     nr = (carry or {}).get("nao_reaplicadas") or []
     if not nr:
         return
@@ -522,7 +640,8 @@ def print_not_carried(carry, backup_name):
         bc.log(f"    [{bc.fmt_t(r['start'])}] antigo {old_i} '{before}' -> '{r['word']}' ({r['motivo']})  |  "
                f"novo {where}: '{tn['texto']}'")
     bc.log("    Para cada uma: ache o trecho no transcript.json novo e corrija só 'word' (juntar/separar palavras "
-           "também vale); depois rode 06b_validate_segments.py.")
+           "também vale). Ao JUNTAR palavras, junte também os 'raw' com espaço (\"raw\": \"não é\"); ao DIVIDIR, "
+           "copie o mesmo 'raw' nas duas partes. Depois rode 06b_validate_segments.py.")
 
 
 def validate_transcript(tr):
@@ -566,6 +685,9 @@ def main():
                          "150 ms + texto bruto parecido); as que não casarem vão para substitui.nao_reaplicadas")
     ap.add_argument("--no-carry-edits", action="store_true",
                     help="com --replace: NÃO reaplica as correções manuais de 'word' do transcript antigo")
+    ap.add_argument("--backfill-raw", action="store_true",
+                    help="NÃO transcreve: grava 'raw' (texto original do whisper, a partir dos segmentos) nas palavras "
+                         "que não o têm, no transcript.json do work/ e do index/ — congela a detecção de correções")
     args = ap.parse_args()
 
     bc.set_log_item(args.item_id)
@@ -577,6 +699,8 @@ def main():
     txt = d / "transcript.txt"
     idx_copy = bc.index_item_dir(args.item_id) / "transcript.json"
     backup, old_tr = None, None
+    if args.backfill_raw and (args.replace or args.import_transcript):
+        bc.die("--backfill-raw não combina com --replace nem --import-transcript")
     if args.replace:
         if args.import_transcript:
             bc.die("--replace não combina com --import-transcript")
@@ -597,6 +721,19 @@ def main():
             bc.log(f"{args.item_id}: --replace — transcript atual ({len(old_tr.get('words', []))} palavras) "
                    f"guardado em {backup.name}; retranscrevendo")
         args.force = True
+    if args.backfill_raw:
+        tgt = [p for p in (out, idx_copy) if p.exists()]
+        if not tgt:
+            bc.die(f"{args.item_id}: sem transcript.json (work/ nem index/)")
+        for p in tgt:
+            tr = bc.load_json(p)
+            bf = backfill_raw(tr)
+            if bf["gravadas"]:
+                tr["raw_backfill"] = {"em": bc.now_iso(), "fonte": "segments", **bf}
+            bc.save_json(p, tr, compact=True)
+            bc.log(f"{args.item_id}: 'raw' gravado em {bf['gravadas']} palavra(s) de {p} ({bf['correcoes']} "
+                   f"correção(ões) manual(is) visível(is), {bf['sem_bruto']} sem texto original)")
+        return
     if not out.exists() and idx_copy.exists() and not args.force:
         d.mkdir(parents=True, exist_ok=True)
         shutil.copy2(idx_copy, out)
@@ -615,9 +752,11 @@ def main():
         dur = item.get("duracao")
         if dur and tr.get("duration") and abs(float(tr["duration"]) - float(dur)) > 1.0:
             bc.warn(f"duração do transcript ({tr['duration']:.1f} s) difere da mídia ({dur:.1f} s) — confira se é o mesmo arquivo")
+        bf = backfill_raw(tr)  # "raw" a partir dos segmentos: correções já feitas na reel-editor continuam visíveis
         bc.save_json(out, tr, compact=True)
         write_txt(tr, txt)
-        bc.log(f"{args.item_id}: transcript importado ({len(tr['words'])} palavras) -> {out}")
+        bc.log(f"{args.item_id}: transcript importado ({len(tr['words'])} palavras; 'raw' gravado em {bf['gravadas']}, "
+               f"{bf['correcoes']} já corrigida(s), {bf['sem_bruto']} sem texto original) -> {out}")
         return
 
     src = bc.find_source(args.item_id)
@@ -646,6 +785,7 @@ def main():
     words, segments, desc = transcribe_windows(model, src, dur, args)
     tr = {"source": str(src), "language": args.lang, "model": args.model, "duration": dur,
           "generated_by": "reel-banco/03_transcribe.py", "refined_boundaries": not args.no_refine,
+          "janelas": {"window": args.window, "overlap": args.overlap},
           "descartes": desc, "words": words, "segments": segments}
     t0 = t_start
     bc.log(f"  descarte: {desc['total']} palavra(s) (silêncio {desc['por_motivo']['silencio']}, prompt "
@@ -662,17 +802,26 @@ def main():
             bc.log(f"  --replace: {n_old} -> {len(words)} palavras; correções de 'word' NÃO reaplicadas "
                    "(--no-carry-edits)")
         else:
-            carry = carry_word_edits(words, old_tr.get("words", []), old_tr.get("segments"))
+            jw = old_tr.get("janelas") or {}
+            seams = (jw["window"], jw.get("overlap", DEFAULT_OVERLAP_S)) if jw.get("window") else None
+            carry = carry_word_edits(words, old_tr.get("words", []), old_tr.get("segments"), seams=seams)
+            ct, sb = carry["contagem"], carry["sem_bruto"]
             tr["substitui"].update({
                 "criterio": (f"correção = word != texto bruto do whisper (fonte: {carry['fonte']}); casa com a palavra "
-                             f"nova a <= {CARRY_TOL_S * 1000:.0f} ms (início ou fim) e similaridade do bruto >= "
-                             f"{CARRY_MIN_SIM}"),
-                "correcoes_detectadas": carry["detectadas"], "edicoes_reaplicadas": carry["reaplicadas"],
+                             f"nova a <= {CARRY_TOL_S * 1000:.0f} ms (<= {SHORT_TOL_S * 1000:.0f} ms se tiver até 2 "
+                             f"letras; início ou fim) e similaridade do bruto >= {CARRY_MIN_SIM}"),
+                "correcoes_detectadas": carry["detectadas"], "contagem": ct, "sem_bruto": sb,
+                "ignoradas_emenda": carry["ignoradas_emenda"], "edicoes_reaplicadas": carry["reaplicadas"],
                 "ja_corretas": carry["ja_corretas"], "nao_reaplicadas": carry["nao_reaplicadas"]})
-            bc.log(f"  --replace: {n_old} -> {len(words)} palavras; {carry['detectadas']} correção(ões) manual(is) de "
-                   f"'word' no transcript antigo (texto bruto: {carry['fonte']}): {len(carry['reaplicadas'])} "
-                   f"reaplicada(s), {len(carry['ja_corretas'])} já certa(s) na transcrição nova, "
-                   f"{len(carry['nao_reaplicadas'])} NÃO reaplicada(s)")
+            if carry.get("aviso"):
+                tr["substitui"]["aviso"] = carry["aviso"]
+            bc.log(f"  --replace: {n_old} -> {len(words)} palavras; {ct['detectadas']} correção(ões) manual(is) de "
+                   f"'word' no transcript antigo (texto bruto: {carry['fonte']}): {ct['reaplicadas']} reaplicada(s), "
+                   f"{ct['ja_corretas']} já certa(s) na transcrição nova, {ct['nao_reaplicadas']} NÃO reaplicada(s)"
+                   + (f"; {sb['palavras']} palavra(s) sem texto original conhecido ({sb['iguais_na_nova']} iguais na "
+                      f"nova, {sb['para_revisar']} para revisar)" if sb["palavras"] else "")
+                   + (f"; {carry['ignoradas_emenda']} diferença(s) só de caixa/pontuação na emenda de janelas "
+                      "ignorada(s)" if carry["ignoradas_emenda"] else ""))
     bc.save_json(out, tr, compact=True)
     write_txt(tr, txt)
     low = sum(1 for w in words if w["prob"] < 0.5)

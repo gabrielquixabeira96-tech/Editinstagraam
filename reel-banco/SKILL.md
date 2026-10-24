@@ -190,10 +190,14 @@ continuam no índice; só a mídia precisa voltar.
 ## Regras
 
 - **Nunca retranscrever.** `03_transcribe.py` recusa se já existe transcript (no work/ ou no index/). Para
-  corrigir um termo, edite só o campo `word` — nunca `raw` (texto original do whisper, gravado em toda palavra
-  desde 2026-10-24) nem o texto de `segments`: são eles que mostram, num `--replace`, o que foi correção humana.
-  Para juntar palavras numa só, junte também os `raw` com espaço (`"raw": "não é"`). Única exceção: transcrição
-  **defeituosa** (ver abaixo).
+  corrigir um termo, edite só o campo `word` — nunca `raw` nem o texto de `segments`: são eles que mostram, num
+  `--replace`, o que foi correção humana. `raw` = texto original do whisper: gravado em toda palavra transcrita
+  desde 2026-10-24; no `--import-transcript` e no `--backfill-raw` (transcript antigo, sem retranscrever) vem do
+  texto dos segmentos, e a palavra sem correspondente nos segmentos fica sem `raw` (num `--replace`, vai para
+  revisão). Os 11 itens do índice receberam `raw` em 2026-10-24 (`raw_backfill` no transcript). Mudou o número
+  de palavras? **Juntar** duas numa só: junte também os `raw` com espaço (`"raw": "não é"`); **dividir** uma em
+  duas: copie o mesmo `raw` nas duas partes. Assim um `--replace` reconhece a mudança como estrutural e pede
+  revisão, em vez de aplicar metade. Única exceção à regra: transcrição **defeituosa** (ver abaixo).
 
 ### Descarte de "não-fala" e correção de transcrição defeituosa (`--replace`)
 
@@ -219,18 +223,24 @@ continuam no índice; só a mídia precisa voltar.
      texto bruto do whisper daquela palavra: o `raw` da palavra ou, em transcript anterior a 2026-10-24 (sem
      `raw`), o texto de `segments` alinhado às palavras. O whisper **não** sai bit-idêntico entre execuções
      (IMG_3502: tempos deslocados ~20 ms, pontuação, caixa e algumas palavras diferentes), então o casamento é
-     tolerante: cada correção vai para a palavra nova a ≤ 150 ms (início ou fim) cujo texto bruto se parece com
-     o bruto antigo (similaridade ≥ 0,6 sem acento/pontuação/caixa; palavras de até 2 letras só se iguais), a
-     melhor primeiro. A pontuação da execução nova é mantida quando a correção só mexeu no miolo
-     (`giste,` → `GIST,` sobre `existe.` dá `GIST.`). Diferença entre execuções do whisper **nunca** conta como
-     correção. Registro em `transcript.json → substitui`: `correcoes_detectadas`, `edicoes_reaplicadas`
-     (`i` novo, `i_antigo`, `whisper` novo, `word`, `dt`, `sim`), `ja_corretas` (o whisper novo já escreveu a
-     forma corrigida) e `nao_reaplicadas`. **Confira `nao_reaplicadas`** (o comando as imprime no fim, com o
-     trecho novo correspondente): são correções do transcript antigo que **não** foram aplicadas e ficaram com
-     o texto cru do whisper novo. `motivo`: `estrutural` = a correção mudou o número de palavras (fusão,
-     divisão, trecho reescrito — `palavras_antigas` diz quantas); `sem_casamento` = nenhuma palavra nova perto
-     com bruto parecido (o whisper novo juntou ou separou as palavras ali); `sem_bruto` = palavra antiga sem
-     texto bruto conhecido (em geral correção que deslocou palavras). Para cada uma, abra o `trecho_novo.i` no
+     tolerante: cada correção vai para a palavra nova a ≤ 150 ms (início ou fim, tempos refinados ou brutos;
+     ≤ 70 ms se a palavra tiver até 2 letras) cujo texto bruto se parece com o bruto antigo (similaridade ≥ 0,6
+     sem acento/pontuação/caixa; palavras de até 2 letras só se iguais), a melhor primeiro. A pontuação da
+     execução nova é mantida quando a correção só mexeu no miolo (`giste,` → `GIST,` sobre `existe.` dá
+     `GIST.`). Diferença entre execuções do whisper **nunca** conta como correção; em transcript sem `raw`,
+     diferença só de caixa/pontuação a até `--overlap` de uma emenda de janelas (k·`--window`) também não
+     (`ignoradas_emenda`). Registro em `transcript.json → substitui`: `contagem` (`detectadas` = `reaplicadas`
+     + `ja_corretas` + `nao_reaplicadas`, em palavras), `edicoes_reaplicadas` (`i` novo, `i_antigo`, `whisper`
+     novo, `word`, `dt`, `sim`), `ja_corretas` (o whisper novo já escreveu a forma corrigida),
+     `nao_reaplicadas`, `sem_bruto` (palavras antigas sem texto original conhecido: quantas, quantas já iguais
+     na nova, quantas para revisar) e, se não houver fonte de texto bruto nenhuma, `aviso`. **Confira
+     `nao_reaplicadas`** (o comando as imprime no fim, com o trecho novo correspondente): são correções do
+     transcript antigo que **não** foram aplicadas e ficaram com o texto cru do whisper novo. `motivo`:
+     `estrutural` = a correção mudou o número de palavras — fusão, divisão, trecho reescrito, duas correções
+     disputando a mesma palavra nova, ou bloco repartido que não casou inteiro (`palavras_antigas` diz quantas;
+     nada dele é aplicado, para não sobrar meia correção); `sem_casamento` = nenhuma palavra nova perto com
+     bruto parecido (o whisper novo juntou ou separou as palavras ali); `sem_bruto` = palavra antiga sem texto
+     bruto conhecido (em geral correção que deslocou palavras). Para cada uma, abra o `trecho_novo.i` no
      transcript.json novo e corrija à mão só `word` (juntar ou separar palavras vale), usando `word` como o
      texto que o Gabriel/Claude já tinham escolhido. No IMG_3502 isso deixou 3 das 28 correções para a mão
      (2 trechos em que o whisper novo separou/juntou as palavras e é preciso fundir), contra 19 da regra antiga
@@ -261,7 +271,7 @@ continuam no índice; só a mídia precisa voltar.
 ## Scripts (todos com `--help`)
 
 `00_check_env` · `01_scan --manifest` · `02_fetch --file-id/--local/--item` · `03_transcribe <id>
-[--import-transcript] [--replace [--no-carry-edits]] [--silence-margin 6] [--abs-silence -70]` · `04_scenes <id>` · `05_keyframes <id>` · `06_segment_input <id>` ·
+[--import-transcript] [--replace [--no-carry-edits]] [--backfill-raw] [--silence-margin 6] [--abs-silence -70]` · `04_scenes <id>` · `05_keyframes <id>` · `06_segment_input <id>` ·
 `06b_validate_segments <id>` · `07_doc_ingest --local --licenca` · `08_index` · `09_search "q"` ·
 `10_clip "<seg>" [--broll --broll-index]` · `run_ingest` · `drive_fetch <file_id> <destino> [--expect-size N] [--probe-bytes N]`
 (provisório, pode ser substituído; só segue redirecionamentos para https em google.com/*.google.com/*.googleusercontent.com; códigos: 3 = não compartilhado, 4 = HTML inesperado/host não permitido/5xx, 5 = tamanho divergente).
