@@ -128,17 +128,51 @@ def clip_doc(item, s, out_base: Path):
         cand = d / "secoes" / f"s{int(ref['secao']):02d}.png"
     if cand is None or not cand.exists():
         o = item.get("origem", {})
+        onde = (f"com a ferramenta Artifact (action read, artefato {o['artifact_id']})" if o.get("artifact_id") else
+                f"pelo conector Drive (id {o.get('drive_id') or '?'}, '{o.get('nome_original')}')")
         bc.die(f"{s['id']}: figura/captura ausente em {d} (work/ não é versionado). Reabasteça: baixe o documento "
-               f"pelo conector Drive (id {o.get('drive_id') or '?'}, '{o.get('nome_original')}') e rode "
+               f"{onde} e rode "
                f"07_doc_ingest.py --local <arquivo> --licenca {item.get('licenca')} --item-id {item['id']}"
                + (f" --fonte \"{item['fonte']}\"" if item.get("fonte") else "") + " — depois repita este comando.")
     out = out_base.with_suffix(cand.suffix)
     out.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(cand, out)
-    return out
+    fig = next((x for x in figs if x.get("arquivo") and (d / x["arquivo"]) == cand), None)
+    return out, fig
 
 
-def add_broll_entry(index_path: Path, clip: Path, item, s, a=None, b=None, broll_dir=None):
+def doc_license(item, s, fig=None):
+    """licença efetiva do que sai de um documento: a da FIGURA (imagem de artigo dentro de um atlas próprio é de
+    terceiros), senão a do segmento, senão a do item. Captura de seção com figuras de terceiros: creditar todas."""
+    info = {"licenca": item.get("licenca", "desconhecida"), "fonte": item.get("fonte"), "detalhe": None,
+            "creditos": [], "uso_comercial": None}
+    if s.get("licenca"):
+        info.update(licenca=s["licenca"], fonte=s.get("fonte") or info["fonte"])
+    if fig:
+        if fig.get("tipo") == "imagem" or (fig.get("licenca") and fig.get("licenca") != info["licenca"]
+                                            and fig.get("tipo") != "secao"):
+            info.update(licenca=fig.get("licenca", info["licenca"]), fonte=fig.get("fonte") or info["fonte"],
+                        detalhe=fig.get("licenca_detalhe"))
+        if fig.get("uso_comercial") is False:
+            info["uso_comercial"] = False
+        info["creditos"] = list(fig.get("contem_terceiros") or [])
+    return info
+
+
+def license_note(info):
+    lic = info["licenca"]
+    det = f" {info['detalhe']}" if info.get("detalhe") else ""
+    note = {"propria": "material próprio do Gabriel",
+            "terceiros": f"terceiros{det} — creditar a fonte na tela ({info.get('fonte') or 'fonte não registrada'})",
+            "desconhecida": "licença desconhecida — confirmar com o Gabriel antes de publicar"}.get(lic, lic)
+    if info.get("creditos"):
+        note += " — CONTÉM figuras de terceiros: creditar na tela " + " | ".join(info["creditos"])
+    if info.get("uso_comercial") is False:
+        note += " — licença NC: não usar em conteúdo patrocinado/comercial"
+    return note
+
+
+def add_broll_entry(index_path: Path, clip: Path, item, s, a=None, b=None, broll_dir=None, lic_info=None):
     index_path = Path(index_path)
     data = bc.load_json(index_path) if index_path.exists() else []
     lst = data.get("items", data.get("clips", [])) if isinstance(data, dict) else data
@@ -153,11 +187,11 @@ def add_broll_entry(index_path: Path, clip: Path, item, s, a=None, b=None, broll
     else:
         rel = str(dest)
     o = item.get("origem", {})
-    src_desc = item.get("fonte") or (f"Google Drive id {o['drive_id']}" if o.get("drive_id") else o.get("nome_original"))
-    lic = item.get("licenca", "desconhecida")
-    lic_note = {"propria": "material próprio do Gabriel",
-                "terceiros": f"terceiros — creditar a fonte na tela ({item.get('fonte') or 'fonte não registrada'})",
-                "desconhecida": "licença desconhecida — confirmar com o Gabriel antes de publicar"}.get(lic, lic)
+    info = lic_info or doc_license(item, s)
+    src_desc = info.get("fonte") or item.get("fonte") or (f"Google Drive id {o['drive_id']}" if o.get("drive_id")
+                                                          else o.get("nome_original"))
+    lic = info["licenca"]
+    lic_note = license_note(info)
     entry = {"file": rel, "source": src_desc, "work": item.get("titulo_doc") or item.get("nome"),
              "what": s.get("tema"), "license_note": lic_note, "tag": (s.get("tags") or ["banco"])[0],
              "tags": s.get("tags", []), "segment_id": s["id"], "kind": "video" if a is not None else "image",
@@ -196,11 +230,13 @@ def main():
     safe = args.segment_id.replace("#", "_")
     out = Path(args.out) if args.out else bc.clips_dir() / f"{safe}.mp4"
     a = b = None
+    lic_info = None
     if item.get("tipo") == "doc":
-        out = clip_doc(item, s, out)
+        out, fig = clip_doc(item, s, out)
+        lic_info = doc_license(item, s, fig)
         bc.log(f"{args.segment_id}: imagem -> {out}")
-        if item.get("licenca") != "propria":
-            bc.warn(f"licença {item.get('licenca')}: creditar '{item.get('fonte') or 'fonte'}' na tela e avisar o usuário")
+        if lic_info["licenca"] != "propria" or lic_info["creditos"]:
+            bc.warn(f"licença: {license_note(lic_info)} — avisar o usuário")
     else:
         if s.get("t0") is None:
             bc.die("segmento de vídeo sem t0/t1")
@@ -223,7 +259,7 @@ def main():
     if args.broll:
         if not args.broll_index:
             bc.die("--broll exige --broll-index <caminho do assets/broll/index.json>")
-        e = add_broll_entry(Path(args.broll_index), out, item, s, a, b, args.broll_dir)
+        e = add_broll_entry(Path(args.broll_index), out, item, s, a, b, args.broll_dir, lic_info)
         bc.log(f"B-roll registrado em {args.broll_index}: {e['file']}")
     print(f"CLIP={out}")
 
