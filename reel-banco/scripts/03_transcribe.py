@@ -596,16 +596,31 @@ def carry_word_edits(new_words, old_words, old_segments=None, tol=CARRY_TOL_S, m
     return out
 
 
+def transcript_seams(tr):
+    """(window, overlap) das emendas entre janelas de um transcript: o campo "janelas"; sem ele, os padrões
+    (600 s / 1,5 s) se foi gerado por este script, e (0, 0) — sem emendas — se veio de fora (reel-editor e afins
+    transcrevem o arquivo numa passada só)."""
+    jw = tr.get("janelas") or {}
+    if "window" in jw:
+        return float(jw["window"] or 0), float(jw.get("overlap") or 0)
+    if str(tr.get("generated_by", "")).startswith("reel-banco/03_transcribe.py"):
+        return DEFAULT_WINDOW_S, DEFAULT_OVERLAP_S
+    return 0.0, 0.0
+
+
 def backfill_raw(tr):
     """Grava "raw" nas palavras de um transcript que não o têm (importado ou anterior a 2026-10-24), a partir do
     texto dos segmentos (ver raw_from_segments), sem mexer em "word". Assim a detecção de correções fica
     congelada e não depende mais do alinhamento. Regras conservadoras: perto de emenda de janelas, diferença só
     de pontuação/caixa não é correção (raw = word); bloco repartido com correção recebe o bruto inteiro em cada
     palavra (num --replace, vira estrutural); sem correspondente nos segmentos, fica sem "raw" (num --replace,
-    vai para revisão). Devolve {"gravadas", "sem_bruto", "correcoes"}."""
+    vai para revisão). Emendas: ver transcript_seams; transcript de fora sem "janelas" ganha "janelas" = 0/0
+    explícito. Devolve {"gravadas", "sem_bruto", "correcoes"}."""
     words = tr.get("words", [])
-    info = old_raw_texts(words, tr.get("segments"), (tr.get("janelas") or {}).get("window") and
-                         (tr["janelas"]["window"], tr["janelas"].get("overlap", DEFAULT_OVERLAP_S)))
+    seams = transcript_seams(tr)
+    if "janelas" not in tr and seams == (0.0, 0.0):
+        tr["janelas"] = {"window": 0.0, "overlap": 0.0, "nota": "transcrição de fora, numa passada só: sem emendas"}
+    info = old_raw_texts(words, tr.get("segments"), seams)
     raws = list(info["raws"])
     for i in info["emenda"]:
         raws[i] = words[i]["word"]
@@ -802,9 +817,8 @@ def main():
             bc.log(f"  --replace: {n_old} -> {len(words)} palavras; correções de 'word' NÃO reaplicadas "
                    "(--no-carry-edits)")
         else:
-            jw = old_tr.get("janelas") or {}
-            seams = (jw["window"], jw.get("overlap", DEFAULT_OVERLAP_S)) if jw.get("window") else None
-            carry = carry_word_edits(words, old_tr.get("words", []), old_tr.get("segments"), seams=seams)
+            carry = carry_word_edits(words, old_tr.get("words", []), old_tr.get("segments"),
+                                     seams=transcript_seams(old_tr))
             ct, sb = carry["contagem"], carry["sem_bruto"]
             tr["substitui"].update({
                 "criterio": (f"correção = word != texto bruto do whisper (fonte: {carry['fonte']}); casa com a palavra "

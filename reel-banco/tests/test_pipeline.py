@@ -443,6 +443,22 @@ def test_carry_rules():
     assert c["ignoradas_emenda"] == 1 and c["detectadas"] == 2, c
     assert [new[1]["word"], new[6]["word"], new[10]["word"]] == ["GIST", "como", "foi"], new
 
+    # transcript de FORA (reel-editor, uma passada só) sem "janelas": não há emenda em 600 s, então correção só de
+    # caixa a 0,3 s de 600 s conta — no import/--backfill-raw e no --replace; o do próprio banco assume emendas
+    seg = [{"start": 599.8, "end": 601.0, "text": "no whatsapp dele"}]
+    mk = lambda gen: {"generated_by": gen, "segments": seg,  # noqa: E731
+                      "words": [_w("no", 599.9, 600.1), _w("WhatsApp", 600.3, 600.8), _w("dele", 600.8, 601.0)]}
+    ext = mk("reel-editor/01_transcribe.py")
+    assert m.transcript_seams(ext) == (0.0, 0.0)
+    new = [_w(r, w["start"] + 0.02, w["end"] + 0.02, r) for w, r in zip(ext["words"], ["no", "whatsapp", "dele"])]
+    c = m.carry_word_edits(new, ext["words"], seg, seams=m.transcript_seams(ext))
+    assert c["detectadas"] == 1 and new[1]["word"] == "WhatsApp" and c["ignoradas_emenda"] == 0, c
+    bfx = m.backfill_raw(ext)
+    assert ext["words"][1]["raw"] == "whatsapp" and bfx["correcoes"] == 1 and ext["janelas"]["window"] == 0, ext
+    own = mk("reel-banco/03_transcribe.py")
+    m.backfill_raw(own)
+    assert own["words"][1]["raw"] == "WhatsApp" and "janelas" not in own, own
+
     # candidato achado só pelos tempos BRUTOS (início refinado muito depois do bruto)
     new = [_w("x", 8.0, 8.3, "x"), _w("tumor", 9.0, 9.3, "tumor"), _w("y", 9.4, 9.7, "y")]
     old = [_w("tumores", 9.6, 9.9, "tumor", raw_start=9.05, raw_end=9.9)]

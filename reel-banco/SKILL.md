@@ -229,7 +229,8 @@ continuam no índice; só a mídia precisa voltar.
      execução nova é mantida quando a correção só mexeu no miolo (`giste,` → `GIST,` sobre `existe.` dá
      `GIST.`). Diferença entre execuções do whisper **nunca** conta como correção; em transcript sem `raw`,
      diferença só de caixa/pontuação a até `--overlap` de uma emenda de janelas (k·`--window`) também não
-     (`ignoradas_emenda`). Registro em `transcript.json → substitui`: `contagem` (`detectadas` = `reaplicadas`
+     (`ignoradas_emenda`; emendas pelo campo `janelas` — sem ele, 600 s/1,5 s se o transcript é deste script e
+     nenhuma se veio de fora, como o da reel-editor, que o import grava com `janelas` 0/0). Registro em `transcript.json → substitui`: `contagem` (`detectadas` = `reaplicadas`
      + `ja_corretas` + `nao_reaplicadas`, em palavras), `edicoes_reaplicadas` (`i` novo, `i_antigo`, `whisper`
      novo, `word`, `dt`, `sim`), `ja_corretas` (o whisper novo já escreveu a forma corrigida),
      `nao_reaplicadas`, `sem_bruto` (palavras antigas sem texto original conhecido: quantas, quantas já iguais
