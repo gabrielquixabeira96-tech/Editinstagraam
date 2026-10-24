@@ -79,7 +79,7 @@ Todos em Python 3, com `--help`, idempotentes; cache por etapa em `work/banco/<i
 | `00_check_env.py` | verifica Python, libs, ffmpeg/filtros, Chromium, YuNet, modelo whisper no cache, config |
 | `01_scan.py --manifest m.json` | listagem da 01_entrada (id, name, mimeType, size, modifiedTime) → novos / já ingeridos (por `drive_id` ou item_id+tamanho) / ignorados |
 | `02_fetch.py --file-id ID --name N [--size B]` · `--local P` · `--item ID` | `work/banco/<id>/source.<ext>` + `item.json` (origem, tipo, duração/resolução via ffprobe, tamanho, sha256, licença) |
-| `03_transcribe.py <id> [--import-transcript T]` | `transcript.json` (formato reel-editor) + `transcript.txt` (marca a cada ~20 s); nunca retranscreve |
+| `03_transcribe.py <id> [--import-transcript T] [--replace [--no-carry-edits]]` | `transcript.json` (formato reel-editor + `raw` por palavra) + `transcript.txt` (marca a cada ~20 s); nunca retranscreve, exceto `--replace` (transcrição defeituosa: backup `.vN`, retranscrição e reaplicação tolerante das correções de `word`) |
 | `04_scenes.py <id>` | `scenes.json`: cortes (`scdet`), blocos de ≤ 30 s em câmera fixa, e por cena rosto (YuNet), nitidez, luma, estourado/escuro, nível de áudio e silêncio, notas sugeridas |
 | `05_keyframes.py <id>` | 1 quadro por cena e ≥ 1 a cada 30 s → `keyframes/`, `index/items/<id>/thumbs/*.jpg` (320 px), `contact_sheet.jpg` (grade numerada com tempos; folhas extras para vídeos longos) |
 | `06_segment_input.py <id>` | `segment_input.md`: transcrição em blocos de 60 s + tabela de cenas + miniaturas, instruções e esquema |
@@ -108,9 +108,14 @@ Todos em Python 3, com `--help`, idempotentes; cache por etapa em `work/banco/<i
 ```json
 {"source": "...", "language": "pt", "model": "small", "duration": 3721.4, "generated_by": "reel-banco/03_transcribe.py",
  "refined_boundaries": true,
- "words": [{"word": "cricotireoidostomia", "start": 12.48, "end": 13.52, "prob": 0.91, "raw_start": 12.4, "raw_end": 13.6}],
+ "words": [{"word": "cricotireoidostomia", "start": 12.48, "end": 13.52, "prob": 0.91, "raw": "cricotireoidostomia",
+            "raw_start": 12.4, "raw_end": 13.6}],
  "segments": [{"start": 10.2, "end": 15.9, "text": "...", "avg_logprob": -0.21, "no_speech_prob": 0.01}]}
 ```
+`raw` (desde 2026-10-24) = texto que o whisper escreveu; correções vão só em `word`, e `raw` ≠ `word` marca a
+correção humana que o `--replace` reaplica. É campo extra: quem lê só `word`/`start`/`end` não muda. Depois de um `--replace`, o
+transcript ganha `substitui` (backup, palavras antes/depois, `correcoes_detectadas`, `edicoes_reaplicadas`,
+`ja_corretas`, `nao_reaplicadas`).
 Mesma aparagem de limites por energia (`refine_boundaries`) e mesmos parâmetros (`word_timestamps=True`,
 `beam_size 5`, `condition_on_previous_text=False`, prompt inicial em pt-BR).
 
@@ -157,7 +162,12 @@ sem `--drive-id` e documentos precisam ser reabastecidos (ver SKILL.md, "Reabast
   IMG_3502 (6,6 GB) e não liberou em 2 h de tentativas; liberou na manhã seguinte. Não contorne copiando o
   arquivo no Drive (ocupa o armazenamento do Gabriel); espere a cota e teste com
   `python3 scripts/drive_fetch.py <drive_id> - --probe-bytes 65536` (código 0 = liberado).
-- **`--replace` e correções manuais:** o whisper pode não sair bit-idêntico entre execuções (no IMG_3502, tempos
-  deslocados ~20 ms): só 9 das 28 correções de `word` casaram por start/end, e 30 das 39 "reaplicadas" eram apenas
-  diferenças entre execuções. Depois de um `--replace`, compare o texto com o `transcript.vN.txt` (texto original
-  do whisper antigo) e o `transcript.vN.json` (com as correções) e reaplique à mão as que faltarem.
+- **`--replace` e correções manuais:** o whisper não sai bit-idêntico entre execuções (no IMG_3502, tempos
+  deslocados ~20 ms, pontuação/caixa e algumas palavras diferentes). Até 2026-10-24 as correções de `word` eram
+  casadas por start/end idênticos: só 9 das 28 voltaram e 30 "reaplicadas" eram diferenças entre execuções. Agora
+  correção = `word` ≠ texto bruto (`raw` da palavra; sem ele, o texto de `segments`), casada por tempo (≤ 150 ms,
+  início ou fim) + similaridade do bruto (≥ 0,6), e diferença entre execuções nunca é tocada; no mesmo par real,
+  25 das 28 voltam sozinhas (2 delas já vinham certas) e 0 espúrias. O que não casa fica em
+  `transcript.json → substitui.nao_reaplicadas` (impresso no fim do comando, com o trecho novo e o `motivo`:
+  `estrutural`, `sem_casamento`, `sem_bruto`) e precisa ser corrigido à mão. Teste de regressão com o par real:
+  `tests/fixtures/img3502_replace.json.gz` (recriável com `python3 tests/test_pipeline.py --rebuild-3502`).

@@ -190,7 +190,10 @@ continuam no índice; só a mídia precisa voltar.
 ## Regras
 
 - **Nunca retranscrever.** `03_transcribe.py` recusa se já existe transcript (no work/ ou no index/). Para
-  corrigir um termo, edite só o campo `word`. Única exceção: transcrição **defeituosa** (ver abaixo).
+  corrigir um termo, edite só o campo `word` — nunca `raw` (texto original do whisper, gravado em toda palavra
+  desde 2026-10-24) nem o texto de `segments`: são eles que mostram, num `--replace`, o que foi correção humana.
+  Para juntar palavras numa só, junte também os `raw` com espaço (`"raw": "não é"`). Única exceção: transcrição
+  **defeituosa** (ver abaixo).
 
 ### Descarte de "não-fala" e correção de transcrição defeituosa (`--replace`)
 
@@ -212,12 +215,26 @@ continuam no índice; só a mídia precisa voltar.
   1. guarda o transcript atual (do work/ ou, se faltar, do index/) em `work/banco/<id>/transcript.vN.json`
      (e `.txt`), sem nunca sobrescrever um backup;
   2. retranscreve o arquivo inteiro com a regra atual;
-  3. reaplica as correções manuais de `word`: palavra com `start`/`end` idênticos ao ms e texto diferente do
-     whisper é correção humana, porque o whisper é determinístico para o mesmo áudio e parâmetros
-     (`--no-carry-edits` desliga). O registro fica em `transcript.json → substitui` (backup, palavras antes e
-     depois, `edicoes_reaplicadas`). **Confira:** o whisper pode não sair bit-idêntico (IMG_3502: tempos deslocados
-     ~20 ms, só 9 de 28 correções casaram e 30 de 39 "reaplicadas" eram só diferenças entre execuções) — compare com
-     `transcript.vN.txt` (texto cru antigo) e `transcript.vN.json` (corrigido) e reaplique à mão o que faltar;
+  3. reaplica as correções manuais de `word` (`--no-carry-edits` desliga). **Correção** = `word` diferente do
+     texto bruto do whisper daquela palavra: o `raw` da palavra ou, em transcript anterior a 2026-10-24 (sem
+     `raw`), o texto de `segments` alinhado às palavras. O whisper **não** sai bit-idêntico entre execuções
+     (IMG_3502: tempos deslocados ~20 ms, pontuação, caixa e algumas palavras diferentes), então o casamento é
+     tolerante: cada correção vai para a palavra nova a ≤ 150 ms (início ou fim) cujo texto bruto se parece com
+     o bruto antigo (similaridade ≥ 0,6 sem acento/pontuação/caixa; palavras de até 2 letras só se iguais), a
+     melhor primeiro. A pontuação da execução nova é mantida quando a correção só mexeu no miolo
+     (`giste,` → `GIST,` sobre `existe.` dá `GIST.`). Diferença entre execuções do whisper **nunca** conta como
+     correção. Registro em `transcript.json → substitui`: `correcoes_detectadas`, `edicoes_reaplicadas`
+     (`i` novo, `i_antigo`, `whisper` novo, `word`, `dt`, `sim`), `ja_corretas` (o whisper novo já escreveu a
+     forma corrigida) e `nao_reaplicadas`. **Confira `nao_reaplicadas`** (o comando as imprime no fim, com o
+     trecho novo correspondente): são correções do transcript antigo que **não** foram aplicadas e ficaram com
+     o texto cru do whisper novo. `motivo`: `estrutural` = a correção mudou o número de palavras (fusão,
+     divisão, trecho reescrito — `palavras_antigas` diz quantas); `sem_casamento` = nenhuma palavra nova perto
+     com bruto parecido (o whisper novo juntou ou separou as palavras ali); `sem_bruto` = palavra antiga sem
+     texto bruto conhecido (em geral correção que deslocou palavras). Para cada uma, abra o `trecho_novo.i` no
+     transcript.json novo e corrija à mão só `word` (juntar ou separar palavras vale), usando `word` como o
+     texto que o Gabriel/Claude já tinham escolhido. No IMG_3502 isso deixou 3 das 28 correções para a mão
+     (2 trechos em que o whisper novo separou/juntou as palavras e é preciso fundir), contra 19 da regra antiga
+     (start/end idênticos), que ainda "reaplicava" 30 diferenças entre execuções;
   4. confira os termos técnicos no texto **recuperado** (ele nunca foi revisado), rode
      `06b_validate_segments.py <id>` com o `segments.json` existente (a timeline é a mesma; ajuste só a citação
      que deixar de bater), leia o texto novo atrás de temas ainda não cobertos e feche com

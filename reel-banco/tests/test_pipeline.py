@@ -10,9 +10,17 @@ Fluxo: 02 (local) -> 03 (stub) -> 04 -> 05 -> 06 -> segments.json de exemplo -> 
 (-> 08) -> 09 -> 10 (+ --broll em um assets/broll/index.json temporário) -> 07 (pdf/html) -> 08 -> 09 --tipo doc.
 Usa REEL_BANCO_WORK/REEL_BANCO_INDEX em pasta temporária: o index/ real não é tocado.
 
+Também testa a reaplicação de correções manuais no `03_transcribe.py --replace`: (a) whisper falso com uma
+segunda execução deslocada 20–40 ms e com pontuação/caixa diferentes; (b) regressão com o par REAL do
+IMG_3502 (transcript.v1.json -> saída bruta nova), congelado em tests/fixtures/img3502_replace.json.gz.
+
 Uso:  python tests/test_pipeline.py [--keep] [--real-whisper]
+      python tests/test_pipeline.py --rebuild-3502   (recria a fixture; precisa de work/banco/<3502>/transcript.v1.json)
 """
 import argparse
+import copy
+import gzip
+import importlib.util
 import json
 import os
 import shutil
@@ -113,9 +121,13 @@ class WhisperModel:
         spec = json.load(open(os.environ["FAKE_WHISPER_SPEC"]))
         segs = []
         for s in spec:
-            ws = [_O(word=" " + w, start=s["start"] + i * s["step"], end=s["start"] + i * s["step"] + s["step"] * 0.8,
+            # "shift" + "jit"·(i % 3): deslocamento por palavra, como entre duas execuções reais do whisper
+            d = lambda i: s.get("shift", 0.0) + s.get("jit", 0.0) * (i % 3)
+            ws = [_O(word=" " + w, start=s["start"] + i * s["step"] + d(i),
+                     end=s["start"] + i * s["step"] + s["step"] * 0.8 + d(i),
                      probability=0.9) for i, w in enumerate(s["text"].split())]
-            segs.append(_O(start=s["start"], end=s["start"] + len(ws) * s["step"], text=s["text"], avg_logprob=-0.3,
+            segs.append(_O(start=s["start"] + d(0), end=s["start"] + len(ws) * s["step"] + d(0), text=s["text"],
+                           avg_logprob=-0.3,
                            no_speech_prob=s["ns"], words=ws))
         return iter(segs), _O(language="pt")
 '''
@@ -145,8 +157,14 @@ def write_wav(path, x, sr=16000):
         w.writeframes((np.clip(x, -1, 1) * 32767).astype(np.int16).tobytes())
 
 
+def load_t03():
+    spec_m = importlib.util.spec_from_file_location("transcribe03", S / "03_transcribe.py")
+    m = importlib.util.module_from_spec(spec_m)
+    spec_m.loader.exec_module(m)
+    return m
+
+
 def test_no_speech_filter(tmp: Path, env):
-    import importlib.util
     import numpy as np
     sr = 16000
     t = np.arange(int(28 * sr)) / sr
@@ -192,11 +210,54 @@ def test_no_speech_filter(tmp: Path, env):
     sh(PY, S / "03_transcribe.py", iid, "--replace", "--no-carry-edits", env=e2)
     tr3 = json.loads((wdir / "transcript.json").read_text())
     assert (wdir / "transcript.v2.json").exists() and tr3["words"][3]["word"] == "fala"
+    assert all(w["raw"] == w["word"] for w in tr3["words"]), "toda palavra nova guarda o texto do whisper em 'raw'"
+
+    # --replace com whisper NÃO idêntico: 2ª execução deslocada 20–40 ms, pontuação/caixa diferentes em palavras
+    # corrigidas e não corrigidas. Correções reais (inclusive só de caixa/pontuação) voltam; diferença entre
+    # execuções nunca vira "correção".
+    human = {1: "ali", 3: "FALA", 5: "verdade,", 11: "jura"}  # 'aqui' 'fala' 'verdade' 'acha'
+    for i, wd in human.items():
+        tr3["words"][i]["word"] = wd
+    (wdir / "transcript.json").write_text(json.dumps(tr3, ensure_ascii=False, separators=(",", ":")))
+    spec2 = tmp / "fake_spec_run2.json"
+    run2 = copy.deepcopy(FAKE_SPEC)
+    run2[0].update(shift=0.02, jit=0.01,
+                   text="Isso aqui, é fala de verdade com eco que o Whisper Acha que não é fala.")
+    spec2.write_text(json.dumps(run2, ensure_ascii=False))
+    r = sh(PY, S / "03_transcribe.py", iid, "--replace", env=dict(e2, FAKE_WHISPER_SPEC=str(spec2)), capture=True)
+    print(r.stdout[-700:])
+    tr4 = json.loads((wdir / "transcript.json").read_text())
+    got4 = [w["word"] for w in tr4["words"]]
+    want4 = "Isso ali, é FALA de verdade, com eco que o Whisper jura que não é fala.".split()
+    assert got4 == want4, got4
+    assert [w["raw"] for w in tr4["words"]] == run2[0]["text"].split(), "raw = texto da execução nova"
+    sub4 = tr4["substitui"]
+    assert sorted(e["i"] for e in sub4["edicoes_reaplicadas"]) == sorted(human), sub4["edicoes_reaplicadas"]
+    assert sub4["correcoes_detectadas"] == 4 and sub4["nao_reaplicadas"] == [] and sub4["ja_corretas"] == []
+    assert not any(e["i"] in (0, 10, 15) for e in sub4["edicoes_reaplicadas"]), "diferença espúria virou correção"
+    # a regra antiga (start/end idênticos ao ms) não casaria nenhuma destas correções
+    old_keys = {(w["start"], w["end"]) for w in tr3["words"]}
+    assert not any((w["start"], w["end"]) in old_keys for w in tr4["words"])
+
+    # mesmo cenário com transcript ANTIGO sem "raw" (anterior a 2026-10-24): o bruto sai do texto dos segmentos
+    m = load_t03()
+    legacy = copy.deepcopy(tr3["words"])
+    for w in legacy:
+        w.pop("raw", None)
+    fresh = [dict(w, word=w["raw"]) for w in tr4["words"]]
+    c = m.carry_word_edits(fresh, legacy, tr3["segments"])
+    assert c["fonte"] == "segments" and c["detectadas"] == 4 and not c["nao_reaplicadas"], c
+    assert [w["word"] for w in fresh] == want4, [w["word"] for w in fresh]
+    # fusão manual (bruto com 2 palavras) e palavra sem bruto: vão para nao_reaplicadas, sem mexer no novo
+    merged = copy.deepcopy(tr3["words"])
+    merged[13:15] = [dict(merged[13], word="né", raw="não é", end=merged[14]["end"])]
+    fresh2 = [dict(w, word=w["raw"]) for w in tr4["words"]]
+    c2 = m.carry_word_edits(fresh2, merged, tr3["segments"])
+    assert [(r["i_antigo"], r["motivo"]) for r in c2["nao_reaplicadas"]] == [(13, "estrutural")], c2["nao_reaplicadas"]
+    assert [w["word"] for w in fresh2][13:15] == ["não", "é"]
+    print("reaplicação tolerante de correções (whisper falso) OK")
 
     # piso RELATIVO: arquivo com ruído de fundo constante (-50 dBFS) — alucinação no ruído sai, fala fica
-    spec_m = importlib.util.spec_from_file_location("transcribe03", S / "03_transcribe.py")
-    m = importlib.util.module_from_spec(spec_m)
-    spec_m.loader.exec_module(m)
     rng = np.random.default_rng(7)
     xn = x + rng.normal(0, 10 ** (-50 / 20), len(x))
     wav2 = tmp / "fala_e_ruido.wav"
@@ -215,11 +276,120 @@ def test_no_speech_filter(tmp: Path, env):
     print("filtro de não-fala OK")
 
 
+# ---------------------------------------------------------------------------------------------------------------
+# Regressão com o par REAL do IMG_3502 (2026-10-24): v1 (28 correções humanas, sem "raw") -> retranscrição em que
+# os tempos deslocaram ~20 ms e algumas palavras mudaram. A regra antiga (start/end idênticos) casou 9 das 28 e
+# "reaplicou" 30 diferenças entre execuções; 19 foram refeitas à mão (registro em index/.../transcript.json →
+# substitui.correcoes_manuais_pos_replace).
+# ---------------------------------------------------------------------------------------------------------------
+ITEM_3502 = "20261023_img-3502"
+FIX_3502 = ROOT / "tests" / "fixtures" / "img3502_replace.json.gz"
+# (índice no v1, índice na saída bruta nova, "word" final escolhido à mão) — todas as 28 correções do v1
+EXPECT_3502 = [
+    (9, 11, "stromal"), (77, 82, "GIST"), (146, 150, "morbidade"), (243, 325, "tumores"),
+    (244, 326, "pancreáticos,"), (247, 329, "GIST."), (301, 381, "atende"), (309, 388, "GIST,"),
+    (565, 702, "mantra,"), (610, 748, "desfecho"), (678, 987, "indescritível,"), (1055, 1524, "polipose"),
+    (1057, 1526, "adenomatosa"), (1064, 1533, "Lynch"), (1110, 1578, "polipose"), (1111, 1579, "adenomatosa"),
+    (1116, 1584, "proctocolectomia"), (1173, 1638, "atendi"), (1185, 1649, "Lynch,"), (1202, 1666, "oncogenético"),
+    (1222, 1684, "mutação"), (1224, 1686, "MLH1"), (1226, 1688, "MSH2")]
+ALREADY_OK_3502 = [(7, 9, "GIST"), (575, 712, "especializando,")]   # o whisper novo já acertou
+# fusões feitas à mão na versão nova ('é indicando,' -> 'Carney,'; 'antep53,' -> 'TP53,'): não automatizáveis
+STRUCTURAL_3502 = [240, 1149, 1150]
+# as 9 que a regra antiga casou; as outras 19 do v1 são as refeitas à mão
+OLD_RULE_3502 = {146, 243, 301, 1055, 1057, 1111, 1185, 1202, 1222}
+
+
+def _slim(w):
+    return {k: w[k] for k in ("word", "start", "end", "raw_start", "raw_end") if k in w}
+
+
+def build_3502_fixture():
+    """Congela o par real (precisa do backup em work/, que não vai para o git):
+    v1 = work/banco/<id>/transcript.v1.json, palavras e segmentos como estão (sem "raw": as correções saem do
+    texto dos segmentos, que nunca é editado); saída bruta nova = index/items/<id>/transcript.json com "word"
+    revertido para o texto do whisper pelos registros de substitui ("whisper" de edicoes_reaplicadas e de
+    correcoes_manuais_pos_replace.edicoes) e a fusão desfeita ('Carney,' -> 'é' + 'indicando,'; o fim do 'é' vem
+    do registro). Exceção documentada na própria nota: nas 2 letras soletradas de 13:51–13:56 a reaplicação
+    automática foi desfeita, então o "whisper" registrado é o texto do v1 e o cru novo é o texto atual ('H,',
+    'I,'), o que os segmentos confirmam. Confere a reconstrução contra o texto dos segmentos."""
+    m = load_t03()
+    v1 = json.loads((ROOT / "work" / "banco" / ITEM_3502 / "transcript.v1.json").read_text(encoding="utf-8"))
+    cur = json.loads((ROOT / "index" / "items" / ITEM_3502 / "transcript.json").read_text(encoding="utf-8"))
+    sub = cur["substitui"]
+    man = sub["correcoes_manuais_pos_replace"]
+    words = [dict(w) for w in cur["words"]]
+    for e in sub["edicoes_reaplicadas"] + man["edicoes"]:
+        if 831.0 <= words[e["i"]]["start"] <= 836.5 and e in man["edicoes"]:
+            continue  # letras soletradas: cru = texto atual
+        words[e["i"]]["word"] = e["whisper"]
+    f = man["fundidas"][0]
+    rec = next(e for e in man["edicoes"] if e["i"] == f["i"])
+    w = words[f["i"]]
+    second = {"word": f["de"][1], "start": rec["end"], "end": w["end"]}
+    w.update(word=f["de"][0], end=rec["end"])
+    words.insert(f["i"] + 1, second)
+    # conferência: fora da fusão (319–322) e do deslocamento manual 'trazer fazer' -> 'te trazer' (739–740), o cru
+    # reconstruído é idêntico ao alinhamento com os segmentos
+    seg_raw = m.raw_from_segments(cur["words"], cur["segments"])
+    flat = [x for k, x in enumerate(words) if k != f["i"] + 1]
+    diffs = [k for k in range(len(flat)) if seg_raw[k] != flat[k]["word"] and not (319 <= k <= 321 or 739 <= k <= 740)]
+    assert not diffs, [(k, flat[k]["word"], seg_raw[k]) for k in diffs]
+    novo = [dict(_slim(x), raw=x["word"]) for x in words]
+    fx = {"item": ITEM_3502, "gerado_em": "2026-10-24", "nota": build_3502_fixture.__doc__.strip(),
+          "v1": {"words": [_slim(x) for x in v1["words"]],
+                 "segments": [{k: s[k] for k in ("start", "end", "text")} for s in v1["segments"]]},
+          "novo_bruto": novo}
+    FIX_3502.parent.mkdir(parents=True, exist_ok=True)
+    with gzip.open(FIX_3502, "wt", encoding="utf-8") as fh:
+        json.dump(fx, fh, ensure_ascii=False, separators=(",", ":"))
+    print(f"fixture gravada: {FIX_3502} ({FIX_3502.stat().st_size // 1024} KB; v1 {len(v1['words'])} palavras, "
+          f"novo {len(novo)})")
+
+
+def test_carry_3502():
+    m = load_t03()
+    with gzip.open(FIX_3502, "rt", encoding="utf-8") as fh:
+        fx = json.load(fh)
+    old, new = fx["v1"]["words"], copy.deepcopy(fx["novo_bruto"])
+    c = m.carry_word_edits(new, old, fx["v1"]["segments"])
+    print("3502:", {k: (v if not isinstance(v, list) else len(v)) for k, v in c.items()})
+    for r in c["nao_reaplicadas"]:
+        print("   não reaplicada:", r)
+    # 1) toda correção casável voltou, com o mesmo texto que o Gabriel/Claude escolheram à mão
+    for io, jn, wd in EXPECT_3502 + ALREADY_OK_3502:
+        assert new[jn]["word"] == wd, (io, jn, new[jn]["word"], wd)
+    got = {(r["i_antigo"], r["i"]) for r in c["reaplicadas"]}
+    assert got == {(io, jn) for io, jn, _ in EXPECT_3502}, sorted(got ^ {(io, jn) for io, jn, _ in EXPECT_3502})
+    assert {(r["i_antigo"], r["i"]) for r in c["ja_corretas"]} == {(io, jn) for io, jn, _ in ALREADY_OK_3502}
+    # 2) nenhuma diferença entre execuções virou correção: só as palavras acima mudaram
+    changed = {j for j, w in enumerate(new) if w["word"] != w["raw"]}
+    assert changed == {jn for _, jn, _ in EXPECT_3502}, sorted(changed ^ {jn for _, jn, _ in EXPECT_3502})
+    # 3) as 28 correções do v1 são achadas só pelo texto dos segmentos (conferido contra o transcript.v1.txt cru);
+    #    as que dependem de fusão ficam listadas para revisão ('D' '&P' -> 'T' 'P' = uma entrada, 2 palavras)
+    assert c["fonte"] == "segments" and c["detectadas"] == 28, c["detectadas"]
+    nr = {r["i_antigo"]: r for r in c["nao_reaplicadas"]}
+    assert set(nr) == {240, 1149}, c["nao_reaplicadas"]
+    assert nr[1149]["motivo"] == "estrutural" and nr[1149]["palavras_antigas"] == 2
+    assert all(r["trecho_novo"]["texto"] for r in c["nao_reaplicadas"])
+    nineteen = [x for x in EXPECT_3502 + ALREADY_OK_3502 if x[0] not in OLD_RULE_3502]
+    print(f"3502: {len(nineteen)} das 19 correções refeitas à mão casaram sozinhas "
+          f"({len([x for x in nineteen if x in ALREADY_OK_3502])} já vinham certas); "
+          f"{len(STRUCTURAL_3502)} eram fusões manuais -> nao_reaplicadas; "
+          f"{len(c['reaplicadas'])} reaplicadas no total, 0 espúrias (a regra antiga: 9 reais + 30 espúrias)")
+    assert len(nineteen) == 16 and len(nineteen) + len(STRUCTURAL_3502) == 19
+    print("regressão IMG_3502 OK")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--keep", action="store_true")
     ap.add_argument("--real-whisper", action="store_true")
+    ap.add_argument("--rebuild-3502", action="store_true", help="recria tests/fixtures/img3502_replace.json.gz e sai")
     a = ap.parse_args()
+    if a.rebuild_3502:
+        build_3502_fixture()
+        return
+    test_carry_3502()
     tmp = Path(tempfile.mkdtemp(prefix="reel_banco_test_"))
     env = dict(os.environ, REEL_BANCO_WORK=str(tmp / "work"), REEL_BANCO_INDEX=str(tmp / "index"),
                PYTHONWARNINGS="ignore")
