@@ -103,6 +103,14 @@ recurso, vira opção de script.
      (`--drive-id` e `--modified` sempre: dão o mesmo item_id do `01_scan` e permitem reabastecer `work/` depois).
      `--licenca` é obrigatório: material do Gabriel (aulas, atlas dele) = `propria`; artigo/livro = `terceiros`
      com `--fonte`; na dúvida = `desconhecida` (e pergunte).
+     **HTML / aula-atlas:** acrescente `--offline --blocos ".key,.divg" --clicar ".steps button"` (`--offline` bloqueia
+     Google Fonts/CDN; `--tema light|dark|auto`, padrão light). Com ≥ 2 `<section>` de topo, 1 parte por seção
+     (`ref.ancora` = id, + `intro`/`fim`), texto oculto sob `[Oculto até interação]`; `--clicar` clica cada etapa e
+     junta o texto e as imagens revelados; `--blocos` captura os cards à parte (`sNN_bK`). As opções ficam em
+     `item.json → extracao` e o reabastecimento as reaproveita. **Licença por figura:** cada imagem `sNN_iK` leva a
+     licença lida da legenda (CC/domínio público = `terceiros` + `licenca_detalhe`; fonte sem licença = `desconhecida`):
+     figura de artigo dentro de um documento `propria` carrega a licença da própria figura, e o `10_clip` usa essa
+     (não a do item), marca NC e, em captura de seção com `contem_terceiros`, lista os créditos a exibir.
 4. **LER** `work/banco/<item_id>/segment_input.md` (ou `doc_input.md`) **inteiro** — todos os blocos, até o fim —
    e abrir o `contact_sheet.jpg` (Read) para ver enquadramento/qualidade. Em vídeo muito longo, leia em partes,
    mas leia tudo.
@@ -273,7 +281,7 @@ continuam no índice; só a mídia precisa voltar.
 
 `00_check_env` · `01_scan --manifest` · `02_fetch --file-id/--local/--item` · `03_transcribe <id>
 [--import-transcript] [--replace [--no-carry-edits]] [--backfill-raw] [--silence-margin 6] [--abs-silence -70]` · `04_scenes <id>` · `05_keyframes <id>` · `06_segment_input <id>` ·
-`06b_validate_segments <id>` · `07_doc_ingest --local --licenca` · `08_index` · `09_search "q"` ·
+`06b_validate_segments <id>` · `07_doc_ingest --local --licenca [--offline] [--tema] [--blocos] [--clicar]` · `08_index` · `09_search "q"` ·
 `10_clip "<seg>" [--broll --broll-index]` · `run_ingest` · `drive_fetch <file_id> <destino> [--expect-size N] [--probe-bytes N]`
 (provisório, pode ser substituído; só segue redirecionamentos para https em google.com/*.google.com/*.googleusercontent.com; códigos: 3 = não compartilhado, 4 = HTML inesperado/host não permitido/5xx, 5 = tamanho divergente).
 Testes: `python3 tests/test_pipeline.py` (material sintético, sem rede) e `python3 tests/test_memory.py` (1 h de áudio, RSS ≤ 2,5 GB).

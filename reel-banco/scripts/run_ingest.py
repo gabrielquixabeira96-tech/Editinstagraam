@@ -92,6 +92,10 @@ def main():
     ap.add_argument("--threshold")
     ap.add_argument("--every")
     ap.add_argument("--block")
+    ap.add_argument("--offline", action="store_true", help="doc HTML: repassado ao 07_doc_ingest")
+    ap.add_argument("--tema", choices=["light", "dark", "auto"], help="doc HTML: repassado ao 07_doc_ingest")
+    ap.add_argument("--blocos", help="doc HTML: repassado ao 07_doc_ingest")
+    ap.add_argument("--clicar", help="doc HTML: repassado ao 07_doc_ingest")
     args = ap.parse_args()
 
     if args.finish:
@@ -107,10 +111,12 @@ def main():
         if not args.licenca:
             bc.die("documento exige --licenca propria|terceiros|desconhecida")
         cmd = ["--local", args.local, "--licenca", args.licenca]
-        for k in ("fonte", "name", "drive_id", "modified", "item_id"):
+        for k in ("fonte", "name", "drive_id", "modified", "item_id", "tema", "blocos", "clicar"):
             v = getattr(args, k)
             if v:
                 cmd += [f"--{k.replace('_', '-')}", v]
+        if args.offline:
+            cmd.append("--offline")
         bc.run_script("07_doc_ingest.py", *cmd)
         print("PROXIMO: ler doc_input.md, escrever segments.json e rodar run_ingest.py --finish <item_id>")
         return

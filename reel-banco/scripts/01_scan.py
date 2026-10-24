@@ -7,7 +7,8 @@ Manifesto aceito (lista ou {"files": [...]}), um objeto por arquivo, com os camp
    "size": "734003200", "modifiedTime": "2026-10-20T14:03:11Z"}
 
 Um arquivo é considerado JÁ INGERIDO quando algum index/items/*/item.json tem o mesmo
-origem.drive_id, ou o mesmo item_id (data+slug) e mesmo tamanho. Pastas e tipos não suportados
+origem.drive_id (ou o lista em fontes_adicionais[].drive_id — cópia .md, duplicata, wrapper de artefato),
+ou o mesmo item_id (data+slug) e mesmo tamanho. Pastas e tipos não suportados
 são listados como ignorados.
 
 Uso:
@@ -35,6 +36,10 @@ def known_items():
         o = it.get("origem", {})
         if o.get("drive_id"):
             by_drive[o["drive_id"]] = it
+        # outras cópias/versões do mesmo material no Drive (ex.: .md do artefato, duplicata): já cobertas pelo item
+        for extra in it.get("fontes_adicionais") or []:
+            if isinstance(extra, dict) and extra.get("drive_id"):
+                by_drive.setdefault(extra["drive_id"], it)
         by_id[it.get("id")] = it
     return by_drive, by_id
 
@@ -55,6 +60,10 @@ def main():
         mime = f.get("mimeType", "")
         if mime == "application/vnd.google-apps.folder":
             ign.append({**f, "motivo": "pasta"})
+            continue
+        if f.get("id") in by_drive:  # já ingerido (inclusive fontes adicionais de um item, de qualquer tipo)
+            hit = by_drive[f["id"]]
+            ja.append({"id": f.get("id"), "name": name, "item_id": hit["id"], "status": hit.get("status")})
             continue
         tipo = bc.kind_of(name, mime)
         if mime.startswith("application/vnd.google-apps"):

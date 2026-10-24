@@ -77,17 +77,17 @@ Todos em Python 3, com `--help`, idempotentes; cache por etapa em `work/banco/<i
 | script | entrada → saída |
 |---|---|
 | `00_check_env.py` | verifica Python, libs, ffmpeg/filtros, Chromium, YuNet, modelo whisper no cache, config |
-| `01_scan.py --manifest m.json` | listagem da 01_entrada (id, name, mimeType, size, modifiedTime) → novos / já ingeridos (por `drive_id` ou item_id+tamanho) / ignorados |
+| `01_scan.py --manifest m.json` | listagem da 01_entrada (id, name, mimeType, size, modifiedTime) → novos / já ingeridos (por `drive_id`, inclusive `fontes_adicionais[].drive_id`, ou item_id+tamanho) / ignorados |
 | `02_fetch.py --file-id ID --name N [--size B]` · `--local P` · `--item ID` | `work/banco/<id>/source.<ext>` + `item.json` (origem, tipo, duração/resolução via ffprobe, tamanho, sha256, licença) |
 | `03_transcribe.py <id> [--import-transcript T] [--replace [--no-carry-edits]] [--backfill-raw]` | `transcript.json` (formato reel-editor + `raw` por palavra) + `transcript.txt` (marca a cada ~20 s); nunca retranscreve, exceto `--replace` (transcrição defeituosa: backup `.vN`, retranscrição e reaplicação tolerante das correções de `word`); `--backfill-raw` grava `raw` (dos segmentos) num transcript antigo, no work/ e no index/ |
 | `04_scenes.py <id>` | `scenes.json`: cortes (`scdet`), blocos de ≤ 30 s em câmera fixa, e por cena rosto (YuNet), nitidez, luma, estourado/escuro, nível de áudio e silêncio, notas sugeridas |
 | `05_keyframes.py <id>` | 1 quadro por cena e ≥ 1 a cada 30 s → `keyframes/`, `index/items/<id>/thumbs/*.jpg` (320 px), `contact_sheet.jpg` (grade numerada com tempos; folhas extras para vídeos longos) |
 | `06_segment_input.py <id>` | `segment_input.md`: transcrição em blocos de 60 s + tabela de cenas + miniaturas, instruções e esquema |
 | `06b_validate_segments.py <id>` | valida esquema/valores, ajusta t0/t1 às palavras, confere citação literal (grava `citacao_t0/t1`), renumera ids |
-| `07_doc_ingest.py --local P --licenca L [--fonte F]` | PDF: texto por página, figuras com página/bbox/legenda próxima, render de páginas; HTML: seções por h1–h3 + capturas 540×960 (@2x); `doc_text.json`, `figuras.json`, `doc_input.md`, thumbs e contact sheet |
+| `07_doc_ingest.py --local P --licenca L [--fonte F] [--offline] [--tema light\|dark\|auto] [--blocos SEL] [--clicar SEL]` | PDF: texto por página, figuras com página/bbox/legenda próxima, render de páginas; HTML: 1 parte por `<section>` de topo (aulas-atlas; senão por h1–h3) com texto oculto, capturas 540×960 (@2x), blocos (`--blocos`), imagens embutidas com licença lida da legenda e o que só aparece ao clicar (`--clicar`); `--offline` bloqueia requisições externas; `doc_text.json`, `figuras.json`, `doc_input.md`, thumbs e contact sheets |
 | `08_index.py` | `index/index.json`, `index/index.md` (1 linha por segmento), `index/bm25_tokens.json` |
 | `09_search.py "q" [--tags] [--tipo] [--publico] [--uso] [--min-gancho] [--top] [--json]` | BM25 (sem acentos, stopwords pt, plural simples) + bônus de tag/público/uso/gancho |
-| `10_clip.py "<seg>" [--pad 0.3] [--precise] [--broll --broll-index P] [--for-editor DIR]` | vídeo → `work/banco/clips/<seg>.mp4` (≤ 1080p, H.264 CRF 18 / AAC 192k) + `<seg>.transcript.json`; `--precise` = busca híbrida exata; `--for-editor DIR` grava `DIR/<clipe>/transcript.json` para a reel-editor/reel-director; doc → figura `.png/.jpg` (figuras.json lido do índice se work/ estiver vazio); `--broll` registra em `assets/broll/index.json` da reel-director |
+| `10_clip.py "<seg>" [--pad 0.3] [--precise] [--broll --broll-index P] [--for-editor DIR]` | vídeo → `work/banco/clips/<seg>.mp4` (≤ 1080p, H.264 CRF 18 / AAC 192k) + `<seg>.transcript.json`; `--precise` = busca híbrida exata; `--for-editor DIR` grava `DIR/<clipe>/transcript.json` para a reel-editor/reel-director; doc → figura `.png/.jpg` (figuras.json lido do índice se work/ estiver vazio), com a licença da figura (não a do item), aviso NC e os créditos de `contem_terceiros`; `--broll` registra em `assets/broll/index.json` da reel-director |
 | `run_ingest.py` | `--file-id/--local`: 02→03→04→05→06 (ou 07) e para; `--finish <id>`: 06b → cópia para index/ → 08 |
 | `banco_common.py` | caminhos, ffmpeg/ffprobe, logs, JSON atômico, slug/ids, tokenização, cache de etapas |
 
@@ -103,6 +103,12 @@ Todos em Python 3, com `--help`, idempotentes; cache por etapa em `work/banco/<i
 ```
 `status`: `baixado` → `aguardando-segmentos` → `segmentado` → `indexado`. Documento: `subtipo` (pdf|html),
 `paginas`/`secoes`, `n_figuras`, `fonte`, `licenca` obrigatória (`propria|terceiros|desconhecida`).
+HTML: `extracao` (`offline`, `tema`, `blocos`, `clicar`, `modo` secoes|titulos|sem-navegador, `cliques`,
+`requisicoes_bloqueadas`), reaproveitada no reabastecimento sem repetir flags, e `figuras_licenca` (`por_licenca`,
+`imagens_terceiros`, `sem_uso_comercial`). Em `figuras.json`, `tipo` = `secao` | `bloco` | `imagem`: a imagem
+embutida tem licença própria lida da legenda (+ `licenca_detalhe`, `fonte`, `uso_comercial: false` se NC) — figura
+de artigo dentro de um documento `propria` carrega a licença da própria figura — e a captura de seção que a mostra
+ganha `contem_terceiros` (créditos). O `10_clip.py` usa a licença da figura, não a do item.
 
 ### transcript.json (idêntico à reel-editor `01_transcribe.py`)
 ```json

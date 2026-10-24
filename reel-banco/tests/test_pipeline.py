@@ -4,7 +4,9 @@
 Vídeo: 20 s, 1280×720, 3 cenas de cores diferentes (azul / verde / vermelho, cortes em 7 s e 14 s) + tom
 de 220 Hz com pausas. Transcrição: STUB no formato da reel-editor (importado com --import-transcript), porque
 um tom não tem fala; com --real-whisper roda o faster-whisper de verdade (só confere que não quebra).
-Documentos: um PDF de 2 páginas com uma figura e legenda, e um HTML com 2 seções (Playwright, se houver).
+Documentos: um PDF de 2 páginas com uma figura e legenda, um HTML com 2 seções (Playwright, se houver) e uma
+aula-atlas sintética (modo seções, texto oculto, --offline/--blocos/--clicar, licença por figura no 10_clip,
+fontes_adicionais no 01_scan, e o caminho "sem navegador").
 
 Fluxo: 02 (local) -> 03 (stub) -> 04 -> 05 -> 06 -> segments.json de exemplo -> 06b -> run_ingest --finish
 (-> 08) -> 09 -> 10 (+ --broll em um assets/broll/index.json temporário) -> 07 (pdf/html) -> 08 -> 09 --tipo doc.
@@ -104,6 +106,111 @@ HTML = """<!doctype html><html><head><meta charset="utf-8"><title>Atlas teste</t
 <h2>Anatomia da membrana</h2><p>A membrana cricotireóidea fica entre a cartilagem tireoide e a cricoide.</p>
 <h2>Técnica por punção</h2><p>Na criança pequena a técnica por punção com cateter é a escolha inicial.</p>
 </body></html>"""
+
+# aula-atlas: <section> de topo com id, lead antes, rodapé depois, texto oculto, bloco .key, figuras data: com
+# legenda (CC BY / fonte sem licença) e uma figura CC BY-NC que só aparece depois do clique na etapa 2
+ATLAS = """<!doctype html><html data-theme="dark"><head><meta charset="utf-8"><title>Atlas sintético</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter">
+<style>body{font-family:Inter,sans-serif;margin:16px;background:#fff}[data-theme=dark] body{background:#111;color:#eee}
+.key{border:1px solid #333;padding:8px}</style></head><body>
+<header><h1>Atlas sintético da pelve</h1><p>Instruções: clique nas etapas da prancha.</p></header>
+<nav><a href="#c00">Anatomia</a> <a href="#c01">Binder</a></nav>
+<section id="c00"><h2>Anatomia do anel pélvico</h2><p>O anel pélvico é formado pelo sacro e pelos dois ossos do quadril.</p>
+<div class="key">Guarde isto: o binder vai sobre os trocânteres maiores.</div>
+<figure><img src="IMG1" alt="Pelve AP"><figcaption>Fonte: Silva A et al. Injury. 2024. Fig. 2. CC BY 4.0. PMC123</figcaption></figure>
+<div hidden>Glossário: a sínfise púbica é a articulação anterior.</div></section>
+<section id="c01"><h2>Etapas do binder</h2><p>Paciente em decúbito dorsal.</p>
+<div class="steps"><button data-k="1">1</button><button data-k="2">2</button></div><div id="stage"><p id="cap">Etapa inicial</p></div>
+<figure><img src="IMG2" alt="Tomografia"><figcaption>Fonte: Souza B et al. J Trauma. 2023. Fig. 3. PMC456</figcaption></figure>
+</section>
+<footer><p>Referências: Silva 2024; Souza 2023.</p></footer>
+<script>document.querySelectorAll('.steps button').forEach(b => b.addEventListener('click', () => {
+  document.getElementById('cap').textContent = b.dataset.k === '1' ? 'Etapa 1: centralize o binder nos trocânteres'
+                                                                    : 'Etapa 2: tracione e trave o binder';
+  if (b.dataset.k === '2' && !document.getElementById('f3')) { const f = document.createElement('figure'); f.id = 'f3';
+    f.innerHTML = '<img src="IMG3" alt="Binder"><figcaption>Fonte: Lima C. Fig. 1. CC BY-NC 4.0</figcaption>';
+    document.getElementById('stage').appendChild(f); } }));</script></body></html>"""
+
+
+def test_html_atlas(tmp: Path, env):
+    """07_doc_ingest em modo seções (aula-atlas) + licença por figura no 10_clip + fontes_adicionais no 01_scan."""
+    import base64
+    import io
+    from PIL import Image
+    env = dict(env, REEL_BANCO_WORK=str(tmp / "work_atlas"), REEL_BANCO_INDEX=str(tmp / "index_atlas"))
+    html = ATLAS
+    for k, c in (("IMG1", (200, 60, 60)), ("IMG2", (60, 200, 60)), ("IMG3", (60, 60, 200))):
+        b = io.BytesIO()
+        Image.new("RGB", (260, 180), c).save(b, "PNG")
+        html = html.replace(k, "data:image/png;base64," + base64.b64encode(b.getvalue()).decode())
+    hp = tmp / "Atlas Sintético da Pelve.html"
+    hp.write_text(html, encoding="utf-8")
+    r = sh(PY, S / "run_ingest.py", "--local", hp, "--licenca", "propria", "--drive-id", "ATLAS1", "--offline",
+           "--blocos", ".key", "--clicar", ".steps button", env=env, capture=True)
+    print(r.stdout[-500:])
+    aid = next(l.split("=", 1)[1] for l in r.stdout.splitlines() if l.startswith("ITEM_ID="))
+    wd = tmp / "work_atlas" / aid
+    item = json.loads((wd / "item.json").read_text())
+    ex = item["extracao"]
+    assert ex["modo"] == "secoes" and ex["offline"] and ex["tema"] == "light" and ex["cliques"] == 2, ex
+    assert ex["requisicoes_bloqueadas"] >= 1 and "fonts.googleapis.com" in ex["hosts_bloqueados"], ex
+    partes = json.loads((wd / "doc_text.json").read_text())["partes"]
+    assert [p["tipo"] for p in partes] == ["intro", "secao", "secao", "fim"], [p["tipo"] for p in partes]
+    assert [p["ref"].get("ancora") for p in partes] == [None, "c00", "c01", None]
+    assert "Instruções" in partes[0]["texto"] and "Referências" in partes[3]["texto"]
+    assert "[Oculto até interação]" in partes[1]["texto"] and "sínfise púbica" in partes[1]["texto"], partes[1]
+    assert "[Revelado ao clicar" in partes[2]["texto"] and "Etapa 2: tracione" in partes[2]["texto"], partes[2]
+    figs = {f["id"]: f for f in json.loads((wd / "figuras.json").read_text())}
+    assert figs["s02_i1"]["licenca"] == "terceiros" and figs["s02_i1"]["licenca_detalhe"] == "CC BY 4.0", figs["s02_i1"]
+    assert figs["s03_i1"]["licenca"] == "desconhecida" and "Souza B" in figs["s03_i1"]["fonte"], figs["s03_i1"]
+    nc = figs["s03_i2"]
+    assert nc["licenca_detalhe"] == "CC BY-NC 4.0" and nc["uso_comercial"] is False and nc["fase"] == "clique 2", nc
+    assert figs["s02_b1"]["tipo"] == "bloco" and "Guarde isto" in figs["s02_b1"]["texto"]
+    assert any("Silva A" in c for c in figs["s02"]["contem_terceiros"]), figs["s02"]
+    assert (wd / figs["s02_i1"]["arquivo"]).exists() and item["figuras_licenca"]["sem_uso_comercial"] == ["s03_i2"]
+    # sem flags: as opções gravadas em item.json -> extracao valem (mesma assinatura -> cache)
+    r = sh(PY, S / "07_doc_ingest.py", "--local", hp, "--licenca", "propria", env=env, capture=True)
+    assert "cache" in r.stdout, r.stdout
+    # 10_clip: licença da FIGURA (CC BY-NC dentro de documento próprio) e créditos da captura de seção
+    segs = {"item_id": aid, "segments": [
+        {"id": "a", "t0": None, "t1": None, "ref": {"secao": 3, "secao_id": "s03", "figura": "s03_i2"},
+         "tema": "binder pélvico", "tags": ["pelve"], "tese": "binder nos trocânteres",
+         "citacao": "Paciente em decúbito dorsal.", "gancho_potencial": 2, "publicos": ["residente"],
+         "qualidade_visual": 3, "qualidade_audio": 0, "usos": ["broll"], "notas": ""},
+        {"id": "b", "t0": None, "t1": None, "ref": {"secao": 2, "secao_id": "s02"}, "tema": "anel pélvico",
+         "tags": ["pelve"], "tese": "sacro e dois ossos do quadril",
+         "citacao": "O anel pélvico é formado pelo sacro", "gancho_potencial": 2, "publicos": ["residente"],
+         "qualidade_visual": 3, "qualidade_audio": 0, "usos": ["citacao-card"], "notas": ""}]}
+    (wd / "segments.json").write_text(json.dumps(segs, ensure_ascii=False), encoding="utf-8")
+    sh(PY, S / "run_ingest.py", "--finish", aid, env=env)
+    bidx = tmp / "broll_atlas" / "index.json"
+    for sid in ("s01", "s02"):
+        sh(PY, S / "10_clip.py", f"{aid}#{sid}", "--broll", "--broll-index", bidx, env=env)
+    e1, e2 = json.loads(bidx.read_text())
+    assert e1["licenca"] == "terceiros" and "terceiros CC BY-NC 4.0" in e1["license_note"], e1
+    assert "Lima C" in e1["source"] and "licença NC" in e1["license_note"], e1
+    assert e2["licenca"] == "propria" and e2["license_note"].startswith("material próprio"), e2
+    assert "CONTÉM figuras de terceiros" in e2["license_note"] and "Silva A" in e2["license_note"], e2
+    # 01_scan: cópia (.md) listada em fontes_adicionais conta como já ingerida
+    it = json.loads((tmp / "index_atlas" / "items" / aid / "item.json").read_text())
+    it["fontes_adicionais"] = [{"drive_id": "ATLAS1MD", "nome": "Atlas Sintético da Pelve.md"}]
+    (tmp / "index_atlas" / "items" / aid / "item.json").write_text(json.dumps(it, ensure_ascii=False))
+    man = tmp / "manifest_atlas.json"
+    man.write_text(json.dumps([{"id": "ATLAS1", "name": hp.name, "mimeType": "text/html"},
+                               {"id": "ATLAS1MD", "name": "Atlas Sintético da Pelve.md", "mimeType": "text/markdown"}]))
+    scan = json.loads(sh(PY, S / "01_scan.py", "--manifest", man, "--json", env=env, capture=True).stdout)
+    assert {x["id"] for x in scan["ja_ingeridos"]} == {"ATLAS1", "ATLAS1MD"} and not scan["novos"], scan
+    # sem navegador (Playwright quebrado): só texto, sem capturas, modo registrado
+    fake = tmp / "fakepw" / "playwright"
+    fake.mkdir(parents=True)
+    (fake / "__init__.py").write_text("")
+    (fake / "sync_api.py").write_text("raise ImportError('playwright falso (teste)')\n")
+    r = sh(PY, S / "07_doc_ingest.py", "--local", hp, "--licenca", "propria", "--item-id", "20261024_atlas-sem-nav",
+           env=dict(env, PYTHONPATH=str(tmp / "fakepw")), capture=True)
+    sn = tmp / "work_atlas" / "20261024_atlas-sem-nav"
+    assert json.loads((sn / "item.json").read_text())["extracao"]["modo"] == "sem-navegador"
+    assert any("trocânteres" in p["texto"] for p in json.loads((sn / "doc_text.json").read_text())["partes"])
+    print("HTML aula-atlas (seções, oculto, cliques, blocos, licença por figura, fontes_adicionais) OK")
 
 
 # ---------------------------------------------------------------------------------------------------------------
@@ -712,6 +819,7 @@ def main():
         assert full["n_itens"] == 2 and full["n_segmentos"] == 3 and hid in full["pendentes"]
 
         test_no_speech_filter(tmp, env)
+        test_html_atlas(tmp, env)
         print("\nTESTE OK")
     finally:
         if a.keep:
