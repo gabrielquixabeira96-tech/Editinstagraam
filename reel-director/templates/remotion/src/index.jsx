@@ -318,7 +318,7 @@ const C_SHADOW = '0 2px 14px rgba(0,0,0,.65), 0 1px 2px rgba(0,0,0,.6)';
 const soft = (f, start, d = 12) => interpolate(f, [start, start + d], [0, 1], {easing: inOut, extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
 const Rule = ({w, opacity = 1, style}) => <div style={{height: 1.5, width: w, background: 'rgba(255,255,255,.9)', opacity, ...style}} />;
 
-const HookTitleClassico = ({lines = [['TÍTULO']], y = 560, stagger = 3, fontSize = 92, durationInFrames}) => {
+const HookTitleClassico = ({lines = [['TÍTULO']], y = 560, stagger = 3, fontSize = 92, box = false, durationInFrames}) => {
   useSerif();
   const f = useCurrentFrame();
   let k = 0;
@@ -326,6 +326,8 @@ const HookTitleClassico = ({lines = [['TÍTULO']], y = 560, stagger = 3, fontSiz
     <AbsoluteFill style={{fontFamily: SERIF, color: 'white'}}>
       <div style={{position: 'absolute', top: y, left: 65, width: 950, display: 'flex', flexDirection: 'column',
         alignItems: 'center', gap: 4, opacity: fadeOut(f, durationInFrames, 10)}}>
+        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4,
+          ...(box ? {background: C_BOX, padding: '26px 40px 22px', opacity: soft(f, 0, 8)} : {})}}>
         {lines.map((ln, li) => (
           <div key={li} style={{display: 'flex', gap: Math.round(fontSize * 0.34), justifyContent: 'center', flexWrap: 'wrap'}}>
             {ln.map((w, wi) => {
@@ -343,6 +345,7 @@ const HookTitleClassico = ({lines = [['TÍTULO']], y = 560, stagger = 3, fontSiz
         ))}
         <Rule w={interpolate(f, [k * stagger, k * stagger + 16], [0, 140], {easing: inOut, extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}
           style={{marginTop: 16, boxShadow: '0 1px 6px rgba(0,0,0,.5)'}} />
+        </div>
       </div>
     </AbsoluteFill>
   );
