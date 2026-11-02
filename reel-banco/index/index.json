@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-11-02T15:00:20+00:00",
-  "n_itens": 29,
-  "n_segmentos": 149,
+  "gerado_em": "2026-11-02T15:13:13+00:00",
+  "n_itens": 31,
+  "n_segmentos": 159,
   "itens": [
     {
       "id": "20261023_img-1689",
@@ -5428,6 +5428,229 @@
       ]
     },
     {
+      "id": "20261025_img-3901",
+      "nome": "IMG_3901",
+      "tipo": "video",
+      "subtipo": null,
+      "duracao": 402.8867,
+      "largura": 1080,
+      "altura": 1920,
+      "licenca": "propria",
+      "fonte": null,
+      "status": "indexado",
+      "paginas": null,
+      "secoes": null,
+      "n_figuras": null,
+      "contact_sheets": [
+        "contact_sheet.jpg"
+      ],
+      "origem": {
+        "drive_id": "1FJomuRAEtXI4pLvystD_JIgXg0OgmPwL",
+        "nome_original": "IMG_3901.MOV"
+      },
+      "segmentos": [
+        {
+          "id": "20261025_img-3901#s01",
+          "t0": 23.06,
+          "t1": 40.2,
+          "tema": "etimologia: estoma significa boca — anastomose é devolver duas bocas ao estado original",
+          "tags": [
+            "etimologia",
+            "termos-medicos",
+            "anastomose",
+            "estoma",
+            "cirurgia",
+            "latim-grego"
+          ],
+          "tese": "os termos cirúrgicos se decifram pela raiz grega: estoma = boca",
+          "citacao": "estoma significa boca",
+          "gancho_potencial": 3,
+          "publicos": [
+            "concursos-vestibular",
+            "geral",
+            "candidato-residencia"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 3,
+          "usos": [
+            "fala-principal",
+            "corte-rapido"
+          ],
+          "notas": "Cenário ESCRITÓRIO (luminárias circulares), camisa verde, retrato, câmera baixa, ele recostado e mexendo no cabelo; fala muito pausada (pausas de 1–18 s). ",
+          "t0_original": 23.0,
+          "t1_original": 42.0,
+          "dur": 17.14,
+          "citacao_t0": 29.43,
+          "citacao_t1": 31.62,
+          "citacao_palavras": [
+            32,
+            34
+          ],
+          "item_id": "20261025_img-3901",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261025_img-3901#s02",
+          "t0": 43.19,
+          "t1": 79.71,
+          "tema": "análise vem de 'lise', quebra: decompor em pedaços para entender o macro a partir do micro",
+          "tags": [
+            "etimologia",
+            "analise",
+            "lise",
+            "termos-medicos",
+            "metodo",
+            "engenharia-reversa"
+          ],
+          "tese": "análise é quebrar o todo em partes, uma engenharia reversa do conhecimento",
+          "citacao": "Uma análise é quando você quebra uma coisa em vários pedaços",
+          "gancho_potencial": 2,
+          "publicos": [
+            "concursos-vestibular",
+            "geral"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 3,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "Cenário ESCRITÓRIO (luminárias circulares), camisa verde, retrato, câmera baixa, ele recostado e mexendo no cabelo; fala muito pausada (pausas de 1–18 s). ",
+          "t0_original": 43.0,
+          "t1_original": 79.5,
+          "dur": 36.52,
+          "citacao_t0": 47.18,
+          "citacao_t1": 50.97,
+          "citacao_palavras": [
+            53,
+            63
+          ],
+          "item_id": "20261025_img-3901",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261025_img-3901#s03",
+          "t0": 82.32,
+          "t1": 122.48,
+          "tema": "anaplasia: a célula que, por erro na diferenciação, regride às características da célula que a originou",
+          "tags": [
+            "etimologia",
+            "anaplasia",
+            "diferenciacao-celular",
+            "oncologia",
+            "patologia",
+            "termos-medicos"
+          ],
+          "tese": "o prefixo 'ana-' indica inversão/regressão: na anaplasia a célula volta ao estado inicial",
+          "citacao": "essa célula começa a regredir e retorna as características da célula que deu origem para ela",
+          "gancho_potencial": 3,
+          "publicos": [
+            "concursos-vestibular",
+            "candidato-residencia",
+            "residente"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 3,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "Cenário ESCRITÓRIO (luminárias circulares), camisa verde, retrato, câmera baixa, ele recostado e mexendo no cabelo; fala muito pausada (pausas de 1–18 s). 'na plazia' = anaplasia (whisper).",
+          "t0_original": 82.0,
+          "t1_original": 122.0,
+          "dur": 40.16,
+          "citacao_t0": 103.67,
+          "citacao_t1": 112.05,
+          "citacao_palavras": [
+            127,
+            142
+          ],
+          "item_id": "20261025_img-3901",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261025_img-3901#s04",
+          "t0": 127.71,
+          "t1": 194.39,
+          "tema": "tomia é corte: anatomia é o estudo do corpo por dissecção, cortando para entender cada peça e suas relações",
+          "tags": [
+            "etimologia",
+            "anatomia",
+            "tomia",
+            "disseccao",
+            "termos-medicos",
+            "historia-da-medicina"
+          ],
+          "tese": "anatomia significa literalmente cortar para entender — a mesma engenharia reversa da análise",
+          "citacao": "tomia significa corte, corte mais no sentido cirúrgico mesmo",
+          "gancho_potencial": 3,
+          "publicos": [
+            "concursos-vestibular",
+            "geral"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 3,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Cenário ESCRITÓRIO (luminárias circulares), camisa verde, retrato, câmera baixa, ele recostado e mexendo no cabelo; fala muito pausada (pausas de 1–18 s). Pausa de 8 s em 3:14.",
+          "t0_original": 127.0,
+          "t1_original": 196.0,
+          "dur": 66.68,
+          "citacao_t0": 131.33,
+          "citacao_t1": 135.31,
+          "citacao_palavras": [
+            159,
+            167
+          ],
+          "item_id": "20261025_img-3901",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261025_img-3901#s05",
+          "t0": 202.49,
+          "t1": 398.94,
+          "tema": "metáfora × analogia: a analogia veio da matemática (proporção, regra de três); o coração como bomba e os vasos como tubulações",
+          "tags": [
+            "linguagem",
+            "metafora",
+            "analogia",
+            "etimologia",
+            "didatica",
+            "sistema-circulatorio"
+          ],
+          "tese": "metáfora transpõe um conceito para outro campo semântico; analogia exige correspondência lógica proporcional (A está para B como C para D)",
+          "citacao": "Existe uma correspondência lógica entre entre a diferença de um está para o outro, como um terceiro está para um quarto",
+          "gancho_potencial": 2,
+          "publicos": [
+            "concursos-vestibular",
+            "geral"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 2,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "Cenário ESCRITÓRIO (luminárias circulares), camisa verde, retrato, câmera baixa, ele recostado e mexendo no cabelo; fala muito pausada (pausas de 1–18 s). Muito picado: pausas de 10,5 s, 18,3 s e 14,6 s (cortar). Trecho longo (~200 s) — só serve recortado.",
+          "t0_original": 202.0,
+          "t1_original": 402.0,
+          "dur": 196.45,
+          "citacao_t0": 388.23,
+          "citacao_t1": 398.94,
+          "citacao_palavras": [
+            409,
+            429
+          ],
+          "item_id": "20261025_img-3901",
+          "tipo": "video",
+          "licenca": "propria"
+        }
+      ]
+    },
+    {
       "id": "20261025_screenrecording-10-25-2026-02-54-23-1",
       "nome": "ScreenRecording_10-25-2026 02-54-23_1",
       "tipo": "video",
@@ -6116,6 +6339,231 @@
       "segmentos": []
     },
     {
+      "id": "20261102_img-3970",
+      "nome": "IMG_3970",
+      "tipo": "video",
+      "subtipo": null,
+      "duracao": 360.518333,
+      "largura": 1080,
+      "altura": 1920,
+      "licenca": "propria",
+      "fonte": null,
+      "status": "indexado",
+      "paginas": null,
+      "secoes": null,
+      "n_figuras": null,
+      "contact_sheets": [
+        "contact_sheet.jpg"
+      ],
+      "origem": {
+        "drive_id": "1N6G4WJyxL510v95B90jO9nzOpS3tb5xH",
+        "nome_original": "IMG_3970.MOV"
+      },
+      "segmentos": [
+        {
+          "id": "20261102_img-3970#s01",
+          "t0": 1.88,
+          "t1": 39.03,
+          "tema": "Habacuque: ainda que a figueira não floresça, me alegrarei — nada mudou além da perspectiva",
+          "tags": [
+            "biblia",
+            "habacuque",
+            "fe",
+            "perspectiva",
+            "resiliencia",
+            "religiao"
+          ],
+          "tese": "no fim do livro de Habacuque as circunstâncias não mudam; só muda a perspectiva de quem sofre",
+          "citacao": "a única coisa que mudou aqui foi a perspectiva",
+          "gancho_potencial": 2,
+          "publicos": [
+            "geral"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 3,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Cenário INTERNO (mesa clara, luminária linear no teto, mesma sessão de IMG_3971), camisa bege, retrato, câmera baixa sobre a mesa. Conteúdo religioso (Hc 3:17–18) — fora do posicionamento médico do perfil; usar só com aprovação dele. Fala hesitante no início.",
+          "t0_original": 1.9,
+          "t1_original": 44.0,
+          "dur": 37.15,
+          "citacao_t0": 33.99,
+          "citacao_t1": 37.29,
+          "citacao_palavras": [
+            71,
+            79
+          ],
+          "item_id": "20261102_img-3970",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261102_img-3970#s02",
+          "t0": 126.94,
+          "t1": 218.15,
+          "tema": "o anel de Giges (Platão, República): um pastor fica invisível, mata o rei, toma o trono e nunca é descoberto",
+          "tags": [
+            "filosofia",
+            "platao",
+            "republica",
+            "anel-de-giges",
+            "moral",
+            "impunidade"
+          ],
+          "tese": "Glauco propõe o anel de Giges para testar se alguém seria justo com garantia total de impunidade",
+          "citacao": "o anel que deixa a pessoa que usa invisível",
+          "gancho_potencial": 3,
+          "publicos": [
+            "geral",
+            "concursos-vestibular"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 3,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "Cenário INTERNO (mesa clara, luminária linear no teto, mesma sessão de IMG_3971), camisa bege, retrato, câmera baixa sobre a mesa. Narração da história com pausas de 1–4 s; whisper: 'Gilles'=Giges, 'Galco/Glauco', 'plaster'=pastor. Pausa de 12 s antes (1:05–1:18) e trechos repetidos 1:00–1:20 (cortar).",
+          "t0_original": 126.0,
+          "t1_original": 218.0,
+          "dur": 91.21,
+          "citacao_t0": 169.51,
+          "citacao_t1": 172.69,
+          "citacao_palavras": [
+            197,
+            205
+          ],
+          "item_id": "20261102_img-3970",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261102_img-3970#s03",
+          "t0": 219.64,
+          "t1": 225.43,
+          "tema": "pergunta-gancho: se você tivesse certeza de que nunca seria pego, ainda valeria a pena ser honesto?",
+          "tags": [
+            "filosofia",
+            "platao",
+            "anel-de-giges",
+            "moral",
+            "honestidade",
+            "dilema",
+            "pergunta-gancho"
+          ],
+          "tese": "o dilema de Giges separa quem é honesto por medo da consequência de quem é honesto por princípio",
+          "citacao": "se você pudesse ter certeza que você nunca seria pego, ainda assim valeria",
+          "gancho_potencial": 5,
+          "publicos": [
+            "geral",
+            "concursos-vestibular"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 3,
+          "usos": [
+            "corte-rapido",
+            "citacao-card",
+            "fala-principal"
+          ],
+          "notas": "Cenário INTERNO (mesa clara, luminária linear no teto, mesma sessão de IMG_3971), camisa bege, retrato, câmera baixa sobre a mesa. Gancho de dilema universal; whisper truncou o fim ('valeria a .S. Honesto') — conferir áudio (provável 'valeria a pena ser honesto'). Pode abrir o reel.",
+          "t0_original": 219.0,
+          "t1_original": 226.0,
+          "dur": 5.79,
+          "citacao_t0": 219.64,
+          "citacao_t1": 224.69,
+          "citacao_palavras": [
+            277,
+            289
+          ],
+          "item_id": "20261102_img-3970",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261102_img-3970#s04",
+          "t0": 219.64,
+          "t1": 288.89,
+          "tema": "o que nos move: o medo das consequências ou a moral intrínseca? no anel de Giges só a própria moral segura",
+          "tags": [
+            "filosofia",
+            "platao",
+            "anel-de-giges",
+            "moral",
+            "etica",
+            "impunidade"
+          ],
+          "tese": "com impunidade garantida, a única barreira contra o abuso é a moral própria — não o medo",
+          "citacao": "O que nos move em princípio? É o medo das consequências ou a nossa moral entrisca?",
+          "gancho_potencial": 4,
+          "publicos": [
+            "geral",
+            "concursos-vestibular"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 3,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Cenário INTERNO (mesa clara, luminária linear no teto, mesma sessão de IMG_3971), camisa bege, retrato, câmera baixa sobre a mesa. 'entrisca' = intrínseca (corrigir legenda). Bloco mais redondo do vídeo (~68 s).",
+          "t0_original": 219.0,
+          "t1_original": 288.5,
+          "dur": 69.25,
+          "citacao_t0": 259.22,
+          "citacao_t1": 269.24,
+          "citacao_palavras": [
+            345,
+            360
+          ],
+          "item_id": "20261102_img-3970",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261102_img-3970#s05",
+          "t0": 311.91,
+          "t1": 350.08,
+          "tema": "a resposta de Sócrates: o tirano é literalmente o homem mais infeliz do mundo — empregado da própria vontade",
+          "tags": [
+            "filosofia",
+            "platao",
+            "republica",
+            "tirania",
+            "felicidade",
+            "autodominio",
+            "antitese"
+          ],
+          "tese": "o tirano, que parece ter tudo, é mais infeliz que o pobre e o escravo porque virou servo da própria vontade",
+          "citacao": "o tirano na verdade é homem mais infeliz do mundo, que não é o pobre nem uma escrava",
+          "gancho_potencial": 4,
+          "publicos": [
+            "geral",
+            "concursos-vestibular"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 3,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Cenário INTERNO (mesa clara, luminária linear no teto, mesma sessão de IMG_3971), camisa bege, retrato, câmera baixa sobre a mesa. A frase aparece duas vezes (5:21 e 5:30); usar a segunda (mais limpa). Pausa de 7 s antes. Termina em 5:50. CUIDADO: gravado após a eleição; manter leitura filosófica, sem alusão política.",
+          "t0_original": 311.9,
+          "t1_original": 350.0,
+          "dur": 38.17,
+          "citacao_t0": 331.66,
+          "citacao_t1": 335.7,
+          "citacao_palavras": [
+            421,
+            438
+          ],
+          "item_id": "20261102_img-3970",
+          "tipo": "video",
+          "licenca": "propria"
+        }
+      ]
+    },
+    {
       "id": "20261102_img-3971",
       "nome": "IMG_3971",
       "tipo": "video",
@@ -6563,6 +7011,6 @@
     }
   ],
   "pendentes": [
-    "20261102_img-3970"
+    "20261025_win-20261025-01-19-08-pro"
   ]
 }

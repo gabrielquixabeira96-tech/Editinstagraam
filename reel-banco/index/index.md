@@ -1,6 +1,6 @@
 # Banco de material para Reels — catálogo
 
-Gerado em 2026-11-02T15:00:20+00:00 · 29 item(ns) · 149 segmento(s) · 1 pendente(s) de segmentação
+Gerado em 2026-11-02T15:13:13+00:00 · 31 item(ns) · 159 segmento(s) · 1 pendente(s) de segmentação
 
 Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: FP fala-principal, BR broll, CR corte-rapido, CC citacao-card · públicos: PL plantonista, RE residente, CA candidato-residencia, CV concursos-vestibular, GE geral
 
@@ -202,6 +202,16 @@ Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: 
 | 20261025_img-3898#s01 | 00:02.73–01:15.40 (73 s) | Marco Aurélio nas Meditações: o que impede a ação impulsiona a ação, o obstáculo torna-se o caminho | filosofia, estoicismo, marco-aurelio, meditacoes, obstaculo, resiliencia | 3 | 4/3 | GE CV | FP CC |
 | 20261025_img-3898#s02 | 01:21.00–01:56.30 (35 s) | a surdez de Beethoven: o obstáculo que permaneceu virou o próprio caminho dele | beethoven, surdez, musica, estoicismo, obstaculo, resiliencia, marco-aurelio | 4 | 4/3 | GE | FP CR CC |
 
+## 20261025_img-3901 — IMG_3901 (video · 06:42.89 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261025_img-3901#s01 | 00:23.06–00:40.20 (17 s) | etimologia: estoma significa boca — anastomose é devolver duas bocas ao estado original | etimologia, termos-medicos, anastomose, estoma, cirurgia, latim-grego | 3 | 3/3 | CV GE CA | FP CR |
+| 20261025_img-3901#s02 | 00:43.19–01:19.71 (37 s) | análise vem de 'lise', quebra: decompor em pedaços para entender o macro a partir do micro | etimologia, analise, lise, termos-medicos, metodo, engenharia-reversa | 2 | 3/3 | CV GE | FP |
+| 20261025_img-3901#s03 | 01:22.32–02:02.48 (40 s) | anaplasia: a célula que, por erro na diferenciação, regride às características da célula que a originou | etimologia, anaplasia, diferenciacao-celular, oncologia, patologia, termos-medicos | 3 | 3/3 | CV CA RE | FP |
+| 20261025_img-3901#s04 | 02:07.71–03:14.39 (67 s) | tomia é corte: anatomia é o estudo do corpo por dissecção, cortando para entender cada peça e suas relações | etimologia, anatomia, tomia, disseccao, termos-medicos, historia-da-medicina | 3 | 3/3 | CV GE | FP CC |
+| 20261025_img-3901#s05 | 03:22.49–06:38.94 (196 s) | metáfora × analogia: a analogia veio da matemática (proporção, regra de três); o coração como bomba e os vasos como tubulações | linguagem, metafora, analogia, etimologia, didatica, sistema-circulatorio | 2 | 3/2 | CV GE | FP |
+
 ## 20261025_screenrecording-10-25-2026-02-54-23-1 — ScreenRecording_10-25-2026 02-54-23_1 (video · 03:38.61 · licença desconhecida)
 
 Fonte: gravação de tela de vídeo de concerto (fonte não identificada)
@@ -262,6 +272,16 @@ Fonte: gravação de tela de vídeo de concerto (fonte não identificada)
 | segmento | onde | tema | tags | G | V/A | públicos | usos |
 |---|---|---|---|---|---|---|---|
 
+## 20261102_img-3970 — IMG_3970 (video · 06:00.52 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261102_img-3970#s01 | 00:01.88–00:39.03 (37 s) | Habacuque: ainda que a figueira não floresça, me alegrarei — nada mudou além da perspectiva | biblia, habacuque, fe, perspectiva, resiliencia, religiao | 2 | 3/3 | GE | FP CC |
+| 20261102_img-3970#s02 | 02:06.94–03:38.15 (91 s) | o anel de Giges (Platão, República): um pastor fica invisível, mata o rei, toma o trono e nunca é descoberto | filosofia, platao, republica, anel-de-giges, moral, impunidade | 3 | 3/3 | GE CV | FP |
+| 20261102_img-3970#s03 | 03:39.64–03:45.43 (6 s) | pergunta-gancho: se você tivesse certeza de que nunca seria pego, ainda valeria a pena ser honesto? | filosofia, platao, anel-de-giges, moral, honestidade, dilema, pergunta-gancho | 5 | 3/3 | GE CV | CR CC FP |
+| 20261102_img-3970#s04 | 03:39.64–04:48.89 (69 s) | o que nos move: o medo das consequências ou a moral intrínseca? no anel de Giges só a própria moral segura | filosofia, platao, anel-de-giges, moral, etica, impunidade | 4 | 3/3 | GE CV | FP CC |
+| 20261102_img-3970#s05 | 05:11.91–05:50.08 (38 s) | a resposta de Sócrates: o tirano é literalmente o homem mais infeliz do mundo — empregado da própria vontade | filosofia, platao, republica, tirania, felicidade, autodominio, antitese | 4 | 3/3 | GE CV | FP CC |
+
 ## 20261102_img-3971 — IMG_3971 (video · 04:28.97 · licença propria)
 
 | segmento | onde | tema | tags | G | V/A | públicos | usos |
@@ -302,5 +322,5 @@ Fonte: gravação de tela de vídeo de concerto (fonte não identificada)
 
 ## Pendentes (sem segments.json no índice)
 
-- 20261102_img-3970 — IMG_3970 (video, status baixado)
+- 20261025_win-20261025-01-19-08-pro — WIN_20261025_01_19_08_Pro (video, status baixado)
 

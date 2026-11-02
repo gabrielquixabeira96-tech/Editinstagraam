@@ -1,0 +1,25 @@
+{
+  "id": "20261025_win-20261025-01-19-08-pro",
+  "nome": "WIN_20261025_01_19_08_Pro",
+  "tipo": "video",
+  "origem": {
+    "drive_id": "1jlzckzKib3NcZGBFlb3I0bw-Qv0Eyp-b",
+    "nome_original": "WIN_20261025_01_19_08_Pro.mp4",
+    "modifiedTime": "2026-10-25T05:34:09.024Z"
+  },
+  "arquivo": "source.mp4",
+  "tamanho": 901755546,
+  "sha256": "d0f741c4d808384f75dee31bd9db16d611670b212fb3aae1d6932dc4a8ea17dd",
+  "duracao": 898.001667,
+  "largura": 1280,
+  "altura": 720,
+  "fps": 29.84,
+  "rotacao": 0,
+  "tem_audio": true,
+  "vcodec": "h264",
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "baixado",
+  "criado_em": "2026-11-02T15:12:56+00:00",
+  "atualizado_em": "2026-11-02T15:12:56+00:00"
+}

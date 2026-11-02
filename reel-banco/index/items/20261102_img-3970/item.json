@@ -19,7 +19,16 @@
   "vcodec": "hevc",
   "acodec": "aac",
   "licenca": "propria",
-  "status": "baixado",
+  "status": "indexado",
   "criado_em": "2026-11-02T15:00:02+00:00",
-  "atualizado_em": "2026-11-02T15:00:02+00:00"
+  "atualizado_em": "2026-11-02T15:13:13+00:00",
+  "n_cenas": 13,
+  "n_keyframes": 13,
+  "contact_sheets": [
+    "contact_sheet.jpg"
+  ],
+  "falante": "Gabriel",
+  "cenario": "interno, mesa (mesma sessão de IMG_3971)",
+  "n_segmentos": 5,
+  "indexado_em": "2026-11-02T15:13:13+00:00"
 }

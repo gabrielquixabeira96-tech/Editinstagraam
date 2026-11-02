@@ -1,0 +1,195 @@
+{
+  "item_id": "20261025_img-3901",
+  "validado_em": "2026-11-02T15:13:04+00:00",
+  "segments": [
+    {
+      "id": "20261025_img-3901#s01",
+      "t0": 23.06,
+      "t1": 40.2,
+      "tema": "etimologia: estoma significa boca — anastomose é devolver duas bocas ao estado original",
+      "tags": [
+        "etimologia",
+        "termos-medicos",
+        "anastomose",
+        "estoma",
+        "cirurgia",
+        "latim-grego"
+      ],
+      "tese": "os termos cirúrgicos se decifram pela raiz grega: estoma = boca",
+      "citacao": "estoma significa boca",
+      "gancho_potencial": 3,
+      "publicos": [
+        "concursos-vestibular",
+        "geral",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "corte-rapido"
+      ],
+      "notas": "Cenário ESCRITÓRIO (luminárias circulares), camisa verde, retrato, câmera baixa, ele recostado e mexendo no cabelo; fala muito pausada (pausas de 1–18 s). ",
+      "t0_original": 23.0,
+      "t1_original": 42.0,
+      "dur": 17.14,
+      "citacao_t0": 29.43,
+      "citacao_t1": 31.62,
+      "citacao_palavras": [
+        32,
+        34
+      ],
+      "item_id": "20261025_img-3901"
+    },
+    {
+      "id": "20261025_img-3901#s02",
+      "t0": 43.19,
+      "t1": 79.71,
+      "tema": "análise vem de 'lise', quebra: decompor em pedaços para entender o macro a partir do micro",
+      "tags": [
+        "etimologia",
+        "analise",
+        "lise",
+        "termos-medicos",
+        "metodo",
+        "engenharia-reversa"
+      ],
+      "tese": "análise é quebrar o todo em partes, uma engenharia reversa do conhecimento",
+      "citacao": "Uma análise é quando você quebra uma coisa em vários pedaços",
+      "gancho_potencial": 2,
+      "publicos": [
+        "concursos-vestibular",
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Cenário ESCRITÓRIO (luminárias circulares), camisa verde, retrato, câmera baixa, ele recostado e mexendo no cabelo; fala muito pausada (pausas de 1–18 s). ",
+      "t0_original": 43.0,
+      "t1_original": 79.5,
+      "dur": 36.52,
+      "citacao_t0": 47.18,
+      "citacao_t1": 50.97,
+      "citacao_palavras": [
+        53,
+        63
+      ],
+      "item_id": "20261025_img-3901"
+    },
+    {
+      "id": "20261025_img-3901#s03",
+      "t0": 82.32,
+      "t1": 122.48,
+      "tema": "anaplasia: a célula que, por erro na diferenciação, regride às características da célula que a originou",
+      "tags": [
+        "etimologia",
+        "anaplasia",
+        "diferenciacao-celular",
+        "oncologia",
+        "patologia",
+        "termos-medicos"
+      ],
+      "tese": "o prefixo 'ana-' indica inversão/regressão: na anaplasia a célula volta ao estado inicial",
+      "citacao": "essa célula começa a regredir e retorna as características da célula que deu origem para ela",
+      "gancho_potencial": 3,
+      "publicos": [
+        "concursos-vestibular",
+        "candidato-residencia",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Cenário ESCRITÓRIO (luminárias circulares), camisa verde, retrato, câmera baixa, ele recostado e mexendo no cabelo; fala muito pausada (pausas de 1–18 s). 'na plazia' = anaplasia (whisper).",
+      "t0_original": 82.0,
+      "t1_original": 122.0,
+      "dur": 40.16,
+      "citacao_t0": 103.67,
+      "citacao_t1": 112.05,
+      "citacao_palavras": [
+        127,
+        142
+      ],
+      "item_id": "20261025_img-3901"
+    },
+    {
+      "id": "20261025_img-3901#s04",
+      "t0": 127.71,
+      "t1": 194.39,
+      "tema": "tomia é corte: anatomia é o estudo do corpo por dissecção, cortando para entender cada peça e suas relações",
+      "tags": [
+        "etimologia",
+        "anatomia",
+        "tomia",
+        "disseccao",
+        "termos-medicos",
+        "historia-da-medicina"
+      ],
+      "tese": "anatomia significa literalmente cortar para entender — a mesma engenharia reversa da análise",
+      "citacao": "tomia significa corte, corte mais no sentido cirúrgico mesmo",
+      "gancho_potencial": 3,
+      "publicos": [
+        "concursos-vestibular",
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Cenário ESCRITÓRIO (luminárias circulares), camisa verde, retrato, câmera baixa, ele recostado e mexendo no cabelo; fala muito pausada (pausas de 1–18 s). Pausa de 8 s em 3:14.",
+      "t0_original": 127.0,
+      "t1_original": 196.0,
+      "dur": 66.68,
+      "citacao_t0": 131.33,
+      "citacao_t1": 135.31,
+      "citacao_palavras": [
+        159,
+        167
+      ],
+      "item_id": "20261025_img-3901"
+    },
+    {
+      "id": "20261025_img-3901#s05",
+      "t0": 202.49,
+      "t1": 398.94,
+      "tema": "metáfora × analogia: a analogia veio da matemática (proporção, regra de três); o coração como bomba e os vasos como tubulações",
+      "tags": [
+        "linguagem",
+        "metafora",
+        "analogia",
+        "etimologia",
+        "didatica",
+        "sistema-circulatorio"
+      ],
+      "tese": "metáfora transpõe um conceito para outro campo semântico; analogia exige correspondência lógica proporcional (A está para B como C para D)",
+      "citacao": "Existe uma correspondência lógica entre entre a diferença de um está para o outro, como um terceiro está para um quarto",
+      "gancho_potencial": 2,
+      "publicos": [
+        "concursos-vestibular",
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 2,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Cenário ESCRITÓRIO (luminárias circulares), camisa verde, retrato, câmera baixa, ele recostado e mexendo no cabelo; fala muito pausada (pausas de 1–18 s). Muito picado: pausas de 10,5 s, 18,3 s e 14,6 s (cortar). Trecho longo (~200 s) — só serve recortado.",
+      "t0_original": 202.0,
+      "t1_original": 402.0,
+      "dur": 196.45,
+      "citacao_t0": 388.23,
+      "citacao_t1": 398.94,
+      "citacao_palavras": [
+        409,
+        429
+      ],
+      "item_id": "20261025_img-3901"
+    }
+  ]
+}
