@@ -1,0 +1,30 @@
+{
+  "item_id": "20261102_img-4010",
+  "duracao": 21.433333,
+  "params": {
+    "threshold": 10.0,
+    "min_scene": 1.0,
+    "max_scene": 30.0,
+    "fps": 2.0
+  },
+  "gerado_em": "2026-11-02T14:20:51+00:00",
+  "scenes": [
+    {
+      "n": 1,
+      "t0": 0.0,
+      "t1": 21.433,
+      "dur": 21.433,
+      "corte": "inicio",
+      "rosto": 1.0,
+      "rosto_tam": 0.174,
+      "nitidez": 503.1,
+      "luma": 137.4,
+      "estourado": 0.0,
+      "escuro": 0.002,
+      "audio_db": -21.3,
+      "silencio": 0.0,
+      "sug_visual": 4.5,
+      "sug_audio": 4.0
+    }
+  ]
+}

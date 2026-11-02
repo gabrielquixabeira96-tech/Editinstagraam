@@ -1,0 +1,81 @@
+{
+  "item_id": "20261026_gravacao",
+  "duracao": 105.599833,
+  "params": {
+    "threshold": 10.0,
+    "min_scene": 1.0,
+    "max_scene": 30.0,
+    "fps": 2.0
+  },
+  "gerado_em": "2026-11-02T14:18:02+00:00",
+  "scenes": [
+    {
+      "n": 1,
+      "t0": 0.0,
+      "t1": 26.4,
+      "dur": 26.4,
+      "corte": "inicio",
+      "rosto": null,
+      "rosto_tam": null,
+      "nitidez": 0.0,
+      "luma": 0.0,
+      "estourado": 0.0,
+      "escuro": 0.0,
+      "audio_db": -29.6,
+      "silencio": 0.24,
+      "sug_visual": 0.0,
+      "sug_audio": 3.0
+    },
+    {
+      "n": 2,
+      "t0": 26.4,
+      "t1": 52.8,
+      "dur": 26.4,
+      "corte": "bloco",
+      "rosto": null,
+      "rosto_tam": null,
+      "nitidez": 0.0,
+      "luma": 0.0,
+      "estourado": 0.0,
+      "escuro": 0.0,
+      "audio_db": -31.1,
+      "silencio": 0.4,
+      "sug_visual": 0.0,
+      "sug_audio": 2.9
+    },
+    {
+      "n": 3,
+      "t0": 52.8,
+      "t1": 79.2,
+      "dur": 26.4,
+      "corte": "bloco",
+      "rosto": null,
+      "rosto_tam": null,
+      "nitidez": 0.0,
+      "luma": 0.0,
+      "estourado": 0.0,
+      "escuro": 0.0,
+      "audio_db": -29.2,
+      "silencio": 0.34,
+      "sug_visual": 0.0,
+      "sug_audio": 3.0
+    },
+    {
+      "n": 4,
+      "t0": 79.2,
+      "t1": 105.6,
+      "dur": 26.4,
+      "corte": "bloco",
+      "rosto": null,
+      "rosto_tam": null,
+      "nitidez": 0.0,
+      "luma": 0.0,
+      "estourado": 0.0,
+      "escuro": 0.0,
+      "audio_db": -30.0,
+      "silencio": 0.4,
+      "sug_visual": 0.0,
+      "sug_audio": 2.9
+    }
+  ]
+}

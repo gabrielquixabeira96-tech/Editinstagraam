@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-10-24T18:37:46+00:00",
-  "n_itens": 12,
-  "n_segmentos": 125,
+  "gerado_em": "2026-11-02T14:30:06+00:00",
+  "n_itens": 21,
+  "n_segmentos": 139,
   "itens": [
     {
       "id": "20261023_img-1689",
@@ -5258,7 +5258,734 @@
           "licenca": "propria"
         }
       ]
+    },
+    {
+      "id": "20261025_img-3897",
+      "nome": "IMG_3897",
+      "tipo": "video",
+      "subtipo": null,
+      "duracao": 39.968333,
+      "largura": 1080,
+      "altura": 1920,
+      "licenca": "propria",
+      "fonte": null,
+      "status": "indexado",
+      "paginas": null,
+      "secoes": null,
+      "n_figuras": null,
+      "contact_sheets": [
+        "contact_sheet.jpg"
+      ],
+      "origem": {
+        "drive_id": "1F_bvKrQnHsh5YvD0By_lywIFpgHwi6hO",
+        "nome_original": "IMG_3897.MOV"
+      },
+      "segmentos": [
+        {
+          "id": "20261025_img-3897#s01",
+          "t0": 1.41,
+          "t1": 33.76,
+          "tema": "Marco Aurélio nas Meditações: o obstáculo vira o caminho",
+          "tags": [
+            "filosofia",
+            "estoicismo",
+            "marco-aurelio",
+            "meditacoes",
+            "obstaculo",
+            "resiliencia"
+          ],
+          "tese": "o mesmo tema já foi tratado pelos estoicos: Marco Aurélio escrevia todos os dias que o obstáculo vira o caminho",
+          "citacao": "Marco Aurélio escreveu no diário dele das meditações que escrevia todos os dias",
+          "gancho_potencial": 2,
+          "publicos": [
+            "geral"
+          ],
+          "qualidade_visual": 4,
+          "qualidade_audio": 3,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Cenário ESCRITÓRIO/sala comercial (luminárias circulares, vidro, estante), camisa verde-escura, retrato, ele sentado à mesa, olhar às vezes para fora. Fala muito fragmentada (pausas de 1–4 s), parece continuação de conversa ('Interessante como o mesmo tema...'); termina com 'Não, não foi' (correção/retomada). 'Filoso' = filósofos. Útil como corte curto ou card 'o obstáculo vira o caminho' (frase atribuída a Marco Aurélio, Meditações 5.20 — conferir tradução antes de pôr na tela).",
+          "t0_original": 1.4,
+          "t1_original": 34.5,
+          "dur": 32.35,
+          "citacao_t0": 16.78,
+          "citacao_t1": 26.26,
+          "citacao_palavras": [
+            23,
+            35
+          ],
+          "item_id": "20261025_img-3897",
+          "tipo": "video",
+          "licenca": "propria"
+        }
+      ]
+    },
+    {
+      "id": "20261026_gravacao",
+      "nome": "Gravação",
+      "tipo": "video",
+      "subtipo": null,
+      "duracao": 105.599833,
+      "largura": null,
+      "altura": null,
+      "licenca": "propria",
+      "fonte": null,
+      "status": "indexado",
+      "paginas": null,
+      "secoes": null,
+      "n_figuras": null,
+      "contact_sheets": null,
+      "origem": {
+        "drive_id": "1Cluw0x9nmpQq99AOY0YKpaeC9MsMOzom",
+        "nome_original": "Gravação.m4a"
+      },
+      "segmentos": [
+        {
+          "id": "20261026_gravacao#s01",
+          "t0": 0.04,
+          "t1": 15.06,
+          "tema": "tensão e resolução na música: a expectativa do refrão e a sensação boa quando ele chega",
+          "tags": [
+            "musica",
+            "tensao-e-resolucao",
+            "expectativa",
+            "dopamina",
+            "refrao",
+            "cerebro-preditivo"
+          ],
+          "tese": "o prazer do refrão vem do cérebro que estava esperando exatamente por ele: tensão seguida de resolução",
+          "citacao": "Isso é o que a gente chama de tensão",
+          "gancho_potencial": 3,
+          "publicos": [
+            "geral"
+          ],
+          "qualidade_visual": 0,
+          "qualidade_audio": 3,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "SÓ ÁUDIO (m4a, sem imagem). Várias tomadas repetidas da mesma frase de narração (ensaio de locução). Falante NÃO identificado com certeza — provavelmente Gabriel gravando narração para o reel da 5ª de Beethoven; confirmar com ele. Escolher a tomada mais limpa.",
+          "t0_original": 0.0,
+          "t1_original": 16.5,
+          "dur": 15.02,
+          "citacao_t0": 5.77,
+          "citacao_t1": 7.14,
+          "citacao_palavras": [
+            16,
+            24
+          ],
+          "item_id": "20261026_gravacao",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261026_gravacao#s02",
+          "t0": 66.97,
+          "t1": 82.18,
+          "tema": "tomada com dopamina: quando o refrão chega o cérebro libera dopamina",
+          "tags": [
+            "musica",
+            "tensao-e-resolucao",
+            "dopamina",
+            "refrao",
+            "recompensa"
+          ],
+          "tese": "a resolução da tensão musical é recompensada com dopamina",
+          "citacao": "Quando o refrão finalmente chega, que é a resolução, aí o seu cérebro libera a dopamina",
+          "gancho_potencial": 3,
+          "publicos": [
+            "geral"
+          ],
+          "qualidade_visual": 0,
+          "qualidade_audio": 3,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "Única tomada que menciona dopamina; frase termina cortada após 'dopamina'. Só áudio.",
+          "t0_original": 67.0,
+          "t1_original": 87.0,
+          "dur": 15.21,
+          "citacao_t0": 75.98,
+          "citacao_t1": 82.18,
+          "citacao_palavras": [
+            182,
+            197
+          ],
+          "item_id": "20261026_gravacao",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261026_gravacao#s03",
+          "t0": 87.12,
+          "t1": 102.55,
+          "tema": "última tomada completa: tensão, resolução e a sensação boa",
+          "tags": [
+            "musica",
+            "tensao-e-resolucao",
+            "expectativa",
+            "refrao"
+          ],
+          "tese": "mesma tese, tomada final mais completa",
+          "citacao": "Isso é o que a gente chama de tensão e quando o refrão finalmente chega",
+          "gancho_potencial": 2,
+          "publicos": [
+            "geral"
+          ],
+          "qualidade_visual": 0,
+          "qualidade_audio": 3,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "Final com erro do whisper ('serpção' = seu cérebro). Só áudio.",
+          "t0_original": 87.0,
+          "t1_original": 105.6,
+          "dur": 15.43,
+          "citacao_t0": 93.87,
+          "citacao_t1": 97.45,
+          "citacao_palavras": [
+            216,
+            230
+          ],
+          "item_id": "20261026_gravacao",
+          "tipo": "video",
+          "licenca": "propria"
+        }
+      ]
+    },
+    {
+      "id": "20261026_whatsapp-video-2026-10-26-at-15-05-06",
+      "nome": "WhatsApp Video 2026-10-26 at 15.05.06",
+      "tipo": "video",
+      "subtipo": null,
+      "duracao": 61.906911,
+      "largura": 480,
+      "altura": 848,
+      "licenca": "propria",
+      "fonte": null,
+      "status": "indexado",
+      "paginas": null,
+      "secoes": null,
+      "n_figuras": null,
+      "contact_sheets": [
+        "contact_sheet.jpg"
+      ],
+      "origem": {
+        "drive_id": "1sng2N9s8wQPc1u6nPW7-p-uVbzG3f_sd",
+        "nome_original": "WhatsApp Video 2026-10-26 at 15.05.06.mp4"
+      },
+      "segmentos": [
+        {
+          "id": "20261026_whatsapp-video-2026-10-26-at-15-05-06#s01",
+          "t0": 1.34,
+          "t1": 31.72,
+          "tema": "astronautas têm mais hérnia de disco: sem gravidade a coluna perde a carga e a estatura sobe até 5 cm",
+          "tags": [
+            "hernia-de-disco",
+            "coluna",
+            "astronauta",
+            "gravidade",
+            "disco-intervertebral",
+            "curiosidade"
+          ],
+          "tese": "a falta de carga, e não só o excesso, adoece o disco: no espaço a coluna descarregada alonga e a musculatura lombar perde trabalho",
+          "citacao": "Astronautas da NASA tiveram 4 vezes mais éner de disco do que pessoas comparáveis",
+          "gancho_potencial": 4,
+          "publicos": [
+            "geral"
+          ],
+          "qualidade_visual": 4,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "FALANTE: Rafael Quixabeira (irmão, ortopedista) — NÃO é o Gabriel. Retrato 480x848 (WhatsApp, baixa resolução), terno azul, sala clara com claraboia, marca d'água 'Powered by Teleprompter.pw' no canto inferior direito. 'éner' = hérnia (erro do whisper). Número '4 vezes' precisa de fonte antes de ir para a tela.",
+          "t0_original": 1.3,
+          "t1_original": 31.5,
+          "dur": 30.38,
+          "citacao_t0": 1.34,
+          "citacao_t1": 6.38,
+          "citacao_palavras": [
+            0,
+            13
+          ],
+          "item_id": "20261026_whatsapp-video-2026-10-26-at-15-05-06",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261026_whatsapp-video-2026-10-26-at-15-05-06#s02",
+          "t0": 32.54,
+          "t1": 53.28,
+          "tema": "estudo com astronautas: em 6 meses a fração muscular lombar caiu de 86% para 72%",
+          "tags": [
+            "coluna",
+            "musculatura-lombar",
+            "astronauta",
+            "estudo",
+            "descondicionamento",
+            "hernia-de-disco"
+          ],
+          "tese": "missão prolongada sem carga reduz a musculatura que sustenta a lombar; a coluna volta à carga despreparada",
+          "citacao": "a parte muscular nessa região caiu de 86",
+          "gancho_potencial": 3,
+          "publicos": [
+            "geral"
+          ],
+          "qualidade_visual": 4,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "FALANTE: Rafael Quixabeira (irmão, ortopedista) — NÃO é o Gabriel. Dado numérico sem fonte citada na fala — conferir artigo antes de usar.",
+          "t0_original": 32.5,
+          "t1_original": 53.0,
+          "dur": 20.74,
+          "citacao_t0": 41.08,
+          "citacao_t1": 44.56,
+          "citacao_palavras": [
+            98,
+            105
+          ],
+          "item_id": "20261026_whatsapp-video-2026-10-26-at-15-05-06",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261026_whatsapp-video-2026-10-26-at-15-05-06#s03",
+          "t0": 54.76,
+          "t1": 61.12,
+          "tema": "CTA do Rafael: chama para seguir o perfil dele",
+          "tags": [
+            "cta",
+            "seguir",
+            "coluna"
+          ],
+          "tese": "chamada para seguir",
+          "citacao": "você quer ver como isso conversa com Ernie treino ou se pretende ir ao espaço",
+          "gancho_potencial": 0,
+          "publicos": [
+            "geral"
+          ],
+          "qualidade_visual": 4,
+          "qualidade_audio": 4,
+          "usos": [
+            "corte-rapido"
+          ],
+          "notas": "FALANTE: Rafael Quixabeira (irmão, ortopedista) — NÃO é o Gabriel. CTA para o perfil DELE — não usar em criativo do Gabriel.",
+          "t0_original": 54.7,
+          "t1_original": 61.9,
+          "dur": 6.36,
+          "citacao_t0": 54.76,
+          "citacao_t1": 60.22,
+          "citacao_palavras": [
+            129,
+            143
+          ],
+          "item_id": "20261026_whatsapp-video-2026-10-26-at-15-05-06",
+          "tipo": "video",
+          "licenca": "propria"
+        }
+      ]
+    },
+    {
+      "id": "20261026_whatsapp-video-2026-10-26-at-15-14-51",
+      "nome": "WhatsApp Video 2026-10-26 at 15.14.51",
+      "tipo": "video",
+      "subtipo": null,
+      "duracao": 120.554313,
+      "largura": 480,
+      "altura": 848,
+      "licenca": "propria",
+      "fonte": null,
+      "status": "indexado",
+      "paginas": null,
+      "secoes": null,
+      "n_figuras": null,
+      "contact_sheets": [
+        "contact_sheet.jpg"
+      ],
+      "origem": {
+        "drive_id": "1tV7B4WklDxiL_Rm_sVeo-KWDsEZdF-GQ",
+        "nome_original": "WhatsApp Video 2026-10-26 at 15.14.51.mp4"
+      },
+      "segmentos": [
+        {
+          "id": "20261026_whatsapp-video-2026-10-26-at-15-14-51#s01",
+          "t0": 1.12,
+          "t1": 55.02,
+          "tema": "você acorda até 2 cm mais alto: discos perdem água de dia e recuperam à noite",
+          "tags": [
+            "coluna",
+            "disco-intervertebral",
+            "nucleo-pulposo",
+            "altura",
+            "curiosidade"
+          ],
+          "tese": "a altura medida pela manhã é maior porque o disco reidrata durante o repouso",
+          "citacao": "Você sabia que podemos acordar até dois centímetros mais altos do que quando fomos dormir?",
+          "gancho_potencial": 4,
+          "publicos": [
+            "geral"
+          ],
+          "qualidade_visual": 4,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "FALANTE: Rafael Quixabeira (irmão, ortopedista) — NÃO é o Gabriel. Retrato 480x848, terno azul, mesma sala; marca d'água Teleprompter.pw. Versão alternativa (mais longa) do 15-45-20.",
+          "t0_original": 1.1,
+          "t1_original": 55.0,
+          "dur": 53.9,
+          "citacao_t0": 1.12,
+          "citacao_t1": 5.74,
+          "citacao_palavras": [
+            0,
+            14
+          ],
+          "item_id": "20261026_whatsapp-video-2026-10-26-at-15-14-51",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261026_whatsapp-video-2026-10-26-at-15-14-51#s02",
+          "t0": 56.17,
+          "t1": 111.16,
+          "tema": "repouso absoluto na dor de coluna é a pior coisa: o disco precisa de movimento para se nutrir",
+          "tags": [
+            "dor-lombar",
+            "repouso",
+            "coluna",
+            "disco-intervertebral",
+            "atividade-fisica",
+            "quebra-de-crenca"
+          ],
+          "tese": "como o disco se nutre por difusão, mobilidade favorece a saúde do disco e repouso absoluto atrapalha",
+          "citacao": "repouso absoluto, em um caso de dor de coluna, é a pior coisa que eles podem fazer",
+          "gancho_potencial": 5,
+          "publicos": [
+            "geral"
+          ],
+          "qualidade_visual": 4,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "corte-rapido",
+            "citacao-card"
+          ],
+          "notas": "FALANTE: Rafael Quixabeira (irmão, ortopedista) — NÃO é o Gabriel. Antítese forte contra crença comum (repouso). Ele mesmo ressalva causa-efeito. Fala dele como ortopedista ('indico aos meus pacientes').",
+          "t0_original": 56.1,
+          "t1_original": 111.0,
+          "dur": 54.99,
+          "citacao_t0": 78.52,
+          "citacao_t1": 83.3,
+          "citacao_palavras": [
+            180,
+            196
+          ],
+          "item_id": "20261026_whatsapp-video-2026-10-26-at-15-14-51",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261026_whatsapp-video-2026-10-26-at-15-14-51#s03",
+          "t0": 112.93,
+          "t1": 119.78,
+          "tema": "CTA do Rafael (hérnia de disco, exercício, coluna)",
+          "tags": [
+            "cta",
+            "seguir",
+            "hernia-de-disco"
+          ],
+          "tese": "chamada para seguir",
+          "citacao": "Quero entender como isso se relaciona com hérnias de disco, exercícios físicos e saúde da nossa coluna",
+          "gancho_potencial": 0,
+          "publicos": [
+            "geral"
+          ],
+          "qualidade_visual": 4,
+          "qualidade_audio": 4,
+          "usos": [
+            "corte-rapido"
+          ],
+          "notas": "FALANTE: Rafael Quixabeira (irmão, ortopedista) — NÃO é o Gabriel. CTA do perfil dele.",
+          "t0_original": 112.9,
+          "t1_original": 120.0,
+          "dur": 6.85,
+          "citacao_t0": 112.93,
+          "citacao_t1": 117.96,
+          "citacao_palavras": [
+            265,
+            281
+          ],
+          "item_id": "20261026_whatsapp-video-2026-10-26-at-15-14-51",
+          "tipo": "video",
+          "licenca": "propria"
+        }
+      ]
+    },
+    {
+      "id": "20261026_whatsapp-video-2026-10-26-at-15-45-20",
+      "nome": "WhatsApp Video 2026-10-26 at 15.45.20",
+      "tipo": "video",
+      "subtipo": null,
+      "duracao": 85.242833,
+      "largura": 480,
+      "altura": 848,
+      "licenca": "propria",
+      "fonte": null,
+      "status": "indexado",
+      "paginas": null,
+      "secoes": null,
+      "n_figuras": null,
+      "contact_sheets": [
+        "contact_sheet.jpg"
+      ],
+      "origem": {
+        "drive_id": "1gwjB50OLG43_oBXLM6_5nvMd1BX0LEUD",
+        "nome_original": "WhatsApp Video 2026-10-26 at 15.45.20.mp4"
+      },
+      "segmentos": [
+        {
+          "id": "20261026_whatsapp-video-2026-10-26-at-15-45-20#s01",
+          "t0": 1.17,
+          "t1": 51.94,
+          "tema": "por que somos mais altos de manhã: o núcleo pulposo perde água sob carga durante o dia e reidrata deitado",
+          "tags": [
+            "coluna",
+            "disco-intervertebral",
+            "nucleo-pulposo",
+            "altura",
+            "curiosidade",
+            "hidratacao-do-disco"
+          ],
+          "tese": "a altura varia até ~2 cm ao longo do dia porque o disco perde e recupera água conforme a carga",
+          "citacao": "Doutor, mas é verdade que somos mais altos pela manhã do que no final do dia?",
+          "gancho_potencial": 4,
+          "publicos": [
+            "geral"
+          ],
+          "qualidade_visual": 4,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "FALANTE: Rafael Quixabeira (irmão, ortopedista) — NÃO é o Gabriel. Retrato 480x848, camisa branca, mesma sala; marca d'água Teleprompter.pw. Gancho em forma de pergunta de paciente.",
+          "t0_original": 1.1,
+          "t1_original": 52.0,
+          "dur": 50.77,
+          "citacao_t0": 1.17,
+          "citacao_t1": 6.04,
+          "citacao_palavras": [
+            0,
+            15
+          ],
+          "item_id": "20261026_whatsapp-video-2026-10-26-at-15-45-20",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261026_whatsapp-video-2026-10-26-at-15-45-20#s02",
+          "t0": 52.63,
+          "t1": 77.74,
+          "tema": "o disco quase não tem vaso: nutre-se por difusão, daí o valor da atividade física leve",
+          "tags": [
+            "disco-intervertebral",
+            "difusao",
+            "atividade-fisica",
+            "caminhada",
+            "coluna",
+            "avascular"
+          ],
+          "tese": "sem vasos, o disco depende do movimento para se nutrir; a coluna é uma estrutura dinâmica",
+          "citacao": "os discos da nossa coluna são estruturas dinâmicas",
+          "gancho_potencial": 3,
+          "publicos": [
+            "geral"
+          ],
+          "qualidade_visual": 4,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "FALANTE: Rafael Quixabeira (irmão, ortopedista) — NÃO é o Gabriel. ",
+          "t0_original": 52.6,
+          "t1_original": 77.7,
+          "dur": 25.11,
+          "citacao_t0": 71.64,
+          "citacao_t1": 74.42,
+          "citacao_palavras": [
+            179,
+            186
+          ],
+          "item_id": "20261026_whatsapp-video-2026-10-26-at-15-45-20",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261026_whatsapp-video-2026-10-26-at-15-45-20#s03",
+          "t0": 77.64,
+          "t1": 84.16,
+          "tema": "CTA do Rafael para acompanhar o perfil",
+          "tags": [
+            "cta",
+            "seguir"
+          ],
+          "tese": "chamada para seguir",
+          "citacao": "como cuidar da sua coluna e prevenir problemas, acompanhe aqui o meu perfil",
+          "gancho_potencial": 0,
+          "publicos": [
+            "geral"
+          ],
+          "qualidade_visual": 4,
+          "qualidade_audio": 4,
+          "usos": [
+            "corte-rapido"
+          ],
+          "notas": "FALANTE: Rafael Quixabeira (irmão, ortopedista) — NÃO é o Gabriel. CTA do perfil dele.",
+          "t0_original": 77.7,
+          "t1_original": 85.2,
+          "dur": 6.52,
+          "citacao_t0": 80.26,
+          "citacao_t1": 84.16,
+          "citacao_palavras": [
+            203,
+            215
+          ],
+          "item_id": "20261026_whatsapp-video-2026-10-26-at-15-45-20",
+          "tipo": "video",
+          "licenca": "propria"
+        }
+      ]
+    },
+    {
+      "id": "20261030_screenrecording-10-29-2026-19-41-15-1",
+      "nome": "ScreenRecording_10-29-2026 19-41-15_1",
+      "tipo": "video",
+      "subtipo": null,
+      "duracao": 57.772926,
+      "largura": 1180,
+      "altura": 2556,
+      "licenca": "propria",
+      "fonte": null,
+      "status": "indexado",
+      "paginas": null,
+      "secoes": null,
+      "n_figuras": null,
+      "contact_sheets": [
+        "contact_sheet.jpg"
+      ],
+      "origem": {
+        "drive_id": "1nyvB3nVZVoinj02MdQJohvAWb4Gx_iKo",
+        "nome_original": "ScreenRecording_10-29-2026 19-41-15_1.mp4"
+      },
+      "segmentos": []
+    },
+    {
+      "id": "20261102_img-3917",
+      "nome": "IMG_3917",
+      "tipo": "video",
+      "subtipo": null,
+      "duracao": 151.408333,
+      "largura": 1080,
+      "altura": 1920,
+      "licenca": "propria",
+      "fonte": null,
+      "status": "indexado",
+      "paginas": null,
+      "secoes": null,
+      "n_figuras": null,
+      "contact_sheets": [
+        "contact_sheet.jpg"
+      ],
+      "origem": {
+        "drive_id": "1XxiHluPNCMZ_Ac0-882TLn6iKxid_K2f",
+        "nome_original": "IMG_3917.MOV"
+      },
+      "segmentos": []
+    },
+    {
+      "id": "20261102_img-3920",
+      "nome": "IMG_3920",
+      "tipo": "video",
+      "subtipo": null,
+      "duracao": 227.145,
+      "largura": 1080,
+      "altura": 1920,
+      "licenca": "propria",
+      "fonte": null,
+      "status": "indexado",
+      "paginas": null,
+      "secoes": null,
+      "n_figuras": null,
+      "contact_sheets": [
+        "contact_sheet.jpg"
+      ],
+      "origem": {
+        "drive_id": "1TT0YncxobNRdoURnFZKL4r4zZQqygIp-",
+        "nome_original": "IMG_3920.MOV"
+      },
+      "segmentos": []
+    },
+    {
+      "id": "20261102_img-4010",
+      "nome": "IMG_4010",
+      "tipo": "video",
+      "subtipo": null,
+      "duracao": 21.433333,
+      "largura": 1920,
+      "altura": 1080,
+      "licenca": "propria",
+      "fonte": null,
+      "status": "indexado",
+      "paginas": null,
+      "secoes": null,
+      "n_figuras": null,
+      "contact_sheets": [
+        "contact_sheet.jpg"
+      ],
+      "origem": {
+        "drive_id": "12i-Na4S_d5xQWZ_CqjCSUPbXvQc4sj4L",
+        "nome_original": "IMG_4010.MOV"
+      },
+      "segmentos": [
+        {
+          "id": "20261102_img-4010#s01",
+          "t0": 0.0,
+          "t1": 21.4,
+          "tema": "Gabriel no banco do motorista, em silêncio, olhando para baixo (sem fala)",
+          "tags": [
+            "carro",
+            "bastidores",
+            "sem-fala",
+            "broll"
+          ],
+          "tese": "plano de ambientação no carro",
+          "citacao": "",
+          "gancho_potencial": 0,
+          "publicos": [
+            "geral"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 0,
+          "usos": [
+            "broll"
+          ],
+          "notas": "Cenário CARRO, horizontal 1920x1080, camisa branca e cinto, luz de dia. Sem fala transcrita (21 s). Só serve como B-roll de bastidor em reel gravado no carro.",
+          "dur": 21.4,
+          "item_id": "20261102_img-4010",
+          "tipo": "video",
+          "licenca": "propria"
+        }
+      ]
     }
   ],
-  "pendentes": []
+  "pendentes": [
+    "20261102_img-4036"
+  ]
 }

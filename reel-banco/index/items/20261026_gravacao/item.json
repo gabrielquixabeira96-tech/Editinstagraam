@@ -1,0 +1,30 @@
+{
+  "id": "20261026_gravacao",
+  "nome": "Gravação",
+  "tipo": "video",
+  "origem": {
+    "drive_id": "1Cluw0x9nmpQq99AOY0YKpaeC9MsMOzom",
+    "nome_original": "Gravação.m4a",
+    "modifiedTime": "2026-10-26T20:29:50.295Z"
+  },
+  "arquivo": "source.m4a",
+  "tamanho": 2271133,
+  "sha256": "5db24b2ea50aadef5e72c155df5babd1a6fb6334da4aa8fec6fce9fc74837ae7",
+  "duracao": 105.599833,
+  "largura": null,
+  "altura": null,
+  "fps": null,
+  "rotacao": 0,
+  "tem_audio": true,
+  "vcodec": null,
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "indexado",
+  "criado_em": "2026-11-02T14:16:32+00:00",
+  "atualizado_em": "2026-11-02T14:22:16+00:00",
+  "n_cenas": 4,
+  "falante": "não identificado (provável Gabriel — confirmar); só áudio",
+  "notas": "Áudio m4a sem imagem: tomadas repetidas de locução sobre tensão/resolução musical. 05_keyframes não roda em áudio puro (sem stream de vídeo); segment_input gerado direto pelo 06.",
+  "n_segmentos": 3,
+  "indexado_em": "2026-11-02T14:22:16+00:00"
+}

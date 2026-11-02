@@ -1,0 +1,25 @@
+{
+  "id": "20261102_img-4036",
+  "nome": "IMG_4036",
+  "tipo": "video",
+  "origem": {
+    "drive_id": "1rUWmrkdDzWHOU_JOigX42edeIkcWTZ1C",
+    "nome_original": "IMG_4036.MOV",
+    "modifiedTime": "2026-11-02T13:21:40.855Z"
+  },
+  "arquivo": "source.mov",
+  "tamanho": 265095074,
+  "sha256": "fc53d83b2b5f5f7aed0714e2ce3b72ed53f084c1950421da225516f15ae3a914",
+  "duracao": 123.313333,
+  "largura": 1920,
+  "altura": 1080,
+  "fps": 25.125,
+  "rotacao": -180,
+  "tem_audio": true,
+  "vcodec": "hevc",
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "baixado",
+  "criado_em": "2026-11-02T14:29:35+00:00",
+  "atualizado_em": "2026-11-02T14:29:35+00:00"
+}

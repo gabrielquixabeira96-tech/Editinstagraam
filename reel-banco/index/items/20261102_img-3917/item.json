@@ -1,0 +1,35 @@
+{
+  "id": "20261102_img-3917",
+  "nome": "IMG_3917",
+  "tipo": "video",
+  "origem": {
+    "drive_id": "1XxiHluPNCMZ_Ac0-882TLn6iKxid_K2f",
+    "nome_original": "IMG_3917.MOV",
+    "modifiedTime": "2026-11-02T13:19:47.871Z"
+  },
+  "arquivo": "source.mov",
+  "tamanho": 191066130,
+  "sha256": "c311e83e62984a3f1261f564530a819ab40d10d3fe9d3f93e4a80b468f4e2ec5",
+  "duracao": 151.408333,
+  "largura": 1080,
+  "altura": 1920,
+  "fps": 29.998,
+  "rotacao": -90,
+  "tem_audio": true,
+  "vcodec": "hevc",
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "indexado",
+  "criado_em": "2026-11-02T14:23:16+00:00",
+  "atualizado_em": "2026-11-02T14:30:06+00:00",
+  "n_cenas": 6,
+  "n_keyframes": 6,
+  "contact_sheets": [
+    "contact_sheet.jpg"
+  ],
+  "falante": "Gabriel",
+  "cenario": "carro",
+  "notas": "Conteúdo político pessoal — não usar; transcript removido do índice (repositório público).",
+  "n_segmentos": 0,
+  "indexado_em": "2026-11-02T14:30:06+00:00"
+}

@@ -1,0 +1,113 @@
+{
+  "item_id": "20261026_whatsapp-video-2026-10-26-at-15-14-51",
+  "validado_em": "2026-11-02T14:22:10+00:00",
+  "segments": [
+    {
+      "id": "20261026_whatsapp-video-2026-10-26-at-15-14-51#s01",
+      "t0": 1.12,
+      "t1": 55.02,
+      "tema": "você acorda até 2 cm mais alto: discos perdem água de dia e recuperam à noite",
+      "tags": [
+        "coluna",
+        "disco-intervertebral",
+        "nucleo-pulposo",
+        "altura",
+        "curiosidade"
+      ],
+      "tese": "a altura medida pela manhã é maior porque o disco reidrata durante o repouso",
+      "citacao": "Você sabia que podemos acordar até dois centímetros mais altos do que quando fomos dormir?",
+      "gancho_potencial": 4,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "FALANTE: Rafael Quixabeira (irmão, ortopedista) — NÃO é o Gabriel. Retrato 480x848, terno azul, mesma sala; marca d'água Teleprompter.pw. Versão alternativa (mais longa) do 15-45-20.",
+      "t0_original": 1.1,
+      "t1_original": 55.0,
+      "dur": 53.9,
+      "citacao_t0": 1.12,
+      "citacao_t1": 5.74,
+      "citacao_palavras": [
+        0,
+        14
+      ],
+      "item_id": "20261026_whatsapp-video-2026-10-26-at-15-14-51"
+    },
+    {
+      "id": "20261026_whatsapp-video-2026-10-26-at-15-14-51#s02",
+      "t0": 56.17,
+      "t1": 111.16,
+      "tema": "repouso absoluto na dor de coluna é a pior coisa: o disco precisa de movimento para se nutrir",
+      "tags": [
+        "dor-lombar",
+        "repouso",
+        "coluna",
+        "disco-intervertebral",
+        "atividade-fisica",
+        "quebra-de-crenca"
+      ],
+      "tese": "como o disco se nutre por difusão, mobilidade favorece a saúde do disco e repouso absoluto atrapalha",
+      "citacao": "repouso absoluto, em um caso de dor de coluna, é a pior coisa que eles podem fazer",
+      "gancho_potencial": 5,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "FALANTE: Rafael Quixabeira (irmão, ortopedista) — NÃO é o Gabriel. Antítese forte contra crença comum (repouso). Ele mesmo ressalva causa-efeito. Fala dele como ortopedista ('indico aos meus pacientes').",
+      "t0_original": 56.1,
+      "t1_original": 111.0,
+      "dur": 54.99,
+      "citacao_t0": 78.52,
+      "citacao_t1": 83.3,
+      "citacao_palavras": [
+        180,
+        196
+      ],
+      "item_id": "20261026_whatsapp-video-2026-10-26-at-15-14-51"
+    },
+    {
+      "id": "20261026_whatsapp-video-2026-10-26-at-15-14-51#s03",
+      "t0": 112.93,
+      "t1": 119.78,
+      "tema": "CTA do Rafael (hérnia de disco, exercício, coluna)",
+      "tags": [
+        "cta",
+        "seguir",
+        "hernia-de-disco"
+      ],
+      "tese": "chamada para seguir",
+      "citacao": "Quero entender como isso se relaciona com hérnias de disco, exercícios físicos e saúde da nossa coluna",
+      "gancho_potencial": 0,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "corte-rapido"
+      ],
+      "notas": "FALANTE: Rafael Quixabeira (irmão, ortopedista) — NÃO é o Gabriel. CTA do perfil dele.",
+      "t0_original": 112.9,
+      "t1_original": 120.0,
+      "dur": 6.85,
+      "citacao_t0": 112.93,
+      "citacao_t1": 117.96,
+      "citacao_palavras": [
+        265,
+        281
+      ],
+      "item_id": "20261026_whatsapp-video-2026-10-26-at-15-14-51"
+    }
+  ]
+}

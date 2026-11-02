@@ -1,0 +1,112 @@
+{
+  "item_id": "20261026_whatsapp-video-2026-10-26-at-15-05-06",
+  "validado_em": "2026-11-02T14:22:09+00:00",
+  "segments": [
+    {
+      "id": "20261026_whatsapp-video-2026-10-26-at-15-05-06#s01",
+      "t0": 1.34,
+      "t1": 31.72,
+      "tema": "astronautas têm mais hérnia de disco: sem gravidade a coluna perde a carga e a estatura sobe até 5 cm",
+      "tags": [
+        "hernia-de-disco",
+        "coluna",
+        "astronauta",
+        "gravidade",
+        "disco-intervertebral",
+        "curiosidade"
+      ],
+      "tese": "a falta de carga, e não só o excesso, adoece o disco: no espaço a coluna descarregada alonga e a musculatura lombar perde trabalho",
+      "citacao": "Astronautas da NASA tiveram 4 vezes mais éner de disco do que pessoas comparáveis",
+      "gancho_potencial": 4,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "FALANTE: Rafael Quixabeira (irmão, ortopedista) — NÃO é o Gabriel. Retrato 480x848 (WhatsApp, baixa resolução), terno azul, sala clara com claraboia, marca d'água 'Powered by Teleprompter.pw' no canto inferior direito. 'éner' = hérnia (erro do whisper). Número '4 vezes' precisa de fonte antes de ir para a tela.",
+      "t0_original": 1.3,
+      "t1_original": 31.5,
+      "dur": 30.38,
+      "citacao_t0": 1.34,
+      "citacao_t1": 6.38,
+      "citacao_palavras": [
+        0,
+        13
+      ],
+      "item_id": "20261026_whatsapp-video-2026-10-26-at-15-05-06"
+    },
+    {
+      "id": "20261026_whatsapp-video-2026-10-26-at-15-05-06#s02",
+      "t0": 32.54,
+      "t1": 53.28,
+      "tema": "estudo com astronautas: em 6 meses a fração muscular lombar caiu de 86% para 72%",
+      "tags": [
+        "coluna",
+        "musculatura-lombar",
+        "astronauta",
+        "estudo",
+        "descondicionamento",
+        "hernia-de-disco"
+      ],
+      "tese": "missão prolongada sem carga reduz a musculatura que sustenta a lombar; a coluna volta à carga despreparada",
+      "citacao": "a parte muscular nessa região caiu de 86",
+      "gancho_potencial": 3,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "FALANTE: Rafael Quixabeira (irmão, ortopedista) — NÃO é o Gabriel. Dado numérico sem fonte citada na fala — conferir artigo antes de usar.",
+      "t0_original": 32.5,
+      "t1_original": 53.0,
+      "dur": 20.74,
+      "citacao_t0": 41.08,
+      "citacao_t1": 44.56,
+      "citacao_palavras": [
+        98,
+        105
+      ],
+      "item_id": "20261026_whatsapp-video-2026-10-26-at-15-05-06"
+    },
+    {
+      "id": "20261026_whatsapp-video-2026-10-26-at-15-05-06#s03",
+      "t0": 54.76,
+      "t1": 61.12,
+      "tema": "CTA do Rafael: chama para seguir o perfil dele",
+      "tags": [
+        "cta",
+        "seguir",
+        "coluna"
+      ],
+      "tese": "chamada para seguir",
+      "citacao": "você quer ver como isso conversa com Ernie treino ou se pretende ir ao espaço",
+      "gancho_potencial": 0,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "corte-rapido"
+      ],
+      "notas": "FALANTE: Rafael Quixabeira (irmão, ortopedista) — NÃO é o Gabriel. CTA para o perfil DELE — não usar em criativo do Gabriel.",
+      "t0_original": 54.7,
+      "t1_original": 61.9,
+      "dur": 6.36,
+      "citacao_t0": 54.76,
+      "citacao_t1": 60.22,
+      "citacao_palavras": [
+        129,
+        143
+      ],
+      "item_id": "20261026_whatsapp-video-2026-10-26-at-15-05-06"
+    }
+  ]
+}

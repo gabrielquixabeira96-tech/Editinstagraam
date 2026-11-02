@@ -1,6 +1,6 @@
 # Banco de material para Reels — catálogo
 
-Gerado em 2026-10-24T18:37:46+00:00 · 12 item(ns) · 125 segmento(s)
+Gerado em 2026-11-02T14:30:06+00:00 · 21 item(ns) · 139 segmento(s) · 1 pendente(s) de segmentação
 
 Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: FP fala-principal, BR broll, CR corte-rapido, CC citacao-card · públicos: PL plantonista, RE residente, CA candidato-residencia, CV concursos-vestibular, GE geral
 
@@ -188,4 +188,67 @@ Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: 
 | 20261024_atlas-trauma-pelvico#s12 | seção 13 | fratura pélvica exposta e lesão retal: toque retal e vaginal obrigatórios; ferida perineal (zona I de Faringer) pede colostomia de derivação | trauma-pelvico, fratura-pelvica, fratura-exposta, lesao-retal, toque-retal, faringer, colostomia, desbridamento, antibiotico | 3 | 3/0 | PL CA RE | CC BR |
 | 20261024_atlas-trauma-pelvico#s13 | seção 14 | forja de questões: uma questão-mãe (motociclista instável, FAST negativo, sangue no meato) e sete pivôs em que um dado muda a conduta | trauma-pelvico, fratura-pelvica, questao, simulado, quiz, binder, fast, sangue-no-meato, distratores, r-mais | 3 | 3/0 | CA RE | CC BR |
 | 20261024_atlas-trauma-pelvico#s14 | seção 15 | tabela-mãe do trauma pélvico: gatilho do enunciado e conduta correspondente (binder, laparotomia, packing, angio, uretrografia, colostomia, C-clamp) | trauma-pelvico, fratura-pelvica, tabela, resumo, conduta, binder, packing, angioembolizacao, uretra, c-clamp, revisao | 2 | 3/0 | CA RE | CC BR |
+
+## 20261025_img-3897 — IMG_3897 (video · 00:39.97 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261025_img-3897#s01 | 00:01.41–00:33.76 (32 s) | Marco Aurélio nas Meditações: o obstáculo vira o caminho | filosofia, estoicismo, marco-aurelio, meditacoes, obstaculo, resiliencia | 2 | 4/3 | GE | FP CC |
+
+## 20261026_gravacao — Gravação (video · 01:45.60 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261026_gravacao#s01 | 00:00.04–00:15.06 (15 s) | tensão e resolução na música: a expectativa do refrão e a sensação boa quando ele chega | musica, tensao-e-resolucao, expectativa, dopamina, refrao, cerebro-preditivo | 3 | 0/3 | GE | FP |
+| 20261026_gravacao#s02 | 01:06.97–01:22.18 (15 s) | tomada com dopamina: quando o refrão chega o cérebro libera dopamina | musica, tensao-e-resolucao, dopamina, refrao, recompensa | 3 | 0/3 | GE | FP |
+| 20261026_gravacao#s03 | 01:27.12–01:42.55 (15 s) | última tomada completa: tensão, resolução e a sensação boa | musica, tensao-e-resolucao, expectativa, refrao | 2 | 0/3 | GE | FP |
+
+## 20261026_whatsapp-video-2026-10-26-at-15-05-06 — WhatsApp Video 2026-10-26 at 15.05.06 (video · 01:01.91 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261026_whatsapp-video-2026-10-26-at-15-05-06#s01 | 00:01.34–00:31.72 (30 s) | astronautas têm mais hérnia de disco: sem gravidade a coluna perde a carga e a estatura sobe até 5 cm | hernia-de-disco, coluna, astronauta, gravidade, disco-intervertebral, curiosidade | 4 | 4/4 | GE | FP |
+| 20261026_whatsapp-video-2026-10-26-at-15-05-06#s02 | 00:32.54–00:53.28 (21 s) | estudo com astronautas: em 6 meses a fração muscular lombar caiu de 86% para 72% | coluna, musculatura-lombar, astronauta, estudo, descondicionamento, hernia-de-disco | 3 | 4/4 | GE | FP CC |
+| 20261026_whatsapp-video-2026-10-26-at-15-05-06#s03 | 00:54.76–01:01.12 (6 s) | CTA do Rafael: chama para seguir o perfil dele | cta, seguir, coluna | 0 | 4/4 | GE | CR |
+
+## 20261026_whatsapp-video-2026-10-26-at-15-14-51 — WhatsApp Video 2026-10-26 at 15.14.51 (video · 02:00.55 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261026_whatsapp-video-2026-10-26-at-15-14-51#s01 | 00:01.12–00:55.02 (54 s) | você acorda até 2 cm mais alto: discos perdem água de dia e recuperam à noite | coluna, disco-intervertebral, nucleo-pulposo, altura, curiosidade | 4 | 4/4 | GE | FP CC |
+| 20261026_whatsapp-video-2026-10-26-at-15-14-51#s02 | 00:56.17–01:51.16 (55 s) | repouso absoluto na dor de coluna é a pior coisa: o disco precisa de movimento para se nutrir | dor-lombar, repouso, coluna, disco-intervertebral, atividade-fisica, quebra-de-crenca | 5 | 4/4 | GE | FP CR CC |
+| 20261026_whatsapp-video-2026-10-26-at-15-14-51#s03 | 01:52.93–01:59.78 (7 s) | CTA do Rafael (hérnia de disco, exercício, coluna) | cta, seguir, hernia-de-disco | 0 | 4/4 | GE | CR |
+
+## 20261026_whatsapp-video-2026-10-26-at-15-45-20 — WhatsApp Video 2026-10-26 at 15.45.20 (video · 01:25.24 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261026_whatsapp-video-2026-10-26-at-15-45-20#s01 | 00:01.17–00:51.94 (51 s) | por que somos mais altos de manhã: o núcleo pulposo perde água sob carga durante o dia e reidrata deitado | coluna, disco-intervertebral, nucleo-pulposo, altura, curiosidade, hidratacao-do-disco | 4 | 4/4 | GE | FP |
+| 20261026_whatsapp-video-2026-10-26-at-15-45-20#s02 | 00:52.63–01:17.74 (25 s) | o disco quase não tem vaso: nutre-se por difusão, daí o valor da atividade física leve | disco-intervertebral, difusao, atividade-fisica, caminhada, coluna, avascular | 3 | 4/4 | GE | FP CC |
+| 20261026_whatsapp-video-2026-10-26-at-15-45-20#s03 | 01:17.64–01:24.16 (7 s) | CTA do Rafael para acompanhar o perfil | cta, seguir | 0 | 4/4 | GE | CR |
+
+## 20261030_screenrecording-10-29-2026-19-41-15-1 — ScreenRecording_10-29-2026 19-41-15_1 (video · 00:57.77 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+
+## 20261102_img-3917 — IMG_3917 (video · 02:31.41 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+
+## 20261102_img-3920 — IMG_3920 (video · 03:47.15 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+
+## 20261102_img-4010 — IMG_4010 (video · 00:21.43 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261102_img-4010#s01 | 00:00.00–00:21.40 (21 s) | Gabriel no banco do motorista, em silêncio, olhando para baixo (sem fala) | carro, bastidores, sem-fala, broll | 0 | 3/0 | GE | BR |
+
+## Pendentes (sem segments.json no índice)
+
+- 20261102_img-4036 — IMG_4036 (video, status baixado)
 

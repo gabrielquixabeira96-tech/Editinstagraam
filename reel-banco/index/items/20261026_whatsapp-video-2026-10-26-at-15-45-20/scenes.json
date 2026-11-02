@@ -1,0 +1,64 @@
+{
+  "item_id": "20261026_whatsapp-video-2026-10-26-at-15-45-20",
+  "duracao": 85.242833,
+  "params": {
+    "threshold": 10.0,
+    "min_scene": 1.0,
+    "max_scene": 30.0,
+    "fps": 2.0
+  },
+  "gerado_em": "2026-11-02T14:19:27+00:00",
+  "scenes": [
+    {
+      "n": 1,
+      "t0": 0.0,
+      "t1": 28.414,
+      "dur": 28.414,
+      "corte": "inicio",
+      "rosto": 1.0,
+      "rosto_tam": 0.308,
+      "nitidez": 549.9,
+      "luma": 139.6,
+      "estourado": 0.004,
+      "escuro": 0.003,
+      "audio_db": -21.1,
+      "silencio": 0.11,
+      "sug_visual": 5.0,
+      "sug_audio": 4.0
+    },
+    {
+      "n": 2,
+      "t0": 28.414,
+      "t1": 56.829,
+      "dur": 28.414,
+      "corte": "bloco",
+      "rosto": 1.0,
+      "rosto_tam": 0.295,
+      "nitidez": 544.6,
+      "luma": 141.9,
+      "estourado": 0.005,
+      "escuro": 0.003,
+      "audio_db": -21.5,
+      "silencio": 0.1,
+      "sug_visual": 5.0,
+      "sug_audio": 4.0
+    },
+    {
+      "n": 3,
+      "t0": 56.829,
+      "t1": 85.243,
+      "dur": 28.414,
+      "corte": "bloco",
+      "rosto": 1.0,
+      "rosto_tam": 0.301,
+      "nitidez": 532.7,
+      "luma": 140.3,
+      "estourado": 0.005,
+      "escuro": 0.003,
+      "audio_db": -21.7,
+      "silencio": 0.08,
+      "sug_visual": 5.0,
+      "sug_audio": 4.0
+    }
+  ]
+}

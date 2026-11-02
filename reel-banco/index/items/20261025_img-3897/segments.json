@@ -1,0 +1,43 @@
+{
+  "item_id": "20261025_img-3897",
+  "validado_em": "2026-11-02T14:30:05+00:00",
+  "segments": [
+    {
+      "id": "20261025_img-3897#s01",
+      "t0": 1.41,
+      "t1": 33.76,
+      "tema": "Marco Aurélio nas Meditações: o obstáculo vira o caminho",
+      "tags": [
+        "filosofia",
+        "estoicismo",
+        "marco-aurelio",
+        "meditacoes",
+        "obstaculo",
+        "resiliencia"
+      ],
+      "tese": "o mesmo tema já foi tratado pelos estoicos: Marco Aurélio escrevia todos os dias que o obstáculo vira o caminho",
+      "citacao": "Marco Aurélio escreveu no diário dele das meditações que escrevia todos os dias",
+      "gancho_potencial": 2,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Cenário ESCRITÓRIO/sala comercial (luminárias circulares, vidro, estante), camisa verde-escura, retrato, ele sentado à mesa, olhar às vezes para fora. Fala muito fragmentada (pausas de 1–4 s), parece continuação de conversa ('Interessante como o mesmo tema...'); termina com 'Não, não foi' (correção/retomada). 'Filoso' = filósofos. Útil como corte curto ou card 'o obstáculo vira o caminho' (frase atribuída a Marco Aurélio, Meditações 5.20 — conferir tradução antes de pôr na tela).",
+      "t0_original": 1.4,
+      "t1_original": 34.5,
+      "dur": 32.35,
+      "citacao_t0": 16.78,
+      "citacao_t1": 26.26,
+      "citacao_palavras": [
+        23,
+        35
+      ],
+      "item_id": "20261025_img-3897"
+    }
+  ]
+}

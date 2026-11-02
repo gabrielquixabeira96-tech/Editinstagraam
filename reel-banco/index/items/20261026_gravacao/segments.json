@@ -1,0 +1,111 @@
+{
+  "item_id": "20261026_gravacao",
+  "validado_em": "2026-11-02T14:22:16+00:00",
+  "segments": [
+    {
+      "id": "20261026_gravacao#s01",
+      "t0": 0.04,
+      "t1": 15.06,
+      "tema": "tensão e resolução na música: a expectativa do refrão e a sensação boa quando ele chega",
+      "tags": [
+        "musica",
+        "tensao-e-resolucao",
+        "expectativa",
+        "dopamina",
+        "refrao",
+        "cerebro-preditivo"
+      ],
+      "tese": "o prazer do refrão vem do cérebro que estava esperando exatamente por ele: tensão seguida de resolução",
+      "citacao": "Isso é o que a gente chama de tensão",
+      "gancho_potencial": 3,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 0,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "SÓ ÁUDIO (m4a, sem imagem). Várias tomadas repetidas da mesma frase de narração (ensaio de locução). Falante NÃO identificado com certeza — provavelmente Gabriel gravando narração para o reel da 5ª de Beethoven; confirmar com ele. Escolher a tomada mais limpa.",
+      "t0_original": 0.0,
+      "t1_original": 16.5,
+      "dur": 15.02,
+      "citacao_t0": 5.77,
+      "citacao_t1": 7.14,
+      "citacao_palavras": [
+        16,
+        24
+      ],
+      "item_id": "20261026_gravacao"
+    },
+    {
+      "id": "20261026_gravacao#s02",
+      "t0": 66.97,
+      "t1": 82.18,
+      "tema": "tomada com dopamina: quando o refrão chega o cérebro libera dopamina",
+      "tags": [
+        "musica",
+        "tensao-e-resolucao",
+        "dopamina",
+        "refrao",
+        "recompensa"
+      ],
+      "tese": "a resolução da tensão musical é recompensada com dopamina",
+      "citacao": "Quando o refrão finalmente chega, que é a resolução, aí o seu cérebro libera a dopamina",
+      "gancho_potencial": 3,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 0,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Única tomada que menciona dopamina; frase termina cortada após 'dopamina'. Só áudio.",
+      "t0_original": 67.0,
+      "t1_original": 87.0,
+      "dur": 15.21,
+      "citacao_t0": 75.98,
+      "citacao_t1": 82.18,
+      "citacao_palavras": [
+        182,
+        197
+      ],
+      "item_id": "20261026_gravacao"
+    },
+    {
+      "id": "20261026_gravacao#s03",
+      "t0": 87.12,
+      "t1": 102.55,
+      "tema": "última tomada completa: tensão, resolução e a sensação boa",
+      "tags": [
+        "musica",
+        "tensao-e-resolucao",
+        "expectativa",
+        "refrao"
+      ],
+      "tese": "mesma tese, tomada final mais completa",
+      "citacao": "Isso é o que a gente chama de tensão e quando o refrão finalmente chega",
+      "gancho_potencial": 2,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 0,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Final com erro do whisper ('serpção' = seu cérebro). Só áudio.",
+      "t0_original": 87.0,
+      "t1_original": 105.6,
+      "dur": 15.43,
+      "citacao_t0": 93.87,
+      "citacao_t1": 97.45,
+      "citacao_palavras": [
+        216,
+        230
+      ],
+      "item_id": "20261026_gravacao"
+    }
+  ]
+}

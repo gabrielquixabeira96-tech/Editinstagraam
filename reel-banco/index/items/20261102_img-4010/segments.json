@@ -1,0 +1,32 @@
+{
+  "item_id": "20261102_img-4010",
+  "validado_em": "2026-11-02T14:22:16+00:00",
+  "segments": [
+    {
+      "id": "20261102_img-4010#s01",
+      "t0": 0.0,
+      "t1": 21.4,
+      "tema": "Gabriel no banco do motorista, em silêncio, olhando para baixo (sem fala)",
+      "tags": [
+        "carro",
+        "bastidores",
+        "sem-fala",
+        "broll"
+      ],
+      "tese": "plano de ambientação no carro",
+      "citacao": "",
+      "gancho_potencial": 0,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 0,
+      "usos": [
+        "broll"
+      ],
+      "notas": "Cenário CARRO, horizontal 1920x1080, camisa branca e cinto, luz de dia. Sem fala transcrita (21 s). Só serve como B-roll de bastidor em reel gravado no carro.",
+      "dur": 21.4,
+      "item_id": "20261102_img-4010"
+    }
+  ]
+}

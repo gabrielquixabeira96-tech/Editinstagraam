@@ -1,0 +1,34 @@
+{
+  "id": "20261026_whatsapp-video-2026-10-26-at-15-45-20",
+  "nome": "WhatsApp Video 2026-10-26 at 15.45.20",
+  "tipo": "video",
+  "origem": {
+    "drive_id": "1gwjB50OLG43_oBXLM6_5nvMd1BX0LEUD",
+    "nome_original": "WhatsApp Video 2026-10-26 at 15.45.20.mp4",
+    "modifiedTime": "2026-10-26T20:08:19.968Z"
+  },
+  "arquivo": "source.mp4",
+  "tamanho": 20140457,
+  "sha256": "4325f8f8493901cec753ab5374136abd47de5fb11c6ca6f940adac9e5936f482",
+  "duracao": 85.242833,
+  "largura": 480,
+  "altura": 848,
+  "fps": 29.997,
+  "rotacao": 0,
+  "tem_audio": true,
+  "vcodec": "h264",
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "indexado",
+  "criado_em": "2026-11-02T14:18:39+00:00",
+  "atualizado_em": "2026-11-02T14:22:10+00:00",
+  "n_cenas": 3,
+  "n_keyframes": 3,
+  "contact_sheets": [
+    "contact_sheet.jpg"
+  ],
+  "falante": "Rafael Quixabeira (irmão do Gabriel, ortopedista) — NÃO é o Gabriel",
+  "notas": "Vídeo do Rafael via WhatsApp (roteiro do projeto, teleprompter). Não usar como fala do Gabriel; CTA aponta para o perfil do Rafael.",
+  "n_segmentos": 3,
+  "indexado_em": "2026-11-02T14:22:10+00:00"
+}
