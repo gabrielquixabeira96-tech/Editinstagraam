@@ -1,6 +1,6 @@
 # Banco de material para Reels — catálogo
 
-Gerado em 2026-11-02T15:13:13+00:00 · 31 item(ns) · 159 segmento(s) · 1 pendente(s) de segmentação
+Gerado em 2026-11-02T15:20:03+00:00 · 32 item(ns) · 166 segmento(s)
 
 Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: FP fala-principal, BR broll, CR corte-rapido, CC citacao-card · públicos: PL plantonista, RE residente, CA candidato-residencia, CV concursos-vestibular, GE geral
 
@@ -220,6 +220,18 @@ Fonte: gravação de tela de vídeo de concerto (fonte não identificada)
 |---|---|---|---|---|---|---|---|
 | 20261025_screenrecording-10-25-2026-02-54-23-1#s01 | 00:00.00–03:38.60 (219 s) | gravação de tela de concerto de orquestra (regente e naipes, filmagem antiga de TV) — provável Beethoven | musica, orquestra, beethoven, regente, concerto, broll, terceiros | 1 | 2/0 | GE | BR |
 
+## 20261025_win-20261025-01-19-08-pro — WIN_20261025_01_19_08_Pro (video · 14:58.00 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261025_win-20261025-01-19-08-pro#s01 | 00:03.69–01:30.52 (87 s) | TDAH como problema de direcionamento de atenção e de energia, não de falta de energia | tdah, atencao, energia, dopamina, regulacao, neurodivergencia | 2 | 2/3 | GE | FP |
+| 20261025_win-20261025-01-19-08-pro#s02 | 01:42.70–02:52.13 (69 s) | controlar os estímulos a que se expõe: vícios, pornografia, Instagram e drogas sequestram o sistema de recompensa | tdah, estimulos, dopamina, vicio, redes-sociais, autocontrole | 2 | 2/3 | GE | FP |
+| 20261025_win-20261025-01-19-08-pro#s03 | 05:06.60–06:15.02 (68 s) | procrastinação produtiva: o cérebro foge da tarefa difícil aprendendo outra coisa interessante (guerra civil de Angola, invenções de Da Vinci) | procrastinacao, procrastinacao-produtiva, tdah, estudo, fuga, curiosidade | 4 | 2/3 | GE CV CA | FP CC |
+| 20261025_win-20261025-01-19-08-pro#s04 | 06:27.43–08:58.84 (151 s) | memória por associação: informação sem relação exige uma gaveta nova, raramente aberta; associar usa uma gaveta que você já abre sempre | memoria, associacao, metodo-de-estudo, analogia, recuperacao, neurociencia-do-aprendizado | 4 | 2/3 | CV CA GE | FP CC |
+| 20261025_win-20261025-01-19-08-pro#s05 | 09:17.54–10:21.75 (64 s) | exemplo pessoal: a 5ª de Beethoven fez sentido porque se associou ao que ele já conhecia da Bíblia e das Meditações; só a parte musical era nova | memoria, associacao, beethoven, exemplo-pessoal, musica, estoicismo | 2 | 2/2 | GE | FP |
+| 20261025_win-20261025-01-19-08-pro#s06 | 10:35.97–11:46.17 (70 s) | enjoado de estudar o mesmo para as provas, resolveu aprender latim: a etimologia faz entender sem precisar de explicação | etimologia, latim, medicina, metodo-de-estudo, termos-medicos, prova | 3 | 2/3 | CV CA GE | FP CC |
+| 20261025_win-20261025-01-19-08-pro#s07 | 12:53.27–14:04.94 (72 s) | metástase = meta (transposição progressiva) + estase (parada): a célula sai de um tecido e para em outro; estase sanguínea é sangue parado | etimologia, metastase, estase, oncologia, termos-medicos, latim-grego | 3 | 2/3 | CV CA GE | FP CR |
+
 ## 20261026_gravacao — Gravação (video · 01:45.60 · licença propria)
 
 | segmento | onde | tema | tags | G | V/A | públicos | usos |
@@ -319,8 +331,4 @@ Fonte: gravação de tela de vídeo de concerto (fonte não identificada)
 | segmento | onde | tema | tags | G | V/A | públicos | usos |
 |---|---|---|---|---|---|---|---|
 | 20261102_img-4059#s01 | 00:02.16–01:11.50 (69 s) | Aristóteles: desenvolver a retórica é dever moral de quem tem conhecimento, senão convencem os que só têm retórica | filosofia, aristoteles, retorica, divulgacao-cientifica, comunicacao, medico-nas-redes | 4 | 2/3 | GE RE | FP CC |
-
-## Pendentes (sem segments.json no índice)
-
-- 20261025_win-20261025-01-19-08-pro — WIN_20261025_01_19_08_Pro (video, status baixado)
 

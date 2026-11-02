@@ -19,7 +19,16 @@
   "vcodec": "h264",
   "acodec": "aac",
   "licenca": "propria",
-  "status": "baixado",
+  "status": "indexado",
   "criado_em": "2026-11-02T15:12:56+00:00",
-  "atualizado_em": "2026-11-02T15:12:56+00:00"
+  "atualizado_em": "2026-11-02T15:20:03+00:00",
+  "n_cenas": 30,
+  "n_keyframes": 30,
+  "contact_sheets": [
+    "contact_sheet.jpg"
+  ],
+  "falante": "Gabriel",
+  "cenario": "escritório (luminárias circulares), webcam horizontal",
+  "n_segmentos": 7,
+  "indexado_em": "2026-11-02T15:20:03+00:00"
 }

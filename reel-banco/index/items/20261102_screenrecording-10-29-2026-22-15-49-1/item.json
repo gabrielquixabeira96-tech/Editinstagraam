@@ -1,0 +1,25 @@
+{
+  "id": "20261102_screenrecording-10-29-2026-22-15-49-1",
+  "nome": "ScreenRecording_10-29-2026 22-15-49_1",
+  "tipo": "video",
+  "origem": {
+    "drive_id": "14vzWSn4izkRMuahiDQH4xs8SFm5paFBn",
+    "nome_original": "ScreenRecording_10-29-2026 22-15-49_1.mp4",
+    "modifiedTime": "2026-11-02T13:37:36.355Z"
+  },
+  "arquivo": "source.mp4",
+  "tamanho": 975012816,
+  "sha256": "f41d458e75226b75c6c79a31320cf45caf0f241023e0cd19cf7c016b27753f75",
+  "duracao": 683.912925,
+  "largura": 1180,
+  "altura": 2556,
+  "fps": 26.382,
+  "rotacao": 0,
+  "tem_audio": true,
+  "vcodec": "hevc",
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "baixado",
+  "criado_em": "2026-11-02T15:20:03+00:00",
+  "atualizado_em": "2026-11-02T15:20:03+00:00"
+}

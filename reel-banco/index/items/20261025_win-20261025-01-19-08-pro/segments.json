@@ -1,0 +1,270 @@
+{
+  "item_id": "20261025_win-20261025-01-19-08-pro",
+  "validado_em": "2026-11-02T15:20:03+00:00",
+  "segments": [
+    {
+      "id": "20261025_win-20261025-01-19-08-pro#s01",
+      "t0": 3.69,
+      "t1": 90.52,
+      "tema": "TDAH como problema de direcionamento de atenção e de energia, não de falta de energia",
+      "tags": [
+        "tdah",
+        "atencao",
+        "energia",
+        "dopamina",
+        "regulacao",
+        "neurodivergencia"
+      ],
+      "tese": "quem entende como o próprio cérebro funciona consegue direcionar uma energia absurda; o problema é de direcionamento e regulação",
+      "citacao": "é um problema de direcionamento de atenção e direcionamento de energia",
+      "gancho_potencial": 2,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 2,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Webcam do PC (WIN = câmera do Windows), HORIZONTAL 1920x1080, mesmo escritório das luminárias circulares, camisa verde; imagem suave/baixa nitidez, contraluz da janela, ele fora do centro e recostado, braços cruzados. Mesma noite/sessão de IMG_3900/3901 (25/10 ~01h). Transcrição muito truncada ('PANERG' = provavelmente dopaminérgica; 'Cortex para afrontar o hipocampo' confuso) — conferir áudio; termos neurocientíficos precisam de revisão antes de ir para a tela.",
+      "t0_original": 3.6,
+      "t1_original": 91.0,
+      "dur": 86.83,
+      "citacao_t0": 44.61,
+      "citacao_t1": 52.09,
+      "citacao_palavras": [
+        60,
+        70
+      ],
+      "item_id": "20261025_win-20261025-01-19-08-pro"
+    },
+    {
+      "id": "20261025_win-20261025-01-19-08-pro#s02",
+      "t0": 102.7,
+      "t1": 172.13,
+      "tema": "controlar os estímulos a que se expõe: vícios, pornografia, Instagram e drogas sequestram o sistema de recompensa",
+      "tags": [
+        "tdah",
+        "estimulos",
+        "dopamina",
+        "vicio",
+        "redes-sociais",
+        "autocontrole"
+      ],
+      "tese": "para quem precisa de mais estímulo, é imprescindível controlar o que consome, senão a energia vai para o estímulo fácil",
+      "citacao": "imprescindível você controla seus extinuos e o que você expulsa",
+      "gancho_potencial": 2,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 2,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Webcam do PC (WIN = câmera do Windows), HORIZONTAL 1920x1080, mesmo escritório das luminárias circulares, camisa verde; imagem suave/baixa nitidez, contraluz da janela, ele fora do centro e recostado, braços cruzados. Mesma noite/sessão de IMG_3900/3901 (25/10 ~01h). Ele cita 'quatro vezes mais chance de dependência' e admite não ter certeza (2:22–2:32): NÃO usar esse número.",
+      "t0_original": 102.0,
+      "t1_original": 172.0,
+      "dur": 69.43,
+      "citacao_t0": 110.88,
+      "citacao_t1": 116.5,
+      "citacao_palavras": [
+        138,
+        147
+      ],
+      "item_id": "20261025_win-20261025-01-19-08-pro"
+    },
+    {
+      "id": "20261025_win-20261025-01-19-08-pro#s03",
+      "t0": 306.6,
+      "t1": 375.02,
+      "tema": "procrastinação produtiva: o cérebro foge da tarefa difícil aprendendo outra coisa interessante (guerra civil de Angola, invenções de Da Vinci)",
+      "tags": [
+        "procrastinacao",
+        "procrastinacao-produtiva",
+        "tdah",
+        "estudo",
+        "fuga",
+        "curiosidade"
+      ],
+      "tese": "diante do que não quer estudar, o cérebro cria uma fuga que parece produtiva: aprender algo excepcional, só que não o que precisa",
+      "citacao": "acaba criando uma espécie de procrastinação produtiva",
+      "gancho_potencial": 4,
+      "publicos": [
+        "geral",
+        "concursos-vestibular",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 2,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Webcam do PC (WIN = câmera do Windows), HORIZONTAL 1920x1080, mesmo escritório das luminárias circulares, camisa verde; imagem suave/baixa nitidez, contraluz da janela, ele fora do centro e recostado, braços cruzados. Mesma noite/sessão de IMG_3900/3901 (25/10 ~01h). Conceito muito reconhecível pelo público ('eu faço isso'). 'Luanda' = Angola (guerra civil angolana). Pausas longas em 6:14–6:27.",
+      "t0_original": 306.6,
+      "t1_original": 375.0,
+      "dur": 68.42,
+      "citacao_t0": 333.17,
+      "citacao_t1": 344.47,
+      "citacao_palavras": [
+        432,
+        438
+      ],
+      "item_id": "20261025_win-20261025-01-19-08-pro"
+    },
+    {
+      "id": "20261025_win-20261025-01-19-08-pro#s04",
+      "t0": 387.43,
+      "t1": 538.84,
+      "tema": "memória por associação: informação sem relação exige uma gaveta nova, raramente aberta; associar usa uma gaveta que você já abre sempre",
+      "tags": [
+        "memoria",
+        "associacao",
+        "metodo-de-estudo",
+        "analogia",
+        "recuperacao",
+        "neurociencia-do-aprendizado"
+      ],
+      "tese": "associar o novo ao que já se sabe economiza energia e facilita guardar e recuperar, porque usa um caminho já automático",
+      "citacao": "Agora se você faz as associações, você usa uma gaveta que já existe",
+      "gancho_potencial": 4,
+      "publicos": [
+        "concursos-vestibular",
+        "candidato-residencia",
+        "geral"
+      ],
+      "qualidade_visual": 2,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Webcam do PC (WIN = câmera do Windows), HORIZONTAL 1920x1080, mesmo escritório das luminárias circulares, camisa verde; imagem suave/baixa nitidez, contraluz da janela, ele fora do centro e recostado, braços cruzados. Mesma noite/sessão de IMG_3900/3901 (25/10 ~01h). Analogia da gaveta clara e original; pausas de 10–16 s em 7:38–7:48 e 8:15–8:31 (cortar). Complementa IMG_3502#s09/s10 (associação) e IMG_3525#s08 (chunking).",
+      "t0_original": 387.0,
+      "t1_original": 540.0,
+      "dur": 151.41,
+      "citacao_t0": 483.84,
+      "citacao_t1": 489.94,
+      "citacao_palavras": [
+        633,
+        645
+      ],
+      "item_id": "20261025_win-20261025-01-19-08-pro"
+    },
+    {
+      "id": "20261025_win-20261025-01-19-08-pro#s05",
+      "t0": 557.54,
+      "t1": 621.75,
+      "tema": "exemplo pessoal: a 5ª de Beethoven fez sentido porque se associou ao que ele já conhecia da Bíblia e das Meditações; só a parte musical era nova",
+      "tags": [
+        "memoria",
+        "associacao",
+        "beethoven",
+        "exemplo-pessoal",
+        "musica",
+        "estoicismo"
+      ],
+      "tese": "o que é novo se encaixa fácil quando se associa a um conceito que você já tem",
+      "citacao": "a única coisa realmente nova pra mim foi a parte da música",
+      "gancho_potencial": 2,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 2,
+      "qualidade_audio": 2,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Webcam do PC (WIN = câmera do Windows), HORIZONTAL 1920x1080, mesmo escritório das luminárias circulares, camisa verde; imagem suave/baixa nitidez, contraluz da janela, ele fora do centro e recostado, braços cruzados. Mesma noite/sessão de IMG_3900/3901 (25/10 ~01h). Transcrição ruim ('quinta sem fone de vetor' = Quinta Sinfonia de Beethoven). Menciona fé cristã.",
+      "t0_original": 557.5,
+      "t1_original": 622.0,
+      "dur": 64.21,
+      "citacao_t0": 609.33,
+      "citacao_t1": 615.29,
+      "citacao_palavras": [
+        776,
+        787
+      ],
+      "item_id": "20261025_win-20261025-01-19-08-pro"
+    },
+    {
+      "id": "20261025_win-20261025-01-19-08-pro#s06",
+      "t0": 635.97,
+      "t1": 706.17,
+      "tema": "enjoado de estudar o mesmo para as provas, resolveu aprender latim: a etimologia faz entender sem precisar de explicação",
+      "tags": [
+        "etimologia",
+        "latim",
+        "medicina",
+        "metodo-de-estudo",
+        "termos-medicos",
+        "prova"
+      ],
+      "tese": "na medicina, conhecer a origem das palavras explica muitos conceitos sozinha",
+      "citacao": "você entende a etimologia por trás das palavras, faz com que você entenda muita coisa sem precisar de uma explicação",
+      "gancho_potencial": 3,
+      "publicos": [
+        "concursos-vestibular",
+        "candidato-residencia",
+        "geral"
+      ],
+      "qualidade_visual": 2,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Webcam do PC (WIN = câmera do Windows), HORIZONTAL 1920x1080, mesmo escritório das luminárias circulares, camisa verde; imagem suave/baixa nitidez, contraluz da janela, ele fora do centro e recostado, braços cruzados. Mesma noite/sessão de IMG_3900/3901 (25/10 ~01h). ",
+      "t0_original": 635.9,
+      "t1_original": 706.0,
+      "dur": 70.2,
+      "citacao_t0": 674.0,
+      "citacao_t1": 680.21,
+      "citacao_palavras": [
+        871,
+        890
+      ],
+      "item_id": "20261025_win-20261025-01-19-08-pro"
+    },
+    {
+      "id": "20261025_win-20261025-01-19-08-pro#s07",
+      "t0": 773.27,
+      "t1": 844.94,
+      "tema": "metástase = meta (transposição progressiva) + estase (parada): a célula sai de um tecido e para em outro; estase sanguínea é sangue parado",
+      "tags": [
+        "etimologia",
+        "metastase",
+        "estase",
+        "oncologia",
+        "termos-medicos",
+        "latim-grego"
+      ],
+      "tese": "decompor o termo em raízes explica o fenômeno: metástase é a célula transposta que para em outro tecido",
+      "citacao": "estase significa parada",
+      "gancho_potencial": 3,
+      "publicos": [
+        "concursos-vestibular",
+        "candidato-residencia",
+        "geral"
+      ],
+      "qualidade_visual": 2,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "corte-rapido"
+      ],
+      "notas": "Webcam do PC (WIN = câmera do Windows), HORIZONTAL 1920x1080, mesmo escritório das luminárias circulares, camisa verde; imagem suave/baixa nitidez, contraluz da janela, ele fora do centro e recostado, braços cruzados. Mesma noite/sessão de IMG_3900/3901 (25/10 ~01h). Fala hesitante, whisper confuso em 13:09–13:24. Complementa IMG_3901 (estoma, anaplasia, tomia).",
+      "t0_original": 773.0,
+      "t1_original": 845.0,
+      "dur": 71.67,
+      "citacao_t0": 809.49,
+      "citacao_t1": 811.33,
+      "citacao_palavras": [
+        1039,
+        1041
+      ],
+      "item_id": "20261025_win-20261025-01-19-08-pro"
+    }
+  ]
+}
