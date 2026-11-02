@@ -1,0 +1,41 @@
+{
+  "item_id": "20261102_img-4013",
+  "validado_em": "2026-11-02T15:00:20+00:00",
+  "segments": [
+    {
+      "id": "20261102_img-4013#s01",
+      "t0": 24.82,
+      "t1": 79.68,
+      "tema": "bastidor: grava vídeos aleatórios no carro para dar material à IA clonar voz e rosto",
+      "tags": [
+        "bastidores",
+        "inteligencia-artificial",
+        "clone-de-voz",
+        "avatar",
+        "criacao-de-conteudo"
+      ],
+      "tese": "quanto mais dados de você falando, mais fiel fica o clone feito pela IA",
+      "citacao": "eu preciso de fornecer material para a inteligência artificial conseguir gravar a minha voz, meu rosto",
+      "gancho_potencial": 2,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 2,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Cenário CARRO (estacionamento coberto, luz fraca), horizontal, camisa branca, óculos pendurado. Contém palavrão em 0:30 ('falando qualquer merda') — cortar. Resto do vídeo (1:26–4:17) é logística de estacionamento e lembranças pessoais (Alta Floresta, Cuiabá, italiano): sem uso.",
+      "t0_original": 24.8,
+      "t1_original": 80.0,
+      "dur": 54.86,
+      "citacao_t0": 41.32,
+      "citacao_t1": 51.78,
+      "citacao_palavras": [
+        60,
+        75
+      ],
+      "item_id": "20261102_img-4013"
+    }
+  ]
+}

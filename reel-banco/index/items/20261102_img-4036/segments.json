@@ -1,0 +1,81 @@
+{
+  "item_id": "20261102_img-4036",
+  "validado_em": "2026-11-02T14:41:10+00:00",
+  "segments": [
+    {
+      "id": "20261102_img-4036#s01",
+      "t0": 3.41,
+      "t1": 83.8,
+      "tema": "por que a perda da barreira de proteção faz o estômago sentir o ácido: HCl com pH perto de 1",
+      "tags": [
+        "estomago",
+        "acido-cloridrico",
+        "ph",
+        "barreira-mucosa",
+        "gastrite",
+        "fisiologia"
+      ],
+      "tese": "o ácido gástrico é extremamente ácido (pH ~1) e só não agride o estômago enquanto a barreira de proteção está íntegra",
+      "citacao": "O HCL é extremamente ácido, tem um pH próximo de 1",
+      "gancho_potencial": 2,
+      "publicos": [
+        "geral",
+        "concursos-vestibular"
+      ],
+      "qualidade_visual": 2,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Cenário CARRO À NOITE dirigindo, horizontal 1920x1080, camisa branca, luz fraca, olhar desviado para a rua o tempo todo. Começa no meio do raciocínio ('Então, o que acontece é que...'). Pausas longas (até 8,6 s).",
+      "t0_original": 3.4,
+      "t1_original": 83.0,
+      "dur": 80.39,
+      "citacao_t0": 40.3,
+      "citacao_t1": 48.96,
+      "citacao_palavras": [
+        44,
+        54
+      ],
+      "item_id": "20261102_img-4036"
+    },
+    {
+      "id": "20261102_img-4036#s02",
+      "t0": 103.67,
+      "t1": 121.44,
+      "tema": "paradoxo: como produzimos um ácido tão corrosivo em grande quantidade e o corpo não é corroído por dentro",
+      "tags": [
+        "estomago",
+        "acido-cloridrico",
+        "barreira-mucosa",
+        "paradoxo",
+        "fisiologia",
+        "curiosidade"
+      ],
+      "tese": "o estômago produz ácido corrosivo em grande quantidade sem se autodigerir — a pergunta abre a explicação da barreira mucosa",
+      "citacao": "E como que a gente produz isso dentro da gente, em quantidades altas, e nosso corpo não sente",
+      "gancho_potencial": 4,
+      "publicos": [
+        "geral",
+        "concursos-vestibular"
+      ],
+      "qualidade_visual": 2,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Boa pergunta-gancho (paradoxo), mas a resposta NÃO está no vídeo (corta em 2:02). Antes dela (1:21–1:40) diz que o ácido 'corrói instantaneamente uma latinha de Coca-Cola' — afirmação sem base, NÃO usar esse trecho. Carro à noite, dirigindo.",
+      "t0_original": 103.6,
+      "t1_original": 121.0,
+      "dur": 17.77,
+      "citacao_t0": 103.67,
+      "citacao_t1": 114.84,
+      "citacao_palavras": [
+        115,
+        132
+      ],
+      "item_id": "20261102_img-4036"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "item_id": "20261025_img-3898",
+  "validado_em": "2026-11-02T14:51:37+00:00",
+  "segments": [
+    {
+      "id": "20261025_img-3898#s01",
+      "t0": 2.73,
+      "t1": 75.4,
+      "tema": "Marco Aurélio nas Meditações: o que impede a ação impulsiona a ação, o obstáculo torna-se o caminho",
+      "tags": [
+        "filosofia",
+        "estoicismo",
+        "marco-aurelio",
+        "meditacoes",
+        "obstaculo",
+        "resiliencia"
+      ],
+      "tese": "o mesmo dilema e a mesma solução aparecem em vários autores; Marco Aurélio formulou: o obstáculo que permanece torna-se o próprio caminho",
+      "citacao": "impulsiona a ação e o obstáculo que permanece, torna -se o próprio caminho",
+      "gancho_potencial": 3,
+      "publicos": [
+        "geral",
+        "concursos-vestibular"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Cenário ESCRITÓRIO (luminárias circulares), camisa verde, retrato, sentado; mão no rosto em parte. Fala MUITO fragmentada nos primeiros 60 s (pausas de 1–4 s, whisper confuso: 'operador romano' = imperador). A citação correta e completa está em 1:06–1:20. Mesmo cenário de IMG_3897 (tentativa anterior).",
+      "t0_original": 2.7,
+      "t1_original": 81.0,
+      "dur": 72.67,
+      "citacao_t0": 70.22,
+      "citacao_t1": 75.4,
+      "citacao_palavras": [
+        82,
+        94
+      ],
+      "item_id": "20261025_img-3898"
+    },
+    {
+      "id": "20261025_img-3898#s02",
+      "t0": 81.0,
+      "t1": 116.3,
+      "tema": "a surdez de Beethoven: o obstáculo que permaneceu virou o próprio caminho dele",
+      "tags": [
+        "beethoven",
+        "surdez",
+        "musica",
+        "estoicismo",
+        "obstaculo",
+        "resiliencia",
+        "marco-aurelio"
+      ],
+      "tese": "o dilema não precisa ser eliminado para ser superado: Beethoven não curou a surdez, fez dela o caminho",
+      "citacao": "A surdez de Vibetov, que permaneceu, acabou se tornando o próprio caminho dele",
+      "gancho_potencial": 4,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "Antítese forte (obstáculo × caminho; superar sem eliminar). Whisper escreveu 'Vibetov' = Beethoven (corrigir legenda). Conclusão 1:35–1:58 meio truncada ('fazer dele o seu próprio Mavic' = provavelmente 'motivo'?). Escritório.",
+      "t0_original": 81.0,
+      "t1_original": 118.0,
+      "dur": 35.3,
+      "citacao_t0": 84.22,
+      "citacao_t1": 91.46,
+      "citacao_palavras": [
+        101,
+        113
+      ],
+      "item_id": "20261025_img-3898"
+    }
+  ]
+}

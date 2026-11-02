@@ -1,0 +1,34 @@
+{
+  "id": "20261102_img-3921",
+  "nome": "IMG_3921",
+  "tipo": "video",
+  "origem": {
+    "drive_id": "1ip_elb077JrOeauqKiaa2qxktVUXfR6b",
+    "nome_original": "IMG_3921.MOV",
+    "modifiedTime": "2026-11-02T13:23:54.058Z"
+  },
+  "arquivo": "source.mov",
+  "tamanho": 372695639,
+  "sha256": "30a370fecce691086a7e0704e838798c4837e262235436ffbe0a736b3925cedd",
+  "duracao": 54.368333,
+  "largura": 2160,
+  "altura": 3840,
+  "fps": 59.996,
+  "rotacao": -90,
+  "tem_audio": true,
+  "vcodec": "hevc",
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "indexado",
+  "criado_em": "2026-11-02T14:41:47+00:00",
+  "atualizado_em": "2026-11-02T14:51:37+00:00",
+  "n_cenas": 2,
+  "n_keyframes": 2,
+  "contact_sheets": [
+    "contact_sheet.jpg"
+  ],
+  "falante": "Gabriel",
+  "notas": "Conteúdo político pessoal — não usar; transcript removido do índice (repositório público).",
+  "n_segmentos": 0,
+  "indexado_em": "2026-11-02T14:51:37+00:00"
+}

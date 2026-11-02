@@ -1,0 +1,25 @@
+{
+  "id": "20261102_img-3970",
+  "nome": "IMG_3970",
+  "tipo": "video",
+  "origem": {
+    "drive_id": "1N6G4WJyxL510v95B90jO9nzOpS3tb5xH",
+    "nome_original": "IMG_3970.MOV",
+    "modifiedTime": "2026-11-02T13:34:30.421Z"
+  },
+  "arquivo": "source.mov",
+  "tamanho": 636696015,
+  "sha256": "2340579b9d369862fbd3192e6dc64742c5f47d82e1513673ec27ff6b1b3a420d",
+  "duracao": 360.518333,
+  "largura": 1080,
+  "altura": 1920,
+  "fps": 29.998,
+  "rotacao": -90,
+  "tem_audio": true,
+  "vcodec": "hevc",
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "baixado",
+  "criado_em": "2026-11-02T15:00:02+00:00",
+  "atualizado_em": "2026-11-02T15:00:02+00:00"
+}

@@ -1,0 +1,119 @@
+{
+  "item_id": "20261102_img-3971",
+  "validado_em": "2026-11-02T15:00:19+00:00",
+  "segments": [
+    {
+      "id": "20261102_img-3971#s01",
+      "t0": 2.28,
+      "t1": 70.37,
+      "tema": "Platão: a alma dividida entre a parte que deseja e a parte que raciocina; no tirano o desejo escraviza a razão",
+      "tags": [
+        "filosofia",
+        "platao",
+        "republica",
+        "alma-tripartite",
+        "desejo",
+        "razao",
+        "tirania"
+      ],
+      "tese": "na alma corrompida a parte primitiva dos desejos faz da parte racional sua escrava",
+      "citacao": "a parte mais primitiva que é a parte dos desejos, fez a parte do raciocínio, a parte racional dele escravo",
+      "gancho_potencial": 3,
+      "publicos": [
+        "geral",
+        "concursos-vestibular"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Cenário INTERNO (mesa clara, parede/teto claros com luminária linear — escritório/café), camisa bege, retrato, câmera baixa sobre a mesa, rosto próximo. Começa no meio ('porque aqui, pela tua argumenta...'). Pausa de 13 s em 0:42–0:56 (cortar). Ele simplifica a alma tripartite em duas partes (avisa).",
+      "t0_original": 2.3,
+      "t1_original": 71.0,
+      "dur": 68.09,
+      "citacao_t0": 59.51,
+      "citacao_t1": 70.37,
+      "citacao_palavras": [
+        71,
+        90
+      ],
+      "item_id": "20261102_img-3971"
+    },
+    {
+      "id": "20261102_img-3971#s02",
+      "t0": 72.36,
+      "t1": 130.12,
+      "tema": "quem conquista o poder por golpe e trapaça não venceu: não conseguiu vencer nem a própria vontade",
+      "tags": [
+        "filosofia",
+        "platao",
+        "republica",
+        "tirania",
+        "autodominio",
+        "desejo",
+        "antitese"
+      ],
+      "tese": "o tirano que parece vencedor é escravo dos próprios desejos — a vitória externa esconde uma derrota interna",
+      "citacao": "essa pessoa não é alguém que venceu no vídeo, eu não consegui vencer nem a própria vontade",
+      "gancho_potencial": 4,
+      "publicos": [
+        "geral",
+        "concursos-vestibular"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Antítese forte (vencer o poder × não vencer a própria vontade). Whisper errou palavras ('focatruas'=falcatruas, 'irtmães', 'venceu no vídeo'=venceu na vida?) — conferir áudio para legenda. CUIDADO: gravado no dia da eleição; manter leitura estritamente filosófica (Platão, República IX), sem alusão a político real.",
+      "t0_original": 72.3,
+      "t1_original": 130.0,
+      "dur": 57.76,
+      "citacao_t0": 95.3,
+      "citacao_t1": 103.59,
+      "citacao_palavras": [
+        124,
+        140
+      ],
+      "item_id": "20261102_img-3971"
+    },
+    {
+      "id": "20261102_img-3971#s03",
+      "t0": 133.17,
+      "t1": 189.24,
+      "tema": "Platão: o tirano que conseguiu o poder está pior do que o que não conseguiu — como um rei sozinho no deserto com 50 escravos",
+      "tags": [
+        "filosofia",
+        "platao",
+        "republica",
+        "tirania",
+        "analogia",
+        "poder"
+      ],
+      "tese": "conquistar o poder pela corrupção piora a condição do tirano: ele fica isolado entre os que domina",
+      "citacao": "ele fala que quem conseguiu conquistar o poder pela corrupção é ainda pior do que aquele que só era corrompido",
+      "gancho_potencial": 3,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Pausa de 11 s em 2:35–2:46 (cortar). Analogia do rei com 50 escravos no deserto (República IX) fica incompleta — vídeo termina em 3:10 com 'por quê?' sem a resposta; 4:00–4:29 sem fala.",
+      "t0_original": 133.0,
+      "t1_original": 190.0,
+      "dur": 56.07,
+      "citacao_t0": 167.68,
+      "citacao_t1": 177.58,
+      "citacao_palavras": [
+        223,
+        242
+      ],
+      "item_id": "20261102_img-3971"
+    }
+  ]
+}

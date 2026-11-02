@@ -19,7 +19,16 @@
   "vcodec": "hevc",
   "acodec": "aac",
   "licenca": "propria",
-  "status": "baixado",
+  "status": "indexado",
   "criado_em": "2026-11-02T14:29:35+00:00",
-  "atualizado_em": "2026-11-02T14:29:35+00:00"
+  "atualizado_em": "2026-11-02T14:41:10+00:00",
+  "n_cenas": 5,
+  "n_keyframes": 5,
+  "contact_sheets": [
+    "contact_sheet.jpg"
+  ],
+  "falante": "Gabriel",
+  "cenario": "carro à noite (dirigindo)",
+  "n_segmentos": 2,
+  "indexado_em": "2026-11-02T14:41:10+00:00"
 }

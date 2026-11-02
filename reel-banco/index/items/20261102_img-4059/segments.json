@@ -1,0 +1,44 @@
+{
+  "item_id": "20261102_img-4059",
+  "validado_em": "2026-11-02T15:00:20+00:00",
+  "segments": [
+    {
+      "id": "20261102_img-4059#s01",
+      "t0": 2.16,
+      "t1": 71.5,
+      "tema": "Aristóteles: desenvolver a retórica é dever moral de quem tem conhecimento, senão convencem os que só têm retórica",
+      "tags": [
+        "filosofia",
+        "aristoteles",
+        "retorica",
+        "divulgacao-cientifica",
+        "comunicacao",
+        "medico-nas-redes"
+      ],
+      "tese": "se quem sabe abre mão de persuadir, quem não sabe mas domina a retórica é quem vai convencer as pessoas",
+      "citacao": "se a gente deixa a retórica exclusivamente com aqueles que não tem domínio",
+      "gancho_potencial": 4,
+      "publicos": [
+        "geral",
+        "residente"
+      ],
+      "qualidade_visual": 2,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Cenário CARRO À NOITE dirigindo, horizontal, luz muito baixa, rosto escuro e olhar na rua. Pausas longas (até 4,7 s). Corta no meio ('quando o médico se prende só na dialética e...') — a conclusão sobre o médico não foi gravada. Ótima tese para justificar o próprio projeto (médico que comunica).",
+      "t0_original": 2.2,
+      "t1_original": 71.5,
+      "dur": 69.34,
+      "citacao_t0": 37.23,
+      "citacao_t1": 47.86,
+      "citacao_palavras": [
+        49,
+        61
+      ],
+      "item_id": "20261102_img-4059"
+    }
+  ]
+}

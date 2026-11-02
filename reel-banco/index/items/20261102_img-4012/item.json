@@ -1,0 +1,34 @@
+{
+  "id": "20261102_img-4012",
+  "nome": "IMG_4012",
+  "tipo": "video",
+  "origem": {
+    "drive_id": "1n30xOG031mlpz5xxMDLgkNxMZ6tObmyP",
+    "nome_original": "IMG_4012.MOV",
+    "modifiedTime": "2026-11-02T13:22:43.854Z"
+  },
+  "arquivo": "source.mov",
+  "tamanho": 306687551,
+  "sha256": "a74f7632dfa83d99b7e822e7d84ee675000b813c3e6b8ea715979a8a469483d5",
+  "duracao": 169.633333,
+  "largura": 1920,
+  "altura": 1080,
+  "fps": 29.906,
+  "rotacao": -180,
+  "tem_audio": true,
+  "vcodec": "hevc",
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "indexado",
+  "criado_em": "2026-11-02T14:31:47+00:00",
+  "atualizado_em": "2026-11-02T14:41:11+00:00",
+  "n_cenas": 6,
+  "n_keyframes": 6,
+  "contact_sheets": [
+    "contact_sheet.jpg"
+  ],
+  "falante": "Gabriel",
+  "cenario": "carro",
+  "n_segmentos": 0,
+  "indexado_em": "2026-11-02T14:41:11+00:00"
+}

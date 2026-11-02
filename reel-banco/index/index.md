@@ -1,6 +1,6 @@
 # Banco de material para Reels — catálogo
 
-Gerado em 2026-11-02T14:30:06+00:00 · 21 item(ns) · 139 segmento(s) · 1 pendente(s) de segmentação
+Gerado em 2026-11-02T15:00:20+00:00 · 29 item(ns) · 149 segmento(s) · 1 pendente(s) de segmentação
 
 Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: FP fala-principal, BR broll, CR corte-rapido, CC citacao-card · públicos: PL plantonista, RE residente, CA candidato-residencia, CV concursos-vestibular, GE geral
 
@@ -195,6 +195,21 @@ Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: 
 |---|---|---|---|---|---|---|---|
 | 20261025_img-3897#s01 | 00:01.41–00:33.76 (32 s) | Marco Aurélio nas Meditações: o obstáculo vira o caminho | filosofia, estoicismo, marco-aurelio, meditacoes, obstaculo, resiliencia | 2 | 4/3 | GE | FP CC |
 
+## 20261025_img-3898 — IMG_3898 (video · 02:10.71 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261025_img-3898#s01 | 00:02.73–01:15.40 (73 s) | Marco Aurélio nas Meditações: o que impede a ação impulsiona a ação, o obstáculo torna-se o caminho | filosofia, estoicismo, marco-aurelio, meditacoes, obstaculo, resiliencia | 3 | 4/3 | GE CV | FP CC |
+| 20261025_img-3898#s02 | 01:21.00–01:56.30 (35 s) | a surdez de Beethoven: o obstáculo que permaneceu virou o próprio caminho dele | beethoven, surdez, musica, estoicismo, obstaculo, resiliencia, marco-aurelio | 4 | 4/3 | GE | FP CR CC |
+
+## 20261025_screenrecording-10-25-2026-02-54-23-1 — ScreenRecording_10-25-2026 02-54-23_1 (video · 03:38.61 · licença desconhecida)
+
+Fonte: gravação de tela de vídeo de concerto (fonte não identificada)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261025_screenrecording-10-25-2026-02-54-23-1#s01 | 00:00.00–03:38.60 (219 s) | gravação de tela de concerto de orquestra (regente e naipes, filmagem antiga de TV) — provável Beethoven | musica, orquestra, beethoven, regente, concerto, broll, terceiros | 1 | 2/0 | GE | BR |
+
 ## 20261026_gravacao — Gravação (video · 01:45.60 · licença propria)
 
 | segmento | onde | tema | tags | G | V/A | públicos | usos |
@@ -242,13 +257,50 @@ Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: 
 | segmento | onde | tema | tags | G | V/A | públicos | usos |
 |---|---|---|---|---|---|---|---|
 
+## 20261102_img-3921 — IMG_3921 (video · 00:54.37 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+
+## 20261102_img-3971 — IMG_3971 (video · 04:28.97 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261102_img-3971#s01 | 00:02.28–01:10.37 (68 s) | Platão: a alma dividida entre a parte que deseja e a parte que raciocina; no tirano o desejo escraviza a razão | filosofia, platao, republica, alma-tripartite, desejo, razao, tirania | 3 | 3/3 | GE CV | FP |
+| 20261102_img-3971#s02 | 01:12.36–02:10.12 (58 s) | quem conquista o poder por golpe e trapaça não venceu: não conseguiu vencer nem a própria vontade | filosofia, platao, republica, tirania, autodominio, desejo, antitese | 4 | 3/3 | GE CV | FP CC |
+| 20261102_img-3971#s03 | 02:13.17–03:09.24 (56 s) | Platão: o tirano que conseguiu o poder está pior do que o que não conseguiu — como um rei sozinho no deserto com 50 escravos | filosofia, platao, republica, tirania, analogia, poder | 3 | 3/3 | GE | FP |
+
 ## 20261102_img-4010 — IMG_4010 (video · 00:21.43 · licença propria)
 
 | segmento | onde | tema | tags | G | V/A | públicos | usos |
 |---|---|---|---|---|---|---|---|
 | 20261102_img-4010#s01 | 00:00.00–00:21.40 (21 s) | Gabriel no banco do motorista, em silêncio, olhando para baixo (sem fala) | carro, bastidores, sem-fala, broll | 0 | 3/0 | GE | BR |
 
+## 20261102_img-4012 — IMG_4012 (video · 02:49.63 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+
+## 20261102_img-4013 — IMG_4013 (video · 04:17.64 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261102_img-4013#s01 | 00:24.82–01:19.68 (55 s) | bastidor: grava vídeos aleatórios no carro para dar material à IA clonar voz e rosto | bastidores, inteligencia-artificial, clone-de-voz, avatar, criacao-de-conteudo | 2 | 2/3 | GE | FP |
+
+## 20261102_img-4036 — IMG_4036 (video · 02:03.31 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261102_img-4036#s01 | 00:03.41–01:23.80 (80 s) | por que a perda da barreira de proteção faz o estômago sentir o ácido: HCl com pH perto de 1 | estomago, acido-cloridrico, ph, barreira-mucosa, gastrite, fisiologia | 2 | 2/3 | GE CV | FP |
+| 20261102_img-4036#s02 | 01:43.67–02:01.44 (18 s) | paradoxo: como produzimos um ácido tão corrosivo em grande quantidade e o corpo não é corroído por dentro | estomago, acido-cloridrico, barreira-mucosa, paradoxo, fisiologia, curiosidade | 4 | 2/3 | GE CV | FP CC |
+
+## 20261102_img-4059 — IMG_4059 (video · 01:19.02 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261102_img-4059#s01 | 00:02.16–01:11.50 (69 s) | Aristóteles: desenvolver a retórica é dever moral de quem tem conhecimento, senão convencem os que só têm retórica | filosofia, aristoteles, retorica, divulgacao-cientifica, comunicacao, medico-nas-redes | 4 | 2/3 | GE RE | FP CC |
+
 ## Pendentes (sem segments.json no índice)
 
-- 20261102_img-4036 — IMG_4036 (video, status baixado)
+- 20261102_img-3970 — IMG_3970 (video, status baixado)
 

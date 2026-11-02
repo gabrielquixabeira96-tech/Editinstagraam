@@ -1,0 +1,34 @@
+{
+  "id": "20261102_img-4059",
+  "nome": "IMG_4059",
+  "tipo": "video",
+  "origem": {
+    "drive_id": "1Hh-iFJkVjEKI8s1aZwniDmwL6Bl5ztWe",
+    "nome_original": "IMG_4059.MOV",
+    "modifiedTime": "2026-11-02T13:30:40.392Z"
+  },
+  "arquivo": "source.mov",
+  "tamanho": 494365914,
+  "sha256": "fd306b014a726770d55841556ce0ee5576f8c3fef49b18b3ca50d318dadff7f3",
+  "duracao": 79.02,
+  "largura": 3840,
+  "altura": 2160,
+  "fps": 24.032,
+  "rotacao": 0,
+  "tem_audio": true,
+  "vcodec": "hevc",
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "indexado",
+  "criado_em": "2026-11-02T14:52:50+00:00",
+  "atualizado_em": "2026-11-02T15:00:20+00:00",
+  "n_cenas": 3,
+  "n_keyframes": 3,
+  "contact_sheets": [
+    "contact_sheet.jpg"
+  ],
+  "falante": "Gabriel",
+  "cenario": "carro à noite (dirigindo)",
+  "n_segmentos": 1,
+  "indexado_em": "2026-11-02T15:00:20+00:00"
+}
