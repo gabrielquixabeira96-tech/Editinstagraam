@@ -1,0 +1,526 @@
+{
+  "item_id": "20261103_img-4162",
+  "validado_em": "2026-11-03T22:30:02+00:00",
+  "segments": [
+    {
+      "id": "20261103_img-4162#s01",
+      "t0": 2.32,
+      "t1": 70.31,
+      "tema": "comunicação em vídeo (dicção, fluidez, organizar o pensamento) é habilidade treinada, não talento natural",
+      "tags": [
+        "comunicacao",
+        "retorica",
+        "oratoria",
+        "gravar-videos",
+        "medico-nas-redes",
+        "pratica-deliberada"
+      ],
+      "tese": "falar bem para a câmera não é natural: só se desenvolve com treino deliberado, e por isso ele grava",
+      "citacao": "é algo que você precisa muito treinar, não é algo que é natural",
+      "gancho_potencial": 3,
+      "publicos": [
+        "geral",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Sala do apartamento, câmera fixa HORIZONTAL 1920x1080 a ~2 m, luz quente boa; rosto pequeno no quadro (recorte 9:16 fica ~600 px de largura). Abertura com pausa de 7 s (8–15 s) e frases picadas; mãos atrás da cabeça em ~43 s e ~73 s. Melhor trecho limpo: 44,0–48,6 s e 64,5–70,3 s.",
+      "t0_original": 2.3,
+      "t1_original": 70.4,
+      "dur": 67.99,
+      "citacao_t0": 44.0,
+      "citacao_t1": 48.58,
+      "citacao_palavras": [
+        52,
+        64
+      ],
+      "item_id": "20261103_img-4162"
+    },
+    {
+      "id": "20261103_img-4162#s02",
+      "t0": 97.1,
+      "t1": 147.89,
+      "tema": "o único jeito de perder o desconforto de falar para uma lente sem interlocutor é praticar",
+      "tags": [
+        "comunicacao",
+        "gravar-videos",
+        "desconforto",
+        "pratica",
+        "oratoria"
+      ],
+      "tese": "a mente não está habituada a falar sem uma pessoa na frente; o desconforto só passa com repetição",
+      "citacao": "o único jeito de conseguir melhorar isso é de treinar, para até isso passar",
+      "gancho_potencial": 2,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Sala do apartamento, câmera fixa HORIZONTAL 1920x1080 a ~2 m, luz quente boa; rosto pequeno no quadro (recorte 9:16 fica ~600 px de largura). Começa depois de pausa de 15,5 s (81–97 s: fora da fala, não usar). Fala muito picada (pausas de 2–4 s em 111–120 s). Mãos na cabeça em ~2:11.",
+      "t0_original": 97.1,
+      "t1_original": 147.9,
+      "dur": 50.79,
+      "citacao_t0": 143.73,
+      "citacao_t1": 147.89,
+      "citacao_palavras": [
+        187,
+        200
+      ],
+      "item_id": "20261103_img-4162"
+    },
+    {
+      "id": "20261103_img-4162#s03",
+      "t0": 150.28,
+      "t1": 179.2,
+      "tema": "o paradoxo de travar ao apertar o play mesmo dominando o assunto",
+      "tags": [
+        "comunicacao",
+        "bloqueio",
+        "camera",
+        "oratoria",
+        "retorica",
+        "ansiedade-de-desempenho"
+      ],
+      "tese": "domínio do conteúdo não garante fala fluida: o que está claro na cabeça foge quando a gravação começa",
+      "citacao": "na hora que eu aperto o play, eu travo, tá tudo na cabeça",
+      "gancho_potencial": 4,
+      "publicos": [
+        "geral",
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "Sala do apartamento, câmera fixa HORIZONTAL 1920x1080 a ~2 m, luz quente boa; rosto pequeno no quadro (recorte 9:16 fica ~600 px de largura). Melhor gancho do vídeo (antítese domínio na cabeça × branco na hora do play). Rosto maior e frontal aqui (k006, 2:40). Trecho 'meu argumento Eu o absoluto sobre o tema' (2:51–2:56) sai embolado — corte de 2:40,6 a 2:50,7 e retome em 'na hora que eu aperto o play, parece que foge tudo'.",
+      "t0_original": 150.2,
+      "t1_original": 179.3,
+      "dur": 28.92,
+      "citacao_t0": 160.62,
+      "citacao_t1": 164.66,
+      "citacao_palavras": [
+        224,
+        236
+      ],
+      "item_id": "20261103_img-4162"
+    },
+    {
+      "id": "20261103_img-4162#s04",
+      "t0": 180.84,
+      "t1": 212.18,
+      "tema": "treinar a comunicação antes de ela ser essencial na profissão",
+      "tags": [
+        "comunicacao",
+        "carreira",
+        "preparacao",
+        "pratica",
+        "medico-nas-redes"
+      ],
+      "tese": "a habilidade precisa estar pronta antes do dia em que a profissão vai exigir, por isso o treino é agora",
+      "citacao": "isso não é uma habilidade que seja essencial para mim",
+      "gancho_potencial": 2,
+      "publicos": [
+        "residente",
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Sala do apartamento, câmera fixa HORIZONTAL 1920x1080 a ~2 m, luz quente boa; rosto pequeno no quadro (recorte 9:16 fica ~600 px de largura). Pausa de 4 s em 3:07. 'treinar a partilha agora' é erro de transcrição/fala (provável 'treinar a partir de agora'). Rosto frontal e próximo (k007).",
+      "t0_original": 180.8,
+      "t1_original": 212.2,
+      "dur": 31.34,
+      "citacao_t0": 183.64,
+      "citacao_t1": 186.12,
+      "citacao_palavras": [
+        278,
+        287
+      ],
+      "item_id": "20261103_img-4162"
+    },
+    {
+      "id": "20261103_img-4162#s05",
+      "t0": 215.31,
+      "t1": 245.4,
+      "tema": "inquietação ao gravar e a busca de uma posição confortável",
+      "tags": [
+        "gravar-videos",
+        "bastidores",
+        "desconforto",
+        "camera"
+      ],
+      "tese": "como gravar já é desconfortável, ele precisa que todo o resto esteja confortável para conseguir falar",
+      "citacao": "fato de gravar em si já é uma atividade bem desconfortável pra mim",
+      "gancho_potencial": 1,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Sala do apartamento, câmera fixa HORIZONTAL 1920x1080 a ~2 m, luz quente boa; rosto pequeno no quadro (recorte 9:16 fica ~600 px de largura). Trecho de bastidor, pouco valor isolado. Muda de postura (encosta para trás, k008–k009).",
+      "dur": 30.09,
+      "citacao_t0": 233.36,
+      "citacao_t1": 237.76,
+      "citacao_palavras": [
+        369,
+        381
+      ],
+      "item_id": "20261103_img-4162"
+    },
+    {
+      "id": "20261103_img-4162#s06",
+      "t0": 247.94,
+      "t1": 304.99,
+      "tema": "a própria voz no vídeo: anasalada, baixa, incômoda",
+      "tags": [
+        "voz",
+        "comunicacao",
+        "gravar-videos",
+        "autoimagem",
+        "bastidores"
+      ],
+      "tese": "todo mundo se incomoda com a própria voz gravada, mas ele quer ao menos acertar tom e volume",
+      "citacao": "eu sinto que ela sai no vídeo muito anasalado, isso incomoda bastante",
+      "gancho_potencial": 2,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Sala do apartamento, câmera fixa HORIZONTAL 1920x1080 a ~2 m, luz quente boa; rosto pequeno no quadro (recorte 9:16 fica ~600 px de largura). Pausas de 4–5 s entre 4:17 e 4:30 e frase confusa ('tentar falar edição, mas eu acho que não é edição'). Usar só 4:35–4:54.",
+      "t0_original": 247.9,
+      "t1_original": 304.7,
+      "dur": 57.05,
+      "citacao_t0": 281.34,
+      "citacao_t1": 285.98,
+      "citacao_palavras": [
+        442,
+        453
+      ],
+      "item_id": "20261103_img-4162"
+    },
+    {
+      "id": "20261103_img-4162#s07",
+      "t0": 304.66,
+      "t1": 357.65,
+      "tema": "vergonha de ser ouvido faz baixar a voz até sozinho em casa; exposição é inerente à carreira escolhida",
+      "tags": [
+        "vergonha",
+        "voz",
+        "exposicao",
+        "comunicacao",
+        "autoimagem",
+        "carreira"
+      ],
+      "tese": "a vergonha baixa o volume inconscientemente, mesmo sem ninguém ouvindo, e precisa ser trabalhada porque exposição faz parte da rotina dele",
+      "citacao": "inconscientemente por causa da vergonha de estar gravando eu acabo diminuindo a minha altura",
+      "gancho_potencial": 3,
+      "publicos": [
+        "geral",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Sala do apartamento, câmera fixa HORIZONTAL 1920x1080 a ~2 m, luz quente boa; rosto pequeno no quadro (recorte 9:16 fica ~600 px de largura). Pausa de 9,9 s em 5:41–5:51 (cortar). 'caso algum vizinho esteja me ouvindo' foi corrigido de 'honrando'. 'inerente' corrigido de 'chineiro' (som incerto). Gesto amplo com a mão em ~5:07.",
+      "t0_original": 304.7,
+      "t1_original": 357.7,
+      "dur": 52.99,
+      "citacao_t0": 306.38,
+      "citacao_t1": 316.44,
+      "citacao_palavras": [
+        485,
+        498
+      ],
+      "item_id": "20261103_img-4162"
+    },
+    {
+      "id": "20261103_img-4162#s08",
+      "t0": 358.99,
+      "t1": 376.18,
+      "tema": "decidiu fazer residência de cirurgia plástica e aguarda o resultado das provas",
+      "tags": [
+        "cirurgia-plastica",
+        "residencia-medica",
+        "r-mais",
+        "carreira",
+        "prova-de-residencia"
+      ],
+      "tese": "escolheu a cirurgia plástica, fez as provas e, se aprovado, começa a residência no ano que vem",
+      "citacao": "Eu decidi fazer a residência de cirurgia plástica",
+      "gancho_potencial": 3,
+      "publicos": [
+        "candidato-residencia",
+        "geral"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "corte-rapido"
+      ],
+      "notas": "Sala do apartamento, câmera fixa HORIZONTAL 1920x1080 a ~2 m, luz quente boa; rosto pequeno no quadro (recorte 9:16 fica ~600 px de largura). Fala curta e direta; 'se Deus quiser acredito que tenha passado'. Contexto pessoal útil para série 'rumo à plástica'. 'uma chance ao águio de iniciar' = frase embolada (6:10).",
+      "t0_original": 359.0,
+      "t1_original": 376.2,
+      "dur": 17.19,
+      "citacao_t0": 358.99,
+      "citacao_t1": 361.18,
+      "citacao_palavras": [
+        559,
+        566
+      ],
+      "item_id": "20261103_img-4162"
+    },
+    {
+      "id": "20261103_img-4162#s09",
+      "t0": 390.25,
+      "t1": 446.13,
+      "tema": "subespecialidade não é especialidade inferior: até médicos confundem o caminho até a cirurgia plástica",
+      "tags": [
+        "subespecialidade",
+        "cirurgia-plastica",
+        "pre-requisito",
+        "residencia-medica",
+        "carreira-medica",
+        "rqe"
+      ],
+      "tese": "'sub' não significa algo menor, e sim um nível mais especializado dentro de uma grande área",
+      "citacao": "na verdade a subespecialidade significa que é um processo mais especializado dentro daquela área",
+      "gancho_potencial": 4,
+      "publicos": [
+        "concursos-vestibular",
+        "candidato-residencia",
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Sala do apartamento, câmera fixa HORIZONTAL 1920x1080 a ~2 m, luz quente boa; rosto pequeno no quadro (recorte 9:16 fica ~600 px de largura). Quebra de crença boa para quem não é da área (vestibulandos, leigos). Início hesitante (pausas de 2–3 s em 6:30–6:42; 'validação do, validação não' em 6:53–7:00). Rosto frontal e grande (k014–k015). Começo mais limpo: 6:42,0 'na verdade até médicos não sabem'.",
+      "t0_original": 390.2,
+      "t1_original": 446.2,
+      "dur": 55.88,
+      "citacao_t0": 439.95,
+      "citacao_t1": 446.13,
+      "citacao_palavras": [
+        687,
+        700
+      ],
+      "item_id": "20261103_img-4162"
+    },
+    {
+      "id": "20261103_img-4162#s10",
+      "t0": 447.38,
+      "t1": 495.21,
+      "tema": "os dois grandes troncos de pré-requisito: clínica médica e cirurgia geral",
+      "tags": [
+        "pre-requisito",
+        "clinica-medica",
+        "cirurgia-geral",
+        "subespecialidade",
+        "residencia-medica"
+      ],
+      "tese": "cardiologia, endocrinologia, pneumologia e reumatologia exigem clínica médica antes, assim como várias cirúrgicas exigem cirurgia geral",
+      "citacao": "geralmente você tem duas grandes áreas que vão acabar tendo subespecialidades dentro dela",
+      "gancho_potencial": 2,
+      "publicos": [
+        "concursos-vestibular",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Sala do apartamento, câmera fixa HORIZONTAL 1920x1080 a ~2 m, luz quente boa; rosto pequeno no quadro (recorte 9:16 fica ~600 px de largura). Esquece exemplos e repete ('Deixa eu ver, lembrar alguma outra. Endocrinologia, já falei', 7:58–8:09) — cortar. 'Reumatologia' corrigido de 'Neumatologia'. Melhor com card gráfico das especialidades.",
+      "t0_original": 447.4,
+      "t1_original": 494.3,
+      "dur": 47.83,
+      "citacao_t0": 450.8,
+      "citacao_t1": 459.5,
+      "citacao_palavras": [
+        705,
+        717
+      ],
+      "item_id": "20261103_img-4162"
+    },
+    {
+      "id": "20261103_img-4162#s11",
+      "t0": 493.69,
+      "t1": 578.03,
+      "tema": "especialidades de acesso direto: neurologia e dermatologia são clínicas mas não exigem clínica médica",
+      "tags": [
+        "acesso-direto",
+        "neurologia",
+        "dermatologia",
+        "rqe",
+        "residencia-medica",
+        "pre-requisito"
+      ],
+      "tese": "há especialidades clínicas que o recém-formado acessa direto e com as quais já obtém o registro de especialista (RQE)",
+      "citacao": "para se tornar especialistas nessas áreas, você não precisa passar por uma residência de clínica médica primeiro",
+      "gancho_potencial": 3,
+      "publicos": [
+        "concursos-vestibular",
+        "candidato-residencia",
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Sala do apartamento, câmera fixa HORIZONTAL 1920x1080 a ~2 m, luz quente boa; rosto pequeno no quadro (recorte 9:16 fica ~600 px de largura). Ele diz 'RQ' (o nome correto é RQE, Registro de Qualificação de Especialista) — corrigir na legenda. Pausas de 5,6 s (8:25) e 6,0 s (8:33) — cortar. 'o responsável de medicina' (9:11) = provável 'o recém-formado'.",
+      "t0_original": 494.2,
+      "t1_original": 578.1,
+      "dur": 84.34,
+      "citacao_t0": 528.6,
+      "citacao_t1": 533.63,
+      "citacao_palavras": [
+        816,
+        832
+      ],
+      "item_id": "20261103_img-4162"
+    },
+    {
+      "id": "20261103_img-4162#s12",
+      "t0": 578.69,
+      "t1": 622.31,
+      "tema": "especialidades de pré-requisito: só quem fez cirurgia geral concorre a plástica, vascular e urologia",
+      "tags": [
+        "pre-requisito",
+        "cirurgia-geral",
+        "cirurgia-plastica",
+        "cirurgia-vascular",
+        "urologia",
+        "r-mais"
+      ],
+      "tese": "nas especialidades de pré-requisito só pode fazer a prova quem já concluiu a residência-base",
+      "citacao": "Pode ser o cirurgião plástico, cirurgião vascular ou urologista",
+      "gancho_potencial": 2,
+      "publicos": [
+        "concursos-vestibular",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "Sala do apartamento, câmera fixa HORIZONTAL 1920x1080 a ~2 m, luz quente boa; rosto pequeno no quadro (recorte 9:16 fica ~600 px de largura). ERRO DE FALA em 10:08: 'só alguém com [clínica médica] pode ser urologista' — urologia é cirúrgica (pré-requisito cirurgia geral); não usar 10:08–10:13. Mãos na cabeça em ~9:59 (k021).",
+      "t0_original": 578.7,
+      "t1_original": 622.4,
+      "dur": 43.62,
+      "citacao_t0": 618.97,
+      "citacao_t1": 622.31,
+      "citacao_palavras": [
+        983,
+        991
+      ],
+      "item_id": "20261103_img-4162"
+    },
+    {
+      "id": "20261103_img-4162#s13",
+      "t0": 623.83,
+      "t1": 676.03,
+      "tema": "tempo de formação: acesso direto cirúrgico em 5 anos vs cirurgia geral + especialidade (3 + 3 na plástica)",
+      "tags": [
+        "tempo-de-residencia",
+        "cirurgia-plastica",
+        "neurocirurgia",
+        "cirurgia-cardiovascular",
+        "acesso-direto",
+        "pre-requisito"
+      ],
+      "tese": "neurocirurgia e cirurgia cardiovascular são 5 anos direto; o cirurgião plástico faz 3 anos de cirurgia geral e depois 3 de plástica",
+      "citacao": "um cirurgião plástico, por exemplo, faz 3 anos cirurgia geral, depois 3 anos cirurgia plástico",
+      "gancho_potencial": 3,
+      "publicos": [
+        "concursos-vestibular",
+        "candidato-residencia",
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "Sala do apartamento, câmera fixa HORIZONTAL 1920x1080 a ~2 m, luz quente boa; rosto pequeno no quadro (recorte 9:16 fica ~600 px de largura). CONFERIR NÚMEROS antes de publicar: ele inclui ortopedia entre as de 5 anos (ortopedia é acesso direto de 3 anos) e diz vascular 3+3 (a residência de cirurgia vascular é de 2 anos após a cirurgia geral). Plástica 3+3 e neuro 5 anos estão corretos. Frase embolada em 10:42 ('ao invés de ser cursado 2 anos, 3 anos de cirurgia plástico'). Mãos na cabeça em ~10:58 (k023).",
+      "t0_original": 623.8,
+      "t1_original": 676.1,
+      "dur": 52.2,
+      "citacao_t0": 663.6,
+      "citacao_t1": 667.7,
+      "citacao_palavras": [
+        1075,
+        1089
+      ],
+      "item_id": "20261103_img-4162"
+    },
+    {
+      "id": "20261103_img-4162#s14",
+      "t0": 723.3,
+      "t1": 780.86,
+      "tema": "a Retórica de Aristóteles convenceu-o de que aprimorar a comunicação é um dever moral",
+      "tags": [
+        "aristoteles",
+        "retorica",
+        "filosofia",
+        "comunicacao",
+        "etica",
+        "medico-nas-redes"
+      ],
+      "tese": "Aristóteles já no início da Retórica defende que aprimorar a persuasão é também um aspecto moral",
+      "citacao": "conseguiu me convencer da necessidade de aprimoramento dessa técnica como inclusive um aspecto moral",
+      "gancho_potencial": 3,
+      "publicos": [
+        "geral",
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "Sala do apartamento, câmera fixa HORIZONTAL 1920x1080 a ~2 m, luz quente boa; rosto pequeno no quadro (recorte 9:16 fica ~600 px de largura). O argumento NÃO é concluído neste vídeo (de 13:01 a 14:08 ele tenta montar as premissas, cita Platão e o vídeo acaba no meio). O argumento completo foi gravado no carro em 20261102_img-4059#s01 — não misturar os dois cenários no mesmo Reel. Pausas de 3,4 s (12:44–12:48) e 5,2 s (12:12).",
+      "t0_original": 722.0,
+      "t1_original": 780.9,
+      "dur": 57.56,
+      "citacao_t0": 751.24,
+      "citacao_t1": 760.64,
+      "citacao_palavras": [
+        1229,
+        1242
+      ],
+      "item_id": "20261103_img-4162"
+    }
+  ]
+}

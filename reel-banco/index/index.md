@@ -1,6 +1,6 @@
 # Banco de material para Reels — catálogo
 
-Gerado em 2026-11-02T15:20:03+00:00 · 32 item(ns) · 166 segmento(s)
+Gerado em 2026-11-03T22:30:02+00:00 · 33 item(ns) · 180 segmento(s) · 1 pendente(s) de segmentação
 
 Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: FP fala-principal, BR broll, CR corte-rapido, CC citacao-card · públicos: PL plantonista, RE residente, CA candidato-residencia, CV concursos-vestibular, GE geral
 
@@ -331,4 +331,27 @@ Fonte: gravação de tela de vídeo de concerto (fonte não identificada)
 | segmento | onde | tema | tags | G | V/A | públicos | usos |
 |---|---|---|---|---|---|---|---|
 | 20261102_img-4059#s01 | 00:02.16–01:11.50 (69 s) | Aristóteles: desenvolver a retórica é dever moral de quem tem conhecimento, senão convencem os que só têm retórica | filosofia, aristoteles, retorica, divulgacao-cientifica, comunicacao, medico-nas-redes | 4 | 2/3 | GE RE | FP CC |
+
+## 20261103_img-4162 — IMG_4162 (video · 14:08.26 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261103_img-4162#s01 | 00:02.32–01:10.31 (68 s) | comunicação em vídeo (dicção, fluidez, organizar o pensamento) é habilidade treinada, não talento natural | comunicacao, retorica, oratoria, gravar-videos, medico-nas-redes, pratica-deliberada | 3 | 3/3 | GE RE | FP CC |
+| 20261103_img-4162#s02 | 01:37.10–02:27.89 (51 s) | o único jeito de perder o desconforto de falar para uma lente sem interlocutor é praticar | comunicacao, gravar-videos, desconforto, pratica, oratoria | 2 | 3/3 | GE | FP |
+| 20261103_img-4162#s03 | 02:30.28–02:59.20 (29 s) | o paradoxo de travar ao apertar o play mesmo dominando o assunto | comunicacao, bloqueio, camera, oratoria, retorica, ansiedade-de-desempenho | 4 | 4/3 | GE RE CA | FP CR CC |
+| 20261103_img-4162#s04 | 03:00.84–03:32.18 (31 s) | treinar a comunicação antes de ela ser essencial na profissão | comunicacao, carreira, preparacao, pratica, medico-nas-redes | 2 | 4/3 | RE GE | FP |
+| 20261103_img-4162#s05 | 03:35.31–04:05.40 (30 s) | inquietação ao gravar e a busca de uma posição confortável | gravar-videos, bastidores, desconforto, camera | 1 | 3/3 | GE | FP |
+| 20261103_img-4162#s06 | 04:07.94–05:04.99 (57 s) | a própria voz no vídeo: anasalada, baixa, incômoda | voz, comunicacao, gravar-videos, autoimagem, bastidores | 2 | 3/3 | GE | FP |
+| 20261103_img-4162#s07 | 05:04.66–05:57.65 (53 s) | vergonha de ser ouvido faz baixar a voz até sozinho em casa; exposição é inerente à carreira escolhida | vergonha, voz, exposicao, comunicacao, autoimagem, carreira | 3 | 3/3 | GE RE | FP CC |
+| 20261103_img-4162#s08 | 05:58.99–06:16.18 (17 s) | decidiu fazer residência de cirurgia plástica e aguarda o resultado das provas | cirurgia-plastica, residencia-medica, r-mais, carreira, prova-de-residencia | 3 | 3/3 | CA GE | FP CR |
+| 20261103_img-4162#s09 | 06:30.25–07:26.13 (56 s) | subespecialidade não é especialidade inferior: até médicos confundem o caminho até a cirurgia plástica | subespecialidade, cirurgia-plastica, pre-requisito, residencia-medica, carreira-medica, rqe | 4 | 4/3 | CV CA GE | FP CC |
+| 20261103_img-4162#s10 | 07:27.38–08:15.21 (48 s) | os dois grandes troncos de pré-requisito: clínica médica e cirurgia geral | pre-requisito, clinica-medica, cirurgia-geral, subespecialidade, residencia-medica | 2 | 4/3 | CV CA | FP |
+| 20261103_img-4162#s11 | 08:13.69–09:38.03 (84 s) | especialidades de acesso direto: neurologia e dermatologia são clínicas mas não exigem clínica médica | acesso-direto, neurologia, dermatologia, rqe, residencia-medica, pre-requisito | 3 | 4/3 | CV CA GE | FP CC |
+| 20261103_img-4162#s12 | 09:38.69–10:22.31 (44 s) | especialidades de pré-requisito: só quem fez cirurgia geral concorre a plástica, vascular e urologia | pre-requisito, cirurgia-geral, cirurgia-plastica, cirurgia-vascular, urologia, r-mais | 2 | 4/3 | CV CA | FP |
+| 20261103_img-4162#s13 | 10:23.83–11:16.03 (52 s) | tempo de formação: acesso direto cirúrgico em 5 anos vs cirurgia geral + especialidade (3 + 3 na plástica) | tempo-de-residencia, cirurgia-plastica, neurocirurgia, cirurgia-cardiovascular, acesso-direto, pre-requisito | 3 | 4/3 | CV CA GE | FP CR CC |
+| 20261103_img-4162#s14 | 12:03.30–13:00.86 (58 s) | a Retórica de Aristóteles convenceu-o de que aprimorar a comunicação é um dever moral | aristoteles, retorica, filosofia, comunicacao, etica, medico-nas-redes | 3 | 3/3 | GE RE | FP CC |
+
+## Pendentes (sem segments.json no índice)
+
+- 20261102_screenrecording-10-29-2026-22-15-49-1 — ScreenRecording_10-29-2026 22-15-49_1 (video, status baixado)
 

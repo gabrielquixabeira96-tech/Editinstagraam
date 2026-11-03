@@ -1,0 +1,10986 @@
+{
+ "source": "/root/reel-polish-src/reel-banco/work/banco/20261103_img-4162/source.mov",
+ "language": "pt",
+ "model": "small",
+ "duration": 848.26,
+ "generated_by": "reel-banco/03_transcribe.py",
+ "refined_boundaries": true,
+ "janelas": {
+  "window": 600.0,
+  "overlap": 1.5
+ },
+ "descartes": {
+  "regra": "no_speech_prob >= 0.6 E p90 RMS do segmento < max(piso + 6.0 dB, -70.0 dBFS); ou repeticao literal do prompt (>= 3 termos)",
+  "no_speech_limiar": 0.6,
+  "piso_db": -39.6,
+  "limiar_db": -33.6,
+  "total": 0,
+  "por_motivo": {
+   "silencio": 0,
+   "prompt": 0
+  },
+  "mantidas_no_speech_alto": 650,
+  "regra_antiga_descartaria": 650,
+  "detalhe": []
+ },
+ "words": [
+  {
+   "word": "O",
+   "start": 2.32,
+   "end": 2.94,
+   "prob": 0.288,
+   "raw": "O"
+  },
+  {
+   "word": "que",
+   "start": 3.48,
+   "end": 3.95,
+   "prob": 0.719,
+   "raw": "que",
+   "raw_start": 2.94,
+   "raw_end": 4.4
+  },
+  {
+   "word": "é",
+   "start": 4.4,
+   "end": 4.44,
+   "prob": 0.931,
+   "raw": "é"
+  },
+  {
+   "word": "o",
+   "start": 4.44,
+   "end": 4.5,
+   "prob": 0.846,
+   "raw": "o"
+  },
+  {
+   "word": "motivo",
+   "start": 4.5,
+   "end": 4.68,
+   "prob": 0.991,
+   "raw": "motivo"
+  },
+  {
+   "word": "desse",
+   "start": 4.68,
+   "end": 4.95,
+   "prob": 0.649,
+   "raw": "desse",
+   "raw_start": 4.68,
+   "raw_end": 5.0
+  },
+  {
+   "word": "vídeo",
+   "start": 5.0,
+   "end": 5.28,
+   "prob": 0.974,
+   "raw": "vídeo"
+  },
+  {
+   "word": "aqui",
+   "start": 5.28,
+   "end": 5.54,
+   "prob": 0.861,
+   "raw": "aqui"
+  },
+  {
+   "word": "é",
+   "start": 5.54,
+   "end": 5.87,
+   "prob": 0.377,
+   "raw": "é",
+   "raw_start": 5.54,
+   "raw_end": 6.66
+  },
+  {
+   "word": "justamente",
+   "start": 6.66,
+   "end": 6.98,
+   "prob": 0.99,
+   "raw": "justamente"
+  },
+  {
+   "word": "o",
+   "start": 6.98,
+   "end": 7.34,
+   "prob": 0.896,
+   "raw": "o"
+  },
+  {
+   "word": "está",
+   "start": 7.34,
+   "end": 7.48,
+   "prob": 0.872,
+   "raw": "está"
+  },
+  {
+   "word": "acontecendo",
+   "start": 7.48,
+   "end": 7.84,
+   "prob": 0.998,
+   "raw": "acontecendo"
+  },
+  {
+   "word": "agora.",
+   "start": 7.84,
+   "end": 8.22,
+   "prob": 0.974,
+   "raw": "agora."
+  },
+  {
+   "word": "Eu",
+   "start": 15.2,
+   "end": 15.34,
+   "prob": 0.862,
+   "raw": "Eu",
+   "raw_start": 15.06,
+   "raw_end": 15.34
+  },
+  {
+   "word": "acho",
+   "start": 15.34,
+   "end": 15.6,
+   "prob": 0.995,
+   "raw": "acho"
+  },
+  {
+   "word": "que",
+   "start": 15.6,
+   "end": 16.26,
+   "prob": 0.991,
+   "raw": "que",
+   "raw_start": 15.6,
+   "raw_end": 16.56
+  },
+  {
+   "word": "a",
+   "start": 16.97,
+   "end": 17.16,
+   "prob": 0.938,
+   "raw": "a",
+   "raw_start": 16.56,
+   "raw_end": 17.16
+  },
+  {
+   "word": "retórica",
+   "start": 17.16,
+   "end": 17.9,
+   "prob": 0.975,
+   "raw": "retórica"
+  },
+  {
+   "word": "e",
+   "start": 17.9,
+   "end": 18.08,
+   "prob": 0.978,
+   "raw": "e",
+   "raw_start": 17.9,
+   "raw_end": 18.38
+  },
+  {
+   "word": "a",
+   "start": 18.38,
+   "end": 18.48,
+   "prob": 0.901,
+   "raw": "a"
+  },
+  {
+   "word": "habilidade",
+   "start": 18.48,
+   "end": 19.02,
+   "prob": 0.997,
+   "raw": "habilidade"
+  },
+  {
+   "word": "de",
+   "start": 19.02,
+   "end": 19.3,
+   "prob": 0.995,
+   "raw": "de"
+  },
+  {
+   "word": "comunicação",
+   "start": 19.3,
+   "end": 20.08,
+   "prob": 0.997,
+   "raw": "comunicação"
+  },
+  {
+   "word": "é",
+   "start": 20.08,
+   "end": 20.45,
+   "prob": 0.605,
+   "raw": "é",
+   "raw_start": 20.08,
+   "raw_end": 20.96
+  },
+  {
+   "word": "através",
+   "start": 20.96,
+   "end": 21.3,
+   "prob": 0.959,
+   "raw": "através"
+  },
+  {
+   "word": "de",
+   "start": 21.3,
+   "end": 21.6,
+   "prob": 0.973,
+   "raw": "de"
+  },
+  {
+   "word": "vídeos",
+   "start": 21.6,
+   "end": 21.9,
+   "prob": 0.945,
+   "raw": "vídeos",
+   "raw_start": 21.6,
+   "raw_end": 21.94
+  },
+  {
+   "word": "e",
+   "start": 24.62,
+   "end": 24.96,
+   "prob": 0.704,
+   "raw": "e",
+   "raw_start": 23.98,
+   "raw_end": 24.96
+  },
+  {
+   "word": "a",
+   "start": 24.96,
+   "end": 25.42,
+   "prob": 0.365,
+   "raw": "a"
+  },
+  {
+   "word": "melhora",
+   "start": 25.42,
+   "end": 25.74,
+   "prob": 0.669,
+   "raw": "melhora"
+  },
+  {
+   "word": "contínua",
+   "start": 25.74,
+   "end": 26.36,
+   "prob": 0.813,
+   "raw": "contínua"
+  },
+  {
+   "word": "da",
+   "start": 26.36,
+   "end": 26.96,
+   "prob": 0.841,
+   "raw": "da"
+  },
+  {
+   "word": "melhor",
+   "start": 26.96,
+   "end": 28.68,
+   "prob": 0.04,
+   "raw": "melhor"
+  },
+  {
+   "word": "a",
+   "start": 28.68,
+   "end": 28.82,
+   "prob": 0.344,
+   "raw": "a"
+  },
+  {
+   "word": "continuidade",
+   "start": 28.82,
+   "end": 29.32,
+   "prob": 0.598,
+   "raw": "continuidade"
+  },
+  {
+   "word": "da",
+   "start": 29.32,
+   "end": 29.62,
+   "prob": 0.432,
+   "raw": "da"
+  },
+  {
+   "word": "dicção,",
+   "start": 29.94,
+   "end": 30.9,
+   "prob": 0.815,
+   "raw": "dicção,",
+   "raw_start": 29.62,
+   "raw_end": 30.9
+  },
+  {
+   "word": "fluidez",
+   "start": 32.01,
+   "end": 32.5,
+   "prob": 0.974,
+   "raw": "fluidez",
+   "raw_start": 31.9,
+   "raw_end": 32.5
+  },
+  {
+   "word": "do",
+   "start": 32.5,
+   "end": 32.9,
+   "prob": 0.828,
+   "raw": "do"
+  },
+  {
+   "word": "discurso",
+   "start": 32.9,
+   "end": 33.52,
+   "prob": 0.954,
+   "raw": "discurso",
+   "raw_start": 32.9,
+   "raw_end": 34.2
+  },
+  {
+   "word": "e",
+   "start": 34.2,
+   "end": 34.82,
+   "prob": 0.809,
+   "raw": "e"
+  },
+  {
+   "word": "organização",
+   "start": 36.33,
+   "end": 37.04,
+   "prob": 0.91,
+   "raw": "organização",
+   "raw_start": 34.82,
+   "raw_end": 37.06
+  },
+  {
+   "word": "clara",
+   "start": 37.06,
+   "end": 37.5,
+   "prob": 0.96,
+   "raw": "clara"
+  },
+  {
+   "word": "do",
+   "start": 37.5,
+   "end": 37.66,
+   "prob": 0.889,
+   "raw": "do"
+  },
+  {
+   "word": "pensamento",
+   "start": 37.73,
+   "end": 38.22,
+   "prob": 0.997,
+   "raw": "pensamento",
+   "raw_start": 37.66,
+   "raw_end": 38.22
+  },
+  {
+   "word": "e",
+   "start": 38.22,
+   "end": 38.4,
+   "prob": 0.825,
+   "raw": "e",
+   "raw_start": 38.22,
+   "raw_end": 38.8
+  },
+  {
+   "word": "capacidade",
+   "start": 39.22,
+   "end": 39.82,
+   "prob": 0.983,
+   "raw": "capacidade",
+   "raw_start": 38.8,
+   "raw_end": 39.82
+  },
+  {
+   "word": "de",
+   "start": 39.82,
+   "end": 40.04,
+   "prob": 0.994,
+   "raw": "de"
+  },
+  {
+   "word": "conversação",
+   "start": 40.04,
+   "end": 40.78,
+   "prob": 0.959,
+   "raw": "conversação"
+  },
+  {
+   "word": "em",
+   "start": 41.07,
+   "end": 41.7,
+   "prob": 0.947,
+   "raw": "em",
+   "raw_start": 40.78,
+   "raw_end": 41.7
+  },
+  {
+   "word": "vídeos,",
+   "start": 42.34,
+   "end": 42.96,
+   "prob": 0.99,
+   "raw": "vídeos,",
+   "raw_start": 41.7,
+   "raw_end": 42.96
+  },
+  {
+   "word": "é",
+   "start": 44.0,
+   "end": 44.12,
+   "prob": 0.905,
+   "raw": "é",
+   "raw_start": 43.42,
+   "raw_end": 44.12
+  },
+  {
+   "word": "algo",
+   "start": 44.12,
+   "end": 44.26,
+   "prob": 0.968,
+   "raw": "algo"
+  },
+  {
+   "word": "que",
+   "start": 44.26,
+   "end": 44.42,
+   "prob": 0.992,
+   "raw": "que"
+  },
+  {
+   "word": "você",
+   "start": 44.42,
+   "end": 44.7,
+   "prob": 0.987,
+   "raw": "você"
+  },
+  {
+   "word": "precisa",
+   "start": 44.7,
+   "end": 45.1,
+   "prob": 0.978,
+   "raw": "precisa"
+  },
+  {
+   "word": "muito",
+   "start": 45.1,
+   "end": 45.56,
+   "prob": 0.977,
+   "raw": "muito"
+  },
+  {
+   "word": "treinar,",
+   "start": 45.56,
+   "end": 46.12,
+   "prob": 0.944,
+   "raw": "treinar,"
+  },
+  {
+   "word": "não",
+   "start": 46.68,
+   "end": 47.08,
+   "prob": 0.978,
+   "raw": "não",
+   "raw_start": 46.56,
+   "raw_end": 47.08
+  },
+  {
+   "word": "é",
+   "start": 47.08,
+   "end": 47.34,
+   "prob": 0.982,
+   "raw": "é"
+  },
+  {
+   "word": "algo",
+   "start": 47.34,
+   "end": 47.58,
+   "prob": 0.995,
+   "raw": "algo"
+  },
+  {
+   "word": "que",
+   "start": 47.58,
+   "end": 47.88,
+   "prob": 0.966,
+   "raw": "que"
+  },
+  {
+   "word": "é",
+   "start": 47.88,
+   "end": 48.26,
+   "prob": 0.985,
+   "raw": "é"
+  },
+  {
+   "word": "natural.",
+   "start": 48.26,
+   "end": 48.58,
+   "prob": 0.993,
+   "raw": "natural."
+  },
+  {
+   "word": "Por",
+   "start": 50.86,
+   "end": 50.95,
+   "prob": 0.779,
+   "raw": "Por",
+   "raw_start": 50.86,
+   "raw_end": 51.26
+  },
+  {
+   "word": "exemplo,",
+   "start": 51.26,
+   "end": 51.58,
+   "prob": 1.0,
+   "raw": "exemplo,"
+  },
+  {
+   "word": "percebo",
+   "start": 51.88,
+   "end": 52.24,
+   "prob": 0.987,
+   "raw": "percebo"
+  },
+  {
+   "word": "que",
+   "start": 52.24,
+   "end": 52.38,
+   "prob": 0.995,
+   "raw": "que"
+  },
+  {
+   "word": "eu",
+   "start": 52.38,
+   "end": 52.5,
+   "prob": 0.869,
+   "raw": "eu"
+  },
+  {
+   "word": "tenho",
+   "start": 52.5,
+   "end": 52.64,
+   "prob": 0.995,
+   "raw": "tenho"
+  },
+  {
+   "word": "a",
+   "start": 52.64,
+   "end": 52.78,
+   "prob": 0.837,
+   "raw": "a"
+  },
+  {
+   "word": "tendência",
+   "start": 52.78,
+   "end": 53.22,
+   "prob": 0.999,
+   "raw": "tendência"
+  },
+  {
+   "word": "a",
+   "start": 53.22,
+   "end": 53.68,
+   "prob": 0.806,
+   "raw": "a"
+  },
+  {
+   "word": "organizando",
+   "start": 54.22,
+   "end": 54.92,
+   "prob": 0.986,
+   "raw": "organizando",
+   "raw_start": 53.68,
+   "raw_end": 54.92
+  },
+  {
+   "word": "o",
+   "start": 54.92,
+   "end": 55.04,
+   "prob": 0.578,
+   "raw": "o"
+  },
+  {
+   "word": "raciocínio",
+   "start": 55.04,
+   "end": 55.5,
+   "prob": 0.947,
+   "raw": "raciocínio"
+  },
+  {
+   "word": "enquanto",
+   "start": 55.5,
+   "end": 55.86,
+   "prob": 0.987,
+   "raw": "enquanto"
+  },
+  {
+   "word": "Enquanto",
+   "start": 55.86,
+   "end": 56.68,
+   "prob": 0.672,
+   "raw": "Enquanto"
+  },
+  {
+   "word": "eu",
+   "start": 56.68,
+   "end": 56.88,
+   "prob": 0.718,
+   "raw": "eu"
+  },
+  {
+   "word": "falo",
+   "start": 56.88,
+   "end": 57.21,
+   "prob": 0.966,
+   "raw": "falo",
+   "raw_start": 56.88,
+   "raw_end": 57.26
+  },
+  {
+   "word": "e",
+   "start": 57.66,
+   "end": 57.8,
+   "prob": 0.38,
+   "raw": "e",
+   "raw_start": 57.26,
+   "raw_end": 57.8
+  },
+  {
+   "word": "aí",
+   "start": 57.8,
+   "end": 57.96,
+   "prob": 0.43,
+   "raw": "aí"
+  },
+  {
+   "word": "como",
+   "start": 57.96,
+   "end": 58.32,
+   "prob": 0.517,
+   "raw": "como"
+  },
+  {
+   "word": "é",
+   "start": 58.32,
+   "end": 58.7,
+   "prob": 0.379,
+   "raw": "é"
+  },
+  {
+   "word": "a",
+   "start": 58.7,
+   "end": 59.15,
+   "prob": 0.398,
+   "raw": "a",
+   "raw_start": 58.7,
+   "raw_end": 59.46
+  },
+  {
+   "word": "mais",
+   "start": 59.46,
+   "end": 59.96,
+   "prob": 0.8,
+   "raw": "mais",
+   "raw_start": 59.46,
+   "raw_end": 60.56
+  },
+  {
+   "word": "inicial,",
+   "start": 60.56,
+   "end": 60.9,
+   "prob": 0.61,
+   "raw": "inicial,"
+  },
+  {
+   "word": "eu",
+   "start": 61.1,
+   "end": 61.18,
+   "prob": 0.457,
+   "raw": "eu"
+  },
+  {
+   "word": "ainda",
+   "start": 61.18,
+   "end": 61.3,
+   "prob": 0.945,
+   "raw": "ainda"
+  },
+  {
+   "word": "não",
+   "start": 61.3,
+   "end": 61.44,
+   "prob": 0.992,
+   "raw": "não"
+  },
+  {
+   "word": "consigo",
+   "start": 61.44,
+   "end": 61.68,
+   "prob": 0.971,
+   "raw": "consigo"
+  },
+  {
+   "word": "controlar.",
+   "start": 61.68,
+   "end": 62.2,
+   "prob": 0.984,
+   "raw": "controlar."
+  },
+  {
+   "word": "Não",
+   "start": 64.5,
+   "end": 64.74,
+   "prob": 0.9,
+   "raw": "Não",
+   "raw_start": 64.22,
+   "raw_end": 64.74
+  },
+  {
+   "word": "tem",
+   "start": 64.74,
+   "end": 64.94,
+   "prob": 0.97,
+   "raw": "tem"
+  },
+  {
+   "word": "como",
+   "start": 64.94,
+   "end": 65.38,
+   "prob": 0.998,
+   "raw": "como"
+  },
+  {
+   "word": "fazer",
+   "start": 65.38,
+   "end": 66.17,
+   "prob": 0.583,
+   "raw": "fazer",
+   "raw_start": 65.38,
+   "raw_end": 68.0
+  },
+  {
+   "word": "isso",
+   "start": 68.0,
+   "end": 68.26,
+   "prob": 0.958,
+   "raw": "isso"
+  },
+  {
+   "word": "sem",
+   "start": 68.3,
+   "end": 68.44,
+   "prob": 0.987,
+   "raw": "sem",
+   "raw_start": 68.26,
+   "raw_end": 68.44
+  },
+  {
+   "word": "praticar,",
+   "start": 68.44,
+   "end": 68.96,
+   "prob": 0.991,
+   "raw": "praticar,"
+  },
+  {
+   "word": "por",
+   "start": 69.04,
+   "end": 69.18,
+   "prob": 0.91,
+   "raw": "por"
+  },
+  {
+   "word": "isso",
+   "start": 69.18,
+   "end": 69.34,
+   "prob": 0.991,
+   "raw": "isso"
+  },
+  {
+   "word": "que",
+   "start": 69.34,
+   "end": 69.42,
+   "prob": 0.892,
+   "raw": "que"
+  },
+  {
+   "word": "eu",
+   "start": 69.42,
+   "end": 69.52,
+   "prob": 0.934,
+   "raw": "eu"
+  },
+  {
+   "word": "gravo",
+   "start": 69.52,
+   "end": 69.76,
+   "prob": 0.858,
+   "raw": "gravo"
+  },
+  {
+   "word": "esses",
+   "start": 69.76,
+   "end": 70.0,
+   "prob": 0.97,
+   "raw": "esses"
+  },
+  {
+   "word": "vídeos.",
+   "start": 70.0,
+   "end": 70.31,
+   "prob": 0.985,
+   "raw": "vídeos.",
+   "raw_start": 70.0,
+   "raw_end": 70.36
+  },
+  {
+   "word": "E",
+   "start": 71.86,
+   "end": 72.04,
+   "prob": 0.595,
+   "raw": "E"
+  },
+  {
+   "word": "eu,",
+   "start": 72.04,
+   "end": 72.44,
+   "prob": 0.745,
+   "raw": "eu,"
+  },
+  {
+   "word": "por",
+   "start": 74.19,
+   "end": 74.26,
+   "prob": 0.991,
+   "raw": "por",
+   "raw_start": 74.14,
+   "raw_end": 74.26
+  },
+  {
+   "word": "exemplo,",
+   "start": 74.26,
+   "end": 74.52,
+   "prob": 1.0,
+   "raw": "exemplo,"
+  },
+  {
+   "word": "também",
+   "start": 74.88,
+   "end": 74.9,
+   "prob": 0.716,
+   "raw": "também"
+  },
+  {
+   "word": "não",
+   "start": 74.9,
+   "end": 75.06,
+   "prob": 0.982,
+   "raw": "não"
+  },
+  {
+   "word": "consigo",
+   "start": 75.06,
+   "end": 75.34,
+   "prob": 0.998,
+   "raw": "consigo"
+  },
+  {
+   "word": "contar",
+   "start": 75.34,
+   "end": 75.72,
+   "prob": 0.127,
+   "raw": "contar"
+  },
+  {
+   "word": "bonito,",
+   "start": 75.72,
+   "end": 76.1,
+   "prob": 0.862,
+   "raw": "bonito,"
+  },
+  {
+   "word": "cabendo",
+   "start": 76.22,
+   "end": 76.64,
+   "prob": 0.657,
+   "raw": "cabendo"
+  },
+  {
+   "word": "o",
+   "start": 76.64,
+   "end": 76.88,
+   "prob": 0.33,
+   "raw": "o"
+  },
+  {
+   "word": "cabelo",
+   "start": 78.57,
+   "end": 78.98,
+   "prob": 0.979,
+   "raw": "cabelo",
+   "raw_start": 76.88,
+   "raw_end": 78.98
+  },
+  {
+   "word": "todo",
+   "start": 78.98,
+   "end": 79.18,
+   "prob": 0.882,
+   "raw": "todo"
+  },
+  {
+   "word": "desarmado,",
+   "start": 79.18,
+   "end": 79.76,
+   "prob": 0.713,
+   "raw": "desarmado,"
+  },
+  {
+   "word": "a",
+   "start": 79.98,
+   "end": 80.22,
+   "prob": 0.207,
+   "raw": "a"
+  },
+  {
+   "word": "televisão",
+   "start": 80.22,
+   "end": 80.4,
+   "prob": 0.933,
+   "raw": "televisão"
+  },
+  {
+   "word": "ali",
+   "start": 80.4,
+   "end": 80.62,
+   "prob": 0.771,
+   "raw": "ali"
+  },
+  {
+   "word": "atrás",
+   "start": 80.62,
+   "end": 80.86,
+   "prob": 0.952,
+   "raw": "atrás"
+  },
+  {
+   "word": "estragado.",
+   "start": 80.86,
+   "end": 81.62,
+   "prob": 0.703,
+   "raw": "estragado."
+  },
+  {
+   "word": "E",
+   "start": 97.1,
+   "end": 97.23,
+   "prob": 0.213,
+   "raw": "E",
+   "raw_start": 96.57,
+   "raw_end": 97.23
+  },
+  {
+   "word": "essas",
+   "start": 97.23,
+   "end": 97.49,
+   "prob": 0.744,
+   "raw": "essas"
+  },
+  {
+   "word": "pausas",
+   "start": 97.49,
+   "end": 98.07,
+   "prob": 0.831,
+   "raw": "pausas"
+  },
+  {
+   "word": "ainda",
+   "start": 98.07,
+   "end": 98.23,
+   "prob": 0.982,
+   "raw": "ainda"
+  },
+  {
+   "word": "me",
+   "start": 98.23,
+   "end": 98.41,
+   "prob": 0.492,
+   "raw": "me"
+  },
+  {
+   "word": "incomodam",
+   "start": 98.41,
+   "end": 98.87,
+   "prob": 0.947,
+   "raw": "incomodam"
+  },
+  {
+   "word": "mais",
+   "start": 98.87,
+   "end": 99.19,
+   "prob": 0.708,
+   "raw": "mais",
+   "raw_start": 98.87,
+   "raw_end": 99.43
+  },
+  {
+   "word": "um",
+   "start": 100.28,
+   "end": 100.83,
+   "prob": 0.575,
+   "raw": "um",
+   "raw_start": 99.43,
+   "raw_end": 100.83
+  },
+  {
+   "word": "único",
+   "start": 100.83,
+   "end": 101.03,
+   "prob": 0.857,
+   "raw": "único"
+  },
+  {
+   "word": "jeito",
+   "start": 101.03,
+   "end": 101.31,
+   "prob": 0.993,
+   "raw": "jeito"
+  },
+  {
+   "word": "de",
+   "start": 101.75,
+   "end": 101.99,
+   "prob": 0.907,
+   "raw": "de",
+   "raw_start": 101.31,
+   "raw_end": 102.77
+  },
+  {
+   "word": "melhorar",
+   "start": 102.77,
+   "end": 103.55,
+   "prob": 0.997,
+   "raw": "melhorar",
+   "raw_start": 102.77,
+   "raw_end": 103.99
+  },
+  {
+   "word": "e",
+   "start": 104.05,
+   "end": 104.17,
+   "prob": 0.741,
+   "raw": "e",
+   "raw_start": 103.99,
+   "raw_end": 104.17
+  },
+  {
+   "word": "de",
+   "start": 104.17,
+   "end": 104.27,
+   "prob": 0.878,
+   "raw": "de"
+  },
+  {
+   "word": "conseguir",
+   "start": 104.34,
+   "end": 104.73,
+   "prob": 0.95,
+   "raw": "conseguir",
+   "raw_start": 104.27,
+   "raw_end": 104.73
+  },
+  {
+   "word": "desenvolver",
+   "start": 106.99,
+   "end": 107.79,
+   "prob": 0.765,
+   "raw": "desenvolver",
+   "raw_start": 104.73,
+   "raw_end": 107.79
+  },
+  {
+   "word": "uma",
+   "start": 107.79,
+   "end": 107.93,
+   "prob": 0.948,
+   "raw": "uma"
+  },
+  {
+   "word": "habilidade",
+   "start": 107.93,
+   "end": 108.41,
+   "prob": 0.992,
+   "raw": "habilidade"
+  },
+  {
+   "word": "de",
+   "start": 108.41,
+   "end": 108.48,
+   "prob": 0.915,
+   "raw": "de",
+   "raw_start": 108.41,
+   "raw_end": 108.61
+  },
+  {
+   "word": "comunicação",
+   "start": 108.69,
+   "end": 109.29,
+   "prob": 0.997,
+   "raw": "comunicação",
+   "raw_start": 108.61,
+   "raw_end": 109.29
+  },
+  {
+   "word": "através",
+   "start": 111.35,
+   "end": 112.13,
+   "prob": 0.592,
+   "raw": "através",
+   "raw_start": 109.29,
+   "raw_end": 113.23
+  },
+  {
+   "word": "de",
+   "start": 114.74,
+   "end": 115.48,
+   "prob": 0.948,
+   "raw": "de"
+  },
+  {
+   "word": "veículos",
+   "start": 117.91,
+   "end": 118.46,
+   "prob": 0.875,
+   "raw": "veículos",
+   "raw_start": 117.08,
+   "raw_end": 118.46
+  },
+  {
+   "word": "digitais,",
+   "start": 118.46,
+   "end": 119.06,
+   "prob": 0.882,
+   "raw": "digitais,"
+  },
+  {
+   "word": "ele",
+   "start": 119.12,
+   "end": 119.4,
+   "prob": 0.465,
+   "raw": "ele"
+  },
+  {
+   "word": "não",
+   "start": 119.4,
+   "end": 119.56,
+   "prob": 0.813,
+   "raw": "não"
+  },
+  {
+   "word": "é",
+   "start": 119.56,
+   "end": 119.64,
+   "prob": 0.995,
+   "raw": "é"
+  },
+  {
+   "word": "a",
+   "start": 119.64,
+   "end": 119.77,
+   "prob": 0.957,
+   "raw": "a",
+   "raw_start": 119.64,
+   "raw_end": 119.86
+  },
+  {
+   "word": "prática.",
+   "start": 120.03,
+   "end": 120.91,
+   "prob": 0.99,
+   "raw": "prática.",
+   "raw_start": 119.86,
+   "raw_end": 120.98
+  },
+  {
+   "word": "Isso",
+   "start": 122.02,
+   "end": 122.3,
+   "prob": 0.962,
+   "raw": "Isso",
+   "raw_start": 121.97,
+   "raw_end": 122.3
+  },
+  {
+   "word": "incomoda",
+   "start": 122.3,
+   "end": 122.7,
+   "prob": 0.888,
+   "raw": "incomoda"
+  },
+  {
+   "word": "muito",
+   "start": 122.7,
+   "end": 123.02,
+   "prob": 0.994,
+   "raw": "muito"
+  },
+  {
+   "word": "porque",
+   "start": 123.02,
+   "end": 123.48,
+   "prob": 0.509,
+   "raw": "porque"
+  },
+  {
+   "word": "eu",
+   "start": 123.88,
+   "end": 124.26,
+   "prob": 0.898,
+   "raw": "eu",
+   "raw_start": 123.48,
+   "raw_end": 124.26
+  },
+  {
+   "word": "não",
+   "start": 124.26,
+   "end": 124.38,
+   "prob": 0.98,
+   "raw": "não"
+  },
+  {
+   "word": "estou",
+   "start": 124.38,
+   "end": 124.5,
+   "prob": 0.622,
+   "raw": "estou"
+  },
+  {
+   "word": "falando",
+   "start": 124.5,
+   "end": 124.7,
+   "prob": 0.983,
+   "raw": "falando"
+  },
+  {
+   "word": "com",
+   "start": 124.7,
+   "end": 124.84,
+   "prob": 0.965,
+   "raw": "com"
+  },
+  {
+   "word": "uma",
+   "start": 124.84,
+   "end": 124.96,
+   "prob": 0.986,
+   "raw": "uma"
+  },
+  {
+   "word": "pessoa",
+   "start": 124.96,
+   "end": 125.3,
+   "prob": 0.997,
+   "raw": "pessoa"
+  },
+  {
+   "word": "aqui,",
+   "start": 125.3,
+   "end": 125.66,
+   "prob": 0.543,
+   "raw": "aqui,"
+  },
+  {
+   "word": "estou",
+   "start": 125.8,
+   "end": 125.88,
+   "prob": 0.447,
+   "raw": "estou",
+   "raw_start": 125.72,
+   "raw_end": 125.88
+  },
+  {
+   "word": "falando",
+   "start": 125.88,
+   "end": 126.04,
+   "prob": 0.998,
+   "raw": "falando"
+  },
+  {
+   "word": "E",
+   "start": 127.83,
+   "end": 127.9,
+   "prob": 0.128,
+   "raw": "E",
+   "raw_start": 127.26,
+   "raw_end": 127.9
+  },
+  {
+   "word": "como",
+   "start": 127.9,
+   "end": 128.16,
+   "prob": 0.333,
+   "raw": "como"
+  },
+  {
+   "word": "a",
+   "start": 128.16,
+   "end": 128.46,
+   "prob": 0.498,
+   "raw": "a"
+  },
+  {
+   "word": "cabeça",
+   "start": 128.46,
+   "end": 128.76,
+   "prob": 0.962,
+   "raw": "cabeça"
+  },
+  {
+   "word": "não",
+   "start": 128.76,
+   "end": 129.42,
+   "prob": 0.753,
+   "raw": "não"
+  },
+  {
+   "word": "é",
+   "start": 129.42,
+   "end": 129.58,
+   "prob": 0.974,
+   "raw": "é"
+  },
+  {
+   "word": "habituada",
+   "start": 129.58,
+   "end": 130.14,
+   "prob": 0.973,
+   "raw": "habituada"
+  },
+  {
+   "word": "a",
+   "start": 130.14,
+   "end": 130.3,
+   "prob": 0.804,
+   "raw": "a"
+  },
+  {
+   "word": "isso,",
+   "start": 130.3,
+   "end": 130.48,
+   "prob": 0.952,
+   "raw": "isso,",
+   "raw_start": 130.3,
+   "raw_end": 131.0
+  },
+  {
+   "word": "parece",
+   "start": 131.21,
+   "end": 131.36,
+   "prob": 0.846,
+   "raw": "parece",
+   "raw_start": 131.06,
+   "raw_end": 131.36
+  },
+  {
+   "word": "algo",
+   "start": 131.36,
+   "end": 131.7,
+   "prob": 0.968,
+   "raw": "algo"
+  },
+  {
+   "word": "muito",
+   "start": 131.7,
+   "end": 131.98,
+   "prob": 0.835,
+   "raw": "muito"
+  },
+  {
+   "word": "estranho,",
+   "start": 132.02,
+   "end": 132.58,
+   "prob": 0.999,
+   "raw": "estranho,",
+   "raw_start": 131.98,
+   "raw_end": 133.88
+  },
+  {
+   "word": "eu",
+   "start": 134.49,
+   "end": 134.66,
+   "prob": 0.296,
+   "raw": "eu",
+   "raw_start": 133.88,
+   "raw_end": 134.66
+  },
+  {
+   "word": "fico",
+   "start": 138.95,
+   "end": 140.59,
+   "prob": 0.654,
+   "raw": "fico",
+   "raw_start": 137.89,
+   "raw_end": 140.59
+  },
+  {
+   "word": "completamente",
+   "start": 140.59,
+   "end": 141.15,
+   "prob": 0.901,
+   "raw": "completamente"
+  },
+  {
+   "word": "desconfortável,",
+   "start": 141.15,
+   "end": 142.21,
+   "prob": 0.963,
+   "raw": "desconfortável,"
+  },
+  {
+   "word": "mas",
+   "start": 143.32,
+   "end": 143.73,
+   "prob": 0.95,
+   "raw": "mas",
+   "raw_start": 142.99,
+   "raw_end": 143.73
+  },
+  {
+   "word": "o",
+   "start": 143.73,
+   "end": 144.03,
+   "prob": 0.814,
+   "raw": "o"
+  },
+  {
+   "word": "único",
+   "start": 144.03,
+   "end": 144.15,
+   "prob": 0.996,
+   "raw": "único"
+  },
+  {
+   "word": "jeito",
+   "start": 144.15,
+   "end": 144.43,
+   "prob": 0.974,
+   "raw": "jeito"
+  },
+  {
+   "word": "de",
+   "start": 144.43,
+   "end": 144.59,
+   "prob": 0.97,
+   "raw": "de"
+  },
+  {
+   "word": "conseguir",
+   "start": 144.59,
+   "end": 144.93,
+   "prob": 0.813,
+   "raw": "conseguir"
+  },
+  {
+   "word": "melhorar",
+   "start": 144.93,
+   "end": 145.45,
+   "prob": 0.964,
+   "raw": "melhorar"
+  },
+  {
+   "word": "isso",
+   "start": 145.45,
+   "end": 145.63,
+   "prob": 0.948,
+   "raw": "isso"
+  },
+  {
+   "word": "é",
+   "start": 145.63,
+   "end": 145.77,
+   "prob": 0.884,
+   "raw": "é"
+  },
+  {
+   "word": "de",
+   "start": 145.77,
+   "end": 145.93,
+   "prob": 0.783,
+   "raw": "de"
+  },
+  {
+   "word": "treinar,",
+   "start": 145.93,
+   "end": 146.43,
+   "prob": 0.921,
+   "raw": "treinar,"
+  },
+  {
+   "word": "para",
+   "start": 146.57,
+   "end": 146.81,
+   "prob": 0.383,
+   "raw": "para",
+   "raw_start": 146.57,
+   "raw_end": 147.01
+  },
+  {
+   "word": "até",
+   "start": 147.01,
+   "end": 147.29,
+   "prob": 0.283,
+   "raw": "até"
+  },
+  {
+   "word": "isso",
+   "start": 147.29,
+   "end": 147.47,
+   "prob": 0.684,
+   "raw": "isso"
+  },
+  {
+   "word": "passar.",
+   "start": 147.59,
+   "end": 147.89,
+   "prob": 0.948,
+   "raw": "passar.",
+   "raw_start": 147.47,
+   "raw_end": 147.89
+  },
+  {
+   "word": "E",
+   "start": 150.28,
+   "end": 150.64,
+   "prob": 0.299,
+   "raw": "E",
+   "raw_start": 150.12,
+   "raw_end": 150.64
+  },
+  {
+   "word": "aí",
+   "start": 150.64,
+   "end": 150.82,
+   "prob": 0.814,
+   "raw": "aí"
+  },
+  {
+   "word": "acontece",
+   "start": 150.82,
+   "end": 151.2,
+   "prob": 0.493,
+   "raw": "acontece"
+  },
+  {
+   "word": "também",
+   "start": 151.2,
+   "end": 151.64,
+   "prob": 0.632,
+   "raw": "também"
+  },
+  {
+   "word": "que",
+   "start": 151.64,
+   "end": 151.82,
+   "prob": 0.787,
+   "raw": "que"
+  },
+  {
+   "word": "toda",
+   "start": 151.82,
+   "end": 151.96,
+   "prob": 0.912,
+   "raw": "toda"
+  },
+  {
+   "word": "vez",
+   "start": 151.96,
+   "end": 152.16,
+   "prob": 0.996,
+   "raw": "vez"
+  },
+  {
+   "word": "que",
+   "start": 152.16,
+   "end": 152.28,
+   "prob": 0.988,
+   "raw": "que"
+  },
+  {
+   "word": "eu",
+   "start": 152.28,
+   "end": 152.36,
+   "prob": 0.969,
+   "raw": "eu"
+  },
+  {
+   "word": "começo",
+   "start": 152.36,
+   "end": 152.78,
+   "prob": 0.933,
+   "raw": "começo"
+  },
+  {
+   "word": "a",
+   "start": 152.78,
+   "end": 152.98,
+   "prob": 0.991,
+   "raw": "a"
+  },
+  {
+   "word": "falar",
+   "start": 152.98,
+   "end": 153.32,
+   "prob": 0.997,
+   "raw": "falar"
+  },
+  {
+   "word": "a",
+   "start": 153.32,
+   "end": 153.4,
+   "prob": 0.49,
+   "raw": "a",
+   "raw_start": 153.32,
+   "raw_end": 153.72
+  },
+  {
+   "word": "respeito",
+   "start": 154.31,
+   "end": 154.88,
+   "prob": 0.997,
+   "raw": "respeito",
+   "raw_start": 153.72,
+   "raw_end": 154.88
+  },
+  {
+   "word": "de",
+   "start": 154.88,
+   "end": 155.02,
+   "prob": 0.984,
+   "raw": "de"
+  },
+  {
+   "word": "algum",
+   "start": 155.02,
+   "end": 155.24,
+   "prob": 0.995,
+   "raw": "algum"
+  },
+  {
+   "word": "tema,",
+   "start": 155.24,
+   "end": 155.7,
+   "prob": 0.998,
+   "raw": "tema,"
+  },
+  {
+   "word": "a",
+   "start": 156.0,
+   "end": 156.08,
+   "prob": 0.873,
+   "raw": "a"
+  },
+  {
+   "word": "respeito",
+   "start": 156.08,
+   "end": 156.32,
+   "prob": 0.996,
+   "raw": "respeito"
+  },
+  {
+   "word": "de",
+   "start": 156.32,
+   "end": 156.52,
+   "prob": 0.992,
+   "raw": "de"
+  },
+  {
+   "word": "algum",
+   "start": 156.52,
+   "end": 156.8,
+   "prob": 0.982,
+   "raw": "algum"
+  },
+  {
+   "word": "assunto",
+   "start": 156.8,
+   "end": 157.36,
+   "prob": 0.993,
+   "raw": "assunto"
+  },
+  {
+   "word": "específico,",
+   "start": 158.22,
+   "end": 158.85,
+   "prob": 0.994,
+   "raw": "específico,",
+   "raw_start": 157.36,
+   "raw_end": 159.84
+  },
+  {
+   "word": "na",
+   "start": 160.62,
+   "end": 160.84,
+   "prob": 0.947,
+   "raw": "na",
+   "raw_start": 160.0,
+   "raw_end": 160.84
+  },
+  {
+   "word": "hora",
+   "start": 160.84,
+   "end": 160.98,
+   "prob": 0.999,
+   "raw": "hora"
+  },
+  {
+   "word": "que",
+   "start": 160.98,
+   "end": 161.2,
+   "prob": 0.887,
+   "raw": "que"
+  },
+  {
+   "word": "eu",
+   "start": 161.2,
+   "end": 161.36,
+   "prob": 0.994,
+   "raw": "eu"
+  },
+  {
+   "word": "aperto",
+   "start": 161.36,
+   "end": 161.84,
+   "prob": 0.98,
+   "raw": "aperto"
+  },
+  {
+   "word": "o",
+   "start": 161.84,
+   "end": 161.98,
+   "prob": 0.517,
+   "raw": "o"
+  },
+  {
+   "word": "play,",
+   "start": 161.98,
+   "end": 162.18,
+   "prob": 0.748,
+   "raw": "play,"
+  },
+  {
+   "word": "eu",
+   "start": 162.32,
+   "end": 162.34,
+   "prob": 0.863,
+   "raw": "eu"
+  },
+  {
+   "word": "travo,",
+   "start": 162.34,
+   "end": 162.76,
+   "prob": 0.742,
+   "raw": "travo,"
+  },
+  {
+   "word": "tá",
+   "start": 163.35,
+   "end": 163.84,
+   "prob": 0.588,
+   "raw": "tá",
+   "raw_start": 163.24,
+   "raw_end": 163.84
+  },
+  {
+   "word": "tudo",
+   "start": 163.84,
+   "end": 164.04,
+   "prob": 0.997,
+   "raw": "tudo"
+  },
+  {
+   "word": "na",
+   "start": 164.04,
+   "end": 164.18,
+   "prob": 0.98,
+   "raw": "na"
+  },
+  {
+   "word": "cabeça,",
+   "start": 164.18,
+   "end": 164.66,
+   "prob": 0.998,
+   "raw": "cabeça,"
+  },
+  {
+   "word": "na",
+   "start": 166.47,
+   "end": 166.62,
+   "prob": 0.418,
+   "raw": "na",
+   "raw_start": 166.1,
+   "raw_end": 166.62
+  },
+  {
+   "word": "minha",
+   "start": 166.62,
+   "end": 166.78,
+   "prob": 0.883,
+   "raw": "minha"
+  },
+  {
+   "word": "cabeça",
+   "start": 166.78,
+   "end": 167.1,
+   "prob": 0.996,
+   "raw": "cabeça"
+  },
+  {
+   "word": "eu",
+   "start": 167.1,
+   "end": 167.3,
+   "prob": 0.934,
+   "raw": "eu"
+  },
+  {
+   "word": "tenho",
+   "start": 167.3,
+   "end": 167.36,
+   "prob": 0.972,
+   "raw": "tenho"
+  },
+  {
+   "word": "um",
+   "start": 167.36,
+   "end": 167.46,
+   "prob": 0.988,
+   "raw": "um"
+  },
+  {
+   "word": "domínio",
+   "start": 167.46,
+   "end": 167.8,
+   "prob": 0.998,
+   "raw": "domínio"
+  },
+  {
+   "word": "completo",
+   "start": 167.8,
+   "end": 168.36,
+   "prob": 0.997,
+   "raw": "completo"
+  },
+  {
+   "word": "e",
+   "start": 168.36,
+   "end": 169.1,
+   "prob": 0.871,
+   "raw": "e"
+  },
+  {
+   "word": "teria",
+   "start": 170.74,
+   "end": 170.94,
+   "prob": 0.878,
+   "raw": "teria",
+   "raw_start": 169.1,
+   "raw_end": 170.94
+  },
+  {
+   "word": "um",
+   "start": 170.94,
+   "end": 171.12,
+   "prob": 0.977,
+   "raw": "um"
+  },
+  {
+   "word": "poder",
+   "start": 171.12,
+   "end": 171.44,
+   "prob": 0.997,
+   "raw": "poder"
+  },
+  {
+   "word": "de",
+   "start": 171.44,
+   "end": 171.64,
+   "prob": 0.996,
+   "raw": "de"
+  },
+  {
+   "word": "persuasão,",
+   "start": 171.71,
+   "end": 172.4,
+   "prob": 0.986,
+   "raw": "persuasão,",
+   "raw_start": 171.64,
+   "raw_end": 172.4
+  },
+  {
+   "word": "meu",
+   "start": 172.73,
+   "end": 172.9,
+   "prob": 0.151,
+   "raw": "meu",
+   "raw_start": 172.6,
+   "raw_end": 172.9
+  },
+  {
+   "word": "argumento",
+   "start": 172.9,
+   "end": 173.34,
+   "prob": 0.986,
+   "raw": "argumento"
+  },
+  {
+   "word": "Eu",
+   "start": 173.34,
+   "end": 173.64,
+   "prob": 0.041,
+   "raw": "Eu"
+  },
+  {
+   "word": "o",
+   "start": 173.64,
+   "end": 173.78,
+   "prob": 0.502,
+   "raw": "o"
+  },
+  {
+   "word": "absoluto",
+   "start": 173.78,
+   "end": 174.4,
+   "prob": 0.931,
+   "raw": "absoluto"
+  },
+  {
+   "word": "sobre",
+   "start": 174.45,
+   "end": 174.62,
+   "prob": 0.694,
+   "raw": "sobre",
+   "raw_start": 174.4,
+   "raw_end": 174.62
+  },
+  {
+   "word": "o",
+   "start": 174.62,
+   "end": 174.74,
+   "prob": 0.969,
+   "raw": "o"
+  },
+  {
+   "word": "tema,",
+   "start": 174.79,
+   "end": 175.0,
+   "prob": 0.997,
+   "raw": "tema,",
+   "raw_start": 174.74,
+   "raw_end": 175.0
+  },
+  {
+   "word": "mas",
+   "start": 175.26,
+   "end": 175.82,
+   "prob": 0.983,
+   "raw": "mas"
+  },
+  {
+   "word": "na",
+   "start": 175.82,
+   "end": 176.2,
+   "prob": 0.615,
+   "raw": "na"
+  },
+  {
+   "word": "hora",
+   "start": 176.2,
+   "end": 176.34,
+   "prob": 0.996,
+   "raw": "hora"
+  },
+  {
+   "word": "que",
+   "start": 176.34,
+   "end": 176.6,
+   "prob": 0.899,
+   "raw": "que"
+  },
+  {
+   "word": "eu",
+   "start": 176.6,
+   "end": 176.92,
+   "prob": 0.967,
+   "raw": "eu"
+  },
+  {
+   "word": "aperto",
+   "start": 176.92,
+   "end": 177.28,
+   "prob": 0.964,
+   "raw": "aperto"
+  },
+  {
+   "word": "o",
+   "start": 177.28,
+   "end": 177.4,
+   "prob": 0.827,
+   "raw": "o"
+  },
+  {
+   "word": "play,",
+   "start": 177.4,
+   "end": 177.54,
+   "prob": 0.797,
+   "raw": "play,"
+  },
+  {
+   "word": "parece",
+   "start": 177.78,
+   "end": 177.8,
+   "prob": 0.891,
+   "raw": "parece"
+  },
+  {
+   "word": "que",
+   "start": 177.8,
+   "end": 178.02,
+   "prob": 0.953,
+   "raw": "que"
+  },
+  {
+   "word": "foge",
+   "start": 178.02,
+   "end": 178.56,
+   "prob": 0.523,
+   "raw": "foge"
+  },
+  {
+   "word": "tudo",
+   "start": 178.56,
+   "end": 178.82,
+   "prob": 0.279,
+   "raw": "tudo"
+  },
+  {
+   "word": "a",
+   "start": 178.82,
+   "end": 178.92,
+   "prob": 0.525,
+   "raw": "a"
+  },
+  {
+   "word": "cabeça.",
+   "start": 178.92,
+   "end": 179.2,
+   "prob": 0.997,
+   "raw": "cabeça."
+  },
+  {
+   "word": "E",
+   "start": 180.84,
+   "end": 181.04,
+   "prob": 0.791,
+   "raw": "E",
+   "raw_start": 180.52,
+   "raw_end": 181.04
+  },
+  {
+   "word": "assim,",
+   "start": 181.04,
+   "end": 181.22,
+   "prob": 0.899,
+   "raw": "assim,"
+  },
+  {
+   "word": "em",
+   "start": 181.5,
+   "end": 181.68,
+   "prob": 0.207,
+   "raw": "em"
+  },
+  {
+   "word": "um",
+   "start": 181.68,
+   "end": 181.74,
+   "prob": 0.946,
+   "raw": "um"
+  },
+  {
+   "word": "momento,",
+   "start": 181.74,
+   "end": 182.02,
+   "prob": 0.991,
+   "raw": "momento,"
+  },
+  {
+   "word": "isso",
+   "start": 183.64,
+   "end": 183.83,
+   "prob": 0.984,
+   "raw": "isso",
+   "raw_start": 183.56,
+   "raw_end": 183.88
+  },
+  {
+   "word": "não",
+   "start": 183.88,
+   "end": 184.12,
+   "prob": 0.998,
+   "raw": "não"
+  },
+  {
+   "word": "é",
+   "start": 184.12,
+   "end": 184.24,
+   "prob": 0.994,
+   "raw": "é"
+  },
+  {
+   "word": "uma",
+   "start": 184.24,
+   "end": 184.34,
+   "prob": 0.981,
+   "raw": "uma"
+  },
+  {
+   "word": "habilidade",
+   "start": 184.34,
+   "end": 184.82,
+   "prob": 0.997,
+   "raw": "habilidade"
+  },
+  {
+   "word": "que",
+   "start": 184.82,
+   "end": 184.94,
+   "prob": 0.921,
+   "raw": "que"
+  },
+  {
+   "word": "seja",
+   "start": 185.01,
+   "end": 185.14,
+   "prob": 0.986,
+   "raw": "seja",
+   "raw_start": 184.94,
+   "raw_end": 185.14
+  },
+  {
+   "word": "essencial",
+   "start": 185.14,
+   "end": 185.74,
+   "prob": 0.991,
+   "raw": "essencial"
+  },
+  {
+   "word": "para",
+   "start": 185.74,
+   "end": 185.98,
+   "prob": 0.655,
+   "raw": "para"
+  },
+  {
+   "word": "mim,",
+   "start": 185.98,
+   "end": 186.12,
+   "prob": 0.984,
+   "raw": "mim,"
+  },
+  {
+   "word": "mas",
+   "start": 186.98,
+   "end": 187.58,
+   "prob": 0.987,
+   "raw": "mas",
+   "raw_start": 186.82,
+   "raw_end": 187.58
+  },
+  {
+   "word": "um",
+   "start": 187.58,
+   "end": 187.7,
+   "prob": 0.518,
+   "raw": "um",
+   "raw_start": 187.58,
+   "raw_end": 189.0
+  },
+  {
+   "word": "dia",
+   "start": 191.68,
+   "end": 191.84,
+   "prob": 0.994,
+   "raw": "dia"
+  },
+  {
+   "word": "eu",
+   "start": 191.84,
+   "end": 191.92,
+   "prob": 0.56,
+   "raw": "eu"
+  },
+  {
+   "word": "vai",
+   "start": 191.92,
+   "end": 192.02,
+   "prob": 0.915,
+   "raw": "vai"
+  },
+  {
+   "word": "ser,",
+   "start": 192.02,
+   "end": 192.24,
+   "prob": 0.926,
+   "raw": "ser,"
+  },
+  {
+   "word": "por",
+   "start": 192.38,
+   "end": 192.52,
+   "prob": 0.832,
+   "raw": "por"
+  },
+  {
+   "word": "isso",
+   "start": 192.52,
+   "end": 192.72,
+   "prob": 0.996,
+   "raw": "isso"
+  },
+  {
+   "word": "que",
+   "start": 192.72,
+   "end": 192.82,
+   "prob": 0.883,
+   "raw": "que"
+  },
+  {
+   "word": "eu",
+   "start": 192.82,
+   "end": 192.9,
+   "prob": 0.966,
+   "raw": "eu"
+  },
+  {
+   "word": "quero",
+   "start": 192.9,
+   "end": 193.16,
+   "prob": 0.996,
+   "raw": "quero"
+  },
+  {
+   "word": "quando",
+   "start": 193.16,
+   "end": 194.0,
+   "prob": 0.499,
+   "raw": "quando"
+  },
+  {
+   "word": "esse",
+   "start": 194.0,
+   "end": 194.2,
+   "prob": 0.362,
+   "raw": "esse"
+  },
+  {
+   "word": "dia",
+   "start": 194.2,
+   "end": 194.34,
+   "prob": 0.965,
+   "raw": "dia"
+  },
+  {
+   "word": "chegar,",
+   "start": 194.34,
+   "end": 194.66,
+   "prob": 0.919,
+   "raw": "chegar,"
+  },
+  {
+   "word": "quando",
+   "start": 195.23,
+   "end": 195.34,
+   "prob": 0.983,
+   "raw": "quando",
+   "raw_start": 195.08,
+   "raw_end": 195.34
+  },
+  {
+   "word": "eu",
+   "start": 195.34,
+   "end": 195.46,
+   "prob": 0.978,
+   "raw": "eu"
+  },
+  {
+   "word": "precisar",
+   "start": 195.46,
+   "end": 196.06,
+   "prob": 0.996,
+   "raw": "precisar"
+  },
+  {
+   "word": "realmente",
+   "start": 196.06,
+   "end": 196.48,
+   "prob": 0.97,
+   "raw": "realmente"
+  },
+  {
+   "word": "de",
+   "start": 196.48,
+   "end": 196.98,
+   "prob": 0.872,
+   "raw": "de"
+  },
+  {
+   "word": "aplicar",
+   "start": 197.88,
+   "end": 198.6,
+   "prob": 0.995,
+   "raw": "aplicar",
+   "raw_start": 196.98,
+   "raw_end": 198.6
+  },
+  {
+   "word": "essa",
+   "start": 198.6,
+   "end": 198.88,
+   "prob": 0.96,
+   "raw": "essa"
+  },
+  {
+   "word": "habilidade",
+   "start": 200.44,
+   "end": 201.96,
+   "prob": 0.854,
+   "raw": "habilidade",
+   "raw_start": 198.88,
+   "raw_end": 201.96
+  },
+  {
+   "word": "na",
+   "start": 201.96,
+   "end": 202.14,
+   "prob": 0.981,
+   "raw": "na"
+  },
+  {
+   "word": "minha",
+   "start": 202.14,
+   "end": 202.28,
+   "prob": 0.999,
+   "raw": "minha"
+  },
+  {
+   "word": "profissão.",
+   "start": 202.28,
+   "end": 202.78,
+   "prob": 0.97,
+   "raw": "profissão."
+  },
+  {
+   "word": "Eu",
+   "start": 204.48,
+   "end": 204.74,
+   "prob": 0.059,
+   "raw": "Eu",
+   "raw_start": 204.06,
+   "raw_end": 204.74
+  },
+  {
+   "word": "já",
+   "start": 204.74,
+   "end": 204.88,
+   "prob": 0.446,
+   "raw": "já"
+  },
+  {
+   "word": "tenho",
+   "start": 204.88,
+   "end": 205.08,
+   "prob": 0.676,
+   "raw": "tenho"
+  },
+  {
+   "word": "que",
+   "start": 205.08,
+   "end": 205.2,
+   "prob": 0.862,
+   "raw": "que"
+  },
+  {
+   "word": "estar",
+   "start": 205.2,
+   "end": 205.28,
+   "prob": 0.866,
+   "raw": "estar"
+  },
+  {
+   "word": "muito",
+   "start": 205.28,
+   "end": 205.52,
+   "prob": 0.95,
+   "raw": "muito"
+  },
+  {
+   "word": "bem",
+   "start": 205.52,
+   "end": 205.96,
+   "prob": 0.848,
+   "raw": "bem"
+  },
+  {
+   "word": "desenvolvida,",
+   "start": 205.96,
+   "end": 206.74,
+   "prob": 0.703,
+   "raw": "desenvolvida,"
+  },
+  {
+   "word": "por",
+   "start": 207.43,
+   "end": 207.52,
+   "prob": 0.763,
+   "raw": "por",
+   "raw_start": 207.18,
+   "raw_end": 207.52
+  },
+  {
+   "word": "isso",
+   "start": 207.52,
+   "end": 207.66,
+   "prob": 0.975,
+   "raw": "isso"
+  },
+  {
+   "word": "que",
+   "start": 207.75,
+   "end": 207.9,
+   "prob": 0.902,
+   "raw": "que",
+   "raw_start": 207.66,
+   "raw_end": 207.9
+  },
+  {
+   "word": "treinar",
+   "start": 208.67,
+   "end": 208.94,
+   "prob": 0.659,
+   "raw": "treinar",
+   "raw_start": 207.9,
+   "raw_end": 208.94
+  },
+  {
+   "word": "a",
+   "start": 208.94,
+   "end": 209.14,
+   "prob": 0.93,
+   "raw": "a"
+  },
+  {
+   "word": "partilha",
+   "start": 209.14,
+   "end": 209.48,
+   "prob": 0.726,
+   "raw": "partilha"
+  },
+  {
+   "word": "agora",
+   "start": 209.48,
+   "end": 209.72,
+   "prob": 0.907,
+   "raw": "agora"
+  },
+  {
+   "word": "é",
+   "start": 209.72,
+   "end": 210.08,
+   "prob": 0.948,
+   "raw": "é"
+  },
+  {
+   "word": "o",
+   "start": 210.08,
+   "end": 210.2,
+   "prob": 0.949,
+   "raw": "o"
+  },
+  {
+   "word": "melhor",
+   "start": 210.2,
+   "end": 210.44,
+   "prob": 0.998,
+   "raw": "melhor"
+  },
+  {
+   "word": "método",
+   "start": 210.44,
+   "end": 210.74,
+   "prob": 0.943,
+   "raw": "método",
+   "raw_start": 210.44,
+   "raw_end": 210.78
+  },
+  {
+   "word": "que",
+   "start": 210.83,
+   "end": 210.9,
+   "prob": 0.157,
+   "raw": "que",
+   "raw_start": 210.78,
+   "raw_end": 210.9
+  },
+  {
+   "word": "eu",
+   "start": 210.98,
+   "end": 211.08,
+   "prob": 0.238,
+   "raw": "eu",
+   "raw_start": 210.9,
+   "raw_end": 211.08
+  },
+  {
+   "word": "estou",
+   "start": 211.17,
+   "end": 211.33,
+   "prob": 0.971,
+   "raw": "estou",
+   "raw_start": 211.08,
+   "raw_end": 211.36
+  },
+  {
+   "word": "fazendo",
+   "start": 211.36,
+   "end": 211.74,
+   "prob": 0.997,
+   "raw": "fazendo"
+  },
+  {
+   "word": "esse",
+   "start": 211.74,
+   "end": 211.94,
+   "prob": 0.71,
+   "raw": "esse"
+  },
+  {
+   "word": "vídeo.",
+   "start": 211.94,
+   "end": 212.18,
+   "prob": 0.994,
+   "raw": "vídeo."
+  },
+  {
+   "word": "Muitas",
+   "start": 215.31,
+   "end": 215.62,
+   "prob": 0.96,
+   "raw": "Muitas",
+   "raw_start": 215.22,
+   "raw_end": 215.62
+  },
+  {
+   "word": "coisas",
+   "start": 215.62,
+   "end": 215.82,
+   "prob": 0.977,
+   "raw": "coisas"
+  },
+  {
+   "word": "me",
+   "start": 215.82,
+   "end": 215.96,
+   "prob": 0.811,
+   "raw": "me"
+  },
+  {
+   "word": "incomodam",
+   "start": 215.96,
+   "end": 216.42,
+   "prob": 0.952,
+   "raw": "incomodam"
+  },
+  {
+   "word": "depois,",
+   "start": 216.42,
+   "end": 216.7,
+   "prob": 0.915,
+   "raw": "depois,"
+  },
+  {
+   "word": "por",
+   "start": 217.34,
+   "end": 217.5,
+   "prob": 0.96,
+   "raw": "por"
+  },
+  {
+   "word": "exemplo,",
+   "start": 217.5,
+   "end": 217.84,
+   "prob": 0.999,
+   "raw": "exemplo,"
+  },
+  {
+   "word": "a",
+   "start": 218.38,
+   "end": 218.56,
+   "prob": 0.956,
+   "raw": "a"
+  },
+  {
+   "word": "minha",
+   "start": 218.56,
+   "end": 218.7,
+   "prob": 0.978,
+   "raw": "minha"
+  },
+  {
+   "word": "inquietação",
+   "start": 218.7,
+   "end": 219.3,
+   "prob": 0.793,
+   "raw": "inquietação"
+  },
+  {
+   "word": "enquanto",
+   "start": 220.11,
+   "end": 220.56,
+   "prob": 0.856,
+   "raw": "enquanto",
+   "raw_start": 219.3,
+   "raw_end": 221.0
+  },
+  {
+   "word": "eu",
+   "start": 221.0,
+   "end": 221.3,
+   "prob": 0.974,
+   "raw": "eu"
+  },
+  {
+   "word": "gravo,",
+   "start": 221.3,
+   "end": 221.78,
+   "prob": 0.982,
+   "raw": "gravo,"
+  },
+  {
+   "word": "mas",
+   "start": 221.92,
+   "end": 222.26,
+   "prob": 0.856,
+   "raw": "mas"
+  },
+  {
+   "word": "até",
+   "start": 223.91,
+   "end": 224.42,
+   "prob": 0.899,
+   "raw": "até",
+   "raw_start": 223.74,
+   "raw_end": 224.42
+  },
+  {
+   "word": "eu",
+   "start": 224.42,
+   "end": 224.56,
+   "prob": 0.714,
+   "raw": "eu"
+  },
+  {
+   "word": "encontrar",
+   "start": 224.56,
+   "end": 224.98,
+   "prob": 0.993,
+   "raw": "encontrar"
+  },
+  {
+   "word": "a",
+   "start": 224.98,
+   "end": 225.69,
+   "prob": 0.948,
+   "raw": "a",
+   "raw_start": 224.98,
+   "raw_end": 225.94
+  },
+  {
+   "word": "posição",
+   "start": 226.44,
+   "end": 226.9,
+   "prob": 0.979,
+   "raw": "posição",
+   "raw_start": 225.94,
+   "raw_end": 226.9
+  },
+  {
+   "word": "perfeita,",
+   "start": 226.9,
+   "end": 227.7,
+   "prob": 0.967,
+   "raw": "perfeita,"
+  },
+  {
+   "word": "posição",
+   "start": 227.84,
+   "end": 228.04,
+   "prob": 0.971,
+   "raw": "posição"
+  },
+  {
+   "word": "ideal",
+   "start": 228.04,
+   "end": 228.48,
+   "prob": 0.916,
+   "raw": "ideal"
+  },
+  {
+   "word": "que",
+   "start": 228.48,
+   "end": 228.8,
+   "prob": 0.523,
+   "raw": "que"
+  },
+  {
+   "word": "eu",
+   "start": 228.8,
+   "end": 229.14,
+   "prob": 0.6,
+   "raw": "eu"
+  },
+  {
+   "word": "deixo",
+   "start": 229.14,
+   "end": 229.62,
+   "prob": 0.768,
+   "raw": "deixo"
+  },
+  {
+   "word": "confortável",
+   "start": 229.7,
+   "end": 230.38,
+   "prob": 0.975,
+   "raw": "confortável",
+   "raw_start": 229.62,
+   "raw_end": 230.38
+  },
+  {
+   "word": "para",
+   "start": 231.46,
+   "end": 231.58,
+   "prob": 0.829,
+   "raw": "para",
+   "raw_start": 230.38,
+   "raw_end": 231.58
+  },
+  {
+   "word": "gravar,",
+   "start": 231.58,
+   "end": 232.02,
+   "prob": 0.554,
+   "raw": "gravar,"
+  },
+  {
+   "word": "porque",
+   "start": 232.18,
+   "end": 232.34,
+   "prob": 0.799,
+   "raw": "porque"
+  },
+  {
+   "word": "o",
+   "start": 232.34,
+   "end": 232.52,
+   "prob": 0.841,
+   "raw": "o",
+   "raw_start": 232.34,
+   "raw_end": 233.32
+  },
+  {
+   "word": "fato",
+   "start": 233.36,
+   "end": 233.48,
+   "prob": 0.896,
+   "raw": "fato",
+   "raw_start": 233.32,
+   "raw_end": 233.48
+  },
+  {
+   "word": "de",
+   "start": 233.48,
+   "end": 233.64,
+   "prob": 0.997,
+   "raw": "de"
+  },
+  {
+   "word": "gravar",
+   "start": 233.64,
+   "end": 233.92,
+   "prob": 0.99,
+   "raw": "gravar"
+  },
+  {
+   "word": "em",
+   "start": 233.92,
+   "end": 234.08,
+   "prob": 0.986,
+   "raw": "em"
+  },
+  {
+   "word": "si",
+   "start": 234.08,
+   "end": 234.28,
+   "prob": 0.966,
+   "raw": "si"
+  },
+  {
+   "word": "já",
+   "start": 234.28,
+   "end": 234.54,
+   "prob": 0.914,
+   "raw": "já"
+  },
+  {
+   "word": "é",
+   "start": 234.54,
+   "end": 234.66,
+   "prob": 0.993,
+   "raw": "é"
+  },
+  {
+   "word": "uma",
+   "start": 234.66,
+   "end": 234.9,
+   "prob": 0.982,
+   "raw": "uma"
+  },
+  {
+   "word": "atividade",
+   "start": 235.88,
+   "end": 236.34,
+   "prob": 0.858,
+   "raw": "atividade",
+   "raw_start": 234.9,
+   "raw_end": 236.34
+  },
+  {
+   "word": "bem",
+   "start": 236.34,
+   "end": 236.72,
+   "prob": 0.472,
+   "raw": "bem"
+  },
+  {
+   "word": "desconfortável",
+   "start": 236.72,
+   "end": 237.36,
+   "prob": 0.973,
+   "raw": "desconfortável"
+  },
+  {
+   "word": "pra",
+   "start": 237.36,
+   "end": 237.58,
+   "prob": 0.558,
+   "raw": "pra"
+  },
+  {
+   "word": "mim,",
+   "start": 237.58,
+   "end": 237.76,
+   "prob": 0.998,
+   "raw": "mim,"
+  },
+  {
+   "word": "então",
+   "start": 237.94,
+   "end": 238.12,
+   "prob": 0.926,
+   "raw": "então"
+  },
+  {
+   "word": "o",
+   "start": 238.64,
+   "end": 239.22,
+   "prob": 0.23,
+   "raw": "o",
+   "raw_start": 238.12,
+   "raw_end": 239.58
+  },
+  {
+   "word": "que",
+   "start": 239.58,
+   "end": 239.6,
+   "prob": 0.953,
+   "raw": "que"
+  },
+  {
+   "word": "você",
+   "start": 239.6,
+   "end": 239.68,
+   "prob": 0.805,
+   "raw": "você"
+  },
+  {
+   "word": "faz",
+   "start": 239.68,
+   "end": 239.88,
+   "prob": 0.47,
+   "raw": "faz"
+  },
+  {
+   "word": "ver",
+   "start": 239.88,
+   "end": 239.98,
+   "prob": 0.453,
+   "raw": "ver"
+  },
+  {
+   "word": "com",
+   "start": 239.98,
+   "end": 240.16,
+   "prob": 0.655,
+   "raw": "com"
+  },
+  {
+   "word": "que",
+   "start": 240.16,
+   "end": 240.3,
+   "prob": 0.608,
+   "raw": "que"
+  },
+  {
+   "word": "todo",
+   "start": 240.3,
+   "end": 240.46,
+   "prob": 0.912,
+   "raw": "todo"
+  },
+  {
+   "word": "o",
+   "start": 240.46,
+   "end": 240.58,
+   "prob": 0.722,
+   "raw": "o"
+  },
+  {
+   "word": "restante",
+   "start": 240.58,
+   "end": 240.96,
+   "prob": 0.919,
+   "raw": "restante"
+  },
+  {
+   "word": "esteja",
+   "start": 241.23,
+   "end": 241.64,
+   "prob": 0.88,
+   "raw": "esteja",
+   "raw_start": 240.96,
+   "raw_end": 241.64
+  },
+  {
+   "word": "muito",
+   "start": 242.0,
+   "end": 242.4,
+   "prob": 0.975,
+   "raw": "muito",
+   "raw_start": 241.64,
+   "raw_end": 242.4
+  },
+  {
+   "word": "bem",
+   "start": 242.4,
+   "end": 242.76,
+   "prob": 0.994,
+   "raw": "bem"
+  },
+  {
+   "word": "confortável",
+   "start": 242.76,
+   "end": 243.42,
+   "prob": 0.864,
+   "raw": "confortável"
+  },
+  {
+   "word": "para",
+   "start": 243.42,
+   "end": 243.68,
+   "prob": 0.342,
+   "raw": "para",
+   "raw_start": 243.42,
+   "raw_end": 244.26
+  },
+  {
+   "word": "que",
+   "start": 244.26,
+   "end": 244.4,
+   "prob": 0.969,
+   "raw": "que"
+  },
+  {
+   "word": "eu",
+   "start": 244.4,
+   "end": 244.52,
+   "prob": 0.96,
+   "raw": "eu"
+  },
+  {
+   "word": "consiga",
+   "start": 244.52,
+   "end": 244.82,
+   "prob": 0.959,
+   "raw": "consiga"
+  },
+  {
+   "word": "desenvolver.",
+   "start": 244.82,
+   "end": 245.4,
+   "prob": 0.99,
+   "raw": "desenvolver."
+  },
+  {
+   "word": "Além",
+   "start": 247.94,
+   "end": 248.38,
+   "prob": 0.988,
+   "raw": "Além"
+  },
+  {
+   "word": "disso,",
+   "start": 248.38,
+   "end": 248.9,
+   "prob": 0.998,
+   "raw": "disso,"
+  },
+  {
+   "word": "outro",
+   "start": 249.98,
+   "end": 250.16,
+   "prob": 0.954,
+   "raw": "outro",
+   "raw_start": 249.94,
+   "raw_end": 250.16
+  },
+  {
+   "word": "ponto",
+   "start": 250.16,
+   "end": 250.44,
+   "prob": 0.975,
+   "raw": "ponto"
+  },
+  {
+   "word": "que",
+   "start": 250.44,
+   "end": 250.62,
+   "prob": 0.988,
+   "raw": "que"
+  },
+  {
+   "word": "eu",
+   "start": 250.62,
+   "end": 250.7,
+   "prob": 0.989,
+   "raw": "eu"
+  },
+  {
+   "word": "precisava",
+   "start": 250.7,
+   "end": 251.18,
+   "prob": 0.97,
+   "raw": "precisava"
+  },
+  {
+   "word": "vou",
+   "start": 251.18,
+   "end": 251.74,
+   "prob": 0.565,
+   "raw": "vou",
+   "raw_start": 251.18,
+   "raw_end": 251.78
+  },
+  {
+   "word": "elencar",
+   "start": 251.88,
+   "end": 252.54,
+   "prob": 0.617,
+   "raw": "relencar",
+   "raw_start": 251.78,
+   "raw_end": 252.54
+  },
+  {
+   "word": "a",
+   "start": 252.54,
+   "end": 253.14,
+   "prob": 0.218,
+   "raw": "a"
+  },
+  {
+   "word": "impressionante",
+   "start": 253.68,
+   "end": 254.44,
+   "prob": 0.686,
+   "raw": "impressionante",
+   "raw_start": 253.14,
+   "raw_end": 254.44
+  },
+  {
+   "word": "necessidade",
+   "start": 254.44,
+   "end": 255.12,
+   "prob": 0.998,
+   "raw": "necessidade"
+  },
+  {
+   "word": "que",
+   "start": 255.12,
+   "end": 255.38,
+   "prob": 0.877,
+   "raw": "que"
+  },
+  {
+   "word": "eu",
+   "start": 255.38,
+   "end": 255.5,
+   "prob": 0.939,
+   "raw": "eu"
+  },
+  {
+   "word": "tenho",
+   "start": 255.5,
+   "end": 255.74,
+   "prob": 0.996,
+   "raw": "tenho"
+  },
+  {
+   "word": "de",
+   "start": 256.84,
+   "end": 257.08,
+   "prob": 0.893,
+   "raw": "de",
+   "raw_start": 255.74,
+   "raw_end": 257.08
+  },
+  {
+   "word": "melhorar",
+   "start": 257.08,
+   "end": 259.46,
+   "prob": 0.988,
+   "raw": "melhorar",
+   "raw_start": 257.08,
+   "raw_end": 260.68
+  },
+  {
+   "word": "o",
+   "start": 263.88,
+   "end": 263.98,
+   "prob": 0.715,
+   "raw": "o"
+  },
+  {
+   "word": "aspecto",
+   "start": 263.98,
+   "end": 264.94,
+   "prob": 0.936,
+   "raw": "aspecto",
+   "raw_start": 263.98,
+   "raw_end": 265.26
+  },
+  {
+   "word": "de",
+   "start": 265.26,
+   "end": 265.44,
+   "prob": 0.122,
+   "raw": "de"
+  },
+  {
+   "word": "tentar",
+   "start": 270.46,
+   "end": 270.7,
+   "prob": 0.912,
+   "raw": "tentar"
+  },
+  {
+   "word": "falar",
+   "start": 270.7,
+   "end": 271.04,
+   "prob": 0.984,
+   "raw": "falar"
+  },
+  {
+   "word": "edição,",
+   "start": 271.04,
+   "end": 271.49,
+   "prob": 0.839,
+   "raw": "edição,",
+   "raw_start": 271.04,
+   "raw_end": 271.7
+  },
+  {
+   "word": "mas",
+   "start": 271.9,
+   "end": 272.1,
+   "prob": 0.987,
+   "raw": "mas"
+  },
+  {
+   "word": "eu",
+   "start": 272.1,
+   "end": 272.28,
+   "prob": 0.913,
+   "raw": "eu"
+  },
+  {
+   "word": "acho",
+   "start": 272.28,
+   "end": 272.44,
+   "prob": 0.996,
+   "raw": "acho"
+  },
+  {
+   "word": "que",
+   "start": 272.44,
+   "end": 272.54,
+   "prob": 0.991,
+   "raw": "que"
+  },
+  {
+   "word": "não",
+   "start": 272.54,
+   "end": 272.64,
+   "prob": 0.991,
+   "raw": "não"
+  },
+  {
+   "word": "é",
+   "start": 272.64,
+   "end": 272.76,
+   "prob": 0.993,
+   "raw": "é"
+  },
+  {
+   "word": "edição,",
+   "start": 272.76,
+   "end": 273.18,
+   "prob": 0.942,
+   "raw": "edição,"
+  },
+  {
+   "word": "a",
+   "start": 273.28,
+   "end": 273.46,
+   "prob": 0.192,
+   "raw": "a"
+  },
+  {
+   "word": "fluidez,",
+   "start": 275.69,
+   "end": 277.28,
+   "prob": 0.625,
+   "raw": "fluidez,",
+   "raw_start": 274.74,
+   "raw_end": 277.28
+  },
+  {
+   "word": "clareza",
+   "start": 277.54,
+   "end": 277.88,
+   "prob": 0.982,
+   "raw": "clareza"
+  },
+  {
+   "word": "da",
+   "start": 277.88,
+   "end": 278.02,
+   "prob": 0.968,
+   "raw": "da"
+  },
+  {
+   "word": "minha",
+   "start": 278.02,
+   "end": 278.14,
+   "prob": 0.99,
+   "raw": "minha"
+  },
+  {
+   "word": "voz,",
+   "start": 278.14,
+   "end": 278.42,
+   "prob": 0.996,
+   "raw": "voz,"
+  },
+  {
+   "word": "o",
+   "start": 278.6,
+   "end": 278.7,
+   "prob": 0.929,
+   "raw": "o"
+  },
+  {
+   "word": "tom,",
+   "start": 278.7,
+   "end": 278.96,
+   "prob": 0.691,
+   "raw": "tom,"
+  },
+  {
+   "word": "a",
+   "start": 279.66,
+   "end": 279.78,
+   "prob": 0.991,
+   "raw": "a"
+  },
+  {
+   "word": "altura,",
+   "start": 279.78,
+   "end": 280.2,
+   "prob": 0.989,
+   "raw": "altura,"
+  },
+  {
+   "word": "eu",
+   "start": 281.34,
+   "end": 281.46,
+   "prob": 0.983,
+   "raw": "eu",
+   "raw_start": 280.9,
+   "raw_end": 281.46
+  },
+  {
+   "word": "sinto",
+   "start": 281.46,
+   "end": 281.74,
+   "prob": 0.992,
+   "raw": "sinto"
+  },
+  {
+   "word": "que",
+   "start": 281.74,
+   "end": 281.92,
+   "prob": 0.996,
+   "raw": "que"
+  },
+  {
+   "word": "ela",
+   "start": 281.92,
+   "end": 282.1,
+   "prob": 0.99,
+   "raw": "ela"
+  },
+  {
+   "word": "sai",
+   "start": 282.1,
+   "end": 282.56,
+   "prob": 0.952,
+   "raw": "sai"
+  },
+  {
+   "word": "no",
+   "start": 282.56,
+   "end": 282.72,
+   "prob": 0.967,
+   "raw": "no"
+  },
+  {
+   "word": "vídeo",
+   "start": 282.72,
+   "end": 282.94,
+   "prob": 0.972,
+   "raw": "vídeo"
+  },
+  {
+   "word": "muito",
+   "start": 282.94,
+   "end": 283.3,
+   "prob": 0.987,
+   "raw": "muito"
+  },
+  {
+   "word": "anasalado,",
+   "start": 283.3,
+   "end": 284.01,
+   "prob": 0.783,
+   "raw": "anazalado,",
+   "raw_start": 283.3,
+   "raw_end": 284.06
+  },
+  {
+   "word": "isso",
+   "start": 284.7,
+   "end": 284.96,
+   "prob": 0.968,
+   "raw": "isso",
+   "raw_start": 284.64,
+   "raw_end": 284.96
+  },
+  {
+   "word": "incomoda",
+   "start": 284.99,
+   "end": 285.42,
+   "prob": 0.98,
+   "raw": "incomoda",
+   "raw_start": 284.96,
+   "raw_end": 285.42
+  },
+  {
+   "word": "bastante.",
+   "start": 285.42,
+   "end": 285.98,
+   "prob": 0.984,
+   "raw": "bastante."
+  },
+  {
+   "word": "Todo",
+   "start": 286.57,
+   "end": 287.1,
+   "prob": 0.169,
+   "raw": "Todo",
+   "raw_start": 285.98,
+   "raw_end": 287.1
+  },
+  {
+   "word": "mundo",
+   "start": 287.1,
+   "end": 287.44,
+   "prob": 0.993,
+   "raw": "mundo"
+  },
+  {
+   "word": "se",
+   "start": 287.44,
+   "end": 287.76,
+   "prob": 0.978,
+   "raw": "se",
+   "raw_start": 287.44,
+   "raw_end": 288.1
+  },
+  {
+   "word": "incomoda",
+   "start": 288.1,
+   "end": 288.56,
+   "prob": 0.986,
+   "raw": "incomoda"
+  },
+  {
+   "word": "com",
+   "start": 288.56,
+   "end": 288.82,
+   "prob": 0.883,
+   "raw": "com"
+  },
+  {
+   "word": "a",
+   "start": 288.82,
+   "end": 289.15,
+   "prob": 0.661,
+   "raw": "a",
+   "raw_start": 288.82,
+   "raw_end": 291.08
+  },
+  {
+   "word": "própria",
+   "start": 291.08,
+   "end": 291.3,
+   "prob": 0.934,
+   "raw": "própria"
+  },
+  {
+   "word": "voz",
+   "start": 291.3,
+   "end": 291.7,
+   "prob": 0.998,
+   "raw": "voz"
+  },
+  {
+   "word": "quando",
+   "start": 291.7,
+   "end": 291.92,
+   "prob": 0.505,
+   "raw": "quando"
+  },
+  {
+   "word": "o",
+   "start": 291.92,
+   "end": 292.1,
+   "prob": 0.099,
+   "raw": "o"
+  },
+  {
+   "word": "vídeo,",
+   "start": 292.1,
+   "end": 292.58,
+   "prob": 0.59,
+   "raw": "vídeo,"
+  },
+  {
+   "word": "mas",
+   "start": 292.84,
+   "end": 293.08,
+   "prob": 0.955,
+   "raw": "mas"
+  },
+  {
+   "word": "pelo",
+   "start": 294.59,
+   "end": 294.98,
+   "prob": 0.823,
+   "raw": "pelo",
+   "raw_start": 293.08,
+   "raw_end": 294.98
+  },
+  {
+   "word": "menos",
+   "start": 294.98,
+   "end": 295.36,
+   "prob": 0.999,
+   "raw": "menos"
+  },
+  {
+   "word": "eu",
+   "start": 295.36,
+   "end": 295.98,
+   "prob": 0.933,
+   "raw": "eu"
+  },
+  {
+   "word": "queria",
+   "start": 295.98,
+   "end": 296.22,
+   "prob": 0.989,
+   "raw": "queria"
+  },
+  {
+   "word": "que",
+   "start": 296.22,
+   "end": 296.48,
+   "prob": 0.986,
+   "raw": "que"
+  },
+  {
+   "word": "o",
+   "start": 296.48,
+   "end": 296.66,
+   "prob": 0.986,
+   "raw": "o"
+  },
+  {
+   "word": "som",
+   "start": 296.93,
+   "end": 297.12,
+   "prob": 0.991,
+   "raw": "som",
+   "raw_start": 296.66,
+   "raw_end": 297.12
+  },
+  {
+   "word": "fosse",
+   "start": 297.12,
+   "end": 297.64,
+   "prob": 0.998,
+   "raw": "fosse"
+  },
+  {
+   "word": "algo",
+   "start": 297.64,
+   "end": 298.0,
+   "prob": 0.992,
+   "raw": "algo"
+  },
+  {
+   "word": "que",
+   "start": 300.43,
+   "end": 301.31,
+   "prob": 0.763,
+   "raw": "que",
+   "raw_start": 299.34,
+   "raw_end": 301.52
+  },
+  {
+   "word": "me",
+   "start": 301.52,
+   "end": 301.82,
+   "prob": 0.569,
+   "raw": "me"
+  },
+  {
+   "word": "não",
+   "start": 301.82,
+   "end": 302.31,
+   "prob": 0.559,
+   "raw": "não",
+   "raw_start": 301.82,
+   "raw_end": 303.14
+  },
+  {
+   "word": "incomodasse",
+   "start": 303.14,
+   "end": 303.78,
+   "prob": 0.984,
+   "raw": "incomodasse"
+  },
+  {
+   "word": "a",
+   "start": 303.83,
+   "end": 304.06,
+   "prob": 0.827,
+   "raw": "a",
+   "raw_start": 303.78,
+   "raw_end": 304.06
+  },
+  {
+   "word": "altura.",
+   "start": 304.06,
+   "end": 304.66,
+   "prob": 0.991,
+   "raw": "altura."
+  },
+  {
+   "word": "mas",
+   "start": 304.66,
+   "end": 304.99,
+   "prob": 0.147,
+   "raw": "mas",
+   "raw_start": 304.66,
+   "raw_end": 305.68
+  },
+  {
+   "word": "eu",
+   "start": 305.68,
+   "end": 305.88,
+   "prob": 0.903,
+   "raw": "eu"
+  },
+  {
+   "word": "acho",
+   "start": 305.88,
+   "end": 306.12,
+   "prob": 0.985,
+   "raw": "acho"
+  },
+  {
+   "word": "que",
+   "start": 306.21,
+   "end": 306.38,
+   "prob": 0.991,
+   "raw": "que",
+   "raw_start": 306.12,
+   "raw_end": 306.38
+  },
+  {
+   "word": "inconscientemente",
+   "start": 306.38,
+   "end": 307.48,
+   "prob": 0.834,
+   "raw": "inconscientemente"
+  },
+  {
+   "word": "por",
+   "start": 307.48,
+   "end": 307.72,
+   "prob": 0.883,
+   "raw": "por"
+  },
+  {
+   "word": "causa",
+   "start": 307.72,
+   "end": 307.92,
+   "prob": 0.993,
+   "raw": "causa"
+  },
+  {
+   "word": "da",
+   "start": 307.92,
+   "end": 308.14,
+   "prob": 0.994,
+   "raw": "da"
+  },
+  {
+   "word": "vergonha",
+   "start": 308.14,
+   "end": 308.56,
+   "prob": 0.976,
+   "raw": "vergonha"
+  },
+  {
+   "word": "de",
+   "start": 308.56,
+   "end": 308.76,
+   "prob": 0.91,
+   "raw": "de"
+  },
+  {
+   "word": "estar",
+   "start": 308.76,
+   "end": 309.0,
+   "prob": 0.963,
+   "raw": "estar"
+  },
+  {
+   "word": "gravando",
+   "start": 309.0,
+   "end": 309.56,
+   "prob": 0.99,
+   "raw": "gravando"
+  },
+  {
+   "word": "eu",
+   "start": 309.56,
+   "end": 309.9,
+   "prob": 0.567,
+   "raw": "eu",
+   "raw_start": 309.56,
+   "raw_end": 310.54
+  },
+  {
+   "word": "acabo",
+   "start": 310.54,
+   "end": 311.12,
+   "prob": 0.974,
+   "raw": "acabo"
+  },
+  {
+   "word": "diminuindo",
+   "start": 311.12,
+   "end": 312.26,
+   "prob": 0.98,
+   "raw": "diminuindo"
+  },
+  {
+   "word": "a",
+   "start": 312.26,
+   "end": 312.64,
+   "prob": 0.412,
+   "raw": "a"
+  },
+  {
+   "word": "minha",
+   "start": 313.37,
+   "end": 314.12,
+   "prob": 0.741,
+   "raw": "minha",
+   "raw_start": 312.64,
+   "raw_end": 314.12
+  },
+  {
+   "word": "altura,",
+   "start": 315.76,
+   "end": 316.44,
+   "prob": 0.954,
+   "raw": "altura,",
+   "raw_start": 314.12,
+   "raw_end": 316.44
+  },
+  {
+   "word": "o",
+   "start": 317.08,
+   "end": 317.38,
+   "prob": 0.935,
+   "raw": "o"
+  },
+  {
+   "word": "volume",
+   "start": 317.38,
+   "end": 317.64,
+   "prob": 0.926,
+   "raw": "volume"
+  },
+  {
+   "word": "da",
+   "start": 317.64,
+   "end": 317.8,
+   "prob": 0.98,
+   "raw": "da"
+  },
+  {
+   "word": "minha",
+   "start": 317.8,
+   "end": 317.92,
+   "prob": 0.993,
+   "raw": "minha"
+  },
+  {
+   "word": "voz",
+   "start": 317.92,
+   "end": 318.2,
+   "prob": 0.996,
+   "raw": "voz"
+  },
+  {
+   "word": "pra",
+   "start": 318.2,
+   "end": 318.5,
+   "prob": 0.534,
+   "raw": "pra"
+  },
+  {
+   "word": "que",
+   "start": 318.5,
+   "end": 318.99,
+   "prob": 0.411,
+   "raw": "que",
+   "raw_start": 318.5,
+   "raw_end": 319.92
+  },
+  {
+   "word": "ninguém",
+   "start": 320.6,
+   "end": 321.16,
+   "prob": 0.9,
+   "raw": "ninguém",
+   "raw_start": 319.92,
+   "raw_end": 321.16
+  },
+  {
+   "word": "percebe",
+   "start": 321.16,
+   "end": 321.6,
+   "prob": 0.71,
+   "raw": "percebe"
+  },
+  {
+   "word": "mesmo",
+   "start": 321.6,
+   "end": 321.82,
+   "prob": 0.536,
+   "raw": "mesmo"
+  },
+  {
+   "word": "estando",
+   "start": 321.82,
+   "end": 322.12,
+   "prob": 0.595,
+   "raw": "estando"
+  },
+  {
+   "word": "completamente",
+   "start": 322.12,
+   "end": 322.6,
+   "prob": 0.962,
+   "raw": "completamente"
+  },
+  {
+   "word": "sozinho",
+   "start": 322.6,
+   "end": 323.14,
+   "prob": 0.847,
+   "raw": "sozinho"
+  },
+  {
+   "word": "aqui",
+   "start": 323.14,
+   "end": 323.32,
+   "prob": 0.211,
+   "raw": "aqui"
+  },
+  {
+   "word": "no",
+   "start": 323.32,
+   "end": 323.38,
+   "prob": 0.737,
+   "raw": "no"
+  },
+  {
+   "word": "apartamento",
+   "start": 323.38,
+   "end": 323.92,
+   "prob": 0.974,
+   "raw": "apartamento"
+  },
+  {
+   "word": "e",
+   "start": 324.32,
+   "end": 324.6,
+   "prob": 0.827,
+   "raw": "e",
+   "raw_start": 323.92,
+   "raw_end": 324.6
+  },
+  {
+   "word": "ninguém",
+   "start": 327.8,
+   "end": 328.12,
+   "prob": 0.993,
+   "raw": "ninguém"
+  },
+  {
+   "word": "está",
+   "start": 328.12,
+   "end": 328.48,
+   "prob": 0.921,
+   "raw": "está"
+  },
+  {
+   "word": "me",
+   "start": 328.48,
+   "end": 328.64,
+   "prob": 0.694,
+   "raw": "me"
+  },
+  {
+   "word": "ouvindo",
+   "start": 328.64,
+   "end": 328.92,
+   "prob": 0.993,
+   "raw": "ouvindo"
+  },
+  {
+   "word": "nem",
+   "start": 328.92,
+   "end": 329.14,
+   "prob": 0.901,
+   "raw": "nem"
+  },
+  {
+   "word": "sábado",
+   "start": 329.14,
+   "end": 329.46,
+   "prob": 0.657,
+   "raw": "sábado"
+  },
+  {
+   "word": "sobre",
+   "start": 329.57,
+   "end": 329.72,
+   "prob": 0.886,
+   "raw": "sobre",
+   "raw_start": 329.46,
+   "raw_end": 329.72
+  },
+  {
+   "word": "o",
+   "start": 329.72,
+   "end": 329.83,
+   "prob": 0.979,
+   "raw": "o",
+   "raw_start": 329.72,
+   "raw_end": 329.88
+  },
+  {
+   "word": "que",
+   "start": 329.88,
+   "end": 329.9,
+   "prob": 0.991,
+   "raw": "que"
+  },
+  {
+   "word": "eu",
+   "start": 329.9,
+   "end": 330.04,
+   "prob": 0.848,
+   "raw": "eu"
+  },
+  {
+   "word": "estou",
+   "start": 330.04,
+   "end": 330.12,
+   "prob": 0.763,
+   "raw": "estou"
+  },
+  {
+   "word": "falando",
+   "start": 330.12,
+   "end": 330.54,
+   "prob": 0.994,
+   "raw": "falando"
+  },
+  {
+   "word": "caso",
+   "start": 331.51,
+   "end": 331.74,
+   "prob": 0.748,
+   "raw": "caso",
+   "raw_start": 330.54,
+   "raw_end": 331.74
+  },
+  {
+   "word": "algum",
+   "start": 331.74,
+   "end": 332.48,
+   "prob": 0.387,
+   "raw": "algum"
+  },
+  {
+   "word": "vizinho",
+   "start": 332.48,
+   "end": 332.86,
+   "prob": 0.816,
+   "raw": "vizinho"
+  },
+  {
+   "word": "esteja",
+   "start": 332.86,
+   "end": 333.18,
+   "prob": 0.739,
+   "raw": "esteja"
+  },
+  {
+   "word": "me",
+   "start": 333.18,
+   "end": 333.38,
+   "prob": 0.644,
+   "raw": "me"
+  },
+  {
+   "word": "ouvindo",
+   "start": 333.38,
+   "end": 333.64,
+   "prob": 0.789,
+   "raw": "honrando"
+  },
+  {
+   "word": "mais",
+   "start": 333.64,
+   "end": 334.28,
+   "prob": 0.535,
+   "raw": "mais"
+  },
+  {
+   "word": "Mas",
+   "start": 334.28,
+   "end": 334.44,
+   "prob": 0.116,
+   "raw": "Mas"
+  },
+  {
+   "word": "essa",
+   "start": 336.61,
+   "end": 336.81,
+   "prob": 0.653,
+   "raw": "essa",
+   "raw_start": 335.79,
+   "raw_end": 336.81
+  },
+  {
+   "word": "vergonha",
+   "start": 336.81,
+   "end": 337.53,
+   "prob": 0.963,
+   "raw": "vergonha"
+  },
+  {
+   "word": "é",
+   "start": 338.22,
+   "end": 338.93,
+   "prob": 0.899,
+   "raw": "é",
+   "raw_start": 337.53,
+   "raw_end": 338.93
+  },
+  {
+   "word": "algo",
+   "start": 338.93,
+   "end": 339.07,
+   "prob": 0.947,
+   "raw": "algo"
+  },
+  {
+   "word": "que",
+   "start": 339.07,
+   "end": 339.21,
+   "prob": 0.991,
+   "raw": "que"
+  },
+  {
+   "word": "também",
+   "start": 339.21,
+   "end": 339.37,
+   "prob": 0.964,
+   "raw": "também"
+  },
+  {
+   "word": "precisa",
+   "start": 339.37,
+   "end": 339.79,
+   "prob": 0.943,
+   "raw": "precisa"
+  },
+  {
+   "word": "muito",
+   "start": 339.79,
+   "end": 340.11,
+   "prob": 0.71,
+   "raw": "muito"
+  },
+  {
+   "word": "ser",
+   "start": 340.11,
+   "end": 340.29,
+   "prob": 0.972,
+   "raw": "ser"
+  },
+  {
+   "word": "trabalhado,",
+   "start": 340.29,
+   "end": 340.91,
+   "prob": 0.994,
+   "raw": "trabalhado,",
+   "raw_start": 340.29,
+   "raw_end": 340.95
+  },
+  {
+   "word": "porque",
+   "start": 341.28,
+   "end": 341.57,
+   "prob": 0.927,
+   "raw": "porque",
+   "raw_start": 341.15,
+   "raw_end": 341.57
+  },
+  {
+   "word": "a",
+   "start": 341.57,
+   "end": 341.89,
+   "prob": 0.866,
+   "raw": "a",
+   "raw_start": 341.57,
+   "raw_end": 342.91
+  },
+  {
+   "word": "exposição",
+   "start": 351.8,
+   "end": 352.5,
+   "prob": 0.977,
+   "raw": "exposição"
+  },
+  {
+   "word": "é",
+   "start": 352.5,
+   "end": 352.72,
+   "prob": 0.979,
+   "raw": "é"
+  },
+  {
+   "word": "algo",
+   "start": 352.72,
+   "end": 353.02,
+   "prob": 0.991,
+   "raw": "algo"
+  },
+  {
+   "word": "que",
+   "start": 353.02,
+   "end": 353.26,
+   "prob": 0.112,
+   "raw": "que",
+   "raw_start": 353.02,
+   "raw_end": 353.32
+  },
+  {
+   "word": "é",
+   "start": 353.32,
+   "end": 354.0,
+   "prob": 0.288,
+   "raw": "é"
+  },
+  {
+   "word": "inerente",
+   "start": 355.41,
+   "end": 355.85,
+   "prob": 0.646,
+   "raw": "chineiro"
+  },
+  {
+   "word": "na",
+   "start": 355.85,
+   "end": 356.17,
+   "prob": 0.931,
+   "raw": "na"
+  },
+  {
+   "word": "rotina",
+   "start": 356.17,
+   "end": 357.11,
+   "prob": 0.982,
+   "raw": "rotina"
+  },
+  {
+   "word": "que",
+   "start": 357.11,
+   "end": 357.27,
+   "prob": 0.991,
+   "raw": "que"
+  },
+  {
+   "word": "eu",
+   "start": 357.27,
+   "end": 357.35,
+   "prob": 0.594,
+   "raw": "eu"
+  },
+  {
+   "word": "escolhi.",
+   "start": 357.35,
+   "end": 357.65,
+   "prob": 0.992,
+   "raw": "escolhi."
+  },
+  {
+   "word": "Eu",
+   "start": 358.99,
+   "end": 359.11,
+   "prob": 0.799,
+   "raw": "Eu",
+   "raw_start": 358.87,
+   "raw_end": 359.11
+  },
+  {
+   "word": "decidi",
+   "start": 359.11,
+   "end": 359.36,
+   "prob": 0.959,
+   "raw": "decidi",
+   "raw_start": 359.11,
+   "raw_end": 359.41
+  },
+  {
+   "word": "fazer",
+   "start": 359.41,
+   "end": 359.73,
+   "prob": 0.981,
+   "raw": "fazer"
+  },
+  {
+   "word": "a",
+   "start": 359.73,
+   "end": 360.09,
+   "prob": 0.64,
+   "raw": "a"
+  },
+  {
+   "word": "residência",
+   "start": 360.09,
+   "end": 360.27,
+   "prob": 0.592,
+   "raw": "residencia"
+  },
+  {
+   "word": "de",
+   "start": 360.27,
+   "end": 360.45,
+   "prob": 0.943,
+   "raw": "de"
+  },
+  {
+   "word": "cirurgia",
+   "start": 360.45,
+   "end": 360.79,
+   "prob": 0.788,
+   "raw": "cirurgia"
+  },
+  {
+   "word": "plástica.",
+   "start": 360.79,
+   "end": 361.18,
+   "prob": 0.937,
+   "raw": "plástica.",
+   "raw_start": 360.79,
+   "raw_end": 361.37
+  },
+  {
+   "word": "Ainda",
+   "start": 362.67,
+   "end": 362.91,
+   "prob": 0.959,
+   "raw": "Ainda"
+  },
+  {
+   "word": "não",
+   "start": 362.91,
+   "end": 363.21,
+   "prob": 0.96,
+   "raw": "não"
+  },
+  {
+   "word": "tive",
+   "start": 363.21,
+   "end": 363.73,
+   "prob": 0.993,
+   "raw": "tive"
+  },
+  {
+   "word": "nenhum",
+   "start": 363.73,
+   "end": 364.03,
+   "prob": 0.99,
+   "raw": "nenhum"
+  },
+  {
+   "word": "dos",
+   "start": 364.03,
+   "end": 364.19,
+   "prob": 0.926,
+   "raw": "dos"
+  },
+  {
+   "word": "resultados",
+   "start": 364.19,
+   "end": 364.51,
+   "prob": 0.437,
+   "raw": "restados"
+  },
+  {
+   "word": "das",
+   "start": 364.51,
+   "end": 364.73,
+   "prob": 0.9,
+   "raw": "das"
+  },
+  {
+   "word": "provas,",
+   "start": 364.73,
+   "end": 365.31,
+   "prob": 0.479,
+   "raw": "prórtenes,"
+  },
+  {
+   "word": "se",
+   "start": 365.65,
+   "end": 365.83,
+   "prob": 0.92,
+   "raw": "se"
+  },
+  {
+   "word": "Deus",
+   "start": 365.86,
+   "end": 365.97,
+   "prob": 0.973,
+   "raw": "Deus",
+   "raw_start": 365.83,
+   "raw_end": 365.97
+  },
+  {
+   "word": "quiser",
+   "start": 365.97,
+   "end": 366.23,
+   "prob": 0.893,
+   "raw": "quiser"
+  },
+  {
+   "word": "acredito",
+   "start": 366.23,
+   "end": 366.51,
+   "prob": 0.395,
+   "raw": "acredito"
+  },
+  {
+   "word": "que",
+   "start": 366.51,
+   "end": 366.59,
+   "prob": 0.95,
+   "raw": "que"
+  },
+  {
+   "word": "tenha",
+   "start": 366.59,
+   "end": 366.75,
+   "prob": 0.799,
+   "raw": "tenha"
+  },
+  {
+   "word": "passado",
+   "start": 366.75,
+   "end": 367.01,
+   "prob": 0.962,
+   "raw": "passado"
+  },
+  {
+   "word": "Então,",
+   "start": 370.2,
+   "end": 370.53,
+   "prob": 0.029,
+   "raw": "Então,",
+   "raw_start": 370.2,
+   "raw_end": 370.8
+  },
+  {
+   "word": "existiu",
+   "start": 371.11,
+   "end": 371.38,
+   "prob": 0.294,
+   "raw": "existiu",
+   "raw_start": 370.8,
+   "raw_end": 371.4
+  },
+  {
+   "word": "uma",
+   "start": 371.4,
+   "end": 371.56,
+   "prob": 0.969,
+   "raw": "uma"
+  },
+  {
+   "word": "chance",
+   "start": 371.56,
+   "end": 371.78,
+   "prob": 0.961,
+   "raw": "chance"
+  },
+  {
+   "word": "ao",
+   "start": 371.78,
+   "end": 372.1,
+   "prob": 0.108,
+   "raw": "ao"
+  },
+  {
+   "word": "águio",
+   "start": 372.1,
+   "end": 372.38,
+   "prob": 0.596,
+   "raw": "águio"
+  },
+  {
+   "word": "de",
+   "start": 372.38,
+   "end": 372.52,
+   "prob": 0.904,
+   "raw": "de"
+  },
+  {
+   "word": "iniciar",
+   "start": 374.2,
+   "end": 374.62,
+   "prob": 0.98,
+   "raw": "iniciar",
+   "raw_start": 372.52,
+   "raw_end": 374.62
+  },
+  {
+   "word": "agora",
+   "start": 374.62,
+   "end": 374.92,
+   "prob": 0.956,
+   "raw": "agora"
+  },
+  {
+   "word": "ano",
+   "start": 374.92,
+   "end": 375.12,
+   "prob": 0.612,
+   "raw": "ano"
+  },
+  {
+   "word": "que",
+   "start": 375.12,
+   "end": 375.24,
+   "prob": 0.947,
+   "raw": "que"
+  },
+  {
+   "word": "vem",
+   "start": 375.24,
+   "end": 375.48,
+   "prob": 0.949,
+   "raw": "vem"
+  },
+  {
+   "word": "a",
+   "start": 375.48,
+   "end": 375.66,
+   "prob": 0.954,
+   "raw": "a"
+  },
+  {
+   "word": "residência.",
+   "start": 375.66,
+   "end": 376.18,
+   "prob": 0.68,
+   "raw": "residença."
+  },
+  {
+   "word": "Não",
+   "start": 380.18,
+   "end": 380.32,
+   "prob": 0.964,
+   "raw": "Não",
+   "raw_start": 380.04,
+   "raw_end": 380.32
+  },
+  {
+   "word": "sei",
+   "start": 380.32,
+   "end": 380.56,
+   "prob": 0.989,
+   "raw": "sei"
+  },
+  {
+   "word": "quem",
+   "start": 380.56,
+   "end": 381.0,
+   "prob": 0.739,
+   "raw": "quem"
+  },
+  {
+   "word": "vai",
+   "start": 381.0,
+   "end": 381.2,
+   "prob": 0.992,
+   "raw": "vai"
+  },
+  {
+   "word": "ver",
+   "start": 381.2,
+   "end": 381.42,
+   "prob": 0.983,
+   "raw": "ver"
+  },
+  {
+   "word": "esse",
+   "start": 381.42,
+   "end": 381.62,
+   "prob": 0.878,
+   "raw": "esse"
+  },
+  {
+   "word": "vídeo,",
+   "start": 381.62,
+   "end": 381.84,
+   "prob": 0.983,
+   "raw": "vídeo,"
+  },
+  {
+   "word": "mas",
+   "start": 381.94,
+   "end": 382.12,
+   "prob": 0.972,
+   "raw": "mas"
+  },
+  {
+   "word": "caso",
+   "start": 382.46,
+   "end": 382.6,
+   "prob": 0.945,
+   "raw": "caso",
+   "raw_start": 382.12,
+   "raw_end": 383.2
+  },
+  {
+   "word": "alguém",
+   "start": 386.43,
+   "end": 386.81,
+   "prob": 0.976,
+   "raw": "alguém"
+  },
+  {
+   "word": "veja,",
+   "start": 386.81,
+   "end": 387.23,
+   "prob": 0.817,
+   "raw": "veja,"
+  },
+  {
+   "word": "caso",
+   "start": 387.39,
+   "end": 387.53,
+   "prob": 0.905,
+   "raw": "caso",
+   "raw_start": 387.35,
+   "raw_end": 387.53
+  },
+  {
+   "word": "eu",
+   "start": 387.53,
+   "end": 387.65,
+   "prob": 0.752,
+   "raw": "eu"
+  },
+  {
+   "word": "decido",
+   "start": 387.65,
+   "end": 387.85,
+   "prob": 0.722,
+   "raw": "decido"
+  },
+  {
+   "word": "publicar.",
+   "start": 387.85,
+   "end": 388.41,
+   "prob": 0.993,
+   "raw": "publicar."
+  },
+  {
+   "word": "E",
+   "start": 390.25,
+   "end": 390.68,
+   "prob": 0.797,
+   "raw": "E",
+   "raw_start": 390.25,
+   "raw_end": 390.85
+  },
+  {
+   "word": "caso",
+   "start": 391.28,
+   "end": 391.45,
+   "prob": 0.872,
+   "raw": "caso",
+   "raw_start": 390.85,
+   "raw_end": 391.45
+  },
+  {
+   "word": "você",
+   "start": 391.45,
+   "end": 391.81,
+   "prob": 0.991,
+   "raw": "você"
+  },
+  {
+   "word": "não",
+   "start": 391.81,
+   "end": 391.97,
+   "prob": 0.993,
+   "raw": "não"
+  },
+  {
+   "word": "seja",
+   "start": 391.97,
+   "end": 392.27,
+   "prob": 0.976,
+   "raw": "seja"
+  },
+  {
+   "word": "habituado",
+   "start": 393.71,
+   "end": 394.7,
+   "prob": 0.811,
+   "raw": "habituado",
+   "raw_start": 392.27,
+   "raw_end": 396.19
+  },
+  {
+   "word": "com",
+   "start": 396.19,
+   "end": 396.81,
+   "prob": 0.954,
+   "raw": "com",
+   "raw_start": 396.19,
+   "raw_end": 397.39
+  },
+  {
+   "word": "a",
+   "start": 399.02,
+   "end": 399.26,
+   "prob": 0.938,
+   "raw": "a"
+  },
+  {
+   "word": "área,",
+   "start": 399.26,
+   "end": 399.56,
+   "prob": 0.985,
+   "raw": "área,"
+  },
+  {
+   "word": "na",
+   "start": 402.0,
+   "end": 402.1,
+   "prob": 0.738,
+   "raw": "na",
+   "raw_start": 401.74,
+   "raw_end": 402.1
+  },
+  {
+   "word": "verdade",
+   "start": 402.1,
+   "end": 402.46,
+   "prob": 0.999,
+   "raw": "verdade"
+  },
+  {
+   "word": "até",
+   "start": 402.46,
+   "end": 402.9,
+   "prob": 0.74,
+   "raw": "até"
+  },
+  {
+   "word": "médicos",
+   "start": 402.9,
+   "end": 403.76,
+   "prob": 0.947,
+   "raw": "médicos"
+  },
+  {
+   "word": "não",
+   "start": 403.76,
+   "end": 404.04,
+   "prob": 0.961,
+   "raw": "não"
+  },
+  {
+   "word": "sabem",
+   "start": 404.04,
+   "end": 404.5,
+   "prob": 0.971,
+   "raw": "sabem"
+  },
+  {
+   "word": "exatamente",
+   "start": 404.5,
+   "end": 405.22,
+   "prob": 0.946,
+   "raw": "exatamente"
+  },
+  {
+   "word": "como",
+   "start": 405.22,
+   "end": 405.86,
+   "prob": 0.21,
+   "raw": "como",
+   "raw_start": 405.22,
+   "raw_end": 406.5
+  },
+  {
+   "word": "funciona",
+   "start": 406.5,
+   "end": 406.92,
+   "prob": 0.729,
+   "raw": "funciona"
+  },
+  {
+   "word": "isso",
+   "start": 406.92,
+   "end": 407.22,
+   "prob": 0.515,
+   "raw": "isso"
+  },
+  {
+   "word": "porque",
+   "start": 407.26,
+   "end": 407.46,
+   "prob": 0.351,
+   "raw": "porque",
+   "raw_start": 407.22,
+   "raw_end": 407.46
+  },
+  {
+   "word": "eu",
+   "start": 407.46,
+   "end": 407.74,
+   "prob": 0.47,
+   "raw": "eu"
+  },
+  {
+   "word": "como",
+   "start": 407.74,
+   "end": 408.16,
+   "prob": 0.386,
+   "raw": "como",
+   "raw_start": 407.74,
+   "raw_end": 408.82
+  },
+  {
+   "word": "funciona",
+   "start": 410.96,
+   "end": 411.32,
+   "prob": 0.835,
+   "raw": "funciona"
+  },
+  {
+   "word": "exatamente",
+   "start": 411.32,
+   "end": 412.14,
+   "prob": 0.988,
+   "raw": "exatamente"
+  },
+  {
+   "word": "todo",
+   "start": 412.14,
+   "end": 412.32,
+   "prob": 0.877,
+   "raw": "todo",
+   "raw_start": 412.14,
+   "raw_end": 413.3
+  },
+  {
+   "word": "o",
+   "start": 413.3,
+   "end": 413.6,
+   "prob": 0.842,
+   "raw": "o"
+  },
+  {
+   "word": "processo",
+   "start": 413.6,
+   "end": 413.96,
+   "prob": 0.997,
+   "raw": "processo"
+  },
+  {
+   "word": "de",
+   "start": 413.96,
+   "end": 414.28,
+   "prob": 0.941,
+   "raw": "de"
+  },
+  {
+   "word": "validação",
+   "start": 414.28,
+   "end": 415.5,
+   "prob": 0.952,
+   "raw": "validação"
+  },
+  {
+   "word": "do,",
+   "start": 415.5,
+   "end": 415.66,
+   "prob": 0.35,
+   "raw": "do,"
+  },
+  {
+   "word": "validação",
+   "start": 418.56,
+   "end": 419.03,
+   "prob": 0.838,
+   "raw": "validação",
+   "raw_start": 418.09,
+   "raw_end": 419.03
+  },
+  {
+   "word": "não,",
+   "start": 419.03,
+   "end": 419.19,
+   "prob": 0.239,
+   "raw": "não,"
+  },
+  {
+   "word": "todo",
+   "start": 419.21,
+   "end": 419.39,
+   "prob": 0.87,
+   "raw": "todo"
+  },
+  {
+   "word": "o",
+   "start": 419.39,
+   "end": 419.53,
+   "prob": 0.741,
+   "raw": "o"
+  },
+  {
+   "word": "processo",
+   "start": 419.53,
+   "end": 419.83,
+   "prob": 0.998,
+   "raw": "processo"
+  },
+  {
+   "word": "para",
+   "start": 419.83,
+   "end": 420.19,
+   "prob": 0.933,
+   "raw": "para"
+  },
+  {
+   "word": "se",
+   "start": 420.19,
+   "end": 420.27,
+   "prob": 0.665,
+   "raw": "se",
+   "raw_start": 420.19,
+   "raw_end": 420.33
+  },
+  {
+   "word": "obter",
+   "start": 420.33,
+   "end": 420.63,
+   "prob": 0.98,
+   "raw": "obter"
+  },
+  {
+   "word": "a",
+   "start": 420.63,
+   "end": 420.75,
+   "prob": 0.83,
+   "raw": "a"
+  },
+  {
+   "word": "licença",
+   "start": 420.75,
+   "end": 421.22,
+   "prob": 0.964,
+   "raw": "licença",
+   "raw_start": 420.75,
+   "raw_end": 421.27
+  },
+  {
+   "word": "e",
+   "start": 422.21,
+   "end": 422.65,
+   "prob": 0.728,
+   "raw": "e",
+   "raw_start": 421.27,
+   "raw_end": 422.65
+  },
+  {
+   "word": "especialização",
+   "start": 422.65,
+   "end": 423.83,
+   "prob": 0.908,
+   "raw": "especialização",
+   "raw_start": 422.65,
+   "raw_end": 423.87
+  },
+  {
+   "word": "em",
+   "start": 423.87,
+   "end": 424.09,
+   "prob": 0.976,
+   "raw": "em"
+  },
+  {
+   "word": "cirurgia",
+   "start": 424.09,
+   "end": 424.35,
+   "prob": 0.674,
+   "raw": "cirurgia"
+  },
+  {
+   "word": "plástica,",
+   "start": 424.35,
+   "end": 424.72,
+   "prob": 0.883,
+   "raw": "plástica,",
+   "raw_start": 424.35,
+   "raw_end": 424.93
+  },
+  {
+   "word": "cirurgião",
+   "start": 426.06,
+   "end": 427.03,
+   "prob": 0.669,
+   "raw": "cirurgião",
+   "raw_start": 425.19,
+   "raw_end": 427.03
+  },
+  {
+   "word": "plástica",
+   "start": 427.03,
+   "end": 427.41,
+   "prob": 0.976,
+   "raw": "plástica",
+   "raw_start": 427.03,
+   "raw_end": 427.49
+  },
+  {
+   "word": "é",
+   "start": 427.49,
+   "end": 427.59,
+   "prob": 0.872,
+   "raw": "é"
+  },
+  {
+   "word": "uma",
+   "start": 427.59,
+   "end": 427.67,
+   "prob": 0.996,
+   "raw": "uma"
+  },
+  {
+   "word": "das",
+   "start": 427.67,
+   "end": 427.83,
+   "prob": 0.989,
+   "raw": "das"
+  },
+  {
+   "word": "especialidades",
+   "start": 427.83,
+   "end": 428.49,
+   "prob": 0.957,
+   "raw": "especialidades"
+  },
+  {
+   "word": "que",
+   "start": 428.53,
+   "end": 428.75,
+   "prob": 0.993,
+   "raw": "que",
+   "raw_start": 428.49,
+   "raw_end": 428.75
+  },
+  {
+   "word": "se",
+   "start": 428.75,
+   "end": 429.25,
+   "prob": 0.974,
+   "raw": "se",
+   "raw_start": 428.75,
+   "raw_end": 429.35
+  },
+  {
+   "word": "consideram",
+   "start": 429.41,
+   "end": 429.85,
+   "prob": 0.89,
+   "raw": "consideram",
+   "raw_start": 429.35,
+   "raw_end": 429.85
+  },
+  {
+   "word": "pré",
+   "start": 429.85,
+   "end": 430.09,
+   "prob": 0.72,
+   "raw": "pré"
+  },
+  {
+   "word": "-requisito,",
+   "start": 430.09,
+   "end": 430.73,
+   "prob": 0.903,
+   "raw": "-requisito,"
+  },
+  {
+   "word": "uma",
+   "start": 431.64,
+   "end": 431.79,
+   "prob": 0.978,
+   "raw": "uma",
+   "raw_start": 431.05,
+   "raw_end": 431.79
+  },
+  {
+   "word": "subespecialidade",
+   "start": 431.79,
+   "end": 432.63,
+   "prob": 0.916,
+   "raw": "subspecialidade"
+  },
+  {
+   "word": "dentro",
+   "start": 432.63,
+   "end": 432.85,
+   "prob": 0.707,
+   "raw": "dentro"
+  },
+  {
+   "word": "da",
+   "start": 432.85,
+   "end": 433.05,
+   "prob": 0.946,
+   "raw": "da"
+  },
+  {
+   "word": "cirurgia",
+   "start": 433.05,
+   "end": 433.31,
+   "prob": 0.988,
+   "raw": "cirurgia"
+  },
+  {
+   "word": "geral,",
+   "start": 433.31,
+   "end": 433.63,
+   "prob": 0.984,
+   "raw": "geral,"
+  },
+  {
+   "word": "o",
+   "start": 434.42,
+   "end": 434.59,
+   "prob": 0.57,
+   "raw": "o",
+   "raw_start": 434.23,
+   "raw_end": 434.59
+  },
+  {
+   "word": "significa",
+   "start": 434.59,
+   "end": 434.85,
+   "prob": 0.631,
+   "raw": "significa"
+  },
+  {
+   "word": "uma",
+   "start": 434.85,
+   "end": 435.21,
+   "prob": 0.98,
+   "raw": "uma"
+  },
+  {
+   "word": "subespecialidade",
+   "start": 435.21,
+   "end": 436.21,
+   "prob": 0.991,
+   "raw": "subspecialidade"
+  },
+  {
+   "word": "ao",
+   "start": 436.24,
+   "end": 436.47,
+   "prob": 0.282,
+   "raw": "ao",
+   "raw_start": 436.21,
+   "raw_end": 436.73
+  },
+  {
+   "word": "contrário",
+   "start": 436.77,
+   "end": 437.09,
+   "prob": 0.991,
+   "raw": "contrário",
+   "raw_start": 436.73,
+   "raw_end": 437.09
+  },
+  {
+   "word": "do",
+   "start": 437.09,
+   "end": 437.25,
+   "prob": 0.834,
+   "raw": "do"
+  },
+  {
+   "word": "que",
+   "start": 437.25,
+   "end": 437.35,
+   "prob": 0.835,
+   "raw": "que"
+  },
+  {
+   "word": "intuitivo",
+   "start": 437.35,
+   "end": 438.01,
+   "prob": 0.383,
+   "raw": "intuitiu"
+  },
+  {
+   "word": "que,",
+   "start": 438.01,
+   "end": 438.24,
+   "prob": 0.598,
+   "raw": "que,",
+   "raw_start": 438.01,
+   "raw_end": 438.65
+  },
+  {
+   "word": "certo,",
+   "start": 438.73,
+   "end": 438.83,
+   "prob": 0.507,
+   "raw": "certo,",
+   "raw_start": 438.69,
+   "raw_end": 438.83
+  },
+  {
+   "word": "sub",
+   "start": 439.03,
+   "end": 439.31,
+   "prob": 0.452,
+   "raw": "sube"
+  },
+  {
+   "word": "algo",
+   "start": 439.31,
+   "end": 439.45,
+   "prob": 0.531,
+   "raw": "algo"
+  },
+  {
+   "word": "inferior,",
+   "start": 439.45,
+   "end": 439.79,
+   "prob": 0.995,
+   "raw": "inferior,"
+  },
+  {
+   "word": "na",
+   "start": 439.95,
+   "end": 440.01,
+   "prob": 0.979,
+   "raw": "na"
+  },
+  {
+   "word": "verdade",
+   "start": 440.01,
+   "end": 440.29,
+   "prob": 0.968,
+   "raw": "verdade"
+  },
+  {
+   "word": "a",
+   "start": 440.29,
+   "end": 440.51,
+   "prob": 0.629,
+   "raw": "a"
+  },
+  {
+   "word": "subespecialidade",
+   "start": 440.58,
+   "end": 441.17,
+   "prob": 0.926,
+   "raw": "subspecialidade",
+   "raw_start": 440.51,
+   "raw_end": 441.17
+  },
+  {
+   "word": "significa",
+   "start": 441.17,
+   "end": 441.51,
+   "prob": 0.894,
+   "raw": "significa"
+  },
+  {
+   "word": "que",
+   "start": 441.51,
+   "end": 442.09,
+   "prob": 0.925,
+   "raw": "que"
+  },
+  {
+   "word": "é",
+   "start": 442.35,
+   "end": 442.71,
+   "prob": 0.834,
+   "raw": "é",
+   "raw_start": 442.09,
+   "raw_end": 442.71
+  },
+  {
+   "word": "um",
+   "start": 442.71,
+   "end": 443.31,
+   "prob": 0.603,
+   "raw": "um"
+  },
+  {
+   "word": "processo",
+   "start": 443.31,
+   "end": 443.49,
+   "prob": 0.606,
+   "raw": "processo"
+  },
+  {
+   "word": "mais",
+   "start": 443.49,
+   "end": 443.85,
+   "prob": 0.905,
+   "raw": "mais"
+  },
+  {
+   "word": "especializado",
+   "start": 443.85,
+   "end": 444.63,
+   "prob": 0.993,
+   "raw": "especializado"
+  },
+  {
+   "word": "dentro",
+   "start": 444.63,
+   "end": 445.09,
+   "prob": 0.98,
+   "raw": "dentro"
+  },
+  {
+   "word": "daquela",
+   "start": 445.09,
+   "end": 445.81,
+   "prob": 0.98,
+   "raw": "daquela"
+  },
+  {
+   "word": "área.",
+   "start": 445.81,
+   "end": 446.13,
+   "prob": 0.999,
+   "raw": "área."
+  },
+  {
+   "word": "Então,",
+   "start": 447.38,
+   "end": 447.73,
+   "prob": 0.939,
+   "raw": "Então,",
+   "raw_start": 447.25,
+   "raw_end": 447.73
+  },
+  {
+   "word": "a",
+   "start": 448.33,
+   "end": 448.37,
+   "prob": 0.959,
+   "raw": "a"
+  },
+  {
+   "word": "cirurgia",
+   "start": 448.37,
+   "end": 448.89,
+   "prob": 0.955,
+   "raw": "cirurgia"
+  },
+  {
+   "word": "geral,",
+   "start": 448.89,
+   "end": 449.27,
+   "prob": 0.991,
+   "raw": "geral,"
+  },
+  {
+   "word": "geralmente",
+   "start": 450.8,
+   "end": 451.35,
+   "prob": 0.958,
+   "raw": "geralmente",
+   "raw_start": 450.73,
+   "raw_end": 451.35
+  },
+  {
+   "word": "você",
+   "start": 451.35,
+   "end": 451.59,
+   "prob": 0.84,
+   "raw": "você"
+  },
+  {
+   "word": "tem",
+   "start": 451.59,
+   "end": 451.83,
+   "prob": 0.992,
+   "raw": "tem"
+  },
+  {
+   "word": "duas",
+   "start": 451.83,
+   "end": 452.13,
+   "prob": 0.981,
+   "raw": "duas"
+  },
+  {
+   "word": "grandes",
+   "start": 452.13,
+   "end": 452.51,
+   "prob": 0.992,
+   "raw": "grandes"
+  },
+  {
+   "word": "áreas",
+   "start": 452.51,
+   "end": 452.87,
+   "prob": 0.992,
+   "raw": "áreas"
+  },
+  {
+   "word": "que",
+   "start": 452.87,
+   "end": 453.05,
+   "prob": 0.936,
+   "raw": "que",
+   "raw_start": 452.87,
+   "raw_end": 453.89
+  },
+  {
+   "word": "vão",
+   "start": 453.89,
+   "end": 454.39,
+   "prob": 0.973,
+   "raw": "vão"
+  },
+  {
+   "word": "acabar",
+   "start": 454.39,
+   "end": 454.67,
+   "prob": 0.984,
+   "raw": "acabar"
+  },
+  {
+   "word": "tendo",
+   "start": 457.28,
+   "end": 458.2,
+   "prob": 0.972,
+   "raw": "tendo",
+   "raw_start": 456.08,
+   "raw_end": 458.2
+  },
+  {
+   "word": "subespecialidades",
+   "start": 458.2,
+   "end": 459.02,
+   "prob": 0.965,
+   "raw": "subspecialidades"
+  },
+  {
+   "word": "dentro",
+   "start": 459.02,
+   "end": 459.22,
+   "prob": 0.988,
+   "raw": "dentro"
+  },
+  {
+   "word": "dela,",
+   "start": 459.22,
+   "end": 459.5,
+   "prob": 0.888,
+   "raw": "dela,"
+  },
+  {
+   "word": "exemplo,",
+   "start": 459.8,
+   "end": 460.18,
+   "prob": 1.0,
+   "raw": "exemplo,"
+  },
+  {
+   "word": "a",
+   "start": 460.9,
+   "end": 461.44,
+   "prob": 0.846,
+   "raw": "a",
+   "raw_start": 460.86,
+   "raw_end": 461.44
+  },
+  {
+   "word": "cirurgia",
+   "start": 461.53,
+   "end": 461.7,
+   "prob": 0.998,
+   "raw": "cirurgia",
+   "raw_start": 461.44,
+   "raw_end": 461.7
+  },
+  {
+   "word": "geral,",
+   "start": 461.7,
+   "end": 462.12,
+   "prob": 0.996,
+   "raw": "geral,"
+  },
+  {
+   "word": "que",
+   "start": 462.68,
+   "end": 462.75,
+   "prob": 0.716,
+   "raw": "que",
+   "raw_start": 462.6,
+   "raw_end": 462.76
+  },
+  {
+   "word": "é",
+   "start": 462.76,
+   "end": 462.84,
+   "prob": 0.257,
+   "raw": "é"
+  },
+  {
+   "word": "o",
+   "start": 462.84,
+   "end": 462.9,
+   "prob": 0.727,
+   "raw": "o"
+  },
+  {
+   "word": "meu",
+   "start": 462.9,
+   "end": 462.96,
+   "prob": 0.994,
+   "raw": "meu"
+  },
+  {
+   "word": "caso,",
+   "start": 462.96,
+   "end": 463.3,
+   "prob": 0.999,
+   "raw": "caso,"
+  },
+  {
+   "word": "é",
+   "start": 463.48,
+   "end": 463.6,
+   "prob": 0.462,
+   "raw": "é"
+  },
+  {
+   "word": "a",
+   "start": 463.6,
+   "end": 463.78,
+   "prob": 0.902,
+   "raw": "a"
+  },
+  {
+   "word": "clínica",
+   "start": 463.78,
+   "end": 464.14,
+   "prob": 0.889,
+   "raw": "clínica"
+  },
+  {
+   "word": "médica.",
+   "start": 464.14,
+   "end": 464.53,
+   "prob": 0.865,
+   "raw": "médica.",
+   "raw_start": 464.14,
+   "raw_end": 464.58
+  },
+  {
+   "word": "Na",
+   "start": 465.11,
+   "end": 465.2,
+   "prob": 0.216,
+   "raw": "Na",
+   "raw_start": 464.58,
+   "raw_end": 465.2
+  },
+  {
+   "word": "clínica",
+   "start": 465.2,
+   "end": 465.5,
+   "prob": 0.948,
+   "raw": "clínica"
+  },
+  {
+   "word": "médica,",
+   "start": 465.5,
+   "end": 465.96,
+   "prob": 0.97,
+   "raw": "médica,"
+  },
+  {
+   "word": "geralmente,",
+   "start": 466.04,
+   "end": 466.48,
+   "prob": 0.989,
+   "raw": "geralmente,"
+  },
+  {
+   "word": "a",
+   "start": 466.58,
+   "end": 466.66,
+   "prob": 0.672,
+   "raw": "a"
+  },
+  {
+   "word": "subespecialidade",
+   "start": 466.66,
+   "end": 467.34,
+   "prob": 0.853,
+   "raw": "subspecialidade"
+  },
+  {
+   "word": "são",
+   "start": 467.34,
+   "end": 467.84,
+   "prob": 0.908,
+   "raw": "são"
+  },
+  {
+   "word": "cardiologia,",
+   "start": 470.26,
+   "end": 470.86,
+   "prob": 0.73,
+   "raw": "cardiologia,",
+   "raw_start": 469.18,
+   "raw_end": 470.86
+  },
+  {
+   "word": "endocrinologia,",
+   "start": 471.0,
+   "end": 471.84,
+   "prob": 0.985,
+   "raw": "endocrinologia,"
+  },
+  {
+   "word": "pneumologia.",
+   "start": 474.2,
+   "end": 475.04,
+   "prob": 0.648,
+   "raw": "pneumologia.",
+   "raw_start": 472.64,
+   "raw_end": 475.04
+  },
+  {
+   "word": "Deixa",
+   "start": 478.05,
+   "end": 478.23,
+   "prob": 0.554,
+   "raw": "Deixa"
+  },
+  {
+   "word": "eu",
+   "start": 478.23,
+   "end": 478.33,
+   "prob": 0.992,
+   "raw": "eu"
+  },
+  {
+   "word": "ver,",
+   "start": 478.33,
+   "end": 478.55,
+   "prob": 0.973,
+   "raw": "ver,"
+  },
+  {
+   "word": "lembrar",
+   "start": 479.54,
+   "end": 479.95,
+   "prob": 0.74,
+   "raw": "lembrar",
+   "raw_start": 479.25,
+   "raw_end": 479.95
+  },
+  {
+   "word": "alguma",
+   "start": 479.95,
+   "end": 480.21,
+   "prob": 0.795,
+   "raw": "alguma"
+  },
+  {
+   "word": "outra.",
+   "start": 480.21,
+   "end": 480.59,
+   "prob": 0.996,
+   "raw": "outra."
+  },
+  {
+   "word": "Endocrinologia,",
+   "start": 481.77,
+   "end": 482.49,
+   "prob": 0.802,
+   "raw": "Endocrinologia,"
+  },
+  {
+   "word": "já",
+   "start": 482.49,
+   "end": 482.63,
+   "prob": 0.917,
+   "raw": "já"
+  },
+  {
+   "word": "falei.",
+   "start": 482.63,
+   "end": 482.87,
+   "prob": 0.998,
+   "raw": "falei."
+  },
+  {
+   "word": "Reumatologia",
+   "start": 486.03,
+   "end": 486.75,
+   "prob": 0.696,
+   "raw": "Neumatologia"
+  },
+  {
+   "word": "também,",
+   "start": 486.75,
+   "end": 487.15,
+   "prob": 0.748,
+   "raw": "também,"
+  },
+  {
+   "word": "acho",
+   "start": 487.29,
+   "end": 487.43,
+   "prob": 0.825,
+   "raw": "acho"
+  },
+  {
+   "word": "que",
+   "start": 487.43,
+   "end": 487.55,
+   "prob": 0.996,
+   "raw": "que"
+  },
+  {
+   "word": "eu",
+   "start": 487.55,
+   "end": 487.63,
+   "prob": 0.953,
+   "raw": "eu"
+  },
+  {
+   "word": "tinha",
+   "start": 487.63,
+   "end": 487.75,
+   "prob": 0.958,
+   "raw": "tinha"
+  },
+  {
+   "word": "esquecido",
+   "start": 487.75,
+   "end": 487.95,
+   "prob": 0.981,
+   "raw": "esquecido"
+  },
+  {
+   "word": "de",
+   "start": 487.95,
+   "end": 488.25,
+   "prob": 0.981,
+   "raw": "de"
+  },
+  {
+   "word": "falar.",
+   "start": 488.25,
+   "end": 488.39,
+   "prob": 0.995,
+   "raw": "falar."
+  },
+  {
+   "word": "Essas",
+   "start": 489.59,
+   "end": 489.87,
+   "prob": 0.948,
+   "raw": "Essas"
+  },
+  {
+   "word": "são",
+   "start": 489.87,
+   "end": 490.05,
+   "prob": 0.996,
+   "raw": "são"
+  },
+  {
+   "word": "algumas",
+   "start": 490.05,
+   "end": 490.33,
+   "prob": 0.996,
+   "raw": "algumas"
+  },
+  {
+   "word": "áreas",
+   "start": 490.33,
+   "end": 490.67,
+   "prob": 0.999,
+   "raw": "áreas"
+  },
+  {
+   "word": "que",
+   "start": 490.67,
+   "end": 491.19,
+   "prob": 0.987,
+   "raw": "que"
+  },
+  {
+   "word": "são",
+   "start": 491.19,
+   "end": 491.92,
+   "prob": 0.966,
+   "raw": "são",
+   "raw_start": 491.19,
+   "raw_end": 492.99
+  },
+  {
+   "word": "necessárias",
+   "start": 492.99,
+   "end": 493.47,
+   "prob": 0.978,
+   "raw": "necessárias"
+  },
+  {
+   "word": "pré",
+   "start": 493.47,
+   "end": 493.69,
+   "prob": 0.337,
+   "raw": "pré"
+  },
+  {
+   "word": "-requisidas.",
+   "start": 493.69,
+   "end": 494.21,
+   "prob": 0.962,
+   "raw": "-requisidas."
+  },
+  {
+   "word": "E",
+   "start": 494.21,
+   "end": 495.21,
+   "prob": 0.359,
+   "raw": "E"
+  },
+  {
+   "word": "aí",
+   "start": 495.21,
+   "end": 495.43,
+   "prob": 0.839,
+   "raw": "aí"
+  },
+  {
+   "word": "é",
+   "start": 495.43,
+   "end": 495.79,
+   "prob": 0.857,
+   "raw": "é"
+  },
+  {
+   "word": "nessa",
+   "start": 495.79,
+   "end": 496.25,
+   "prob": 0.942,
+   "raw": "nessa"
+  },
+  {
+   "word": "parte",
+   "start": 496.25,
+   "end": 496.59,
+   "prob": 0.995,
+   "raw": "parte"
+  },
+  {
+   "word": "que",
+   "start": 496.59,
+   "end": 496.81,
+   "prob": 0.981,
+   "raw": "que"
+  },
+  {
+   "word": "existe",
+   "start": 496.81,
+   "end": 497.49,
+   "prob": 0.989,
+   "raw": "existe"
+  },
+  {
+   "word": "muita",
+   "start": 497.49,
+   "end": 497.81,
+   "prob": 0.774,
+   "raw": "muita"
+  },
+  {
+   "word": "confusão,",
+   "start": 497.81,
+   "end": 498.33,
+   "prob": 0.991,
+   "raw": "confusão,"
+  },
+  {
+   "word": "tanto",
+   "start": 498.43,
+   "end": 498.63,
+   "prob": 0.973,
+   "raw": "tanto"
+  },
+  {
+   "word": "na",
+   "start": 498.63,
+   "end": 498.85,
+   "prob": 0.933,
+   "raw": "na"
+  },
+  {
+   "word": "parte",
+   "start": 498.85,
+   "end": 499.07,
+   "prob": 0.981,
+   "raw": "parte"
+  },
+  {
+   "word": "clínica",
+   "start": 499.07,
+   "end": 499.29,
+   "prob": 0.977,
+   "raw": "clínica"
+  },
+  {
+   "word": "quanto",
+   "start": 499.29,
+   "end": 499.47,
+   "prob": 0.639,
+   "raw": "quanto"
+  },
+  {
+   "word": "na",
+   "start": 499.47,
+   "end": 499.57,
+   "prob": 0.875,
+   "raw": "na"
+  },
+  {
+   "word": "parte",
+   "start": 499.57,
+   "end": 499.71,
+   "prob": 0.988,
+   "raw": "parte"
+  },
+  {
+   "word": "cirúrgica,",
+   "start": 499.71,
+   "end": 500.03,
+   "prob": 0.767,
+   "raw": "cirúrgica,"
+  },
+  {
+   "word": "porque",
+   "start": 500.11,
+   "end": 500.39,
+   "prob": 0.864,
+   "raw": "porque"
+  },
+  {
+   "word": "existem",
+   "start": 500.92,
+   "end": 501.21,
+   "prob": 0.91,
+   "raw": "existem",
+   "raw_start": 500.39,
+   "raw_end": 501.21
+  },
+  {
+   "word": "algumas",
+   "start": 501.21,
+   "end": 501.55,
+   "prob": 0.993,
+   "raw": "algumas"
+  },
+  {
+   "word": "especialidades",
+   "start": 501.55,
+   "end": 502.25,
+   "prob": 0.86,
+   "raw": "especialidades"
+  },
+  {
+   "word": "clínicas,",
+   "start": 502.38,
+   "end": 502.71,
+   "prob": 0.972,
+   "raw": "clínicas,",
+   "raw_start": 502.25,
+   "raw_end": 502.71
+  },
+  {
+   "word": "por",
+   "start": 502.95,
+   "end": 503.03,
+   "prob": 0.99,
+   "raw": "por"
+  },
+  {
+   "word": "exemplo,",
+   "start": 503.03,
+   "end": 503.31,
+   "prob": 0.999,
+   "raw": "exemplo,"
+  },
+  {
+   "word": "neurologia,",
+   "start": 503.49,
+   "end": 504.21,
+   "prob": 0.648,
+   "raw": "neurologia,"
+  },
+  {
+   "word": "dermatologia,",
+   "start": 505.06,
+   "end": 505.73,
+   "prob": 0.854,
+   "raw": "dermatologia,",
+   "raw_start": 504.95,
+   "raw_end": 505.73
+  },
+  {
+   "word": "em",
+   "start": 511.33,
+   "end": 511.45,
+   "prob": 0.713,
+   "raw": "em",
+   "raw_start": 511.23,
+   "raw_end": 511.45
+  },
+  {
+   "word": "que,",
+   "start": 511.45,
+   "end": 511.71,
+   "prob": 0.999,
+   "raw": "que,"
+  },
+  {
+   "word": "apesar",
+   "start": 512.39,
+   "end": 512.77,
+   "prob": 0.991,
+   "raw": "apesar",
+   "raw_start": 512.27,
+   "raw_end": 512.77
+  },
+  {
+   "word": "de",
+   "start": 512.77,
+   "end": 512.92,
+   "prob": 0.993,
+   "raw": "de",
+   "raw_start": 512.77,
+   "raw_end": 512.95
+  },
+  {
+   "word": "serem",
+   "start": 512.95,
+   "end": 513.09,
+   "prob": 0.997,
+   "raw": "serem"
+  },
+  {
+   "word": "clínicas,",
+   "start": 513.09,
+   "end": 513.53,
+   "prob": 0.993,
+   "raw": "clínicas,"
+  },
+  {
+   "word": "apesar",
+   "start": 513.55,
+   "end": 513.99,
+   "prob": 0.807,
+   "raw": "apesar"
+  },
+  {
+   "word": "de",
+   "start": 513.99,
+   "end": 514.23,
+   "prob": 0.994,
+   "raw": "de"
+  },
+  {
+   "word": "serem",
+   "start": 514.25,
+   "end": 514.94,
+   "prob": 0.998,
+   "raw": "serem",
+   "raw_start": 514.23,
+   "raw_end": 515.73
+  },
+  {
+   "word": "conteúdos",
+   "start": 520.98,
+   "end": 521.49,
+   "prob": 0.859,
+   "raw": "conteúdos",
+   "raw_start": 519.89,
+   "raw_end": 521.49
+  },
+  {
+   "word": "dentro",
+   "start": 521.49,
+   "end": 521.91,
+   "prob": 0.984,
+   "raw": "dentro"
+  },
+  {
+   "word": "da",
+   "start": 521.91,
+   "end": 522.19,
+   "prob": 0.995,
+   "raw": "da"
+  },
+  {
+   "word": "clínica",
+   "start": 522.19,
+   "end": 522.51,
+   "prob": 0.893,
+   "raw": "clínica"
+  },
+  {
+   "word": "médica,",
+   "start": 522.51,
+   "end": 523.01,
+   "prob": 0.936,
+   "raw": "médica,"
+  },
+  {
+   "word": "abordados",
+   "start": 523.32,
+   "end": 524.13,
+   "prob": 0.778,
+   "raw": "abordados",
+   "raw_start": 523.27,
+   "raw_end": 524.13
+  },
+  {
+   "word": "pela",
+   "start": 524.28,
+   "end": 524.41,
+   "prob": 0.983,
+   "raw": "pela",
+   "raw_start": 524.13,
+   "raw_end": 524.41
+  },
+  {
+   "word": "clínica",
+   "start": 524.41,
+   "end": 525.01,
+   "prob": 0.997,
+   "raw": "clínica"
+  },
+  {
+   "word": "médica,",
+   "start": 525.01,
+   "end": 525.44,
+   "prob": 0.996,
+   "raw": "médica,",
+   "raw_start": 525.01,
+   "raw_end": 525.49
+  },
+  {
+   "word": "mas",
+   "start": 525.89,
+   "end": 526.07,
+   "prob": 0.982,
+   "raw": "mas",
+   "raw_start": 525.83,
+   "raw_end": 526.07
+  },
+  {
+   "word": "não",
+   "start": 526.07,
+   "end": 526.45,
+   "prob": 0.99,
+   "raw": "não"
+  },
+  {
+   "word": "são",
+   "start": 526.45,
+   "end": 527.23,
+   "prob": 0.959,
+   "raw": "são"
+  },
+  {
+   "word": "considerados",
+   "start": 527.23,
+   "end": 527.87,
+   "prob": 0.912,
+   "raw": "considerados"
+  },
+  {
+   "word": "para",
+   "start": 528.6,
+   "end": 528.75,
+   "prob": 0.791,
+   "raw": "para",
+   "raw_start": 527.87,
+   "raw_end": 528.75
+  },
+  {
+   "word": "se",
+   "start": 528.75,
+   "end": 528.89,
+   "prob": 0.99,
+   "raw": "se",
+   "raw_start": 528.75,
+   "raw_end": 529.13
+  },
+  {
+   "word": "tornar",
+   "start": 529.13,
+   "end": 529.47,
+   "prob": 0.992,
+   "raw": "tornar"
+  },
+  {
+   "word": "especialistas",
+   "start": 529.47,
+   "end": 530.13,
+   "prob": 0.536,
+   "raw": "especialistas"
+  },
+  {
+   "word": "nessas",
+   "start": 530.13,
+   "end": 530.41,
+   "prob": 0.83,
+   "raw": "nessas"
+  },
+  {
+   "word": "áreas,",
+   "start": 530.41,
+   "end": 530.59,
+   "prob": 0.997,
+   "raw": "áreas,"
+  },
+  {
+   "word": "você",
+   "start": 530.59,
+   "end": 530.81,
+   "prob": 0.197,
+   "raw": "você"
+  },
+  {
+   "word": "não",
+   "start": 530.81,
+   "end": 530.93,
+   "prob": 0.974,
+   "raw": "não"
+  },
+  {
+   "word": "precisa",
+   "start": 530.93,
+   "end": 531.27,
+   "prob": 0.996,
+   "raw": "precisa"
+  },
+  {
+   "word": "passar",
+   "start": 531.27,
+   "end": 531.75,
+   "prob": 0.977,
+   "raw": "passar"
+  },
+  {
+   "word": "por",
+   "start": 531.75,
+   "end": 531.99,
+   "prob": 0.302,
+   "raw": "por"
+  },
+  {
+   "word": "uma",
+   "start": 531.99,
+   "end": 532.19,
+   "prob": 0.953,
+   "raw": "uma"
+  },
+  {
+   "word": "residência",
+   "start": 532.19,
+   "end": 532.53,
+   "prob": 0.77,
+   "raw": "residência"
+  },
+  {
+   "word": "de",
+   "start": 532.56,
+   "end": 532.69,
+   "prob": 0.954,
+   "raw": "de",
+   "raw_start": 532.53,
+   "raw_end": 532.69
+  },
+  {
+   "word": "clínica",
+   "start": 532.69,
+   "end": 532.89,
+   "prob": 0.4,
+   "raw": "clica"
+  },
+  {
+   "word": "médica",
+   "start": 532.89,
+   "end": 533.27,
+   "prob": 0.952,
+   "raw": "médica"
+  },
+  {
+   "word": "primeiro,",
+   "start": 533.27,
+   "end": 533.63,
+   "prob": 0.831,
+   "raw": "primeiro,"
+  },
+  {
+   "word": "elas",
+   "start": 534.29,
+   "end": 534.51,
+   "prob": 0.615,
+   "raw": "elas"
+  },
+  {
+   "word": "são",
+   "start": 534.51,
+   "end": 534.61,
+   "prob": 0.893,
+   "raw": "são"
+  },
+  {
+   "word": "chamadas",
+   "start": 534.61,
+   "end": 534.97,
+   "prob": 0.995,
+   "raw": "chamadas"
+  },
+  {
+   "word": "de",
+   "start": 534.97,
+   "end": 535.13,
+   "prob": 0.998,
+   "raw": "de"
+  },
+  {
+   "word": "acesso",
+   "start": 535.13,
+   "end": 535.37,
+   "prob": 0.819,
+   "raw": "acesso"
+  },
+  {
+   "word": "direto,",
+   "start": 535.37,
+   "end": 535.89,
+   "prob": 0.966,
+   "raw": "direto,"
+  },
+  {
+   "word": "por",
+   "start": 538.08,
+   "end": 538.5,
+   "prob": 0.964,
+   "raw": "por"
+  },
+  {
+   "word": "exemplo,",
+   "start": 538.5,
+   "end": 538.76,
+   "prob": 0.999,
+   "raw": "exemplo,"
+  },
+  {
+   "word": "uma",
+   "start": 539.29,
+   "end": 539.46,
+   "prob": 0.916,
+   "raw": "uma",
+   "raw_start": 539.24,
+   "raw_end": 539.46
+  },
+  {
+   "word": "especialidade",
+   "start": 539.46,
+   "end": 540.02,
+   "prob": 0.798,
+   "raw": "especialidade"
+  },
+  {
+   "word": "de",
+   "start": 540.02,
+   "end": 540.2,
+   "prob": 0.619,
+   "raw": "de"
+  },
+  {
+   "word": "neurologia",
+   "start": 540.2,
+   "end": 540.68,
+   "prob": 0.666,
+   "raw": "neurologia"
+  },
+  {
+   "word": "da",
+   "start": 540.68,
+   "end": 540.84,
+   "prob": 0.304,
+   "raw": "da"
+  },
+  {
+   "word": "formação",
+   "start": 541.14,
+   "end": 541.82,
+   "prob": 0.92,
+   "raw": "formação",
+   "raw_start": 540.84,
+   "raw_end": 541.82
+  },
+  {
+   "word": "demora",
+   "start": 541.82,
+   "end": 542.53,
+   "prob": 0.954,
+   "raw": "demora",
+   "raw_start": 541.82,
+   "raw_end": 543.46
+  },
+  {
+   "word": "cerca",
+   "start": 543.46,
+   "end": 543.66,
+   "prob": 0.806,
+   "raw": "cerca"
+  },
+  {
+   "word": "de",
+   "start": 543.66,
+   "end": 543.96,
+   "prob": 0.996,
+   "raw": "de"
+  },
+  {
+   "word": "três",
+   "start": 543.96,
+   "end": 544.12,
+   "prob": 0.487,
+   "raw": "três"
+  },
+  {
+   "word": "anos",
+   "start": 544.12,
+   "end": 544.46,
+   "prob": 0.998,
+   "raw": "anos"
+  },
+  {
+   "word": "de",
+   "start": 544.46,
+   "end": 544.64,
+   "prob": 0.859,
+   "raw": "de"
+  },
+  {
+   "word": "acesso",
+   "start": 544.64,
+   "end": 544.86,
+   "prob": 0.981,
+   "raw": "acesso"
+  },
+  {
+   "word": "direto,",
+   "start": 544.86,
+   "end": 545.26,
+   "prob": 0.986,
+   "raw": "direto,"
+  },
+  {
+   "word": "então,",
+   "start": 545.3,
+   "end": 545.44,
+   "prob": 0.757,
+   "raw": "então,"
+  },
+  {
+   "word": "depois",
+   "start": 546.67,
+   "end": 546.92,
+   "prob": 0.982,
+   "raw": "depois",
+   "raw_start": 545.88,
+   "raw_end": 546.92
+  },
+  {
+   "word": "de",
+   "start": 546.92,
+   "end": 547.07,
+   "prob": 0.377,
+   "raw": "de",
+   "raw_start": 546.92,
+   "raw_end": 547.14
+  },
+  {
+   "word": "termos",
+   "start": 547.17,
+   "end": 547.36,
+   "prob": 0.668,
+   "raw": "termos",
+   "raw_start": 547.14,
+   "raw_end": 547.36
+  },
+  {
+   "word": "uma",
+   "start": 547.36,
+   "end": 547.48,
+   "prob": 0.606,
+   "raw": "uma"
+  },
+  {
+   "word": "faculdade,",
+   "start": 547.52,
+   "end": 547.86,
+   "prob": 0.997,
+   "raw": "faculdade,",
+   "raw_start": 547.48,
+   "raw_end": 547.86
+  },
+  {
+   "word": "como",
+   "start": 549.06,
+   "end": 549.2,
+   "prob": 0.478,
+   "raw": "como",
+   "raw_start": 548.74,
+   "raw_end": 549.2
+  },
+  {
+   "word": "eu",
+   "start": 549.2,
+   "end": 549.3,
+   "prob": 0.255,
+   "raw": "eu"
+  },
+  {
+   "word": "digo,",
+   "start": 549.3,
+   "end": 549.38,
+   "prob": 0.297,
+   "raw": "digo,",
+   "raw_start": 549.3,
+   "raw_end": 549.42
+  },
+  {
+   "word": "o",
+   "start": 551.0,
+   "end": 551.32,
+   "prob": 0.092,
+   "raw": "o",
+   "raw_start": 550.94,
+   "raw_end": 551.32
+  },
+  {
+   "word": "responsável",
+   "start": 551.32,
+   "end": 551.48,
+   "prob": 0.225,
+   "raw": "responsável"
+  },
+  {
+   "word": "de",
+   "start": 551.48,
+   "end": 551.76,
+   "prob": 0.974,
+   "raw": "de"
+  },
+  {
+   "word": "medicina",
+   "start": 551.76,
+   "end": 552.04,
+   "prob": 0.814,
+   "raw": "medicina"
+  },
+  {
+   "word": "já",
+   "start": 552.04,
+   "end": 552.24,
+   "prob": 0.946,
+   "raw": "já"
+  },
+  {
+   "word": "pode",
+   "start": 552.24,
+   "end": 552.58,
+   "prob": 0.987,
+   "raw": "pode"
+  },
+  {
+   "word": "prestar",
+   "start": 552.58,
+   "end": 553.04,
+   "prob": 0.945,
+   "raw": "prestar",
+   "raw_start": 552.58,
+   "raw_end": 553.86
+  },
+  {
+   "word": "para",
+   "start": 553.86,
+   "end": 554.18,
+   "prob": 0.41,
+   "raw": "para"
+  },
+  {
+   "word": "a",
+   "start": 554.18,
+   "end": 554.2,
+   "prob": 0.333,
+   "raw": "a"
+  },
+  {
+   "word": "residência",
+   "start": 554.2,
+   "end": 554.74,
+   "prob": 0.711,
+   "raw": "residência"
+  },
+  {
+   "word": "e",
+   "start": 554.74,
+   "end": 555.22,
+   "prob": 0.625,
+   "raw": "e"
+  },
+  {
+   "word": "se",
+   "start": 555.22,
+   "end": 555.48,
+   "prob": 0.822,
+   "raw": "se"
+  },
+  {
+   "word": "for",
+   "start": 555.48,
+   "end": 555.7,
+   "prob": 0.983,
+   "raw": "for"
+  },
+  {
+   "word": "aprovado,",
+   "start": 555.7,
+   "end": 556.16,
+   "prob": 0.9,
+   "raw": "aprovado,"
+  },
+  {
+   "word": "pode",
+   "start": 556.2,
+   "end": 556.42,
+   "prob": 0.97,
+   "raw": "pode"
+  },
+  {
+   "word": "por",
+   "start": 556.42,
+   "end": 556.58,
+   "prob": 0.078,
+   "raw": "por"
+  },
+  {
+   "word": "só",
+   "start": 556.58,
+   "end": 556.78,
+   "prob": 0.117,
+   "raw": "só"
+  },
+  {
+   "word": "alguns",
+   "start": 556.78,
+   "end": 556.96,
+   "prob": 0.503,
+   "raw": "alguns"
+  },
+  {
+   "word": "dos",
+   "start": 556.96,
+   "end": 557.14,
+   "prob": 0.356,
+   "raw": "dos"
+  },
+  {
+   "word": "programas",
+   "start": 557.17,
+   "end": 557.66,
+   "prob": 0.985,
+   "raw": "programas",
+   "raw_start": 557.14,
+   "raw_end": 557.66
+  },
+  {
+   "word": "e",
+   "start": 557.66,
+   "end": 557.84,
+   "prob": 0.826,
+   "raw": "e"
+  },
+  {
+   "word": "obter",
+   "start": 558.92,
+   "end": 559.56,
+   "prob": 0.852,
+   "raw": "obter",
+   "raw_start": 557.84,
+   "raw_end": 559.56
+  },
+  {
+   "word": "o",
+   "start": 559.56,
+   "end": 560.55,
+   "prob": 0.917,
+   "raw": "o",
+   "raw_start": 559.56,
+   "raw_end": 561.12
+  },
+  {
+   "word": "RQ,",
+   "start": 561.12,
+   "end": 561.48,
+   "prob": 0.735,
+   "raw": "RQ,"
+  },
+  {
+   "word": "que",
+   "start": 561.66,
+   "end": 561.92,
+   "prob": 0.947,
+   "raw": "que"
+  },
+  {
+   "word": "é",
+   "start": 561.92,
+   "end": 561.98,
+   "prob": 0.982,
+   "raw": "é"
+  },
+  {
+   "word": "o",
+   "start": 561.98,
+   "end": 562.1,
+   "prob": 0.955,
+   "raw": "o"
+  },
+  {
+   "word": "número",
+   "start": 562.1,
+   "end": 562.42,
+   "prob": 0.984,
+   "raw": "número"
+  },
+  {
+   "word": "de",
+   "start": 565.13,
+   "end": 565.53,
+   "prob": 0.78,
+   "raw": "de",
+   "raw_start": 564.21,
+   "raw_end": 565.53
+  },
+  {
+   "word": "identificação,",
+   "start": 565.53,
+   "end": 566.19,
+   "prob": 0.95,
+   "raw": "identificação,"
+  },
+  {
+   "word": "é",
+   "start": 567.18,
+   "end": 567.29,
+   "prob": 0.676,
+   "raw": "é",
+   "raw_start": 566.75,
+   "raw_end": 567.29
+  },
+  {
+   "word": "o",
+   "start": 567.29,
+   "end": 567.33,
+   "prob": 0.961,
+   "raw": "o"
+  },
+  {
+   "word": "registro",
+   "start": 567.33,
+   "end": 567.99,
+   "prob": 0.996,
+   "raw": "registro"
+  },
+  {
+   "word": "que",
+   "start": 567.99,
+   "end": 568.41,
+   "prob": 0.917,
+   "raw": "que"
+  },
+  {
+   "word": "qualifica",
+   "start": 568.41,
+   "end": 568.84,
+   "prob": 0.944,
+   "raw": "qualifica",
+   "raw_start": 568.41,
+   "raw_end": 569.39
+  },
+  {
+   "word": "o",
+   "start": 569.42,
+   "end": 569.63,
+   "prob": 0.926,
+   "raw": "o",
+   "raw_start": 569.39,
+   "raw_end": 569.67
+  },
+  {
+   "word": "médico",
+   "start": 570.36,
+   "end": 570.71,
+   "prob": 0.496,
+   "raw": "médico",
+   "raw_start": 569.67,
+   "raw_end": 570.71
+  },
+  {
+   "word": "como",
+   "start": 570.83,
+   "end": 570.93,
+   "prob": 0.584,
+   "raw": "como",
+   "raw_start": 570.71,
+   "raw_end": 570.93
+  },
+  {
+   "word": "especialista",
+   "start": 570.93,
+   "end": 571.41,
+   "prob": 0.908,
+   "raw": "especialista"
+  },
+  {
+   "word": "naquela",
+   "start": 571.45,
+   "end": 571.71,
+   "prob": 0.985,
+   "raw": "naquela",
+   "raw_start": 571.41,
+   "raw_end": 571.71
+  },
+  {
+   "word": "área.",
+   "start": 571.71,
+   "end": 572.01,
+   "prob": 0.998,
+   "raw": "área."
+  },
+  {
+   "word": "Então",
+   "start": 573.36,
+   "end": 573.7,
+   "prob": 0.899,
+   "raw": "Então",
+   "raw_start": 573.35,
+   "raw_end": 573.95
+  },
+  {
+   "word": "você",
+   "start": 573.95,
+   "end": 574.13,
+   "prob": 0.758,
+   "raw": "você"
+  },
+  {
+   "word": "pode",
+   "start": 574.13,
+   "end": 574.31,
+   "prob": 0.995,
+   "raw": "pode"
+  },
+  {
+   "word": "obter",
+   "start": 574.31,
+   "end": 574.69,
+   "prob": 0.985,
+   "raw": "obter"
+  },
+  {
+   "word": "o",
+   "start": 574.69,
+   "end": 574.83,
+   "prob": 0.939,
+   "raw": "o"
+  },
+  {
+   "word": "RQ,",
+   "start": 574.83,
+   "end": 575.09,
+   "prob": 0.995,
+   "raw": "RQ,"
+  },
+  {
+   "word": "que",
+   "start": 575.09,
+   "end": 575.19,
+   "prob": 0.934,
+   "raw": "que"
+  },
+  {
+   "word": "é",
+   "start": 575.19,
+   "end": 575.37,
+   "prob": 0.996,
+   "raw": "é"
+  },
+  {
+   "word": "direto",
+   "start": 575.37,
+   "end": 575.81,
+   "prob": 0.952,
+   "raw": "direto"
+  },
+  {
+   "word": "sem",
+   "start": 575.88,
+   "end": 575.99,
+   "prob": 0.534,
+   "raw": "sem",
+   "raw_start": 575.81,
+   "raw_end": 575.99
+  },
+  {
+   "word": "precisar",
+   "start": 575.99,
+   "end": 576.49,
+   "prob": 0.943,
+   "raw": "precisar"
+  },
+  {
+   "word": "de",
+   "start": 576.49,
+   "end": 576.65,
+   "prob": 0.988,
+   "raw": "de"
+  },
+  {
+   "word": "uma",
+   "start": 576.65,
+   "end": 576.85,
+   "prob": 0.725,
+   "raw": "uma"
+  },
+  {
+   "word": "outra",
+   "start": 576.85,
+   "end": 577.25,
+   "prob": 0.977,
+   "raw": "outra",
+   "raw_start": 576.85,
+   "raw_end": 577.29
+  },
+  {
+   "word": "especialidade",
+   "start": 577.29,
+   "end": 577.79,
+   "prob": 0.942,
+   "raw": "especialidade"
+  },
+  {
+   "word": "antes.",
+   "start": 577.79,
+   "end": 578.03,
+   "prob": 0.97,
+   "raw": "antes."
+  },
+  {
+   "word": "Agora",
+   "start": 578.69,
+   "end": 578.89,
+   "prob": 0.988,
+   "raw": "Agora",
+   "raw_start": 578.63,
+   "raw_end": 578.89
+  },
+  {
+   "word": "nas",
+   "start": 578.89,
+   "end": 579.19,
+   "prob": 0.479,
+   "raw": "nas"
+  },
+  {
+   "word": "especialidades",
+   "start": 579.19,
+   "end": 579.87,
+   "prob": 0.865,
+   "raw": "especialidades"
+  },
+  {
+   "word": "de",
+   "start": 579.87,
+   "end": 580.03,
+   "prob": 0.979,
+   "raw": "de"
+  },
+  {
+   "word": "pré",
+   "start": 580.08,
+   "end": 580.19,
+   "prob": 0.956,
+   "raw": "pré",
+   "raw_start": 580.03,
+   "raw_end": 580.19
+  },
+  {
+   "word": "-requisito,",
+   "start": 580.19,
+   "end": 580.65,
+   "prob": 0.982,
+   "raw": "-requisito,",
+   "raw_start": 580.19,
+   "raw_end": 580.73
+  },
+  {
+   "word": "você",
+   "start": 582.18,
+   "end": 582.43,
+   "prob": 0.971,
+   "raw": "você",
+   "raw_start": 582.13,
+   "raw_end": 582.43
+  },
+  {
+   "word": "precisa",
+   "start": 582.43,
+   "end": 582.89,
+   "prob": 0.992,
+   "raw": "precisa"
+  },
+  {
+   "word": "fazer,",
+   "start": 582.89,
+   "end": 583.61,
+   "prob": 0.99,
+   "raw": "fazer,"
+  },
+  {
+   "word": "assim",
+   "start": 585.39,
+   "end": 585.67,
+   "prob": 0.961,
+   "raw": "assim",
+   "raw_start": 585.39,
+   "raw_end": 585.71
+  },
+  {
+   "word": "como",
+   "start": 585.71,
+   "end": 585.97,
+   "prob": 0.623,
+   "raw": "como"
+  },
+  {
+   "word": "que",
+   "start": 585.97,
+   "end": 586.13,
+   "prob": 0.366,
+   "raw": "que"
+  },
+  {
+   "word": "residencio",
+   "start": 586.13,
+   "end": 586.49,
+   "prob": 0.684,
+   "raw": "residencio"
+  },
+  {
+   "word": "se",
+   "start": 586.49,
+   "end": 586.57,
+   "prob": 0.132,
+   "raw": "se"
+  },
+  {
+   "word": "você",
+   "start": 586.57,
+   "end": 586.73,
+   "prob": 0.904,
+   "raw": "você"
+  },
+  {
+   "word": "faz",
+   "start": 586.73,
+   "end": 586.91,
+   "prob": 0.898,
+   "raw": "faz"
+  },
+  {
+   "word": "uma",
+   "start": 586.91,
+   "end": 587.09,
+   "prob": 0.488,
+   "raw": "uma"
+  },
+  {
+   "word": "outra",
+   "start": 587.09,
+   "end": 587.33,
+   "prob": 0.976,
+   "raw": "outra"
+  },
+  {
+   "word": "residência",
+   "start": 587.33,
+   "end": 587.89,
+   "prob": 0.942,
+   "raw": "residência",
+   "raw_start": 587.33,
+   "raw_end": 588.37
+  },
+  {
+   "word": "que",
+   "start": 589.94,
+   "end": 590.32,
+   "prob": 0.687,
+   "raw": "que"
+  },
+  {
+   "word": "geralmente",
+   "start": 590.32,
+   "end": 590.94,
+   "prob": 0.987,
+   "raw": "geralmente"
+  },
+  {
+   "word": "é",
+   "start": 590.94,
+   "end": 591.08,
+   "prob": 0.913,
+   "raw": "é"
+  },
+  {
+   "word": "clinicamente,",
+   "start": 591.08,
+   "end": 591.78,
+   "prob": 0.887,
+   "raw": "clinicamente,"
+  },
+  {
+   "word": "como",
+   "start": 591.78,
+   "end": 592.38,
+   "prob": 0.245,
+   "raw": "como"
+  },
+  {
+   "word": "eu",
+   "start": 593.79,
+   "end": 594.8,
+   "prob": 0.875,
+   "raw": "eu",
+   "raw_start": 592.38,
+   "raw_end": 594.8
+  },
+  {
+   "word": "já",
+   "start": 594.8,
+   "end": 594.94,
+   "prob": 0.918,
+   "raw": "já"
+  },
+  {
+   "word": "falei,",
+   "start": 594.94,
+   "end": 595.2,
+   "prob": 0.996,
+   "raw": "falei,"
+  },
+  {
+   "word": "e",
+   "start": 595.98,
+   "end": 596.08,
+   "prob": 0.644,
+   "raw": "e"
+  },
+  {
+   "word": "só",
+   "start": 596.08,
+   "end": 596.87,
+   "prob": 0.755,
+   "raw": "só",
+   "raw_start": 596.08,
+   "raw_end": 597.18
+  },
+  {
+   "word": "Pessoas",
+   "start": 597.7,
+   "end": 598.12,
+   "prob": 0.682,
+   "raw": "Pessoas",
+   "raw_start": 597.18,
+   "raw_end": 598.12
+  },
+  {
+   "word": "que",
+   "start": 598.16,
+   "end": 598.24,
+   "prob": 0.973,
+   "raw": "que",
+   "raw_start": 598.12,
+   "raw_end": 598.24
+  },
+  {
+   "word": "possuem",
+   "start": 599.33,
+   "end": 599.8,
+   "prob": 0.995,
+   "raw": "possuem",
+   "raw_start": 598.24,
+   "raw_end": 599.8
+  },
+  {
+   "word": "essas",
+   "start": 599.8,
+   "end": 600.06,
+   "prob": 0.944,
+   "raw": "essas"
+  },
+  {
+   "word": "especiais",
+   "start": 600.06,
+   "end": 600.52,
+   "prob": 0.636,
+   "raw": "especiais"
+  },
+  {
+   "word": "que",
+   "start": 600.52,
+   "end": 600.94,
+   "prob": 0.514,
+   "raw": "que"
+  },
+  {
+   "word": "estão",
+   "start": 601.11,
+   "end": 601.2,
+   "prob": 0.881,
+   "raw": "estão",
+   "raw_start": 600.94,
+   "raw_end": 601.2
+  },
+  {
+   "word": "aptas",
+   "start": 601.2,
+   "end": 601.72,
+   "prob": 0.67,
+   "raw": "aptas"
+  },
+  {
+   "word": "a",
+   "start": 602.5,
+   "end": 602.6,
+   "prob": 0.798,
+   "raw": "a",
+   "raw_start": 601.72,
+   "raw_end": 602.6
+  },
+  {
+   "word": "fazer",
+   "start": 602.6,
+   "end": 602.94,
+   "prob": 0.953,
+   "raw": "fazer"
+  },
+  {
+   "word": "prova",
+   "start": 602.94,
+   "end": 603.44,
+   "prob": 0.655,
+   "raw": "prova"
+  },
+  {
+   "word": "e",
+   "start": 603.77,
+   "end": 603.94,
+   "prob": 0.776,
+   "raw": "e",
+   "raw_start": 603.44,
+   "raw_end": 603.94
+  },
+  {
+   "word": "concorrer",
+   "start": 603.94,
+   "end": 604.76,
+   "prob": 0.774,
+   "raw": "concorrer"
+  },
+  {
+   "word": "dentro",
+   "start": 605.47,
+   "end": 605.64,
+   "prob": 0.325,
+   "raw": "dentro",
+   "raw_start": 604.76,
+   "raw_end": 605.64
+  },
+  {
+   "word": "dos",
+   "start": 605.64,
+   "end": 605.84,
+   "prob": 0.809,
+   "raw": "dos"
+  },
+  {
+   "word": "concursos",
+   "start": 605.89,
+   "end": 606.46,
+   "prob": 0.977,
+   "raw": "concursos",
+   "raw_start": 605.84,
+   "raw_end": 606.46
+  },
+  {
+   "word": "para",
+   "start": 606.46,
+   "end": 606.82,
+   "prob": 0.954,
+   "raw": "para"
+  },
+  {
+   "word": "as",
+   "start": 606.82,
+   "end": 607.42,
+   "prob": 0.811,
+   "raw": "as"
+  },
+  {
+   "word": "subespecialidades.",
+   "start": 607.42,
+   "end": 608.16,
+   "prob": 0.71,
+   "raw": "subspecidades."
+  },
+  {
+   "word": "Então,",
+   "start": 608.58,
+   "end": 608.76,
+   "prob": 0.866,
+   "raw": "Então,"
+  },
+  {
+   "word": "só",
+   "start": 608.84,
+   "end": 609.06,
+   "prob": 0.435,
+   "raw": "só"
+  },
+  {
+   "word": "alguém",
+   "start": 609.06,
+   "end": 609.54,
+   "prob": 0.855,
+   "raw": "alguém"
+  },
+  {
+   "word": "com",
+   "start": 609.54,
+   "end": 609.8,
+   "prob": 0.989,
+   "raw": "com"
+  },
+  {
+   "word": "especiais",
+   "start": 609.8,
+   "end": 610.26,
+   "prob": 0.645,
+   "raw": "especiais"
+  },
+  {
+   "word": "clincamente",
+   "start": 610.26,
+   "end": 610.86,
+   "prob": 0.539,
+   "raw": "clincamente"
+  },
+  {
+   "word": "pode",
+   "start": 610.86,
+   "end": 611.36,
+   "prob": 0.601,
+   "raw": "pode"
+  },
+  {
+   "word": "ser",
+   "start": 611.36,
+   "end": 611.58,
+   "prob": 0.982,
+   "raw": "ser"
+  },
+  {
+   "word": "urologista.",
+   "start": 611.58,
+   "end": 612.3,
+   "prob": 0.745,
+   "raw": "urologista."
+  },
+  {
+   "word": "E",
+   "start": 613.52,
+   "end": 613.68,
+   "prob": 0.533,
+   "raw": "E",
+   "raw_start": 612.86,
+   "raw_end": 613.68
+  },
+  {
+   "word": "só",
+   "start": 613.68,
+   "end": 613.96,
+   "prob": 0.958,
+   "raw": "só"
+  },
+  {
+   "word": "algum",
+   "start": 613.96,
+   "end": 614.64,
+   "prob": 0.231,
+   "raw": "algum"
+  },
+  {
+   "word": "cirurgião",
+   "start": 615.87,
+   "end": 616.85,
+   "prob": 0.638,
+   "raw": "cirurgião",
+   "raw_start": 614.64,
+   "raw_end": 617.68
+  },
+  {
+   "word": "geral.",
+   "start": 617.68,
+   "end": 617.94,
+   "prob": 0.967,
+   "raw": "geral."
+  },
+  {
+   "word": "Pode",
+   "start": 618.97,
+   "end": 619.14,
+   "prob": 0.957,
+   "raw": "Pode",
+   "raw_start": 618.82,
+   "raw_end": 619.14
+  },
+  {
+   "word": "ser",
+   "start": 619.14,
+   "end": 619.34,
+   "prob": 0.995,
+   "raw": "ser"
+  },
+  {
+   "word": "o",
+   "start": 619.34,
+   "end": 619.56,
+   "prob": 0.632,
+   "raw": "o"
+  },
+  {
+   "word": "cirurgião",
+   "start": 619.56,
+   "end": 619.9,
+   "prob": 0.968,
+   "raw": "cirurgião"
+  },
+  {
+   "word": "plástico,",
+   "start": 619.9,
+   "end": 620.38,
+   "prob": 0.991,
+   "raw": "plástico,"
+  },
+  {
+   "word": "cirurgião",
+   "start": 620.6,
+   "end": 620.88,
+   "prob": 0.998,
+   "raw": "cirurgião"
+  },
+  {
+   "word": "vascular",
+   "start": 620.88,
+   "end": 621.44,
+   "prob": 0.478,
+   "raw": "bascular"
+  },
+  {
+   "word": "ou",
+   "start": 621.44,
+   "end": 621.68,
+   "prob": 0.572,
+   "raw": "ou"
+  },
+  {
+   "word": "urologista.",
+   "start": 621.68,
+   "end": 622.31,
+   "prob": 0.96,
+   "raw": "urologista.",
+   "raw_start": 621.68,
+   "raw_end": 622.4
+  },
+  {
+   "word": "E",
+   "start": 623.83,
+   "end": 623.98,
+   "prob": 0.565,
+   "raw": "E",
+   "raw_start": 623.3,
+   "raw_end": 623.98
+  },
+  {
+   "word": "aí,",
+   "start": 623.98,
+   "end": 624.24,
+   "prob": 0.426,
+   "raw": "aí,"
+  },
+  {
+   "word": "é",
+   "start": 624.52,
+   "end": 624.8,
+   "prob": 0.353,
+   "raw": "é"
+  },
+  {
+   "word": "uma",
+   "start": 625.88,
+   "end": 626.12,
+   "prob": 0.98,
+   "raw": "uma",
+   "raw_start": 624.8,
+   "raw_end": 626.12
+  },
+  {
+   "word": "mistura",
+   "start": 626.12,
+   "end": 626.5,
+   "prob": 0.995,
+   "raw": "mistura"
+  },
+  {
+   "word": "grande,",
+   "start": 626.5,
+   "end": 626.86,
+   "prob": 0.989,
+   "raw": "grande,"
+  },
+  {
+   "word": "porque",
+   "start": 626.96,
+   "end": 627.26,
+   "prob": 0.929,
+   "raw": "porque"
+  },
+  {
+   "word": "existem",
+   "start": 627.26,
+   "end": 628.36,
+   "prob": 0.492,
+   "raw": "existem"
+  },
+  {
+   "word": "também",
+   "start": 628.36,
+   "end": 628.7,
+   "prob": 0.957,
+   "raw": "também"
+  },
+  {
+   "word": "especiais",
+   "start": 628.7,
+   "end": 629.22,
+   "prob": 0.586,
+   "raw": "especiais"
+  },
+  {
+   "word": "cirurgios",
+   "start": 629.22,
+   "end": 629.92,
+   "prob": 0.713,
+   "raw": "cirurgios"
+  },
+  {
+   "word": "que",
+   "start": 629.92,
+   "end": 630.08,
+   "prob": 0.588,
+   "raw": "que"
+  },
+  {
+   "word": "são",
+   "start": 630.08,
+   "end": 630.45,
+   "prob": 0.992,
+   "raw": "são",
+   "raw_start": 630.08,
+   "raw_end": 632.68
+  },
+  {
+   "word": "de",
+   "start": 632.68,
+   "end": 632.82,
+   "prob": 0.583,
+   "raw": "de"
+  },
+  {
+   "word": "acesso",
+   "start": 632.82,
+   "end": 632.98,
+   "prob": 0.372,
+   "raw": "assas"
+  },
+  {
+   "word": "diretos",
+   "start": 632.98,
+   "end": 633.42,
+   "prob": 0.76,
+   "raw": "diretos"
+  },
+  {
+   "word": "como",
+   "start": 633.48,
+   "end": 633.62,
+   "prob": 0.637,
+   "raw": "como",
+   "raw_start": 633.42,
+   "raw_end": 633.62
+  },
+  {
+   "word": "o",
+   "start": 633.62,
+   "end": 633.76,
+   "prob": 0.676,
+   "raw": "o"
+  },
+  {
+   "word": "ortopedia,",
+   "start": 633.76,
+   "end": 634.38,
+   "prob": 0.554,
+   "raw": "urtopedia,"
+  },
+  {
+   "word": "a",
+   "start": 635.26,
+   "end": 635.4,
+   "prob": 0.228,
+   "raw": "a"
+  },
+  {
+   "word": "neurocirurgia,",
+   "start": 635.4,
+   "end": 636.16,
+   "prob": 0.825,
+   "raw": "neurocirurgia,"
+  },
+  {
+   "word": "cardio",
+   "start": 636.3,
+   "end": 636.54,
+   "prob": 0.531,
+   "raw": "cartes"
+  },
+  {
+   "word": "cirurgia,",
+   "start": 636.58,
+   "end": 637.32,
+   "prob": 0.733,
+   "raw": "cirurgia,",
+   "raw_start": 636.54,
+   "raw_end": 637.42
+  },
+  {
+   "word": "são",
+   "start": 637.42,
+   "end": 638.9,
+   "prob": 0.887,
+   "raw": "são"
+  },
+  {
+   "word": "as",
+   "start": 638.9,
+   "end": 639.02,
+   "prob": 0.159,
+   "raw": "as"
+  },
+  {
+   "word": "especiais",
+   "start": 639.06,
+   "end": 639.28,
+   "prob": 0.885,
+   "raw": "especiais",
+   "raw_start": 639.02,
+   "raw_end": 639.28
+  },
+  {
+   "word": "que",
+   "start": 639.28,
+   "end": 639.63,
+   "prob": 0.768,
+   "raw": "que",
+   "raw_start": 639.28,
+   "raw_end": 639.72
+  },
+  {
+   "word": "ao",
+   "start": 639.72,
+   "end": 639.86,
+   "prob": 0.239,
+   "raw": "ao"
+  },
+  {
+   "word": "invés",
+   "start": 639.86,
+   "end": 640.91,
+   "prob": 0.994,
+   "raw": "invés",
+   "raw_start": 639.86,
+   "raw_end": 642.78
+  },
+  {
+   "word": "de",
+   "start": 642.78,
+   "end": 642.92,
+   "prob": 0.776,
+   "raw": "de"
+  },
+  {
+   "word": "ser",
+   "start": 642.97,
+   "end": 643.04,
+   "prob": 0.865,
+   "raw": "ser",
+   "raw_start": 642.92,
+   "raw_end": 643.04
+  },
+  {
+   "word": "cursado",
+   "start": 643.04,
+   "end": 643.62,
+   "prob": 0.482,
+   "raw": "cursado"
+  },
+  {
+   "word": "2",
+   "start": 643.62,
+   "end": 643.9,
+   "prob": 0.232,
+   "raw": "2"
+  },
+  {
+   "word": "anos,",
+   "start": 643.9,
+   "end": 644.26,
+   "prob": 0.883,
+   "raw": "anos,"
+  },
+  {
+   "word": "3",
+   "start": 644.44,
+   "end": 644.74,
+   "prob": 0.96,
+   "raw": "3"
+  },
+  {
+   "word": "anos",
+   "start": 644.74,
+   "end": 645.02,
+   "prob": 0.999,
+   "raw": "anos"
+  },
+  {
+   "word": "de",
+   "start": 645.02,
+   "end": 645.22,
+   "prob": 0.957,
+   "raw": "de"
+  },
+  {
+   "word": "cirurgia",
+   "start": 645.22,
+   "end": 645.6,
+   "prob": 0.988,
+   "raw": "cirurgia"
+  },
+  {
+   "word": "plástico",
+   "start": 645.6,
+   "end": 646.0,
+   "prob": 0.72,
+   "raw": "plástico",
+   "raw_start": 645.6,
+   "raw_end": 646.1
+  },
+  {
+   "word": "e",
+   "start": 646.63,
+   "end": 646.74,
+   "prob": 0.156,
+   "raw": "e",
+   "raw_start": 646.1,
+   "raw_end": 646.74
+  },
+  {
+   "word": "seguidos",
+   "start": 646.78,
+   "end": 647.14,
+   "prob": 0.643,
+   "raw": "seguidos",
+   "raw_start": 646.74,
+   "raw_end": 647.14
+  },
+  {
+   "word": "de",
+   "start": 647.14,
+   "end": 647.44,
+   "prob": 0.637,
+   "raw": "de"
+  },
+  {
+   "word": "3",
+   "start": 647.44,
+   "end": 647.78,
+   "prob": 0.896,
+   "raw": "3"
+  },
+  {
+   "word": "anos",
+   "start": 647.78,
+   "end": 648.2,
+   "prob": 0.998,
+   "raw": "anos"
+  },
+  {
+   "word": "e",
+   "start": 648.32,
+   "end": 648.84,
+   "prob": 0.215,
+   "raw": "e",
+   "raw_start": 648.2,
+   "raw_end": 648.84
+  },
+  {
+   "word": "as",
+   "start": 648.84,
+   "end": 648.94,
+   "prob": 0.465,
+   "raw": "as"
+  },
+  {
+   "word": "outras",
+   "start": 648.94,
+   "end": 649.1,
+   "prob": 0.925,
+   "raw": "outras"
+  },
+  {
+   "word": "especialidades",
+   "start": 649.1,
+   "end": 649.72,
+   "prob": 0.704,
+   "raw": "especialidades"
+  },
+  {
+   "word": "são",
+   "start": 649.72,
+   "end": 649.9,
+   "prob": 0.966,
+   "raw": "são"
+  },
+  {
+   "word": "feitas",
+   "start": 649.9,
+   "end": 650.22,
+   "prob": 0.953,
+   "raw": "feitas"
+  },
+  {
+   "word": "em",
+   "start": 650.34,
+   "end": 650.44,
+   "prob": 0.262,
+   "raw": "em",
+   "raw_start": 650.22,
+   "raw_end": 650.44
+  },
+  {
+   "word": "5",
+   "start": 650.44,
+   "end": 650.58,
+   "prob": 0.664,
+   "raw": "5"
+  },
+  {
+   "word": "anos",
+   "start": 650.58,
+   "end": 650.74,
+   "prob": 0.997,
+   "raw": "anos"
+  },
+  {
+   "word": "direto",
+   "start": 650.74,
+   "end": 651.17,
+   "prob": 0.523,
+   "raw": "direto",
+   "raw_start": 650.74,
+   "raw_end": 651.22
+  },
+  {
+   "word": "na",
+   "start": 652.32,
+   "end": 652.66,
+   "prob": 0.903,
+   "raw": "na",
+   "raw_start": 651.22,
+   "raw_end": 652.66
+  },
+  {
+   "word": "área",
+   "start": 652.66,
+   "end": 653.76,
+   "prob": 0.941,
+   "raw": "área"
+  },
+  {
+   "word": "de",
+   "start": 653.76,
+   "end": 653.92,
+   "prob": 0.989,
+   "raw": "de"
+  },
+  {
+   "word": "interesse",
+   "start": 653.92,
+   "end": 654.2,
+   "prob": 0.898,
+   "raw": "interesse"
+  },
+  {
+   "word": "final.",
+   "start": 654.2,
+   "end": 654.48,
+   "prob": 0.994,
+   "raw": "final."
+  },
+  {
+   "word": "Então",
+   "start": 656.05,
+   "end": 656.18,
+   "prob": 0.622,
+   "raw": "Então",
+   "raw_start": 655.74,
+   "raw_end": 656.18
+  },
+  {
+   "word": "alguém,",
+   "start": 656.18,
+   "end": 656.32,
+   "prob": 0.636,
+   "raw": "alguém,"
+  },
+  {
+   "word": "se",
+   "start": 656.48,
+   "end": 656.6,
+   "prob": 0.6,
+   "raw": "se"
+  },
+  {
+   "word": "tornar",
+   "start": 656.6,
+   "end": 656.78,
+   "prob": 0.987,
+   "raw": "tornar"
+  },
+  {
+   "word": "um",
+   "start": 656.78,
+   "end": 656.98,
+   "prob": 0.973,
+   "raw": "um"
+  },
+  {
+   "word": "cardio",
+   "start": 656.98,
+   "end": 657.22,
+   "prob": 0.4,
+   "raw": "cartes"
+  },
+  {
+   "word": "cirurgião,",
+   "start": 657.26,
+   "end": 657.52,
+   "prob": 0.629,
+   "raw": "cirurgião,",
+   "raw_start": 657.22,
+   "raw_end": 657.52
+  },
+  {
+   "word": "precisa",
+   "start": 657.68,
+   "end": 657.9,
+   "prob": 0.947,
+   "raw": "precisa"
+  },
+  {
+   "word": "fazer",
+   "start": 657.9,
+   "end": 658.21,
+   "prob": 0.949,
+   "raw": "fazer",
+   "raw_start": 657.9,
+   "raw_end": 658.72
+  },
+  {
+   "word": "5",
+   "start": 658.72,
+   "end": 659.06,
+   "prob": 0.65,
+   "raw": "5"
+  },
+  {
+   "word": "anos",
+   "start": 659.06,
+   "end": 659.24,
+   "prob": 0.999,
+   "raw": "anos"
+  },
+  {
+   "word": "de",
+   "start": 659.24,
+   "end": 659.32,
+   "prob": 0.983,
+   "raw": "de"
+  },
+  {
+   "word": "cardio",
+   "start": 659.38,
+   "end": 659.56,
+   "prob": 0.966,
+   "raw": "cartes",
+   "raw_start": 659.32,
+   "raw_end": 659.56
+  },
+  {
+   "word": "cirurgia.",
+   "start": 659.56,
+   "end": 659.88,
+   "prob": 0.863,
+   "raw": "cirurgia."
+  },
+  {
+   "word": "O",
+   "start": 659.98,
+   "end": 660.02,
+   "prob": 0.48,
+   "raw": "O"
+  },
+  {
+   "word": "neurocirurgião",
+   "start": 660.02,
+   "end": 660.56,
+   "prob": 0.792,
+   "raw": "neurocirurgião"
+  },
+  {
+   "word": "é",
+   "start": 660.56,
+   "end": 660.7,
+   "prob": 0.95,
+   "raw": "é"
+  },
+  {
+   "word": "mesma",
+   "start": 660.7,
+   "end": 660.86,
+   "prob": 0.999,
+   "raw": "mesma"
+  },
+  {
+   "word": "coisa,",
+   "start": 660.86,
+   "end": 661.18,
+   "prob": 0.99,
+   "raw": "coisa,"
+  },
+  {
+   "word": "5",
+   "start": 661.28,
+   "end": 661.4,
+   "prob": 0.32,
+   "raw": "5"
+  },
+  {
+   "word": "anos",
+   "start": 661.4,
+   "end": 661.58,
+   "prob": 0.995,
+   "raw": "anos"
+  },
+  {
+   "word": "de",
+   "start": 661.58,
+   "end": 661.64,
+   "prob": 0.978,
+   "raw": "de"
+  },
+  {
+   "word": "neurocirurgia.",
+   "start": 661.64,
+   "end": 662.26,
+   "prob": 0.984,
+   "raw": "neurocirurgia."
+  },
+  {
+   "word": "Agora,",
+   "start": 663.11,
+   "end": 663.4,
+   "prob": 0.971,
+   "raw": "Agora,",
+   "raw_start": 662.96,
+   "raw_end": 663.4
+  },
+  {
+   "word": "um",
+   "start": 663.6,
+   "end": 663.68,
+   "prob": 0.64,
+   "raw": "um"
+  },
+  {
+   "word": "cirurgião",
+   "start": 663.72,
+   "end": 664.04,
+   "prob": 0.977,
+   "raw": "cirurgião",
+   "raw_start": 663.68,
+   "raw_end": 664.04
+  },
+  {
+   "word": "plástico,",
+   "start": 664.04,
+   "end": 664.48,
+   "prob": 0.797,
+   "raw": "plástico,"
+  },
+  {
+   "word": "por",
+   "start": 664.62,
+   "end": 664.72,
+   "prob": 0.996,
+   "raw": "por"
+  },
+  {
+   "word": "exemplo,",
+   "start": 664.72,
+   "end": 664.94,
+   "prob": 1.0,
+   "raw": "exemplo,"
+  },
+  {
+   "word": "faz",
+   "start": 665.12,
+   "end": 665.16,
+   "prob": 0.987,
+   "raw": "faz"
+  },
+  {
+   "word": "3",
+   "start": 665.16,
+   "end": 665.36,
+   "prob": 0.904,
+   "raw": "3"
+  },
+  {
+   "word": "anos",
+   "start": 665.36,
+   "end": 665.56,
+   "prob": 0.999,
+   "raw": "anos"
+  },
+  {
+   "word": "cirurgia",
+   "start": 665.56,
+   "end": 665.96,
+   "prob": 0.721,
+   "raw": "cirurgia"
+  },
+  {
+   "word": "geral,",
+   "start": 665.96,
+   "end": 666.2,
+   "prob": 0.973,
+   "raw": "geral,"
+  },
+  {
+   "word": "depois",
+   "start": 666.34,
+   "end": 666.48,
+   "prob": 0.978,
+   "raw": "depois"
+  },
+  {
+   "word": "3",
+   "start": 666.48,
+   "end": 666.78,
+   "prob": 0.942,
+   "raw": "3"
+  },
+  {
+   "word": "anos",
+   "start": 666.78,
+   "end": 666.94,
+   "prob": 0.999,
+   "raw": "anos"
+  },
+  {
+   "word": "cirurgia",
+   "start": 666.94,
+   "end": 667.28,
+   "prob": 0.971,
+   "raw": "cirurgia"
+  },
+  {
+   "word": "plástico.",
+   "start": 667.28,
+   "end": 667.7,
+   "prob": 0.667,
+   "raw": "plástico."
+  },
+  {
+   "word": "Cirurgião",
+   "start": 670.45,
+   "end": 670.69,
+   "prob": 0.787,
+   "raw": "Cirurgião",
+   "raw_start": 670.29,
+   "raw_end": 670.69
+  },
+  {
+   "word": "vascular,",
+   "start": 670.69,
+   "end": 671.13,
+   "prob": 0.712,
+   "raw": "basculare,"
+  },
+  {
+   "word": "faz",
+   "start": 671.19,
+   "end": 671.35,
+   "prob": 0.961,
+   "raw": "faz"
+  },
+  {
+   "word": "3",
+   "start": 671.35,
+   "end": 671.59,
+   "prob": 0.984,
+   "raw": "3"
+  },
+  {
+   "word": "anos",
+   "start": 671.59,
+   "end": 671.77,
+   "prob": 1.0,
+   "raw": "anos"
+  },
+  {
+   "word": "cirurgia",
+   "start": 671.77,
+   "end": 672.01,
+   "prob": 0.993,
+   "raw": "cirurgia"
+  },
+  {
+   "word": "geral,",
+   "start": 672.01,
+   "end": 672.33,
+   "prob": 0.974,
+   "raw": "geral,"
+  },
+  {
+   "word": "3",
+   "start": 672.43,
+   "end": 672.57,
+   "prob": 0.785,
+   "raw": "3"
+  },
+  {
+   "word": "anos",
+   "start": 672.57,
+   "end": 672.77,
+   "prob": 1.0,
+   "raw": "anos"
+  },
+  {
+   "word": "cirurgia",
+   "start": 672.77,
+   "end": 673.19,
+   "prob": 0.998,
+   "raw": "cirurgia"
+  },
+  {
+   "word": "vascular.",
+   "start": 673.19,
+   "end": 673.65,
+   "prob": 0.99,
+   "raw": "basculare."
+  },
+  {
+   "word": "o",
+   "start": 673.69,
+   "end": 673.81,
+   "prob": 0.02,
+   "raw": "o",
+   "raw_start": 673.65,
+   "raw_end": 674.43
+  },
+  {
+   "word": "urologista",
+   "start": 674.43,
+   "end": 674.85,
+   "prob": 0.512,
+   "raw": "horologismo"
+  },
+  {
+   "word": "é",
+   "start": 674.85,
+   "end": 675.05,
+   "prob": 0.754,
+   "raw": "é"
+  },
+  {
+   "word": "a",
+   "start": 675.05,
+   "end": 675.21,
+   "prob": 0.673,
+   "raw": "a"
+  },
+  {
+   "word": "coisa,",
+   "start": 675.21,
+   "end": 675.43,
+   "prob": 0.992,
+   "raw": "coisa,"
+  },
+  {
+   "word": "três",
+   "start": 675.49,
+   "end": 675.77,
+   "prob": 0.13,
+   "raw": "três"
+  },
+  {
+   "word": "anos.",
+   "start": 675.77,
+   "end": 676.03,
+   "prob": 0.998,
+   "raw": "anos."
+  },
+  {
+   "word": "Algumas",
+   "start": 676.73,
+   "end": 677.25,
+   "prob": 0.91,
+   "raw": "Algumas"
+  },
+  {
+   "word": "da",
+   "start": 677.25,
+   "end": 677.45,
+   "prob": 0.477,
+   "raw": "da"
+  },
+  {
+   "word": "Sulbis",
+   "start": 677.45,
+   "end": 678.15,
+   "prob": 0.406,
+   "raw": "Sulbis",
+   "raw_start": 677.45,
+   "raw_end": 678.55
+  },
+  {
+   "word": "distrito",
+   "start": 678.58,
+   "end": 679.01,
+   "prob": 0.191,
+   "raw": "distrito",
+   "raw_start": 678.55,
+   "raw_end": 679.01
+  },
+  {
+   "word": "geral,",
+   "start": 679.01,
+   "end": 679.51,
+   "prob": 0.804,
+   "raw": "geral,"
+  },
+  {
+   "word": "se",
+   "start": 680.44,
+   "end": 680.67,
+   "prob": 0.894,
+   "raw": "se",
+   "raw_start": 680.37,
+   "raw_end": 680.67
+  },
+  {
+   "word": "eu",
+   "start": 680.67,
+   "end": 680.79,
+   "prob": 0.977,
+   "raw": "eu"
+  },
+  {
+   "word": "não",
+   "start": 680.79,
+   "end": 680.89,
+   "prob": 0.995,
+   "raw": "não"
+  },
+  {
+   "word": "me",
+   "start": 680.89,
+   "end": 681.03,
+   "prob": 0.997,
+   "raw": "me"
+  },
+  {
+   "word": "engano,",
+   "start": 681.03,
+   "end": 681.37,
+   "prob": 0.994,
+   "raw": "engano,"
+  },
+  {
+   "word": "qual",
+   "start": 682.38,
+   "end": 682.51,
+   "prob": 0.815,
+   "raw": "qual",
+   "raw_start": 682.15,
+   "raw_end": 682.51
+  },
+  {
+   "word": "o",
+   "start": 682.51,
+   "end": 682.61,
+   "prob": 0.435,
+   "raw": "o"
+  },
+  {
+   "word": "coloproctologia",
+   "start": 682.61,
+   "end": 683.27,
+   "prob": 0.62,
+   "raw": "protologio"
+  },
+  {
+   "word": "de",
+   "start": 683.27,
+   "end": 683.49,
+   "prob": 0.472,
+   "raw": "de"
+  },
+  {
+   "word": "cabeça",
+   "start": 683.49,
+   "end": 683.71,
+   "prob": 0.76,
+   "raw": "cabeça"
+  },
+  {
+   "word": "e",
+   "start": 683.71,
+   "end": 683.88,
+   "prob": 0.84,
+   "raw": "e",
+   "raw_start": 683.71,
+   "raw_end": 683.93
+  },
+  {
+   "word": "pescoço",
+   "start": 683.93,
+   "end": 684.25,
+   "prob": 0.454,
+   "raw": "péscoa"
+  },
+  {
+   "word": "são",
+   "start": 684.25,
+   "end": 684.55,
+   "prob": 0.897,
+   "raw": "são"
+  },
+  {
+   "word": "dois",
+   "start": 684.55,
+   "end": 684.85,
+   "prob": 0.867,
+   "raw": "dois"
+  },
+  {
+   "word": "anos,",
+   "start": 684.85,
+   "end": 685.13,
+   "prob": 0.999,
+   "raw": "anos,"
+  },
+  {
+   "word": "mas",
+   "start": 690.83,
+   "end": 691.12,
+   "prob": 0.955,
+   "raw": "mas",
+   "raw_start": 690.78,
+   "raw_end": 691.12
+  },
+  {
+   "word": "a",
+   "start": 691.12,
+   "end": 691.36,
+   "prob": 0.977,
+   "raw": "a"
+  },
+  {
+   "word": "maioria,",
+   "start": 691.36,
+   "end": 691.8,
+   "prob": 0.971,
+   "raw": "maioria,"
+  },
+  {
+   "word": "uma",
+   "start": 692.14,
+   "end": 692.42,
+   "prob": 0.639,
+   "raw": "uma"
+  },
+  {
+   "word": "das",
+   "start": 692.42,
+   "end": 692.58,
+   "prob": 0.995,
+   "raw": "das"
+  },
+  {
+   "word": "que",
+   "start": 692.58,
+   "end": 692.74,
+   "prob": 0.95,
+   "raw": "que"
+  },
+  {
+   "word": "eu",
+   "start": 692.74,
+   "end": 692.78,
+   "prob": 0.948,
+   "raw": "eu"
+  },
+  {
+   "word": "lembro",
+   "start": 692.78,
+   "end": 692.98,
+   "prob": 0.975,
+   "raw": "lembro"
+  },
+  {
+   "word": "é",
+   "start": 692.98,
+   "end": 693.04,
+   "prob": 0.771,
+   "raw": "é"
+  },
+  {
+   "word": "o",
+   "start": 693.04,
+   "end": 693.1,
+   "prob": 0.204,
+   "raw": "o"
+  },
+  {
+   "word": "que",
+   "start": 693.1,
+   "end": 693.22,
+   "prob": 0.33,
+   "raw": "que",
+   "raw_start": 693.1,
+   "raw_end": 693.26
+  },
+  {
+   "word": "a",
+   "start": 693.26,
+   "end": 693.38,
+   "prob": 0.74,
+   "raw": "a"
+  },
+  {
+   "word": "cabeça",
+   "start": 693.38,
+   "end": 693.5,
+   "prob": 0.836,
+   "raw": "cabeça"
+  },
+  {
+   "word": "e",
+   "start": 693.5,
+   "end": 693.68,
+   "prob": 0.428,
+   "raw": "e"
+  },
+  {
+   "word": "pescoço",
+   "start": 693.68,
+   "end": 693.74,
+   "prob": 0.824,
+   "raw": "péscoa"
+  },
+  {
+   "word": "três.",
+   "start": 693.74,
+   "end": 693.98,
+   "prob": 0.983,
+   "raw": "três."
+  },
+  {
+   "word": "A",
+   "start": 695.64,
+   "end": 695.94,
+   "prob": 0.088,
+   "raw": "A"
+  },
+  {
+   "word": "cirurgia",
+   "start": 695.99,
+   "end": 696.26,
+   "prob": 0.888,
+   "raw": "cirurgia",
+   "raw_start": 695.94,
+   "raw_end": 696.26
+  },
+  {
+   "word": "oncológica",
+   "start": 696.26,
+   "end": 696.8,
+   "prob": 0.784,
+   "raw": "oncológica",
+   "raw_start": 696.26,
+   "raw_end": 696.84
+  },
+  {
+   "word": "entre",
+   "start": 696.84,
+   "end": 697.02,
+   "prob": 0.533,
+   "raw": "entre"
+  },
+  {
+   "word": "também,",
+   "start": 697.02,
+   "end": 697.42,
+   "prob": 0.806,
+   "raw": "também,"
+  },
+  {
+   "word": "mas",
+   "start": 703.26,
+   "end": 703.54,
+   "prob": 0.937,
+   "raw": "mas"
+  },
+  {
+   "word": "me",
+   "start": 703.54,
+   "end": 703.7,
+   "prob": 0.14,
+   "raw": "me"
+  },
+  {
+   "word": "tomando,",
+   "start": 703.7,
+   "end": 704.2,
+   "prob": 0.98,
+   "raw": "tomando,"
+  },
+  {
+   "word": "tomando",
+   "start": 705.86,
+   "end": 706.36,
+   "prob": 0.977,
+   "raw": "tomando"
+  },
+  {
+   "word": "o",
+   "start": 706.36,
+   "end": 706.52,
+   "prob": 0.837,
+   "raw": "o"
+  },
+  {
+   "word": "assunto,",
+   "start": 706.52,
+   "end": 706.78,
+   "prob": 0.995,
+   "raw": "assunto,"
+  },
+  {
+   "word": "teve",
+   "start": 707.68,
+   "end": 707.78,
+   "prob": 0.121,
+   "raw": "teve",
+   "raw_start": 707.54,
+   "raw_end": 707.78
+  },
+  {
+   "word": "um",
+   "start": 707.78,
+   "end": 707.96,
+   "prob": 0.217,
+   "raw": "um"
+  },
+  {
+   "word": "desvídeo,",
+   "start": 708.5,
+   "end": 708.63,
+   "prob": 0.59,
+   "raw": "desvídeo,",
+   "raw_start": 708.5,
+   "raw_end": 709.02
+  },
+  {
+   "word": "mas",
+   "start": 709.3,
+   "end": 709.66,
+   "prob": 0.98,
+   "raw": "mas",
+   "raw_start": 709.2,
+   "raw_end": 709.66
+  },
+  {
+   "word": "acho",
+   "start": 709.66,
+   "end": 710.11,
+   "prob": 0.685,
+   "raw": "acho",
+   "raw_start": 709.66,
+   "raw_end": 710.16
+  },
+  {
+   "word": "que,",
+   "start": 710.16,
+   "end": 710.28,
+   "prob": 0.998,
+   "raw": "que,"
+  },
+  {
+   "word": "olha,",
+   "start": 710.34,
+   "end": 710.44,
+   "prob": 0.56,
+   "raw": "olha,"
+  },
+  {
+   "word": "como",
+   "start": 711.74,
+   "end": 712.08,
+   "prob": 0.943,
+   "raw": "como",
+   "raw_start": 710.96,
+   "raw_end": 712.08
+  },
+  {
+   "word": "esse",
+   "start": 712.08,
+   "end": 712.24,
+   "prob": 0.962,
+   "raw": "esse"
+  },
+  {
+   "word": "vídeo",
+   "start": 712.24,
+   "end": 712.44,
+   "prob": 0.939,
+   "raw": "vídeo"
+  },
+  {
+   "word": "vai",
+   "start": 712.44,
+   "end": 712.6,
+   "prob": 0.995,
+   "raw": "vai"
+  },
+  {
+   "word": "ser",
+   "start": 712.6,
+   "end": 712.74,
+   "prob": 0.99,
+   "raw": "ser"
+  },
+  {
+   "word": "cortado,",
+   "start": 712.74,
+   "end": 713.32,
+   "prob": 0.983,
+   "raw": "cortado,",
+   "raw_start": 712.74,
+   "raw_end": 713.36
+  },
+  {
+   "word": "e",
+   "start": 716.09,
+   "end": 716.15,
+   "prob": 0.587,
+   "raw": "e"
+  },
+  {
+   "word": "realmente",
+   "start": 716.15,
+   "end": 716.39,
+   "prob": 0.434,
+   "raw": "realmente"
+  },
+  {
+   "word": "Eu",
+   "start": 716.39,
+   "end": 716.67,
+   "prob": 0.052,
+   "raw": "Eu"
+  },
+  {
+   "word": "de",
+   "start": 716.67,
+   "end": 716.89,
+   "prob": 0.51,
+   "raw": "de"
+  },
+  {
+   "word": "um",
+   "start": 716.89,
+   "end": 717.01,
+   "prob": 0.814,
+   "raw": "um"
+  },
+  {
+   "word": "fluxo,",
+   "start": 717.01,
+   "end": 717.85,
+   "prob": 0.738,
+   "raw": "fluxo,",
+   "raw_start": 717.01,
+   "raw_end": 717.91
+  },
+  {
+   "word": "qualquer",
+   "start": 717.91,
+   "end": 718.47,
+   "prob": 0.583,
+   "raw": "qualquer"
+  },
+  {
+   "word": "coisa",
+   "start": 718.47,
+   "end": 718.79,
+   "prob": 0.998,
+   "raw": "coisa"
+  },
+  {
+   "word": "que",
+   "start": 718.79,
+   "end": 718.95,
+   "prob": 0.921,
+   "raw": "que"
+  },
+  {
+   "word": "eu",
+   "start": 718.95,
+   "end": 719.01,
+   "prob": 0.89,
+   "raw": "eu"
+  },
+  {
+   "word": "acharei",
+   "start": 719.01,
+   "end": 719.31,
+   "prob": 0.689,
+   "raw": "acharei"
+  },
+  {
+   "word": "interessante,",
+   "start": 719.31,
+   "end": 719.65,
+   "prob": 0.627,
+   "raw": "interessante,"
+  },
+  {
+   "word": "vou",
+   "start": 720.11,
+   "end": 720.23,
+   "prob": 0.94,
+   "raw": "vou"
+  },
+  {
+   "word": "falar",
+   "start": 720.23,
+   "end": 720.37,
+   "prob": 0.964,
+   "raw": "falar"
+  },
+  {
+   "word": "o",
+   "start": 720.37,
+   "end": 720.47,
+   "prob": 0.533,
+   "raw": "o"
+  },
+  {
+   "word": "menos",
+   "start": 720.47,
+   "end": 720.57,
+   "prob": 0.243,
+   "raw": "menos"
+  },
+  {
+   "word": "que",
+   "start": 720.57,
+   "end": 720.73,
+   "prob": 0.946,
+   "raw": "que"
+  },
+  {
+   "word": "desvi",
+   "start": 720.73,
+   "end": 721.01,
+   "prob": 0.298,
+   "raw": "desvi"
+  },
+  {
+   "word": "do",
+   "start": 721.01,
+   "end": 721.17,
+   "prob": 0.925,
+   "raw": "do"
+  },
+  {
+   "word": "assunto.",
+   "start": 721.17,
+   "end": 721.45,
+   "prob": 0.995,
+   "raw": "assunto."
+  },
+  {
+   "word": "O",
+   "start": 723.3,
+   "end": 723.45,
+   "prob": 0.564,
+   "raw": "O",
+   "raw_start": 723.15,
+   "raw_end": 723.45
+  },
+  {
+   "word": "inicial",
+   "start": 723.45,
+   "end": 723.71,
+   "prob": 0.748,
+   "raw": "inicial"
+  },
+  {
+   "word": "que",
+   "start": 723.71,
+   "end": 724.01,
+   "prob": 0.745,
+   "raw": "que"
+  },
+  {
+   "word": "era",
+   "start": 724.01,
+   "end": 724.27,
+   "prob": 0.97,
+   "raw": "era"
+  },
+  {
+   "word": "o",
+   "start": 724.27,
+   "end": 725.49,
+   "prob": 0.839,
+   "raw": "o"
+  },
+  {
+   "word": "desenvolvimento",
+   "start": 725.56,
+   "end": 726.79,
+   "prob": 0.995,
+   "raw": "desenvolvimento",
+   "raw_start": 725.49,
+   "raw_end": 726.79
+  },
+  {
+   "word": "da",
+   "start": 726.79,
+   "end": 727.19,
+   "prob": 0.985,
+   "raw": "da"
+  },
+  {
+   "word": "habilidade",
+   "start": 727.19,
+   "end": 727.77,
+   "prob": 0.991,
+   "raw": "habilidade"
+  },
+  {
+   "word": "retórica",
+   "start": 727.77,
+   "end": 728.49,
+   "prob": 0.969,
+   "raw": "retórica"
+  },
+  {
+   "word": "e",
+   "start": 728.8,
+   "end": 729.13,
+   "prob": 0.732,
+   "raw": "e",
+   "raw_start": 728.49,
+   "raw_end": 729.13
+  },
+  {
+   "word": "da",
+   "start": 729.13,
+   "end": 729.41,
+   "prob": 0.93,
+   "raw": "da"
+  },
+  {
+   "word": "habilidade",
+   "start": 729.41,
+   "end": 729.83,
+   "prob": 0.999,
+   "raw": "habilidade"
+  },
+  {
+   "word": "de",
+   "start": 729.83,
+   "end": 730.09,
+   "prob": 0.837,
+   "raw": "de"
+  },
+  {
+   "word": "fala",
+   "start": 730.09,
+   "end": 730.33,
+   "prob": 0.896,
+   "raw": "fala"
+  },
+  {
+   "word": "perante",
+   "start": 731.92,
+   "end": 732.54,
+   "prob": 0.801,
+   "raw": "perante",
+   "raw_start": 730.33,
+   "raw_end": 732.55
+  },
+  {
+   "word": "as",
+   "start": 732.55,
+   "end": 732.93,
+   "prob": 0.561,
+   "raw": "as"
+  },
+  {
+   "word": "câmeras.",
+   "start": 732.93,
+   "end": 733.41,
+   "prob": 0.989,
+   "raw": "câmeras."
+  },
+  {
+   "word": "E",
+   "start": 738.57,
+   "end": 738.8,
+   "prob": 0.744,
+   "raw": "E",
+   "raw_start": 738.5,
+   "raw_end": 738.8
+  },
+  {
+   "word": "eu",
+   "start": 738.8,
+   "end": 738.86,
+   "prob": 0.975,
+   "raw": "eu"
+  },
+  {
+   "word": "comecei",
+   "start": 738.86,
+   "end": 739.44,
+   "prob": 0.996,
+   "raw": "comecei"
+  },
+  {
+   "word": "a",
+   "start": 739.44,
+   "end": 739.54,
+   "prob": 0.997,
+   "raw": "a"
+  },
+  {
+   "word": "pensar",
+   "start": 739.54,
+   "end": 739.78,
+   "prob": 0.997,
+   "raw": "pensar"
+  },
+  {
+   "word": "nisso",
+   "start": 739.78,
+   "end": 740.26,
+   "prob": 0.996,
+   "raw": "nisso"
+  },
+  {
+   "word": "porque",
+   "start": 740.26,
+   "end": 741.38,
+   "prob": 0.655,
+   "raw": "porque"
+  },
+  {
+   "word": "eu",
+   "start": 742.22,
+   "end": 742.76,
+   "prob": 0.869,
+   "raw": "eu",
+   "raw_start": 741.38,
+   "raw_end": 743.16
+  },
+  {
+   "word": "estava",
+   "start": 743.16,
+   "end": 743.36,
+   "prob": 0.792,
+   "raw": "estava"
+  },
+  {
+   "word": "lendo",
+   "start": 743.36,
+   "end": 743.6,
+   "prob": 0.713,
+   "raw": "lendo"
+  },
+  {
+   "word": "a",
+   "start": 743.6,
+   "end": 743.78,
+   "prob": 0.987,
+   "raw": "a"
+  },
+  {
+   "word": "Retórica",
+   "start": 743.78,
+   "end": 744.2,
+   "prob": 0.709,
+   "raw": "repórica"
+  },
+  {
+   "word": "de",
+   "start": 744.2,
+   "end": 744.38,
+   "prob": 0.898,
+   "raw": "de"
+  },
+  {
+   "word": "Aristóteles,",
+   "start": 744.38,
+   "end": 744.77,
+   "prob": 0.888,
+   "raw": "Aristóteles,",
+   "raw_start": 744.38,
+   "raw_end": 744.98
+  },
+  {
+   "word": "que",
+   "start": 745.92,
+   "end": 746.4,
+   "prob": 0.946,
+   "raw": "que",
+   "raw_start": 745.26,
+   "raw_end": 746.46
+  },
+  {
+   "word": "é",
+   "start": 746.46,
+   "end": 746.54,
+   "prob": 0.959,
+   "raw": "é"
+  },
+  {
+   "word": "uma",
+   "start": 746.54,
+   "end": 746.66,
+   "prob": 0.966,
+   "raw": "uma"
+  },
+  {
+   "word": "aventura",
+   "start": 746.66,
+   "end": 747.04,
+   "prob": 0.908,
+   "raw": "aventura"
+  },
+  {
+   "word": "muito",
+   "start": 747.04,
+   "end": 747.22,
+   "prob": 0.998,
+   "raw": "muito"
+  },
+  {
+   "word": "interessante.",
+   "start": 747.22,
+   "end": 747.74,
+   "prob": 0.997,
+   "raw": "interessante."
+  },
+  {
+   "word": "Ele",
+   "start": 747.74,
+   "end": 748.05,
+   "prob": 0.097,
+   "raw": "Ele",
+   "raw_start": 747.74,
+   "raw_end": 748.8
+  },
+  {
+   "word": "já",
+   "start": 750.68,
+   "end": 750.88,
+   "prob": 0.924,
+   "raw": "já"
+  },
+  {
+   "word": "no",
+   "start": 750.88,
+   "end": 751.0,
+   "prob": 0.921,
+   "raw": "no"
+  },
+  {
+   "word": "início",
+   "start": 751.0,
+   "end": 751.24,
+   "prob": 0.949,
+   "raw": "início"
+  },
+  {
+   "word": "conseguiu",
+   "start": 751.24,
+   "end": 751.6,
+   "prob": 0.976,
+   "raw": "conseguiu"
+  },
+  {
+   "word": "me",
+   "start": 751.6,
+   "end": 751.72,
+   "prob": 0.963,
+   "raw": "me"
+  },
+  {
+   "word": "convencer",
+   "start": 751.72,
+   "end": 752.24,
+   "prob": 0.679,
+   "raw": "convencer"
+  },
+  {
+   "word": "da",
+   "start": 752.24,
+   "end": 752.61,
+   "prob": 0.666,
+   "raw": "da",
+   "raw_start": 752.24,
+   "raw_end": 754.26
+  },
+  {
+   "word": "necessidade",
+   "start": 754.26,
+   "end": 754.98,
+   "prob": 0.997,
+   "raw": "necessidade"
+  },
+  {
+   "word": "de",
+   "start": 754.98,
+   "end": 755.32,
+   "prob": 0.961,
+   "raw": "de"
+  },
+  {
+   "word": "aprimoramento",
+   "start": 756.92,
+   "end": 758.34,
+   "prob": 0.772,
+   "raw": "apremoramento",
+   "raw_start": 755.32,
+   "raw_end": 758.34
+  },
+  {
+   "word": "dessa",
+   "start": 758.34,
+   "end": 758.58,
+   "prob": 0.425,
+   "raw": "dessa"
+  },
+  {
+   "word": "técnica",
+   "start": 758.58,
+   "end": 758.82,
+   "prob": 0.936,
+   "raw": "técnica"
+  },
+  {
+   "word": "como",
+   "start": 758.82,
+   "end": 759.2,
+   "prob": 0.854,
+   "raw": "como"
+  },
+  {
+   "word": "inclusive",
+   "start": 759.2,
+   "end": 759.74,
+   "prob": 0.48,
+   "raw": "inclusive"
+  },
+  {
+   "word": "um",
+   "start": 759.74,
+   "end": 759.88,
+   "prob": 0.966,
+   "raw": "um"
+  },
+  {
+   "word": "aspecto",
+   "start": 759.88,
+   "end": 760.3,
+   "prob": 0.991,
+   "raw": "aspecto"
+  },
+  {
+   "word": "moral.",
+   "start": 760.3,
+   "end": 760.64,
+   "prob": 0.986,
+   "raw": "moral."
+  },
+  {
+   "word": "Deixa",
+   "start": 764.02,
+   "end": 764.7,
+   "prob": 0.464,
+   "raw": "Deixa"
+  },
+  {
+   "word": "eu",
+   "start": 768.09,
+   "end": 768.21,
+   "prob": 0.991,
+   "raw": "eu"
+  },
+  {
+   "word": "tentar",
+   "start": 768.21,
+   "end": 768.39,
+   "prob": 0.991,
+   "raw": "tentar"
+  },
+  {
+   "word": "elaborar",
+   "start": 768.39,
+   "end": 768.93,
+   "prob": 0.888,
+   "raw": "elaborar"
+  },
+  {
+   "word": "o",
+   "start": 768.93,
+   "end": 769.25,
+   "prob": 0.973,
+   "raw": "o"
+  },
+  {
+   "word": "argumento.",
+   "start": 769.25,
+   "end": 770.81,
+   "prob": 0.971,
+   "raw": "argumento.",
+   "raw_start": 769.25,
+   "raw_end": 770.99
+  },
+  {
+   "word": "Vou",
+   "start": 771.37,
+   "end": 771.73,
+   "prob": 0.094,
+   "raw": "Vou"
+  },
+  {
+   "word": "uma",
+   "start": 771.73,
+   "end": 771.83,
+   "prob": 0.557,
+   "raw": "uma"
+  },
+  {
+   "word": "pausinha",
+   "start": 771.83,
+   "end": 772.13,
+   "prob": 0.574,
+   "raw": "pausinha"
+  },
+  {
+   "word": "para",
+   "start": 772.13,
+   "end": 772.25,
+   "prob": 0.773,
+   "raw": "para"
+  },
+  {
+   "word": "elaborar",
+   "start": 772.25,
+   "end": 772.47,
+   "prob": 0.723,
+   "raw": "elaborar"
+  },
+  {
+   "word": "o",
+   "start": 772.47,
+   "end": 772.71,
+   "prob": 0.945,
+   "raw": "o"
+  },
+  {
+   "word": "argumento",
+   "start": 772.71,
+   "end": 772.93,
+   "prob": 0.975,
+   "raw": "argumento"
+  },
+  {
+   "word": "para",
+   "start": 772.93,
+   "end": 773.01,
+   "prob": 0.595,
+   "raw": "para"
+  },
+  {
+   "word": "não",
+   "start": 773.01,
+   "end": 773.15,
+   "prob": 0.909,
+   "raw": "não"
+  },
+  {
+   "word": "parecer",
+   "start": 773.15,
+   "end": 773.45,
+   "prob": 0.963,
+   "raw": "parecer"
+  },
+  {
+   "word": "muito",
+   "start": 773.54,
+   "end": 773.85,
+   "prob": 0.821,
+   "raw": "muito",
+   "raw_start": 773.45,
+   "raw_end": 773.85
+  },
+  {
+   "word": "estranho,",
+   "start": 773.91,
+   "end": 774.55,
+   "prob": 0.998,
+   "raw": "estranho,",
+   "raw_start": 773.85,
+   "raw_end": 774.55
+  },
+  {
+   "word": "porque",
+   "start": 775.07,
+   "end": 775.49,
+   "prob": 0.96,
+   "raw": "porque"
+  },
+  {
+   "word": "é",
+   "start": 775.85,
+   "end": 776.57,
+   "prob": 0.579,
+   "raw": "é",
+   "raw_start": 775.49,
+   "raw_end": 776.57
+  },
+  {
+   "word": "um",
+   "start": 778.08,
+   "end": 778.14,
+   "prob": 0.953,
+   "raw": "um"
+  },
+  {
+   "word": "argumento",
+   "start": 778.14,
+   "end": 778.62,
+   "prob": 0.997,
+   "raw": "argumento"
+  },
+  {
+   "word": "que",
+   "start": 778.62,
+   "end": 778.74,
+   "prob": 0.75,
+   "raw": "que"
+  },
+  {
+   "word": "precisa",
+   "start": 778.74,
+   "end": 778.94,
+   "prob": 0.961,
+   "raw": "precisa"
+  },
+  {
+   "word": "de",
+   "start": 778.94,
+   "end": 779.18,
+   "prob": 0.996,
+   "raw": "de"
+  },
+  {
+   "word": "várias",
+   "start": 779.18,
+   "end": 779.38,
+   "prob": 0.924,
+   "raw": "várias"
+  },
+  {
+   "word": "premissas",
+   "start": 779.38,
+   "end": 780.06,
+   "prob": 0.868,
+   "raw": "premissas"
+  },
+  {
+   "word": "para",
+   "start": 780.06,
+   "end": 780.3,
+   "prob": 0.98,
+   "raw": "para"
+  },
+  {
+   "word": "funcionar.",
+   "start": 780.3,
+   "end": 780.86,
+   "prob": 0.971,
+   "raw": "funcionar."
+  },
+  {
+   "word": "Então,",
+   "start": 781.82,
+   "end": 782.54,
+   "prob": 0.209,
+   "raw": "Então,"
+  },
+  {
+   "word": "eu",
+   "start": 782.9,
+   "end": 783.5,
+   "prob": 0.741,
+   "raw": "eu"
+  },
+  {
+   "word": "vou",
+   "start": 783.5,
+   "end": 783.64,
+   "prob": 0.984,
+   "raw": "vou"
+  },
+  {
+   "word": "tentar",
+   "start": 783.64,
+   "end": 783.86,
+   "prob": 0.987,
+   "raw": "tentar"
+  },
+  {
+   "word": "explicar",
+   "start": 783.86,
+   "end": 784.14,
+   "prob": 0.983,
+   "raw": "explicar"
+  },
+  {
+   "word": "tudo",
+   "start": 784.14,
+   "end": 784.58,
+   "prob": 0.994,
+   "raw": "tudo"
+  },
+  {
+   "word": "sem",
+   "start": 784.58,
+   "end": 784.88,
+   "prob": 0.905,
+   "raw": "sem"
+  },
+  {
+   "word": "exagerar",
+   "start": 784.88,
+   "end": 785.38,
+   "prob": 0.974,
+   "raw": "exagerar"
+  },
+  {
+   "word": "a",
+   "start": 785.38,
+   "end": 785.48,
+   "prob": 0.41,
+   "raw": "a"
+  },
+  {
+   "word": "explicação,",
+   "start": 785.48,
+   "end": 786.04,
+   "prob": 0.988,
+   "raw": "explicação,"
+  },
+  {
+   "word": "como",
+   "start": 786.32,
+   "end": 787.38,
+   "prob": 0.909,
+   "raw": "como"
+  },
+  {
+   "word": "ele",
+   "start": 787.38,
+   "end": 787.52,
+   "prob": 0.901,
+   "raw": "ele"
+  },
+  {
+   "word": "me",
+   "start": 787.52,
+   "end": 787.68,
+   "prob": 0.421,
+   "raw": "me"
+  },
+  {
+   "word": "informa",
+   "start": 787.68,
+   "end": 788.24,
+   "prob": 0.52,
+   "raw": "informa"
+  },
+  {
+   "word": "para",
+   "start": 788.24,
+   "end": 788.5,
+   "prob": 0.422,
+   "raw": "para"
+  },
+  {
+   "word": "aproveitar",
+   "start": 790.66,
+   "end": 791.27,
+   "prob": 0.991,
+   "raw": "aproveitar",
+   "raw_start": 790.03,
+   "raw_end": 791.27
+  },
+  {
+   "word": "as",
+   "start": 791.27,
+   "end": 791.45,
+   "prob": 0.953,
+   "raw": "as"
+  },
+  {
+   "word": "premissas",
+   "start": 791.45,
+   "end": 791.97,
+   "prob": 0.673,
+   "raw": "permissas"
+  },
+  {
+   "word": "que",
+   "start": 791.97,
+   "end": 792.17,
+   "prob": 0.751,
+   "raw": "que"
+  },
+  {
+   "word": "eu",
+   "start": 792.17,
+   "end": 792.23,
+   "prob": 0.536,
+   "raw": "eu"
+  },
+  {
+   "word": "contei",
+   "start": 792.23,
+   "end": 792.55,
+   "prob": 0.515,
+   "raw": "contei"
+  },
+  {
+   "word": "até,",
+   "start": 792.55,
+   "end": 792.75,
+   "prob": 0.701,
+   "raw": "até,"
+  },
+  {
+   "word": "como",
+   "start": 795.1,
+   "end": 795.37,
+   "prob": 0.479,
+   "raw": "como",
+   "raw_start": 794.99,
+   "raw_end": 795.37
+  },
+  {
+   "word": "eu",
+   "start": 795.37,
+   "end": 795.61,
+   "prob": 0.574,
+   "raw": "eu"
+  },
+  {
+   "word": "mostrei",
+   "start": 795.61,
+   "end": 795.69,
+   "prob": 0.749,
+   "raw": "mostrei"
+  },
+  {
+   "word": "o",
+   "start": 795.69,
+   "end": 795.87,
+   "prob": 0.533,
+   "raw": "o"
+  },
+  {
+   "word": "anti",
+   "start": 795.87,
+   "end": 796.05,
+   "prob": 0.039,
+   "raw": "anti"
+  },
+  {
+   "word": "-memo",
+   "start": 796.05,
+   "end": 796.43,
+   "prob": 0.738,
+   "raw": "-memo"
+  },
+  {
+   "word": "ou",
+   "start": 796.43,
+   "end": 796.55,
+   "prob": 0.576,
+   "raw": "ou"
+  },
+  {
+   "word": "os",
+   "start": 796.55,
+   "end": 796.73,
+   "prob": 0.602,
+   "raw": "os"
+  },
+  {
+   "word": "slurs",
+   "start": 796.73,
+   "end": 796.95,
+   "prob": 0.475,
+   "raw": "slurs"
+  },
+  {
+   "word": "no",
+   "start": 796.95,
+   "end": 797.15,
+   "prob": 0.927,
+   "raw": "no"
+  },
+  {
+   "word": "vetório,",
+   "start": 797.15,
+   "end": 797.55,
+   "prob": 0.454,
+   "raw": "vetório,"
+  },
+  {
+   "word": "mas",
+   "start": 799.86,
+   "end": 800.06,
+   "prob": 0.98,
+   "raw": "mas",
+   "raw_start": 799.62,
+   "raw_end": 800.06
+  },
+  {
+   "word": "também",
+   "start": 800.06,
+   "end": 800.54,
+   "prob": 0.966,
+   "raw": "também"
+  },
+  {
+   "word": "sem",
+   "start": 800.54,
+   "end": 801.0,
+   "prob": 0.958,
+   "raw": "sem"
+  },
+  {
+   "word": "exagerar",
+   "start": 802.17,
+   "end": 803.06,
+   "prob": 0.984,
+   "raw": "exagerar",
+   "raw_start": 801.0,
+   "raw_end": 803.06
+  },
+  {
+   "word": "na",
+   "start": 803.06,
+   "end": 803.46,
+   "prob": 0.6,
+   "raw": "na"
+  },
+  {
+   "word": "suposição",
+   "start": 804.71,
+   "end": 805.54,
+   "prob": 0.891,
+   "raw": "suposição",
+   "raw_start": 803.46,
+   "raw_end": 805.54
+  },
+  {
+   "word": "de",
+   "start": 805.54,
+   "end": 805.76,
+   "prob": 0.97,
+   "raw": "de"
+  },
+  {
+   "word": "conhecimento",
+   "start": 805.76,
+   "end": 807.24,
+   "prob": 0.986,
+   "raw": "conhecimento"
+  },
+  {
+   "word": "prévio,",
+   "start": 807.24,
+   "end": 807.63,
+   "prob": 0.362,
+   "raw": "prévoa,",
+   "raw_start": 807.24,
+   "raw_end": 808.46
+  },
+  {
+   "word": "mas",
+   "start": 815.28,
+   "end": 815.58,
+   "prob": 0.952,
+   "raw": "mas",
+   "raw_start": 815.18,
+   "raw_end": 815.58
+  },
+  {
+   "word": "o",
+   "start": 815.58,
+   "end": 815.94,
+   "prob": 0.93,
+   "raw": "o"
+  },
+  {
+   "word": "grande",
+   "start": 815.94,
+   "end": 816.22,
+   "prob": 0.995,
+   "raw": "grande"
+  },
+  {
+   "word": "dilema",
+   "start": 816.22,
+   "end": 816.82,
+   "prob": 0.929,
+   "raw": "dilema"
+  },
+  {
+   "word": "que",
+   "start": 816.82,
+   "end": 816.97,
+   "prob": 0.87,
+   "raw": "que",
+   "raw_start": 816.82,
+   "raw_end": 817.32
+  },
+  {
+   "word": "ele",
+   "start": 817.32,
+   "end": 817.73,
+   "prob": 0.967,
+   "raw": "ele",
+   "raw_start": 817.32,
+   "raw_end": 818.44
+  },
+  {
+   "word": "começa",
+   "start": 818.44,
+   "end": 818.8,
+   "prob": 0.992,
+   "raw": "começa"
+  },
+  {
+   "word": "Eu",
+   "start": 818.8,
+   "end": 819.04,
+   "prob": 0.064,
+   "raw": "Eu"
+  },
+  {
+   "word": "ouvi",
+   "start": 819.04,
+   "end": 819.28,
+   "prob": 0.744,
+   "raw": "ouvi"
+  },
+  {
+   "word": "o",
+   "start": 819.28,
+   "end": 819.4,
+   "prob": 0.214,
+   "raw": "o",
+   "raw_start": 819.28,
+   "raw_end": 819.68
+  },
+  {
+   "word": "grande",
+   "start": 820.48,
+   "end": 821.16,
+   "prob": 0.838,
+   "raw": "grande",
+   "raw_start": 819.68,
+   "raw_end": 821.16
+  },
+  {
+   "word": "lento",
+   "start": 821.16,
+   "end": 821.54,
+   "prob": 0.608,
+   "raw": "lento"
+  },
+  {
+   "word": "que",
+   "start": 821.54,
+   "end": 821.9,
+   "prob": 0.367,
+   "raw": "que"
+  },
+  {
+   "word": "eu",
+   "start": 821.9,
+   "end": 821.98,
+   "prob": 0.397,
+   "raw": "eu"
+  },
+  {
+   "word": "começo",
+   "start": 821.98,
+   "end": 822.1,
+   "prob": 0.32,
+   "raw": "começo"
+  },
+  {
+   "word": "lendo,",
+   "start": 822.1,
+   "end": 822.4,
+   "prob": 0.487,
+   "raw": "lendo,"
+  },
+  {
+   "word": "eu",
+   "start": 822.56,
+   "end": 822.62,
+   "prob": 0.2,
+   "raw": "eu"
+  },
+  {
+   "word": "citando,",
+   "start": 822.62,
+   "end": 823.08,
+   "prob": 0.923,
+   "raw": "citando,"
+  },
+  {
+   "word": "é",
+   "start": 823.76,
+   "end": 824.31,
+   "prob": 0.521,
+   "raw": "é",
+   "raw_start": 823.72,
+   "raw_end": 825.1
+  },
+  {
+   "word": "o",
+   "start": 826.04,
+   "end": 827.06,
+   "prob": 0.365,
+   "raw": "o",
+   "raw_start": 825.1,
+   "raw_end": 827.06
+  },
+  {
+   "word": "conceito",
+   "start": 827.94,
+   "end": 828.62,
+   "prob": 0.997,
+   "raw": "conceito",
+   "raw_start": 827.06,
+   "raw_end": 828.62
+  },
+  {
+   "word": "que",
+   "start": 828.62,
+   "end": 828.9,
+   "prob": 0.932,
+   "raw": "que",
+   "raw_start": 828.62,
+   "raw_end": 829.3
+  },
+  {
+   "word": "alguns",
+   "start": 829.3,
+   "end": 830.34,
+   "prob": 0.834,
+   "raw": "alguns",
+   "raw_start": 829.3,
+   "raw_end": 831.54
+  },
+  {
+   "word": "dos",
+   "start": 831.54,
+   "end": 832.46,
+   "prob": 0.972,
+   "raw": "dos"
+  },
+  {
+   "word": "outros",
+   "start": 832.46,
+   "end": 832.62,
+   "prob": 0.967,
+   "raw": "outros"
+  },
+  {
+   "word": "filósofos",
+   "start": 832.8,
+   "end": 833.21,
+   "prob": 0.939,
+   "raw": "filósofos",
+   "raw_start": 832.62,
+   "raw_end": 833.28
+  },
+  {
+   "word": "em",
+   "start": 833.28,
+   "end": 833.52,
+   "prob": 0.147,
+   "raw": "em"
+  },
+  {
+   "word": "que",
+   "start": 833.52,
+   "end": 833.62,
+   "prob": 0.539,
+   "raw": "que"
+  },
+  {
+   "word": "hoje",
+   "start": 833.62,
+   "end": 833.78,
+   "prob": 0.836,
+   "raw": "hoje"
+  },
+  {
+   "word": "no",
+   "start": 833.78,
+   "end": 833.92,
+   "prob": 0.649,
+   "raw": "no"
+  },
+  {
+   "word": "Platão,",
+   "start": 833.92,
+   "end": 834.42,
+   "prob": 0.877,
+   "raw": "Platão,"
+  },
+  {
+   "word": "por",
+   "start": 834.64,
+   "end": 834.66,
+   "prob": 0.985,
+   "raw": "por"
+  },
+  {
+   "word": "exemplo,",
+   "start": 834.66,
+   "end": 835.02,
+   "prob": 1.0,
+   "raw": "exemplo,"
+  },
+  {
+   "word": "que",
+   "start": 835.48,
+   "end": 835.56,
+   "prob": 0.595,
+   "raw": "que"
+  },
+  {
+   "word": "era",
+   "start": 835.56,
+   "end": 835.68,
+   "prob": 0.946,
+   "raw": "era"
+  },
+  {
+   "word": "o",
+   "start": 835.68,
+   "end": 835.74,
+   "prob": 0.36,
+   "raw": "o",
+   "raw_start": 835.68,
+   "raw_end": 835.8
+  },
+  {
+   "word": "seu",
+   "start": 835.8,
+   "end": 835.88,
+   "prob": 0.81,
+   "raw": "seu"
+  },
+  {
+   "word": "mestre,",
+   "start": 835.88,
+   "end": 836.21,
+   "prob": 0.717,
+   "raw": "mestre,",
+   "raw_start": 835.88,
+   "raw_end": 836.58
+  },
+  {
+   "word": "um",
+   "start": 837.16,
+   "end": 837.86,
+   "prob": 0.396,
+   "raw": "um",
+   "raw_start": 837.16,
+   "raw_end": 837.9
+  },
+  {
+   "word": "contra,",
+   "start": 837.9,
+   "end": 838.22,
+   "prob": 0.299,
+   "raw": "contra,"
+  },
+  {
+   "word": "um",
+   "start": 843.04,
+   "end": 843.3,
+   "prob": 0.952,
+   "raw": "um"
+  },
+  {
+   "word": "da...",
+   "start": 843.31,
+   "end": 845.93,
+   "prob": 0.334,
+   "raw": "da...",
+   "raw_start": 843.3,
+   "raw_end": 848.22
+  }
+ ],
+ "segments": [
+  {
+   "start": 2.32,
+   "end": 8.22,
+   "text": "O que é o motivo desse vídeo aqui é justamente o que está acontecendo agora.",
+   "avg_logprob": -0.371,
+   "no_speech_prob": 0.346
+  },
+  {
+   "start": 15.06,
+   "end": 26.96,
+   "text": "Eu acho que a retórica e a habilidade de comunicação é através de vídeos e a melhora contínua da",
+   "avg_logprob": -0.371,
+   "no_speech_prob": 0.346
+  },
+  {
+   "start": 26.96,
+   "end": 38.22,
+   "text": "melhor a continuidade da dicção, fluidez do discurso e organização clara do pensamento",
+   "avg_logprob": -0.296,
+   "no_speech_prob": 0.729,
+   "p90_db": -20.5,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 38.22,
+   "end": 47.08,
+   "text": "e capacidade de conversação em vídeos, é algo que você precisa muito treinar, não",
+   "avg_logprob": -0.296,
+   "no_speech_prob": 0.729,
+   "p90_db": -20.1,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 47.08,
+   "end": 48.58,
+   "text": "é algo que é natural.",
+   "avg_logprob": -0.296,
+   "no_speech_prob": 0.729,
+   "p90_db": -14.0,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 50.86,
+   "end": 55.86,
+   "text": "Por exemplo, eu percebo que eu tenho a tendência a ficar organizando o raciocínio enquanto",
+   "avg_logprob": -0.296,
+   "no_speech_prob": 0.729,
+   "p90_db": -18.4,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 55.86,
+   "end": 62.2,
+   "text": "Enquanto eu falo e aí como é a mais inicial, eu ainda não consigo controlar.",
+   "avg_logprob": -0.427,
+   "no_speech_prob": 0.736,
+   "p90_db": -19.0,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 64.22,
+   "end": 70.36,
+   "text": "Não tem como fazer isso sem praticar, por isso que eu gravo esses vídeos.",
+   "avg_logprob": -0.427,
+   "no_speech_prob": 0.736,
+   "p90_db": -17.6,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 71.86,
+   "end": 79.76,
+   "text": "E eu, por exemplo, também não consigo contar bonito, cabendo o cabelo todo desarmado,",
+   "avg_logprob": -0.427,
+   "no_speech_prob": 0.736,
+   "p90_db": -21.2,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 79.98,
+   "end": 81.62,
+   "text": "a televisão ali atrás estragado.",
+   "avg_logprob": -0.427,
+   "no_speech_prob": 0.736,
+   "p90_db": -21.4,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 96.57,
+   "end": 107.79,
+   "text": "E essas pausas ainda me incomodam mais um único jeito de melhorar e de conseguir desenvolver",
+   "avg_logprob": -0.352,
+   "no_speech_prob": 0.654,
+   "p90_db": -20.8,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 107.79,
+   "end": 120.98,
+   "text": "uma habilidade de comunicação através de veículos digitais, ele não é a prática.",
+   "avg_logprob": -0.352,
+   "no_speech_prob": 0.654,
+   "p90_db": -23.3,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 121.97,
+   "end": 126.04,
+   "text": "Isso incomoda muito porque eu não estou falando com uma pessoa aqui, estou falando",
+   "avg_logprob": -0.352,
+   "no_speech_prob": 0.654,
+   "p90_db": -15.5,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 127.26,
+   "end": 147.89,
+   "text": "E como a minha cabeça não é habituada a isso, parece algo muito estranho, eu fico completamente desconfortável, mas o único jeito de conseguir melhorar isso é de treinar, para até isso passar.",
+   "avg_logprob": -0.417,
+   "no_speech_prob": 0.54
+  },
+  {
+   "start": 150.12,
+   "end": 156.32,
+   "text": "E aí acontece também que toda vez que eu começo a falar a respeito de algum tema, a respeito",
+   "avg_logprob": -0.289,
+   "no_speech_prob": 0.586
+  },
+  {
+   "start": 156.32,
+   "end": 164.66,
+   "text": "de algum assunto específico, na hora que eu aperto o play, eu travo, tá tudo na cabeça,",
+   "avg_logprob": -0.289,
+   "no_speech_prob": 0.586
+  },
+  {
+   "start": 166.1,
+   "end": 173.34,
+   "text": "na minha cabeça eu tenho um domínio completo e teria um poder de persuasão, meu argumento",
+   "avg_logprob": -0.289,
+   "no_speech_prob": 0.586
+  },
+  {
+   "start": 173.34,
+   "end": 179.2,
+   "text": "Eu tenho o absoluto sobre o tema, mas na hora que eu aperto o play, parece que foge tudo a cabeça.",
+   "avg_logprob": -0.332,
+   "no_speech_prob": 0.645,
+   "p90_db": -17.1,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 180.52,
+   "end": 192.24,
+   "text": "E assim, em um momento, isso não é uma habilidade que seja essencial para mim, mas um dia eu vai ser,",
+   "avg_logprob": -0.332,
+   "no_speech_prob": 0.645,
+   "p90_db": -18.8,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 192.38,
+   "end": 202.78,
+   "text": "por isso que eu quero quando esse dia chegar, quando eu precisar realmente de aplicar essa habilidade na minha profissão.",
+   "avg_logprob": -0.332,
+   "no_speech_prob": 0.645,
+   "p90_db": -19.4,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 204.06,
+   "end": 210.08,
+   "text": "Eu já tenho que estar muito bem desenvolvida, por isso que treinar a partilha agora é",
+   "avg_logprob": -0.345,
+   "no_speech_prob": 0.685,
+   "p90_db": -22.7,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 210.08,
+   "end": 212.18,
+   "text": "o melhor método que eu estou fazendo esse vídeo.",
+   "avg_logprob": -0.345,
+   "no_speech_prob": 0.685,
+   "p90_db": -22.8,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 215.22,
+   "end": 222.26,
+   "text": "Muitas coisas me incomodam depois, por exemplo, a minha inquietação enquanto eu gravo, mas",
+   "avg_logprob": -0.345,
+   "no_speech_prob": 0.685,
+   "p90_db": -17.9,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 223.74,
+   "end": 231.58,
+   "text": "até eu encontrar a posição perfeita, a posição ideal que eu deixo confortável para",
+   "avg_logprob": -0.345,
+   "no_speech_prob": 0.685,
+   "p90_db": -20.1,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 231.58,
+   "end": 237.76,
+   "text": "gravar, porque o fato de gravar em si já é uma atividade bem desconfortável pra mim,",
+   "avg_logprob": -0.37,
+   "no_speech_prob": 0.709,
+   "p90_db": -21.7,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 237.94,
+   "end": 244.82,
+   "text": "então o que você faz ver com que todo o restante esteja muito bem confortável para que eu consiga",
+   "avg_logprob": -0.37,
+   "no_speech_prob": 0.709,
+   "p90_db": -21.6,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 244.82,
+   "end": 251.18,
+   "text": "desenvolver. Além disso, outro ponto que eu precisava",
+   "avg_logprob": -0.37,
+   "no_speech_prob": 0.709,
+   "p90_db": -20.3,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 251.18,
+   "end": 270.7,
+   "text": "eu vou relencar a impressionante necessidade que eu tenho de melhorar o aspecto de tentar",
+   "avg_logprob": -0.37,
+   "no_speech_prob": 0.504
+  },
+  {
+   "start": 270.7,
+   "end": 278.96,
+   "text": "falar edição, mas eu acho que não é edição, a fluidez, a clareza da minha voz, o tom,",
+   "avg_logprob": -0.37,
+   "no_speech_prob": 0.504
+  },
+  {
+   "start": 279.66,
+   "end": 285.98,
+   "text": "a altura, eu sinto que ela sai no vídeo muito anazalado, isso incomoda bastante.",
+   "avg_logprob": -0.37,
+   "no_speech_prob": 0.504
+  },
+  {
+   "start": 285.98,
+   "end": 304.66,
+   "text": "Todo mundo se incomoda com a própria voz quando o vídeo, mas pelo menos eu queria que o som fosse algo que me não incomodasse a altura.",
+   "avg_logprob": -0.356,
+   "no_speech_prob": 0.633,
+   "p90_db": -20.0,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 304.66,
+   "end": 309.56,
+   "text": "mas eu acho que inconscientemente por causa da vergonha de estar gravando",
+   "avg_logprob": -0.282,
+   "no_speech_prob": 0.742,
+   "p90_db": -19.4,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 309.56,
+   "end": 321.6,
+   "text": "eu acabo diminuindo a minha altura, o volume da minha voz pra que ninguém percebe",
+   "avg_logprob": -0.282,
+   "no_speech_prob": 0.742,
+   "p90_db": -19.1,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 321.6,
+   "end": 323.92,
+   "text": "mesmo estando completamente sozinho aqui no apartamento",
+   "avg_logprob": -0.282,
+   "no_speech_prob": 0.742,
+   "p90_db": -18.5,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 323.92,
+   "end": 330.54,
+   "text": "e ninguém está me ouvindo nem sábado sobre o que eu estou falando",
+   "avg_logprob": -0.282,
+   "no_speech_prob": 0.742,
+   "p90_db": -23.3,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 330.54,
+   "end": 334.28,
+   "text": "caso algum vizinho esteja me honrando mais",
+   "avg_logprob": -0.282,
+   "no_speech_prob": 0.742,
+   "p90_db": -21.8,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 334.28,
+   "end": 352.5,
+   "text": "Mas essa vergonha é algo que também precisa muito ser trabalhado, porque a exposição",
+   "avg_logprob": -0.427,
+   "no_speech_prob": 0.692,
+   "p90_db": -24.1,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 352.5,
+   "end": 357.65,
+   "text": "é algo que é chineiro na rotina que eu escolhi.",
+   "avg_logprob": -0.427,
+   "no_speech_prob": 0.692,
+   "p90_db": -20.0,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 358.87,
+   "end": 361.37,
+   "text": "Eu decidi fazer a residencia de cirurgia plástica.",
+   "avg_logprob": -0.427,
+   "no_speech_prob": 0.692,
+   "p90_db": -20.9,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 362.67,
+   "end": 367.01,
+   "text": "Ainda não tive nenhum dos restados das prórtenes, se Deus quiser acredito que tenha passado",
+   "avg_logprob": -0.427,
+   "no_speech_prob": 0.692,
+   "p90_db": -21.0,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 370.2,
+   "end": 376.18,
+   "text": "Então, existiu uma chance ao águio de iniciar agora ano que vem a residença.",
+   "avg_logprob": -0.383,
+   "no_speech_prob": 0.525
+  },
+  {
+   "start": 380.04,
+   "end": 388.41,
+   "text": "Não sei quem vai ver esse vídeo, mas caso alguém veja, caso eu decido publicar.",
+   "avg_logprob": -0.383,
+   "no_speech_prob": 0.525
+  },
+  {
+   "start": 390.25,
+   "end": 405.22,
+   "text": "E caso você não seja habituado com a área, na verdade até médicos não sabem exatamente",
+   "avg_logprob": -0.383,
+   "no_speech_prob": 0.525
+  },
+  {
+   "start": 405.22,
+   "end": 415.5,
+   "text": "como funciona isso porque eu como funciona exatamente todo o processo de validação",
+   "avg_logprob": -0.355,
+   "no_speech_prob": 0.499
+  },
+  {
+   "start": 415.5,
+   "end": 424.09,
+   "text": "do, validação não, todo o processo para se obter a licença e especialização em",
+   "avg_logprob": -0.355,
+   "no_speech_prob": 0.499
+  },
+  {
+   "start": 424.09,
+   "end": 429.85,
+   "text": "cirurgia plástica, cirurgião plástica é uma das especialidades que se consideram",
+   "avg_logprob": -0.355,
+   "no_speech_prob": 0.499
+  },
+  {
+   "start": 429.85,
+   "end": 436.21,
+   "text": "pré-requisito, uma subspecialidade dentro da cirurgia geral, o que significa uma subspecialidade",
+   "avg_logprob": -0.355,
+   "no_speech_prob": 0.499
+  },
+  {
+   "start": 436.21,
+   "end": 441.17,
+   "text": "ao contrário do que intuitiu que, certo, sube algo inferior, na verdade a subspecialidade",
+   "avg_logprob": -0.345,
+   "no_speech_prob": 0.434
+  },
+  {
+   "start": 441.17,
+   "end": 446.13,
+   "text": "significa que é um processo mais especializado dentro daquela área.",
+   "avg_logprob": -0.345,
+   "no_speech_prob": 0.434
+  },
+  {
+   "start": 447.25,
+   "end": 458.2,
+   "text": "Então, a cirurgia geral, geralmente você tem duas grandes áreas que vão acabar tendo",
+   "avg_logprob": -0.345,
+   "no_speech_prob": 0.434
+  },
+  {
+   "start": 458.2,
+   "end": 463.6,
+   "text": "subspecialidades dentro dela, por exemplo, a cirurgia geral, que é o meu caso, é",
+   "avg_logprob": -0.345,
+   "no_speech_prob": 0.434
+  },
+  {
+   "start": 463.6,
+   "end": 464.58,
+   "text": "a clínica médica.",
+   "avg_logprob": -0.345,
+   "no_speech_prob": 0.434
+  },
+  {
+   "start": 464.58,
+   "end": 475.04,
+   "text": "Na clínica médica, geralmente, a subspecialidade são cardiologia, endocrinologia, pneumologia.",
+   "avg_logprob": -0.271,
+   "no_speech_prob": 0.323
+  },
+  {
+   "start": 478.05,
+   "end": 480.59,
+   "text": "Deixa eu ver, lembrar alguma outra.",
+   "avg_logprob": -0.271,
+   "no_speech_prob": 0.323
+  },
+  {
+   "start": 481.77,
+   "end": 482.87,
+   "text": "Endocrinologia, eu já falei.",
+   "avg_logprob": -0.271,
+   "no_speech_prob": 0.323
+  },
+  {
+   "start": 486.03,
+   "end": 488.39,
+   "text": "Neumatologia também, acho que eu tinha esquecido de falar.",
+   "avg_logprob": -0.271,
+   "no_speech_prob": 0.323
+  },
+  {
+   "start": 489.59,
+   "end": 494.21,
+   "text": "Essas são algumas áreas que são necessárias pré-requisidas.",
+   "avg_logprob": -0.271,
+   "no_speech_prob": 0.323
+  },
+  {
+   "start": 494.21,
+   "end": 500.03,
+   "text": "E aí é nessa parte que existe muita confusão, tanto na parte clínica quanto na parte cirúrgica,",
+   "avg_logprob": -0.217,
+   "no_speech_prob": 0.354
+  },
+  {
+   "start": 500.11,
+   "end": 511.71,
+   "text": "porque existem algumas especialidades clínicas, por exemplo, neurologia, dermatologia, em que,",
+   "avg_logprob": -0.217,
+   "no_speech_prob": 0.354
+  },
+  {
+   "start": 512.27,
+   "end": 525.49,
+   "text": "apesar de serem clínicas, apesar de serem conteúdos dentro da clínica médica, abordados pela clínica médica,",
+   "avg_logprob": -0.217,
+   "no_speech_prob": 0.354
+  },
+  {
+   "start": 525.83,
+   "end": 530.59,
+   "text": "mas não são considerados para se tornar especialistas nessas áreas,",
+   "avg_logprob": -0.217,
+   "no_speech_prob": 0.354
+  },
+  {
+   "start": 530.59,
+   "end": 534.97,
+   "text": "você não precisa passar por uma residência de clica médica primeiro, elas são chamadas",
+   "avg_logprob": -0.477,
+   "no_speech_prob": 0.454
+  },
+  {
+   "start": 534.97,
+   "end": 543.96,
+   "text": "de acesso direto, por exemplo, uma especialidade de neurologia da formação demora cerca de",
+   "avg_logprob": -0.477,
+   "no_speech_prob": 0.454
+  },
+  {
+   "start": 543.96,
+   "end": 549.42,
+   "text": "três anos de acesso direto, então, depois de termos uma faculdade, ou, como eu digo,",
+   "avg_logprob": -0.477,
+   "no_speech_prob": 0.454
+  },
+  {
+   "start": 550.94,
+   "end": 556.42,
+   "text": "o responsável de medicina já pode prestar para a residência e se for aprovado, pode",
+   "avg_logprob": -0.477,
+   "no_speech_prob": 0.454
+  },
+  {
+   "start": 556.42,
+   "end": 567.99,
+   "text": "por só alguns dos programas e obter o RQ, que é o número de identificação, é o registro",
+   "avg_logprob": -0.387,
+   "no_speech_prob": 0.586
+  },
+  {
+   "start": 567.99,
+   "end": 572.01,
+   "text": "que qualifica o médico como especialista naquela área.",
+   "avg_logprob": -0.387,
+   "no_speech_prob": 0.586
+  },
+  {
+   "start": 573.35,
+   "end": 578.03,
+   "text": "Então você pode obter o RQ, que é direto sem precisar de uma outra especialidade antes.",
+   "avg_logprob": -0.387,
+   "no_speech_prob": 0.586
+  },
+  {
+   "start": 578.63,
+   "end": 586.49,
+   "text": "Agora nas especialidades de pré-requisito, você precisa fazer, assim como que o residencio",
+   "avg_logprob": -0.387,
+   "no_speech_prob": 0.586
+  },
+  {
+   "start": 586.49,
+   "end": 597.18,
+   "text": "se você faz uma outra residência que geralmente é clinicamente, como eu já falei, e só",
+   "avg_logprob": -0.534,
+   "no_speech_prob": 0.163
+  },
+  {
+   "start": 597.18,
+   "end": 601.48,
+   "text": "Pessoas que possuem essas especialidades estão abrindo.",
+   "avg_logprob": -0.691,
+   "no_speech_prob": 0.152
+  },
+  {
+   "start": 598.96,
+   "end": 604.76,
+   "text": "possuem essas especiais que estão aptas a fazer prova e concorrer",
+   "avg_logprob": -0.383,
+   "no_speech_prob": 0.104
+  },
+  {
+   "start": 604.76,
+   "end": 608.16,
+   "text": "dentro dos concursos para as subspecidades.",
+   "avg_logprob": -0.383,
+   "no_speech_prob": 0.104
+  },
+  {
+   "start": 608.58,
+   "end": 612.3,
+   "text": "Então, só alguém com especiais clincamente pode ser urologista.",
+   "avg_logprob": -0.383,
+   "no_speech_prob": 0.104
+  },
+  {
+   "start": 612.86,
+   "end": 617.94,
+   "text": "E só algum cirurgião geral.",
+   "avg_logprob": -0.383,
+   "no_speech_prob": 0.104
+  },
+  {
+   "start": 618.82,
+   "end": 622.4,
+   "text": "Pode ser o cirurgião plástico, o cirurgião bascular ou urologista.",
+   "avg_logprob": -0.383,
+   "no_speech_prob": 0.104
+  },
+  {
+   "start": 623.3,
+   "end": 632.98,
+   "text": "E aí, é uma mistura grande, porque existem também especiais cirurgios que são de assas",
+   "avg_logprob": -0.481,
+   "no_speech_prob": 0.524
+  },
+  {
+   "start": 632.98,
+   "end": 639.72,
+   "text": "diretos como o urtopedia, a neurocirurgia, a cartes cirurgia, são as especiais que",
+   "avg_logprob": -0.481,
+   "no_speech_prob": 0.524
+  },
+  {
+   "start": 639.72,
+   "end": 648.2,
+   "text": "ao invés de ser cursado 2 anos, 3 anos de cirurgia plástico e seguidos de 3 anos",
+   "avg_logprob": -0.481,
+   "no_speech_prob": 0.524
+  },
+  {
+   "start": 648.2,
+   "end": 654.48,
+   "text": "e as outras especialidades são feitas em 5 anos direto na área de interesse final.",
+   "avg_logprob": -0.304,
+   "no_speech_prob": 0.751,
+   "p90_db": -22.2,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 655.74,
+   "end": 659.88,
+   "text": "Então alguém, para se tornar um cartes cirurgião, precisa fazer 5 anos de cartes cirurgia.",
+   "avg_logprob": -0.304,
+   "no_speech_prob": 0.751,
+   "p90_db": -21.9,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 659.98,
+   "end": 662.26,
+   "text": "O neurocirurgião é a mesma coisa, 5 anos de neurocirurgia.",
+   "avg_logprob": -0.304,
+   "no_speech_prob": 0.751,
+   "p90_db": -23.1,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 662.96,
+   "end": 666.2,
+   "text": "Agora, um cirurgião plástico, por exemplo, faz 3 anos cirurgia geral,",
+   "avg_logprob": -0.304,
+   "no_speech_prob": 0.751,
+   "p90_db": -20.1,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 666.34,
+   "end": 667.7,
+   "text": "depois 3 anos cirurgia plástico.",
+   "avg_logprob": -0.304,
+   "no_speech_prob": 0.751,
+   "p90_db": -24.5,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 670.29,
+   "end": 673.65,
+   "text": "Cirurgião basculare, faz 3 anos cirurgia geral, 3 anos cirurgia basculare.",
+   "avg_logprob": -0.304,
+   "no_speech_prob": 0.751,
+   "p90_db": -23.9,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 673.65,
+   "end": 676.03,
+   "text": "o horologismo é a mesma coisa, três anos.",
+   "avg_logprob": -0.57,
+   "no_speech_prob": 0.737,
+   "p90_db": -25.9,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 676.73,
+   "end": 683.93,
+   "text": "Algumas da Sulbis distrito geral, se eu não me engano, qual o protologio de cabeça e",
+   "avg_logprob": -0.57,
+   "no_speech_prob": 0.737,
+   "p90_db": -22.1,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 683.93,
+   "end": 693.74,
+   "text": "péscoa são dois anos, mas a maioria, uma das que eu lembro é o que a cabeça e péscoa",
+   "avg_logprob": -0.57,
+   "no_speech_prob": 0.737,
+   "p90_db": -25.5,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 693.74,
+   "end": 693.98,
+   "text": "são três.",
+   "avg_logprob": -0.57,
+   "no_speech_prob": 0.737,
+   "p90_db": -26.7,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 695.64,
+   "end": 707.96,
+   "text": "A cirurgia oncológica entre também, mas me tomando, tomando o assunto, teve um",
+   "avg_logprob": -0.57,
+   "no_speech_prob": 0.737,
+   "p90_db": -27.6,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 708.5,
+   "end": 716.39,
+   "text": "desvídeo, mas acho que, olha, como esse vídeo vai ser cortado, e realmente",
+   "avg_logprob": -0.57,
+   "no_speech_prob": 0.737,
+   "p90_db": -24.8,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 716.39,
+   "end": 721.45,
+   "text": "Eu preciso de um fluxo, qualquer coisa que eu acharei interessante, eu vou falar o menos que desvi do assunto.",
+   "avg_logprob": -0.358,
+   "no_speech_prob": 0.459
+  },
+  {
+   "start": 723.15,
+   "end": 733.41,
+   "text": "O inicial que era o desenvolvimento da habilidade retórica e da habilidade de fala perante as câmeras.",
+   "avg_logprob": -0.358,
+   "no_speech_prob": 0.459
+  },
+  {
+   "start": 738.5,
+   "end": 747.74,
+   "text": "E eu comecei a pensar nisso porque eu estava lendo a repórica de Aristóteles, que é uma aventura muito interessante.",
+   "avg_logprob": -0.358,
+   "no_speech_prob": 0.459
+  },
+  {
+   "start": 747.74,
+   "end": 760.64,
+   "text": "Ele já no início conseguiu me convencer da necessidade de apremoramento dessa técnica como inclusive um aspecto moral.",
+   "avg_logprob": -0.301,
+   "no_speech_prob": 0.782,
+   "p90_db": -22.8,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 764.02,
+   "end": 770.99,
+   "text": "Deixa eu tentar elaborar o argumento.",
+   "avg_logprob": -0.301,
+   "no_speech_prob": 0.782,
+   "p90_db": -24.5,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 771.37,
+   "end": 774.55,
+   "text": "Vou dar uma pausinha para elaborar o argumento para não parecer muito estranho,",
+   "avg_logprob": -0.301,
+   "no_speech_prob": 0.782,
+   "p90_db": -24.0,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 775.07,
+   "end": 780.86,
+   "text": "porque é um argumento que precisa de várias premissas para funcionar.",
+   "avg_logprob": -0.301,
+   "no_speech_prob": 0.782,
+   "p90_db": -20.4,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 781.82,
+   "end": 791.27,
+   "text": "Então, eu vou tentar explicar tudo sem exagerar a explicação, como ele me informa para aproveitar",
+   "avg_logprob": -0.49,
+   "no_speech_prob": 0.687,
+   "p90_db": -23.2,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 791.27,
+   "end": 800.54,
+   "text": "as permissas que eu contei até, como eu mostrei o anti-memo ou os slurs no vetório, mas também",
+   "avg_logprob": -0.49,
+   "no_speech_prob": 0.687,
+   "p90_db": -25.4,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 800.54,
+   "end": 818.8,
+   "text": "sem exagerar na suposição de conhecimento prévoa, mas o grande dilema que ele começa",
+   "avg_logprob": -0.49,
+   "no_speech_prob": 0.687,
+   "p90_db": -24.9,
+   "no_speech_mantido": true
+  },
+  {
+   "start": 818.8,
+   "end": 848.22,
+   "text": "Eu só ouvi o grande lento que eu começo lendo, eu só citando, é o conceito que alguns dos outros filósofos em que hoje no Platão, por exemplo, que era o seu mestre, tinham um contra, tinham um da...",
+   "avg_logprob": -0.646,
+   "no_speech_prob": 0.458
+  }
+ ]
+}

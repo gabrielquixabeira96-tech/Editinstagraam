@@ -1,0 +1,32 @@
+{
+  "id": "20261103_img-4162",
+  "nome": "IMG_4162",
+  "tipo": "video",
+  "origem": {
+    "drive_id": "1dwGQG8gPRG7i5LYK1joftCUFdiVIwofa",
+    "nome_original": "IMG_4162.MOV",
+    "modifiedTime": "2026-11-03T03:18:29.689Z"
+  },
+  "arquivo": "source.mov",
+  "tamanho": 1530350845,
+  "sha256": "cb1ef31947edfe0cc9f985fa7ea2237a123a571308577cbeaeca7505e575c0a7",
+  "duracao": 848.26,
+  "largura": 1920,
+  "altura": 1080,
+  "fps": 29.936,
+  "rotacao": 0,
+  "tem_audio": true,
+  "vcodec": "hevc",
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "indexado",
+  "criado_em": "2026-11-03T22:15:23+00:00",
+  "atualizado_em": "2026-11-03T22:30:02+00:00",
+  "n_cenas": 29,
+  "n_keyframes": 29,
+  "contact_sheets": [
+    "contact_sheet.jpg"
+  ],
+  "n_segmentos": 14,
+  "indexado_em": "2026-11-03T22:30:02+00:00"
+}
