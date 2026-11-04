@@ -1,6 +1,6 @@
 # Banco de material para Reels — catálogo
 
-Gerado em 2026-11-03T22:30:02+00:00 · 33 item(ns) · 180 segmento(s) · 1 pendente(s) de segmentação
+Gerado em 2026-11-04T00:01:37+00:00 · 34 item(ns) · 200 segmento(s) · 1 pendente(s) de segmentação
 
 Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: FP fala-principal, BR broll, CR corte-rapido, CC citacao-card · públicos: PL plantonista, RE residente, CA candidato-residencia, CV concursos-vestibular, GE geral
 
@@ -350,6 +350,31 @@ Fonte: gravação de tela de vídeo de concerto (fonte não identificada)
 | 20261103_img-4162#s12 | 09:38.69–10:22.31 (44 s) | especialidades de pré-requisito: só quem fez cirurgia geral concorre a plástica, vascular e urologia | pre-requisito, cirurgia-geral, cirurgia-plastica, cirurgia-vascular, urologia, r-mais | 2 | 4/3 | CV CA | FP |
 | 20261103_img-4162#s13 | 10:23.83–11:16.03 (52 s) | tempo de formação: acesso direto cirúrgico em 5 anos vs cirurgia geral + especialidade (3 + 3 na plástica) | tempo-de-residencia, cirurgia-plastica, neurocirurgia, cirurgia-cardiovascular, acesso-direto, pre-requisito | 3 | 4/3 | CV CA GE | FP CR CC |
 | 20261103_img-4162#s14 | 12:03.30–13:00.86 (58 s) | a Retórica de Aristóteles convenceu-o de que aprimorar a comunicação é um dever moral | aristoteles, retorica, filosofia, comunicacao, etica, medico-nas-redes | 3 | 3/3 | GE RE | FP CC |
+
+## 20261103_img-4164 — IMG_4164 (video · 44:55.77 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261103_img-4164#s01 | 01:10.21–03:31.93 (142 s) | por que os filósofos gregos desprezavam a retórica (dialética × sofistas) | retorica, filosofia, platao, sofistas, dialetica | 2 | 3/4 | GE | FP |
+| 20261103_img-4164#s02 | 03:32.51–04:29.25 (57 s) | Aristóteles: retórica é ferramenta neutra — quem tem conhecimento tem obrigação de dominá-la | retorica, aristoteles, comunicacao, medico-nas-redes, etica | 4 | 3/4 | GE RE | FP CC |
+| 20261103_img-4164#s03 | 04:31.65–04:55.71 (24 s) | quem está certo e perde a discussão é o culpado | retorica, aristoteles, argumentacao, comunicacao | 5 | 3/4 | GE RE PL | FP CC CR |
+| 20261103_img-4164#s04 | 04:57.34–07:09.69 (132 s) | analogia da retórica como arma: recusar-se a aprender é deixar a família indefesa | retorica, analogia, arma, etica | 2 | 3/4 | GE | CR |
+| 20261103_img-4164#s05 | 07:11.88–09:05.54 (114 s) | redes sociais são as novas praças públicas — e a academia as despreza | retorica, redes-sociais, medico-nas-redes, academia, comunicacao | 4 | 3/4 | GE RE | FP CC |
+| 20261103_img-4164#s06 | 09:04.84–11:13.70 (129 s) | se o médico bem-intencionado não ocupa as redes, os mal-intencionados ocupam | medico-nas-redes, desinformacao, retorica, responsabilidade | 5 | 3/4 | GE RE PL | FP CC |
+| 20261103_img-4164#s07 | 11:14.23–14:02.70 (168 s) | conhecimento técnico não garante sucesso: quem não estudou aprende a argumentar | comunicacao, carreira, retorica, sucesso-profissional | 4 | 3/4 | RE GE | FP CC |
+| 20261103_img-4164#s08 | 14:04.77–16:40.42 (156 s) | quem domina o tema fala com facilidade; verbalizar organiza o pensamento | comunicacao, gravar-videos, aprendizado, oratoria | 3 | 3/4 | GE RE CA | FP |
+| 20261103_img-4164#s09 | 16:39.54–18:20.14 (101 s) | câncer colorretal: epidemiologia no Brasil e negligência | cancer-colorretal, epidemiologia, oncologia | 2 | 3/4 | GE | CR |
+| 20261103_img-4164#s10 | 18:19.36–19:28.77 (69 s) | o paciente com câncer colorretal passou 5 a 8 vezes no pronto-atendimento | cancer-colorretal, pronto-atendimento, sinais-de-alarme, hemorroida, diagnostico-tardio | 5 | 4/4 | PL RE GE | FP CC |
+| 20261103_img-4164#s11 | 19:30.07–22:30.26 (180 s) | o PA faz diagnóstico sindrômico; convencer o paciente a investigar também é dever do médico | pronto-atendimento, sus, seguimento, relacao-medico-paciente, retorica | 4 | 3/4 | PL RE GE | FP CC |
+| 20261103_img-4164#s12 | 22:30.97–24:30.68 (120 s) | ethos, pathos e logos na consulta: o médico domina só o logos | retorica, ethos-pathos-logos, relacao-medico-paciente, comunicacao | 4 | 3/4 | RE PL GE | FP CC |
+| 20261103_img-4164#s13 | 24:29.54–25:48.80 (79 s) | por que colonoscopia e não tomografia para investigar o intestino | colonoscopia, tomografia, cancer-colorretal, exames | 2 | 3/4 | GE PL | CR |
+| 20261103_img-4164#s14 | 25:50.43–26:52.71 (62 s) | sequência pólipo → câncer: todo câncer passou pelo pólipo | cancer-colorretal, polipo, adenoma, rastreamento, sequencia-adenoma-carcinoma | 5 | 3/4 | GE CA RE | FP CC |
+| 20261103_img-4164#s15 | 26:52.25–29:41.48 (169 s) | analogia: nem todo bacharel em Direito é juiz, mas todo juiz fez Direito | analogia, rastreamento, cancer-colorretal, polipo | 4 | 3/4 | GE CV CA | FP CC |
+| 20261103_img-4164#s16 | 29:42.72–33:50.21 (247 s) | quantos pólipos e de que tamanho definem o intervalo da próxima colonoscopia | vigilancia, colonoscopia, polipo, intervalo, cancer-colorretal | 3 | 3/4 | CA RE GE | FP |
+| 20261103_img-4164#s17 | 33:49.62–38:14.03 (264 s) | o pólipo 'prodígio': histologia de alto risco encurta o intervalo | vigilancia, adenoma-avancado, displasia, colonoscopia, analogia | 4 | 3/4 | CA RE GE | FP CC |
+| 20261103_img-4164#s18 | 38:13.47–39:17.70 (64 s) | síndromes hereditárias e intervalos de rastreamento | rastreamento, sindrome-de-lynch, paf, apc, cancer-colorretal | 2 | 3/4 | CA RE | CR |
+| 20261103_img-4164#s19 | 39:25.51–41:52.40 (147 s) | tema dominado sai fluido: câncer colorretal é o feijão com arroz da cirurgia oncológica | comunicacao, cirurgia-oncologica, residencia, dominio-tecnico | 3 | 4/4 | RE GE | FP |
+| 20261103_img-4164#s20 | 42:10.77–44:54.20 (163 s) | depois de 42 minutos falando ele ficou mais solto | gravar-videos, pratica-deliberada, oratoria, bastidores | 1 | 3/4 | GE | CR |
 
 ## Pendentes (sem segments.json no índice)
 

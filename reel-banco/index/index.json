@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-11-03T22:30:02+00:00",
-  "n_itens": 33,
-  "n_segmentos": 180,
+  "gerado_em": "2026-11-04T00:01:37+00:00",
+  "n_itens": 34,
+  "n_segmentos": 200,
   "itens": [
     {
       "id": "20261023_img-1689",
@@ -7878,6 +7878,797 @@
             1242
           ],
           "item_id": "20261103_img-4162",
+          "tipo": "video",
+          "licenca": "propria"
+        }
+      ]
+    },
+    {
+      "id": "20261103_img-4164",
+      "nome": "IMG_4164",
+      "tipo": "video",
+      "subtipo": null,
+      "duracao": 2695.766667,
+      "largura": 3840,
+      "altura": 2160,
+      "licenca": "propria",
+      "fonte": null,
+      "status": "indexado",
+      "paginas": null,
+      "secoes": null,
+      "n_figuras": null,
+      "contact_sheets": [
+        "contact_sheet.jpg",
+        "contact_sheet_02.jpg"
+      ],
+      "origem": {
+        "drive_id": "1q1VvE-JgqFS5qN9OgpvQdgcMQhcsfGGy",
+        "nome_original": "IMG_4164.MOV"
+      },
+      "segmentos": [
+        {
+          "id": "20261103_img-4164#s01",
+          "t0": 70.21,
+          "t1": 211.93,
+          "tema": "por que os filósofos gregos desprezavam a retórica (dialética × sofistas)",
+          "tags": [
+            "retorica",
+            "filosofia",
+            "platao",
+            "sofistas",
+            "dialetica"
+          ],
+          "tese": "para os contemporâneos de Aristóteles a verdade vinha da dialética; a retórica era vista como arte de sofista para manipular",
+          "citacao": "consideravam que o conhecimento e a verdade deveriam ser adquiridos através da dialética",
+          "gancho_potencial": 2,
+          "publicos": [
+            "geral"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "Sala à noite (mesmo cenário do IMG_4162), câmera fixa HORIZONTAL 4K, ângulo de baixo, muito headroom; luz quente de teto, áudio limpo. Rosto pequeno (~10–18% da largura) no terço direito quando recostado; em vários momentos ele se inclina para a câmera (rosto grande, ótimo para 9:16). Gesticula muito e põe as mãos atrás da cabeça com frequência — conferir o quadro antes de cortar. Fala truncada no início ('chorar-tenizo' = charlatanismo). Contexto teórico, pouco gancho isolado.",
+          "t0_original": 70.2,
+          "t1_original": 211.9,
+          "dur": 141.72,
+          "citacao_t0": 81.55,
+          "citacao_t1": 88.84,
+          "citacao_palavras": [
+            55,
+            67
+          ],
+          "item_id": "20261103_img-4164",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261103_img-4164#s02",
+          "t0": 212.51,
+          "t1": 269.25,
+          "tema": "Aristóteles: retórica é ferramenta neutra — quem tem conhecimento tem obrigação de dominá-la",
+          "tags": [
+            "retorica",
+            "aristoteles",
+            "comunicacao",
+            "medico-nas-redes",
+            "etica"
+          ],
+          "tese": "a retórica não é boa nem má em si; quem tem conhecimento que afeta a vida dos outros tem obrigação de desenvolver a habilidade retórica",
+          "citacao": "retórica é uma ferramenta e essa ferramenta pode ser usada para o bem ou pode ser usada para o mal",
+          "gancho_potencial": 4,
+          "publicos": [
+            "geral",
+            "residente"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Sala à noite (mesmo cenário do IMG_4162), câmera fixa HORIZONTAL 4K, ângulo de baixo, muito headroom; luz quente de teto, áudio limpo. Rosto pequeno (~10–18% da largura) no terço direito quando recostado; em vários momentos ele se inclina para a câmera (rosto grande, ótimo para 9:16). Gesticula muito e põe as mãos atrás da cabeça com frequência — conferir o quadro antes de cortar. Antítese limpa (223–229 s). Segunda citação útil: 'você tem uma certa obrigação a desenvolver a sua habilidade retórica' (246–251 s).",
+          "t0_original": 212.5,
+          "t1_original": 271.5,
+          "dur": 56.74,
+          "citacao_t0": 223.19,
+          "citacao_t1": 229.03,
+          "citacao_palavras": [
+            248,
+            267
+          ],
+          "item_id": "20261103_img-4164",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261103_img-4164#s03",
+          "t0": 271.65,
+          "t1": 295.71,
+          "tema": "quem está certo e perde a discussão é o culpado",
+          "tags": [
+            "retorica",
+            "aristoteles",
+            "argumentacao",
+            "comunicacao"
+          ],
+          "tese": "a verdade tende a prevalecer quando as habilidades retóricas são iguais; se o certo perde, a falha é dele",
+          "citacao": "alguém está certo e perde uma discussão, o grande culpado é ele mesmo",
+          "gancho_potencial": 5,
+          "publicos": [
+            "geral",
+            "residente",
+            "plantonista"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card",
+            "corte-rapido"
+          ],
+          "notas": "Sala à noite (mesmo cenário do IMG_4162), câmera fixa HORIZONTAL 4K, ângulo de baixo, muito headroom; luz quente de teto, áudio limpo. Rosto pequeno (~10–18% da largura) no terço direito quando recostado; em vários momentos ele se inclina para a câmera (rosto grande, ótimo para 9:16). Gesticula muito e põe as mãos atrás da cabeça com frequência — conferir o quadro antes de cortar. Melhor entimema do vídeo; curto (~20 s). Atribuição a Aristóteles é correta em essência (Retórica I.1: a verdade é por natureza mais forte; se perde, a culpa é de quem a defende).",
+          "t0_original": 271.5,
+          "t1_original": 297.0,
+          "dur": 24.06,
+          "citacao_t0": 277.61,
+          "citacao_t1": 284.89,
+          "citacao_palavras": [
+            342,
+            354
+          ],
+          "item_id": "20261103_img-4164",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261103_img-4164#s04",
+          "t0": 297.34,
+          "t1": 429.69,
+          "tema": "analogia da retórica como arma: recusar-se a aprender é deixar a família indefesa",
+          "tags": [
+            "retorica",
+            "analogia",
+            "arma",
+            "etica"
+          ],
+          "tese": "a ferramenta é neutra; recusar-se a aprendê-la por associá-la a bandidos só entrega a vantagem ao mal-intencionado",
+          "citacao": "é a forma como ela é usada e por quem ela é usada",
+          "gancho_potencial": 2,
+          "publicos": [
+            "geral"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "corte-rapido"
+          ],
+          "notas": "Sala à noite (mesmo cenário do IMG_4162), câmera fixa HORIZONTAL 4K, ângulo de baixo, muito headroom; luz quente de teto, áudio limpo. Rosto pequeno (~10–18% da largura) no terço direito quando recostado; em vários momentos ele se inclina para a câmera (rosto grande, ótimo para 9:16). Gesticula muito e põe as mãos atrás da cabeça com frequência — conferir o quadro antes de cortar. EVITAR como fala principal: tema de arma de fogo/família sequestrada é sensível e a fala é truncada (360–400 s). Aristóteles fala de força física/saúde/riqueza; a espada é do Górgias de Platão.",
+          "t0_original": 297.0,
+          "t1_original": 431.0,
+          "dur": 132.35,
+          "citacao_t0": 330.51,
+          "citacao_t1": 333.44,
+          "citacao_palavras": [
+            432,
+            444
+          ],
+          "item_id": "20261103_img-4164",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261103_img-4164#s05",
+          "t0": 431.88,
+          "t1": 545.54,
+          "tema": "redes sociais são as novas praças públicas — e a academia as despreza",
+          "tags": [
+            "retorica",
+            "redes-sociais",
+            "medico-nas-redes",
+            "academia",
+            "comunicacao"
+          ],
+          "tese": "assim como na Grécia a vida pública era decidida em praça pública, hoje é nas redes; médicos acadêmicos desprezam a exposição, mas é lá que se convence",
+          "citacao": "não são as novas praças onde acontece o convencimento",
+          "gancho_potencial": 4,
+          "publicos": [
+            "geral",
+            "residente"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Sala à noite (mesmo cenário do IMG_4162), câmera fixa HORIZONTAL 4K, ângulo de baixo, muito headroom; luz quente de teto, áudio limpo. Rosto pequeno (~10–18% da largura) no terço direito quando recostado; em vários momentos ele se inclina para a câmera (rosto grande, ótimo para 9:16). Gesticula muito e põe as mãos atrás da cabeça com frequência — conferir o quadro antes de cortar. Paralelo Grécia→redes claro (432–473 s). Repetição 'quer queira queiram' em 530–534 s: cortar.",
+          "t0_original": 431.0,
+          "t1_original": 545.0,
+          "dur": 113.66,
+          "citacao_t0": 534.12,
+          "citacao_t1": 541.7,
+          "citacao_palavras": [
+            720,
+            728
+          ],
+          "item_id": "20261103_img-4164",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261103_img-4164#s06",
+          "t0": 544.84,
+          "t1": 673.7,
+          "tema": "se o médico bem-intencionado não ocupa as redes, os mal-intencionados ocupam",
+          "tags": [
+            "medico-nas-redes",
+            "desinformacao",
+            "retorica",
+            "responsabilidade"
+          ],
+          "tese": "ambiente sem moderação: se quem tem conhecimento não participar, é inevitável que seja dominado por mal-intencionados; o médico que se posiciona presta serviço",
+          "citacao": "se pessoas bem -intencionadas com conhecimento não se dispuserem a participar",
+          "gancho_potencial": 5,
+          "publicos": [
+            "geral",
+            "residente",
+            "plantonista"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Sala à noite (mesmo cenário do IMG_4162), câmera fixa HORIZONTAL 4K, ângulo de baixo, muito headroom; luz quente de teto, áudio limpo. Rosto pequeno (~10–18% da largura) no terço direito quando recostado; em vários momentos ele se inclina para a câmera (rosto grande, ótimo para 9:16). Gesticula muito e põe as mãos atrás da cabeça com frequência — conferir o quadro antes de cortar. Núcleo argumentativo do vídeo. Hesitação 'a tendência não é nem tendência, é o... é o' em 594–603 s (cortar para 'é o destino inevitável'). Complemento: 'que ele presta um tempo à sociedade se ele se posiciona' (671–674 s; 'tempo' = serviço).",
+          "t0_original": 545.0,
+          "t1_original": 674.0,
+          "dur": 128.86,
+          "citacao_t0": 587.88,
+          "citacao_t1": 594.38,
+          "citacao_palavras": [
+            787,
+            797
+          ],
+          "item_id": "20261103_img-4164",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261103_img-4164#s07",
+          "t0": 674.23,
+          "t1": 842.7,
+          "tema": "conhecimento técnico não garante sucesso: quem não estudou aprende a argumentar",
+          "tags": [
+            "comunicacao",
+            "carreira",
+            "retorica",
+            "sucesso-profissional"
+          ],
+          "tese": "o mal formado descobre que argumentação dá resultado e se destaca sobre quem sabe mais e não comunica; em vez de lamentar a injustiça, aceite a realidade",
+          "citacao": "o conhecimento técnico não tem uma correlação muito tão direta assim",
+          "gancho_potencial": 4,
+          "publicos": [
+            "residente",
+            "geral"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Sala à noite (mesmo cenário do IMG_4162), câmera fixa HORIZONTAL 4K, ângulo de baixo, muito headroom; luz quente de teto, áudio limpo. Rosto pequeno (~10–18% da largura) no terço direito quando recostado; em vários momentos ele se inclina para a câmera (rosto grande, ótimo para 9:16). Gesticula muito e põe as mãos atrás da cabeça com frequência — conferir o quadro antes de cortar. Repetição em 696–715 s ('quando ele chega no mercado de trabalho' 2×). Boa citação de fecho: 'muito melhor do que tentar discutir o que é justo e o que é injusto' (823–834 s).",
+          "t0_original": 674.0,
+          "t1_original": 842.7,
+          "dur": 168.47,
+          "citacao_t0": 730.94,
+          "citacao_t1": 738.16,
+          "citacao_palavras": [
+            984,
+            994
+          ],
+          "item_id": "20261103_img-4164",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261103_img-4164#s08",
+          "t0": 844.77,
+          "t1": 1000.42,
+          "tema": "quem domina o tema fala com facilidade; verbalizar organiza o pensamento",
+          "tags": [
+            "comunicacao",
+            "gravar-videos",
+            "aprendizado",
+            "oratoria"
+          ],
+          "tese": "domínio técnico real se converte em fluidez; explicar em voz alta força a mente a organizar e cristalizar o conceito",
+          "citacao": "se você realmente tem domínio sobre o tema",
+          "gancho_potencial": 3,
+          "publicos": [
+            "geral",
+            "residente",
+            "candidato-residencia"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "Sala à noite (mesmo cenário do IMG_4162), câmera fixa HORIZONTAL 4K, ângulo de baixo, muito headroom; luz quente de teto, áudio limpo. Rosto pequeno (~10–18% da largura) no terço direito quando recostado; em vários momentos ele se inclina para a câmera (rosto grande, ótimo para 9:16). Gesticula muito e põe as mãos atrás da cabeça com frequência — conferir o quadro antes de cortar. Ponte para o exemplo do câncer colorretal. Citação alternativa: 'quando eu tento explicar e verbalizar, isso força a cabeça, mente a organizar isso' (919–927 s).",
+          "t0_original": 842.7,
+          "t1_original": 1000.0,
+          "dur": 155.65,
+          "citacao_t0": 858.11,
+          "citacao_t1": 860.85,
+          "citacao_palavras": [
+            1175,
+            1182
+          ],
+          "item_id": "20261103_img-4164",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261103_img-4164#s09",
+          "t0": 999.54,
+          "t1": 1100.14,
+          "tema": "câncer colorretal: epidemiologia no Brasil e negligência",
+          "tags": [
+            "cancer-colorretal",
+            "epidemiologia",
+            "oncologia"
+          ],
+          "tese": "o câncer colorretal é muito frequente e letal e ainda assim negligenciado",
+          "citacao": "É estranho você pensar que é o quanto ela é negligenciado.",
+          "gancho_potencial": 2,
+          "publicos": [
+            "geral"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "corte-rapido"
+          ],
+          "notas": "Sala à noite (mesmo cenário do IMG_4162), câmera fixa HORIZONTAL 4K, ângulo de baixo, muito headroom; luz quente de teto, áudio limpo. Rosto pequeno (~10–18% da largura) no terço direito quando recostado; em vários momentos ele se inclina para a câmera (rosto grande, ótimo para 9:16). Gesticula muito e põe as mãos atrás da cabeça com frequência — conferir o quadro antes de cortar. ERRO FACTUAL: diz que é o câncer mais comum do Brasil (INCA 2023–25: 3º, após mama e próstata) e a maior causa de morte por câncer (é pulmão; CCR é 2º). Não usar como fala sem regravar/corrigir.",
+          "t0_original": 1000.0,
+          "t1_original": 1100.0,
+          "dur": 100.6,
+          "citacao_t0": 1093.11,
+          "citacao_t1": 1097.46,
+          "citacao_palavras": [
+            1622,
+            1632
+          ],
+          "item_id": "20261103_img-4164",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261103_img-4164#s10",
+          "t0": 1099.36,
+          "t1": 1168.77,
+          "tema": "o paciente com câncer colorretal passou 5 a 8 vezes no pronto-atendimento",
+          "tags": [
+            "cancer-colorretal",
+            "pronto-atendimento",
+            "sinais-de-alarme",
+            "hemorroida",
+            "diagnostico-tardio"
+          ],
+          "tese": "diarreia alternada com constipação, sangue nas fezes e fezes afiladas tratados como hemorroida/gastroenterite atrasam o diagnóstico",
+          "citacao": "eles têm uma história clássica de terem passado por prontos atendimentos, umas 5 ou 8 vezes",
+          "gancho_potencial": 5,
+          "publicos": [
+            "plantonista",
+            "residente",
+            "geral"
+          ],
+          "qualidade_visual": 4,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Sala à noite (mesmo cenário do IMG_4162), câmera fixa HORIZONTAL 4K, ângulo de baixo, muito headroom; luz quente de teto, áudio limpo. Rosto pequeno (~10–18% da largura) no terço direito quando recostado; em vários momentos ele se inclina para a câmera (rosto grande, ótimo para 9:16). Gesticula muito e põe as mãos atrás da cabeça com frequência — conferir o quadro antes de cortar. Gancho forte para plantonista. Lapso 'períodos de câncer de constipação' (~1115 s) e 'defesa mais fina' = fezes mais finas: cortar/legendar corrigido.",
+          "t0_original": 1100.0,
+          "t1_original": 1170.0,
+          "dur": 69.41,
+          "citacao_t0": 1106.5,
+          "citacao_t1": 1113.94,
+          "citacao_palavras": [
+            1656,
+            1671
+          ],
+          "item_id": "20261103_img-4164",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261103_img-4164#s11",
+          "t0": 1170.07,
+          "t1": 1350.26,
+          "tema": "o PA faz diagnóstico sindrômico; convencer o paciente a investigar também é dever do médico",
+          "tags": [
+            "pronto-atendimento",
+            "sus",
+            "seguimento",
+            "relacao-medico-paciente",
+            "retorica"
+          ],
+          "tese": "urgência descarta risco iminente e encaminha; o brasileiro abandona a investigação, e o médico tem responsabilidade moral de convencê-lo",
+          "citacao": "Mas também seria a responsabilidade dele convencer o paciente daquilo.",
+          "gancho_potencial": 4,
+          "publicos": [
+            "plantonista",
+            "residente",
+            "geral"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Sala à noite (mesmo cenário do IMG_4162), câmera fixa HORIZONTAL 4K, ângulo de baixo, muito headroom; luz quente de teto, áudio limpo. Rosto pequeno (~10–18% da largura) no terço direito quando recostado; em vários momentos ele se inclina para a câmera (rosto grande, ótimo para 9:16). Gesticula muito e põe as mãos atrás da cabeça com frequência — conferir o quadro antes de cortar. Bom elo entre medicina e retórica. Trecho 1170–1255 s é explicativo e longo; usar 1282–1351 s para corte.",
+          "t0_original": 1170.0,
+          "t1_original": 1350.9,
+          "dur": 180.19,
+          "citacao_t0": 1344.46,
+          "citacao_t1": 1350.26,
+          "citacao_palavras": [
+            2043,
+            2052
+          ],
+          "item_id": "20261103_img-4164",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261103_img-4164#s12",
+          "t0": 1350.97,
+          "t1": 1470.68,
+          "tema": "ethos, pathos e logos na consulta: o médico domina só o logos",
+          "tags": [
+            "retorica",
+            "ethos-pathos-logos",
+            "relacao-medico-paciente",
+            "comunicacao"
+          ],
+          "tese": "sem credibilidade e conexão, o conteúdo técnico correto não convence o paciente a seguir a investigação",
+          "citacao": "O médico não tem só a função de encontrar o diagnóstico e indicar o tratamento",
+          "gancho_potencial": 4,
+          "publicos": [
+            "residente",
+            "plantonista",
+            "geral"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Sala à noite (mesmo cenário do IMG_4162), câmera fixa HORIZONTAL 4K, ângulo de baixo, muito headroom; luz quente de teto, áudio limpo. Rosto pequeno (~10–18% da largura) no terço direito quando recostado; em vários momentos ele se inclina para a câmera (rosto grande, ótimo para 9:16). Gesticula muito e põe as mãos atrás da cabeça com frequência — conferir o quadro antes de cortar. ERRO CONCEITUAL: define pathos como 'capacidade técnica' — pathos é apelo à emoção; competência e boa-fé são ambas ethos. Também diz 'o paciente vai ser convencido' querendo dizer 'não vai'. Usar só 1351–1364 s e 1440–1446 s ('geralmente domina só um desses elementos que é o Logos').",
+          "t0_original": 1350.9,
+          "t1_original": 1470.0,
+          "dur": 119.71,
+          "citacao_t0": 1350.97,
+          "citacao_t1": 1356.74,
+          "citacao_palavras": [
+            2053,
+            2067
+          ],
+          "item_id": "20261103_img-4164",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261103_img-4164#s13",
+          "t0": 1469.54,
+          "t1": 1548.8,
+          "tema": "por que colonoscopia e não tomografia para investigar o intestino",
+          "tags": [
+            "colonoscopia",
+            "tomografia",
+            "cancer-colorretal",
+            "exames"
+          ],
+          "tese": "a tomografia vê sobretudo o extraluminal; o pólipo é intraluminal, por isso precisa de colonoscopia (cara, com preparo e endoscopista)",
+          "citacao": "muito mais caro do que uma tomografia",
+          "gancho_potencial": 2,
+          "publicos": [
+            "geral",
+            "plantonista"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "corte-rapido"
+          ],
+          "notas": "Sala à noite (mesmo cenário do IMG_4162), câmera fixa HORIZONTAL 4K, ângulo de baixo, muito headroom; luz quente de teto, áudio limpo. Rosto pequeno (~10–18% da largura) no terço direito quando recostado; em vários momentos ele se inclina para a câmera (rosto grande, ótimo para 9:16). Gesticula muito e põe as mãos atrás da cabeça com frequência — conferir o quadro antes de cortar. Fala embolada em 1510–1530 s (raio X). 'Endoscopista que geralmente é cirurgião' é impreciso (gastroenterologistas também).",
+          "t0_original": 1470.0,
+          "t1_original": 1550.0,
+          "dur": 79.26,
+          "citacao_t0": 1507.72,
+          "citacao_t1": 1509.46,
+          "citacao_palavras": [
+            2324,
+            2330
+          ],
+          "item_id": "20261103_img-4164",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261103_img-4164#s14",
+          "t0": 1550.43,
+          "t1": 1612.71,
+          "tema": "sequência pólipo → câncer: todo câncer passou pelo pólipo",
+          "tags": [
+            "cancer-colorretal",
+            "polipo",
+            "adenoma",
+            "rastreamento",
+            "sequencia-adenoma-carcinoma"
+          ],
+          "tese": "o CCR é indolente: nasce de pólipo intraluminal que leva ~10 anos para malignizar — janela para o rastreamento",
+          "citacao": "não necessariamente todo pólipo é câncer, mas todo câncer já passou pelo estado de pólipo",
+          "gancho_potencial": 5,
+          "publicos": [
+            "geral",
+            "candidato-residencia",
+            "residente"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Sala à noite (mesmo cenário do IMG_4162), câmera fixa HORIZONTAL 4K, ângulo de baixo, muito headroom; luz quente de teto, áudio limpo. Rosto pequeno (~10–18% da largura) no terço direito quando recostado; em vários momentos ele se inclina para a câmera (rosto grande, ótimo para 9:16). Gesticula muito e põe as mãos atrás da cabeça com frequência — conferir o quadro antes de cortar. Antítese pronta. Ressalvas: 'a maior parte das pessoas tem pólipos' é exagero (adenomas ~25–40% acima dos 50); 'todo câncer' = a grande maioria (há via serrilhada e lesões planas); pólipo também pode ser séssil, não só pediculado.",
+          "t0_original": 1550.0,
+          "t1_original": 1612.7,
+          "dur": 62.28,
+          "citacao_t0": 1596.47,
+          "citacao_t1": 1604.01,
+          "citacao_palavras": [
+            2502,
+            2516
+          ],
+          "item_id": "20261103_img-4164",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261103_img-4164#s15",
+          "t0": 1612.25,
+          "t1": 1781.48,
+          "tema": "analogia: nem todo bacharel em Direito é juiz, mas todo juiz fez Direito",
+          "tags": [
+            "analogia",
+            "rastreamento",
+            "cancer-colorretal",
+            "polipo"
+          ],
+          "tese": "procurar câncer pelos pólipos é como procurar juízes entre bacharéis: filtra e direciona a busca",
+          "citacao": "Mas todo juiz precisou fazer faculdade de direito.",
+          "gancho_potencial": 4,
+          "publicos": [
+            "geral",
+            "concursos-vestibular",
+            "candidato-residencia"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Sala à noite (mesmo cenário do IMG_4162), câmera fixa HORIZONTAL 4K, ângulo de baixo, muito headroom; luz quente de teto, áudio limpo. Rosto pequeno (~10–18% da largura) no terço direito quando recostado; em vários momentos ele se inclina para a câmera (rosto grande, ótimo para 9:16). Gesticula muito e põe as mãos atrás da cabeça com frequência — conferir o quadro antes de cortar. Analogia de ouro só no início (1612–1690 s). Depois descarrilha: 'acabar com todos os juízes' (1640 s), 'estou falando na verdade dos políticos' (1767–1775 s) — EVITAR.",
+          "t0_original": 1612.7,
+          "t1_original": 1782.0,
+          "dur": 169.23,
+          "citacao_t0": 1630.91,
+          "citacao_t1": 1635.84,
+          "citacao_palavras": [
+            2547,
+            2554
+          ],
+          "item_id": "20261103_img-4164",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261103_img-4164#s16",
+          "t0": 1782.72,
+          "t1": 2030.21,
+          "tema": "quantos pólipos e de que tamanho definem o intervalo da próxima colonoscopia",
+          "tags": [
+            "vigilancia",
+            "colonoscopia",
+            "polipo",
+            "intervalo",
+            "cancer-colorretal"
+          ],
+          "tese": "poucos pólipos pequenos → baixa probabilidade de câncer nos próximos anos → intervalo maior, como o bacharel recém-formado que ainda não virou juiz",
+          "citacao": "Se você faz uma colonoscopia e enxerga 100 pólipos a chance dessa pessoa ter um câncer colorretal é alta",
+          "gancho_potencial": 3,
+          "publicos": [
+            "candidato-residencia",
+            "residente",
+            "geral"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "Sala à noite (mesmo cenário do IMG_4162), câmera fixa HORIZONTAL 4K, ângulo de baixo, muito headroom; luz quente de teto, áudio limpo. Rosto pequeno (~10–18% da largura) no terço direito quando recostado; em vários momentos ele se inclina para a câmera (rosto grande, ótimo para 9:16). Gesticula muito e põe as mãos atrás da cabeça com frequência — conferir o quadro antes de cortar. Ideia correta no geral, fala confusa (1800–1830 s, 1950–1990 s). Juiz: o requisito é 3 anos de atividade jurídica (ele supõe 5/10).",
+          "t0_original": 1782.0,
+          "t1_original": 2030.0,
+          "dur": 247.49,
+          "citacao_t0": 1782.72,
+          "citacao_t1": 1789.46,
+          "citacao_palavras": [
+            2782,
+            2800
+          ],
+          "item_id": "20261103_img-4164",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261103_img-4164#s17",
+          "t0": 2029.62,
+          "t1": 2294.03,
+          "tema": "o pólipo 'prodígio': histologia de alto risco encurta o intervalo",
+          "tags": [
+            "vigilancia",
+            "adenoma-avancado",
+            "displasia",
+            "colonoscopia",
+            "analogia"
+          ],
+          "tese": "não só o tamanho: características histológicas de malignidade (o 'prodígio') exigem colonoscopias mais próximas",
+          "citacao": "Esse câncer é um prodígio dos cânceres, entendeu?",
+          "gancho_potencial": 4,
+          "publicos": [
+            "candidato-residencia",
+            "residente",
+            "geral"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal",
+            "citacao-card"
+          ],
+          "notas": "Sala à noite (mesmo cenário do IMG_4162), câmera fixa HORIZONTAL 4K, ângulo de baixo, muito headroom; luz quente de teto, áudio limpo. Rosto pequeno (~10–18% da largura) no terço direito quando recostado; em vários momentos ele se inclina para a câmera (rosto grande, ótimo para 9:16). Gesticula muito e põe as mãos atrás da cabeça com frequência — conferir o quadro antes de cortar. Analogia do recém-formado da USP longa e repetitiva (2050–2160 s); o bom trecho é 2190–2290 s. Diz 'câncer' quando quer dizer pólipo/adenoma.",
+          "t0_original": 2030.0,
+          "t1_original": 2294.0,
+          "dur": 264.41,
+          "citacao_t0": 2238.82,
+          "citacao_t1": 2242.32,
+          "citacao_palavras": [
+            3537,
+            3544
+          ],
+          "item_id": "20261103_img-4164",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261103_img-4164#s18",
+          "t0": 2293.47,
+          "t1": 2357.7,
+          "tema": "síndromes hereditárias e intervalos de rastreamento",
+          "tags": [
+            "rastreamento",
+            "sindrome-de-lynch",
+            "paf",
+            "apc",
+            "cancer-colorretal"
+          ],
+          "tese": "mutações (Lynch, PAF/APC) encurtam o intervalo para 1–3 anos; sem fator de risco o intervalo é maior",
+          "citacao": "por isso que existe tanta variação de indicação de rastreamento",
+          "gancho_potencial": 2,
+          "publicos": [
+            "candidato-residencia",
+            "residente"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "corte-rapido"
+          ],
+          "notas": "Sala à noite (mesmo cenário do IMG_4162), câmera fixa HORIZONTAL 4K, ângulo de baixo, muito headroom; luz quente de teto, áudio limpo. Rosto pequeno (~10–18% da largura) no terço direito quando recostado; em vários momentos ele se inclina para a câmera (rosto grande, ótimo para 9:16). Gesticula muito e põe as mãos atrás da cabeça com frequência — conferir o quadro antes de cortar. ERRO: 'o habitual normal é de cinco anos, a partir do cinquenta' — colonoscopia normal em risco médio = 10 anos, início aos 45 (ACS/USPSTF) ou 50. Nomes embolados no áudio ('lente ou pássaro' = Lynch).",
+          "t0_original": 2294.0,
+          "t1_original": 2365.5,
+          "dur": 64.23,
+          "citacao_t0": 2294.27,
+          "citacao_t1": 2297.89,
+          "citacao_palavras": [
+            3625,
+            3634
+          ],
+          "item_id": "20261103_img-4164",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261103_img-4164#s19",
+          "t0": 2365.51,
+          "t1": 2512.4,
+          "tema": "tema dominado sai fluido: câncer colorretal é o feijão com arroz da cirurgia oncológica",
+          "tags": [
+            "comunicacao",
+            "cirurgia-oncologica",
+            "residencia",
+            "dominio-tecnico"
+          ],
+          "tese": "ele demonstra na prática a tese do vídeo: fala solta sobre o que vê todo dia e trava só nas analogias",
+          "citacao": "então aí você viu que eu consegui falar tranquilamente",
+          "gancho_potencial": 3,
+          "publicos": [
+            "residente",
+            "geral"
+          ],
+          "qualidade_visual": 4,
+          "qualidade_audio": 4,
+          "usos": [
+            "fala-principal"
+          ],
+          "notas": "Sala à noite (mesmo cenário do IMG_4162), câmera fixa HORIZONTAL 4K, ângulo de baixo, muito headroom; luz quente de teto, áudio limpo. Rosto pequeno (~10–18% da largura) no terço direito quando recostado; em vários momentos ele se inclina para a câmera (rosto grande, ótimo para 9:16). Gesticula muito e põe as mãos atrás da cabeça com frequência — conferir o quadro antes de cortar. Contagem de colectomias confusa em 2460–2530 s ('5 minhas' = colectomias): evitar. 'cirurgião com loja' = coloproctologista.",
+          "t0_original": 2365.5,
+          "t1_original": 2530.0,
+          "dur": 146.89,
+          "citacao_t0": 2365.51,
+          "citacao_t1": 2369.66,
+          "citacao_palavras": [
+            3755,
+            3763
+          ],
+          "item_id": "20261103_img-4164",
+          "tipo": "video",
+          "licenca": "propria"
+        },
+        {
+          "id": "20261103_img-4164#s20",
+          "t0": 2530.77,
+          "t1": 2694.2,
+          "tema": "depois de 42 minutos falando ele ficou mais solto",
+          "tags": [
+            "gravar-videos",
+            "pratica-deliberada",
+            "oratoria",
+            "bastidores"
+          ],
+          "tese": "a fluidez para a câmera melhora com volume de prática, mesmo com cansaço",
+          "citacao": "eu também já percebi que eu fiquei bem mais solto",
+          "gancho_potencial": 1,
+          "publicos": [
+            "geral"
+          ],
+          "qualidade_visual": 3,
+          "qualidade_audio": 4,
+          "usos": [
+            "corte-rapido"
+          ],
+          "notas": "Sala à noite (mesmo cenário do IMG_4162), câmera fixa HORIZONTAL 4K, ângulo de baixo, muito headroom; luz quente de teto, áudio limpo. Rosto pequeno (~10–18% da largura) no terço direito quando recostado; em vários momentos ele se inclina para a câmera (rosto grande, ótimo para 9:16). Gesticula muito e põe as mãos atrás da cabeça com frequência — conferir o quadro antes de cortar. Metacomentário de bastidor (cansaço, garganta seca, banho). Só serve para conteúdo sobre o próprio processo de treino.",
+          "t0_original": 2530.0,
+          "t1_original": 2695.0,
+          "dur": 163.43,
+          "citacao_t0": 2545.59,
+          "citacao_t1": 2548.25,
+          "citacao_palavras": [
+            4042,
+            4051
+          ],
+          "item_id": "20261103_img-4164",
           "tipo": "video",
           "licenca": "propria"
         }

@@ -1,0 +1,33 @@
+{
+  "id": "20261103_img-4164",
+  "nome": "IMG_4164",
+  "tipo": "video",
+  "origem": {
+    "drive_id": "1q1VvE-JgqFS5qN9OgpvQdgcMQhcsfGGy",
+    "nome_original": "IMG_4164.MOV",
+    "modifiedTime": "2026-11-03T04:22:23.555Z"
+  },
+  "arquivo": "source.mov",
+  "tamanho": 16845650221,
+  "sha256": "eae6d133923111e1626c1a6c9781e031816a799f8aef24e030e63b0e87e030fe",
+  "duracao": 2695.766667,
+  "largura": 3840,
+  "altura": 2160,
+  "fps": 29.991,
+  "rotacao": 0,
+  "tem_audio": true,
+  "vcodec": "hevc",
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "indexado",
+  "criado_em": "2026-11-03T22:31:41+00:00",
+  "atualizado_em": "2026-11-04T00:01:36+00:00",
+  "n_cenas": 90,
+  "n_keyframes": 90,
+  "contact_sheets": [
+    "contact_sheet.jpg",
+    "contact_sheet_02.jpg"
+  ],
+  "n_segmentos": 20,
+  "indexado_em": "2026-11-04T00:01:36+00:00"
+}
