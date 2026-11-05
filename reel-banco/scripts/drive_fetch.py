@@ -97,7 +97,28 @@ def get(s, url, params=None):
     print(f"ERRO: mais de {MAX_REDIRECTS} redirecionamentos", file=sys.stderr); sys.exit(4)
 
 
-def fetch(file_id, dest, expect_size=None, chunk=1 << 20, probe_bytes=None):
+def fetch(file_id, dest, expect_size=None, chunk=1 << 20, probe_bytes=None, retries=8):
+    """Baixa com retomada: se a conexão cai, continua do .part com Range (até `retries` vezes)."""
+    if probe_bytes:
+        return _fetch_once(file_id, dest, expect_size, chunk, probe_bytes, offset=0)
+    part = dest + ".part"
+    for k in range(retries + 1):
+        off = os.path.getsize(part) if os.path.exists(part) else 0
+        if off:
+            print(f"retomando {part} a partir de {off/1e6:.1f} MB (tentativa {k})", file=sys.stderr)
+        try:
+            return _fetch_once(file_id, dest, expect_size, chunk, None, offset=off)
+        except _Retry as e:
+            print(f"\naviso: {e}; nova tentativa em 5 s", file=sys.stderr)
+            time.sleep(5)
+    print(f"ERRO de rede: {retries} retomadas falharam (parcial mantido em {part})", file=sys.stderr); sys.exit(4)
+
+
+class _Retry(Exception):
+    pass
+
+
+def _fetch_once(file_id, dest, expect_size, chunk, probe_bytes, offset=0):
     s = requests.Session(); s.headers.update(UA)
     r = get(s, UC, params={"export": "download", "id": file_id, "confirm": "t"})
     for _ in range(3):  # ate 3 paginas de aviso encadeadas
@@ -118,13 +139,22 @@ def fetch(file_id, dest, expect_size=None, chunk=1 << 20, probe_bytes=None):
         action = urljoin(r.url, action)
         if not host_ok(action):
             bad_host(action)
+        if offset:
+            s.headers["Range"] = f"bytes={offset}-"
         r = get(s, action, params=fields)
     else:
         print("ERRO: avisos em loop.", file=sys.stderr); sys.exit(4)
     if r.status_code >= 400:
         print(f"ERRO {r.status_code}: resposta inesperada do Drive", file=sys.stderr); sys.exit(4)
 
-    total = int(r.headers.get("Content-Length") or 0) or None
+    if offset and not probe_bytes:
+        cr = r.headers.get("Content-Range", "")
+        if r.status_code != 206 or not cr.startswith(f"bytes {offset}-"):
+            r.close(); os.remove(dest + ".part")
+            raise _Retry(f"servidor ignorou Range (status {r.status_code}); recomeçando do zero")
+        total = int(cr.rsplit("/", 1)[1])
+    else:
+        total = int(r.headers.get("Content-Length") or 0) or None
     if probe_bytes:  # teste leve: aborta depois dos primeiros bytes, nada vai para o disco
         t0, got = time.time(), 0
         try:
@@ -143,8 +173,13 @@ def fetch(file_id, dest, expect_size=None, chunk=1 << 20, probe_bytes=None):
     part = dest + ".part"
     os.makedirs(os.path.dirname(os.path.abspath(dest)) or ".", exist_ok=True)
     h, got, t0, last = hashlib.sha256(), 0, time.time(), 0.0
+    if offset:
+        with open(part, "rb") as f0:
+            for b in iter(lambda: f0.read(1 << 24), b""):
+                h.update(b)
+        got = offset
     try:
-        with open(part, "wb") as f:
+        with open(part, "ab" if offset else "wb") as f:
             for b in r.iter_content(chunk):
                 if not b:
                     continue
@@ -153,10 +188,10 @@ def fetch(file_id, dest, expect_size=None, chunk=1 << 20, probe_bytes=None):
                 if now - last >= 1 or (total and got == total):
                     last = now
                     pct = f"{100*got/total:5.1f}%" if total else "  ?  "
-                    mbps = got / max(now - t0, 1e-6) / 1e6
+                    mbps = (got - offset) / max(now - t0, 1e-6) / 1e6
                     print(f"\r{pct} {got/1e6:9.1f} MB  {mbps:6.1f} MB/s", end="", file=sys.stderr, flush=True)
     except requests.RequestException as e:
-        print(f"\nERRO de rede durante o download: {e} (parcial mantido em {part})", file=sys.stderr); sys.exit(4)
+        raise _Retry(f"rede caiu durante o download: {e} (parcial mantido em {part})")
     print(file=sys.stderr)
     for label, want in (("Content-Length", total), ("--expect-size", expect_size)):
         if want is not None and got != want:
