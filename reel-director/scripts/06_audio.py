@@ -68,7 +68,7 @@ def main():
             continue
         sfx_edl.append({"t": s["t"], "file": str(f), "db": s["db"]})
 
-    music = plan.get("music") or a.get("music_default")
+    music = None if plan.get("music") is False else (plan.get("music") or a.get("music_default"))  # false = sem trilha
     music_p = dc.resolve(music, dc.SKILL) if music else None
     if music_p and not music_p.exists():
         dc.log(f"  aviso: trilha {music_p} não existe — sem música")

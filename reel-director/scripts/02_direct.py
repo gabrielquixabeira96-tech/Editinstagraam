@@ -23,7 +23,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import dr_common as dc  # noqa: E402
 
 COMPS = {"HookTitle", "Counter", "BarChart", "LineChart", "Callout", "ProgressBar",
-         "LowerThird", "ArticleFigure", "BigText", "Label"}
+         "LowerThird", "ArticleFigure", "BigText", "Label", "Checklist"}
 SHOT_KINDS = {"aroll", "broll", "ai", "chroma"}
 
 

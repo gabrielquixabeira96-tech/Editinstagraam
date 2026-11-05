@@ -312,7 +312,7 @@ const useSerif = () => {
       .catch(() => continueRender(h));
   }, [h]);
 };
-const C_BOX = 'rgba(10,10,10,.78)';
+const C_BOX = 'rgba(12,12,12,.88)';
 const C_SOFT = 'rgba(255,255,255,.80)';
 const C_SHADOW = '0 2px 14px rgba(0,0,0,.65), 0 1px 2px rgba(0,0,0,.6)';
 const soft = (f, start, d = 12) => interpolate(f, [start, start + d], [0, 1], {easing: inOut, extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
@@ -382,7 +382,7 @@ const LowerThirdClassico = ({name = 'Dr. Gabriel Quixabeira', sub = 'CRM-MT 14.9
   );
 };
 
-const ArticleFigureClassico = ({image, highlight = null, caption = '', credit = '', y = 480, w = 950, h = 640, durationInFrames}) => {
+const ArticleFigureClassico = ({image, highlight = null, caption = '', credit = '', y = 480, w = 950, h = 640, capSize = 38, durationInFrames}) => {
   useSerif();
   const f = useCurrentFrame();
   const inP = soft(f, 0, 12);
@@ -402,10 +402,10 @@ const ArticleFigureClassico = ({image, highlight = null, caption = '', credit = 
           </div>
         </div>
         {caption && (
-          <div style={{marginTop: 22, background: C_BOX, padding: '14px 24px', fontSize: 38, fontWeight: 600, letterSpacing: '0.02em',
+          <div style={{marginTop: 22, background: C_BOX, padding: '12px 22px', fontSize: capSize, fontWeight: 600, letterSpacing: '0.02em',
             lineHeight: 1.18, opacity: soft(f, 10, 12)}}>{caption}</div>
         )}
-        {credit && <div style={{marginTop: 8, display: 'inline-block', background: 'rgba(10,10,10,.62)', padding: '5px 12px', fontSize: 23, fontWeight: 600,
+        {credit && <div style={{marginTop: 8, display: 'inline-block', background: 'rgba(12,12,12,.85)', padding: '5px 12px', fontSize: 23, fontWeight: 600,
           letterSpacing: '0.04em', color: '#E6E6E6', opacity: soft(f, 14, 12)}}>{credit}</div>}
       </div>
     </AbsoluteFill>
@@ -426,6 +426,97 @@ const LabelClassico = ({text = 'Recriação ilustrativa (IA)', y = 1180, align =
   );
 };
 
+
+// ---------- Classico: Counter / BarChart / Checklist (2026-11-05) — caixa quadrada grafite, branco × cinza, sem acento ----------
+const SANS_C = 'PoppinsDir';
+const CounterClassico = ({from = 0, to = 100, decimals = 0, prefix = '', suffix = '', label = '', kicker = '', y = 560, numSize = 150, pad = 30, durationInFrames}) => {
+  useSerif();
+  const f = useCurrentFrame();
+  const p = interpolate(f, [4, 34], [0, 1], {easing: inOut, extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const v = from + (to - from) * p;
+  const inP = soft(f, 0, 12);
+  return (
+    <AbsoluteFill style={{fontFamily: SERIF, color: 'white', opacity: fadeOut(f, durationInFrames, 10)}}>
+      <div style={{position: 'absolute', top: y, left: 65, width: 950, display: 'flex', justifyContent: 'center',
+        opacity: inP, transform: `translateY(${(1 - inP) * 12}px)`}}>
+        <div style={{background: C_BOX, padding: `${pad}px 54px ${pad}px`, display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: 560}}>
+          {kicker && <div style={{fontSize: 26, fontWeight: 600, letterSpacing: '0.24em', textTransform: 'uppercase', color: C_SOFT, marginBottom: 10}}>{kicker}</div>}
+          <div style={{fontSize: numSize, fontWeight: 600, lineHeight: 1, fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap', textShadow: C_SHADOW}}>
+            {prefix}{v.toFixed(decimals).replace('.', ',')}<span style={{fontSize: Math.round(numSize * 0.47), marginLeft: 10}}>{suffix}</span>
+          </div>
+          <Rule w={interpolate(f, [10, 30], [0, 200], {easing: inOut, extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})} opacity={0.8} style={{margin: '16px 0 12px'}} />
+          {label && <div style={{fontSize: Math.max(30, Math.round(numSize * 0.3)), fontWeight: 600, letterSpacing: '0.04em', textAlign: 'center', maxWidth: 820, opacity: soft(f, 12, 12)}}>{label}</div>}
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+const BarChartClassico = ({title = '', bars = [], unit = '', y = 520, source = '', durationInFrames}) => {
+  useSerif();
+  const f = useCurrentFrame();
+  const max = Math.max(...bars.map((b) => b.value), 1);
+  const inP = soft(f, 0, 12);
+  return (
+    <AbsoluteFill style={{fontFamily: SERIF, color: 'white', opacity: fadeOut(f, durationInFrames, 10)}}>
+      <div style={{position: 'absolute', top: y, left: 65, width: 950, opacity: inP, transform: `translateY(${(1 - inP) * 12}px)`}}>
+        <div style={{background: C_BOX, padding: '30px 40px 24px'}}>
+          {title && <div style={{fontSize: 34, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 6}}>{title}</div>}
+          {title && <Rule w={interpolate(f, [4, 20], [0, 180], {easing: inOut, extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})} opacity={0.7} style={{marginBottom: 24}} />}
+          {bars.map((b, i) => {
+            const pb = interpolate(f, [8 + i * 6, 30 + i * 6], [0, 1], {easing: inOut, extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+            return (
+              <div key={i} style={{marginBottom: 18}}>
+                <div style={{fontSize: 34, fontWeight: 600, color: b.highlight ? '#FFFFFF' : C_SOFT, marginBottom: 6}}>{b.label}</div>
+                <div style={{display: 'flex', alignItems: 'center', gap: 18}}>
+                  <div style={{height: 26, width: `${(b.value / max) * 600 * pb}px`, background: b.highlight ? 'rgba(255,255,255,.95)' : 'rgba(255,255,255,.45)'}} />
+                  <div style={{fontSize: 40, fontWeight: 600, fontVariantNumeric: 'tabular-nums', opacity: pb}}>
+                    {Math.round(b.value * pb)}{unit}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+          {source && <div style={{fontSize: 22, fontWeight: 600, letterSpacing: '0.03em', color: '#D0D0D0', marginTop: 10}}>{source}</div>}
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+const ChecklistClassico = ({title = '', items = [], y = 520, stagger = 9, instant = false, footer = '', durationInFrames}) => {
+  useSerif();
+  const f = useCurrentFrame();
+  // instant: continuação de um card anterior (sem animação de entrada do quadro/título)
+  const inP = instant ? 1 : soft(f, 0, 12);
+  return (
+    <AbsoluteFill style={{fontFamily: SERIF, color: 'white', opacity: items.length && items[0].keepOut ? 1 : fadeOut(f, durationInFrames, 10)}}>
+      <div style={{position: 'absolute', top: y, left: 65, width: 950, opacity: inP, transform: `translateY(${(1 - inP) * 12}px)`}}>
+        <div style={{background: C_BOX, padding: '22px 36px 14px'}}>
+          {title && <div style={{fontSize: 30, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: C_SOFT}}>{title}</div>}
+          {title && <Rule w={160 * (instant ? 1 : soft(f, 4, 14))} opacity={0.7} style={{margin: '10px 0 16px'}} />}
+          {items.map((it, i) => {
+            const st0 = it.at !== undefined ? Math.round(it.at * 30) : 6 + i * stagger;
+            const pi = it.shown ? 1 : soft(f, st0, 12);
+            const strike = it.strike ? (it.struck ? 1 : soft(f, it.strikeAt !== undefined ? Math.round(it.strikeAt * 30) : st0 + 14, 10)) : 0;
+            return (
+              <div key={i} style={{display: 'flex', alignItems: 'baseline', gap: 18, marginBottom: 10, opacity: pi, transform: `translateX(${(1 - pi) * 14}px)`}}>
+                <div style={{width: 14, height: 1.5, background: 'rgba(255,255,255,.9)', transform: 'translateY(-10px)'}} />
+                <div style={{position: 'relative', fontSize: it.size || 46, fontWeight: 600, letterSpacing: '0.02em', color: it.dim ? C_SOFT : '#FFFFFF'}}>
+                  {it.text}
+                  {it.strike && <div style={{position: 'absolute', left: 0, top: '56%', height: 2, width: `${strike * 100}%`, background: 'rgba(255,255,255,.95)'}} />}
+                </div>
+                {it.note && <div style={{fontSize: 26, fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase', color: C_SOFT}}>{it.note}</div>}
+              </div>
+            );
+          })}
+          {footer && <div style={{fontSize: 24, fontWeight: 600, letterSpacing: '0.03em', color: '#D0D0D0', marginTop: 8, opacity: instant ? 1 : soft(f, 10, 12)}}>{footer}</div>}
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 const byLook = (Dir, Cls) => (props) => (props.look === 'classico' ? <Cls {...props} /> : <Dir {...props} />);
 const HookTitle = byLook(HookTitleDir, HookTitleClassico);
 const LowerThird = byLook(LowerThirdDir, LowerThirdClassico);
@@ -433,7 +524,9 @@ const ArticleFigure = byLook(ArticleFigureDir, ArticleFigureClassico);
 const BigText = byLook(BigTextDir, BigTextClassico);
 const Label = byLook(LabelDir, LabelClassico);
 
-const COMPS = {HookTitle, Counter, BarChart, LineChart, Callout, ProgressBar, LowerThird, ArticleFigure, BigText, Label};
+const CounterC = byLook(Counter, CounterClassico);
+const BarChartC = byLook(BarChart, BarChartClassico);
+const COMPS = {HookTitle, Counter: CounterC, BarChart: BarChartC, Checklist: ChecklistClassico, LineChart, Callout, ProgressBar, LowerThird, ArticleFigure, BigText, Label};
 const calc = ({props}) => ({durationInFrames: Math.max(1, Math.round(props.durationInFrames || 60))});
 
 const Root = () => (

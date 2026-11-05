@@ -39,11 +39,16 @@ EASE_ZOOM = 0.03
 MAX_SPEED = 0.012       # fração do recorte por quadro
 
 
-def follower(target, dead, ease, max_step):
-    """Zona morta + easing exponencial + velocidade máxima. target: array por quadro."""
+def follower(target, dead, ease, max_step, resets=()):
+    """Zona morta + easing exponencial + velocidade máxima. target: array por quadro.
+    resets: quadros de corte seco (polish.json "hard_cuts_s") onde a "câmera" pula direto para o alvo em vez de
+    deslizar — num bruto já cortado o rosto muda de lugar no corte e o atraso deixaria o rosto fora do quadro."""
     out = np.empty_like(target)
     cur = float(target[0])
+    resets = set(int(r) for r in resets)
     for i, tg in enumerate(target):
+        if i in resets:
+            cur = float(tg)
         err = tg - cur
         d = dead[i] if hasattr(dead, "__len__") else dead
         if abs(err) > d:
@@ -65,6 +70,7 @@ def plan(cfg, analysis, info, n_frames, framing, fit, static):
     fr.update({k: float(v) for k, v in (cfg.get("framing_params") or {}).items() if k in ("face_ratio", "eye_y")})
     maxw = min(W, H * 9 / 16)
     t_frames = np.arange(n_frames) / pc.FPS
+    resets = [int(round(float(t) * pc.FPS)) for t in (cfg.get("hard_cuts_s") or []) if 0 < float(t) * pc.FPS < n_frames]
     if fit == "contain" or not tr.get("cx"):
         mode = "contain" if fit == "contain" else "cover-center"
         if fit != "contain":
@@ -96,7 +102,7 @@ def plan(cfg, analysis, info, n_frames, framing, fit, static):
     if static:
         crop_w = np.full(n_frames, float(np.median(crop_w)))
     else:
-        crop_w = follower(crop_w, crop_w * ZOOM_DEAD, EASE_ZOOM, crop_w * 0.004)
+        crop_w = follower(crop_w, crop_w * ZOOM_DEAD, EASE_ZOOM, crop_w * 0.004, resets)
     crop_h = np.minimum(crop_w * 16 / 9, H)
     # posição-alvo: rosto no centro horizontal; olhos em eye_y do recorte
     tx = cx - crop_w / 2
@@ -105,8 +111,10 @@ def plan(cfg, analysis, info, n_frames, framing, fit, static):
         tx = np.full(n_frames, float(np.median(tx)))
         ty = np.full(n_frames, float(np.median(ty)))
     else:
-        tx = follower(tx, crop_w * DEAD_ZONE, EASE_POS, crop_w * MAX_SPEED)
-        ty = follower(ty, crop_h * DEAD_ZONE, EASE_POS, crop_h * MAX_SPEED)
+        fp = cfg.get("follow") or {}  # polish.json "follow": {"dead_zone", "ease", "max_speed"} — câmera mais "esperta"
+        dz, ez, ms = float(fp.get("dead_zone", DEAD_ZONE)), float(fp.get("ease", EASE_POS)), float(fp.get("max_speed", MAX_SPEED))
+        tx = follower(tx, crop_w * dz, ez, crop_w * ms, resets)
+        ty = follower(ty, crop_h * dz, ez, crop_h * ms, resets)
     tx = np.clip(tx, 0, W - crop_w)
     ty = np.clip(ty, 0, H - crop_h)
     rect = np.stack([tx, ty, crop_w, crop_h], axis=1)

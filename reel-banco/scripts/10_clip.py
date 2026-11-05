@@ -45,7 +45,7 @@ def find_segment(seg_id):
     return item_id, s
 
 
-def clip_video(item, s, out: Path, pad: float, precise: bool, no_audio: bool):
+def clip_video(item, s, out: Path, pad: float, precise: bool, no_audio: bool, short_side: int = 1080):
     src = bc.find_source(item["id"])
     if not src:
         bc.log(f"{item['id']}: mídia ausente em work/ — buscando ...")
@@ -58,8 +58,8 @@ def clip_video(item, s, out: Path, pad: float, precise: bool, no_audio: bool):
     b = min(dur, float(s["t1"]) + pad) if dur else float(s["t1"]) + pad
     w, h = item.get("largura") or 1920, item.get("altura") or 1080
     vf = []
-    if min(w, h) > 1080:
-        vf.append("scale=-2:1080" if w >= h else "scale=1080:-2")
+    if min(w, h) > short_side:
+        vf.append(f"scale=-2:{short_side}" if w >= h else f"scale={short_side}:-2")
     fps = item.get("fps") or 30
     if fps > 60 or fps <= 0:
         vf.append("fps=30")
@@ -218,6 +218,9 @@ def main():
                     help="pasta work/ da reel-editor/reel-director (ex.: /home/claude/reel-director/work): grava "
                          "DIR/<nome-do-clipe>/transcript.json para elas não retranscreverem o clipe")
     ap.add_argument("--no-audio", action="store_true")
+    ap.add_argument("--short-side", type=int, default=1080,
+                    help="lado menor máximo do clipe (padrão 1080; use 2160 para manter o 4K quando o clipe vai ser "
+                         "reenquadrado em 9:16 pela reel-polish — evita ampliar o recorte)")
     ap.add_argument("--out", help="caminho de saída (padrão: work/banco/clips/<id>.mp4)")
     ap.add_argument("--broll", action="store_true", help="registra no índice de B-roll da reel-director")
     ap.add_argument("--broll-index", help="caminho do assets/broll/index.json da reel-director")
@@ -240,7 +243,7 @@ def main():
     else:
         if s.get("t0") is None:
             bc.die("segmento de vídeo sem t0/t1")
-        info, a, b = clip_video(item, s, out, args.pad, args.precise, args.no_audio)
+        info, a, b = clip_video(item, s, out, args.pad, args.precise, args.no_audio, args.short_side)
         bc.log(f"{args.segment_id}: {bc.fmt_t(a)}–{bc.fmt_t(b)} -> {out} ({info.get('width')}x{info.get('height')}, "
                f"{info.get('duration'):.2f} s)")
         tp = clip_transcript(item, a, b, out)
