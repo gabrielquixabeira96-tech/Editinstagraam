@@ -69,6 +69,8 @@ def main():
         events.add(dc.map_t(float(s["t"]) + float(s["dur"]), segs))
     for z in plan["zoom"]:
         events.add(dc.map_t(z["t"], segs))
+    for t in (plan.get("aroll_alternate") or {}).get("cuts", []):   # troca de enquadramento no jump cut = evento
+        events.add(dc.map_t(t, segs))
     for m in man:
         events.add(m["start_frame"] / dc.FPS)
     ev = sorted(events)

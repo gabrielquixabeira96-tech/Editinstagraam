@@ -127,6 +127,23 @@ def pass_base(plan, W_, segs, st):
         fr = readers[i].read()
         return fr if fr is not None else cutframe
 
+    # plan.aroll_alternate = {"scale": 1.06, "focus_y": 0.36, "cuts": [t_orig, ...]}: em jump cut de fala (mesmo
+    # plano, rosto pula poucos px) alterna o enquadramento entre "aberto" (1,00) e "fechado" (scale) a cada corte —
+    # o pulo vira troca intencional de plano em vez de "tremida". Tempos na timeline ORIGINAL.
+    alt = plan.get("aroll_alternate") or {}
+    alt_cuts = sorted(dc.nframes(dc.map_t(t, segs)) for t in alt.get("cuts", []))
+    alt_sc = float(alt.get("scale", 1.06))
+    alt_fy = float(alt.get("focus_y", st["punch_in"]["focus_y"]))
+    alt_reset = sorted(dc.nframes(dc.map_t(t, segs)) for t in alt.get("reset", []))
+
+    def alt_scale(f):
+        k = 0
+        for c in sorted(alt_cuts + alt_reset):
+            if c > f:
+                break
+            k = 0 if c in alt_reset else k + 1
+        return alt_sc if k % 2 == 1 else 1.0
+
     dc.log(f"compose base: {total_f} quadros, {len(seglist)} segmento(s)")
     for f in range(total_f):
         cutframe = cut.read()
@@ -151,9 +168,12 @@ def pass_base(plan, W_, segs, st):
         # punch-in só no A-roll fora de transição
         if s["kind"] == "aroll" and dfr == 0:
             z = zoom_at(f, wins)
+            sc_alt = alt_scale(f)
             if z:
                 scale, fy = z
-                base = vfx.zoom_frame(base, scale, fx=0.5, fy=fy)
+                base = vfx.zoom_frame(base, scale * sc_alt, fx=0.5, fy=fy)
+            elif sc_alt > 1.0001:
+                base = vfx.zoom_frame(base, sc_alt, fx=0.5, fy=alt_fy)
         w.write(base)
     cut.close()
     for r in readers.values():

@@ -167,7 +167,7 @@ class Segmenter:
 
 
 # ---------------------------------------------------------------- cache do rastreamento
-TRACK_CACHE_VERSION = 1
+TRACK_CACHE_VERSION = 2   # 2: guarda landmarks brutos; suavização fora do cache
 
 
 def track_cache_key(video, start, dur, n_frames, smooth_frames):
@@ -188,7 +188,7 @@ def track_cached(video, start, dur, n_frames, smooth_frames, cache_dir, progress
     if f.exists():
         try:
             z = np.load(f)
-            T = {k: z[k] for k in ("pts", "ok", "conf", "hair", "skin", "hair_center_v")}
+            T = {k: z[k] for k in ("raw", "ok", "conf", "hair", "skin")}
             T["detected_frac"] = float(z["detected_frac"])
             pc.log(f"  rastreamento reaproveitado do cache: {f.name}")
             return T
@@ -200,7 +200,7 @@ def track_cached(video, start, dur, n_frames, smooth_frames, cache_dir, progress
             Path(cache_dir).mkdir(parents=True, exist_ok=True)
             tmp = f.with_suffix(".tmp.npz")
             np.savez_compressed(tmp, detected_frac=np.float32(T["detected_frac"]),
-                                **{k: T[k] for k in ("pts", "ok", "conf", "hair", "skin", "hair_center_v")})
+                                **{k: T[k] for k in ("raw", "ok", "conf", "hair", "skin")})
             tmp.replace(f)
             pc.log(f"  rastreamento salvo no cache: {f}")
         except Exception as e:
@@ -259,24 +259,100 @@ def track(video, start, dur, n_frames, smooth_frames=7, progress=True):
     n = len(pts_all)
     if n == 0 or not any(ok):
         return None
-    # suavização temporal dos landmarks (preenche lacunas e filtra jitter sem atraso)
+    # landmarks BRUTOS (NaN onde não detectou). A suavização temporal é feita em smooth_landmarks() — depois do
+    # cache — com filtro adaptativo à velocidade e reinício nos cortes.
     P = np.full((n, 478, 2), np.nan, np.float32)
     for i, p in enumerate(pts_all):
         if p is not None:
             P[i] = p
-    flat = P.reshape(n, -1)
-    for c in range(flat.shape[1]):
-        v = pc.fill_gaps(flat[:, c])
-        flat[:, c] = pc.smooth(v, smooth_frames) if n >= 5 else v
-    P = flat.reshape(n, 478, 2)
     # confiança: a menos de 0,5 s de uma detecção real
     okarr = np.array(ok, bool)
     idx_ok = np.flatnonzero(okarr)
     dist = np.abs(np.arange(n)[:, None] - idx_ok[None, :]).min(axis=1)
     conf = dist <= pc.FPS // 2
-    T = {"pts": P, "ok": okarr, "conf": conf, "hair": np.stack(hair), "skin": np.stack(skin),
+    T = {"raw": P, "ok": okarr, "conf": conf, "hair": np.stack(hair), "skin": np.stack(skin),
          "detected_frac": float(okarr.mean())}
-    T["hair_center_v"] = hair_center_series(T, smooth_frames)
+    return T
+
+
+# ---------------------------------------------------------------- suavização temporal (2026-11-06)
+def detect_cuts(P_raw, ok, fps=None, extra_s=(), jump=0.18):
+    """Quadros onde começa um novo plano (descontinuidade): cortes informados (polish.json "hard_cuts_s", em s da
+    entrada) + saltos detectados — a ponte do nariz anda mais que `jump` × largura do rosto num só quadro (nenhum
+    movimento real de cabeça faz isso a 30 fps; corte seco e reenquadre que pula fazem)."""
+    fps = fps or pc.FPS
+    n = P_raw.shape[0]
+    cuts = set()
+    for t in extra_s or ():
+        k = int(round(float(t) * fps))
+        if 0 < k < n:
+            cuts.add(k)
+    br = P_raw[:, IDX_BRIDGE]
+    fw = np.linalg.norm(P_raw[:, IDX_FACE_R] - P_raw[:, IDX_FACE_L], axis=1)
+    for i in range(1, n):
+        if ok[i] and ok[i - 1] and np.isfinite(fw[i]) and fw[i] > 1:
+            if np.linalg.norm(br[i] - br[i - 1]) / fw[i] > jump:
+                cuts.add(i)
+    return sorted(cuts)
+
+
+def _adaptive_lowpass(X, speed, fps, min_cutoff, beta):
+    """Passa-baixas de 1ª ordem com corte adaptativo (One Euro): fc = min_cutoff + beta·velocidade (fw/s).
+    Parado → fc baixo (mata o tremor); cabeça rápida → fc alto (sem atraso). Aplicado ida e volta e com média das
+    duas passagens: fase zero, sem o atraso do filtro causal. X: (n, c)."""
+    n = X.shape[0]
+    fc = min_cutoff + beta * speed
+    te = 1.0 / fps
+    alpha = 1.0 / (1.0 + (1.0 / (2 * np.pi * fc)) / te)
+    fwd = np.empty_like(X)
+    fwd[0] = X[0]
+    for i in range(1, n):
+        fwd[i] = fwd[i - 1] + alpha[i] * (X[i] - fwd[i - 1])
+    bwd = np.empty_like(X)
+    bwd[-1] = X[-1]
+    for i in range(n - 2, -1, -1):
+        bwd[i] = bwd[i + 1] + alpha[i + 1] * (X[i] - bwd[i + 1])
+    return 0.5 * (fwd + bwd)
+
+
+def smooth_landmarks(T, R, fps=None):
+    """Preenche lacunas e suaviza os landmarks de cada PLANO separadamente (o filtro reinicia em cada corte, nunca
+    arrasta o rosto do plano anterior), com corte adaptativo à velocidade da cabeça. Grava T["pts"], T["cuts"],
+    T["head_speed"] (fw/s, por quadro) e recalcula hair_center_v."""
+    fps = fps or pc.FPS
+    P = T["raw"].astype(np.float64)
+    n = P.shape[0]
+    ok = np.asarray(T["ok"], bool)
+    cuts = detect_cuts(P, ok, fps, R.get("hard_cuts_s") or ())
+    bounds = [0] + cuts + [n]
+    min_cut = float(R.get("lm_min_cutoff_hz", 1.2))
+    beta = float(R.get("lm_beta", 6.0))
+    out = np.full_like(P, np.nan)
+    speed_all = np.zeros(n)
+    for a, b in zip(bounds[:-1], bounds[1:]):
+        if b - a < 1:
+            continue
+        seg = P[a:b].reshape(b - a, -1)
+        if not np.isfinite(seg).any():
+            continue
+        flat = np.stack([pc.fill_gaps(seg[:, c]) for c in range(seg.shape[1])], 1)
+        pts = flat.reshape(b - a, 478, 2)
+        fw = np.linalg.norm(pts[:, IDX_FACE_R] - pts[:, IDX_FACE_L], axis=1)
+        fw = np.maximum(fw, 1.0)
+        # velocidade "rígida" da cabeça (ponte + cantos dos olhos), em larguras de rosto por segundo, pré-suavizada
+        rig = pts[:, [IDX_BRIDGE, 33, 263]].mean(axis=1)
+        sp = np.zeros(b - a)
+        if b - a > 1:
+            sp[1:] = np.linalg.norm(np.diff(rig, axis=0), axis=1) / fw[1:] * fps
+            sp[0] = sp[1]
+        if b - a >= 5:
+            sp = np.convolve(np.pad(sp, 2, mode="edge"), np.ones(5) / 5, mode="valid")
+        speed_all[a:b] = sp
+        out[a:b] = _adaptive_lowpass(flat, sp, fps, min_cut, beta).reshape(b - a, 478, 2) if b - a > 2 else pts
+    T["pts"] = out.astype(np.float32)
+    T["cuts"] = np.array(cuts, np.int32)
+    T["head_speed"] = speed_all.astype(np.float32)
+    T["hair_center_v"] = hair_center_series(T, int(R.get("landmark_smooth_frames") or 7))
     return T
 
 
@@ -296,40 +372,77 @@ def yaw_series(P):
     return np.degrees(np.arcsin(np.clip(np.median(np.stack(A, 1), 1), -1.0, 1.0)))
 
 
+def pitch_series(P):
+    """Proxy de pitch (cabeça inclinada para cima/baixo): posição vertical da ponta do nariz entre a linha dos olhos e
+    a boca (0 = nos olhos, 1 = na boca). De frente fica ~0,55–0,65; mudar muito indica cabeça inclinada, quando o
+    warp elíptico (calibrado de frente) passa a deformar a narina/columela."""
+    eye = 0.5 * (P[:, 33] + P[:, 263])
+    mouth = 0.5 * (P[:, 13] + P[:, 14])
+    d = mouth[:, 1] - eye[:, 1]
+    return (P[:, IDX_TIP, 1] - eye[:, 1]) / np.where(np.abs(d) < 1e-3, 1e-3, d)
+
+
+def _ramp_down(x, full, zero):
+    """1 até `full`, 0 a partir de `zero`, smoothstep no meio."""
+    z = np.clip((x - full) / max(zero - full, 1e-6), 0.0, 1.0)
+    return 1.0 - z * z * (3 - 2 * z)
+
+
 def nose_gain_series(T, R, fps=None):
-    """Envoltória 0..1 do warp do NARIZ por quadro (pele/cabelo não mudam). Com yaw alto os landmarks perdem precisão
-    e o warp elíptico deforma o nariz de perfil, então:
-      * rampa suave: ganho 1 até |yaw| = nose_yaw_full (18°), 0 a partir de nose_yaw_zero (32°) — graus ESTIMADOS por
-    yaw_series (escala aproximada; calibrado no IMG_3525: rosto "de frente" para a câmera baixa fica em ±15°,
-    a virada que deformava o nariz passa de 35°);
-      * instabilidade: a ponta do nariz "pulando" (velocidade relativa à largura do rosto acima de nose_jitter_max)
-        também derruba o ganho; quadro sem confiança = 0;
-      * antecipação: mínimo numa janela que olha nose_lookahead_s à frente (a falha começa ANTES da virada) e
-        nose_release_s para trás; depois média móvel de nose_ease_s para não "piscar";
-      * nose_off_ranges: [[t0, t1], ...] em segundos do vídeo de entrada zera o nariz à força (último recurso)."""
+    """Envoltória 0..1 do warp do NARIZ por quadro (pele/cabelo não mudam). O warp elíptico é calibrado com o rosto
+    de frente e parado; fora disso ele deforma ou "respira". O ganho é o produto de:
+      * yaw (giro lateral): 1 até nose_yaw_full (18°), 0 a partir de nose_yaw_zero (32°);
+      * pitch (cabeça para cima/baixo): desvio da posição vertical da ponta (pitch_series) em relação à mediana do
+        vídeo — 1 até nose_pitch_full (0,08), 0 a partir de nose_pitch_zero (0,18);
+      * velocidade da cabeça (T["head_speed"], larguras de rosto por segundo): 1 até nose_speed_full (0,6), 0 a
+        partir de nose_speed_zero (1,8) — em giro rápido o landmark erra a posição e o warp "escorrega";
+      * instabilidade da ponta relativa à ponte (nose_jitter_max) e quadro sem confiança = 0.
+    Depois, POR PLANO (reinicia em cada corte de T["cuts"]): mínimo numa janela que antecipa nose_lookahead_s e
+    segura nose_release_s, e suavização de nose_ease_s — a rampa nunca salta de um quadro para o outro.
+    Num corte seco o ganho NÃO é zerado (o nariz "crescer de volta" no plano novo seria visível); a suavização é que
+    reinicia. nose_cut_fadein_s > 0 (padrão 0) faz o plano novo começar sem warp e subir nesse tempo. nose_off_ranges: [[t0, t1], ...] em s zera à força (último recurso)."""
     fps = fps or pc.FPS
     P = T["pts"]
     n = P.shape[0]
-    full = float(R.get("nose_yaw_full", 18.0))
-    zero = max(full + 1.0, float(R.get("nose_yaw_zero", 32.0)))
     yaw = yaw_series(P)
-    x = np.clip((np.abs(yaw) - full) / (zero - full), 0.0, 1.0)
-    g = 1.0 - x * x * (3 - 2 * x)
+    g = _ramp_down(np.abs(yaw), float(R.get("nose_yaw_full", 18.0)),
+                   max(float(R.get("nose_yaw_full", 18.0)) + 1.0, float(R.get("nose_yaw_zero", 32.0))))
+    pit = pitch_series(P)
+    conf = np.asarray(T.get("conf", np.ones(n, bool)), bool)
+    ref = float(np.nanmedian(pit[conf])) if conf.any() else float(np.nanmedian(pit))
+    g = g * _ramp_down(np.abs(pit - ref), float(R.get("nose_pitch_full", 0.08)), float(R.get("nose_pitch_zero", 0.18)))
+    spd = np.asarray(T.get("head_speed", np.zeros(n)), float)
+    g = g * _ramp_down(spd, float(R.get("nose_speed_full", 0.6)), float(R.get("nose_speed_zero", 1.8)))
     fw = np.linalg.norm(P[:, IDX_FACE_R] - P[:, IDX_FACE_L], axis=1)
-    rel = (P[:, IDX_TIP] - P[:, IDX_BRIDGE]) / np.maximum(fw, 1.0)[:, None]  # ponta relativa à ponte (sem translação)
+    rel = (P[:, IDX_TIP] - P[:, IDX_BRIDGE]) / np.maximum(fw, 1.0)[:, None]
     jit = np.zeros(n, np.float32)
     if n > 1:
         jit[1:] = np.linalg.norm(np.diff(rel, axis=0), axis=1)
+    cuts = [int(c) for c in np.asarray(T.get("cuts", []))]
+    for c in cuts:
+        jit[c] = 0.0   # o salto do corte não é tremor
     jmax = float(R.get("nose_jitter_max", 0.035))
     g = g * np.clip(1.0 - (jit - jmax) / jmax, 0.0, 1.0)
-    g = np.where(np.asarray(T.get("conf", np.ones(n, bool)), bool), g, 0.0)
+    g = np.where(conf, g, 0.0)
+    g = np.nan_to_num(g, nan=0.0)
     ahead = int(round(float(R.get("nose_lookahead_s", 0.35)) * fps))
     back = int(round(float(R.get("nose_release_s", 0.15)) * fps))
-    gm = np.array([g[max(0, i - back):min(n, i + ahead + 1)].min() for i in range(n)], np.float32)
     k = max(1, int(round(float(R.get("nose_ease_s", 0.25)) * fps)))
-    if k > 1:
-        pad = np.pad(gm, (k, k), mode="edge")
-        gm = np.convolve(pad, np.ones(k) / k, mode="same")[k:-k]
+    fade = max(1, int(round(float(R.get("nose_cut_fadein_s", 0.0)) * fps)))
+    gm = np.zeros(n, np.float32)
+    bounds = [0] + cuts + [n]
+    for a, b in zip(bounds[:-1], bounds[1:]):
+        if b <= a:
+            continue
+        gs = g[a:b]
+        m = b - a
+        gg = np.array([gs[max(0, i - back):min(m, i + ahead + 1)].min() for i in range(m)], np.float32)
+        if a > 0 and float(R.get("nose_cut_fadein_s", 0.0)) > 0:   # opcional: plano novo começa sem warp e sobe
+            gg[:fade] = np.minimum(gg[:fade], np.linspace(0, 1, fade, endpoint=False))
+        if k > 1 and m > 2:
+            pad = np.pad(gg, (k, k), mode="edge")
+            gg = np.convolve(pad, np.ones(k) / k, mode="same")[k:-k]
+        gm[a:b] = gg
     for t0, t1 in R.get("nose_off_ranges") or []:
         gm[max(0, int(t0 * fps)):max(0, int(np.ceil(t1 * fps)))] = 0.0
     return np.clip(gm, 0.0, 1.0).astype(np.float32), yaw.astype(np.float32)
@@ -793,7 +906,12 @@ def retouch_frame(frame, L, hair_lo, skin_lo, R, protect_y=None, debug=None, ext
             u = dx * ct + dy * st
             v = -dx * st + dy * ct
             r2 = (u / a_ax) ** 2 + (v / b_ax) ** 2
-            wgt = np.where(r2 < 1, (1 - r2) ** 2, 0).astype(np.float32)
+            # (1 - r²)³: deslocamento E derivada nulos na fronteira da elipse (C2) — sem "degrau" de brilho/textura
+            wgt = np.where(r2 < 1, (1 - r2) ** 3, 0).astype(np.float32)
+            # janela recortada pela borda da imagem: força deslocamento 0 nas 4 bordas da sub-janela
+            ex_ = np.minimum(X - sx0, sx1 - 1 - X) / max(4.0, 0.08 * half)
+            ey_ = np.minimum(Yg - sy0, sy1 - 1 - Yg) / max(4.0, 0.08 * half)
+            wgt = wgt * np.clip(np.minimum(ex_, ey_), 0, 1).astype(np.float32)
             # nose_alar_boost: reforça só o estreitamento lateral (asas), sem aumentar o puxão vertical (bigode)
             alar = float(R.get("nose_alar_boost", 0.0) or 0.0)
             su = 1 + nose_s * wgt * (1 + alar)
@@ -916,6 +1034,8 @@ def main():
     workdir = Path(args.workdir).resolve() if args.workdir else cfg_path.parent
     P = pc.paths_in(workdir)
     R = dict(cfg.get("retouch") or {})
+    if cfg.get("hard_cuts_s") and "hard_cuts_s" not in R:   # cortes do bruto (o mesmo campo do 02_reframe)
+        R["hard_cuts_s"] = list(cfg["hard_cuts_s"])
     for k, v in (("nose_tip_reduce", args.nose), ("hairline", args.hairline), ("beard", args.beard), ("skin_texture", args.skin)):
         if v is not None:
             R[k] = v
@@ -952,6 +1072,7 @@ def main():
             if T is None:
                 pc.log(f"  {t:.2f}s: sem rosto — pulado")
                 continue
+            T = smooth_landmarks(T, {**R, "hard_cuts_s": [c - start for c in R.get("hard_cuts_s") or []]})
             i = int(np.clip(round((t - start) * pc.FPS), 0, T["pts"].shape[0] - 1))
             rd = pc.FrameReader(inp, start=start + i / pc.FPS, dur=0.05, fps=None)
             fr = next(iter(rd), None)
@@ -1001,6 +1122,10 @@ def main():
         shutil.copyfile(inp, out)
         pc.save_json(workdir / "retouch.json", {"applied": False, "reason": "sem rosto"})
         return
+    s0 = start if args.clip else 0.0
+    T = smooth_landmarks(T, {**R, "hard_cuts_s": [c - s0 for c in R.get("hard_cuts_s") or []]})
+    pc.log(f"  landmarks: filtro adaptativo (min_cutoff {R.get('lm_min_cutoff_hz', 1.2)} Hz, beta "
+           f"{R.get('lm_beta', 6.0)}), {len(T['cuts'])} corte(s) com reinício do filtro")
     pc.log(f"  rosto em {100 * T['detected_frac']:.0f}% dos quadros ({time.time() - t0:.0f} s); "
            f"nariz {R.get('nose_tip_reduce')}, cabelo {R.get('hairline')}, barba {R.get('beard')}, pele {R.get('skin_texture')}")
 
