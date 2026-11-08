@@ -1,6 +1,6 @@
 # Banco de material para Reels — catálogo
 
-Gerado em 2026-11-08T19:55:49+00:00 · 41 item(ns) · 230 segmento(s) · 1 pendente(s) de segmentação
+Gerado em 2026-11-08T19:56:14+00:00 · 41 item(ns) · 231 segmento(s) · 1 pendente(s) de segmentação
 
 Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: FP fala-principal, BR broll, CR corte-rapido, CC citacao-card · públicos: PL plantonista, RE residente, CA candidato-residencia, CV concursos-vestibular, GE geral
 
@@ -420,6 +420,7 @@ Fonte: gravação de tela de vídeo de concerto (fonte não identificada)
 | 20261108_img-4345#s08 | 06:12.24–06:18.92 (7 s) | gancho: o conceito que o Império Romano usou para dominar o mundo e a cirurgia não usa | imperio-romano, gancho, analogia, historia, logistica, nutricao-perioperatoria | 5 | 4/4 | GE CV RE | CR CC FP |
 | 20261108_img-4345#s09 | 06:48.55–07:20.20 (32 s) | Roma não venceu pela força militar e sim pela engenharia e distribuição de insumos | imperio-romano, logistica, analogia, historia, distribuicao-de-recursos | 4 | 4/4 | GE CV | FP |
 | 20261108_img-4345#s10 | 07:35.46–08:22.78 (47 s) | a técnica do cirurgião é a habilidade do soldado; quem decide a batalha é a distribuição de recursos | analogia, imperio-romano, tecnica-cirurgica, nutricao-perioperatoria, logistica, antitese | 5 | 4/4 | GE RE CA | FP CC |
+| 20261108_img-4345#s17 | 07:57.28–08:22.78 (26 s) | versão curta da analogia: técnica do cirurgião = habilidade do soldado; a batalha se decide pela distribuição de recursos | analogia, imperio-romano, tecnica-cirurgica, logistica, antitese, nutricao-perioperatoria | 5 | 4/4 | GE RE CA | FP CR CC |
 | 20261108_img-4345#s11 | 08:23.66–08:41.30 (18 s) | com recursos infinitos não se perde a guerra; com recursos limitados você só tem uma chance | analogia, logistica, reserva-nutricional, imperio-romano, risco | 3 | 4/4 | GE | FP CR |
 | 20261108_img-4345#s12 | 09:00.51–09:49.25 (49 s) | povos germânicos tinham treinamento militar superior ao romano, mas Roma vencia pela logística | imperio-romano, barbaros, germanicos, historia, logistica, analogia | 3 | 4/3 | GE CV | FP |
 | 20261108_img-4345#s13 | 10:15.42–11:03.05 (48 s) | o nutricionista é a logística do exército: garante que os soldados terão alimento e ferramentas quando chegar a guerra | nutricionista, analogia, logistica, imunonutricao, aporte-calorico, nutricao-perioperatoria | 5 | 4/4 | GE RE CA | FP CC |

@@ -1,6 +1,6 @@
 {
   "item_id": "20261108_img-4345",
-  "validado_em": "2026-11-08T19:55:49+00:00",
+  "validado_em": "2026-11-08T19:56:13+00:00",
   "segments": [
     {
       "id": "20261108_img-4345#s01",
@@ -381,6 +381,44 @@
       "citacao_palavras": [
         787,
         798
+      ],
+      "item_id": "20261108_img-4345"
+    },
+    {
+      "id": "20261108_img-4345#s17",
+      "t0": 477.28,
+      "t1": 502.78,
+      "tema": "versão curta da analogia: técnica do cirurgião = habilidade do soldado; a batalha se decide pela distribuição de recursos",
+      "tags": [
+        "analogia",
+        "imperio-romano",
+        "tecnica-cirurgica",
+        "logistica",
+        "antitese",
+        "nutricao-perioperatoria"
+      ],
+      "tese": "a técnica é importante, mas quem decide o resultado é o suprimento de recursos",
+      "citacao": "É lógico que é muito importante pra guerra, mas quem vai decidir mesmo a batalha",
+      "gancho_potencial": 5,
+      "publicos": [
+        "geral",
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "recorte de s10 a partir de 'a comparação que eu faço' (7:57) — cabe num Reel de 60–75 s junto com s08+s13+s16.",
+      "dur": 25.5,
+      "citacao_t0": 490.24,
+      "citacao_t1": 500.16,
+      "citacao_palavras": [
+        799,
+        813
       ],
       "item_id": "20261108_img-4345"
     },
