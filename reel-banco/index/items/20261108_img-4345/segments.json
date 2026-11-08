@@ -1,0 +1,611 @@
+{
+  "item_id": "20261108_img-4345",
+  "validado_em": "2026-11-08T19:55:49+00:00",
+  "segments": [
+    {
+      "id": "20261108_img-4345#s01",
+      "t0": 22.84,
+      "t1": 77.3,
+      "tema": "terapia nutricional perioperatória virou mantra que todo mundo aceita e ninguém segue, como beber 3 litros de água",
+      "tags": [
+        "nutricao-perioperatoria",
+        "nutricionista",
+        "antitese",
+        "adesao",
+        "mantra",
+        "hidratacao"
+      ],
+      "tese": "a importância da nutrição perioperatória é aceita da boca para fora, como o conselho de beber água que nem os médicos seguem",
+      "citacao": "todo mundo sabe que beber água é bom, importante, mas acaba que nem médicos seguem,",
+      "gancho_potencial": 4,
+      "publicos": [
+        "geral",
+        "residente"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "corte-rapido"
+      ],
+      "notas": "antítese boa ('todo mundo aceita, só que...'), mas fala com pausas e repetição 'entender entender'. 'surjões'=cirurgiões.",
+      "t0_original": 22.84,
+      "t1_original": 77.5,
+      "dur": 54.46,
+      "citacao_t0": 42.18,
+      "citacao_t1": 47.3,
+      "citacao_palavras": [
+        73,
+        87
+      ],
+      "item_id": "20261108_img-4345"
+    },
+    {
+      "id": "20261108_img-4345#s02",
+      "t0": 77.9,
+      "t1": 96.72,
+      "tema": "o estado nutricional antes de entrar no centro cirúrgico é mais relevante do que a técnica cirúrgica",
+      "tags": [
+        "nutricao-perioperatoria",
+        "tecnica-cirurgica",
+        "resultado-cirurgico",
+        "quebra-de-crenca",
+        "pre-operatorio"
+      ],
+      "tese": "a qualidade do estado nutricional pré-operatório pesa mais no desfecho do que a técnica",
+      "citacao": "principalmente antes de adentrar o centro cirúrgico, ela é mais relevante do que a técnica cirúrgica",
+      "gancho_potencial": 4,
+      "publicos": [
+        "geral",
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "versão mais limpa da tese (ver também 4338#s01, 4344#s01). Termina em 'provavelmente lida' (erro de transcrição; ~'aplicada'). Hipérbole: em anúncio, preferir 'pesa tanto quanto'.",
+      "t0_original": 77.9,
+      "t1_original": 97.5,
+      "dur": 18.82,
+      "citacao_t0": 89.66,
+      "citacao_t1": 96.0,
+      "citacao_palavras": [
+        159,
+        174
+      ],
+      "item_id": "20261108_img-4345"
+    },
+    {
+      "id": "20261108_img-4345#s03",
+      "t0": 98.4,
+      "t1": 120.4,
+      "tema": "toda cirurgia é um trauma: o corpo não diferencia o corte do bisturi de uma facada",
+      "tags": [
+        "remit",
+        "resposta-metabolica-ao-trauma",
+        "cirurgia-como-trauma",
+        "fisiologia",
+        "bisturi",
+        "entimema"
+      ],
+      "tese": "a resposta do organismo ao corte cirúrgico é a mesma de qualquer trauma",
+      "citacao": "o corpo não diferenciar um corte de um bistuíde ou uma facada que você levanta.",
+      "gancho_potencial": 5,
+      "publicos": [
+        "geral",
+        "concursos-vestibular",
+        "residente"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "melhor quebra de crença do lote para público leigo. Legenda: 'bistuíde'=bisturi, 'levanta'=leva. Fato fisiológico (REMIT), não sensacionalismo; evitar imagem de facada.",
+      "t0_original": 98.4,
+      "t1_original": 121.0,
+      "dur": 22.0,
+      "citacao_t0": 114.24,
+      "citacao_t1": 118.32,
+      "citacao_palavras": [
+        224,
+        238
+      ],
+      "item_id": "20261108_img-4345"
+    },
+    {
+      "id": "20261108_img-4345#s04",
+      "t0": 131.28,
+      "t1": 185.86,
+      "tema": "a técnica só aproxima as bordas; quem determina a cicatrização é a resposta inflamatória, que usa micronutrientes como substrato",
+      "tags": [
+        "cicatrizacao",
+        "tecnica-cirurgica",
+        "resposta-inflamatoria",
+        "sistema-imune",
+        "micronutrientes",
+        "substrato"
+      ],
+      "tese": "independentemente da melhor técnica, a cicatrização é decidida pela resposta inflamatória e pelo substrato nutricional disponível",
+      "citacao": "o que a gente consegue fazer da parte técnica é aproximar bem a borda,",
+      "gancho_potencial": 4,
+      "publicos": [
+        "residente",
+        "candidato-residencia",
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "pausa de 3,7 s em 2:32 e fragmentos ('independente... vai... determinar mesmo a'); precisa de cortes. 'micromicrontrientes'=micronutrientes; 'retorno não me ostase'=retorno da homeostase.",
+      "t0_original": 131.28,
+      "t1_original": 186.0,
+      "dur": 54.58,
+      "citacao_t0": 133.13,
+      "citacao_t1": 137.94,
+      "citacao_palavras": [
+        263,
+        276
+      ],
+      "item_id": "20261108_img-4345"
+    },
+    {
+      "id": "20261108_img-4345#s05",
+      "t0": 187.86,
+      "t1": 239.34,
+      "tema": "o objetivo final de toda cirurgia é a cicatrização: anastomose na cirurgia gastrointestinal e resultado estético na plástica",
+      "tags": [
+        "cicatrizacao",
+        "anastomose",
+        "cirurgia-gastrointestinal",
+        "cirurgia-plastica",
+        "resultado-estetico",
+        "cirurgia-oncologica"
+      ],
+      "tese": "seja para a anastomose cicatrizar ou para a pele ter bom resultado estético, tudo depende da qualidade da cicatrização",
+      "citacao": "basicamente o intuito de toda cirurgia é chegar ao processo de cicatrização final",
+      "gancho_potencial": 3,
+      "publicos": [
+        "geral",
+        "residente"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "pausa de 5,4 s em 3:42. Menciona cirurgia plástica como exemplo (educativo, sem sugerir titulação). 'moldagem do controle corporal' = contorno corporal; 'escatrização'=cicatrização.",
+      "t0_original": 187.86,
+      "t1_original": 239.6,
+      "dur": 51.48,
+      "citacao_t0": 189.04,
+      "citacao_t1": 194.22,
+      "citacao_palavras": [
+        338,
+        350
+      ],
+      "item_id": "20261108_img-4345"
+    },
+    {
+      "id": "20261108_img-4345#s06",
+      "t0": 240.88,
+      "t1": 296.64,
+      "tema": "na oncológica a cicatrização importa pelo risco, na plástica pela expectativa estética — e o acompanhamento nutricional ainda não é visto como pilar",
+      "tags": [
+        "cicatrizacao",
+        "cirurgia-oncologica",
+        "cirurgia-plastica",
+        "expectativa-estetica",
+        "acompanhamento-nutricional",
+        "antitese"
+      ],
+      "tese": "mesmo com motivos diferentes, as duas áreas precisam de boa cicatrização, e o preparo nutricional ainda não é tratado como pilar",
+      "citacao": "você precisa de uma cicatrização boa por causa da expectativa estética que foi criada",
+      "gancho_potencial": 3,
+      "publicos": [
+        "geral",
+        "residente"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "frase de 4:22 confusa ('nenhum paciente foi a guia'); pausa de 4,9 s em 4:26. Menção a 'cirurgias particulares' — evitar comparação público×privado em anúncio.",
+      "t0_original": 240.88,
+      "t1_original": 297.2,
+      "dur": 55.76,
+      "citacao_t0": 256.08,
+      "citacao_t1": 260.56,
+      "citacao_palavras": [
+        443,
+        456
+      ],
+      "item_id": "20261108_img-4345"
+    },
+    {
+      "id": "20261108_img-4345#s07",
+      "t0": 306.54,
+      "t1": 334.92,
+      "tema": "a REMIT orquestra a cicatrização; a falta de substrato é o que leva à deficiência de cicatrização",
+      "tags": [
+        "remit",
+        "resposta-metabolica-ao-trauma",
+        "cicatrizacao",
+        "substrato",
+        "deficiencia-de-cicatrizacao",
+        "fisiologia"
+      ],
+      "tese": "sem substrato nutricional a resposta ao trauma não consegue completar a cicatrização",
+      "citacao": "falta de substrato é o que vai culminar na deficiência de cicatrização.",
+      "gancho_potencial": 3,
+      "publicos": [
+        "residente",
+        "candidato-residencia",
+        "concursos-vestibular"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "pausa de 6,7 s em 5:21 (cortar). 'resposta endócrata no metabólico imune' = endócrino-metabólica e imune.",
+      "t0_original": 306.54,
+      "t1_original": 334.8,
+      "dur": 28.38,
+      "citacao_t0": 328.18,
+      "citacao_t1": 334.92,
+      "citacao_palavras": [
+        554,
+        565
+      ],
+      "item_id": "20261108_img-4345"
+    },
+    {
+      "id": "20261108_img-4345#s08",
+      "t0": 372.24,
+      "t1": 378.92,
+      "tema": "gancho: o conceito que o Império Romano usou para dominar o mundo e a cirurgia não usa",
+      "tags": [
+        "imperio-romano",
+        "gancho",
+        "analogia",
+        "historia",
+        "logistica",
+        "nutricao-perioperatoria"
+      ],
+      "tese": "existe um princípio de vitória milenar que a cirurgia moderna ignora",
+      "citacao": "mais de mil anos. E aí a gente não usa isso na cirurgia hoje.",
+      "gancho_potencial": 5,
+      "publicos": [
+        "geral",
+        "concursos-vestibular",
+        "residente"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "corte-rapido",
+        "citacao-card",
+        "fala-principal"
+      ],
+      "notas": "MELHOR GANCHO DO LOTE (entimema/curiosidade). Há uma 2ª versão em 6:21–6:43 com 'sem ser quase invencível', mais truncada. Rigor histórico: 'mais de mil anos' vale contando o Império Bizantino; para o Ocidente, ~500 anos — aceitável como retórica.",
+      "t0_original": 372.24,
+      "t1_original": 379.6,
+      "dur": 6.68,
+      "citacao_t0": 376.12,
+      "citacao_t1": 378.92,
+      "citacao_palavras": [
+        619,
+        632
+      ],
+      "item_id": "20261108_img-4345"
+    },
+    {
+      "id": "20261108_img-4345#s09",
+      "t0": 408.55,
+      "t1": 440.2,
+      "tema": "Roma não venceu pela força militar e sim pela engenharia e distribuição de insumos",
+      "tags": [
+        "imperio-romano",
+        "logistica",
+        "analogia",
+        "historia",
+        "distribuicao-de-recursos"
+      ],
+      "tese": "o diferencial romano era logístico, não a qualidade técnica dos soldados",
+      "citacao": "mas sim pela capacidade e pelo sistema de distribuição de insumos",
+      "gancho_potencial": 4,
+      "publicos": [
+        "geral",
+        "concursos-vestibular"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "'Imperial humano'=Império Romano (corrigir legenda). Pausa de 2,7 s em 6:54. Em 6:43 ele vira o rosto (k014) — começar a partir de 6:48.",
+      "t0_original": 408.55,
+      "t1_original": 440.8,
+      "dur": 31.65,
+      "citacao_t0": 430.49,
+      "citacao_t1": 436.64,
+      "citacao_palavras": [
+        715,
+        725
+      ],
+      "item_id": "20261108_img-4345"
+    },
+    {
+      "id": "20261108_img-4345#s10",
+      "t0": 455.46,
+      "t1": 502.78,
+      "tema": "a técnica do cirurgião é a habilidade do soldado; quem decide a batalha é a distribuição de recursos",
+      "tags": [
+        "analogia",
+        "imperio-romano",
+        "tecnica-cirurgica",
+        "nutricao-perioperatoria",
+        "logistica",
+        "antitese"
+      ],
+      "tese": "assim como numa guerra manter o exército alimentado importa mais que soldados treinados, na cirurgia o substrato importa mais que a técnica",
+      "citacao": "técnica do sirjão ela é equivalente a a habilidade militar no soldado.",
+      "gancho_potencial": 5,
+      "publicos": [
+        "geral",
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "núcleo da analogia. 'sirjão'=cirurgião, 'sábis'=sábios(?)/bem. Pausas de 1,5–2,5 s. Uma das melhores falas do lote.",
+      "t0_original": 455.46,
+      "t1_original": 503.0,
+      "dur": 47.32,
+      "citacao_t0": 480.36,
+      "citacao_t1": 488.28,
+      "citacao_palavras": [
+        787,
+        798
+      ],
+      "item_id": "20261108_img-4345"
+    },
+    {
+      "id": "20261108_img-4345#s11",
+      "t0": 503.66,
+      "t1": 521.3,
+      "tema": "com recursos infinitos não se perde a guerra; com recursos limitados você só tem uma chance",
+      "tags": [
+        "analogia",
+        "logistica",
+        "reserva-nutricional",
+        "imperio-romano",
+        "risco"
+      ],
+      "tese": "quem entra na batalha com recursos limitados não tem margem para erro",
+      "citacao": "se você vai para uma guerra com recursos extremamente limitados, você tudo só tem uma chance.",
+      "gancho_potencial": 3,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "corte-rapido"
+      ],
+      "notas": "'Agora Agora' repetido; seguido de pausa de 8,8 s. Exagero retórico ('de forma nenhuma vai perder').",
+      "t0_original": 503.66,
+      "t1_original": 521.6,
+      "dur": 17.64,
+      "citacao_t0": 512.48,
+      "citacao_t1": 521.3,
+      "citacao_palavras": [
+        839,
+        854
+      ],
+      "item_id": "20261108_img-4345"
+    },
+    {
+      "id": "20261108_img-4345#s12",
+      "t0": 540.51,
+      "t1": 589.25,
+      "tema": "povos germânicos tinham treinamento militar superior ao romano, mas Roma vencia pela logística",
+      "tags": [
+        "imperio-romano",
+        "barbaros",
+        "germanicos",
+        "historia",
+        "logistica",
+        "analogia"
+      ],
+      "tese": "mesmo com soldados menos treinados que os bárbaros, Roma vencia por distribuir recursos de um extremo ao outro do império",
+      "citacao": "tinha um treinamento militar muito superior a treinamento romano.",
+      "gancho_potencial": 3,
+      "publicos": [
+        "geral",
+        "concursos-vestibular"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "afirmação histórica genérica (discutível); transcrição ruim em 9:41 ('pólos bárbaros... espolos germânicos'). 'indestrutiva'=indestrutível.",
+      "t0_original": 540.51,
+      "t1_original": 589.5,
+      "dur": 48.74,
+      "citacao_t0": 586.07,
+      "citacao_t1": 589.25,
+      "citacao_palavras": [
+        941,
+        949
+      ],
+      "item_id": "20261108_img-4345"
+    },
+    {
+      "id": "20261108_img-4345#s13",
+      "t0": 615.42,
+      "t1": 663.05,
+      "tema": "o nutricionista é a logística do exército: garante que os soldados terão alimento e ferramentas quando chegar a guerra",
+      "tags": [
+        "nutricionista",
+        "analogia",
+        "logistica",
+        "imunonutricao",
+        "aporte-calorico",
+        "nutricao-perioperatoria"
+      ],
+      "tese": "planejar aporte calórico e imunonutrição antes da cirurgia é abastecer o exército antes da batalha",
+      "citacao": "quando chegar na guerra, os soldados vão ter alimento,",
+      "gancho_potencial": 5,
+      "publicos": [
+        "geral",
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "aplicação da analogia à cirurgia — ponte essencial do Reel. Pausa de 4,9 s em 10:23 (cortar). 'imunotrição'=imunonutrição.",
+      "t0_original": 615.42,
+      "t1_original": 663.3,
+      "dur": 47.63,
+      "citacao_t0": 645.4,
+      "citacao_t1": 649.61,
+      "citacao_palavras": [
+        1031,
+        1039
+      ],
+      "item_id": "20261108_img-4345"
+    },
+    {
+      "id": "20261108_img-4345#s14",
+      "t0": 663.53,
+      "t1": 696.14,
+      "tema": "se os suprimentos não chegam à frente da batalha, o exército perde, porque o soldado precisa comer",
+      "tags": [
+        "analogia",
+        "logistica",
+        "suprimentos",
+        "imperio-romano"
+      ],
+      "tese": "cortar o suprimento no meio da guerra derrota qualquer exército",
+      "citacao": "os suprimentos não conseguem chegar até a frente da batalha,",
+      "gancho_potencial": 2,
+      "publicos": [
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "pausa de 9,9 s em 11:10 — inutilizável sem cortar. 'acessado'=cessado, 'percar'=perder.",
+      "t0_original": 663.53,
+      "t1_original": 696.0,
+      "dur": 32.61,
+      "citacao_t0": 683.48,
+      "citacao_t1": 690.32,
+      "citacao_palavras": [
+        1068,
+        1077
+      ],
+      "item_id": "20261108_img-4345"
+    },
+    {
+      "id": "20261108_img-4345#s15",
+      "t0": 705.25,
+      "t1": 737.32,
+      "tema": "macrófagos, células e citocinas da resposta inflamatória precisam de substrato energético para a cicatrização",
+      "tags": [
+        "macrofago",
+        "citocinas",
+        "resposta-inflamatoria",
+        "cicatrizacao",
+        "substrato-energetico",
+        "imunologia"
+      ],
+      "tese": "o macrófago na linha de frente só orquestra a cicatrização se tiver substrato",
+      "citacao": "todas as células e citocinas envolvidas, elas precisam de um substrato energético",
+      "gancho_potencial": 3,
+      "publicos": [
+        "residente",
+        "candidato-residencia",
+        "concursos-vestibular"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "fecha a analogia na biologia (bom para B-roll de macrófago/histologia). 'a macrófago da gente frente' = o macrófago na linha de frente.",
+      "t0_original": 705.25,
+      "t1_original": 737.0,
+      "dur": 32.07,
+      "citacao_t0": 720.08,
+      "citacao_t1": 727.84,
+      "citacao_palavras": [
+        1119,
+        1130
+      ],
+      "item_id": "20261108_img-4345"
+    },
+    {
+      "id": "20261108_img-4345#s16",
+      "t0": 747.93,
+      "t1": 764.89,
+      "tema": "operar sem preparo nutricional é como ir para a guerra sem comida e sem arsenal",
+      "tags": [
+        "analogia",
+        "nutricao-perioperatoria",
+        "conclusao",
+        "entimema",
+        "guerra-sem-comida"
+      ],
+      "tese": "a analogia mostra o absurdo de operar um paciente sem a parte nutricional adequada",
+      "citacao": "E mesma coisa que você ir para a guerra sem comida,",
+      "gancho_potencial": 5,
+      "publicos": [
+        "geral",
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "fechamento ideal do Reel. 'senologia'=analogia, 'nutricionada'=nutricional, 'bérico'=bélico. 12:49–12:57 (saúde pública) fica de fora.",
+      "t0_original": 747.93,
+      "t1_original": 765.2,
+      "dur": 16.96,
+      "citacao_t0": 757.39,
+      "citacao_t1": 759.15,
+      "citacao_palavras": [
+        1174,
+        1184
+      ],
+      "item_id": "20261108_img-4345"
+    }
+  ]
+}

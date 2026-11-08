@@ -1,0 +1,32 @@
+{
+  "id": "20261108_img-4339",
+  "nome": "IMG_4339",
+  "tipo": "video",
+  "origem": {
+    "drive_id": "1X19_brKv1RBlSh5iJ80K77iS6S4XB0MM",
+    "nome_original": "IMG_4339.MOV",
+    "modifiedTime": "2026-11-08T08:39:13.049Z"
+  },
+  "arquivo": "source.mov",
+  "tamanho": 86222944,
+  "sha256": "efe084831b7650e30aaf8231cb387f6e86032d5059c35490760bc1e7fe7d2f76",
+  "duracao": 53.335,
+  "largura": 1080,
+  "altura": 1920,
+  "fps": 29.998,
+  "rotacao": -90,
+  "tem_audio": true,
+  "vcodec": "hevc",
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "indexado",
+  "criado_em": "2026-11-08T19:39:36+00:00",
+  "atualizado_em": "2026-11-08T19:40:34+00:00",
+  "n_cenas": 2,
+  "n_keyframes": 2,
+  "contact_sheets": [
+    "contact_sheet.jpg"
+  ],
+  "n_segmentos": 1,
+  "indexado_em": "2026-11-08T19:40:34+00:00"
+}

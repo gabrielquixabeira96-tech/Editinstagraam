@@ -1,0 +1,43 @@
+{
+  "item_id": "20261108_img-4339",
+  "validado_em": "2026-11-08T19:40:34+00:00",
+  "segments": [
+    {
+      "id": "20261108_img-4339#s01",
+      "t0": 13.07,
+      "t1": 45.31,
+      "tema": "nutrição perioperatória negligenciada: estado nutricional, imunonutrientes e carga calórica que o paciente não conhece",
+      "tags": [
+        "nutricao-perioperatoria",
+        "imunonutricao",
+        "estado-nutricional",
+        "carga-calorica",
+        "preparo-pre-operatorio",
+        "educacao-do-paciente"
+      ],
+      "tese": "o paciente não tem noção de que o estado nutricional e os imunonutrientes no perioperatório influenciam a cirurgia",
+      "citacao": "o ponto que acho que a gente acaba negligenciando demais,",
+      "gancho_potencial": 2,
+      "publicos": [
+        "geral",
+        "residente"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "take hesitante, versão anterior/alternativa de IMG_4338; enumeração picada com pausas de 1–2 s ('imunotrientes'=imunonutrientes, 'carca alórica'=carga calórica) e termina sem conclusão. Usar só se faltar material. 0–13 s é conversa lateral. Mesmo set (luminária circular, camisa branca).",
+      "t0_original": 13.07,
+      "t1_original": 45.5,
+      "dur": 32.24,
+      "citacao_t0": 14.15,
+      "citacao_t1": 17.57,
+      "citacao_palavras": [
+        10,
+        19
+      ],
+      "item_id": "20261108_img-4339"
+    }
+  ]
+}

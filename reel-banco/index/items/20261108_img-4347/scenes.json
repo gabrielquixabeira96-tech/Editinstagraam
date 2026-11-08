@@ -1,0 +1,64 @@
+{
+  "item_id": "20261108_img-4347",
+  "duracao": 65.0017,
+  "params": {
+    "threshold": 10.0,
+    "min_scene": 1.0,
+    "max_scene": 30.0,
+    "fps": 2.0
+  },
+  "gerado_em": "2026-11-08T19:41:16+00:00",
+  "scenes": [
+    {
+      "n": 1,
+      "t0": 0.0,
+      "t1": 21.667,
+      "dur": 21.667,
+      "corte": "inicio",
+      "rosto": 1.0,
+      "rosto_tam": 0.352,
+      "nitidez": 155.3,
+      "luma": 155.5,
+      "estourado": 0.0,
+      "escuro": 0.001,
+      "audio_db": -24.3,
+      "silencio": 0.23,
+      "sug_visual": 4.5,
+      "sug_audio": 4.0
+    },
+    {
+      "n": 2,
+      "t0": 21.667,
+      "t1": 43.334,
+      "dur": 21.667,
+      "corte": "bloco",
+      "rosto": 1.0,
+      "rosto_tam": 0.391,
+      "nitidez": 148.4,
+      "luma": 160.2,
+      "estourado": 0.0,
+      "escuro": 0.0,
+      "audio_db": -25.1,
+      "silencio": 0.26,
+      "sug_visual": 4.5,
+      "sug_audio": 4.0
+    },
+    {
+      "n": 3,
+      "t0": 43.334,
+      "t1": 65.002,
+      "dur": 21.667,
+      "corte": "bloco",
+      "rosto": 1.0,
+      "rosto_tam": 0.403,
+      "nitidez": 148.8,
+      "luma": 159.6,
+      "estourado": 0.0,
+      "escuro": 0.0,
+      "audio_db": -26.4,
+      "silencio": 0.35,
+      "sug_visual": 4.5,
+      "sug_audio": 4.0
+    }
+  ]
+}

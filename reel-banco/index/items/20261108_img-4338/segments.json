@@ -1,0 +1,46 @@
+{
+  "item_id": "20261108_img-4338",
+  "validado_em": "2026-11-08T19:40:20+00:00",
+  "segments": [
+    {
+      "id": "20261108_img-4338#s01",
+      "t0": 9.78,
+      "t1": 35.36,
+      "tema": "preparo nutricional perioperatório é negligenciado: o resultado da cirurgia depende mais da nutrição do que do cirurgião",
+      "tags": [
+        "nutricao-perioperatoria",
+        "preparo-pre-operatorio",
+        "cicatrizacao",
+        "nutricionista",
+        "resultado-cirurgico",
+        "quebra-de-crenca"
+      ],
+      "tese": "o estado nutricional do paciente pesa mais no resultado cirúrgico do que a técnica do cirurgião",
+      "citacao": "resultado da cirurgia é mais o resultado do nutricionista do que o do cirurgião",
+      "gancho_potencial": 4,
+      "publicos": [
+        "geral",
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "take interrompido: depois de 'cascata de coagulação' ele perde o fio e encerra (40–47 s inútil). Muitas pausas longas (1,3–1,9 s) — precisa de cortes de silêncio. Frase é hipérbole retórica; em anúncio, enquadrar como 'pesa tanto quanto' para não soar sensacionalista/desmerecer colegas. Cenário: ambiente interno com luminária circular, camisa branca, mesmo set de IMG_4346.",
+      "t0_original": 9.78,
+      "t1_original": 35.0,
+      "dur": 25.58,
+      "citacao_t0": 26.7,
+      "citacao_t1": 31.26,
+      "citacao_palavras": [
+        36,
+        49
+      ],
+      "item_id": "20261108_img-4338"
+    }
+  ]
+}

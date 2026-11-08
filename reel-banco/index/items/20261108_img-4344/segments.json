@@ -1,0 +1,270 @@
+{
+  "item_id": "20261108_img-4344",
+  "validado_em": "2026-11-08T19:50:15+00:00",
+  "segments": [
+    {
+      "id": "20261108_img-4344#s01",
+      "t0": 4.42,
+      "t1": 31.29,
+      "tema": "o fator nutricional pesa tanto ou mais que a técnica cirúrgica no resultado",
+      "tags": [
+        "nutricao-perioperatoria",
+        "tecnica-cirurgica",
+        "resultado-cirurgico",
+        "quebra-de-crenca",
+        "antitese"
+      ],
+      "tese": "o preparo nutricional tem impacto igual ou maior que a técnica cirúrgica aplicada",
+      "citacao": "diria até que é mais importante do que a técnica cirúrgica em si aplicada",
+      "gancho_potencial": 4,
+      "publicos": [
+        "geral",
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "raciocínio dá voltas ('proporcional, quase igual, mas eu diria que isso ainda ganha'); precisa de cortes. Versão mais completa da tese de IMG_4338#s01.",
+      "t0_original": 4.42,
+      "t1_original": 32.3,
+      "dur": 26.87,
+      "citacao_t0": 18.33,
+      "citacao_t1": 22.73,
+      "citacao_palavras": [
+        20,
+        33
+      ],
+      "item_id": "20261108_img-4344"
+    },
+    {
+      "id": "20261108_img-4344#s02",
+      "t0": 39.6,
+      "t1": 80.16,
+      "tema": "cirurgia é trauma: a resposta endócrino-metabólica ao trauma (REMIT) depende da reserva de micro e macronutrientes",
+      "tags": [
+        "remit",
+        "resposta-metabolica-ao-trauma",
+        "fisiologia",
+        "micronutrientes",
+        "macronutrientes",
+        "nutricao-perioperatoria"
+      ],
+      "tese": "como a cirurgia é um trauma, a resposta do organismo depende da reserva nutricional e do aporte calórico do paciente",
+      "citacao": "nutricional que esse paciente tem da reserva de micro e macronutrientes, vitaminas,",
+      "gancho_potencial": 3,
+      "publicos": [
+        "residente",
+        "candidato-residencia",
+        "concursos-vestibular"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "fala muito pausada (pausas de 1–3 s entre palavras em 60–70 s). Transcrição ruim: 'resposta em um mundo mediado que não chama de remite' = resposta endócrino-metabólica, que a gente chama de REMIT; 'oligodemides' = oligoelementos. Precisa corrigir legenda à mão.",
+      "t0_original": 39.6,
+      "t1_original": 80.5,
+      "dur": 40.56,
+      "citacao_t0": 69.88,
+      "citacao_t1": 75.07,
+      "citacao_palavras": [
+        111,
+        122
+      ],
+      "item_id": "20261108_img-4344"
+    },
+    {
+      "id": "20261108_img-4344#s03",
+      "t0": 103.19,
+      "t1": 117.57,
+      "tema": "o que garante o sucesso da anastomose e a ausência de fístula é a qualidade do componente nutricional",
+      "tags": [
+        "anastomose",
+        "fistula",
+        "complicacoes-pos-operatorias",
+        "nutricao-perioperatoria",
+        "cirurgia-oncologica",
+        "entimema"
+      ],
+      "tese": "no fundo, o sucesso da anastomose depende mais do componente nutricional do que se imagina",
+      "citacao": "garantir o sucesso da cirurgia e o sucesso da nastomose e",
+      "gancho_potencial": 4,
+      "publicos": [
+        "residente",
+        "candidato-residencia",
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "corte-rapido"
+      ],
+      "notas": "frase-conclusão boa para fechar o Reel. 'desferso'=desfecho, 'nastomose'=anastomose, 'fiscos'=fístulas. Contexto anterior (1:31–1:42): cirurgia oncológica que ele acompanha na residência.",
+      "t0_original": 103.19,
+      "t1_original": 117.2,
+      "dur": 14.38,
+      "citacao_t0": 107.27,
+      "citacao_t1": 111.17,
+      "citacao_palavras": [
+        184,
+        194
+      ],
+      "item_id": "20261108_img-4344"
+    },
+    {
+      "id": "20261108_img-4344#s04",
+      "t0": 118.09,
+      "t1": 168.63,
+      "tema": "o que demorou para entender na residência: mesma técnica, complicação rara no particular e frequente na rede pública",
+      "tags": [
+        "residencia-medica",
+        "sus",
+        "complicacoes-pos-operatorias",
+        "nutricao-perioperatoria",
+        "experiencia-pessoal",
+        "antitese"
+      ],
+      "tese": "a diferença de complicações entre o paciente particular e o da rede pública não era técnica, e sim de fatores como o preparo nutricional",
+      "citacao": "dificilmente você via complicação. Era muito raro mesmo.",
+      "gancho_potencial": 5,
+      "publicos": [
+        "residente",
+        "candidato-residencia",
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "melhor narrativa pessoal do lote (antítese particular x SUS). ATENÇÃO CFM/ética: não pode soar como crítica ao SUS ou ao chefe nem comparação de serviços; usar como reflexão de aprendizado. Início confuso (2:00–2:13: 'foi uma coisa muito difícil... para a residência'); 'nesta mosa' = na anastomose.",
+      "t0_original": 118.09,
+      "t1_original": 168.6,
+      "dur": 50.54,
+      "citacao_t0": 141.57,
+      "citacao_t1": 144.23,
+      "citacao_palavras": [
+        262,
+        269
+      ],
+      "item_id": "20261108_img-4344"
+    },
+    {
+      "id": "20261108_img-4344#s05",
+      "t0": 169.41,
+      "t1": 213.69,
+      "tema": "adesão e custo: a imunomodulação é vista como gasto a mais, mas seria economia até a curto prazo",
+      "tags": [
+        "imunonutricao",
+        "adesao",
+        "custo-efetividade",
+        "planos-de-saude",
+        "nutricao-perioperatoria",
+        "sus"
+      ],
+      "tese": "componentes caros de alto impacto não são cobertos e são vistos como gasto, quando na verdade economizam",
+      "citacao": "que na verdade seria uma economia inclusive até a curta prazo,",
+      "gancho_potencial": 3,
+      "publicos": [
+        "residente",
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "transcrição ruim ('os seus' = os SUS/os convênios; 'implementação, a imunodulação' = suplementação, imunomodulação; 'bisfecho' = desfecho). Tema de política de saúde — pouco útil para o público pago; risco de soar político.",
+      "t0_original": 169.41,
+      "t1_original": 213.5,
+      "dur": 44.28,
+      "citacao_t0": 209.21,
+      "citacao_t1": 212.73,
+      "citacao_palavras": [
+        373,
+        383
+      ],
+      "item_id": "20261108_img-4344"
+    },
+    {
+      "id": "20261108_img-4344#s06",
+      "t0": 221.08,
+      "t1": 269.14,
+      "tema": "componente educacional: pacientes que entendem a fisiologia aderem mais ao preparo",
+      "tags": [
+        "educacao-do-paciente",
+        "adesao",
+        "preparo-pre-operatorio",
+        "fisiologia",
+        "cicatrizacao"
+      ],
+      "tese": "quanto mais o paciente entende o raciocínio fisiológico do preparo, maior a adesão",
+      "citacao": "entendendo o raciocínio e a importância do",
+      "gancho_potencial": 1,
+      "publicos": [
+        "residente"
+      ],
+      "qualidade_visual": 3,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "fala muito fragmentada; menciona nível de instrução ('destruição' = instrução, 'muscularidade' = escolaridade) — delicado, pode soar preconceituoso; evitar em anúncio. Em 3:40–4:10 ele se recosta na cadeira (enquadramento pior).",
+      "t0_original": 221.08,
+      "t1_original": 271.0,
+      "dur": 48.06,
+      "citacao_t0": 253.68,
+      "citacao_t1": 257.22,
+      "citacao_palavras": [
+        450,
+        456
+      ],
+      "item_id": "20261108_img-4344"
+    },
+    {
+      "id": "20261108_img-4344#s07",
+      "t0": 277.54,
+      "t1": 304.06,
+      "tema": "o básico do preparo: fórmula imunonutricional por cerca de 14 dias antes da cirurgia",
+      "tags": [
+        "imunonutricao",
+        "suplemento-nutricional",
+        "preparo-pre-operatorio",
+        "protocolo",
+        "14-dias",
+        "cirurgia-eletiva"
+      ],
+      "tese": "o mínimo, quando não há ambulatório de nutrição, é prescrever fórmula imunomoduladora nos 14 dias anteriores à cirurgia",
+      "citacao": "ideal que paciente tome é 2 frascos nos 14 dias anteriores da cirurgia.",
+      "gancho_potencial": 3,
+      "publicos": [
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "citacao-card"
+      ],
+      "notas": "ATENÇÃO CFM/Meta: cita preço ('20 reais ao frasco') e marca provável ('passar no trem, pacte' = Impact, fórmula comercial) — NÃO usar em anúncio (propaganda de produto/conduta individual). Útil só para conteúdo de residente com edição. Transcrição: 'sergião'=cirurgião.",
+      "t0_original": 277.54,
+      "t1_original": 303.8,
+      "dur": 26.52,
+      "citacao_t0": 300.12,
+      "citacao_t1": 305.34,
+      "citacao_palavras": [
+        544,
+        556
+      ],
+      "item_id": "20261108_img-4344"
+    }
+  ]
+}

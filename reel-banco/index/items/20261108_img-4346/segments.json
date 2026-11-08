@@ -1,0 +1,45 @@
+{
+  "item_id": "20261108_img-4346",
+  "validado_em": "2026-11-08T19:40:12+00:00",
+  "segments": [
+    {
+      "id": "20261108_img-4346#s01",
+      "t0": 0.96,
+      "t1": 36.39,
+      "tema": "o que une fístula na cirurgia oncológica e deiscência/necrose na plástica: substrato nutricional para cicatrizar",
+      "tags": [
+        "cicatrizacao",
+        "fistula",
+        "deiscencia",
+        "necrose-de-retalho",
+        "glutamina",
+        "arginina",
+        "angiogenese",
+        "imunonutricao"
+      ],
+      "tese": "os pesadelos do cirurgião oncológico e do plástico têm uma linha comum: balanço de glutamina/arginina e angiogênese que levam substrato ao retalho e à anastomose",
+      "citacao": "na cirurgia oncológica, exemplo, a maior pesadelo é a fístula e na plástica,",
+      "gancho_potencial": 3,
+      "publicos": [
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "trecho começa no meio de um raciocínio ('porque, ...'), parece continuação de outro take; transcrição com erros (dacense=deiscência, anecrósia=a necrose, aginina=arginina, agência=angiogênese, balanço centrogenado=balanço nitrogenado) — corrigir legenda à mão. Cenário: ambiente interno com luminária circular (restaurante/sala), camisa branca. Ver se completa IMG_4345/4347.",
+      "t0_original": 0.96,
+      "t1_original": 37.5,
+      "dur": 35.43,
+      "citacao_t0": 1.65,
+      "citacao_t1": 6.67,
+      "citacao_palavras": [
+        1,
+        13
+      ],
+      "item_id": "20261108_img-4346"
+    }
+  ]
+}

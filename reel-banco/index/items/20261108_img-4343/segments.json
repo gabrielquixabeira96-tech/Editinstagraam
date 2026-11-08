@@ -1,0 +1,41 @@
+{
+  "item_id": "20261108_img-4343",
+  "validado_em": "2026-11-08T19:44:02+00:00",
+  "segments": [
+    {
+      "id": "20261108_img-4343#s01",
+      "t0": 4.24,
+      "t1": 18.07,
+      "tema": "abertura: o preparo nutricional perioperatório é um tema negligenciado na cirurgia",
+      "tags": [
+        "nutricao-perioperatoria",
+        "preparo-pre-operatorio",
+        "abertura",
+        "introducao"
+      ],
+      "tese": "a qualidade do preparo nutricional perioperatório é negligenciada do ponto de vista cirúrgico",
+      "citacao": "muito negligenciado do ponto de vista cirúrgico é a qualidade do preparo nutricional peroperatório,",
+      "gancho_potencial": 2,
+      "publicos": [
+        "geral",
+        "residente"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 3,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "falso início (4K 2160x3840): frase de abertura com pausa de 2,8 s no meio; depois de 19 s ele para de falar e passa a mão no cabelo (20–47 s inútil, sem fala). Serve como frase de transição/abertura alternativa à de IMG_4338.",
+      "t0_original": 4.24,
+      "t1_original": 18.1,
+      "dur": 13.83,
+      "citacao_t0": 10.79,
+      "citacao_t1": 18.07,
+      "citacao_palavras": [
+        15,
+        28
+      ],
+      "item_id": "20261108_img-4343"
+    }
+  ]
+}

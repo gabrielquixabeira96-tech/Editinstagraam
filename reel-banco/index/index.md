@@ -1,6 +1,6 @@
 # Banco de material para Reels — catálogo
 
-Gerado em 2026-11-04T00:01:37+00:00 · 34 item(ns) · 200 segmento(s) · 1 pendente(s) de segmentação
+Gerado em 2026-11-08T19:55:49+00:00 · 41 item(ns) · 230 segmento(s) · 1 pendente(s) de segmentação
 
 Legenda: G = gancho_potencial (0–5) · V/A = qualidade visual/áudio · usos: FP fala-principal, BR broll, CR corte-rapido, CC citacao-card · públicos: PL plantonista, RE residente, CA candidato-residencia, CV concursos-vestibular, GE geral
 
@@ -375,6 +375,71 @@ Fonte: gravação de tela de vídeo de concerto (fonte não identificada)
 | 20261103_img-4164#s18 | 38:13.47–39:17.70 (64 s) | síndromes hereditárias e intervalos de rastreamento | rastreamento, sindrome-de-lynch, paf, apc, cancer-colorretal | 2 | 3/4 | CA RE | CR |
 | 20261103_img-4164#s19 | 39:25.51–41:52.40 (147 s) | tema dominado sai fluido: câncer colorretal é o feijão com arroz da cirurgia oncológica | comunicacao, cirurgia-oncologica, residencia, dominio-tecnico | 3 | 4/4 | RE GE | FP |
 | 20261103_img-4164#s20 | 42:10.77–44:54.20 (163 s) | depois de 42 minutos falando ele ficou mais solto | gravar-videos, pratica-deliberada, oratoria, bastidores | 1 | 3/4 | GE | CR |
+
+## 20261108_img-4338 — IMG_4338 (video · 00:47.67 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261108_img-4338#s01 | 00:09.78–00:35.36 (26 s) | preparo nutricional perioperatório é negligenciado: o resultado da cirurgia depende mais da nutrição do que do cirurgião | nutricao-perioperatoria, preparo-pre-operatorio, cicatrizacao, nutricionista, resultado-cirurgico, quebra-de-crenca | 4 | 4/4 | GE RE CA | FP CR CC |
+
+## 20261108_img-4339 — IMG_4339 (video · 00:53.34 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261108_img-4339#s01 | 00:13.07–00:45.31 (32 s) | nutrição perioperatória negligenciada: estado nutricional, imunonutrientes e carga calórica que o paciente não conhece | nutricao-perioperatoria, imunonutricao, estado-nutricional, carga-calorica, preparo-pre-operatorio, educacao-do-paciente | 2 | 4/4 | GE RE | FP |
+
+## 20261108_img-4343 — IMG_4343 (video · 00:47.60 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261108_img-4343#s01 | 00:04.24–00:18.07 (14 s) | abertura: o preparo nutricional perioperatório é um tema negligenciado na cirurgia | nutricao-perioperatoria, preparo-pre-operatorio, abertura, introducao | 2 | 4/3 | GE RE | FP |
+
+## 20261108_img-4344 — IMG_4344 (video · 06:21.23 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261108_img-4344#s01 | 00:04.42–00:31.29 (27 s) | o fator nutricional pesa tanto ou mais que a técnica cirúrgica no resultado | nutricao-perioperatoria, tecnica-cirurgica, resultado-cirurgico, quebra-de-crenca, antitese | 4 | 4/4 | GE RE CA | FP CR CC |
+| 20261108_img-4344#s02 | 00:39.60–01:20.16 (41 s) | cirurgia é trauma: a resposta endócrino-metabólica ao trauma (REMIT) depende da reserva de micro e macronutrientes | remit, resposta-metabolica-ao-trauma, fisiologia, micronutrientes, macronutrientes, nutricao-perioperatoria | 3 | 4/4 | RE CA CV | FP |
+| 20261108_img-4344#s03 | 01:43.19–01:57.57 (14 s) | o que garante o sucesso da anastomose e a ausência de fístula é a qualidade do componente nutricional | anastomose, fistula, complicacoes-pos-operatorias, nutricao-perioperatoria, cirurgia-oncologica, entimema | 4 | 4/4 | RE CA GE | FP CR |
+| 20261108_img-4344#s04 | 01:58.09–02:48.63 (51 s) | o que demorou para entender na residência: mesma técnica, complicação rara no particular e frequente na rede pública | residencia-medica, sus, complicacoes-pos-operatorias, nutricao-perioperatoria, experiencia-pessoal, antitese | 5 | 4/4 | RE CA GE | FP |
+| 20261108_img-4344#s05 | 02:49.41–03:33.69 (44 s) | adesão e custo: a imunomodulação é vista como gasto a mais, mas seria economia até a curto prazo | imunonutricao, adesao, custo-efetividade, planos-de-saude, nutricao-perioperatoria, sus | 3 | 4/3 | RE GE | FP |
+| 20261108_img-4344#s06 | 03:41.08–04:29.14 (48 s) | componente educacional: pacientes que entendem a fisiologia aderem mais ao preparo | educacao-do-paciente, adesao, preparo-pre-operatorio, fisiologia, cicatrizacao | 1 | 3/3 | RE | FP |
+| 20261108_img-4344#s07 | 04:37.54–05:04.06 (27 s) | o básico do preparo: fórmula imunonutricional por cerca de 14 dias antes da cirurgia | imunonutricao, suplemento-nutricional, preparo-pre-operatorio, protocolo, 14-dias, cirurgia-eletiva | 3 | 4/4 | RE CA | FP CC |
+
+## 20261108_img-4345 — IMG_4345 (video · 12:57.69 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261108_img-4345#s01 | 00:22.84–01:17.30 (54 s) | terapia nutricional perioperatória virou mantra que todo mundo aceita e ninguém segue, como beber 3 litros de água | nutricao-perioperatoria, nutricionista, antitese, adesao, mantra, hidratacao | 4 | 4/4 | GE RE | FP CR |
+| 20261108_img-4345#s02 | 01:17.90–01:36.72 (19 s) | o estado nutricional antes de entrar no centro cirúrgico é mais relevante do que a técnica cirúrgica | nutricao-perioperatoria, tecnica-cirurgica, resultado-cirurgico, quebra-de-crenca, pre-operatorio | 4 | 4/4 | GE RE CA | FP CC |
+| 20261108_img-4345#s03 | 01:38.40–02:00.40 (22 s) | toda cirurgia é um trauma: o corpo não diferencia o corte do bisturi de uma facada | remit, resposta-metabolica-ao-trauma, cirurgia-como-trauma, fisiologia, bisturi, entimema | 5 | 4/4 | GE CV RE | FP CR CC |
+| 20261108_img-4345#s04 | 02:11.28–03:05.86 (55 s) | a técnica só aproxima as bordas; quem determina a cicatrização é a resposta inflamatória, que usa micronutrientes como substrato | cicatrizacao, tecnica-cirurgica, resposta-inflamatoria, sistema-imune, micronutrientes, substrato | 4 | 4/4 | RE CA GE | FP |
+| 20261108_img-4345#s05 | 03:07.86–03:59.34 (51 s) | o objetivo final de toda cirurgia é a cicatrização: anastomose na cirurgia gastrointestinal e resultado estético na plástica | cicatrizacao, anastomose, cirurgia-gastrointestinal, cirurgia-plastica, resultado-estetico, cirurgia-oncologica | 3 | 4/4 | GE RE | FP |
+| 20261108_img-4345#s06 | 04:00.88–04:56.64 (56 s) | na oncológica a cicatrização importa pelo risco, na plástica pela expectativa estética — e o acompanhamento nutricional ainda não é visto como pilar | cicatrizacao, cirurgia-oncologica, cirurgia-plastica, expectativa-estetica, acompanhamento-nutricional, antitese | 3 | 4/3 | GE RE | FP |
+| 20261108_img-4345#s07 | 05:06.54–05:34.92 (28 s) | a REMIT orquestra a cicatrização; a falta de substrato é o que leva à deficiência de cicatrização | remit, resposta-metabolica-ao-trauma, cicatrizacao, substrato, deficiencia-de-cicatrizacao, fisiologia | 3 | 4/4 | RE CA CV | FP CC |
+| 20261108_img-4345#s08 | 06:12.24–06:18.92 (7 s) | gancho: o conceito que o Império Romano usou para dominar o mundo e a cirurgia não usa | imperio-romano, gancho, analogia, historia, logistica, nutricao-perioperatoria | 5 | 4/4 | GE CV RE | CR CC FP |
+| 20261108_img-4345#s09 | 06:48.55–07:20.20 (32 s) | Roma não venceu pela força militar e sim pela engenharia e distribuição de insumos | imperio-romano, logistica, analogia, historia, distribuicao-de-recursos | 4 | 4/4 | GE CV | FP |
+| 20261108_img-4345#s10 | 07:35.46–08:22.78 (47 s) | a técnica do cirurgião é a habilidade do soldado; quem decide a batalha é a distribuição de recursos | analogia, imperio-romano, tecnica-cirurgica, nutricao-perioperatoria, logistica, antitese | 5 | 4/4 | GE RE CA | FP CC |
+| 20261108_img-4345#s11 | 08:23.66–08:41.30 (18 s) | com recursos infinitos não se perde a guerra; com recursos limitados você só tem uma chance | analogia, logistica, reserva-nutricional, imperio-romano, risco | 3 | 4/4 | GE | FP CR |
+| 20261108_img-4345#s12 | 09:00.51–09:49.25 (49 s) | povos germânicos tinham treinamento militar superior ao romano, mas Roma vencia pela logística | imperio-romano, barbaros, germanicos, historia, logistica, analogia | 3 | 4/3 | GE CV | FP |
+| 20261108_img-4345#s13 | 10:15.42–11:03.05 (48 s) | o nutricionista é a logística do exército: garante que os soldados terão alimento e ferramentas quando chegar a guerra | nutricionista, analogia, logistica, imunonutricao, aporte-calorico, nutricao-perioperatoria | 5 | 4/4 | GE RE CA | FP CC |
+| 20261108_img-4345#s14 | 11:03.53–11:36.14 (33 s) | se os suprimentos não chegam à frente da batalha, o exército perde, porque o soldado precisa comer | analogia, logistica, suprimentos, imperio-romano | 2 | 4/3 | GE | FP |
+| 20261108_img-4345#s15 | 11:45.25–12:17.32 (32 s) | macrófagos, células e citocinas da resposta inflamatória precisam de substrato energético para a cicatrização | macrofago, citocinas, resposta-inflamatoria, cicatrizacao, substrato-energetico, imunologia | 3 | 4/4 | RE CA CV | FP |
+| 20261108_img-4345#s16 | 12:27.93–12:44.89 (17 s) | operar sem preparo nutricional é como ir para a guerra sem comida e sem arsenal | analogia, nutricao-perioperatoria, conclusao, entimema, guerra-sem-comida | 5 | 4/4 | GE RE CA | FP CR CC |
+
+## 20261108_img-4346 — IMG_4346 (video · 00:39.30 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261108_img-4346#s01 | 00:00.96–00:36.39 (35 s) | o que une fístula na cirurgia oncológica e deiscência/necrose na plástica: substrato nutricional para cicatrizar | cicatrizacao, fistula, deiscencia, necrose-de-retalho, glutamina, arginina, angiogenese, imunonutricao | 3 | 4/4 | RE CA | FP |
+
+## 20261108_img-4347 — IMG_4347 (video · 01:05.00 · licença propria)
+
+| segmento | onde | tema | tags | G | V/A | públicos | usos |
+|---|---|---|---|---|---|---|---|
+| 20261108_img-4347#s01 | 00:01.01–00:21.33 (20 s) | esperar boa cicatrização em cirurgia de grande porte sem preparo nutricional prévio é ingenuidade | nutricao-perioperatoria, imunonutricao, cicatrizacao, preparo-pre-operatorio, cirurgia-de-grande-porte, entimema | 4 | 4/4 | RE CA GE | FP CR |
+| 20261108_img-4347#s02 | 00:25.55–00:37.29 (12 s) | imunonutrição e preparo metabólico não são adjuvante nem luxo: são condição sine qua non | imunonutricao, preparo-metabolico, nutricao-perioperatoria, antitese, quebra-de-crenca, cirurgia-eletiva | 5 | 4/4 | RE CA GE | FP CR CC |
+| 20261108_img-4347#s03 | 00:37.96–00:58.19 (20 s) | operar eletivamente sem preparo nutricional aumenta infecção, deiscência e fístula | cirurgia-eletiva, complicacoes-pos-operatorias, infeccao, deiscencia, fistula, nutricao-perioperatoria | 3 | 4/4 | RE CA | FP |
 
 ## Pendentes (sem segments.json no índice)
 

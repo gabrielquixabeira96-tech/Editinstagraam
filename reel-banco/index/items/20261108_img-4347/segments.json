@@ -1,0 +1,122 @@
+{
+  "item_id": "20261108_img-4347",
+  "validado_em": "2026-11-08T19:41:42+00:00",
+  "segments": [
+    {
+      "id": "20261108_img-4347#s01",
+      "t0": 1.01,
+      "t1": 21.33,
+      "tema": "esperar boa cicatrização em cirurgia de grande porte sem preparo nutricional prévio é ingenuidade",
+      "tags": [
+        "nutricao-perioperatoria",
+        "imunonutricao",
+        "cicatrizacao",
+        "preparo-pre-operatorio",
+        "cirurgia-de-grande-porte",
+        "entimema"
+      ],
+      "tese": "sem imunonutrição prévia não se pode esperar cicatrização e desfecho adequados numa cirurgia de grande porte",
+      "citacao": "sem o preparo nutricional prévio sem o aporte dessa imonutrição prévia é, no mínimo, uma",
+      "gancho_potencial": 4,
+      "publicos": [
+        "residente",
+        "candidato-residencia",
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "corte-rapido"
+      ],
+      "notas": "começa hesitante ('vai ser, vai ser submetido') — cortar a repetição. 'imonutrição'=imunonutrição, 'desfecha'=desfecho (corrigir legenda). Termina em 'ingenuidade' seguido de pausa de 4,2 s. Mesmo set da luminária circular.",
+      "t0_original": 1.01,
+      "t1_original": 21.0,
+      "dur": 20.32,
+      "citacao_t0": 13.84,
+      "citacao_t1": 20.2,
+      "citacao_palavras": [
+        26,
+        40
+      ],
+      "item_id": "20261108_img-4347"
+    },
+    {
+      "id": "20261108_img-4347#s02",
+      "t0": 25.55,
+      "t1": 37.29,
+      "tema": "imunonutrição e preparo metabólico não são adjuvante nem luxo: são condição sine qua non",
+      "tags": [
+        "imunonutricao",
+        "preparo-metabolico",
+        "nutricao-perioperatoria",
+        "antitese",
+        "quebra-de-crenca",
+        "cirurgia-eletiva"
+      ],
+      "tese": "o preparo metabólico deixa de ser opcional quando se entende que sem ele a cicatrização não acontece",
+      "citacao": "a gente tem que parar de tratar a imonutrição e o preparo metabólico como se fosse um adjuvante,",
+      "gancho_potencial": 5,
+      "publicos": [
+        "residente",
+        "candidato-residencia",
+        "geral"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal",
+        "corte-rapido",
+        "citacao-card"
+      ],
+      "notas": "melhor antítese do lote ('não é adjuvante nem luxo, é condição sine qua non'). 'sinécoa não' = sine qua non (corrigir legenda).",
+      "t0_original": 25.55,
+      "t1_original": 37.5,
+      "dur": 11.74,
+      "citacao_t0": 25.99,
+      "citacao_t1": 33.07,
+      "citacao_palavras": [
+        46,
+        63
+      ],
+      "item_id": "20261108_img-4347"
+    },
+    {
+      "id": "20261108_img-4347#s03",
+      "t0": 37.96,
+      "t1": 58.19,
+      "tema": "operar eletivamente sem preparo nutricional aumenta infecção, deiscência e fístula",
+      "tags": [
+        "cirurgia-eletiva",
+        "complicacoes-pos-operatorias",
+        "infeccao",
+        "deiscencia",
+        "fistula",
+        "nutricao-perioperatoria"
+      ],
+      "tese": "no cenário eletivo não se deve operar sem preparo, porque as complicações (infecção, deiscência, fístula) ficam muito mais prováveis",
+      "citacao": "Não existe a possibilidade de você operar um paciente no cenário electivo sem isso preparo.",
+      "gancho_potencial": 3,
+      "publicos": [
+        "residente",
+        "candidato-residencia"
+      ],
+      "qualidade_visual": 4,
+      "qualidade_audio": 4,
+      "usos": [
+        "fala-principal"
+      ],
+      "notas": "ATENÇÃO CFM: 'é quase certo que o desfecho vai ser negativo' é exagero (sensacionalismo); para anúncio, cortar essa frase e ficar com a lista de complicações ou suavizar no texto. 'decência'=deiscência, 'fisto'=fístula.",
+      "t0_original": 37.96,
+      "t1_original": 58.0,
+      "dur": 20.23,
+      "citacao_t0": 37.96,
+      "citacao_t1": 46.58,
+      "citacao_palavras": [
+        79,
+        93
+      ],
+      "item_id": "20261108_img-4347"
+    }
+  ]
+}

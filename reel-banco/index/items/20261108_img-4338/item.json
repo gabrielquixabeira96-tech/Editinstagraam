@@ -1,0 +1,32 @@
+{
+  "id": "20261108_img-4338",
+  "nome": "IMG_4338",
+  "tipo": "video",
+  "origem": {
+    "drive_id": "1yMXuiaap1Qp5lfrxCdeshzxvUaKqqa78",
+    "nome_original": "IMG_4338.MOV",
+    "modifiedTime": "2026-11-08T08:39:06.138Z"
+  },
+  "arquivo": "source.mov",
+  "tamanho": 83134012,
+  "sha256": "941d323793e0497409cb6a9429d86796e6b406b94a92b9d233fb7752cdaeffd8",
+  "duracao": 47.668333,
+  "largura": 1080,
+  "altura": 1920,
+  "fps": 29.998,
+  "rotacao": -90,
+  "tem_audio": true,
+  "vcodec": "hevc",
+  "acodec": "aac",
+  "licenca": "propria",
+  "status": "indexado",
+  "criado_em": "2026-11-08T19:39:01+00:00",
+  "atualizado_em": "2026-11-08T19:40:20+00:00",
+  "n_cenas": 2,
+  "n_keyframes": 2,
+  "contact_sheets": [
+    "contact_sheet.jpg"
+  ],
+  "n_segmentos": 1,
+  "indexado_em": "2026-11-08T19:40:20+00:00"
+}

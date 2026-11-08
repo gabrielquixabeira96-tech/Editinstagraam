@@ -1,0 +1,47 @@
+{
+  "item_id": "20261108_img-4339",
+  "duracao": 53.335,
+  "params": {
+    "threshold": 10.0,
+    "min_scene": 1.0,
+    "max_scene": 30.0,
+    "fps": 2.0
+  },
+  "gerado_em": "2026-11-08T19:40:11+00:00",
+  "scenes": [
+    {
+      "n": 1,
+      "t0": 0.0,
+      "t1": 26.668,
+      "dur": 26.668,
+      "corte": "inicio",
+      "rosto": 0.98,
+      "rosto_tam": 0.341,
+      "nitidez": 117.7,
+      "luma": 162.0,
+      "estourado": 0.0,
+      "escuro": 0.002,
+      "audio_db": -26.1,
+      "silencio": 0.38,
+      "sug_visual": 4.0,
+      "sug_audio": 4.0
+    },
+    {
+      "n": 2,
+      "t0": 26.668,
+      "t1": 53.335,
+      "dur": 26.668,
+      "corte": "bloco",
+      "rosto": 1.0,
+      "rosto_tam": 0.356,
+      "nitidez": 98.6,
+      "luma": 171.9,
+      "estourado": 0.0,
+      "escuro": 0.0,
+      "audio_db": -24.8,
+      "silencio": 0.37,
+      "sug_visual": 4.0,
+      "sug_audio": 4.0
+    }
+  ]
+}
