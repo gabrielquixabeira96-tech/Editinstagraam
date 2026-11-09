@@ -77,7 +77,8 @@ def main():
         default_y = {"HookTitle": slots["hook"]["y"], "Counter": slots["card"]["y"],
                      "BarChart": slots["chart"]["y"], "LineChart": slots["chart"]["y"],
                      "ArticleFigure": slots["figure"]["y"], "LowerThird": slots["lower_third"]["y"],
-                     "ProgressBar": slots["progress"]["y"], "BigText": slots["bigtext"]["y"]}
+                     "ProgressBar": slots["progress"]["y"], "BigText": slots["bigtext"]["y"],
+                     "Keyphrase": slots["card"]["y"], "Checklist": slots["card"]["y"]}
         if comp in default_y and "y" not in props:
             props["y"] = default_y[comp]
         out = gdir / f"{i:02d}_{comp}"

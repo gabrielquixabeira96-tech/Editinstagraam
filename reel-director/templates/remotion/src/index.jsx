@@ -517,16 +517,185 @@ const ChecklistClassico = ({title = '', items = [], y = 520, stagger = 9, instan
   );
 };
 
-const byLook = (Dir, Cls) => (props) => (props.look === 'classico' ? <Cls {...props} /> : <Dir {...props} />);
-const HookTitle = byLook(HookTitleDir, HookTitleClassico);
-const LowerThird = byLook(LowerThirdDir, LowerThirdClassico);
-const ArticleFigure = byLook(ArticleFigureDir, ArticleFigureClassico);
-const BigText = byLook(BigTextDir, BigTextClassico);
-const Label = byLook(LabelDir, LabelClassico);
 
-const CounterC = byLook(Counter, CounterClassico);
+// ======================================================================================================
+// Estilo "grand_hotel" (props.look === 'grand_hotel'; styles/grand_hotel.json, 2026-11-09; skill estetica-grand-hotel):
+// luxo silencioso europeu à meia-luz. Serifa Cormorant Garamond; rótulos em VERSALETE com letter-spacing 0.24em;
+// branco-gelo #F4F1EA; destaque âmbar #E2B66E; filetes de latão #B08D57; caixas de cantos RETOS em carvão translúcido.
+// Animação: só fade + deslocamento vertical curto (inOut). Nada de escala, bounce, pop, verde, gradiente, emoji.
+// ======================================================================================================
+const GH = {ink: '#F4F1EA', ivory: '#EDE6D6', amber: '#E2B66E', brass: '#B08D57', box: 'rgba(14,13,11,.80)',
+  soft: 'rgba(237,230,214,.78)', shadow: '0 2px 18px rgba(14,13,11,.75), 0 1px 3px rgba(14,13,11,.7)'};
+const BrassRule = ({w, opacity = 1, style}) => <div style={{height: 1.5, width: w, background: GH.brass, opacity, ...style}} />;
+const ruleIn = (f, a, b, w) => interpolate(f, [a, b], [0, w], {easing: inOut, extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+
+// Gancho: kicker opcional em versalete + título em serifa (palavra com * = destaque âmbar sublinhado por filete de latão).
+const HookTitleGH = ({lines = [['TÍTULO']], kicker = '', y = 560, stagger = 3, fontSize = 96, box = true, durationInFrames}) => {
+  useSerif();
+  const f = useCurrentFrame();
+  let k = 0;
+  const nw = lines.reduce((a, l) => a + l.length, 0);
+  return (
+    <AbsoluteFill style={{fontFamily: SERIF, color: GH.ink}}>
+      <div style={{position: 'absolute', top: y, left: 65, width: 950, display: 'flex', flexDirection: 'column', alignItems: 'center',
+        opacity: fadeOut(f, durationInFrames, 10)}}>
+        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2,
+          ...(box ? {background: GH.box, padding: '28px 46px 26px', borderTop: `1.5px solid ${GH.brass}`, borderBottom: `1.5px solid ${GH.brass}`,
+            opacity: soft(f, 0, 8)} : {})}}>
+          {kicker && <div style={{fontSize: 26, fontWeight: 500, letterSpacing: '0.26em', textTransform: 'uppercase', color: GH.brass,
+            marginBottom: 10, opacity: soft(f, 0, 10)}}>{kicker}</div>}
+          {lines.map((ln, li) => (
+            <div key={li} style={{display: 'flex', gap: Math.round(fontSize * 0.26), justifyContent: 'center', flexWrap: 'wrap'}}>
+              {ln.map((w, wi) => {
+                const i = k++;
+                const p = soft(f, 2 + i * stagger, 12);
+                const acc = w.startsWith('*');
+                const txt = acc ? w.replaceAll('*', '') : w;
+                return (
+                  <span key={wi} style={{fontSize, fontWeight: 600, lineHeight: 1.08, letterSpacing: '0.02em',
+                    color: acc ? GH.amber : GH.ink, opacity: p, transform: `translateY(${(1 - p) * 12}px)`, textShadow: GH.shadow,
+                    borderBottom: acc ? `1.5px solid ${GH.brass}` : 'none', paddingBottom: acc ? 2 : 0}}>{txt}</span>
+                );
+              })}
+            </div>
+          ))}
+          <BrassRule w={ruleIn(f, nw * stagger, nw * stagger + 16, 120)} style={{marginTop: 14}} />
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+// Frase-chave / mito: texto em serifa sobre caixa carvão, rótulo opcional em versalete latão.
+const KeyphraseGH = ({text = '', kicker = '', y = 560, fontSize = 64, durationInFrames}) => {
+  useSerif();
+  const f = useCurrentFrame();
+  const p = soft(f, 0, 12);
+  const parts = String(text).split(/(\*[^*]+\*)/g).filter(Boolean);
+  return (
+    <AbsoluteFill style={{fontFamily: SERIF, color: GH.ink, opacity: fadeOut(f, durationInFrames, 10)}}>
+      <div style={{position: 'absolute', top: y, left: 65, width: 950, display: 'flex', justifyContent: 'center',
+        opacity: p, transform: `translateY(${(1 - p) * 12}px)`}}>
+        <div style={{background: GH.box, padding: '24px 42px 22px', maxWidth: 900, textAlign: 'center', borderLeft: `1.5px solid ${GH.brass}`}}>
+          {kicker && <div style={{fontSize: 24, fontWeight: 500, letterSpacing: '0.26em', textTransform: 'uppercase', color: GH.brass, marginBottom: 8}}>{kicker}</div>}
+          <div style={{fontSize, fontWeight: 600, lineHeight: 1.14, textShadow: GH.shadow}}>
+            {parts.map((t, i) => t.startsWith('*') ? <span key={i} style={{color: GH.amber}}>{t.replaceAll('*', '')}</span> : <span key={i}>{t}</span>)}
+          </div>
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+const LowerThirdGH = ({name = 'Dr. Gabriel Quixabeira', sub = 'CRM-MT 14.954', role = '', y = 1000, durationInFrames}) => {
+  useSerif();
+  const f = useCurrentFrame();
+  const p = soft(f, 0, 12);
+  return (
+    <AbsoluteFill style={{fontFamily: SERIF, color: GH.ink, opacity: fadeOut(f, durationInFrames, 10)}}>
+      <div style={{position: 'absolute', top: y, left: 65, opacity: p, transform: `translateY(${(1 - p) * 10}px)`}}>
+        <div style={{background: GH.box, padding: '16px 28px 14px', borderLeft: `1.5px solid ${GH.brass}`}}>
+          <div style={{fontSize: 40, fontWeight: 600, letterSpacing: '0.03em'}}>{name}</div>
+          <BrassRule w={ruleIn(f, 4, 20, 240)} style={{margin: '8px 0 9px'}} />
+          <div style={{fontSize: 22, fontWeight: 500, letterSpacing: '0.24em', textTransform: 'uppercase', color: GH.soft}}>
+            {sub}{role ? <span style={{color: GH.brass}}>{'  ·  '}</span> : null}{role}
+          </div>
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+// Disclaimer / rótulo IA / CTA: versalete pequeno, carvão translúcido, filete de latão no topo.
+const LabelGH = ({text = 'Recriação ilustrativa (IA)', y = 1180, align = 'center', size = 24, caps = true, durationInFrames}) => {
+  useSerif();
+  const f = useCurrentFrame();
+  const p = soft(f, 0, 10);
+  return (
+    <AbsoluteFill style={{fontFamily: SERIF, color: GH.ink, opacity: fadeOut(f, durationInFrames, 10)}}>
+      <div style={{position: 'absolute', top: y, left: 65, width: 950, display: 'flex', justifyContent: align === 'center' ? 'center' : 'flex-start'}}>
+        <div style={{background: GH.box, padding: '11px 22px 10px', borderTop: `1.5px solid ${GH.brass}`, fontSize: size, fontWeight: 600,
+          letterSpacing: caps ? '0.2em' : '0.03em', textTransform: caps ? 'uppercase' : 'none', opacity: p, transform: `translateY(${(1 - p) * 8}px)`}}>{text}</div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+const CounterGH = ({from = 0, to = 100, decimals = 0, prefix = '', suffix = '', label = '', kicker = '', y = 520, numSize = 150, durationInFrames}) => {
+  useSerif();
+  const f = useCurrentFrame();
+  const p = interpolate(f, [4, 34], [0, 1], {easing: inOut, extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const v = from + (to - from) * p;
+  const inP = soft(f, 0, 12);
+  return (
+    <AbsoluteFill style={{fontFamily: SERIF, color: GH.ink, opacity: fadeOut(f, durationInFrames, 10)}}>
+      <div style={{position: 'absolute', top: y, left: 65, width: 950, display: 'flex', justifyContent: 'center', opacity: inP, transform: `translateY(${(1 - inP) * 12}px)`}}>
+        <div style={{background: GH.box, padding: '28px 54px', display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: 560,
+          borderTop: `1.5px solid ${GH.brass}`, borderBottom: `1.5px solid ${GH.brass}`}}>
+          {kicker && <div style={{fontSize: 24, fontWeight: 500, letterSpacing: '0.26em', textTransform: 'uppercase', color: GH.brass, marginBottom: 10}}>{kicker}</div>}
+          <div style={{fontSize: numSize, fontWeight: 600, lineHeight: 1, color: GH.amber, fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap', textShadow: GH.shadow}}>
+            {prefix}{v.toFixed(decimals).replace('.', ',')}<span style={{fontSize: Math.round(numSize * 0.45), marginLeft: 10}}>{suffix}</span>
+          </div>
+          <BrassRule w={ruleIn(f, 10, 30, 180)} style={{margin: '16px 0 12px'}} />
+          {label && <div style={{fontSize: 40, fontWeight: 600, textAlign: 'center', maxWidth: 820, opacity: soft(f, 12, 12)}}>{label}</div>}
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+const ChecklistGH = ({title = '', items = [], y = 520, stagger = 9, footer = '', durationInFrames}) => {
+  useSerif();
+  const f = useCurrentFrame();
+  const inP = soft(f, 0, 12);
+  return (
+    <AbsoluteFill style={{fontFamily: SERIF, color: GH.ink, opacity: fadeOut(f, durationInFrames, 10)}}>
+      <div style={{position: 'absolute', top: y, left: 65, width: 950, opacity: inP, transform: `translateY(${(1 - inP) * 12}px)`}}>
+        <div style={{background: GH.box, padding: '22px 38px 16px', borderLeft: `1.5px solid ${GH.brass}`}}>
+          {title && <div style={{fontSize: 26, fontWeight: 500, letterSpacing: '0.26em', textTransform: 'uppercase', color: GH.brass}}>{title}</div>}
+          {title && <BrassRule w={160 * soft(f, 4, 14)} style={{margin: '10px 0 16px'}} />}
+          {items.map((it, i) => {
+            const st0 = it.at !== undefined ? Math.round(it.at * 30) : 6 + i * stagger;
+            const pi = soft(f, st0, 12);
+            return (
+              <div key={i} style={{display: 'flex', alignItems: 'baseline', gap: 18, marginBottom: 10, opacity: pi, transform: `translateY(${(1 - pi) * 8}px)`}}>
+                <div style={{width: 14, height: 1.5, background: GH.brass, transform: 'translateY(-10px)'}} />
+                <div style={{fontSize: it.size || 48, fontWeight: 600, color: it.hi ? GH.amber : GH.ink}}>{it.text}</div>
+              </div>
+            );
+          })}
+          {footer && <div style={{fontSize: 22, letterSpacing: '0.04em', color: GH.soft, marginTop: 8}}>{footer}</div>}
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+const BigTextGH = ({text = 'TEMA', y = 640, fontSize = 150, durationInFrames}) => {
+  useSerif();
+  const f = useCurrentFrame();
+  const p = soft(f, 0, 16);
+  return (
+    <AbsoluteFill style={{fontFamily: SERIF, opacity: fadeOut(f, durationInFrames, 10)}}>
+      <div style={{position: 'absolute', top: y, width: 1080, textAlign: 'center', fontSize, fontWeight: 600, lineHeight: 1,
+        letterSpacing: '0.14em', textTransform: 'uppercase', color: GH.ivory, opacity: p, textShadow: GH.shadow,
+        transform: `translateY(${(1 - p) * 16}px)`}}>{text}</div>
+    </AbsoluteFill>
+  );
+};
+
+const byLook = (Dir, Cls, Gh) => (props) => (props.look === 'grand_hotel' && Gh ? <Gh {...props} /> : props.look === 'classico' ? <Cls {...props} /> : <Dir {...props} />);
+const HookTitle = byLook(HookTitleDir, HookTitleClassico, HookTitleGH);
+const LowerThird = byLook(LowerThirdDir, LowerThirdClassico, LowerThirdGH);
+const ArticleFigure = byLook(ArticleFigureDir, ArticleFigureClassico);
+const BigText = byLook(BigTextDir, BigTextClassico, BigTextGH);
+const Label = byLook(LabelDir, LabelClassico, LabelGH);
+
+const CounterC = byLook(Counter, CounterClassico, CounterGH);
 const BarChartC = byLook(BarChart, BarChartClassico);
-const COMPS = {HookTitle, Counter: CounterC, BarChart: BarChartC, Checklist: ChecklistClassico, LineChart, Callout, ProgressBar, LowerThird, ArticleFigure, BigText, Label};
+const ChecklistC = byLook(ChecklistClassico, ChecklistClassico, ChecklistGH);
+const Keyphrase = byLook(KeyphraseGH, KeyphraseGH, KeyphraseGH);
+const COMPS = {HookTitle, Counter: CounterC, BarChart: BarChartC, Checklist: ChecklistC, Keyphrase, LineChart, Callout, ProgressBar, LowerThird, ArticleFigure, BigText, Label};
 const calc = ({props}) => ({durationInFrames: Math.max(1, Math.round(props.durationInFrames || 60))});
 
 const Root = () => (

@@ -83,7 +83,18 @@ def main():
                   "zscale=t=bt709:m=bt709:r=tv,format=yuv420p")
     ar = info["width"] / info["height"]
     fit = "cover" if abs(ar - 9 / 16) / (9 / 16) < 0.12 else "contain"
-    if fit == "cover":
+    # horizontal + polish: mantém o quadro nativo para a reel-polish reenquadrar 9:16 seguindo o rosto (YuNet);
+    # "contain" aqui deixaria o rosto pequeno no meio de um fundo desfocado e o polish não teria o que reenquadrar.
+    # plan.ingest.fit força ("native" | "contain" | "cover").
+    want = (plan.get("ingest") or {}).get("fit")
+    if want in ("native", "contain", "cover"):
+        fit = want
+    elif fit == "contain" and plan.get("polish", {}).get("enabled"):
+        fit = "native"
+    if fit == "native":
+        chain = ",".join(vf + [f"fps={dc.FPS}", "scale=trunc(iw/2)*2:trunc(ih/2)*2", "setsar=1", "format=yuv420p"])
+        fc = f"[0:v]{chain}[v]"
+    elif fit == "cover":
         vf.append("scale=1080:1920:force_original_aspect_ratio=increase:flags=lanczos,crop=1080:1920,setsar=1")
         chain = ",".join(vf + [f"fps={dc.FPS}", "format=yuv420p"])
         fc = f"[0:v]{chain}[v]"

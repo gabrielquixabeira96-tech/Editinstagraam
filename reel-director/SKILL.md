@@ -187,3 +187,25 @@ alta espaçada, branco × preto/grafite, caixas QUADRADAS translúcidas sem verd
 leve deslocamento; legenda palavra a palavra em Inter Medium pequena (styles/legenda_classica.json, destaque só por
 opacidade). O 04_graphics injeta `props.look` e os componentes `*Classico` do Remotion assumem; sem `look`, nada muda.
 `ArticleFigure` aceita `w`/`h` (caixa centralizada): use w ≤ 850 para a sombra caber em x 65–1015.
+
+## Estilo "grand_hotel" (2026-11-09) — padrão estético do Gabriel (skill estetica-grand-hotel)
+`"style": "grand_hotel"` (styles/grand_hotel.json, herda de director): luxo silencioso europeu à meia-luz. Títulos e
+cards em Cormorant Garamond, rótulos em VERSALETE (letter-spacing 0.24–0.26em) em latão `#B08D57`, texto branco-gelo
+`#F4F1EA`, destaque âmbar `#E2B66E` (palavra com `*` no HookTitle/Keyphrase), caixas de cantos RETOS em carvão
+translúcido `rgba(14,13,11,.80)` com filete de latão; animação só fade + deslocamento vertical. Componentes `*GH` do
+Remotion via `props.look='grand_hotel'` (HookTitle com `kicker`, `Keyphrase` novo, LowerThird com `role`, Label com
+`caps`, Counter, Checklist com `hi`, BigText). Legenda palavra a palavra `styles/legenda_grand_hotel.json` (Cormorant
+SemiBold 72, branco-gelo, palavra atual em âmbar, sem caixa, y≈0,72). Transições: corte seco/dissolve; sem SFX.
+Faixa da legenda para o QA: `safe.caption_band` do estilo (1335–1440). Slots: gancho/cards de topo y 300 (sobre a
+parede), cards de peito y 1050–1090 (acima da legenda). Grade do rosto na reel-polish: `looks/grand_hotel_meia_luz.json`
++ `"exposure": {"target_face_luma": 0.44}` + `retouch.face_light 0.12` + `retouch.skin_warmth` negativo (medir R/B).
+
+## Bruto longo: pré-corte (00_precut.py) e prévia do visual (09_preview.py)
+- Bruto de vários minutos para um Reel de < 60 s: escolha os trechos na transcrição do bruto inteiro e rode
+  `python3 scripts/00_precut.py BRUTO --ranges a-b,c-d,... --transcript <full>/transcript.json --out <clip>.mp4 --workdir work/<n>`
+  (tone-map HLG->709, 30 fps CFR, transcrição REMAPEADA sem retranscrever). O plan.json usa o clipe como `source` e
+  tempos na timeline do clipe; `plan.cuts` registra os descartes no tempo do bruto com motivo.
+- Horizontal + polish: o 01_ingest mantém o quadro nativo (`ingest.fit = "native"`) para a reel-polish reenquadrar.
+- Antes de aprovar: `python3 scripts/09_preview.py plan.json --t <s> [--t <s>...] --out work/<n>/preview.jpg` monta
+  quadro polido + gráficos ativos + legenda no estilo, sem rodar cut/compose.
+- `plan.hook`, `plan.cuts` e `plan.transcript_kept` aparecem em `plano.txt` e `direction.json` (02_direct).

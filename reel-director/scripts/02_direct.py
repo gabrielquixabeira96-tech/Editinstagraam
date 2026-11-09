@@ -23,7 +23,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import dr_common as dc  # noqa: E402
 
 COMPS = {"HookTitle", "Counter", "BarChart", "LineChart", "Callout", "ProgressBar",
-         "LowerThird", "ArticleFigure", "BigText", "Label", "Checklist"}
+         "LowerThird", "ArticleFigure", "BigText", "Label", "Checklist", "Keyphrase"}
 SHOT_KINDS = {"aroll", "broll", "ai", "chroma"}
 
 
@@ -138,8 +138,41 @@ def main():
         lines.append(f"  shot [{s.get('t', 0):6.2f} +{s.get('dur', 0):.1f}] {s['kind']:7} in={s.get('in', 'cut')} {s.get('why', '')}")
     for w in warns:
         lines.append(f"  aviso: {w}")
+    if plan.get("hook"):
+        lines += ["", f"GANCHO: {plan['hook'].get('title', '')}  (destaque: {plan['hook'].get('highlight', '')})",
+                  f"  1ª fala mantida: {plan['hook'].get('first_phrase', '')}", f"  por quê: {plan['hook'].get('why', '')}"]
+    if plan.get("polish", {}).get("enabled"):
+        pj = plan["polish"]
+        lines += ["", f"POLISH: look {pj.get('look')}  beauty {pj.get('beauty_intensity')}  retouch {pj.get('retouch')}"
+                      f"  grain {pj.get('grain')}  enquadramento {pj.get('framing', 'medium')}"]
+    if plan.get("cuts"):
+        lines += ["", "CORTES (tempo do bruto) — motivo:"] + [f"  {c['src']}: {c['motivo']}" for c in plan["cuts"]]
+    if plan.get("transcript_kept"):
+        import textwrap
+        lines += ["", "FALA MANTIDA:"] + ["  " + ln for ln in textwrap.wrap(plan["transcript_kept"], 110)]
+    lines += ["", f"approved: {bool(plan.get('approved'))}  -> aprovar com: python3 scripts/run_all.py {args.plan} --approve-plan"]
     (W_ / "plano.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
-    dc.save_json(W_ / "direction.json", {"warnings": warns, "kept_len": kept_len, "source": str(src)})
+    # direction.json: visão legível do que o Claude decidiu (gancho, cortes com motivo, elementos com why).
+    # A fonte de verdade continua sendo o plan.json; este arquivo é o que se mostra ao Gabriel para aprovar.
+    elements = []
+    for g in sorted(plan["graphics"], key=lambda x: x["t"]):
+        pr = g.get("props", {})
+        txt = pr.get("text") or " ".join(" ".join(ln) for ln in pr.get("lines", [])) or \
+            " / ".join(x for x in [pr.get("name"), pr.get("sub"), pr.get("kicker"), pr.get("label")] if x)
+        elements.append({"type": g.get("type") or g["comp"], "comp": g["comp"], "t": g["t"], "dur": g["dur"],
+                         "text": txt, "why": g.get("why", "")})
+    for s_ in sorted(plan["shots"], key=lambda x: x.get("t", 0)):
+        if s_.get("kind") != "aroll" or s_.get("in", "cut") != "cut":
+            elements.append({"type": s_["kind"], "t": s_.get("t", 0), "dur": s_.get("dur", 0),
+                             "text": s_.get("file", ""), "transition": s_.get("in", "cut"), "why": s_.get("why", "")})
+    for z in plan["zoom"]:
+        elements.append({"type": "punch_in", "t": z.get("t"), "scale": z.get("scale"), "why": z.get("why", "")})
+    dc.save_json(W_ / "direction.json", {
+        "approved": bool(plan.get("approved")), "style": plan.get("style"), "source": str(src),
+        "hook": plan.get("hook", {}), "kept_len": round(kept_len, 2), "keep": keep,
+        "cuts": plan.get("cuts", []), "elements": elements, "polish": plan.get("polish", {}),
+        "narration": plan.get("narration"), "ai_policy": plan.get("ai_policy"),
+        "transcript_kept": plan.get("transcript_kept", ""), "warnings": warns})
     dc.log("\n".join(lines))
     dc.log(f"OK: {W_/'edl.json'} e {W_/'plano.txt'}")
 

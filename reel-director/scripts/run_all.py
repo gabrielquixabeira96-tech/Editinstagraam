@@ -92,11 +92,16 @@ def main():
         polish_json = W_ / "polish" / "polish.json"
         polish_json.parent.mkdir(parents=True, exist_ok=True)
         pj = plan.get("polish", {})
-        dc.save_json(polish_json, {"source": "../ingest.mp4", "mode": "raw", "framing": pj.get("framing", "medium"),
-                                   "fit": "auto", "look": pj.get("look", "looks/natural.json"),
-                                   "beauty_intensity": pj.get("beauty_intensity", 30),
-                                   "retouch": pj.get("retouch", {"preset": "gabriel"}),
-                                   "fade": {"in_s": 0, "out_s": 0}})
+        pol = {"source": "../ingest.mp4", "mode": "raw", "framing": pj.get("framing", "medium"),
+               "fit": "auto", "look": pj.get("look", "looks/natural.json"),
+               "beauty_intensity": pj.get("beauty_intensity", 30),
+               "retouch": pj.get("retouch", {"preset": "gabriel"}),
+               "fade": {"in_s": 0, "out_s": 0}}
+        # chaves extras do plan.polish (ex.: "grain" do estilo grand_hotel) passam direto para o polish.json
+        pol.update({k: v for k, v in pj.items() if k not in ("enabled",) and k not in pol})
+        # só regrava se o conteúdo mudou (o mtime entra na assinatura: regravar à toa refaria o polish)
+        if not polish_json.exists() or dc.load_json(polish_json) != pol:
+            dc.save_json(polish_json, pol)
         sig = dc.sha([dc.fsig(W_ / "ingest.mp4"), dc.fsig(polish_json)])
         if need("polish", sig, ["polish/polished.mp4"]):
             if sh(["python3", f"{pdir}/scripts/run_all.py", polish_json, "--workdir", W_ / "polish", "--skip-qa"]):

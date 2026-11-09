@@ -1,0 +1,89 @@
+{
+  "inherits": "director",
+  "name": "grand_hotel",
+  "_comentario": "Estilo 'grand_hotel' (2026-11-09; skill estetica-grand-hotel): luxo silencioso europeu à meia-luz. Títulos em serifa Cormorant Garamond, rótulos em VERSALETE com letter-spacing 0.24em, texto branco-gelo #F4F1EA, destaque em âmbar #E2B66E / latão #B08D57 (nunca verde), caixas de cantos RETOS em preto-carvão translúcido com filete fino de latão, animação só de fade + deslocamento vertical curto (sem bounce/pop/escala). Ativa os componentes *GH do Remotion via props.look='grand_hotel' (04_graphics injeta) e a legenda styles/legenda_grand_hotel.json (02_direct). Transições: só corte seco e dissolve. Sem SFX. Trilha só se for piano solo/cordas de câmara, bem abaixo da voz (não há trilha licenciada desse tipo na skill: padrão sem música). Grade do rosto: look 'grand_hotel' da reel-polish (proteção de pele) + grain no polish.json.",
+  "look": "grand_hotel",
+  "subtitle_style": "legenda_grand_hotel.json",
+  "identity": {
+    "font": "Cormorant Garamond SemiBold/Medium (títulos, rótulos e legenda; templates/remotion/public + assets/fonts/legenda_gh)",
+    "text": "#F4F1EA",
+    "accent": "#E2B66E",
+    "brass": "#B08D57",
+    "ivory": "#EDE6D6",
+    "warn": "#E2B66E",
+    "box": "rgba(14,13,11,.80)",
+    "box_radius": 0,
+    "palette": [
+      "#0E0D0B",
+      "#1C2A2E",
+      "#1F3A44",
+      "#3A2418",
+      "#B08D57",
+      "#E2B66E",
+      "#EDE6D6",
+      "#F4F1EA"
+    ],
+    "proibido": [
+      "emoji",
+      "neon",
+      "gradiente",
+      "cantos arredondados",
+      "pílulas",
+      "verde #39E58C",
+      "Poppins",
+      "bounce/pop/escala elástica",
+      "wipe",
+      "whip",
+      "zoom_through",
+      "giro/spin",
+      "page curl",
+      "glitch",
+      "whoosh/ding",
+      "ilustração infantil",
+      "anatomia gerada por IA",
+      "grade de cor em imagem clínica/figura de artigo"
+    ]
+  },
+  "transitions_allowed": [
+    "cut",
+    "dissolve",
+    "J",
+    "L"
+  ],
+  "punch_in": {
+    "scale": 1.06,
+    "sfx": null,
+    "quando": "Push-in lento e discreto (1,00→1,06) só em palavra-chave; nunca com som; no máx. 1 a cada ~10 s."
+  },
+  "audio": {
+    "music_default": null,
+    "sfx_enabled": false,
+    "music_db": -24,
+    "duck_db": -12,
+    "_trilha": "Se houver trilha: piano solo ou cordas de câmara, -24 dB sob a voz. Sem whoosh/ding/pop."
+  },
+  "safe": {
+    "caption_band": {
+      "y0": 1335,
+      "y1": 1440,
+      "_": "legenda_grand_hotel position_y 0.72 → y≈1382 (Cormorant 66 px); cards do peito terminam acima de 1335"
+    }
+  },
+  "slots": {
+    "hook": {
+      "y": 300
+    },
+    "card": {
+      "y": 1060
+    },
+    "lower_third": {
+      "y": 1090
+    },
+    "label_top": {
+      "y": 290
+    },
+    "bigtext": {
+      "y": 700
+    }
+  }
+}

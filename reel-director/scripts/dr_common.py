@@ -137,6 +137,9 @@ PLAN_DEFAULTS = {
     "ai_policy": {"allow": False, "confirmed_by_user": False, "max_credits": 0},
     "post": {},
     "cover": {},
+    "hook": {},
+    "cuts": [],
+    "transcript_kept": "",
 }
 
 

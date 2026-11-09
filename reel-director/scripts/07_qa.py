@@ -32,6 +32,8 @@ def main():
     st = dc.load_style(plan.get("style", "director"))
     reach = st["reach"]
     safe = st["safe"]["center"]
+    cb = st["safe"].get("caption_band") or {}
+    cap = (cb.get("y0", CAP[0]), cb.get("y1", CAP[1]))  # faixa da legenda do ESTILO (ex.: grand_hotel em y≈1380)
     final = W_ / "final.mp4"
     segs, _ = dc.timemap(W_)
     total = dc.rc.timemap_total(segs)
@@ -91,7 +93,7 @@ def main():
         if y0 < 258:
             defects.append(f"gráfico {m['i']} ({m['comp']}) invade o topo reservado (y0={y0})")
         # sobre a faixa da legenda enquanto há legenda
-        if y1 > CAP[0] and y0 < CAP[1]:
+        if y1 > cap[0] and y0 < cap[1]:
             gs, ge = m["start_frame"] / dc.FPS, (m["start_frame"] + m["nframes"]) / dc.FPS
             if any(ws < ge and we > gs for ws, we in cap_words):
                 defects.append(f"gráfico {m['i']} ({m['comp']}) sobre a legenda (y[{y0},{y1}]) com legenda ativa")
