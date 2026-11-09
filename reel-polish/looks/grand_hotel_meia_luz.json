@@ -1,0 +1,11 @@
+{
+  "name": "grand_hotel_meia_luz",
+  "inherits": "grand_hotel",
+  "_comentario": "Variante mais low-key do grand_hotel (2026-11-09, IMG_4162: sala clara com parede creme e luz de teto). Contraste em S mais forte (0,34), vinheta máxima (1,0) e ombro de altas luzes maior (0,12) escurecem a parede e levam as luzes de teto ao âmbar; sombras petróleo levemente mais frias. Use com polish.json \"exposure\": {\"target_face_luma\": 0.44} (não clarear o quadro todo) e retouch face_light ~0,12 (rosto como ilha de luz) + skin_warmth ~-0,45 (o S de contraste empurra a pele para o laranja: medido R/B 2,18 -> 1,9 com o retoque). Saturação fora da pele 0,82; pele protegida.",
+  "contrast": 0.34,
+  "saturation": 0.82,
+  "vignette": 1.0,
+  "highlight_rolloff": 0.12,
+  "shadows_rgb": [-0.03, 0.0, 0.06],
+  "highlights_rgb": [0.05, 0.02, -0.03]
+}
