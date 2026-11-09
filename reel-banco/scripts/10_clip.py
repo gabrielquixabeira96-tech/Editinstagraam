@@ -28,6 +28,7 @@ reel-editor/reel-director usam para um vídeo chamado <nome-do-clipe>.mp4.
 Imprime CLIP=<caminho> no fim.
 """
 import argparse
+import json
 import shutil
 import sys
 from pathlib import Path
@@ -45,25 +46,21 @@ def find_segment(seg_id):
     return item_id, s
 
 
-def clip_video(item, s, out: Path, pad: float, precise: bool, no_audio: bool, short_side: int = 1080):
-    src = bc.find_source(item["id"])
-    if not src:
-        bc.log(f"{item['id']}: mídia ausente em work/ — buscando ...")
-        bc.run_script("02_fetch.py", "--item", item["id"])
-        src = bc.find_source(item["id"])
-        if not src:
-            bc.die("não foi possível obter a mídia")
-    dur = float(item.get("duracao") or bc.probe(src).get("duration") or 0)
-    a = max(0.0, float(s["t0"]) - pad)
-    b = min(dur, float(s["t1"]) + pad) if dur else float(s["t1"]) + pad
-    w, h = item.get("largura") or 1920, item.get("altura") or 1080
-    vf = []
-    if min(w, h) > short_side:
-        vf.append(f"scale=-2:{short_side}" if w >= h else f"scale={short_side}:-2")
-    fps = item.get("fps") or 30
-    if fps > 60 or fps <= 0:
-        vf.append("fps=30")
-    vf.append("format=yuv420p")
+TONEMAP = ("zscale=t=linear:npl=100,format=gbrpf32le,zscale=p=bt709,tonemap=hable:desat=0,"
+           "zscale=t=bt709:m=bt709:r=tv")  # mesma receita do 01_ingest da reel-director
+
+
+def _is_hdr(src) -> bool:
+    r = bc.run([bc.ffprobe_bin(), "-v", "error", "-select_streams", "v:0", "-show_entries",
+                "stream=color_transfer,color_primaries", "-of", "json", str(src)], check=False)
+    try:
+        st = json.loads(r.stdout or "{}").get("streams", [{}])[0]
+    except ValueError:
+        return False
+    return st.get("color_transfer") in ("arib-std-b67", "smpte2084") or st.get("color_primaries") == "bt2020"
+
+
+def _encode(src, a, b, out: Path, vf, precise, no_audio):
     cmd = [bc.ffmpeg_bin(), "-nostdin", "-v", "error", "-y"]
     if precise:
         pre = min(5.0, a)
@@ -72,39 +69,111 @@ def clip_video(item, s, out: Path, pad: float, precise: bool, no_audio: bool, sh
         cmd += ["-ss", f"{a:.3f}", "-i", str(src), "-t", f"{b - a:.3f}"]
     cmd += ["-map", "0:v:0?", "-map", "0:a:0?", "-vf", ",".join(vf), "-c:v", "libx264", "-preset", "medium",
             "-crf", "18", "-movflags", "+faststart"]
+    if any(x.startswith("zscale") for x in vf):
+        cmd += ["-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709"]
     cmd += ["-an"] if no_audio else ["-c:a", "aac", "-b:a", "192k", "-ar", "48000"]
     cmd += [str(out)]
     out.parent.mkdir(parents=True, exist_ok=True)
     bc.run(cmd)
+
+
+def clip_video(item, s, out: Path, pad: float, precise: bool, no_audio: bool, short_side: int = 1080,
+               stream: bool = False, drive_id: str | None = None, tonemap: bool = False, ranges=None):
+    """ranges: lista [(a, b)] em segundos ABSOLUTOS do item (podem cair fora do segmento, no mesmo item):
+    cada trecho é recodificado e os trechos são emendados (concat sem recodificar) num clipe só, na ordem dada.
+    stream: sem mídia em work/, lê direto do Drive por faixas (drive_stream.py) — não baixa o arquivo inteiro."""
+    src = bc.find_source(item["id"])
+    ctx = None
+    if not src and stream:
+        import drive_stream as ds_mod  # noqa: E402
+        fid = drive_id or (item.get("origem") or {}).get("drive_id")
+        if not fid:
+            bc.die("--stream exige origem.drive_id no item ou --drive-id")
+        ctx = ds_mod.DriveStream(fid)
+        src = ctx.__enter__()
+        bc.log(f"{item['id']}: lendo do Drive por faixas (sem download completo) — id {fid}")
+    elif not src:
+        bc.log(f"{item['id']}: mídia ausente em work/ — buscando ...")
+        bc.run_script("02_fetch.py", "--item", item["id"])
+        src = bc.find_source(item["id"])
+        if not src:
+            bc.die("não foi possível obter a mídia")
+    try:
+        dur = float(item.get("duracao") or bc.probe(src).get("duration") or 0)
+        w, h = item.get("largura") or 1920, item.get("altura") or 1080
+        vf = []
+        if tonemap and _is_hdr(src):
+            vf.append(TONEMAP)
+            bc.log("HDR (HLG/PQ) -> BT.709 por tone-map")
+        if min(w, h) > short_side:
+            vf.append(f"scale=-2:{short_side}" if w >= h else f"scale={short_side}:-2")
+        fps = item.get("fps") or 30
+        if fps > 60 or fps <= 0:
+            vf.append("fps=30")
+        vf.append("format=yuv420p")
+        if not ranges:
+            a = max(0.0, float(s["t0"]) - pad)
+            b = min(dur, float(s["t1"]) + pad) if dur else float(s["t1"]) + pad
+            _encode(src, a, b, out, vf, precise, no_audio)
+            spans = [(a, b, 0.0)]
+        else:
+            tmp = out.parent / f".{out.stem}_parts"
+            tmp.mkdir(parents=True, exist_ok=True)
+            parts, spans, off = [], [], 0.0
+            for k, (ra, rb) in enumerate(ranges):
+                ra, rb = max(0.0, ra), (min(dur, rb) if dur else rb)
+                pp = tmp / f"p{k:02d}.mp4"
+                bc.log(f"  trecho {k + 1}/{len(ranges)}: {bc.fmt_t(ra)}–{bc.fmt_t(rb)}")
+                _encode(src, ra, rb, pp, vf, precise, no_audio)
+                pdur = float(bc.probe(pp).get("duration") or (rb - ra))
+                parts.append(pp)
+                spans.append((ra, ra + pdur, off))
+                off += pdur
+            lst = tmp / "list.txt"
+            lst.write_text("".join(f"file '{p.resolve()}'\n" for p in parts))
+            bc.run([bc.ffmpeg_bin(), "-nostdin", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(lst),
+                    "-c", "copy", "-movflags", "+faststart", str(out)])
+            shutil.rmtree(tmp, ignore_errors=True)
+            a, b = spans[0][0], spans[-1][1]
+    finally:
+        if ctx is not None:
+            bc.log(f"lidos do Drive: {ctx.bytes_read / 1e6:.1f} MB")
+            ctx.__exit__(None, None, None)
     info = bc.probe(out)
     if not info.get("ok") or not info.get("has_video"):
         bc.die(f"clipe inválido: {out}")
+    info["spans"] = spans
     return info, a, b
 
 
-def clip_transcript(item, a, b, clip: Path):
-    """transcript.json do clipe (formato reel-editor), com tempos deslocados de -a: pronto para a reel-editor
-    usar o clipe como fonte sem retranscrever. Grava <clip>.transcript.json."""
+def clip_transcript(item, a, b, clip: Path, spans=None):
+    """transcript.json do clipe (formato reel-editor), com tempos deslocados para o clipe: pronto para a reel-editor
+    usar o clipe como fonte sem retranscrever. Grava <clip>.transcript.json. spans = [(a, b, deslocamento_no_clipe)]
+    (vários trechos emendados); palavras que atravessam a borda de um trecho ficam de fora."""
     tr = bc.load_transcript(item["id"])
     if not tr:
         return None
-    sh = lambda t: round(max(0.0, t - a), 3)  # noqa: E731
-    words = []
-    for w in tr.get("words", []):
-        if w["start"] >= a and w["end"] <= b:
-            nw = dict(w)
-            for k in ("start", "end", "raw_start", "raw_end"):
-                if k in nw:
-                    nw[k] = sh(nw[k])
-            words.append(nw)
-    segs = []
-    for sg in tr.get("segments", []):
-        if sg["end"] > a and sg["start"] < b:
-            segs.append({**sg, "start": sh(max(sg["start"], a)), "end": sh(min(sg["end"], b))})
+    spans = spans or [(a, b, 0.0)]
+    words, segs = [], []
+    for sa, sb, off in spans:
+        sh = lambda t, sa=sa, sb=sb, off=off: round(off + min(max(0.0, t - sa), sb - sa), 3)  # noqa: E731
+        for w in tr.get("words", []):
+            if w["start"] >= sa and w["end"] <= sb + 0.05:
+                nw = dict(w)
+                for k in ("start", "end", "raw_start", "raw_end"):
+                    if k in nw:
+                        nw[k] = sh(nw[k])
+                words.append(nw)
+        for sg in tr.get("segments", []):
+            if sg["end"] > sa and sg["start"] < sb:
+                segs.append({**sg, "start": sh(max(sg["start"], sa)), "end": sh(min(sg["end"], sb))})
+    total = spans[-1][2] + (spans[-1][1] - spans[-1][0])
     out = clip.with_suffix(".transcript.json")
+    extra = {"clip_ranges": [{"t0": round(sa, 3), "t1": round(sb, 3), "offset": round(off, 3)} for sa, sb, off in spans]}
     bc.save_json(out, {**{k: v for k, v in tr.items() if k not in ("words", "segments")},
-                       "source": str(clip), "duration": round(b - a, 3), "clip_of": item["id"],
-                       "clip_offset": round(a, 3), "generated_by": "reel-banco/10_clip.py (recorte, sem retranscrever)",
+                       "source": str(clip), "duration": round(total, 3), "clip_of": item["id"],
+                       "clip_offset": round(a, 3), **(extra if len(spans) > 1 else {}),
+                       "generated_by": "reel-banco/10_clip.py (recorte, sem retranscrever)",
                        "words": words, "segments": segs})
     return out
 
@@ -222,6 +291,17 @@ def main():
                     help="lado menor máximo do clipe (padrão 1080; use 2160 para manter o 4K quando o clipe vai ser "
                          "reenquadrado em 9:16 pela reel-polish — evita ampliar o recorte)")
     ap.add_argument("--out", help="caminho de saída (padrão: work/banco/clips/<id>.mp4)")
+    ap.add_argument("--stream", action="store_true",
+                    help="mídia ausente em work/: lê direto do Drive por faixas HTTP (drive_stream.py), sem baixar o "
+                         "arquivo inteiro — para brutos enormes (ex.: 4K de 45 min, 16 GB) quando só um trecho importa")
+    ap.add_argument("--drive-id", help="com --stream: outro id do Drive com o MESMO arquivo (ex.: cópia que o Gabriel "
+                                       "compartilhou, quando o link original estourou a cota)")
+    ap.add_argument("--tonemap", action="store_true",
+                    help="HDR HLG/PQ -> BT.709 (mesma receita do 01_ingest da reel-director); use quando o clipe vai "
+                         "direto para a reel-polish (que não faz tone-map)")
+    ap.add_argument("--ranges", help='trechos ABSOLUTOS do item a emendar num clipe só, na ordem: "1596.3-1604.4,'
+                                     '1550.1-1562.9" (podem sair do segmento, mas são do mesmo item); a transcrição '
+                                     'do clipe segue os trechos')
     ap.add_argument("--broll", action="store_true", help="registra no índice de B-roll da reel-director")
     ap.add_argument("--broll-index", help="caminho do assets/broll/index.json da reel-director")
     ap.add_argument("--broll-dir", help="pasta onde copiar o clipe (padrão: pasta do --broll-index)")
@@ -243,10 +323,16 @@ def main():
     else:
         if s.get("t0") is None:
             bc.die("segmento de vídeo sem t0/t1")
-        info, a, b = clip_video(item, s, out, args.pad, args.precise, args.no_audio, args.short_side)
+        rng = None
+        if args.ranges:
+            rng = [tuple(float(x) for x in r.split("-")) for r in args.ranges.split(",") if r.strip()]
+            if any(len(r) != 2 or r[1] <= r[0] for r in rng):
+                bc.die('--ranges inválido: use "a-b,c-d" com b > a (segundos)')
+        info, a, b = clip_video(item, s, out, args.pad, args.precise, args.no_audio, args.short_side,
+                                stream=args.stream, drive_id=args.drive_id, tonemap=args.tonemap, ranges=rng)
         bc.log(f"{args.segment_id}: {bc.fmt_t(a)}–{bc.fmt_t(b)} -> {out} ({info.get('width')}x{info.get('height')}, "
                f"{info.get('duration'):.2f} s)")
-        tp = clip_transcript(item, a, b, out)
+        tp = clip_transcript(item, a, b, out, info.get("spans"))
         if tp:
             bc.log(f"transcrição do clipe (formato reel-editor) -> {tp}")
             if args.for_editor:
