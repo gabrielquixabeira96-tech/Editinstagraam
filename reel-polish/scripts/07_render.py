@@ -49,6 +49,10 @@ def main():
     vf = [f"fps={pc.FPS}"]
     if sharpen > 0.01:
         vf.append(f"unsharp=luma_msize_x=5:luma_msize_y=5:luma_amount={0.8 * sharpen:.3f}:chroma_amount=0")
+    # grão de filme fino (só luma, temporal) — depois da nitidez, para não ser realçado; 0 = desligado
+    grain = pc.clamp(float(pc.pick(cfg, look, "grain", 0.0) or 0.0), 0, 20)
+    if grain > 0.01:
+        vf.append(f"noise=c0s={grain:.2f}:c0f=t")
     if fi > 0:
         vf.append(f"fade=t=in:st=0:d={fi:.3f}")
     if fo > 0:
@@ -60,7 +64,7 @@ def main():
     if fo > 0:
         af.append(f"afade=t=out:st={max(0.0, dur - fo):.3f}:d={fo:.3f}")
     af.append("apad")
-    pc.log(f"renderizando {out.name} (nitidez {sharpen}, fade {fi}/{fo} s, {pc.fmt_t(dur)}) ...")
+    pc.log(f"renderizando {out.name} (nitidez {sharpen}, grão {grain}, fade {fi}/{fo} s, {pc.fmt_t(dur)}) ...")
     pc.run(["ffmpeg", "-y", "-i", vid, "-i", aud, "-map", "0:v:0", "-map", "1:a:0",
             "-vf", ",".join(vf), "-af", ",".join(af),
             "-c:v", "libx264", "-preset", args.preset, "-crf", str(args.crf), "-profile:v", "high",

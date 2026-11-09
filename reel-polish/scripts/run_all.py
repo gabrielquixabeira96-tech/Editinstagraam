@@ -91,7 +91,7 @@ def main():
     sig["retouch"] = pc.sha({"prev": sig["beauty"], "retouch": cfg["retouch"], "code": code["retouch"]})
     sig["audio"] = pc.sha({"src": src_sig, "an": an_sig, "audio": cfg["audio"], "code": code["audio"]})
     sig["render"] = pc.sha({"v": sig["retouch"] if retouch_on else sig["beauty"], "a": sig["audio"],
-                            "sharpen": cfg["sharpen"], "fade": cfg["fade"], "code": code["render"]})
+                            "sharpen": cfg["sharpen"], "grain": cfg.get("grain"), "fade": cfg["fade"], "code": code["render"]})
     sig["qa"] = pc.sha({"render": sig["render"], "code": code["qa"]})
 
     state = pc.load_json(P["state"]) if P["state"].exists() else {}

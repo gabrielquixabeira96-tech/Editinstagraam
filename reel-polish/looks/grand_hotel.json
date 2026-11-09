@@ -1,0 +1,17 @@
+{
+  "name": "grand_hotel",
+  "inherits": "natural",
+  "_comentario": "Estética 'grand hotel à meia-luz' (skill estetica-grand-hotel) dentro do grade, com proteção da pele: saturação reduzida só fora dos tons de pele (huesaturation g+c+b+m), sombras petróleo e altas luzes âmbar (colorbalance com preservação de luminosidade), pretos mais fundos pelo S de contraste, vinheta presente. Substitui o ffmpeg avulso aplicado depois do polished.mp4 (que escurecia e acinzentava o rosto). Combine com retouch.face_light/shadow_fill para manter o rosto como ilha de luz, e com 'grain' no polish.json.",
+  "contrast": 0.20,
+  "lift_shadows": 0.0,
+  "highlight_rolloff": 0.05,
+  "saturation": 0.86,
+  "vibrance": 0.0,
+  "skin_protect": true,
+  "shadows_rgb": [-0.02, 0.0, 0.04],
+  "midtones_rgb": [0.0, 0.0, 0.0],
+  "highlights_rgb": [0.04, 0.015, -0.03],
+  "temperature_bias": 0,
+  "vignette": 0.60,
+  "sharpen": 0.6
+}

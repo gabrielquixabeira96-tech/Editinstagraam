@@ -496,6 +496,7 @@ DEFAULT_POLISH = {
     "vibrance": None,                # None = do look (natural: 0.12)
     "vignette": None,                # 0 = sem vinheta; 1 = forte; None = do look
     "sharpen": None,                 # nitidez final (0–1.5), só luma, aplicada no render; None = do look
+    "grain": None,                   # grão de filme fino (0–20, só luma, temporal) no render; None = do look (0)
     "beauty_intensity": 35,          # 0–100
     "beauty": {"under_eye": True, "eye_brighten": True, "shine_reduction": True},
     # retoque avançado opcional (05b_retouch.py, MediaPipe): nariz (0–0.3 = redução da ponta/asas),
@@ -505,6 +506,9 @@ DEFAULT_POLISH = {
     #   hairline_shape/beard_shape: "shape-up" geométrico (linha-alvo do cabelo pelos terços faciais com "M" suave,
     #   linha da bochecha e contorno do pescoço da barba, sombra mandibular) com síntese de fios ancorada ao rosto.
     #   hairline_lower_max: quanto a linha do cabelo pode descer (fração de fw); hairline_recession: recuo temporal do "M".
+    #   face_light (0–0,25): ilha de luz suave que acompanha o rosto (power window difusa; protege altas luzes).
+    #   shadow_fill (0–1): rebatedor — levanta só a baixa frequência das sombras duras da pele (olheira, sob o
+    #   nariz, sulco), sem tocar textura nem pelos da barba. skin_warmth (−1…1): croma da pele (+ rosado, − menos laranja).
     "retouch": {"enabled": False, "nose_tip_reduce": 0.0, "hairline": 0.0, "beard": 0.0, "skin_texture": 0.0,
                 "hairline_shape": False, "beard_shape": False, "hairline_lower_max": 0.08, "hairline_recession": 0.04,
                 "protect_bottom_from": None, "landmark_smooth_frames": 7},

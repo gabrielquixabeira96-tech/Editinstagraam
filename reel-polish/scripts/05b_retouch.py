@@ -620,7 +620,10 @@ def retouch_frame(frame, L, hair_lo, skin_lo, R, protect_y=None, debug=None, ext
     k_hair = float(R.get("hairline") or 0)
     k_beard = float(R.get("beard") or 0)
     k_skin = float(R.get("skin_texture") or 0)
-    if max(nose_s, k_hair, k_beard, k_skin) <= 0:
+    k_light = float(R.get("face_light") or 0)
+    k_fill = float(R.get("shadow_fill") or 0)
+    k_warm = float(R.get("skin_warmth") or 0)
+    if max(nose_s, k_hair, k_beard, k_skin, k_light, k_fill, abs(k_warm)) <= 0:
         return frame
 
     fw = float(np.linalg.norm(L[IDX_FACE_R] - L[IDX_FACE_L]))
@@ -637,8 +640,9 @@ def retouch_frame(frame, L, hair_lo, skin_lo, R, protect_y=None, debug=None, ext
 
     # ROI: landmarks + margem (cabelo acima)
     xs, ys = L[:, 0], L[:, 1]
-    x0, x1 = int(max(0, xs.min() - 0.40 * fw)), int(min(W, xs.max() + 0.40 * fw))
-    y0, y1 = int(max(0, ys.min() - 0.75 * fw)), int(min(H, ys.max() + 0.20 * fw))
+    mx_, mb_ = (0.60, 0.50) if k_light > 0 else (0.40, 0.20)   # a ilha de luz é difusa: ROI maior
+    x0, x1 = int(max(0, xs.min() - mx_ * fw)), int(min(W, xs.max() + mx_ * fw))
+    y0, y1 = int(max(0, ys.min() - 0.75 * fw)), int(min(H, ys.max() + mb_ * fw))
     if protect_y is not None:
         y1 = min(y1, int(protect_y))
     if x1 - x0 < 32 or y1 - y0 < 32:
@@ -734,6 +738,57 @@ def retouch_frame(frame, L, hair_lo, skin_lo, R, protect_y=None, debug=None, ext
     if debug is not None:
         debug.update(roi=(x0, y0, x1, y1), Hm=Hm, Sm=Sm, oval=oval, beard_zone=beard_zone, beardness=beardness,
                      beard_density=beard_density, skin_core=skin_core)
+
+    # ---------------------------------------------------------------- luz do rosto ("relight")
+    # Equivale ao que um colorista faz com uma "power window" + rebatedor: (1) face_light = ilha de luz suave
+    # sobre o rosto inteiro (elipse muito difusa presa aos landmarks, como uma luz-chave que acompanha a cabeça;
+    # ganho com proteção das altas luzes; inclui barba e bordas por ser LUZ, não pintura — mas poupa o couro
+    # cabeludo para não realçar as entradas); (2) shadow_fill = rebatedor: só a baixa frequência das sombras duras
+    # da luz de teto (olheiras, sulco nasogeniano, sob o nariz/sobrancelha) é levantada em direção à média local da
+    # pele — textura e poros intactos; pelos escuros da barba/bigode ficam fora da máscara; (3) skin_warmth = leve
+    # deslocamento de croma na pele (positivo = mais rosado/quente, negativo = menos laranja).
+    if k_light > 0 or k_fill > 0 or abs(k_warm) > 0:
+        Hs_l = wide_blur(Hm, 0.02 * fw)
+        if k_light > 0:
+            pool = poly_mask(shape, Lr[OVAL], dilate_px=0.06 * fw, feather=0.0)
+            pool = wide_blur(pool, 0.10 * fw) * (1 - 0.6 * Hs_l)
+            # só sobre a pessoa (pele do rosto, cabelo, oval/barba): sem "halo" de luz na parede atrás da cabeça
+            person = np.clip(wide_blur(np.maximum(np.maximum(Sm, Hm), oval), 0.03 * fw) * 1.3, 0, 1)
+            pool = pool * person
+            # rampa a zero nas bordas da ROI (exceto onde a ROI já é a borda da imagem): sem "degrau" de luz
+            ry, rx = np.arange(rh, dtype=np.float32)[:, None], np.arange(rw, dtype=np.float32)[None, :]
+            tp = max(4.0, 0.08 * fw)
+            ty = np.minimum(ry / tp if y0 > 0 else 1.0, (rh - 1 - ry) / tp if y1 < H else 1.0)
+            tx = np.minimum(rx / tp if x0 > 0 else 1.0, (rw - 1 - rx) / tp if x1 < W else 1.0)
+            pool = pool * smoothstep(np.minimum(np.clip(ty, 0, 1), np.clip(tx, 0, 1)))
+            yn = np.clip(Y / 255.0, 0, 1)
+            gain = k_light * (1 - yn ** 2)                     # altas luzes quase não sobem (sem estourar a testa)
+            a = np.clip(pool, 0, 1) * gain
+            touched |= a > 1e-3
+            Y = Y * (1 + a)
+            if debug is not None:
+                debug["light_pool"] = pool
+        if k_fill > 0:
+            Sf = skin_core * (1 - beard_soft) * (1 - np.clip(beard_density * 2.5 - 0.3, 0, 1) * beard_zone)
+            Sf = np.clip(gblur(Sf, 0.01 * fw), 0, 1)
+            Ylo = gblur(Y, 0.018 * fw)
+            Yref = nblur(Y, Sf, 0.13 * fw)                     # média ampla da pele ao redor
+            deficit = np.clip(Yref - Ylo, 0, None)
+            fill = k_fill * deficit
+            a = Sf
+            touched |= (a * fill) > 0.3
+            Y = Y + a * fill
+            # olheira arroxeada/esverdeada: croma da sombra puxado para o da pele vizinha, na mesma proporção
+            wcr = a * np.clip(deficit / 25.0, 0, 1) * min(1.0, 1.5 * k_fill)
+            Cr = Cr + wcr * (nblur(Cr, Sf, 0.13 * fw) - gblur(Cr, 0.018 * fw))
+            Cb = Cb + wcr * (nblur(Cb, Sf, 0.13 * fw) - gblur(Cb, 0.018 * fw))
+            if debug is not None:
+                debug["fill"] = a * fill
+        if abs(k_warm) > 0:
+            Sw = np.clip(gblur(skin_core * (1 - beard_soft), 0.02 * fw), 0, 1)
+            touched |= Sw > 1e-3
+            Cr = Cr + Sw * 3.0 * k_warm                       # um pouco mais de vermelho...
+            Cb = Cb - Sw * 6.0 * k_warm                       # ...e mais amarelo: bronzeado saudável, não rosado
 
     # ---------------------------------------------------------------- pele
     if k_skin > 0:
