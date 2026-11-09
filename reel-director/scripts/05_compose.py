@@ -60,7 +60,11 @@ def zoom_windows(plan, segs, st):
         c = dc.map_t(z["t"], segs)
         scale = float(z.get("scale", pi["scale"]))
         fy = float(z.get("focus_y", pi["focus_y"]))
-        wins.append((dc.nframes(c - r), dc.nframes(c), dc.nframes(c + r), dc.nframes(c + 1.0), scale, fy))
+        # rampa/permanência/saída opcionais por punch-in (estilo grand_hotel: push-in lento, sem "pop")
+        rr = float(z.get("ramp", pi.get("ramp", r)))
+        hold = float(z.get("hold", pi.get("hold", r)))
+        out = float(z.get("out", pi.get("out", 1.0 - r)))
+        wins.append((dc.nframes(c - rr), dc.nframes(c), dc.nframes(c + hold), dc.nframes(c + hold + out), scale, fy))
     return wins
 
 

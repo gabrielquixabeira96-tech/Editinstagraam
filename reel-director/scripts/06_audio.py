@@ -42,10 +42,14 @@ def main():
         if name:
             sfx.append({"t": float(s["t"]), "name": name, "db": a["sfx_db"], "why": f"transição {tr}"})
     for z in plan["zoom"]:
+        if not st["punch_in"].get("sfx"):          # estilo sem SFX no punch-in (ex.: grand_hotel)
+            continue
         sfx.append({"t": float(z["t"]), "name": st["punch_in"]["sfx"], "db": a["sfx_db"] - 2, "why": "punch-in"})
     for extra in plan.get("sfx", []):
         sfx.append({"t": float(extra["t"]), "name": extra.get("name", "pop"),
                     "db": extra.get("db", a["sfx_db"]), "why": extra.get("why", "")})
+    if a.get("sfx_enabled") is False:            # estilo sem SFX automáticos (grand_hotel): só os explícitos
+        sfx = [x for x in sfx if x["why"] not in ("punch-in",) and not x["why"].startswith("transição")]
     # espaçamento mínimo
     sfx.sort(key=lambda x: x["t"])
     spaced, last = [], -1e9

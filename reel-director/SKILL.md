@@ -209,3 +209,7 @@ parede), cards de peito y 1050–1090 (acima da legenda). Grade do rosto na reel
 - Antes de aprovar: `python3 scripts/09_preview.py plan.json --t <s> [--t <s>...] --out work/<n>/preview.jpg` monta
   quadro polido + gráficos ativos + legenda no estilo, sem rodar cut/compose.
 - `plan.hook`, `plan.cuts` e `plan.transcript_kept` aparecem em `plano.txt` e `direction.json` (02_direct).
+- Depois do QA: `python3 scripts/10_report.py plan.json` -> `relatorio.md` + `qc_safe.jpg` (prancha de safe area).
+- grand_hotel: punch-in lento (`ramp`/`hold`/`out` por zoom ou no estilo) e sem SFX automáticos (`audio.sfx_enabled: false`).
+- Cards no peito com rosto em close (fit cover): conferir boca/olhos com YuNet nos quadros de cada gráfico; cards de
+  peito em y 1090–1135 terminam antes de 1335 (faixa da legenda); com rosto baixo, card no topo (y 300).

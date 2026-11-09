@@ -53,7 +53,10 @@
   "punch_in": {
     "scale": 1.06,
     "sfx": null,
-    "quando": "Push-in lento e discreto (1,00→1,06) só em palavra-chave; nunca com som; no máx. 1 a cada ~10 s."
+    "quando": "Push-in lento e discreto (1,00→1,06) só em palavra-chave; nunca com som; no máx. 1 a cada ~10 s.",
+    "ramp": 0.6,
+    "hold": 1.4,
+    "out": 0.8
   },
   "audio": {
     "music_default": null,

@@ -93,7 +93,7 @@ def main():
         polish_json.parent.mkdir(parents=True, exist_ok=True)
         pj = plan.get("polish", {})
         pol = {"source": "../ingest.mp4", "mode": "raw", "framing": pj.get("framing", "medium"),
-               "fit": "auto", "look": pj.get("look", "looks/natural.json"),
+               "fit": pj.get("fit", "auto"), "look": pj.get("look", "looks/natural.json"),
                "beauty_intensity": pj.get("beauty_intensity", 30),
                "retouch": pj.get("retouch", {"preset": "gabriel"}),
                "fade": {"in_s": 0, "out_s": 0}}
