@@ -1,10 +1,10 @@
 {
   "name": "grand_hotel",
-  "_comentario": "Legenda palavra a palavra do estilo 'grand_hotel' (reel-director, 2026-11-09): serifa legível Cormorant Garamond SemiBold em caixa normal, branco-gelo #F4F1EA, palavra atual em âmbar de abajur #E2B66E (sem escala/pop), contorno fino carvão + sombra suave para leitura, sem caixa e sem cantos arredondados. position_y 0.72 = abaixo do queixo no enquadramento medium. Fonte isolada em assets/fonts/legenda_gh (fontsdir do libass).",
+  "_comentario": "Legenda palavra a palavra do estilo 'grand_hotel' (reel-director, 2026-11-09): serifa legível Cormorant Garamond SemiBold em caixa normal, branco-gelo #F4F1EA, palavra atual em âmbar de abajur #E2B66E (sem escala/pop), contorno fino carvão + sombra suave para leitura, sem caixa e sem cantos arredondados. position_y 0.62 (y≈1190, padrão reel-editor; safe area de 670 px na base). Fonte isolada em assets/fonts/legenda_gh (fontsdir do libass).",
   "font": "Cormorant Garamond SemiBold",
   "font_file": "../assets/fonts/legenda_gh/CormorantGaramond-SemiBold.ttf",
   "bold": false,
-  "font_size": 72,
+  "font_size": 68,
   "uppercase": false,
   "text_color": "#F4F1EA",
   "highlight_color": "#E2B66E",
@@ -18,7 +18,7 @@
   "box": false,
   "box_color": "#0E0D0B",
   "box_opacity": 0.6,
-  "position_y": 0.72,
+  "position_y": 0.62,
   "safe_margin": {
     "top": 250,
     "bottom": 420,

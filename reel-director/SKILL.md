@@ -195,9 +195,10 @@ cards em Cormorant Garamond, rótulos em VERSALETE (letter-spacing 0.24–0.26em
 translúcido `rgba(14,13,11,.80)` com filete de latão; animação só fade + deslocamento vertical. Componentes `*GH` do
 Remotion via `props.look='grand_hotel'` (HookTitle com `kicker`, `Keyphrase` novo, LowerThird com `role`, Label com
 `caps`, Counter, Checklist com `hi`, BigText). Legenda palavra a palavra `styles/legenda_grand_hotel.json` (Cormorant
-SemiBold 72, branco-gelo, palavra atual em âmbar, sem caixa, y≈0,72). Transições: corte seco/dissolve; sem SFX.
-Faixa da legenda para o QA: `safe.caption_band` do estilo (1335–1440). Slots: gancho/cards de topo y 300 (sobre a
-parede), cards de peito y 1050–1090 (acima da legenda). Grade do rosto na reel-polish: `looks/grand_hotel_meia_luz.json`
+SemiBold 68, branco-gelo, palavra atual em âmbar, sem caixa, y≈0,62 = 1190). Transições: corte seco/dissolve; sem SFX.
+Faixa da legenda para o QA: `safe.caption_band` do estilo (1140–1245). Safe area de 670 px na base: o QA reprova
+gráfico com y1 > 1250, gráfico em x > 850 com y > 1150 e legenda abaixo de 1250. Cards no topo (y 300), compactos o
+bastante para não cobrir os olhos (conferir com YuNet). Grade do rosto na reel-polish: `looks/grand_hotel_meia_luz.json`
 + `"exposure": {"target_face_luma": 0.44}` + `retouch.face_light 0.12` + `retouch.skin_warmth` negativo (medir R/B).
 
 ## Bruto longo: pré-corte (00_precut.py) e prévia do visual (09_preview.py)
@@ -213,3 +214,9 @@ parede), cards de peito y 1050–1090 (acima da legenda). Grade do rosto na reel
 - grand_hotel: punch-in lento (`ramp`/`hold`/`out` por zoom ou no estilo) e sem SFX automáticos (`audio.sfx_enabled: false`).
 - Cards no peito com rosto em close (fit cover): conferir boca/olhos com YuNet nos quadros de cada gráfico; cards de
   peito em y 1090–1135 terminam antes de 1335 (faixa da legenda); com rosto baixo, card no topo (y 300).
+- Correções de plano (2026-11-09): `plan.reframe_windows` [{t0,t1,scale,fx,fy}] reenquadra um trecho (fy=1 ancora a
+  base e SOBE o rosto — tira a boca da faixa da legenda; fx=0 com scale ≥1,14 tira um objeto da borda direita);
+  Keyphrase `plate: true` = placa carvão de tela cheia (cobre gesto/gole e esconde salto de plano; isenta de borda no
+  QA); Counter `static: true` = número fixo com fade (sem contagem com valores intermediários errados); Keyphrase
+  `footer` (ex.: fecho educativo dentro do card final). Emendas de fala: cortar onde o áudio está em silêncio (medir
+  RMS); a reel-editor só faz fade de 10 ms.

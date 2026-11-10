@@ -542,7 +542,7 @@ const HookTitleGH = ({lines = [['TÍTULO']], kicker = '', y = 560, stagger = 3, 
         <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2,
           ...(box ? {background: GH.box, padding: '28px 46px 26px', borderTop: `1.5px solid ${GH.brass}`, borderBottom: `1.5px solid ${GH.brass}`,
             opacity: soft(f, 0, 8)} : {})}}>
-          {kicker && <div style={{fontSize: 26, fontWeight: 500, letterSpacing: '0.26em', textTransform: 'uppercase', color: GH.brass,
+          {kicker && <div style={{fontSize: 30, fontWeight: 600, letterSpacing: '0.24em', textTransform: 'uppercase', color: GH.brass,
             marginBottom: 10, opacity: soft(f, 0, 10)}}>{kicker}</div>}
           {lines.map((ln, li) => (
             <div key={li} style={{display: 'flex', gap: Math.round(fontSize * 0.26), justifyContent: 'center', flexWrap: 'wrap'}}>
@@ -567,20 +567,38 @@ const HookTitleGH = ({lines = [['TÍTULO']], kicker = '', y = 560, stagger = 3, 
 };
 
 // Frase-chave / mito: texto em serifa sobre caixa carvão, rótulo opcional em versalete latão.
-const KeyphraseGH = ({text = '', kicker = '', y = 560, fontSize = 64, durationInFrames}) => {
+const KeyphraseGH = ({text = '', kicker = '', y = 560, fontSize = 64, plate = false, lines = null, footer = '', durationInFrames}) => {
   useSerif();
   const f = useCurrentFrame();
-  const p = soft(f, 0, 12);
+  const p = soft(f, 0, plate ? 6 : 12);
   const parts = String(text).split(/(\*[^*]+\*)/g).filter(Boolean);
+  if (plate) {  // placa carvão de tela cheia (corte de cobertura): kicker + linhas grandes + rodapé, centralizados
+    return (
+      <AbsoluteFill style={{fontFamily: SERIF, color: GH.ink, background: 'rgba(14,13,11,.95)', opacity: p * fadeOut(f, durationInFrames, 6),
+        display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+        <div style={{position: 'absolute', top: 300, left: 65, right: 65, bottom: 670, border: `1.5px solid ${GH.brass}`, opacity: 0.55}} />
+        {kicker && <div style={{fontSize: 32, fontWeight: 600, letterSpacing: '0.26em', textTransform: 'uppercase', color: GH.brass, marginBottom: 26, marginTop: -360}}>{kicker}</div>}
+        {(lines || [text]).map((ln, i) => {
+          const pi = soft(f, 4 + i * 8, 12);
+          const acc = String(ln).startsWith('*');
+          return <div key={i} style={{fontSize, fontWeight: 600, lineHeight: 1.18, color: acc ? GH.amber : GH.ink, opacity: pi,
+            transform: `translateY(${(1 - pi) * 10}px)`}}>{String(ln).replaceAll('*', '')}</div>;
+        })}
+        <BrassRule w={ruleIn(f, 10, 26, 160)} style={{margin: '24px 0 16px'}} />
+        {footer && <div style={{fontSize: 30, letterSpacing: '0.04em', color: GH.soft}}>{footer}</div>}
+      </AbsoluteFill>
+    );
+  }
   return (
     <AbsoluteFill style={{fontFamily: SERIF, color: GH.ink, opacity: fadeOut(f, durationInFrames, 10)}}>
       <div style={{position: 'absolute', top: y, left: 65, width: 950, display: 'flex', justifyContent: 'center',
         opacity: p, transform: `translateY(${(1 - p) * 12}px)`}}>
         <div style={{background: GH.box, padding: '24px 42px 22px', maxWidth: 900, textAlign: 'center', borderLeft: `1.5px solid ${GH.brass}`}}>
-          {kicker && <div style={{fontSize: 24, fontWeight: 500, letterSpacing: '0.26em', textTransform: 'uppercase', color: GH.brass, marginBottom: 8}}>{kicker}</div>}
+          {kicker && <div style={{fontSize: 30, fontWeight: 600, letterSpacing: '0.24em', textTransform: 'uppercase', color: GH.brass, marginBottom: 8}}>{kicker}</div>}
           <div style={{fontSize, fontWeight: 600, lineHeight: 1.14, textShadow: GH.shadow}}>
             {parts.map((t, i) => t.startsWith('*') ? <span key={i} style={{color: GH.amber}}>{t.replaceAll('*', '')}</span> : <span key={i}>{t}</span>)}
           </div>
+          {footer && <div style={{fontSize: 26, letterSpacing: '0.03em', color: GH.soft, marginTop: 10, opacity: soft(f, 8, 12)}}>{footer}</div>}
         </div>
       </div>
     </AbsoluteFill>
@@ -597,7 +615,7 @@ const LowerThirdGH = ({name = 'Dr. Gabriel Quixabeira', sub = 'CRM-MT 14.954', r
         <div style={{background: GH.box, padding: '16px 28px 14px', borderLeft: `1.5px solid ${GH.brass}`}}>
           <div style={{fontSize: 40, fontWeight: 600, letterSpacing: '0.03em'}}>{name}</div>
           <BrassRule w={ruleIn(f, 4, 20, 240)} style={{margin: '8px 0 9px'}} />
-          <div style={{fontSize: 22, fontWeight: 500, letterSpacing: '0.24em', textTransform: 'uppercase', color: GH.soft}}>
+          <div style={{fontSize: 26, fontWeight: 600, letterSpacing: '0.22em', textTransform: 'uppercase', color: GH.soft}}>
             {sub}{role ? <span style={{color: GH.brass}}>{'  ·  '}</span> : null}{role}
           </div>
         </div>
@@ -621,18 +639,18 @@ const LabelGH = ({text = 'Recriação ilustrativa (IA)', y = 1180, align = 'cent
   );
 };
 
-const CounterGH = ({from = 0, to = 100, decimals = 0, prefix = '', suffix = '', label = '', kicker = '', y = 520, numSize = 150, durationInFrames}) => {
+const CounterGH = ({from = 0, to = 100, decimals = 0, prefix = '', suffix = '', label = '', kicker = '', y = 520, numSize = 150, static: isStatic = false, durationInFrames}) => {
   useSerif();
   const f = useCurrentFrame();
   const p = interpolate(f, [4, 34], [0, 1], {easing: inOut, extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
-  const v = from + (to - from) * p;
+  const v = isStatic ? to : from + (to - from) * p;  // static: número final desde o 1º quadro (só fade), sem contagem
   const inP = soft(f, 0, 12);
   return (
     <AbsoluteFill style={{fontFamily: SERIF, color: GH.ink, opacity: fadeOut(f, durationInFrames, 10)}}>
       <div style={{position: 'absolute', top: y, left: 65, width: 950, display: 'flex', justifyContent: 'center', opacity: inP, transform: `translateY(${(1 - inP) * 12}px)`}}>
         <div style={{background: GH.box, padding: '28px 54px', display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: 560,
           borderTop: `1.5px solid ${GH.brass}`, borderBottom: `1.5px solid ${GH.brass}`}}>
-          {kicker && <div style={{fontSize: 24, fontWeight: 500, letterSpacing: '0.26em', textTransform: 'uppercase', color: GH.brass, marginBottom: 10}}>{kicker}</div>}
+          {kicker && <div style={{fontSize: 30, fontWeight: 600, letterSpacing: '0.24em', textTransform: 'uppercase', color: GH.brass, marginBottom: 10}}>{kicker}</div>}
           <div style={{fontSize: numSize, fontWeight: 600, lineHeight: 1, color: GH.amber, fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap', textShadow: GH.shadow}}>
             {prefix}{v.toFixed(decimals).replace('.', ',')}<span style={{fontSize: Math.round(numSize * 0.45), marginLeft: 10}}>{suffix}</span>
           </div>
@@ -652,7 +670,7 @@ const ChecklistGH = ({title = '', items = [], y = 520, stagger = 9, footer = '',
     <AbsoluteFill style={{fontFamily: SERIF, color: GH.ink, opacity: fadeOut(f, durationInFrames, 10)}}>
       <div style={{position: 'absolute', top: y, left: 65, width: 950, opacity: inP, transform: `translateY(${(1 - inP) * 12}px)`}}>
         <div style={{background: GH.box, padding: '22px 38px 16px', borderLeft: `1.5px solid ${GH.brass}`}}>
-          {title && <div style={{fontSize: 26, fontWeight: 500, letterSpacing: '0.26em', textTransform: 'uppercase', color: GH.brass}}>{title}</div>}
+          {title && <div style={{fontSize: 30, fontWeight: 600, letterSpacing: '0.24em', textTransform: 'uppercase', color: GH.brass}}>{title}</div>}
           {title && <BrassRule w={160 * soft(f, 4, 14)} style={{margin: '10px 0 16px'}} />}
           {items.map((it, i) => {
             const st0 = it.at !== undefined ? Math.round(it.at * 30) : 6 + i * stagger;
@@ -664,7 +682,7 @@ const ChecklistGH = ({title = '', items = [], y = 520, stagger = 9, footer = '',
               </div>
             );
           })}
-          {footer && <div style={{fontSize: 22, letterSpacing: '0.04em', color: GH.soft, marginTop: 8}}>{footer}</div>}
+          {footer && <div style={{fontSize: 26, letterSpacing: '0.04em', color: GH.soft, marginTop: 8}}>{footer}</div>}
         </div>
       </div>
     </AbsoluteFill>

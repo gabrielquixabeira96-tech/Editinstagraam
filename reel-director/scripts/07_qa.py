@@ -21,6 +21,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import dr_common as dc  # noqa: E402
 
 CAP = (1140, 1245)  # faixa da legenda (y)
+BASE_Y, ICON_X, ICON_Y = 1250, 850, 1150  # safe area: base 670 px reservada; ícones do Instagram x>850 e y>1150
 
 
 def main():
@@ -85,18 +86,35 @@ def main():
     # 3. área segura dos gráficos
     for m in man:
         bb = m.get("bbox")
-        if not bb:
+        if not bb or m.get("fullscreen"):   # placa de tela cheia = plano de corte, não sobreposição: sem checagem de borda
             continue
         x0, y0, x1, y1 = bb
         if x0 < safe["x0"] - 2 or x1 > safe["x1"] + 2:
             defects.append(f"gráfico {m['i']} ({m['comp']}) fora da área segura horizontal: x[{x0},{x1}]")
         if y0 < 258:
             defects.append(f"gráfico {m['i']} ({m['comp']}) invade o topo reservado (y0={y0})")
+        # base reservada (670 px: útil y < 1250) e coluna de ícones (x > 850 com y > 1150)
+        if y1 > BASE_Y + 2:
+            defects.append(f"gráfico {m['i']} ({m['comp']}) invade a base reservada de 670 px (y1={y1} > {BASE_Y})")
+        if x1 > ICON_X + 2 and y1 > ICON_Y + 2:
+            defects.append(f"gráfico {m['i']} ({m['comp']}) invade a coluna de ícones (x1={x1}, y1={y1})")
         # sobre a faixa da legenda enquanto há legenda
         if y1 > cap[0] and y0 < cap[1]:
             gs, ge = m["start_frame"] / dc.FPS, (m["start_frame"] + m["nframes"]) / dc.FPS
             if any(ws < ge and we > gs for ws, we in cap_words):
                 defects.append(f"gráfico {m['i']} ({m['comp']}) sobre a legenda (y[{y0},{y1}]) com legenda ativa")
+
+    # 3b. legenda dentro da área útil (centro + meia altura da fonte < base de 670 px)
+    try:
+        sub_p = dc.SKILL / "styles" / st["subtitle_style"] if st.get("subtitle_style") else dc.EDITOR / "styles" / "default.json"
+        sst = dc.load_json(sub_p)
+        cy = float(sst["position_y"]) * dc.H
+        half = 0.6 * float(sst["font_size"])
+        checks["legenda_y"] = [round(cy - half), round(cy + half)]
+        if cy + half > BASE_Y + 2:
+            defects.append(f"legenda invade a base reservada de 670 px (y≈{cy:.0f}±{half:.0f} > {BASE_Y})")
+    except Exception as e:  # pragma: no cover
+        warns.append(f"não consegui checar a posição da legenda: {e}")
 
     # 4. loudness
     if final.exists():
@@ -139,7 +157,7 @@ def main():
     # avisos de conformidade
     if not any(m["comp"] == "LowerThird" for m in man):
         warns.append("sem LowerThird (nome/CRM)")
-    if not any("educativo" in str(g.get("props", {}).get("text", "")).lower() for g in plan["graphics"]):
+    if not any("educativo" in (str(g.get("props", {}).get("text", "")) + str(g.get("props", {}).get("footer", ""))).lower() for g in plan["graphics"]):
         warns.append("sem disclaimer educativo")
 
     verdict = "aprovado" if not defects else "reprovado"

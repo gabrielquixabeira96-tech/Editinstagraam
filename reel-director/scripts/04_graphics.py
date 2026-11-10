@@ -85,7 +85,8 @@ def main():
         jobs.append({"id": comp, "props": props, "outDir": str(out)})
         manifest.append({"i": i, "comp": comp, "start_frame": dc.nframes(ns), "nframes": nfr,
                          "dir": str(out), "auto": g.get("_auto", False), "why": g.get("why", ""),
-                         "behind": bool(g.get("behind", False)), "opacity": float(g.get("opacity", 1.0))})
+                         "behind": bool(g.get("behind", False)), "opacity": float(g.get("opacity", 1.0)),
+                         "fullscreen": bool(g.get("fullscreen") or props.get("plate"))})
 
     conc = args.concurrency or st["render"].get("remotion_concurrency", 2)
     spec = {"concurrency": conc, "jobs": jobs}

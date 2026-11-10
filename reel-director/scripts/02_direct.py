@@ -108,7 +108,7 @@ def main():
         return False
     if not has("LowerThird"):
         warns.append("sem LowerThird (nome/CRM) — exigido pelo CFM; QA reprova")
-    if not any("educativo" in str(g.get("props", {}).get("text", "")).lower() for g in plan["graphics"]):
+    if not any("educativo" in (str(g.get("props", {}).get("text", "")) + str(g.get("props", {}).get("footer", ""))).lower() for g in plan["graphics"]):
         warns.append("sem disclaimer educativo no fecho — QA reprova")
     if any(s.get("kind") == "ai" for s in plan["shots"]) and \
        not any(reach["ai_label_text"].split()[0].lower() in str(g.get("props", {}).get("text", "")).lower()

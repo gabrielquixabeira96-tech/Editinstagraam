@@ -148,6 +148,18 @@ def pass_base(plan, W_, segs, st):
             k = 0 if c in alt_reset else k + 1
         return alt_sc if k % 2 == 1 else 1.0
 
+    # plan.reframe_windows = [{"t0", "t1", "scale", "fx", "fy", "why"}] (timeline ORIGINAL): reenquadramento fixo
+    # num trecho — tirar um objeto da borda (ex.: TV com defeito), afastar a boca da faixa da legenda (fy=1 ancora
+    # a base: o conteúdo sobe). Substitui o enquadramento alternado nesse trecho; o punch-in multiplica a escala.
+    rwins = [(dc.nframes(dc.map_t(r["t0"], segs)), dc.nframes(dc.map_t(r["t1"], segs)), float(r.get("scale", 1.0)),
+              float(r.get("fx", 0.5)), float(r.get("fy", 0.5))) for r in plan.get("reframe_windows", [])]
+
+    def rwin_at(f):
+        for a_, b_, sc_, fx_, fy_ in rwins:
+            if a_ <= f < b_:
+                return sc_, fx_, fy_
+        return None
+
     dc.log(f"compose base: {total_f} quadros, {len(seglist)} segmento(s)")
     for f in range(total_f):
         cutframe = cut.read()
@@ -173,7 +185,10 @@ def pass_base(plan, W_, segs, st):
         if s["kind"] == "aroll" and dfr == 0:
             z = zoom_at(f, wins)
             sc_alt = alt_scale(f)
-            if z:
+            rw = rwin_at(f)
+            if rw:
+                base = vfx.zoom_frame(base, rw[0] * (z[0] if z else 1.0), fx=rw[1], fy=rw[2])
+            elif z:
                 scale, fy = z
                 base = vfx.zoom_frame(base, scale * sc_alt, fx=0.5, fy=fy)
             elif sc_alt > 1.0001:

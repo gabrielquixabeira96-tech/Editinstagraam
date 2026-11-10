@@ -67,9 +67,9 @@
   },
   "safe": {
     "caption_band": {
-      "y0": 1335,
-      "y1": 1440,
-      "_": "legenda_grand_hotel position_y 0.72 → y≈1382 (Cormorant 66 px); cards do peito terminam acima de 1335"
+      "y0": 1140,
+      "y1": 1245,
+      "_": "legenda_grand_hotel position_y 0.62 → y≈1190; base 670 px reservada (y ≥ 1250) e ícones x>850/y>1150: nenhum card abaixo de 1140"
     }
   },
   "slots": {
@@ -77,10 +77,10 @@
       "y": 300
     },
     "card": {
-      "y": 1060
+      "y": 300
     },
     "lower_third": {
-      "y": 1090
+      "y": 300
     },
     "label_top": {
       "y": 290
