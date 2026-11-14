@@ -61,6 +61,14 @@ def tone_curve(exp_cfg, look, analysis):
             gamma = 1 + 0.7 * (gamma - 1)
     y = np.power(np.clip(y, 0, 1), gamma)
     info["gamma"] = round(gamma, 3)
+    # 2b) pretos mais profundos (opcional): o gama que ilumina o rosto também levanta as sombras; black_crush
+    # (0–0,1) devolve a profundidade puxando o ponto de preto, só na base (rampa suave até black_crush_range× o valor, padrão 4)
+    bc = pc.clamp(float(exp_cfg.get("black_crush", 0.0) or 0.0), 0.0, 0.1)
+    if bc > 0:
+        rng = pc.clamp(float(exp_cfg.get("black_crush_range", 4.0)), 2.0, 8.0)
+        w = np.clip(1 - y / (rng * bc), 0, 1) ** 2        # peso 1 no preto, 0 a partir de rng×bc
+        y = np.clip(y - bc * w, 0, 1)
+    info["black_crush"] = bc
     # 3) contraste em S (pivô 0,5), suave
     c = float(exp_cfg.get("contrast", look.get("contrast", 0.12)))
     s = y * y * (3 - 2 * y)

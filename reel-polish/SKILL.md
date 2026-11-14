@@ -227,6 +227,8 @@ Herança por `"inherits": "natural"`. Campos: `contrast`, `lift_shadows`, `highl
 | "tá tremendo" | `stabilize: true` | stabilize → … |
 | "muito laranja / muito azul" | `white_balance.temperature_shift` (±200 K por vez) | grade → beauty → render → QA |
 | "muito escuro / claro" | `exposure.target_face_luma` (±0,05) | grade → … |
+| "rosto mais iluminado, mas pretos fundos" | `exposure.max_gamma` (padrão 1,6; até ~2,0) + `exposure.black_crush` (0–0,1; ex. 0,08) e `black_crush_range` (padrão 4; ex. 5) + `contrast` 0,3–0,4 | grade → … |
+| "nariz quase não muda" (vídeo em 3/4) | `retouch.nose_yaw_full`/`nose_yaw_zero` (padrão 18°/32°; IMG_4481 em 3/4 usou 42°/65°, rampa suave) — confira prévias em 3/4 | retouch → … |
 | "cor lavada / muito saturado" | `saturation`, `vibrance` | grade → … |
 | "quero cara de cinema" | `look: looks/cinematic.json` | grade → … |
 | "pele plástica" / "quero mais retoque" | `beauty_intensity` (−10 / +10) | beauty → retouch → render → QA |
