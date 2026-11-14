@@ -187,3 +187,14 @@ alta espaçada, branco × preto/grafite, caixas QUADRADAS translúcidas sem verd
 leve deslocamento; legenda palavra a palavra em Inter Medium pequena (styles/legenda_classica.json, destaque só por
 opacidade). O 04_graphics injeta `props.look` e os componentes `*Classico` do Remotion assumem; sem `look`, nada muda.
 `ArticleFigure` aceita `w`/`h` (caixa centralizada): use w ≤ 850 para a sombra caber em x 65–1015.
+
+## Tela dividida: rosto + gravação de tela sincronizados (`scripts/split_sync.py`, 2026-11-14)
+Quando o Gabriel manda o bruto falando (horizontal) + uma gravação de tela/artefato MUDA feita para acompanhar a fala:
+tela em cima (recorte vertical do painel útil, escala para caber; laterais por extensão da borda, sem barra), rosto
+embaixo em largura total com o quadro INTEIRO (1920×1080 → 1080×608, sem zoom), emenda com filete de latão,
+legenda Cormorant Garamond em caixa quadrada sobre a emenda (falada marfim, por falar cinza), rótulos de nome/capítulo
+em versalete, trilha de piano sintetizada (`synth_piano.py`, CC0) com ducking, −14 LUFS / TP < −1.
+Sincronia por conteúdo: `anchors` ligam palavras/trechos da fala ao segundo do vídeo 2 (interpolação linear; âncoras
+no mesmo instante = salto com dissolve de 6 quadros). Exemplo completo: `tests/plan_split_sync_exemplo.json`.
+`python3 scripts/split_sync.py plan.json saida.mp4 [--preview 14] [--from-step mix|compose] [--audio-only]`
+(~4,5 min para 70 s em 2 vCPU). Corte do rosto por número de quadro (sem dessincronia); áudio fatiado nas mesmas amostras.
