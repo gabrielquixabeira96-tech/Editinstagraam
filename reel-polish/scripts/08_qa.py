@@ -3,7 +3,8 @@
 
 Checagens:
   1. duração      — mesma do original (±1 quadro) e mesmo número de quadros (timeline intacta);
-  2. formato      — 1080×1920, 30 fps, H.264 + AAC;
+  2. formato      — 1080×1920 (mode raw) ou a MESMA resolução/proporção do original (mode final: sem
+                    reenquadrar nem ampliar), 30 fps, H.264 + AAC;
   3. enquadramento— rosto em % da largura e olhos na zona-alvo (18–55% da altura; centro x 28–72%,
                     folga para a zona morta e o atraso proposital da "câmera" em movimentos rápidos)
                     em ≥ 95% dos quadros amostrados (só em mode raw com rosto rastreado);
@@ -98,12 +99,14 @@ def main():
                        f"{fi['duration']:.3f}s/{got_frames})")
 
     # 2. formato
-    f_ok = (fi["width"], fi["height"]) == (pc.OUT_W, pc.OUT_H) and abs((fi["fps"] or 0) - pc.FPS) < 0.01 \
+    exp_w, exp_h = (pc.OUT_W, pc.OUT_H) if cfg["mode"] == "raw" else (si["width"], si["height"])
+    out_w, out_h = fi["width"] or exp_w, fi["height"] or exp_h
+    f_ok = (fi["width"], fi["height"]) == (exp_w, exp_h) and abs((fi["fps"] or 0) - pc.FPS) < 0.01 \
         and fi["vcodec"] == "h264" and fi["acodec"] == "aac"
-    checks["formato"] = {"ok": f_ok, "largura": fi["width"], "altura": fi["height"], "fps": fi["fps"],
-                         "video": fi["vcodec"], "audio": fi["acodec"]}
+    checks["formato"] = {"ok": f_ok, "largura": fi["width"], "altura": fi["height"], "esperado": [exp_w, exp_h],
+                         "fps": fi["fps"], "video": fi["vcodec"], "audio": fi["acodec"]}
     if not f_ok:
-        defects.append("formato fora do padrão 1080×1920 @ 30 fps H.264/AAC")
+        defects.append(f"formato fora do padrão {exp_w}×{exp_h} @ 30 fps H.264/AAC")
 
     # 3. enquadramento (amostra o polido a 3 fps)
     det = pc.FaceDetector()
@@ -120,9 +123,9 @@ def main():
     det_frac = np.mean([f is not None for f in faces]) if faces else 0.0
     tracked = cfg["mode"] == "raw" and bool((analysis.get("track") or {}).get("cx"))
     if faces and any(faces):
-        fw = np.array([f["w"] for f in faces if f]) / pc.OUT_W
-        ey = np.array([f["eye_y"] for f in faces if f]) / pc.OUT_H
-        cx = np.array([f["x"] + f["w"] / 2 for f in faces if f]) / pc.OUT_W
+        fw = np.array([f["w"] for f in faces if f]) / out_w
+        ey = np.array([f["eye_y"] for f in faces if f]) / out_h
+        cx = np.array([f["x"] + f["w"] / 2 for f in faces if f]) / out_w
         in_zone = ((ey >= EYE_ZONE[0]) & (ey <= EYE_ZONE[1]) & (cx >= CX_ZONE[0]) & (cx <= CX_ZONE[1])).mean()
         e_ok = bool(in_zone >= 0.95) if tracked else True
         before = (analysis.get("face") or {}).get("width_frac_in_cover_crop")
@@ -159,7 +162,7 @@ def main():
         if tr.get("cx"):
             k = int(np.clip(round(t * tr["fps"]), 0, len(tr["t"]) - 1))
             face_o = {"x": tr["cx"][k] - tr["w"][k] / 2, "y": tr["cy"][k] - tr["h"][k] / 2, "w": tr["w"][k], "h": tr["h"][k]}
-        fp_small = cv2.resize(fp, (540, 960), interpolation=cv2.INTER_AREA)
+        fp_small = cv2.resize(fp, (fp.shape[1] // 2, fp.shape[0] // 2), interpolation=cv2.INTER_AREA)
         fl = det.detect(fp_small)
         face_p = {k: fl[0][k] * 2 for k in ("x", "y", "w", "h")} if fl else None
         go, gp = cv2.cvtColor(fo, cv2.COLOR_BGR2GRAY), cv2.cvtColor(fp, cv2.COLOR_BGR2GRAY)
@@ -220,7 +223,7 @@ def main():
         for (t, fo), (_, fp) in zip(thumbs_o, thumbs_p):
             ho = int(tw * fo.shape[0] / fo.shape[1])
             a = cv2.resize(fo, (tw, ho), interpolation=cv2.INTER_AREA)
-            b = cv2.resize(fp, (tw, int(tw * 16 / 9)), interpolation=cv2.INTER_AREA)
+            b = cv2.resize(fp, (tw, int(tw * fp.shape[0] / fp.shape[1])), interpolation=cv2.INTER_AREA)
             cv2.putText(a, pc.fmt_t(t), (8, 22), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2, cv2.LINE_AA)
             row_o.append(a); row_p.append(b)
         hmax = max(x.shape[0] for x in row_o)

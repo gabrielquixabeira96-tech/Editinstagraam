@@ -77,6 +77,12 @@ bruto (qualquer proporção) ──reel-polish──▶ polished.mp4 (1080×1920
 - `"mode": "final"`: entrada é um `final.mp4` já editado (legenda queimada) → só cor, pele, nitidez e áudio
   (sem reenquadrar nem estabilizar). Como o áudio já tem música e loudness, use `"audio": {"enabled": false}`
   ou só `denoise_db` baixo; o resultado precisará de nova normalização se for repostado.
+  **Também serve para "sem zoom / sem recorte" num bruto:** em `mode final` a saída mantém a resolução e a proporção
+  da fonte (ex.: 1920×1080 continua 1920×1080, mesmo campo de visão) e o QA cobra esse tamanho em vez de 1080×1920.
+  Num bruto sem música, o áudio pode ser tratado normalmente (preset `voz_gabriel`).
+- **HDR do iPhone (HLG/Dolby Vision, BT.2020):** todos os scripts convertem para SDR BT.709 por tone-map automático
+  (`pc.TONEMAP`, a mesma receita da reel-director/reel-banco) ao ler a fonte — sem isso o quadro saía lavado/dessaturado
+  e as medidas da análise ficavam erradas. Se o `analysis.json` foi feito antes desta correção num vídeo HDR, refaça-o.
 - **Retoque de aparência num vídeo já editado (com legenda queimada):** não rode o pipeline inteiro; aplique só o
   05b sobre o arquivo pronto, com `retouch.protect_bottom_from` cobrindo a faixa da legenda (ex.: 0,60):
   `python scripts/05b_retouch.py polish.json --in polished.mp4 --out retouched.mp4` (áudio copiado, timeline

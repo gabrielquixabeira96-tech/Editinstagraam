@@ -87,9 +87,14 @@ def tone_curve(exp_cfg, look, analysis):
 
 
 # ---------------------------------------------------------------- cadeia de filtros
-def build_chain(cfg, look, analysis, cfg_dir):
+def build_chain(cfg, look, analysis, cfg_dir, inp=None):
     f = []
     info = {}
+    # fonte HDR (iPhone HLG/Dolby Vision) lida direto (mode final): tone-map para SDR BT.709 antes de tudo
+    tm = pc.sdr_filter(inp) if inp is not None else None
+    if tm:
+        f.append(tm)
+    info["hdr_tonemap"] = bool(tm)
     # denoise
     dn = cfg.get("denoise", "auto")
     if dn == "auto":
@@ -156,8 +161,8 @@ def build_chain(cfg, look, analysis, cfg_dir):
     info["vignette"] = vig
     f.append("format=yuv420p")
     if graph:
-        tail = ",".join(x for x in f if not x.startswith(("hqdn3d", "curves", "colortemperature", "huesaturation",
-                                                          "vibrance", "colorbalance", "lut3d")))
+        tail = ",".join(x for x in f if not x.startswith(("zscale", "hqdn3d", "curves", "colortemperature",
+                                                          "huesaturation", "vibrance", "colorbalance", "lut3d")))
         return graph + "," + tail, info, True
     return ",".join(f), info, False
 
@@ -184,7 +189,7 @@ def main():
         inp = pc.polish_source(cfg, cfg_path)
     if not inp.exists():
         pc.die(f"entrada não encontrada: {inp}")
-    chain, info, is_graph = build_chain(cfg, look, analysis, cfg_path.parent)
+    chain, info, is_graph = build_chain(cfg, look, analysis, cfg_path.parent, inp)
     pc.log(f"look: {look.get('name')}  |  decisões: {info}")
     if args.print_filter:
         print(chain)

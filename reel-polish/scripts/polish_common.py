@@ -242,6 +242,39 @@ def probe(path) -> dict:
     return info
 
 
+# HDR (iPhone: HLG/Dolby Vision 8.4, BT.2020) -> SDR BT.709. Sem isso o ffmpeg só trunca 10->8 bits e o
+# quadro sai lavado/dessaturado (primárias BT.2020 lidas como BT.709) e as medidas da análise ficam erradas.
+# Mesma receita do 01_ingest da reel-director e do 10_clip --tonemap da reel-banco.
+TONEMAP = ("zscale=t=linear:npl=100,format=gbrpf32le,zscale=p=bt709,tonemap=hable:desat=0,"
+           "zscale=t=bt709:m=bt709:r=tv,format=yuv420p")
+_HDR_CACHE: dict = {}
+
+
+def is_hdr(path) -> bool:
+    """True se o 1º stream de vídeo é HDR (HLG/PQ ou primárias BT.2020)."""
+    key = str(Path(path).resolve())
+    if key in _HDR_CACHE:
+        return _HDR_CACHE[key]
+    fp = ffprobe_bin()
+    hdr = False
+    if fp:
+        r = subprocess.run([fp, "-v", "error", "-select_streams", "v:0", "-show_entries",
+                            "stream=color_transfer,color_primaries", "-of", "json", str(path)],
+                           capture_output=True, text=True)
+        try:
+            st = (json.loads(r.stdout or "{}").get("streams") or [{}])[0]
+            hdr = st.get("color_transfer") in ("arib-std-b67", "smpte2084") or st.get("color_primaries") == "bt2020"
+        except ValueError:
+            hdr = False
+    _HDR_CACHE[key] = hdr
+    return hdr
+
+
+def sdr_filter(path, enabled=True):
+    """Filtro de tone-map para `path` (ou None se não for HDR / se desligado)."""
+    return TONEMAP if enabled and is_hdr(path) else None
+
+
 def count_frames(path) -> int:
     """Conta quadros decodificando (exato; usado no QA e no render)."""
     fp = ffprobe_bin()
@@ -274,10 +307,11 @@ def decode_audio(path, sr=AUDIO_SR, channels=2, start=None, dur=None):
 
 class FrameReader:
     """Lê quadros (BGR, numpy) de um vídeo via ffmpeg rawvideo — respeita a rotação do contêiner,
-    exatamente como os outros filtros do ffmpeg enxergam o vídeo (OpenCV nem sempre respeita)."""
+    exatamente como os outros filtros do ffmpeg enxergam o vídeo (OpenCV nem sempre respeita).
+    Fonte HDR (HLG/PQ) é convertida para SDR BT.709 por tone-map (tonemap=True, padrão)."""
 
     def __init__(self, path, width=None, height=None, fps=None, start=None, dur=None, vf_extra=None,
-                 gray=False):
+                 gray=False, tonemap=True):
         import numpy as np  # noqa: F401
         info = probe(path)
         self.src_w, self.src_h = info["width"], info["height"]
@@ -290,6 +324,9 @@ class FrameReader:
         vf = []
         if fps:
             vf.append(f"fps={fps}")
+        tm = sdr_filter(path, tonemap)
+        if tm:
+            vf.append(tm)
         if (width or height) and (self.w != self.src_w or self.h != self.src_h):
             vf.append(f"scale={self.w}:{self.h}:flags=area")
         if vf_extra:
