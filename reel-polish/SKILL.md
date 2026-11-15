@@ -182,6 +182,11 @@ Conteúdo do preset (equivale a copiar o bloco inteiro):
    escurecimento difuso no alto das têmporas, sem criar fios nem fechar de verdade as entradas. Não compensa; fechar
    entradas exigiria síntese de fios (não implementada). Com `hairline_shape: false`, `hairline_lower_max` e
    `hairline_recession` não têm efeito.
+7. **Manchas cinzas na pele com looks que têm tintas (warm, cinematic, grand_hotel) — corrigido em 2026-11-14:** o
+   `colorbalance ... pl=1` do ffmpeg 6.x transformava pixels com um canal saturado (R=255 no brilho da testa/nariz)
+   em cinza chapado (IMG_4536_1, look warm). As tintas por faixa tonal agora são `curves` r/g/b
+   (`04_grade.py: tint_curves`), com preto/branco presos e luminosidade preservada. O teste sintético só passava na
+   nitidez por causa desses salpicos cinzas; agora usa fonte 1920×1080 (ampliação ~2×, realista).
 
 ## Formato do `polish.json`
 

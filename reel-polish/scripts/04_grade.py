@@ -94,6 +94,35 @@ def tone_curve(exp_cfg, look, analysis):
     return pts, info
 
 
+def tint_curves(sh, mid, hi, n=33):
+    """Tintas por faixa tonal (sombras/meios/altas, −0,1…0,1 por canal) como `curves` r/g/b do ffmpeg.
+
+    Substitui o `colorbalance ... pl=1`: no ffmpeg 6.x a preservação de luminosidade do colorbalance transforma
+    pixels com um canal saturado (ex.: R=255 no brilho da testa/nariz em pele quente) em CINZA chapado (R=G=B≈200)
+    — manchas cinzas na testa, no nariz e em paredes claras (IMG_4536_1, look warm, 2026-11-14). Aqui:
+    - pesos por faixa iguais aos do colorbalance (escala 0,7), mas ZERO em 0 e 1 → preto e branco ficam presos
+      (nada estoura nem vira cinza);
+    - preservação de luminosidade: em cada nível, a média Rec.709 das três correções é subtraída (só cor muda)."""
+    xs = np.linspace(0, 1, n)
+    # mesmos pesos e escala (0,7) do colorbalance do ffmpeg, com o valor do canal no lugar da luminosidade
+    # do pixel, e afunilados a zero nos 6% das pontas (preto/branco presos)
+    a, b, k = 4.0, 0.333, 0.7
+    ws = np.clip((b - xs) * a + 0.5, 0, 1) * k
+    wm = np.clip((xs - b) * a + 0.5, 0, 1) * np.clip((1 - xs - b) * a + 0.5, 0, 1) * k
+    wh = np.clip((xs + b - 1) * a + 0.5, 0, 1) * k
+    taper = np.clip(xs / 0.06, 0, 1) * np.clip((1 - xs) / 0.06, 0, 1)
+    ws, wh = ws * taper, wh * taper
+    d = np.stack([ws * sh[c] + wm * mid[c] + wh * hi[c] for c in range(3)])  # 3 × n
+    d -= (0.2126 * d[0] + 0.7152 * d[1] + 0.0722 * d[2])[None, :]
+    chans = []
+    for c, name in enumerate("rgb"):
+        y = np.clip(xs + d[c], 0, 1)
+        y = np.maximum.accumulate(y)  # monotônica
+        y[0], y[-1] = 0.0, 1.0
+        chans.append(f"{name}='" + " ".join(f"{x:.4f}/{v:.4f}" for x, v in zip(xs, y)) + "'")
+    return "curves=" + ":".join(chans)
+
+
 # ---------------------------------------------------------------- cadeia de filtros
 def build_chain(cfg, look, analysis, cfg_dir, inp=None):
     f = []
@@ -139,13 +168,11 @@ def build_chain(cfg, look, analysis, cfg_dir, inp=None):
     if abs(vib) > 0.005:
         f.append(f"vibrance=intensity={pc.clamp(vib, -2, 2):.3f}")
     info["saturation"], info["vibrance"] = sat, vib
-    # look: tintas por faixa tonal + tint do WB (colorbalance com preservação de luminosidade)
+    # look: tintas por faixa tonal + tint do WB, como curvas por canal (tint_curves; substitui colorbalance pl=1).
     sh, mid, hi = look.get("shadows_rgb", [0, 0, 0]), look.get("midtones_rgb", [0, 0, 0]), look.get("highlights_rgb", [0, 0, 0])
     mid = [mid[0], mid[1] + 0.3 * tint, mid[2]]
     if any(abs(v) > 0.002 for v in list(sh) + list(mid) + list(hi)):
-        f.append("colorbalance=" + ":".join([f"rs={sh[0]:.3f}", f"gs={sh[1]:.3f}", f"bs={sh[2]:.3f}",
-                                              f"rm={mid[0]:.3f}", f"gm={mid[1]:.3f}", f"bm={mid[2]:.3f}",
-                                              f"rh={hi[0]:.3f}", f"gh={hi[1]:.3f}", f"bh={hi[2]:.3f}", "pl=1"]))
+        f.append(tint_curves(sh, mid, hi))
     # LUT opcional
     lut = cfg.get("lut") or look.get("lut")
     chain_pre = ",".join(f)

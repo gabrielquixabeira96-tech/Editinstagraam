@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import polish_common as pc  # noqa: E402
 
-W, H, FPS, DUR = 1280, 720, 30, 4.0
+W, H, FPS, DUR = 1920, 1080, 30, 4.0
 
 
 def draw_face(img, cx, cy, s):
